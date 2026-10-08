@@ -36,7 +36,7 @@ source_directory = Path(Path(os.getcwd()).parent, source_directory)
 target_directory = Path(Path(os.getcwd()).parent, target_directory)
 
 # This loop assumes there are NO sub-directories.
-for root, dirs, files in os.walk(source_directory):
+for _root, _dirs, files in os.walk(source_directory):
     for file in files:
         print(f'Processing "{file}".')
         # only convert CATParts.

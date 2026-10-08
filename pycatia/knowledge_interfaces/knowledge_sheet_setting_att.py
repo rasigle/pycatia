@@ -236,7 +236,9 @@ class KnowledgeSheetSettingAtt(SettingController):
         :rtype: int
         """
 
-        return self.knowledge_sheet_setting_att.RelationsUpdateInPartContextEvaluateDuringUpdate
+        return (
+            self.knowledge_sheet_setting_att.RelationsUpdateInPartContextEvaluateDuringUpdate
+        )
 
     @relations_update_in_part_context_evaluate_during_update.setter
     def relations_update_in_part_context_evaluate_during_update(self, value: int):
@@ -244,7 +246,9 @@ class KnowledgeSheetSettingAtt(SettingController):
         :param int value:
         """
 
-        self.knowledge_sheet_setting_att.RelationsUpdateInPartContextEvaluateDuringUpdate = value
+        self.knowledge_sheet_setting_att.RelationsUpdateInPartContextEvaluateDuringUpdate = (
+            value
+        )
 
     @property
     def relations_update_in_part_context_synchronous_relations(self) -> int:
@@ -272,7 +276,9 @@ class KnowledgeSheetSettingAtt(SettingController):
         :rtype: int
         """
 
-        return self.knowledge_sheet_setting_att.RelationsUpdateInPartContextSynchronousRelations
+        return (
+            self.knowledge_sheet_setting_att.RelationsUpdateInPartContextSynchronousRelations
+        )
 
     @relations_update_in_part_context_synchronous_relations.setter
     def relations_update_in_part_context_synchronous_relations(self, value: int):
@@ -280,7 +286,9 @@ class KnowledgeSheetSettingAtt(SettingController):
         :param int value:
         """
 
-        self.knowledge_sheet_setting_att.RelationsUpdateInPartContextSynchronousRelations = value
+        self.knowledge_sheet_setting_att.RelationsUpdateInPartContextSynchronousRelations = (
+            value
+        )
 
     def get_design_tables_copy_data_info(
         self, io_admin_level: str, io_locked: str

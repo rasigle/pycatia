@@ -1274,11 +1274,7 @@ class Product(AnyObject):
         """
         :return: bool
         """
-
-        if self.product.Products.Count > 0:
-            return True
-
-        return False
+        return self.product.Products.Count > 0
 
     def has_shape_representation(
         self, i_shape_name: str, i_rep_behavior: CatRepType, i_context: bool
@@ -1329,21 +1325,13 @@ class Product(AnyObject):
         """
         :rtype: bool
         """
-
-        if self.file_name.rsplit(".")[-1].lower() == "catproduct":
-            return True
-
-        return False
+        return self.file_name.rsplit(".")[-1].lower() == "catproduct"
 
     def is_catpart(self) -> bool:
         """
         :rtype: bool
         """
-
-        if self.file_name.rsplit(".")[-1].lower() == "catpart":
-            return True
-
-        return False
+        return self.file_name.rsplit(".")[-1].lower() == "catpart"
 
     def path(self) -> Path:
         """

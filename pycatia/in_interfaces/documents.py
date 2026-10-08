@@ -20,11 +20,7 @@ def get_document_object(doc_com) -> AnyDocument:
         for k in document_types
         if document_types[k]["extension"] == extension
     ]
-    if not types:
-        document_type = document_types["Default"]["type"]
-    else:
-        document_type = types[0]
-
+    document_type = document_types["Default"]["type"] if not types else types[0]
     return document_type(doc_com)
 
 

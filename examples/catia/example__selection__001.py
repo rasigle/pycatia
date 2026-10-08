@@ -77,8 +77,4 @@ while c is True:
     close_inertia_window()
 
     prompt = input("Continue? (Y/N):")
-
-    if prompt.lower()[0] == "n":
-        c = False
-    else:
-        c = True
+    c = prompt.lower()[0] != "n"

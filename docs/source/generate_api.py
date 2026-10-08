@@ -81,10 +81,7 @@ for file in files:
 
     # append each module to index file.
     with open(parent_index, "a") as f:
-        if parent.stem == "pycatia":
-            stem = "pycatia"
-        else:
-            stem = "pycatia" + "/" + parent.stem
+        stem = "pycatia" if parent.stem == "pycatia" else "pycatia" + "/" + parent.stem
         lines = f"   {stem}/{str(file.stem)}\n"
         f.write(lines)
 

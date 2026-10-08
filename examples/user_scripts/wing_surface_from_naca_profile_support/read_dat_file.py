@@ -36,10 +36,7 @@ def read_dat_file(naca_dat_file: Path, chord_length: float) -> tuple[list, list]
                 # ignore the root point, we'll add that manually.
                 if x == 0 and y == 0:
                     continue
-                if upper is True:
-                    point_list = upper_coordinates
-                else:
-                    point_list = lower_coordinates
+                point_list = upper_coordinates if upper is True else lower_coordinates
                 append_point(point_list, (x, y))
             else:
                 upper = False

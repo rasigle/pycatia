@@ -421,10 +421,7 @@ class Parameters(Collection):
         """
         :return: bool
         """
-        if self.parameters.Count > 0:
-            return True
-
-        return False
+        return self.parameters.Count > 0
 
     def is_parameter(self, index: CATVariant):
         """

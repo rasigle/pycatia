@@ -173,9 +173,7 @@ class Document(AnyObject):
         self.logger.warning(
             "The Document.is_product property will be deprecated in future versions."
         )
-        if self.product.is_catproduct():
-            return True
-        return False
+        return bool(self.product.is_catproduct())
 
     @property
     def is_saved(self) -> bool:
@@ -884,7 +882,7 @@ class Document(AnyObject):
 
         for counter, item in enumerate(selection_objects):
             boolean = ""
-            if counter > 0 and not counter == len(selection_objects):
+            if counter > 0 and counter != len(selection_objects):
                 boolean = " + "
             if item in gsd_items:
                 query_string = (

@@ -10,5 +10,6 @@
 """
 
 from pycatia.base_interfaces.base_application import catia_application as catia
+from pycatia.base_interfaces.context import CATIADocHandler
 
-__all__ = ["catia"]
+__all__ = ["catia", "CATIADocHandler"]

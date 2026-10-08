@@ -8,7 +8,7 @@ import argparse
 import textwrap
 from pathlib import Path
 
-from pycatia.version import version
+from pycatia.version import __version__ as version
 
 if __name__ == "__main__":
     prog = "pycatia"
@@ -34,9 +34,11 @@ if __name__ == "__main__":
 
     filename = Path(parser.parse_args().filename)
 
-    if filename.exists():
-        exec(open(filename).read())
-    else:
+    if not filename.exists():
         raise FileNotFoundError(
             f'Could not find file "{filename}". Try using the full path name.'
         )
+
+    with open(str(filename)) as f:
+        exec(f.read())
+    

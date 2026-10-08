@@ -1003,7 +1003,9 @@ class PartInfrastructureSettingAtt(SettingController):
         :rtype: bool
         """
 
-        return self.part_infrastructure_setting_att.LinkedExternalReferencesOnlyOnPublication
+        return (
+            self.part_infrastructure_setting_att.LinkedExternalReferencesOnlyOnPublication
+        )
 
     @linked_external_references_only_on_publication.setter
     def linked_external_references_only_on_publication(self, value: bool):
@@ -1011,7 +1013,9 @@ class PartInfrastructureSettingAtt(SettingController):
         :param bool value:
         """
 
-        self.part_infrastructure_setting_att.LinkedExternalReferencesOnlyOnPublication = value
+        self.part_infrastructure_setting_att.LinkedExternalReferencesOnlyOnPublication = (
+            value
+        )
 
     @property
     def linked_external_references_warning_at_creation(self) -> bool:
@@ -1047,7 +1051,9 @@ class PartInfrastructureSettingAtt(SettingController):
         :rtype: bool
         """
 
-        return self.part_infrastructure_setting_att.LinkedExternalReferencesWarningAtCreation
+        return (
+            self.part_infrastructure_setting_att.LinkedExternalReferencesWarningAtCreation
+        )
 
     @linked_external_references_warning_at_creation.setter
     def linked_external_references_warning_at_creation(self, value: bool):
@@ -1055,7 +1061,9 @@ class PartInfrastructureSettingAtt(SettingController):
         :param bool value:
         """
 
-        self.part_infrastructure_setting_att.LinkedExternalReferencesWarningAtCreation = value
+        self.part_infrastructure_setting_att.LinkedExternalReferencesWarningAtCreation = (
+            value
+        )
 
     @property
     def naming_mode(self) -> int:

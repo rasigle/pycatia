@@ -41,7 +41,7 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("..\\pycatia"))
+sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
 from pathlib import Path
@@ -68,7 +68,8 @@ from pycatia.scripts.vba import vba_nothing
 # coordinates
 
 part_number = "Wing_Geometry"
-naca_dat_file = Path(os.getcwd(), "user_scripts", "wing_surface_from_naca_profile_support/sc20610.dat")
+naca_dat_file = Path(os.getcwd(), "user_scripts",
+                     "wing_surface_from_naca_profile_support/sc20610.dat")
 
 upper_coordinates, lower_coordinates = read_dat_file(naca_dat_file, constants.CHORD_LENGTH_ROOT)
 

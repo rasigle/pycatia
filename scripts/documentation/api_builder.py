@@ -10,8 +10,8 @@ modules = ['threed_xml_interfaces']
 
 cwd = Path(os.getcwd())
 
-folder_doc_api = Path(cwd, '../docs/api')
-folder_pycatia = Path(cwd, '../pycatia')
+folder_doc_api = Path(cwd, '../../docs/source/api')
+folder_pycatia = Path(cwd, '../../pycatia')
 
 
 def get_index_contents(module_name):
@@ -55,7 +55,7 @@ def build_index(module_name):
 
 
 def build_api(module_name, dir_content):
-    module_api_folder = Path(folder_doc_api, '../pycatia', module_name)
+    module_api_folder = Path(folder_doc_api, '../../pycatia', module_name)
     # create the folder 
     if not module_api_folder.exists():
         print(f'Creating folder {module_api_folder}.')

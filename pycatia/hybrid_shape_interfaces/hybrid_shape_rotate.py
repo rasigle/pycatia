@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -16,37 +16,37 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeRotate(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeRotate
-                | 
-                | Represents the hybrid shape rotate feature object.
-                | Role: To access the data of the hybrid shape rotate feature object. This data
-                | includes:
-                | 
-                |     The element to be rotated
-                |     The rotation axis
-                |     The angle and its value
-                | 
-                | LICENSING INFORMATION: Creation of volume result requires GSO
-                | License
-                | if GSO License is not granted , setting of Volume context has not
-                | effect
-                | Use the CATIAHybridShapeFactory to create HybridShapeFeature
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeRotate
+            |
+            | Represents the hybrid shape rotate feature object.
+            | Role: To access the data of the hybrid shape rotate feature object. This data
+            | includes:
+            |
+            |     The element to be rotated
+            |     The rotation axis
+            |     The angle and its value
+            |
+            | LICENSING INFORMATION: Creation of volume result requires GSO
+            | License
+            | if GSO License is not granted , setting of Volume context has not
+            | effect
+            | Use the CATIAHybridShapeFactory to create HybridShapeFeature
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -61,7 +61,7 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Angle() As Angle (Read Only)
-                | 
+                |
                 |     Returns the rotation angle.
 
         :rtype: Angle
@@ -77,12 +77,12 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AngleValue() As double
-                | 
+                |
                 |     Returns or sets the rotation angle value.
-                | 
+                |
                 |     Example: This example retrieves in AngleValue the angle value for the
                 |     Rotate hybrid shape feature.
-                | 
+                |
                 |      Dim AngleValue As double
                 |      Set AngleValue = Rotate.AngleValue
 
@@ -107,13 +107,13 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Axis() As Reference
-                | 
+                |
                 |     Returns or sets the rotation axis.
                 |     Sub-element(s) supported (see Boundary object): Edge.
-                | 
+                |
                 |     Example: This example retrieves in RotationAxis the rotation axis for the
                 |     Rotate hybrid shape feature.
-                | 
+                |
                 |      Dim RotationAxis As Reference
                 |      Set RotationAxis = Rotate.Axis
 
@@ -138,12 +138,12 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ElemToRotate() As Reference
-                | 
+                |
                 |     Returns or sets the element to be rotated.
-                | 
+                |
                 |     Example: This example retrieves in Elem the element to be rotated for the
                 |     Rotate hybrid shape feature.
-                | 
+                |
                 |      Dim Elem As Reference
                 |      Set Elem = Rotate.ElemToRotate
 
@@ -168,7 +168,7 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstElement() As Reference
-                | 
+                |
                 |     Returns or sets the first element defining the rotation angle.
 
         :rtype: Reference
@@ -192,7 +192,7 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstPoint() As Reference
-                | 
+                |
                 |     Returns or sets the first point defining the rotation.
 
         :rtype: Reference
@@ -216,7 +216,7 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property OrientationOfFirstElement() As boolean
-                | 
+                |
                 |     Returns or sets the orientation of the first element defining the rotation
                 |     angle.
                 |     This applies in case of line or plane element.
@@ -242,7 +242,7 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property OrientationOfSecondElement() As boolean
-                | 
+                |
                 |     Returns or sets the orientation of the second element defining the rotation
                 |     angle.
                 |     This applies in case of line or plane element.
@@ -268,9 +268,9 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RotationType() As long
-                | 
+                |
                 |     Returns or sets the type of the rotation definition.
-                | 
+                |
                 |         0= Axis + angle
                 |         1= Axis + two elements
                 |         2= Three Points
@@ -297,7 +297,7 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondElement() As Reference
-                | 
+                |
                 |     Returns or sets the second element defining the rotation angle.
 
         :rtype: Reference
@@ -321,7 +321,7 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondPoint() As Reference
-                | 
+                |
                 |     Returns or sets the second point defining the rotation.
 
         :rtype: Reference
@@ -345,7 +345,7 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ThirdPoint() As Reference
-                | 
+                |
                 |     Returns or sets the third point defining the rotation.
 
         :rtype: Reference
@@ -369,18 +369,18 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property VolumeResult() As boolean
-                | 
+                |
                 |     Returns or sets the volume result.
                 |     Legal values: True if the result of Rotate is required as volume (option is
                 |     effective only in case of volumes,requires GSO License) and False if it is
                 |     needed as surface .
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets that the result of
                 |          the hybShpRotate hybrid shape rotate is volume.
-                |          
-                | 
+                |
+                |
                 |          hybShpRotate.VolumeResult = True
 
         :rtype: bool
@@ -403,22 +403,22 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetCreationMode() As long
-                | 
+                |
                 |     Gets the creation mode.
                 |     Legal values:
-                | 
+                |
                 |     0
                 |         CATGSMTransfoModeUnset. Default behavior: creation mode by default for
                 |         all features, modification mode for axis system
                 |     1
-                |         CATGSMTransfoModeCreation. Creation mode. 
+                |         CATGSMTransfoModeCreation. Creation mode.
                 |     2
-                |         CATGSMTransfoModeModification. Modification mode. 
-                | 
+                |         CATGSMTransfoModeModification. Modification mode.
+                |
                 | Example:
                 |     This example retrieves in oCreation the creation mode for the hybShpRotate
                 |     hybrid shape feature.
-                | 
+                |
                 |      oCreation = hybShpRotate.GetCreationMode
 
         :rtype: int
@@ -432,24 +432,24 @@ class HybridShapeRotate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetCreationMode(boolean iCreation)
-                | 
+                |
                 |     Sets the creation mode(creation or modification).
                 |     Legal values: True if the result is a creation feature and False if the
                 |     result is a modification feature.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets that the mode of
                 |          the hybShpRotate hybrid shape rotate to creation
-                |          
-                | 
+                |
+                |
                 |          hybShpRotate.SetCreationMode True
 
         :param bool i_creation:
         :rtype: None
         """
         return self.hybrid_shape_rotate.SetCreationMode(i_creation)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

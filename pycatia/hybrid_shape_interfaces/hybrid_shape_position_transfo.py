@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
@@ -18,34 +18,34 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapePositionTransfo(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapePositionTransfo
-                | 
-                | Represents the hybrid shape position transformation feature
-                | object.
-                | Role: To access the data of the hybrid shape position transformation feature
-                | object. This data includes:
-                | 
-                |     The positioning mode
-                |     The profile to be positioned
-                |     The initila and target planes
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapePositionTransfo
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapePositionTransfo
+            |
+            | Represents the hybrid shape position transformation feature
+            | object.
+            | Role: To access the data of the hybrid shape position transformation feature
+            | object. This data includes:
+            |
+            |     The positioning mode
+            |     The profile to be positioned
+            |     The initila and target planes
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapePositionTransfo
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -60,12 +60,12 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property InitialDirectionComputationMode() As long
-                | 
+                |
                 |     Gets or sets the computation mode of the X axis (or direction) of the
                 |     initial axis system.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDirCompMode
                 |             computation mode =
                 |             0 : no X axis specified
@@ -94,10 +94,10 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Mode() As long
-                | 
+                |
                 |     Returns or sets the positioning mode.
                 |     Legal values:
-                | 
+                |
                 |     CATGSMPositionMode_NoneOrPositioned
                 |         No positioning
                 |     CATGSMPositionMode_ExplicitSweep
@@ -126,7 +126,7 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Profile() As Reference
-                | 
+                |
                 |     Returns or sets the profile to be positioned.
 
         :rtype: Reference
@@ -149,11 +149,11 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetNbPosAngle() As long
-                | 
+                |
                 |     Gets the number of numerical positioning parameters : first axis direction angles.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oI
                 |             Number of parameters
 
@@ -168,11 +168,11 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetNbPosCoord() As long
-                | 
+                |
                 |     Gets the number of numerical positioning parameters : origin planar coordinates.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oI
                 |             Number of parameters
 
@@ -187,15 +187,15 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosAngle(long iI) As Angle
-                | 
+                |
                 |     Returns angles of both initial and target coordinate systems from default
                 |     positions.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The index of numerical positioning angles in initial (value 1) or
-                |             target (value 2) axis system. 
+                |             target (value 2) axis system.
                 |         oAngle
                 |             The angle value.
 
@@ -211,15 +211,15 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosCoord(long ii) As Length
-                | 
+                |
                 |     Returns translation coordinates if both initial and target coordinate
                 |     systems from default positions.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The iIndex of numerical positioning coordinates in initial (value 1
-                |             or 2) or target (value 3 or 4) coordinate system. 
+                |             or 2) or target (value 3 or 4) coordinate system.
                 |         oCoordinate
                 |             The coordinate value
 
@@ -235,15 +235,15 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosPoint(long ii) As Reference
-                | 
+                |
                 |     Returns the points designated as the origins of the initial and target
                 |     planes.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The plane index: 1 for initial one, 2 for target one
-                |             
+                |
                 |         oElem
                 |             The origin point
 
@@ -259,18 +259,18 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosSwapAxes(long ii) As long
-                | 
+                |
                 |     Returns axis inversion from previous definitions for both initial and
                 |     target planes.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The coordinate system index: 1 for initial one, 2 for target one
-                |             
+                |
                 |         oInversion
                 |             The inversion value:
-                | 
+                |
                 |             CATGSMAxisInversionMode_None
                 |                 No axis inverted
                 |             CATGSMAxisInversionMode_X
@@ -292,23 +292,25 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPositionDirection(long iI) As HybridShapeDirection
-                | 
+                |
                 |     Returns the positioning directions.
                 |     The positioning direction can be initial or target plane X-axis
                 |     direction.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The plane index: 1 for initial one, 2 for target one
-                |             
+                |
                 |         oElem
                 |             The direction element
 
         :param int i_i:
         :rtype: HybridShapeDirection
         """
-        return HybridShapeDirection(self.hybrid_shape_position_transfo.GetPositionDirection(i_i))
+        return HybridShapeDirection(
+            self.hybrid_shape_position_transfo.GetPositionDirection(i_i)
+        )
 
     def remove_all_pos_angle(self) -> None:
         """
@@ -317,7 +319,7 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveAllPosAngle()
-                | 
+                |
                 |     Removes all numerical positioning parameters : first axis direction angles.
 
         :rtype: None
@@ -331,7 +333,7 @@ class HybridShapePositionTransfo(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveAllPosCoord()
-                | 
+                |
                 |     Removes all numerical positioning parameters : origin planar coordinates.
 
         :rtype: None
@@ -346,14 +348,14 @@ class HybridShapePositionTransfo(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosAngle(long iI,
                 | Angle iAngle)
-                | 
+                |
                 |     Sets angles of both initial and target coordinate systems.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The index of numerical positioning angles in initial (value 1) or
-                |             target (value 2) axis system. 
+                |             target (value 2) axis system.
                 |         iAngle
                 |             The angle value.
 
@@ -362,7 +364,7 @@ class HybridShapePositionTransfo(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_position_transfo.SetPosAngle(i_i, i_angle.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -386,15 +388,15 @@ class HybridShapePositionTransfo(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosCoord(long iI,
                 | Length iCoordinate)
-                | 
+                |
                 |     Sets translation coordinates of both initial and target coordinate
                 |     systems.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The iIndex of numerical positioning coordinates in initial (value 1
-                |             or 2) or target (value 3 or 4) coordinate system. 
+                |             or 2) or target (value 3 or 4) coordinate system.
                 |         iCoordinate
                 |             The coordinate value
 
@@ -402,8 +404,10 @@ class HybridShapePositionTransfo(HybridShape):
         :param Length i_coordinate:
         :rtype: None
         """
-        return self.hybrid_shape_position_transfo.SetPosCoord(i_i, i_coordinate.com_object)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_position_transfo.SetPosCoord(
+            i_i, i_coordinate.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -427,15 +431,15 @@ class HybridShapePositionTransfo(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosPoint(long iI,
                 | Reference iElem)
-                | 
+                |
                 |     Sets the points designated as the origins of the initial and target
                 |     planes.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The plane index: 1 for initial one, 2 for target one
-                |             
+                |
                 |         iElem
                 |             The origin point
 
@@ -444,7 +448,7 @@ class HybridShapePositionTransfo(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_position_transfo.SetPosPoint(i_i, i_elem.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -468,18 +472,18 @@ class HybridShapePositionTransfo(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosSwapAxes(long ii,
                 | long iInversion)
-                | 
+                |
                 |     Sets axis inversion from previous definitions for both initial and target
                 |     planes.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The coordinate system index: 1 for initial one, 2 for target one
-                |             
+                |
                 |         iInversion
                 |             The inversion value:
-                | 
+                |
                 |             CATGSMAxisInversionMode_None
                 |                 No axis inverted
                 |             CATGSMAxisInversionMode_X
@@ -503,16 +507,16 @@ class HybridShapePositionTransfo(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPositionDirection(long iI,
                 | HybridShapeDirection iElem)
-                | 
+                |
                 |     Sets the positioning directions.
                 |     The positioning direction can be initial or target plane X-axis
                 |     direction.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             The plane index: 1 for initial one, 2 for target one
-                |             
+                |
                 |         iElem
                 |             The direction element
 
@@ -520,8 +524,10 @@ class HybridShapePositionTransfo(HybridShape):
         :param HybridShapeDirection i_elem:
         :rtype: None
         """
-        return self.hybrid_shape_position_transfo.SetPositionDirection(i_i, i_elem.com_object)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_position_transfo.SetPositionDirection(
+            i_i, i_elem.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

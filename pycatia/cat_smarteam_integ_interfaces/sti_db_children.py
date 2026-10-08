@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_smarteam_integ_interfaces.sti_db_item import StiDBItem
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.types.general import CATVariant
@@ -101,7 +102,7 @@ class StiDBChildren(AnyObject):
             |
             | See also:
             |     StiDBItem
-    
+
     """
 
     def __init__(self, com_object):
@@ -116,15 +117,15 @@ class StiDBChildren(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Count() As long (Read Only)
-                | 
+                |
                 |     Returns the Number of Children currently gathered in
                 |     CATIAStiDBChildren.
-                | 
+                |
                 |     Returns:
                 |         This output corresponds to the Children Number of a CATIAStiDBItem.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |               This example retrieves in  lChildrenNumber the Number of children
                 |               currently gathered in oStiDBChildren.
                 |
@@ -150,24 +151,24 @@ class StiDBChildren(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As StiDBItem
-                | 
+                |
                 |     Returns the CATIAStiDBItem from its index in the
                 |     CATIAStiDBChildren.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             This input corresponds to the Index of the CATIAStiDBItem to
                 |             retrieve from the CATIAStiDBChildren. This index is the rank of the
                 |             CATIAStiDBItem in the CATIAStiDBChildren -list of all the Children of a
                 |             CATIAStiDBItem. The index of the first CATIAStiDBItem is '1' and the index of
-                |             the last CATIAStiDBItem is 'Count'. 
-                | 
+                |             the last CATIAStiDBItem is 'Count'.
+                |
                 |     Returns:
                 |         This ouptut corresponds to the retrieved CATIAStiDBItem from its index.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns in oChildStiDBItem the third
                 |           CATIAStiDBItem
                 |          gathered in oStiDBChildren.
@@ -194,25 +195,25 @@ class StiDBChildren(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func LinkType(CATVariant iIndex) As CATBSTR
-                | 
+                |
                 |     Returns the Link Type from its index in the
                 |     CATIAStiDBChildren.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             This input corresponds to the index of the Link Type to retrieve
                 |             from the CATIAStiDBChildren. This index is the rank of the Link Type in the
                 |             CATIAStiDBChildren. The index of the first Link Type is '1' and the index of
-                |             the last Link Type is 'Count'. 
-                | 
+                |             the last Link Type is 'Count'.
+                |
                 |     Returns:
                 |         This ouptut corresponds to the retrieved Link Type from its index.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns in oLinkType the third Link Type
-                |           
+                |
                 |          gathered in oStiDBChildren.
                 |
                 |          Dim oStiEngine As StiEngine

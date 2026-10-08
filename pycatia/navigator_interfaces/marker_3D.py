@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,20 +15,20 @@ from pycatia.types.general import CATVariant
 
 class Marker3D(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Marker3D
-                | 
-                | Represents a marker 3D.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Marker3D
+            |
+            | Represents a marker 3D.
+
     """
 
     def __init__(self, com_object):
@@ -43,16 +43,16 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Fill() As long
-                | 
+                |
                 |     Returns or sets the marker 3D's filling status (1 the figure is filled, 0
                 |     the figure is not filled).
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the filling status of NewMarker3D marker
                 |              3D.
-                |             
-                | 
+                |
+                |
                 |             Dim status As Integer
                 |             status = NewMarker3D.Fill
 
@@ -77,16 +77,16 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Frame() As long
-                | 
+                |
                 |     Returns or sets the marker 3D's framing status (1 the figure is framed, 0
                 |     the figure is not framed).
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the framing status of NewMarker3D marker
                 |              3D.
-                |             
-                | 
+                |
+                |
                 |             Dim status As Integer
                 |             status = NewMarker3D.Frame
 
@@ -111,15 +111,15 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Text() As CATBSTR
-                | 
+                |
                 |     Returns or sets the text for a text marker 3D.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example reads the text of NewMarker3D marker
                 |              3D.
-                |             
-                | 
+                |
+                |
                 |             Dim text As String
                 |             text = NewMarker3D.Text
 
@@ -144,15 +144,15 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property TextFont() As CATBSTR
-                | 
+                |
                 |     Returns or sets the text's font for a marker 3D.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the text's font of NewMarker3D marker
                 |              3D.
-                |             
-                | 
+                |
+                |
                 |             Dim font As String
                 |             font = NewMarker3D.TextFont
 
@@ -177,15 +177,15 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property TextOrientation() As CatMarkerTextOrientation
-                | 
+                |
                 |     Returns or sets the orientation of text.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the orientation of NewMarker3D marker
                 |              3D.
-                |             
-                | 
+                |
+                |
                 |             Dim orientation As CatMarkerTextOrientation
                 |             orientation = NewMarker3D.TextOrientation
 
@@ -211,15 +211,15 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property TextSize() As double
-                | 
+                |
                 |     Returns or sets the text's size for a marker 3D.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the text's size of NewMarker3D marker
                 |              3D.
-                |             
-                | 
+                |
+                |
                 |             Dim size As Double
                 |             size = NewMarker3D.TextSize
 
@@ -244,11 +244,11 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Type() As CatMarker3DType (Read Only)
-                | 
+                |
                 |     Returns the type of the marker 3D.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example reads the type of NewMarker3D marker
                 |              3D.
                 |
@@ -268,20 +268,20 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddObject(AnyObject iObject)
-                | 
+                |
                 |     Adds a link to an object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iObject
-                |             The object to be linked. 
-                | 
+                |             The object to be linked.
+                |
                 |     Example:
-                | 
+                |
                 |              This example links ThisProduct to the NewMarker3D marker
                 |              3D.
-                |             
-                | 
+                |
+                |
                 |             NewMarker3D.AddObject(ThisProduct)
 
         :param AnyObject i_object:
@@ -296,16 +296,16 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func CountObject() As long
-                | 
+                |
                 |     Returns the number of objects which are linked to the marker
                 |     3D.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example reads the number of objects in the marker3D
                 |              NewMarker3D.
-                |             
-                | 
+                |
+                |
                 |             Dim number As Integer
                 |             number = NewMarker3D.CountObject
 
@@ -321,32 +321,32 @@ class Marker3D(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetObjectPositions(CATVariant iIndex,
                 | CATSafeArrayVariant oCoordinates)
-                | 
+                |
                 |     Retrieves the coordinates of the anchor point of the marker on the
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of the object in the marker 3D. The index of the first
                 |             object is 1, and the index of the last object is CountObject.
-                |             
+                |
                 |         oCoordinates
                 |             The coordinates of the anchor point
-                | 
+                |
                 |                 oCoordinates(0) is the X coordinate of the anchor
                 |                 point
                 |                 oCoordinates(1) is the Y coordinate of the anchor
                 |                 point
                 |                 oCoordinates(2) is the Z coordinate of the anchor point
-                |                 
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the coordinates of the anchor in the
                 |              NewMarker3D marker 3D.
-                |             
-                | 
+                |
+                |
                 |             Dim Coordinates (3)
                 |             NewMarker3D.GetObjectPositions Coordinates
 
@@ -363,27 +363,27 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetTextPositions(CATSafeArrayVariant oCoordinates)
-                | 
+                |
                 |     Retrieves the coordinates of the positions of a text marker 3D. The
                 |     bottom-left corner of the text is anchored to a given
                 |     point.
-                | 
+                |
                 |     Returns:
                 |         The coordinates of the text anchor point
-                | 
+                |
                 |             oCoordinates(0) is the X coordinate of the text anchor
                 |             point
                 |             oCoordinates(1) is the Y coordinate of the text anchor
                 |             point
                 |             oCoordinates(2) is the Z coordinate of the text anchor point
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the coordinates of the text in the
                 |              NewMarker3D marker 3D.
-                |             
-                | 
+                |
+                |
                 |             Dim Coordinates (2)
                 |             NewMarker3D.GetTextPositions Coordinates
 
@@ -391,7 +391,7 @@ class Marker3D(AnyObject):
         :rtype: None
         """
         return self.marker_3d.GetTextPositions(o_coordinates)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -414,26 +414,26 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func ItemObject(CATVariant iIndex) As CATBaseDispatch
-                | 
+                |
                 |     Returns an object which is linked to the marker 3D using its
                 |     index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of the object in the marker 3D. The index of the first
                 |             object is 1, and the index of the last object is CountObject.
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         The retrieved object 
+                |         The retrieved object
                 |     Example:
-                | 
+                |
                 |              This example retrieves in ThisObject the ninth
                 |              object
                 |             from the NewMarker3D marker 3D.
-                |             
-                | 
+                |
+                |
                 |             Dim ThisObject As Marker3D
                 |             Set ThisObject = NewMarker3D.ItemObject(9)
 
@@ -449,23 +449,23 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveObject(CATVariant iIndex)
-                | 
+                |
                 |     Removes an object which is linked to the marker 3D using its
                 |     index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of the object in the marker 3D. The index of the first
                 |             object is 1, and the index of the last object is CountObject.
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |              This example removes the ninth object
                 |             from the NewMarker3D marker 3D.
-                |             
-                | 
+                |
+                |
                 |             NewMarker3D.RemoveObject(9)
 
         :param CATVariant i_index:
@@ -481,32 +481,32 @@ class Marker3D(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetObjectPositions(CATVariant iIndex,
                 | CATSafeArrayVariant iCoordinates)
-                | 
+                |
                 |     Sets the coordinates of the anchor point of the marker on the
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of the object in the marker 3D. The index of the first
                 |             object is 1, and the index of the last object is CountObject.
-                |             
+                |
                 |         iCoordinates
                 |             The coordinates of the anchor point
-                | 
+                |
                 |                 oCoordinates(0) is the X coordinate of the anchor
                 |                 point
                 |                 oCoordinates(1) is the Y coordinate of the anchor
                 |                 point
                 |                 oCoordinates(2) is the Z coordinate of the anchor point
-                |                 
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |              This example sets the coordinates of the anchor in the NewMarker3D
                 |              marker 3D.
-                |             
-                | 
+                |
+                |
                 |             Dim Coordinates (3)
                 |             NewMarker3D.SetObjectPositions Coordinates
 
@@ -523,27 +523,27 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetTextPositions(CATSafeArrayVariant iCoordinates)
-                | 
+                |
                 |     Sets the coordinates of the positions of a text marker 3D.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCoordinates
                 |             The coordinates of the text anchor point
-                | 
+                |
                 |                 oCoordinates(0) is the X coordinate of the text anchor
                 |                 point
                 |                 oCoordinates(1) is the Y coordinate of the text anchor
                 |                 point
                 |                 oCoordinates(2) is the Z coordinate of the text anchor point
-                |                 
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |              This example sets the coordinates of the text in the NewMarker3D
                 |              marker 3D.
-                |             
-                | 
+                |
+                |
                 |             Dim Coordinates (2)
                 |             NewMarker3D.SetTextPositions Coordinates
 
@@ -551,7 +551,7 @@ class Marker3D(AnyObject):
         :rtype: None
         """
         return self.marker_3d.SetTextPositions(i_coordinates)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -574,15 +574,15 @@ class Marker3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Update()
-                | 
+                |
                 |     Updates the the marker 3D: that is to take into account all modifications
                 |     which occur since last update.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example updates the NewMarker3D marker 3D.
-                |             
-                | 
+                |
+                |
                 |             NewMarker3D.Update
 
         :rtype: None

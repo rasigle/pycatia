@@ -5,13 +5,12 @@ class PYCATIABaseException(Exception):
     """
     PYCATIABaseException class.
     """
+
     pass
 
 
 class CATIAApplicationException(PYCATIABaseException):
-    """
-
-    """
+    """ """
 
     def __init__(self, message):
         """

@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.analysis_interfaces.analysis_mesh_local_specifications import AnalysisMeshLocalSpecifications
+
+from pycatia.analysis_interfaces.analysis_mesh_local_specifications import (
+    AnalysisMeshLocalSpecifications,
+)
 from pycatia.analysis_interfaces.analysis_set import AnalysisSet
 from pycatia.in_interfaces.reference import Reference
 from pycatia.product_structure_interfaces.product import Product
@@ -18,21 +21,21 @@ from pycatia.types.general import CATVariant
 
 class AnalysisMeshPart(AnalysisSet):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATAnalysisInterfaces.AnalysisSet
-                |                         AnalysisMeshPart
-                | 
-                | The interface to access a CATIAAnalysisMeshPart.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATAnalysisInterfaces.AnalysisSet
+            |                         AnalysisMeshPart
+            |
+            | The interface to access a CATIAAnalysisMeshPart.
+
     """
 
     def __init__(self, com_object):
@@ -47,17 +50,17 @@ class AnalysisMeshPart(AnalysisSet):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Activity() As boolean
-                | 
+                |
                 |     Returns the activity of an meshpart.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oActivity
-                | 
+                |
                 |             Legal values:
-                | 
+                |
                 |             FALSE
-                |                 Mesh Part is not active. 
+                |                 Mesh Part is not active.
                 |             TRUE
                 |                 Mesh Part is active.
 
@@ -83,15 +86,19 @@ class AnalysisMeshPart(AnalysisSet):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnalysisMeshLocalSpecifications() As
                 | AnalysisMeshLocalSpecifications (Read Only)
-                | 
+                |
                 |     Returns the local specification collection from the meshpart analysis.
 
         :rtype: AnalysisMeshLocalSpecifications
         """
 
-        return AnalysisMeshLocalSpecifications(self.analysis_mesh_part.AnalysisMeshLocalSpecifications)
+        return AnalysisMeshLocalSpecifications(
+            self.analysis_mesh_part.AnalysisMeshLocalSpecifications
+        )
 
-    def add_support_from_publication(self, i_product: Product, i_support: Publication) -> None:
+    def add_support_from_publication(
+        self, i_product: Product, i_support: Publication
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -99,19 +106,19 @@ class AnalysisMeshPart(AnalysisSet):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromPublication(Product iProduct,
                 | Publication iSupport)
-                | 
+                |
                 |     Creates a new support and add it to the support description of the mesh
                 |     part.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             the CATIA Product that represent the object to
                 |             linked.
                 |         iPublication
                 |             the CATIA Publication that represent the the geometry to
                 |             meshed.
-                | 
+                |
                 |     See also:
                 |         Publication, Product
 
@@ -119,8 +126,10 @@ class AnalysisMeshPart(AnalysisSet):
         :param Publication i_support:
         :rtype: None
         """
-        return self.analysis_mesh_part.AddSupportFromPublication(i_product.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.analysis_mesh_part.AddSupportFromPublication(
+            i_product.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -136,7 +145,9 @@ class AnalysisMeshPart(AnalysisSet):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_reference(self, i_product: Product, i_support: Reference) -> None:
+    def add_support_from_reference(
+        self, i_product: Product, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -144,19 +155,19 @@ class AnalysisMeshPart(AnalysisSet):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromReference(Product iProduct,
                 | Reference iSupport)
-                | 
+                |
                 |     Creates a new support and add it to the support description of the mesh
                 |     part.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             the CATIA Product that represent the object to
                 |             linked.
                 |         iSupport
                 |             the CATIA Reference that represent the geometry to
                 |             meshed.
-                | 
+                |
                 |     See also:
                 |         Reference, Product
 
@@ -164,8 +175,10 @@ class AnalysisMeshPart(AnalysisSet):
         :param Reference i_support:
         :rtype: None
         """
-        return self.analysis_mesh_part.AddSupportFromReference(i_product.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.analysis_mesh_part.AddSupportFromReference(
+            i_product.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -189,12 +202,12 @@ class AnalysisMeshPart(AnalysisSet):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetGlobalSpecification(CATBSTR iName,
                 | CATVariant iValue)
-                | 
+                |
                 |     Sets the value corresponding to the given global
                 |     specification.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
                 |             The identifier if the global specification.
                 |         iValue
@@ -205,7 +218,7 @@ class AnalysisMeshPart(AnalysisSet):
         :rtype: None
         """
         return self.analysis_mesh_part.SetGlobalSpecification(i_name, i_value)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -228,20 +241,20 @@ class AnalysisMeshPart(AnalysisSet):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMeshPartsToCapture(CATSafeArrayVariant iMeshParts)
-                | 
+                |
                 |     Set the list of candidate Mesh Parts for capture.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMeshParts
-                |             Safe array of mesh parts. 
-                | 
+                |             Safe array of mesh parts.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
-                |             Operation successfull. 
+                |             Operation successfull.
                 |         E_FAIL
                 |             Operation failed.
 
@@ -249,7 +262,7 @@ class AnalysisMeshPart(AnalysisSet):
         :rtype: None
         """
         return self.analysis_mesh_part.SetMeshPartsToCapture(i_mesh_parts)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -266,11 +279,8 @@ class AnalysisMeshPart(AnalysisSet):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def set_specification_from_publication(
-            self,
-            i_name: str,
-            i_product: Product,
-            i_support: Publication,
-            i_mode: int) -> None:
+        self, i_name: str, i_product: Product, i_support: Publication, i_mode: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -280,12 +290,12 @@ class AnalysisMeshPart(AnalysisSet):
                 | Product iProduct,
                 | Publication iSupport,
                 | long iMode)
-                | 
+                |
                 |     Adds the geometric value corresponding to the given global
                 |     specification.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
                 |             The identifier if the global specification.
                 |         iProduct
@@ -294,17 +304,17 @@ class AnalysisMeshPart(AnalysisSet):
                 |         iPublication
                 |             the CATIA Publication that represent the the geometry to
                 |             meshed.
-                | 
+                |
                 |     See also:
-                |         Publication, Product 
+                |         Publication, Product
                 |     iMode
                 |         The mode used to valuate the publication global
                 |         specification.
                 |         Legal values:
-                | 
+                |
                 |         0
                 |             the global specification is defined as a single reference.
-                |             
+                |
                 |         1
                 |             the global specification is added to exising
                 |             references.
@@ -316,12 +326,9 @@ class AnalysisMeshPart(AnalysisSet):
         :rtype: None
         """
         return self.analysis_mesh_part.SetSpecificationFromPublication(
-            i_name,
-            i_product.com_object,
-            i_support.com_object,
-            i_mode
+            i_name, i_product.com_object, i_support.com_object, i_mode
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -338,11 +345,8 @@ class AnalysisMeshPart(AnalysisSet):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def set_specification_from_reference(
-            self,
-            i_name: str,
-            i_product: Product,
-            i_support: Reference,
-            i_mode: int) -> None:
+        self, i_name: str, i_product: Product, i_support: Reference, i_mode: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -352,12 +356,12 @@ class AnalysisMeshPart(AnalysisSet):
                 | Product iProduct,
                 | Reference iSupport,
                 | long iMode)
-                | 
+                |
                 |     Set the geometric value corresponding to the given global
                 |     specification.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
                 |             The identifier if the global specification.
                 |         iProduct
@@ -366,17 +370,17 @@ class AnalysisMeshPart(AnalysisSet):
                 |         iSupport
                 |             the CATIA Reference that represent the geometry to
                 |             meshed.
-                | 
+                |
                 |     See also:
-                |         Reference, Product 
+                |         Reference, Product
                 |     iMode
                 |         The mode used to valuate the reference global
                 |         specification.
                 |         Legal values:
-                | 
+                |
                 |         0
                 |             the global specification is defined as a single reference.
-                |             
+                |
                 |         1
                 |             the global specification is added to exising
                 |             references.
@@ -388,12 +392,9 @@ class AnalysisMeshPart(AnalysisSet):
         :rtype: None
         """
         return self.analysis_mesh_part.SetSpecificationFromReference(
-            i_name,
-            i_product.com_object,
-            i_support.com_object,
-            i_mode
+            i_name, i_product.com_object, i_support.com_object, i_mode
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

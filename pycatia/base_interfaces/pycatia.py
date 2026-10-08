@@ -30,7 +30,9 @@ class PyCATIA:
         :param str name:
         """
         if current < required:
-            self.logger.info(f'"{name}" was introduced in R{required}. You are running R{current}.')
+            self.logger.info(
+                f'"{name}" was introduced in R{required}. You are running R{current}.'
+            )
 
     def __repr__(self):
-        return 'PyCATIA()'
+        return "PyCATIA()"

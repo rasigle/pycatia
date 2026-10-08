@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import SPMDistributionMode
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.types.general import CATVariant
@@ -15,21 +16,21 @@ from pycatia.types.general import CATVariant
 
 class AnalysisColorMap(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     AnalysisColorMap
-                | 
-                | Represents the Color Map Object of the post-processing Image
-                | Object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     AnalysisColorMap
+            |
+            | Represents the Color Map Object of the post-processing Image
+            | Object.
+
     """
 
     def __init__(self, com_object):
@@ -44,16 +45,16 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DiscreteMode() As CATVariant
-                | 
+                |
                 |     Gets the Discrete mode for the Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDiscreteMode
-                |             Output Boolean for the Discrete Mode True : indicates that Discrete mode is enabled for the color map. False: indicates that Discrete mode is disabled for the color map. This Method Returns E_FAIL if the Parent Image is not uptodate. 
-                | 
+                |             Output Boolean for the Discrete Mode True : indicates that Discrete mode is enabled for the color map. False: indicates that Discrete mode is disabled for the color map. This Method Returns E_FAIL if the Parent Image is not uptodate.
+                |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object
                 |          oDiscreteMode = analysisColorMap.DiscreteMode
                 |          In this example, oDiscreteMode is the output Discrete Mode for
@@ -80,16 +81,16 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DistributionMode() As SPMDistributionMode
-                | 
+                |
                 |     Gets the Distribution Mode for the Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDistMode
-                |             Returns the Distribution Mode (ColorMap type) SPM_LINEAR : For Linear Distribution Mode SPM_HISTOGRAM : For Histogram Distribution Mode SPM_LOG : For Logarithmic Distribution Mode This Method Returns E_FAIL if the Parent Image is not uptodate. 
-                | 
+                |             Returns the Distribution Mode (ColorMap type) SPM_LINEAR : For Linear Distribution Mode SPM_HISTOGRAM : For Histogram Distribution Mode SPM_LOG : For Logarithmic Distribution Mode This Method Returns E_FAIL if the Parent Image is not uptodate.
+                |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object oDistMode = analysisColorMap.DistributionMode
                 |          In this example, oDistMode is the output distribution mode for
                 |          analysisColorMap.
@@ -115,18 +116,18 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImposedMaxValue() As double
-                | 
+                |
                 |     Gets the Imposed Maximum value for the Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMaxValue
                 |             Returns Imposed Maximum value Returned value will be in CATIA
                 |             Units. This Method Returns E_FAIL if the Parent Image is not uptodate.
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object oMaxValue = analysisColorMap.ImposedMaxValue
                 |          In this example, oMaxValue is the output Imposed Maximum value for
                 |          analysisColorMap.
@@ -152,17 +153,17 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImposedMinValue() As double
-                | 
+                |
                 |     Gets the Imposed Minimum value for the Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMinValue
                 |             Returns imposed minimum value Returned value will be in CATIA
                 |             Units. This Method Returns E_FAIL if the Parent Image is not uptodate.
                 |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object oMinValue = analysisColorMap.ImposedMinValue
                 |          In this example, oMinValue is the output Imposed Minimum value for
                 |          analysisColorMap.
@@ -188,16 +189,16 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InverseMode() As CATVariant
-                | 
+                |
                 |     Gets the Inverse mode for the Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oInverseMode
-                |             Output Boolean for the Inverse Mode True : indicates that Inverse mode is enabled for the color map. False: indicates that Inverse mode is disabled for the color map. This Method Returns E_FAIL if the Parent Image is not uptodate. 
-                | 
+                |             Output Boolean for the Inverse Mode True : indicates that Inverse mode is enabled for the color map. False: indicates that Inverse mode is disabled for the color map. This Method Returns E_FAIL if the Parent Image is not uptodate.
+                |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object oInverseMode = analysisColorMap.InverseMode
                 |          In this example, oInverseMode is the output Inverse Mode for
                 |          analysisColorMap.
@@ -223,18 +224,18 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NbColors() As long
-                | 
+                |
                 |     Gets the Number of colors for the Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNbColors
                 |             returns number of colors as output from the color map. This Method
                 |             Returns E_FAIL if the Parent Image is not uptodate.
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object oNbColors = analysisColorMap.NbColors
                 |          In this example, oNbColors is the output Number of colors for
                 |          analysisColorMap.
@@ -260,16 +261,16 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SmoothMode() As CATVariant
-                | 
+                |
                 |     Gets the Smooth mode for the Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSmoothMode
-                |             Output Boolean for the Smooth Mode True : indicates that Smooth mode is enabled for the color map. False: indicates that Smooth mode is disabled for the color map. This Method Returns E_FAIL if the Parent Image is not uptodate. 
-                | 
+                |             Output Boolean for the Smooth Mode True : indicates that Smooth mode is enabled for the color map. False: indicates that Smooth mode is disabled for the color map. This Method Returns E_FAIL if the Parent Image is not uptodate.
+                |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object
                 |          oSmoothMode = analysisColorMap.SmoothMode
                 |          In this example, oSmoothMode is the output Smooth Mode for
@@ -295,21 +296,21 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDistributionValue(long indexValue) As double
-                | 
+                |
                 |     Gets the Value for the Distribution of Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         indexValue
                 |             The index whose Value we get. This integer should be greater than 0
-                |             and less than NbColors. Else Method Fails. 
+                |             and less than NbColors. Else Method Fails.
                 |         oModeValue
                 |             Returns the value @param indexValue Returned value will be in CATIA
                 |             Units. This Method Returns E_FAIL if the Parent Image is not uptodate.
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object Set oModeValue = analysisColorMap.GetDistributionValue (3)
                 |          In this example, oModeValue is the output value of the Distribution
                 |          list at Index 3.
@@ -319,7 +320,9 @@ class AnalysisColorMap(AnyObject):
         """
         return self.analysis_color_map.GetDistributionValue(index_value)
 
-    def set_distribution_value(self, index_value: int, i_mode_value: float, i_smoothening_flag: CATVariant) -> None:
+    def set_distribution_value(
+        self, index_value: int, i_mode_value: float, i_smoothening_flag: CATVariant
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -328,42 +331,42 @@ class AnalysisColorMap(AnyObject):
                 | o Sub SetDistributionValue(long indexValue,
                 | double iModeValue,
                 | CATVariant iSmootheningFlag)
-                | 
+                |
                 |     Sets the Value for the Distribution of Color Map
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         indexValue
                 |             The index whose Value will be set. This integer should be greater
-                |             than 0 and less than NbColors. Else Method Fails. 
+                |             than 0 and less than NbColors. Else Method Fails.
                 |         iModeValue
                 |             The Value to be set. This value should be in between
                 |             Computed/Imposed Min/Max values. Else Method Fails. In addition if @param
                 |             iSmootheningFlag is False, this value should be in between the immediate lower
                 |             and upper values. Else Method Fails. Value has to be provided in CATIA Units.
-                |             
+                |
                 |         iSmootheningFlag
                 |             if True: Does either upper or lower smoothening of values. if
                 |             False: Does not smoothen values. But sets only the given index value. This
-                |             Method Returns E_FAIL if Color Map is Discrete. 
-                | 
+                |             Method Returns E_FAIL if Color Map is Discrete.
+                |
                 |     Example:
-                | 
+                |
                 |          : analysisColorMap is the ColorMap Object  Example 1:
-                | 
+                |
                 |          Call analysisColorMap.SetDistributionValue(3, 3e+09,
                 |          True)
-                | 
+                |
                 |          This sets the value 3e+09 at 3rd Index of the list. It will smoothen
                 |          the distribution values
                 |          for the color-map object analysisColorMap.
                 |          Should be in between Computed/Imposed Min/Max values.
-                |          
+                |
                 |          Example 2:
-                | 
+                |
                 |          Call analysisColorMap.SetDistributionValue(3, 10e+09,
                 |          False)
-                | 
+                |
                 |          This sets the value 10e+09 at 3rd Index of the list. It will not
                 |          smoothen the distribution
                 |          for the color-map object analysisColorMap.
@@ -376,8 +379,10 @@ class AnalysisColorMap(AnyObject):
         :param CATVariant i_smoothening_flag:
         :rtype: None
         """
-        return self.analysis_color_map.SetDistributionValue(index_value, i_mode_value, i_smoothening_flag)
-        # # # # Autogenerated comment: 
+        return self.analysis_color_map.SetDistributionValue(
+            index_value, i_mode_value, i_smoothening_flag
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -400,7 +405,7 @@ class AnalysisColorMap(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Update()
-                | 
+                |
                 |     Updates the visualization of the color map. This method should be called
                 |     after one or all previous PUT methods are called on Color Map.
 

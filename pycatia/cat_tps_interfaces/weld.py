@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.drafting_interfaces.drawing_welding import DrawingWelding
@@ -32,7 +33,7 @@ class Weld(AnyObject):
                 |                 System.AnyObject
                 |                     Weld
 
-    
+
     """
 
     def __init__(self, com_object):
@@ -46,7 +47,7 @@ class Weld(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Get2dAnnot() As DrawingWelding
-                | 
+                |
                 |     Retrieves Drafting Weld annotation.
 
         :rtype: DrawingWelding
@@ -54,7 +55,7 @@ class Weld(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return DrawingWelding(self.weld.Get2dAnnot())
 
@@ -65,7 +66,7 @@ class Weld(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TPSParallelOnScreen() As TPSParallelOnScreen
-                | 
+                |
                 |     Gets the annotation on TPSParallelOnScreen interface.
 
         :rtype: TPSParallelOnScreen
@@ -73,7 +74,7 @@ class Weld(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return TPSParallelOnScreen(self.weld.TPSParallelOnScreen())
 

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class RenderingEnvironmentWall(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     RenderingEnvironmentWall
-                | 
-                | Represents a Environment object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     RenderingEnvironmentWall
+            |
+            | Represents a Environment object.
+
     """
 
     def __init__(self, com_object):
@@ -42,10 +42,10 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ActiveStatus() As short
-                | 
+                |
                 |     Returns or sets the environment wall active status. A wall is visible only
                 |     when it is active.
-                | 
+                |
                 |         The active status can be:
                 |         1: wall is visible
                 |         0: wall is invisible
@@ -71,11 +71,11 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AutoScaleStatus() As short
-                | 
+                |
                 |     Returns or sets the texture automatic scaling status. If status is
                 |     automatic scaling, the texture fit is locked when the environment size is
                 |     modified.
-                | 
+                |
                 |         The scaling status can be:
                 |         1: automatic scaling is on
                 |         0: automatic scaling is off
@@ -101,10 +101,10 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FlipUStatus() As short
-                | 
+                |
                 |     Returns or sets texture orientation status along the U
                 |     axis.
-                | 
+                |
                 |         The flip status can be:
                 |         1: texture is flipped along the U axis
                 |         0: texture is not flipped along the U axis
@@ -130,10 +130,10 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FlipVStatus() As short
-                | 
+                |
                 |     Returns or sets texture orientation status along the V
                 |     axis.
-                | 
+                |
                 |         The flip status can be:
                 |         1: texture is flipped along the V axis
                 |         0: texture is not flipped along the V axis
@@ -159,11 +159,11 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LinkedScaleStatus() As short
-                | 
+                |
                 |     Returns or sets the texture scaling link status. If scales are linked,
                 |     modifying one scale will update the other keeping the ratio between U and V
                 |     constant.
-                | 
+                |
                 |         The link status can be:
                 |         1: U and V scales are linked
                 |         0: U and V scales are not linked
@@ -189,7 +189,7 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Rotation() As double
-                | 
+                |
                 |     Returns or sets the texture rotation angle (in degrees). The rotation
                 |     values must be between -360 and 360 degrees.
 
@@ -214,7 +214,7 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ScaleU() As double
-                | 
+                |
                 |     Returns or sets the texture scale along the U axis. The scale value should
                 |     be > 0. Note that the modification of this parameter is useless if automatic
                 |     scaling is enabled.
@@ -240,7 +240,7 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ScaleV() As double
-                | 
+                |
                 |     Returns or sets the texture scale along the V axis. The scale value should
                 |     be > 0. Note that the modification of this parameter is useless if automatic
                 |     scaling is enabled.
@@ -266,10 +266,10 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ShadowsStatus() As short
-                | 
+                |
                 |     Returns or sets the wall shadow status. A wall may or may not be affected
                 |     by lights depending on this status.
-                | 
+                |
                 |         The shadows status can be:
                 |         1: wall is affected by active lights and can bear
                 |         shadows
@@ -297,7 +297,7 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Texture() As CATBSTR
-                | 
+                |
                 |     Returns or sets the wall texture name. To remove the texture, use an empty
                 |     string.
 
@@ -322,7 +322,7 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TranslationU() As double
-                | 
+                |
                 |     Returns or sets the texture offset along the U axis. Note that this
                 |     parameter is useless if automatic scaling is enabled.
 
@@ -347,7 +347,7 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TranslationV() As double
-                | 
+                |
                 |     Returns or sets the texture offset along the V axis. Note that this
                 |     parameter is useless if automatic scaling is enabled.
 
@@ -371,7 +371,7 @@ class RenderingEnvironmentWall(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub FitAllInWall()
-                | 
+                |
                 |     If a texture is mapped on the wall, scale automatically the texture to fit
                 |     inside the wall.
 

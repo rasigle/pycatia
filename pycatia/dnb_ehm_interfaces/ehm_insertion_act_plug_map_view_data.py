@@ -1,67 +1,68 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dmaps_interfaces.activity import Activity
 
 
 class EhmInsertionActPlugMapViewData(Activity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                         EHMInsertionActPlugMapViewData
-                | 
-                | Interface to access Plug Map view data associated to an Insertion
-                | activity.
-                | 
-                | Role: Component that implement DNBIAEHMInsertionActPlugMapViewData is
-                | DNBEHMModel.
-                | 
-                | When using DNBIAEHMInsertionActPlugMapViewData interface in C++, query from
-                | interface DNBIEHMInsertionActivity.
-                | When using from VB Script, use GetTechnologicalObject to get handle to
-                | interface.
-                | 
-                | PlugMap Data consists of 2 parts namely Connector data & inserted wires
-                | data.
-                | To get data about inserted wires, first get the number of wires using
-                | method
-                | get_NumInsertedWires, then set index of wire using put_WireID and then access
-                | information about that wire.
-                | Please note that default returned string for all PROPERTY of type CATBSTR is
-                | "UnSet".
-                | 
-                | Sample Code in VB Script is as given below
-                | '---- InsertionAct is activity for Plug Map view data.
-                | Dim InsertionAct As Activity
-                | Set InsertionAct = get activity DNBEHMInsertionAct.1
-                | Set PlugMapData = InsertionAct.GetTechnologicalObject( "EHMInsertionActPlugMapViewData" )
-                | Dim ConnectorName As String
-                | ConnectorName = PlugMapData.ConnectorName
-                | Dim NumInsertedWires, ii As Integer
-                | NumInsertedWires = PlugMapData.NumInsertedWires
-                | Dim TerminationName, WireName, ContactName As String
-                | For ii = 1 to NumInsertedWires
-                | PlugMapData.WireID = ii
-                | TerminationName = PlugMapData.TerminationName
-                | WireName = PlugMapData.WireName
-                | Next
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                         EHMInsertionActPlugMapViewData
+            |
+            | Interface to access Plug Map view data associated to an Insertion
+            | activity.
+            |
+            | Role: Component that implement DNBIAEHMInsertionActPlugMapViewData is
+            | DNBEHMModel.
+            |
+            | When using DNBIAEHMInsertionActPlugMapViewData interface in C++, query from
+            | interface DNBIEHMInsertionActivity.
+            | When using from VB Script, use GetTechnologicalObject to get handle to
+            | interface.
+            |
+            | PlugMap Data consists of 2 parts namely Connector data & inserted wires
+            | data.
+            | To get data about inserted wires, first get the number of wires using
+            | method
+            | get_NumInsertedWires, then set index of wire using put_WireID and then access
+            | information about that wire.
+            | Please note that default returned string for all PROPERTY of type CATBSTR is
+            | "UnSet".
+            |
+            | Sample Code in VB Script is as given below
+            | '---- InsertionAct is activity for Plug Map view data.
+            | Dim InsertionAct As Activity
+            | Set InsertionAct = get activity DNBEHMInsertionAct.1
+            | Set PlugMapData = InsertionAct.GetTechnologicalObject( "EHMInsertionActPlugMapViewData" )
+            | Dim ConnectorName As String
+            | ConnectorName = PlugMapData.ConnectorName
+            | Dim NumInsertedWires, ii As Integer
+            | NumInsertedWires = PlugMapData.NumInsertedWires
+            | Dim TerminationName, WireName, ContactName As String
+            | For ii = 1 to NumInsertedWires
+            | PlugMapData.WireID = ii
+            | TerminationName = PlugMapData.TerminationName
+            | WireName = PlugMapData.WireName
+            | Next
+
     """
 
     def __init__(self, com_object):
@@ -76,18 +77,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConnectorName() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets ConnectorName.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oConnectorName
-                |             the Connector Name. 
-                | 
+                |             the Connector Name.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -105,18 +106,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConnectorPartNumber() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Connector Part Number.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oConnectorPartNumber
-                |             the Connector Part Number. 
-                | 
+                |             the Connector Part Number.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -134,18 +135,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConnectorRefDesignator() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Connector Reference Designator.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oConnectorRefDesignator
-                |             the Connector Reference Designator. 
-                | 
+                |             the Connector Reference Designator.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -163,18 +164,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConnectorSubType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Connector Sub Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oConnectorSubType
-                |             the Connector Sub Type. 
-                | 
+                |             the Connector Sub Type.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -192,18 +193,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConnectorType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Connector Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oConnectorType
-                |             the Connector Type. 
-                | 
+                |             the Connector Type.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -221,18 +222,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactElecBarrelDiameter() As double (Read Only)
-                | 
+                |
                 |     Gets Contact Elec Barrel Diameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oContactElecBarrelDiameter
-                |             the Contact Elec Barrel Diameter. 
-                | 
+                |             the Contact Elec Barrel Diameter.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -250,18 +251,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactName() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Contact Name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oContactName
-                |             the Contact Name. 
-                | 
+                |             the Contact Name.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -279,18 +280,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactPartNumber() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Contact Part Number.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oContactPartNumber
-                |             the Contact Part Number. 
-                | 
+                |             the Contact Part Number.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -308,18 +309,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactRefDesignator() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Contact Reference Designator.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oContactRefDesignator
-                |             the Contact Ref Designator. 
-                | 
+                |             the Contact Ref Designator.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -337,18 +338,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactSubType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Contact Sub Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oContactSubType
-                |             the Contact Sub Type. 
-                | 
+                |             the Contact Sub Type.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -366,18 +367,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Contact Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oContactType
-                |             the Contact Type. 
-                | 
+                |             the Contact Type.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -395,18 +396,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumInsertedWires() As long (Read Only)
-                | 
+                |
                 |     Gets the number of inserted wires.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         NumInsertedWires
-                |             the number of inserted wires. 
-                | 
+                |             the number of inserted wires.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the wire ID is set successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -424,18 +425,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TerminationIDNumber() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Termination ID Number.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTerminationIDNumber.
-                |             the Termination ID Number 
-                | 
+                |             the Termination ID Number
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -453,18 +454,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TerminationName() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Termination Name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTerminationName
-                |             the Termination Name. 
-                | 
+                |             the Termination Name.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -482,18 +483,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TerminationNumber() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Termination Number.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTerminationNumber
-                |             the Termination Number. 
-                | 
+                |             the Termination Number.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -511,18 +512,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TerminationRefDesignator() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Termination Reference Designator.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTerminationRefDesignator
-                |             the Termination Ref Designator. 
-                | 
+                |             the Termination Ref Designator.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -540,18 +541,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TerminationSubType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Termination Sub Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTerminationSubType
-                |             the Termination Sub Type. 
-                | 
+                |             the Termination Sub Type.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -569,18 +570,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TerminationType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Termination Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTerminationType
-                |             the Termination Type. 
-                | 
+                |             the Termination Type.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -598,18 +599,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireColor() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Wire Color.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireColor
-                |             the Wire Color. 
-                | 
+                |             the Wire Color.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -627,18 +628,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireDiameter() As double (Read Only)
-                | 
+                |
                 |     Gets Wire Diameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireDiameter
-                |             the Wire Diameter. 
-                | 
+                |             the Wire Diameter.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -656,19 +657,19 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireID(long iWireID) (Write Only)
-                | 
+                |
                 |     Sets the index of wire.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iWireID
                 |             Index of wire between 1 & NumInsertedWires associated to an
-                |             Insertion Activity. 
-                | 
+                |             Insertion Activity.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the wire ID is set successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -694,18 +695,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireLength() As double (Read Only)
-                | 
+                |
                 |     Gets Wire Length.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireLength
-                |             the Wire Length. 
-                | 
+                |             the Wire Length.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -723,18 +724,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireName() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Wire Name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireName
-                |             the Wire Name. 
-                | 
+                |             the Wire Name.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -752,18 +753,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WirePartNumber() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Wire Part Number.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWirePartNumber
-                |             the Wire Part Number. 
-                | 
+                |             the Wire Part Number.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -781,18 +782,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireRefDesignator() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Wire Reference Designator.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireRefDesignator
-                |             the Wire Ref Designator. 
-                | 
+                |             the Wire Ref Designator.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -810,18 +811,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireSeparationCode() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Wire Separation Code.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireSeparationCode
-                |             the Wire Separation Code. 
-                | 
+                |             the Wire Separation Code.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -839,18 +840,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireSignalID() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Wire Signal ID.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireSignalID
-                |             the Wire Signal ID. 
-                | 
+                |             the Wire Signal ID.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -868,18 +869,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireSubType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Wire Sub Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireSubType
-                |             the Wire Sub Type. 
-                | 
+                |             the Wire Sub Type.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .
@@ -897,18 +898,18 @@ class EhmInsertionActPlugMapViewData(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WireType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gets Wire Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oWireType
-                |             the Wire Type. 
-                | 
+                |             the Wire Type.
+                |
                 |     Returns:
                 |         An HRESULT
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the Property is returned successfully.
                 |             E_FAIL otherwise
                 |             .

@@ -1,37 +1,38 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.in_interfaces.move import Move
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class ArrangementNode(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ArrangementNode
-                | 
-                | This interface provides access to a CATIAArrangementNode
-                | object.
-                | Use this object to fetch the properties of an ArrangementNode object. Role: Use
-                | this object to retrieve the bend angle, bend radius and location of an
-                | ArrangementNode object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ArrangementNode
+            |
+            | This interface provides access to a CATIAArrangementNode
+            | object.
+            | Use this object to fetch the properties of an ArrangementNode object. Role: Use
+            | this object to retrieve the bend angle, bend radius and location of an
+            | ArrangementNode object.
+
     """
 
     def __init__(self, com_object):
@@ -46,13 +47,13 @@ class ArrangementNode(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BendAngle() As double (Read Only)
-                | 
+                |
                 |     Returns the BendAngle of the current ArrangementNode.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the BendAngle of the objNode1
                 |         object.
-                | 
+                |
                 |          Dim dblBendAngle   As Double
                 |          dblBendBendAngle  = objNode1.BendAngle
 
@@ -69,14 +70,14 @@ class ArrangementNode(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BendRadius() As double
-                | 
+                |
                 |     Returns or sets the BendRadius of the current
                 |     ArrangementNode.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the BendRadius of the objNode1
                 |         object.
-                | 
+                |
                 |          Dim dblBendRadius   As Double
                 |          dblBendRadius  = objNode1.BendRadius
 
@@ -101,21 +102,21 @@ class ArrangementNode(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetPoint(Move iRelAxis,
                 | CATSafeArrayVariant ioNodeLocation)
-                | 
+                |
                 |     Returns the location of the current ArrangementNode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             The relative axis to be considered when calculating the coordinate.
-                |             
+                |
                 |         ioNodeLocation
                 |             The location of the ArrangementNode.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the location of the ArrangementNode
                 |                 object objNode1.
-                | 
+                |
                 |                  Dim dblCoords(3)   As Double
                 |                  Dim iRelAxis       As Move
                 |                  'Fetch iRelAxis from the object containing the
@@ -128,7 +129,7 @@ class ArrangementNode(AnyObject):
         :rtype: None
         """
         return self.arrangement_node.GetPoint(i_rel_axis.com_object, io_node_location)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -152,21 +153,21 @@ class ArrangementNode(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPoint(Move iRelAxis,
                 | CATSafeArrayVariant iNodeLocation)
-                | 
+                |
                 |     Sets the location of the current ArrangementNode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             The relative axis to be considered when calculating the coordinate.
-                |             
+                |
                 |         ioNodeLocation
                 |             The location of the ArrangementNode.
-                | 
+                |
                 |             Example:
                 |                 This example sets the location of the ArrangementNode object
                 |                 objNode1.
-                | 
+                |
                 |                  Dim dblCoords(3)   As Double
                 |                  Dim iRelAxis       As Move
                 |                  'Fetch iRelAxis from the object containing the
@@ -182,7 +183,7 @@ class ArrangementNode(AnyObject):
         :rtype: None
         """
         return self.arrangement_node.SetPoint(i_rel_axis.com_object, i_node_location)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

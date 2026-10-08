@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_str_functional_interfaces.sfm_member import SFMMember
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.length import Length
@@ -15,26 +16,26 @@ from pycatia.knowledge_interfaces.length import Length
 
 class SFMMember2Points(SFMMember):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATStrFunctionalInterfaces.SfmObject
-                |                         CATStrFunctionalInterfaces.SfmProfile
-                |                            CATStrFunctionalInterfaces.SfmMember
-                |                                 SfmMember2Points
-                | 
-                | Interface to manage Member created with one curve and a reference
-                | surface.
-                | Role: To manage member created with one curve and a reference
-                | surface.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATStrFunctionalInterfaces.SfmObject
+            |                         CATStrFunctionalInterfaces.SfmProfile
+            |                            CATStrFunctionalInterfaces.SfmMember
+            |                                 SfmMember2Points
+            |
+            | Interface to manage Member created with one curve and a reference
+            | surface.
+            | Role: To manage member created with one curve and a reference
+            | surface.
+
     """
 
     def __init__(self, com_object):
@@ -173,14 +174,14 @@ class SFMMember2Points(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StartPointOnCrvCurve() As Reference
-                | 
+                |
                 |     Returns or sets the point on curve information: curve, ratio or length
                 |     mode, offset and orientation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Curve the supporting curve for the
                 |         SfmMember2Points feature.
-                | 
+                |
                 |          Dim Curve As Reference
                 |          Set Curve = SfmMember2Points.StartPointOnCrvCurve
 
@@ -285,14 +286,14 @@ class SFMMember2Points(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StartPointSpec() As Reference
-                | 
+                |
                 |     Returns or sets the point.
                 |     Sub-element(s) supported (see Boundary object): Vertex.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Point the supporting curve for the
                 |         SfmMember2Points feature.
-                | 
+                |
                 |          Dim Point As Reference
                 |          Set Point = SfmMember2Points.StartPointSpec
 
@@ -328,14 +329,14 @@ class SFMMember2Points(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub InvertStartPointOnCrvOrientation()
-                | 
+                |
                 |     Inverts the orientation of the offset for an extremity
                 |     point.
-                | 
+                |
                 |     Example:
                 |         This example inverts the orientation of the start point on curve
                 |         extremity of the SfmMember2Points feature.
-                | 
+                |
                 |          SfmMember2Points.InvertStartPointOnCrvOrientation
 
         :rtype: None

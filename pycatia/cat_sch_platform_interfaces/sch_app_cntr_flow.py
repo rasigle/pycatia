@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SchAppCntrFlow(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchAppCntrFlow
-                | 
-                | Manage the technical attributes of a schematic connector.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchAppCntrFlow
+            |
+            | Manage the technical attributes of a schematic connector.
+
     """
 
     def __init__(self, com_object):
@@ -42,21 +42,21 @@ class SchAppCntrFlow(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppGetFlowCapability(CatSchIDLCntrFlowCapability
                 | oEFlowCapability)
-                | 
+                |
                 |     Query the application Flow Capability property of this
                 |     connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oEFlowCapability
-                |             Flow Capability. 
-                | 
+                |             Flow Capability.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppCntrFlow
-                | 
+                |
                 |           ...
                 |         objThisIntf.AppGetFlowCapabilityCatSchIDLCntrFlowCapability_Enum
 
@@ -73,19 +73,19 @@ class SchAppCntrFlow(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppGetFlowReality(CatSchIDLCntrFlowReality
                 | oEFlowReality)
-                | 
+                |
                 |     Query the application Flow Reality property of this
                 |     connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oEFlowReality
-                |             Flow Reality. 
-                | 
+                |             Flow Reality.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchAppCntrFlow
-                | 
+                |
                 |           ...
                 |         objThisIntf.AppGetFlowRealityCatSchIDLCntrFlowReality_Enum
 
@@ -102,21 +102,21 @@ class SchAppCntrFlow(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppSetFlowCapability(CatSchIDLCntrFlowCapability
                 | iEFlowCapability)
-                | 
+                |
                 |     Set the application Flow Capability property of this
                 |     connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEFlowCapability
-                |             Flow Capability property to be set. 
-                | 
+                |             Flow Capability property to be set.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppCntrFlow
-                | 
+                |
                 |           ...
                 |         objThisIntf.AppSetFlowCapabilityCatSchIDLCntrFlowCapability_Enum
 
@@ -133,21 +133,21 @@ class SchAppCntrFlow(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppSetFlowReality(CatSchIDLCntrFlowReality
                 | iEFlowReality)
-                | 
+                |
                 |     Set the application Flow Reality property of this
                 |     connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEFlowReality
-                |             Flow Reality property to be set. 
-                | 
+                |             Flow Reality property to be set.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppCntrFlow
-                | 
+                |
                 |           ...
                 |         objThisIntf.AppSetFlowRealityCatSchIDLCntrFlowReality_Enum
 

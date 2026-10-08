@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.drafting_interfaces.drawing_text import DrawingText
@@ -16,20 +16,20 @@ from pycatia.cat_tps_interfaces.tps_parallel_on_screen import TPSParallelOnScree
 
 class Text(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Text
-                | 
-                | Interface for the TPS Text object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Text
+            |
+            | Interface for the TPS Text object.
+
     """
 
     def __init__(self, com_object):
@@ -44,7 +44,7 @@ class Text(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Text() As CATBSTR
-                | 
+                |
                 |     Gets the annotation's text.
 
         :rtype: str
@@ -67,7 +67,7 @@ class Text(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Get2dAnnot() As DrawingText
-                | 
+                |
                 |     Retrieves Drafting text.
 
         :rtype: DrawingText
@@ -81,7 +81,7 @@ class Text(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TPSParallelOnScreen() As TPSParallelOnScreen
-                | 
+                |
                 |     Gets the annotation on TPSParallelOnScreen interface.
 
         :rtype: TPSParallelOnScreen

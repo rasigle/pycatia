@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.abq_automation_interfaces.abq_interaction import ABQInteraction
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
@@ -15,22 +16,22 @@ from pycatia.types.general import CATVariant
 
 class ABQInteractions(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     ABQInteractions
-                | 
-                | The collection of Abaqus interactions (ABQInteraction) objects attached to
-                | an
-                | ABQInitialStep object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     ABQInteractions
+            |
+            | The collection of Abaqus interactions (ABQInteraction) objects attached to
+            | an
+            | ABQInitialStep object.
+
     """
 
     def __init__(self, com_object):
@@ -44,31 +45,31 @@ class ABQInteractions(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Add(CATBSTR iInteractionType) As ABQInteraction
-                | 
+                |
                 |     Creates a new Abaqus interaction and adds it to the collection of Abaqus
                 |     Interactions.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iInteractionType
                 |             The type of the interaction to create.
-                | 
+                |
                 |             Legal values:
-                | 
+                |
                 |             "ABQSurfaceToSurfaceContact"
                 |             "ABQFastenedPair"
                 |             "ABQRigidBodyConstraint"
                 |             "ABQRigidCoupling"
                 |             "ABQSmoothCoupling"
                 |             "ABQARSurf"
-                | 
+                |
                 |     Returns:
                 |         oInteraction The Abaqus interaction object that was created.
-                |         
+                |
                 |     Example:
                 |         The following example creates a Contact pair interaction in the
                 |         ABQInteractions collection:
-                | 
+                |
                 |          Dim abaqusInteractions As ABQInteractions
                 |          Dim abqFPair As ABQFastenedPair
                 |          Set abqFPair =  abaqusInteractions..Add("ABQFastenedPair")
@@ -85,12 +86,12 @@ class ABQInteractions(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As ABQInteraction
-                | 
+                |
                 |     Returns an Abaqus interaction using its index or its name from the
                 |     ABQInteractions collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Abaqus interaction to retrieve from
                 |             the collection of Abaqus Interactions. If the index is a number, it specifies
@@ -98,8 +99,8 @@ class ABQInteractions(Collection):
                 |             Abaqus interaction in the collection is 1, and the index of the last
                 |             interaction is Count. If the index is a string, it specifies the name you
                 |             assigned to the interaction using the CATIACollection::Name property.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         The specified ABQInteraction.
 
@@ -115,12 +116,12 @@ class ABQInteractions(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes an Abaqus interaction using its index or its name from the
                 |     Interaction collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Abaqus interaction to retrieve from
                 |             the collection of Abaqus Interactions. If the index is a number, it specifies
@@ -134,7 +135,7 @@ class ABQInteractions(Collection):
         :rtype: None
         """
         return self.abq_interactions.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

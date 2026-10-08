@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,151 +14,151 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class N4DNavigatorSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         N4DNavigatorSettingAtt
-                | 
-                | Interface to handle the settings of the DMU Navigator
-                | workbench.
-                | 
-                | 
-                | The different settings are:
-                | 
-                | DMUClashPreview:
-                | Display of the preview viewer when editing an interference.
-                | 
-                | DMUDistancePreview:
-                | Display of the preview viewer when editing a distance.
-                | 
-                | DMUGroupPreview:
-                | Display of the preview viewer when editing a group.
-                | 
-                | DMUSectionPreview:
-                | Display of the preview viewer when editing a section.
-                | 
-                | DMUShuttlePreview:
-                | Display of the preview viewer when editing a shuttle.
-                | 
-                | DMUThicknessPreview:
-                | Display of the preview viewer for the thickness command.
-                | 
-                | DMUOffsetPreview:
-                | Display of the preview viewer for the offset command.
-                | 
-                | DMUSweptVolPreview:
-                | Display of the preview viewer for the swept volume command.
-                | 
-                | DMUSilhouettePreview:
-                | Display of the preview viewer for the silhouette command.
-                | 
-                | DMUWrappingPreview:
-                | Display of the preview viewer for the wrapping command.
-                | 
-                | DMUFreeSpacePreview:
-                | Display of the preview viewer for the free space command.
-                | 
-                | DMUSimplifPreview:
-                | Display of the preview viewer for the simplification command.
-                | 
-                | DMUVibrationVolPreview:
-                | Display of the preview viewer for the vibration volume
-                | command.
-                | 
-                | DMUCut3DPreview:
-                | Display of the preview viewer for the 3D cut command.
-                | 
-                | DMUMergerPreview:
-                | Display of the preview viewer for the merger command.
-                | 
-                | NumUrlName:
-                | Display of the hyperlink name.
-                | 
-                | MarkerAutoUpdate:
-                | Update on product structure modifications and scenes
-                | activation.
-                | 
-                | MarkerDefaultsColor:
-                | Default color of an annotation.
-                | 
-                | SceneDefaultsColor:
-                | Default background color for scene environment.
-                | 
-                | MarkerTextColor:
-                | Default color of a text annotation.
-                | 
-                | MarkerDefaultsWeight:
-                | Default weight value of an annotation.
-                | 
-                | MarkerDefaultsDashed:
-                | Default dashed value of an annotation.
-                | 
-                | MarkerDefaultsSize:
-                | Default size value of an annotation.
-                | 
-                | MarkerDefaultsFont:
-                | Default font of an annotation.
-                | 
-                | MarkerTextDashed:
-                | Default dashed value of a text annotation.
-                | 
-                | MarkerTextWeight:
-                | Default weight value of a text annotation.
-                | 
-                | PublishAutoLaunchBrowser:
-                | Automatic launching of publish results in a browser.
-                | 
-                | Marker2DAutoNaming:
-                | Automatically use a Part's name as the default for the creation of text
-                | annotations.
-                | 
-                | Marker3DAutoNaming:
-                | Activation of the mechanism that enables to transform temporary markers into
-                | persistent 3D annotations.
-                | 
-                | DMUReviewName:
-                | The desired default name for DMU Reviews
-                | 
-                | ForceVoxel:
-                | Force users of the Spatial Query command to use the defined Released
-                | Accuracy.
-                | 
-                | ClearanceVoxel:
-                | Definition of the Clearance value.
-                | 
-                | ForceClearanceVoxel:
-                | Force users of the Spatial Query command to use the defined Clearance
-                | value.
-                | 
-                | InsertMode:
-                | Mode for the Import applicative data command.
-                | 
-                | DMUGroupPreviewHiddenObjectsDisplayMode:
-                | Display mode for hidden objects of a DMU Group in its preview: visualized as in
-                | main 3D viewer or visualized with customized graphic
-                | properties
-                | 
-                | DMUGroupPreviewHiddenObjectsColor:
-                | Color for hidden objects in DMU Group Preview.
-                | 
-                | DMUGroupPreviewHiddenObjectsOpacity:
-                | Opacity for hidden objects in DMU Group Preview.
-                | 
-                | DMUGroupPreviewHiddenObjectsLowIntMode:
-                | Hidden objects are low intensified or not in DMU Group
-                | Preview.
-                | 
-                | DMUGroupPreviewHiddenObjectsPickMode:
-                | Hidden objects can be picked or not in DMU Group Preview.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         N4DNavigatorSettingAtt
+            |
+            | Interface to handle the settings of the DMU Navigator
+            | workbench.
+            |
+            |
+            | The different settings are:
+            |
+            | DMUClashPreview:
+            | Display of the preview viewer when editing an interference.
+            |
+            | DMUDistancePreview:
+            | Display of the preview viewer when editing a distance.
+            |
+            | DMUGroupPreview:
+            | Display of the preview viewer when editing a group.
+            |
+            | DMUSectionPreview:
+            | Display of the preview viewer when editing a section.
+            |
+            | DMUShuttlePreview:
+            | Display of the preview viewer when editing a shuttle.
+            |
+            | DMUThicknessPreview:
+            | Display of the preview viewer for the thickness command.
+            |
+            | DMUOffsetPreview:
+            | Display of the preview viewer for the offset command.
+            |
+            | DMUSweptVolPreview:
+            | Display of the preview viewer for the swept volume command.
+            |
+            | DMUSilhouettePreview:
+            | Display of the preview viewer for the silhouette command.
+            |
+            | DMUWrappingPreview:
+            | Display of the preview viewer for the wrapping command.
+            |
+            | DMUFreeSpacePreview:
+            | Display of the preview viewer for the free space command.
+            |
+            | DMUSimplifPreview:
+            | Display of the preview viewer for the simplification command.
+            |
+            | DMUVibrationVolPreview:
+            | Display of the preview viewer for the vibration volume
+            | command.
+            |
+            | DMUCut3DPreview:
+            | Display of the preview viewer for the 3D cut command.
+            |
+            | DMUMergerPreview:
+            | Display of the preview viewer for the merger command.
+            |
+            | NumUrlName:
+            | Display of the hyperlink name.
+            |
+            | MarkerAutoUpdate:
+            | Update on product structure modifications and scenes
+            | activation.
+            |
+            | MarkerDefaultsColor:
+            | Default color of an annotation.
+            |
+            | SceneDefaultsColor:
+            | Default background color for scene environment.
+            |
+            | MarkerTextColor:
+            | Default color of a text annotation.
+            |
+            | MarkerDefaultsWeight:
+            | Default weight value of an annotation.
+            |
+            | MarkerDefaultsDashed:
+            | Default dashed value of an annotation.
+            |
+            | MarkerDefaultsSize:
+            | Default size value of an annotation.
+            |
+            | MarkerDefaultsFont:
+            | Default font of an annotation.
+            |
+            | MarkerTextDashed:
+            | Default dashed value of a text annotation.
+            |
+            | MarkerTextWeight:
+            | Default weight value of a text annotation.
+            |
+            | PublishAutoLaunchBrowser:
+            | Automatic launching of publish results in a browser.
+            |
+            | Marker2DAutoNaming:
+            | Automatically use a Part's name as the default for the creation of text
+            | annotations.
+            |
+            | Marker3DAutoNaming:
+            | Activation of the mechanism that enables to transform temporary markers into
+            | persistent 3D annotations.
+            |
+            | DMUReviewName:
+            | The desired default name for DMU Reviews
+            |
+            | ForceVoxel:
+            | Force users of the Spatial Query command to use the defined Released
+            | Accuracy.
+            |
+            | ClearanceVoxel:
+            | Definition of the Clearance value.
+            |
+            | ForceClearanceVoxel:
+            | Force users of the Spatial Query command to use the defined Clearance
+            | value.
+            |
+            | InsertMode:
+            | Mode for the Import applicative data command.
+            |
+            | DMUGroupPreviewHiddenObjectsDisplayMode:
+            | Display mode for hidden objects of a DMU Group in its preview: visualized as in
+            | main 3D viewer or visualized with customized graphic
+            | properties
+            |
+            | DMUGroupPreviewHiddenObjectsColor:
+            | Color for hidden objects in DMU Group Preview.
+            |
+            | DMUGroupPreviewHiddenObjectsOpacity:
+            | Opacity for hidden objects in DMU Group Preview.
+            |
+            | DMUGroupPreviewHiddenObjectsLowIntMode:
+            | Hidden objects are low intensified or not in DMU Group
+            | Preview.
+            |
+            | DMUGroupPreviewHiddenObjectsPickMode:
+            | Hidden objects can be picked or not in DMU Group Preview.
+
     """
 
     def __init__(self, com_object):
@@ -173,7 +173,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ClearanceVoxel() As float
-                | 
+                |
                 |     Returns or sets the clearance value (oValue the clearance value in mm).
 
         :rtype: float
@@ -197,7 +197,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUClashPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Interference (TRUE the
                 |     preview window is automatically displayed, FALSE the preview window is not
                 |     displayed).
@@ -223,7 +223,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUCut3DPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for 3D Cut (TRUE the preview
                 |     window is automatically displayed, FALSE the preview window is not displayed).
 
@@ -248,7 +248,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUDistancePreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Distance (TRUE the preview
                 |     window is automatically displayed, FALSE the preview window is not displayed).
 
@@ -273,7 +273,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUFreeSpacePreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Free Space (TRUE the
                 |     preview window is automatically displayed, FALSE the preview window is not
                 |     displayed).
@@ -299,7 +299,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUGroupPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Group (TRUE the preview
                 |     window is automatically displayed, FALSE the preview window is not displayed).
 
@@ -325,7 +325,7 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUGroupPreviewHiddenObjectsDisplayMode() As
                 | CatDMUGroupPreviewHiddenObjectsDisplayMode
-                | 
+                |
                 |     Returns or sets the mode for the display of hidden objects in DMU Group
                 |     Preview.
 
@@ -351,7 +351,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUGroupPreviewHiddenObjectsLowInt() As boolean
-                | 
+                |
                 |     Returns or sets the Low Intensity mode for the display of hidden objects in
                 |     DMU Group Preview.
 
@@ -376,7 +376,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUGroupPreviewHiddenObjectsOpacity() As long
-                | 
+                |
                 |     Returns or sets the opacity for the display of hidden objects in DMU Group
                 |     Preview.
 
@@ -401,7 +401,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUGroupPreviewHiddenObjectsPick() As boolean
-                | 
+                |
                 |     Returns or sets the pick mode for the display of hidden objects in DMU
                 |     Group Preview.
 
@@ -426,7 +426,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUMergerPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Merger (TRUE the preview
                 |     window is automatically displayed, FALSE the preview window is not displayed).
 
@@ -451,7 +451,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUOffsetPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Offset (TRUE the preview
                 |     window is automatically displayed, FALSE the preview window is not displayed).
 
@@ -476,7 +476,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUReviewName() As CATBSTR
-                | 
+                |
                 |     Returns or sets the default name for the DMU Reviews (oValue, the DMU
                 |     Review name).
 
@@ -501,7 +501,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUSectionPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Section (TRUE the preview
                 |     window is automatically displayed, FALSE the preview window is not displayed).
 
@@ -526,7 +526,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUShuttlePreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Shuttle (TRUE the preview
                 |     window is automatically displayed, FALSE the preview window is not displayed).
 
@@ -551,7 +551,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUSilhouettePreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Silhouette (TRUE the
                 |     preview window is automatically displayed, FALSE the preview window is not
                 |     displayed).
@@ -577,7 +577,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUSimplifPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Simplification (TRUE the
                 |     preview window is automatically displayed, FALSE the preview window is not
                 |     displayed).
@@ -603,7 +603,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUSweptVolPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Swept Volume (TRUE the
                 |     preview window is automatically displayed, FALSE the preview window is not
                 |     displayed).
@@ -629,7 +629,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUThicknessPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Thickness (TRUE the
                 |     preview window is automatically displayed, FALSE the preview window is not
                 |     displayed).
@@ -655,7 +655,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUVibrationVolPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Vibration volume (TRUE the
                 |     preview window is automatically displayed, FALSE the preview window is not
                 |     displayed).
@@ -681,7 +681,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUWrappingPreview() As boolean
-                | 
+                |
                 |     Returns or sets the preview activation state for Wrapping (TRUE the preview
                 |     window is automatically displayed, FALSE the preview window is not displayed).
 
@@ -706,7 +706,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ForceClearanceVoxel() As boolean
-                | 
+                |
                 |     Returns or sets the activation state for the use of the clearance value
                 |     (TRUE the clearance value is used, FALSE the clearance value is not used);
 
@@ -731,7 +731,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ForceVoxel() As boolean
-                | 
+                |
                 |     Returns or sets the activation state for the use of the Released accuracy
                 |     value (TRUE the released accuracy value is used, FALSE the released accuracy
                 |     value is not used);
@@ -757,7 +757,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property InsertLevel() As boolean
-                | 
+                |
                 |     Returns or sets the level for the Import Applicative Data command
                 |     (True : at highest review level, False : in current review).
 
@@ -782,7 +782,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property InsertMode() As CatSacSettingsEnum
-                | 
+                |
                 |     Returns or sets the mode for the Import Applicative Data command
                 |     (CatSacSettingsEnumNoInsert no import of applicative data,
                 |     CatSacSettingsEnumAutomatic the import of applicative is automatic,
@@ -811,7 +811,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Marker2DAutoNaming() As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.get_Marker2DAutoNaming This method will be replaced by
@@ -840,7 +840,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Marker3DAutoNaming() As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.get_Marker3DAutoNaming This method will be replaced by
@@ -869,7 +869,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MarkerAutoUpdate() As boolean
-                | 
+                |
                 |     Returns or sets the activation of the automatic update on product structure
                 |     modification (TRUE update is done automatically, FALSE update is done
                 |     manually).
@@ -895,7 +895,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MarkerDefaultsDashed() As long
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.get_MarkerDefaultsDashed This method will be replaced by
@@ -923,7 +923,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MarkerDefaultsFont() As CATBSTR
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.get_MarkerTextDefaultsFont2D This method will be replaced by
@@ -951,7 +951,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MarkerDefaultsSize() As long
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.get_MarkerTextDefaultsSize2D This method will be replaced by
@@ -979,7 +979,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MarkerDefaultsWeight() As long
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.get_MarkerDefaultsWeight This method will be replaced by
@@ -1007,7 +1007,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MarkerTextDashed() As long
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.get_MarkerTextDashed2D This method will be replaced by
@@ -1035,7 +1035,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MarkerTextWeight() As long
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.get_MarkerTextWeight2D This method will be replaced by
@@ -1063,7 +1063,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property NumUrlName() As boolean
-                | 
+                |
                 |     Returns or sets the name activation state for Hyperlink (TRUE the hyperlink
                 |     name is displayed, FALSE the hyperlink name is not displayed).
 
@@ -1088,7 +1088,7 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PublishAutoLaunchBrowser() As boolean
-                | 
+                |
                 |     Returns or sets the activation state of the automatic launching of the
                 |     publish browser (TRUE the publish browser is automatically opened, FALSE the
                 |     publish browser is not automatically opened).
@@ -1114,24 +1114,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetClearanceVoxelInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ClearanceVoxel
                 |     parameter.
                 |     Role:Retrieves the state of the ClearanceVoxel parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1140,7 +1140,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetClearanceVoxelInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetClearanceVoxelInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_clash_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1150,24 +1152,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUClashPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUClashPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUClashPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1176,7 +1178,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUClashPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUClashPreviewInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_cut_3d_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1186,24 +1190,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUCut3DPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUCut3DPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUCut3DPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1212,9 +1216,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUCut3DPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUCut3DPreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_distance_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_distance_preview_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1222,24 +1230,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUDistancePreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUDistancePreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUDistancePreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1248,9 +1256,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUDistancePreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUDistancePreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_free_space_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_free_space_preview_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1258,24 +1270,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUFreeSpacePreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUFreeSpacePreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUFreeSpacePreview parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1284,9 +1296,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUFreeSpacePreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUFreeSpacePreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_group_preview_hidden_objects_color(self, o_red: int, o_green: int, o_blue: int) -> None:
+    def get_dmu_group_preview_hidden_objects_color(
+        self, o_red: int, o_green: int, o_blue: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1295,7 +1311,7 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Sub GetDMUGroupPreviewHiddenObjectsColor(long oRed,
                 | long oGreen,
                 | long oBlue)
-                | 
+                |
                 |     Returns the color for the display of hidden objects in DMU Group Preview.
 
         :param int o_red:
@@ -1303,9 +1319,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param int o_blue:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsColor(o_red, o_green, o_blue)
+        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsColor(
+            o_red, o_green, o_blue
+        )
 
-    def get_dmu_group_preview_hidden_objects_color_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_group_preview_hidden_objects_color_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1314,24 +1334,24 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Func GetDMUGroupPreviewHiddenObjectsColorInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the
                 |     DMUGroupPreviewHiddenObjectsColor parameter.
                 |     Role:Retrieves the state of the DMUGroupPreviewHiddenObjectsColor parameter
                 |     in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1340,9 +1360,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsColorInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsColorInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_group_preview_hidden_objects_display_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_group_preview_hidden_objects_display_mode_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1351,24 +1375,24 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Func GetDMUGroupPreviewHiddenObjectsDisplayModeInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the
                 |     DMUGroupPreviewHiddenObjectsDisplayMode parameter.
                 |     Role:Retrieves the state of the DMUGroupPreviewHiddenObjectsDisplayMode
                 |     parameter in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1377,9 +1401,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsDisplayModeInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsDisplayModeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_group_preview_hidden_objects_low_int_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_group_preview_hidden_objects_low_int_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1388,24 +1416,24 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Func GetDMUGroupPreviewHiddenObjectsLowIntInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the
                 |     DMUGroupPreviewHiddenObjectsLowInt parameter.
                 |     Role:Retrieves the state of the DMUGroupPreviewHiddenObjectsLowInt
                 |     parameter in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1414,9 +1442,15 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsLowIntInfo(io_admin_level, io_locked)
+        return (
+            self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsLowIntInfo(
+                io_admin_level, io_locked
+            )
+        )
 
-    def get_dmu_group_preview_hidden_objects_opacity_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_group_preview_hidden_objects_opacity_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1425,24 +1459,24 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Func GetDMUGroupPreviewHiddenObjectsOpacityInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the
                 |     DMUGroupPreviewHiddenObjectsOpacity parameter.
                 |     Role:Retrieves the state of the DMUGroupPreviewHiddenObjectsOpacity
                 |     parameter in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1451,9 +1485,15 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsOpacityInfo(io_admin_level, io_locked)
+        return (
+            self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsOpacityInfo(
+                io_admin_level, io_locked
+            )
+        )
 
-    def get_dmu_group_preview_hidden_objects_pick_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_group_preview_hidden_objects_pick_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1462,24 +1502,24 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Func GetDMUGroupPreviewHiddenObjectsPickInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUGroupPreviewHiddenObjectsPick
                 |     parameter.
                 |     Role:Retrieves the state of the DMUGroupPreviewHiddenObjectsPick parameter
                 |     in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1488,7 +1528,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsPickInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewHiddenObjectsPickInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_group_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1498,24 +1540,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUGroupPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUGroupPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUGroupPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1524,7 +1566,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUGroupPreviewInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_merger_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1534,24 +1578,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUMergerPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUMergerPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUMergerPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1560,7 +1604,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUMergerPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUMergerPreviewInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_offset_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1570,24 +1616,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUOffsetPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUOffsetPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUOffsetPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1596,7 +1642,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUOffsetPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUOffsetPreviewInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_review_name_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1606,24 +1654,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUReviewNameInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUReviewName
                 |     parameter.
                 |     Role:Retrieves the state of the DMUReviewName parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1632,7 +1680,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUReviewNameInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUReviewNameInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_section_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1642,24 +1692,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUSectionPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUSectionPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUSectionPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1668,7 +1718,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUSectionPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUSectionPreviewInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_shuttle_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1678,24 +1730,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUShuttlePreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUShuttlePreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUShuttlePreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1704,9 +1756,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUShuttlePreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUShuttlePreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_silhouette_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_silhouette_preview_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1714,24 +1770,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUSilhouettePreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUSilhouettePreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUSilhouettePreview parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1740,7 +1796,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUSilhouettePreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUSilhouettePreviewInfo(
+            io_admin_level, io_locked
+        )
 
     def get_dmu_simplif_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1750,24 +1808,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUSimplifPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUSimplifPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUSimplifPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1776,9 +1834,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUSimplifPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUSimplifPreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_swept_vol_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_swept_vol_preview_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1786,24 +1848,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUSweptVolPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUSweptVolPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUSweptVolPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1812,9 +1874,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUSweptVolPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUSweptVolPreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_thickness_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_thickness_preview_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1822,24 +1888,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUThicknessPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUThicknessPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUThicknessPreview parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1848,9 +1914,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUThicknessPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUThicknessPreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_vibration_vol_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_vibration_vol_preview_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1858,24 +1928,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUVibrationVolPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUVibrationVolPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUVibrationVolPreview parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1884,9 +1954,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUVibrationVolPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUVibrationVolPreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_dmu_wrapping_preview_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_dmu_wrapping_preview_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1894,24 +1968,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDMUWrappingPreviewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DMUWrappingPreview
                 |     parameter.
                 |     Role:Retrieves the state of the DMUWrappingPreview parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1920,9 +1994,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetDMUWrappingPreviewInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetDMUWrappingPreviewInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_force_clearance_voxel_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_force_clearance_voxel_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1930,24 +2008,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetForceClearanceVoxelInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ForceClearanceVoxel
                 |     parameter.
                 |     Role:Retrieves the state of the ForceClearanceVoxel parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1956,7 +2034,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetForceClearanceVoxelInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetForceClearanceVoxelInfo(
+            io_admin_level, io_locked
+        )
 
     def get_force_voxel_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1966,24 +2046,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetForceVoxelInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ForceVoxel
                 |     parameter.
                 |     Role:Retrieves the state of the ForceVoxel parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1992,7 +2072,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetForceVoxelInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetForceVoxelInfo(
+            io_admin_level, io_locked
+        )
 
     def get_insert_level_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -2002,24 +2084,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetInsertLevelInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the InsertLevel
                 |     parameter.
                 |     Role:Retrieves the state of the InsertLevel parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2028,7 +2110,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetInsertLevelInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetInsertLevelInfo(
+            io_admin_level, io_locked
+        )
 
     def get_insert_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -2038,24 +2122,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetInsertModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the InsertMode
                 |     parameter.
                 |     Role:Retrieves the state of the InsertMode parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2064,9 +2148,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetInsertModeInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetInsertModeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_marker_2d_auto_naming_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_marker_2d_auto_naming_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2074,25 +2162,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarker2DAutoNamingInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarker2DAutoNamingInfo Retrieves environment informations
                 |         for the Marker2DAutoNaming parameter.
                 |         Role:Retrieves the state of the Marker2DAutoNaming parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2101,9 +2189,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarker2DAutoNamingInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarker2DAutoNamingInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_marker_3d_auto_naming_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_marker_3d_auto_naming_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2111,25 +2203,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarker3DAutoNamingInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarker3DAutoNamingInfo Retrieves environment informations
                 |         for the Marker3DAutoNaming parameter.
                 |         Role:Retrieves the state of the Marker3DAutoNaming parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2138,7 +2230,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarker3DAutoNamingInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarker3DAutoNamingInfo(
+            io_admin_level, io_locked
+        )
 
     def get_marker_auto_update_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -2148,24 +2242,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerAutoUpdateInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the MarkerAutoUpdate
                 |     parameter.
                 |     Role:Retrieves the state of the MarkerAutoUpdate parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2174,7 +2268,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerAutoUpdateInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerAutoUpdateInfo(
+            io_admin_level, io_locked
+        )
 
     def get_marker_defaults_color(self, o_red: int, o_green: int, o_blue: int) -> None:
         """
@@ -2185,7 +2281,7 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Sub GetMarkerDefaultsColor(long oRed,
                 | long oGreen,
                 | long oBlue)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerDefaultsColor Returns the default color of an
@@ -2196,9 +2292,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param int o_blue:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.GetMarkerDefaultsColor(o_red, o_green, o_blue)
+        return self.n_4d_navigator_setting_att.GetMarkerDefaultsColor(
+            o_red, o_green, o_blue
+        )
 
-    def get_marker_defaults_color_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_marker_defaults_color_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2206,25 +2306,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerDefaultsColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerDefaultsColorInfo Retrieves environment informations
                 |         for the MarkerDefaultsColor parameter.
                 |         Role:Retrieves the state of the MarkerDefaultsColor parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2233,9 +2333,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerDefaultsColorInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerDefaultsColorInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_marker_defaults_dashed_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_marker_defaults_dashed_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2243,25 +2347,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerDefaultsDashedInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerDefaultsDashedInfo Retrieves environment informations
                 |         for the MarkerDefaultsDashed parameter.
                 |         Role:Retrieves the state of the MarkerDefaultsDashed parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2270,9 +2374,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerDefaultsDashedInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerDefaultsDashedInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_marker_defaults_font_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_marker_defaults_font_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2280,25 +2388,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerDefaultsFontInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerDefaultsFont2DInfo Retrieves environment informations
                 |         for the MarkerDefaultsFont parameter.
                 |         Role:Retrieves the state of the MarkerDefaultsFont parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2307,9 +2415,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerDefaultsFontInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerDefaultsFontInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_marker_defaults_size_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_marker_defaults_size_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2317,25 +2429,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerDefaultsSizeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by CATIAmarkerSettingAtt Retrieves
                 |         environment informations for the MarkerDefaultsSize
                 |         parameter.
                 |         Role:Retrieves the state of the MarkerDefaultsSize parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2344,9 +2456,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerDefaultsSizeInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerDefaultsSizeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_marker_defaults_weight_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_marker_defaults_weight_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2354,25 +2470,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerDefaultsWeightInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerDefaultsWeightInfo Retrieves environment informations
                 |         for the MarkerDefaultsWeight parameter.
                 |         Role:Retrieves the state of the MarkerDefaultsWeight parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2381,7 +2497,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerDefaultsWeightInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerDefaultsWeightInfo(
+            io_admin_level, io_locked
+        )
 
     def get_marker_text_color(self, o_red: int, o_green: int, o_blue: int) -> None:
         """
@@ -2392,7 +2510,7 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Sub GetMarkerTextColor(long oRed,
                 | long oGreen,
                 | long oBlue)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerTextColor2DInfo Returns the default color of a text
@@ -2403,7 +2521,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param int o_blue:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.GetMarkerTextColor(o_red, o_green, o_blue)
+        return self.n_4d_navigator_setting_att.GetMarkerTextColor(
+            o_red, o_green, o_blue
+        )
 
     def get_marker_text_color_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -2413,25 +2533,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerTextColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerTextColor2DInfo Retrieves environment informations
                 |         for the MarkerTextColor parameter.
                 |         Role:Retrieves the state of the MarkerTextColor parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2440,7 +2560,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerTextColorInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerTextColorInfo(
+            io_admin_level, io_locked
+        )
 
     def get_marker_text_dashed_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -2450,25 +2572,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerTextDashedInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerTextDashed2DInfo Retrieves environment informations
                 |         for the MarkerTextDashed parameter.
                 |         Role:Retrieves the state of the MarkerTextDashed parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2477,7 +2599,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerTextDashedInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerTextDashedInfo(
+            io_admin_level, io_locked
+        )
 
     def get_marker_text_weight_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -2487,25 +2611,25 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMarkerTextWeightInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.GetMarkerTextWeight2DInfo Retrieves environment informations
                 |         for the MarkerTextWeight parameter.
                 |         Role:Retrieves the state of the MarkerTextWeight parameter in the
-                |         current environment. 
+                |         current environment.
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2514,7 +2638,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetMarkerTextWeightInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetMarkerTextWeightInfo(
+            io_admin_level, io_locked
+        )
 
     def get_num_url_name_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -2524,24 +2650,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetNumUrlNameInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the NumUrlName
                 |     parameter.
                 |     Role:Retrieves the state of the NumUrlName parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2550,9 +2676,13 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetNumUrlNameInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetNumUrlNameInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_publish_auto_launch_browser_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_publish_auto_launch_browser_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2560,24 +2690,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPublishAutoLaunchBrowserInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PublishAutoLaunchBrowser
                 |     parameter.
                 |     Role:Retrieves the state of the PublishAutoLaunchBrowser parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2586,7 +2716,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetPublishAutoLaunchBrowserInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetPublishAutoLaunchBrowserInfo(
+            io_admin_level, io_locked
+        )
 
     def get_scene_defaults_color(self, o_r: int, o_g: int, o_b: int) -> None:
         """
@@ -2597,7 +2729,7 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Sub GetSceneDefaultsColor(long oR,
                 | long oG,
                 | long oB)
-                | 
+                |
                 |     Returns the scene background color (oRed, oGreen, oBlue: RGB values of the
                 |     color).
 
@@ -2608,7 +2740,9 @@ class N4DNavigatorSettingAtt(SettingController):
         """
         return self.n_4d_navigator_setting_att.GetSceneDefaultsColor(o_r, o_g, o_b)
 
-    def get_scene_defaults_color_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_scene_defaults_color_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2616,24 +2750,24 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSceneDefaultsColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the SceneDefaultsColor
                 |     parameter.
                 |     Role:Retrieves the state of the SceneDefaultsColor parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2642,7 +2776,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.n_4d_navigator_setting_att.GetSceneDefaultsColorInfo(io_admin_level, io_locked)
+        return self.n_4d_navigator_setting_att.GetSceneDefaultsColorInfo(
+            io_admin_level, io_locked
+        )
 
     def set_clearance_voxel_lock(self, i_locked: bool) -> None:
         """
@@ -2651,14 +2787,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetClearanceVoxelLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ClearanceVoxel parameter.
                 |     Role:Locks or unlocks the ClearanceVoxel parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -2669,7 +2805,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetClearanceVoxelLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2692,14 +2828,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUClashPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUClashPreview parameter.
                 |     Role:Locks or unlocks the DMUClashPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -2710,7 +2846,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUClashPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2733,14 +2869,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUCut3DPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUCut3DPreview parameter.
                 |     Role:Locks or unlocks the DMUCut3DPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -2751,7 +2887,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUCut3DPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2774,14 +2910,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUDistancePreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUDistancePreview parameter.
                 |     Role:Locks or unlocks the DMUDistancePreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -2792,7 +2928,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUDistancePreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2815,14 +2951,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUFreeSpacePreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUFreeSpacePreview parameter.
                 |     Role:Locks or unlocks the DMUFreeSpacePreview parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -2833,7 +2969,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUFreeSpacePreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2849,7 +2985,9 @@ class N4DNavigatorSettingAtt(SettingController):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_dmu_group_preview_hidden_objects_color(self, i_red: int, i_green: int, i_blue: int) -> None:
+    def set_dmu_group_preview_hidden_objects_color(
+        self, i_red: int, i_green: int, i_blue: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -2858,7 +2996,7 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Sub SetDMUGroupPreviewHiddenObjectsColor(long iRed,
                 | long iGreen,
                 | long iBlue)
-                | 
+                |
                 |     Sets the color for the display of hidden objects in DMU Group Preview.
 
         :param int i_red:
@@ -2866,7 +3004,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param int i_blue:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsColor(i_red, i_green, i_blue)
+        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsColor(
+            i_red, i_green, i_blue
+        )
 
     def set_dmu_group_preview_hidden_objects_color_lock(self, i_locked: bool) -> None:
         """
@@ -2876,15 +3016,15 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUGroupPreviewHiddenObjectsColorLock(boolean
                 | iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUGroupPreviewHiddenObjectsColor
                 |     parameter.
                 |     Role:Locks or unlocks the DMUGroupPreviewHiddenObjectsColor parameter if it
                 |     is possible in the current administrative context. In user mode this method
                 |     will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -2894,8 +3034,10 @@ class N4DNavigatorSettingAtt(SettingController):
         :param bool i_locked:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsColorLock(
+            i_locked
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2911,7 +3053,9 @@ class N4DNavigatorSettingAtt(SettingController):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_dmu_group_preview_hidden_objects_display_mode_lock(self, i_locked: bool) -> None:
+    def set_dmu_group_preview_hidden_objects_display_mode_lock(
+        self, i_locked: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -2919,15 +3063,15 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUGroupPreviewHiddenObjectsDisplayModeLock(boolean
                 | iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUGroupPreviewHiddenObjectsDisplayMode
                 |     parameter.
                 |     Role:Locks or unlocks the DMUGroupPreviewHiddenObjectsDisplayMode parameter
                 |     if it is possible in the current administrative context. In user mode this
                 |     method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -2937,8 +3081,10 @@ class N4DNavigatorSettingAtt(SettingController):
         :param bool i_locked:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsDisplayModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsDisplayModeLock(
+            i_locked
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2962,15 +3108,15 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUGroupPreviewHiddenObjectsLowIntLock(boolean
                 | iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUGroupPreviewHiddenObjectsLowInt
                 |     parameter.
                 |     Role:Locks or unlocks the DMUGroupPreviewHiddenObjectsLowInt parameter if
                 |     it is possible in the current administrative context. In user mode this method
                 |     will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -2980,8 +3126,12 @@ class N4DNavigatorSettingAtt(SettingController):
         :param bool i_locked:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsLowIntLock(i_locked)
-        # # # # Autogenerated comment: 
+        return (
+            self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsLowIntLock(
+                i_locked
+            )
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3005,15 +3155,15 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUGroupPreviewHiddenObjectsOpacityLock(boolean
                 | iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUGroupPreviewHiddenObjectsOpacity
                 |     parameter.
                 |     Role:Locks or unlocks the DMUGroupPreviewHiddenObjectsOpacity parameter if
                 |     it is possible in the current administrative context. In user mode this method
                 |     will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3023,8 +3173,12 @@ class N4DNavigatorSettingAtt(SettingController):
         :param bool i_locked:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsOpacityLock(i_locked)
-        # # # # Autogenerated comment: 
+        return (
+            self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsOpacityLock(
+                i_locked
+            )
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3048,15 +3202,15 @@ class N4DNavigatorSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUGroupPreviewHiddenObjectsPickLock(boolean
                 | iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUGroupPreviewHiddenObjectsPick
                 |     parameter.
                 |     Role:Locks or unlocks the DMUGroupPreviewHiddenObjectsPick parameter if it
                 |     is possible in the current administrative context. In user mode this method
                 |     will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3066,8 +3220,10 @@ class N4DNavigatorSettingAtt(SettingController):
         :param bool i_locked:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsPickLock(i_locked)
-        # # # # Autogenerated comment: 
+        return self.n_4d_navigator_setting_att.SetDMUGroupPreviewHiddenObjectsPickLock(
+            i_locked
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3090,14 +3246,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUGroupPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUGroupPreview parameter.
                 |     Role:Locks or unlocks the DMUGroupPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3108,7 +3264,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUGroupPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3131,14 +3287,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUMergerPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUMergerPreview parameter.
                 |     Role:Locks or unlocks the DMUMergerPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3149,7 +3305,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUMergerPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3172,14 +3328,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUOffsetPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUOffsetPreview parameter.
                 |     Role:Locks or unlocks the DMUOffsetPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3190,7 +3346,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUOffsetPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3213,14 +3369,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUReviewNameLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUReviewName parameter.
                 |     Role:Locks or unlocks the DMUReviewName parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3231,7 +3387,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUReviewNameLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3254,14 +3410,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUSectionPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUSectionPreview parameter.
                 |     Role:Locks or unlocks the DMUSectionPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3272,7 +3428,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUSectionPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3295,14 +3451,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUShuttlePreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUShuttlePreview parameter.
                 |     Role:Locks or unlocks the DMUShuttlePreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3313,7 +3469,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUShuttlePreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3336,14 +3492,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUSilhouettePreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUSilhouettePreview parameter.
                 |     Role:Locks or unlocks the DMUSilhouettePreview parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3354,7 +3510,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUSilhouettePreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3377,14 +3533,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUSimplifPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUSimplifPreview parameter.
                 |     Role:Locks or unlocks the DMUSimplifPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3395,7 +3551,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUSimplifPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3418,14 +3574,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUSweptVolPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUSweptVolPreview parameter.
                 |     Role:Locks or unlocks the DMUSweptVolPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3436,7 +3592,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUSweptVolPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3459,14 +3615,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUThicknessPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUThicknessPreview parameter.
                 |     Role:Locks or unlocks the DMUThicknessPreview parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3477,7 +3633,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUThicknessPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3500,14 +3656,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUVibrationVolPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUVibrationVolPreview parameter.
                 |     Role:Locks or unlocks the DMUVibrationVolPreview parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3518,7 +3674,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUVibrationVolPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3541,14 +3697,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDMUWrappingPreviewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DMUWrappingPreview parameter.
                 |     Role:Locks or unlocks the DMUWrappingPreview parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3559,7 +3715,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetDMUWrappingPreviewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3582,14 +3738,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetForceClearanceVoxelLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ForceClearanceVoxel parameter.
                 |     Role:Locks or unlocks the ForceClearanceVoxel parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3600,7 +3756,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetForceClearanceVoxelLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3623,14 +3779,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetForceVoxelLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ForceVoxel parameter.
                 |     Role:Locks or unlocks the ForceVoxel parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3641,7 +3797,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetForceVoxelLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3664,14 +3820,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetInsertLevelLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the InsertMode parameter.
                 |     Role:Locks or unlocks the InsertMode parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3682,7 +3838,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetInsertLevelLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3705,14 +3861,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetInsertModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the InsertMode parameter.
                 |     Role:Locks or unlocks the InsertMode parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3723,7 +3879,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetInsertModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3746,16 +3902,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarker2DAutoNamingLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarker2DAutoNamingLock Locks or unlocks the
                 |         Marker2DAutoNaming parameter.
                 |         Role:Locks or unlocks the Marker2DAutoNaming parameter if it is
                 |         possible in the current administrative context. In user mode this method will
-                |         always return E_FAIL. 
+                |         always return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3766,7 +3922,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarker2DAutoNamingLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3789,16 +3945,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarker3DAutoNamingLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarker3DAutoNamingLock Locks or unlocks the
                 |         Marker3DAutoNaming parameter.
                 |         Role:Locks or unlocks the Marker3DAutoNaming parameter if it is
                 |         possible in the current administrative context. In user mode this method will
-                |         always return E_FAIL. 
+                |         always return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3809,7 +3965,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarker3DAutoNamingLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3832,14 +3988,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerAutoUpdateLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the MarkerAutoUpdate parameter.
                 |     Role:Locks or unlocks the MarkerAutoUpdate parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3850,7 +4006,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerAutoUpdateLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3875,7 +4031,7 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Sub SetMarkerDefaultsColor(long iRed,
                 | long iGreen,
                 | long iBlue)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerDefaultsColor Sets the default color of an annotation
@@ -3886,7 +4042,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param int i_blue:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.SetMarkerDefaultsColor(i_red, i_green, i_blue)
+        return self.n_4d_navigator_setting_att.SetMarkerDefaultsColor(
+            i_red, i_green, i_blue
+        )
 
     def set_marker_defaults_color_lock(self, i_locked: bool) -> None:
         """
@@ -3895,16 +4053,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerDefaultsColorLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerDefaultsColorLock Locks or unlocks the
                 |         MarkerDefaultsColor parameter.
                 |         Role:Locks or unlocks the MarkerDefaultsColor parameter if it is
                 |         possible in the current administrative context. In user mode this method will
-                |         always return E_FAIL. 
+                |         always return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3915,7 +4073,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerDefaultsColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3938,16 +4096,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerDefaultsDashedLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerDefaultsDashedLock Locks or unlocks the
                 |         MarkerDefaultsDashed parameter.
                 |         Role:Locks or unlocks the MarkerDefaultsDashed parameter if it is
                 |         possible in the current administrative context. In user mode this method will
-                |         always return E_FAIL. 
+                |         always return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3958,7 +4116,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerDefaultsDashedLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3981,16 +4139,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerDefaultsFontLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerDefaultsFont2DLock Locks or unlocks the
                 |         MarkerDefaultsFont parameter.
                 |         Role:Locks or unlocks the MarkerDefaultsSize parameter if it is
                 |         possible in the current administrative context. In user mode this method will
-                |         always return E_FAIL. 
+                |         always return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4001,7 +4159,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerDefaultsFontLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4024,16 +4182,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerDefaultsSizeLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerTextDefaultsSize2DLock Locks or unlocks the
                 |         MarkerDefaultsSize parameter.
                 |         Role:Locks or unlocks the MarkerDefaultsSize parameter if it is
                 |         possible in the current administrative context. In user mode this method will
-                |         always return E_FAIL. 
+                |         always return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4044,7 +4202,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerDefaultsSizeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4067,16 +4225,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerDefaultsWeightLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerDefaultsWeightLock Locks or unlocks the
                 |         MarkerDefaultsWeight parameter.
                 |         Role:Locks or unlocks the MarkerDefaultsColor parameter if it is
                 |         possible in the current administrative context. In user mode this method will
-                |         always return E_FAIL. 
+                |         always return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4087,7 +4245,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerDefaultsWeightLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4112,7 +4270,7 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Sub SetMarkerTextColor(long iRed,
                 | long iGreen,
                 | long iBlue)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerTextColor2D Sets the default color of a text
@@ -4123,7 +4281,9 @@ class N4DNavigatorSettingAtt(SettingController):
         :param int i_blue:
         :rtype: None
         """
-        return self.n_4d_navigator_setting_att.SetMarkerTextColor(i_red, i_green, i_blue)
+        return self.n_4d_navigator_setting_att.SetMarkerTextColor(
+            i_red, i_green, i_blue
+        )
 
     def set_marker_text_color_lock(self, i_locked: bool) -> None:
         """
@@ -4132,16 +4292,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerTextColorLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerTextColor2DLock Locks or unlocks the MarkerTextColor
                 |         parameter.
                 |         Role:Locks or unlocks the MarkerTextColor parameter if it is possible
                 |         in the current administrative context. In user mode this method will always
-                |         return E_FAIL. 
+                |         return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4152,7 +4312,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerTextColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4175,16 +4335,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerTextDashedLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerTextDashed2DLock Locks or unlocks the
                 |         MarkerTextDashed parameter.
                 |         Role:Locks or unlocks the MarkerTextDashed parameter if it is possible
                 |         in the current administrative context. In user mode this method will always
-                |         return E_FAIL. 
+                |         return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4195,7 +4355,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerTextDashedLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4218,16 +4378,16 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMarkerTextWeightLock(boolean iLocked)
-                | 
+                |
                 |     Deprecated:
                 |         R17 This method will be replaced by
                 |         MarkerSettingAtt.SetMarkerTextWeight2DLock Locks or unlocks the
                 |         MarkerTextWeight parameter.
                 |         Role:Locks or unlocks the MarkerTextWeight parameter if it is possible
                 |         in the current administrative context. In user mode this method will always
-                |         return E_FAIL. 
+                |         return E_FAIL.
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4238,7 +4398,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetMarkerTextWeightLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4261,14 +4421,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetNumUrlNameLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the NumUrlName parameter.
                 |     Role:Locks or unlocks the NumUrlName parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4279,7 +4439,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetNumUrlNameLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4302,14 +4462,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPublishAutoLaunchBrowserLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PublishAutoLaunchBrowser parameter.
                 |     Role:Locks or unlocks the PublishAutoLaunchBrowser parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4320,7 +4480,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetPublishAutoLaunchBrowserLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4345,7 +4505,7 @@ class N4DNavigatorSettingAtt(SettingController):
                 | o Sub SetSceneDefaultsColor(long iR,
                 | long iG,
                 | long iB)
-                | 
+                |
                 |     Sets the scene background color (iRed, iGreen, iBlue: RGB values for the
                 |     desired color)
 
@@ -4363,14 +4523,14 @@ class N4DNavigatorSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetSceneDefaultsColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the SceneDefaultsColor parameter.
                 |     Role:Locks or unlocks the SceneDefaultsColor parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4381,7 +4541,7 @@ class N4DNavigatorSettingAtt(SettingController):
         :rtype: None
         """
         return self.n_4d_navigator_setting_att.SetSceneDefaultsColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

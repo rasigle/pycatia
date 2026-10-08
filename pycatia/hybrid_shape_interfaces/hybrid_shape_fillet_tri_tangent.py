@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -15,28 +15,28 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeFilletTriTangent(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeFilletTriTangent
-                | 
-                | Fillet Tri-Tangent feature.
-                | Role: Manipulation of Fillet Tri-Tangent feature Allows to access data of the
-                | Fillet Tri-Tangent feature created by using three support surfaces, their
-                | orientation, and options (supports trimming and fillet extremities
-                | type)
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeFilletTriTangent
+            |
+            | Fillet Tri-Tangent feature.
+            | Role: Manipulation of Fillet Tri-Tangent feature Allows to access data of the
+            | Fillet Tri-Tangent feature created by using three support surfaces, their
+            | orientation, and options (supports trimming and fillet extremities
+            | type)
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -51,14 +51,14 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstElem() As Reference
-                | 
+                |
                 |     Returns or sets the first support surface feature.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in FirstElem the first support element used by
                 |         the HybShpFilletTriTangent hybrid shape feature.
-                | 
-                |          Dim FirstElem As Reference 
+                |
+                |          Dim FirstElem As Reference
                 |          Set FirstElem = HybShpFilletTriTangent.FirstElem
 
         :rtype: Reference
@@ -82,7 +82,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstOrientation() As long
-                | 
+                |
                 |     Returns or sets the first orientation used to specify fillet center
                 |     position.
                 |     Note; Orientation is same or inverse than the normal to the first surface
@@ -109,7 +109,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RemoveElem() As Reference
-                | 
+                |
                 |     Returns or sets the support surface to remove feature.
 
         :rtype: Reference
@@ -133,7 +133,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RemoveOrientation() As long
-                | 
+                |
                 |     Returns or sets the third orientation used to specify fillet center
                 |     position.
                 |     note: Orientation is same or inverse than the normal to the surface support
@@ -160,7 +160,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RibbonRelimitationMode() As long
-                | 
+                |
                 |     Returns or sets fillet ribbon relimitation mode (or fillet extremities
                 |     mode).
                 |     note: Smooth(0) or Straight(1) or Maximum(2) or Minimum(3)
@@ -186,19 +186,19 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondElem() As Reference
-                | 
+                |
                 |     Returns or sets the Second support surface feature.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in SecondElem the Second support element used by
                 |         the HybShpFilletTriTangent hybrid shape feature.
-                | 
-                |          Dim SecondElem As Reference 
+                |
+                |          Dim SecondElem As Reference
                 |          Set SecondElem = HybShpFilletTriTangent.SecondElem
-                |          
-                | 
+                |
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Second support surface feature.
 
@@ -223,7 +223,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondOrientation() As long
-                | 
+                |
                 |     Returns or sets the Second orientation used to specify fillet center
                 |     position.
                 |     note: Orientation is same or inverse than the normal to the Second surface
@@ -250,7 +250,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SupportsTrimMode() As long
-                | 
+                |
                 |     Returns or sets whether support surfaces are trimmed or
                 |     not.
                 |     Trim (1) or NoTrim(0)
@@ -277,7 +277,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InvertFirstOrientation()
-                | 
+                |
                 |     Inverts first orientation used to specify fillet center position.
 
         :rtype: None
@@ -291,7 +291,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InvertRemoveOrientation()
-                | 
+                |
                 |     Inverts third orientation used to specify fillet center position.
 
         :rtype: None
@@ -305,7 +305,7 @@ class HybridShapeFilletTriTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InvertSecondOrientation()
-                | 
+                |
                 |     Inverts second orientation used to specify fillet center position.
 
         :rtype: None

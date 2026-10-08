@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import TYPE_CHECKING
 
 from pycatia.cat_sch_platform_interfaces.sch_list_of_bst_rs import SchListOfBSTRs
@@ -15,33 +16,35 @@ from pycatia.cat_sch_platform_interfaces.sch_list_of_objects import SchListOfObj
 from pycatia.system_interfaces.any_object import AnyObject
 
 if TYPE_CHECKING:
-    from pycatia.cat_sch_platform_interfaces.sch_app_connectable import SchAppConnectable
+    from pycatia.cat_sch_platform_interfaces.sch_app_connectable import (
+        SchAppConnectable,
+    )
     from pycatia.cat_sch_platform_interfaces.sch_app_connection import SchAppConnection
 
 
 class SchAppConnector(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchAppConnector
-                | 
-                | Manage a schematic connector.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchAppConnector
+            |
+            | Manage a schematic connector.
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.sch_app_connector = com_object
 
-    def app_connect(self, i_cntr_to_connect: 'SchAppConnector') -> 'SchAppConnection':
+    def app_connect(self, i_cntr_to_connect: "SchAppConnector") -> "SchAppConnection":
         """
         .. note::
             :class: toggle
@@ -49,20 +52,20 @@ class SchAppConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppConnect(SchAppConnector iCntrToConnect) As
                 | SchAppConnection
-                | 
+                |
                 |     Connect to an input connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCntrToConnect
-                |             A schematic connector object to connect to 
+                |             A schematic connector object to connect to
                 |         oConnection
-                |             Connection created 
-                | 
+                |             Connection created
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppConnector
                 |          Dim objArg1 As SchAppConnector
                 |          Dim objArg2 As SchAppConnection
@@ -73,10 +76,17 @@ class SchAppConnector(AnyObject):
         :rtype: SchAppConnection
         """
 
-        from pycatia.cat_sch_platform_interfaces.sch_app_connection import SchAppConnection
-        return SchAppConnection(self.sch_app_connector.AppConnect(i_cntr_to_connect.com_object))
+        from pycatia.cat_sch_platform_interfaces.sch_app_connection import (
+            SchAppConnection,
+        )
 
-    def app_connect_branch(self, i_cntr_to_connect: 'SchAppConnector') -> 'SchAppConnection':
+        return SchAppConnection(
+            self.sch_app_connector.AppConnect(i_cntr_to_connect.com_object)
+        )
+
+    def app_connect_branch(
+        self, i_cntr_to_connect: "SchAppConnector"
+    ) -> "SchAppConnection":
         """
         .. note::
             :class: toggle
@@ -84,16 +94,16 @@ class SchAppConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppConnectBranch(SchAppConnector iCntrToConnect) As
                 | SchAppConnection
-                | 
+                |
                 |     Connect to an input connector for Branch.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCntrToConnect
-                |             A schematic connector object to connect to 
+                |             A schematic connector object to connect to
                 |         oConnection
-                |             Connection created 
-                | 
+                |             Connection created
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchAppConnector
@@ -106,28 +116,33 @@ class SchAppConnector(AnyObject):
         :rtype: SchAppConnection
         """
 
-        from pycatia.cat_sch_platform_interfaces.sch_app_connection import SchAppConnection
-        return SchAppConnection(self.sch_app_connector.AppConnectBranch(i_cntr_to_connect.com_object))
+        from pycatia.cat_sch_platform_interfaces.sch_app_connection import (
+            SchAppConnection,
+        )
 
-    def app_disconnect(self, i_cntr_to_dis_connect: 'SchAppConnector') -> None:
+        return SchAppConnection(
+            self.sch_app_connector.AppConnectBranch(i_cntr_to_connect.com_object)
+        )
+
+    def app_disconnect(self, i_cntr_to_dis_connect: "SchAppConnector") -> None:
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppDisconnect(SchAppConnector iCntrToDisConnect)
-                | 
+                |
                 |     Disconnect from an input connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCntrToDisconnect
-                |             A schematic connector object to disconnect from 
-                | 
+                |             A schematic connector object to disconnect from
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppConnector
                 |          Dim objArg1 As SchAppConnector
                 |           ...
@@ -137,7 +152,7 @@ class SchAppConnector(AnyObject):
         :rtype: None
         """
         return self.sch_app_connector.AppDisconnect(i_cntr_to_dis_connect.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -153,26 +168,26 @@ class SchAppConnector(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def app_get_associated_connectable(self) -> 'SchAppConnectable':
+    def app_get_associated_connectable(self) -> "SchAppConnectable":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppGetAssociatedConnectable() As SchAppConnectable
-                | 
+                |
                 |     Find the application object that owns this connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oConnectable
                 |             An application object that the connector belongs to.
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppConnector
                 |          Dim objArg1 As SchAppConnectable
                 |           ...
@@ -181,7 +196,10 @@ class SchAppConnector(AnyObject):
         :rtype: SchAppConnectable
         """
 
-        from pycatia.cat_sch_platform_interfaces.sch_app_connectable import SchAppConnectable
+        from pycatia.cat_sch_platform_interfaces.sch_app_connectable import (
+            SchAppConnectable,
+        )
+
         return SchAppConnectable(self.sch_app_connector.AppGetAssociatedConnectable())
 
     def app_is_cntr_connected(self, o_b_yes: bool) -> None:
@@ -191,18 +209,18 @@ class SchAppConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppIsCntrConnected(boolean oBYes)
-                | 
+                |
                 |     Query whether the connector has been connected.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, then it is connected 
-                | 
+                |             If TRUE, then it is connected
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppConnector
                 |          Dim bVar1 As boolean
                 |           ...
@@ -212,7 +230,7 @@ class SchAppConnector(AnyObject):
         :rtype: None
         """
         return self.sch_app_connector.AppIsCntrConnected(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -235,20 +253,20 @@ class SchAppConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppListCompatibleTypes() As SchListOfBSTRs
-                | 
+                |
                 |     Find all the class types of connector that are compatible with this
                 |     connector for connections.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLCntrCompatClassTypes
                 |             A list of all the class types of connectors that are compatible
-                |             with this connector for connections. 
-                | 
+                |             with this connector for connections.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppConnector
                 |          Dim objArg1 As SchListOfBSTRs
                 |           ...
@@ -258,7 +276,9 @@ class SchAppConnector(AnyObject):
         """
         return SchListOfBSTRs(self.sch_app_connector.AppListCompatibleTypes())
 
-    def app_list_connections(self, i_l_cntn_class_filter: SchListOfBSTRs) -> SchListOfObjects:
+    def app_list_connections(
+        self, i_l_cntn_class_filter: SchListOfBSTRs
+    ) -> SchListOfObjects:
         """
         .. note::
             :class: toggle
@@ -266,22 +286,22 @@ class SchAppConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppListConnections(SchListOfBSTRs iLCntnClassFilter) As
                 | SchListOfObjects
-                | 
+                |
                 |     Find all the connections that include this connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLCntnClassFilter
                 |             A list of all the class types for filtering the output connection
-                |             list. 
+                |             list.
                 |         oLConnections
                 |             A list of connections that include this connector (members are
-                |             CATISchAppConnection interface pointers). 
-                | 
+                |             CATISchAppConnection interface pointers).
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppConnector
                 |          Dim objArg1 As SchListOfBSTRs
                 |          Dim objArg2 As SchListOfObjects
@@ -291,7 +311,9 @@ class SchAppConnector(AnyObject):
         :param SchListOfBSTRs i_l_cntn_class_filter:
         :rtype: SchListOfObjects
         """
-        return SchListOfObjects(self.sch_app_connector.AppListConnections(i_l_cntn_class_filter.com_object))
+        return SchListOfObjects(
+            self.sch_app_connector.AppListConnections(i_l_cntn_class_filter.com_object)
+        )
 
     def app_ok_to_no_show_connected_cntr(self, o_b_yes: bool) -> None:
         """
@@ -300,19 +322,19 @@ class SchAppConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToNoShowConnectedCntr(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to no show the connector after it is
                 |     connected.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, then it is OK to no show. 
-                | 
+                |             If TRUE, then it is OK to no show.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppConnector
                 |          Dim bVar1 As boolean
                 |           ...
@@ -322,7 +344,7 @@ class SchAppConnector(AnyObject):
         :rtype: None
         """
         return self.sch_app_connector.AppOKToNoShowConnectedCntr(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

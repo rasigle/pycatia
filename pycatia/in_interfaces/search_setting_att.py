@@ -1,37 +1,38 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatSearchContextScope
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class SearchSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         SearchSettingAtt
-                | 
-                | Represents the setting controller for the Search property tab
-                | page.
-                | Role: The setting controller is the object that enables to get and set setting
-                | parameters.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         SearchSettingAtt
+            |
+            | Represents the setting controller for the Search property tab
+            | page.
+            | Role: The setting controller is the object that enables to get and set setting
+            | parameters.
+
     """
 
     def __init__(self, com_object):
@@ -46,7 +47,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DeepSearchActivation() As boolean
-                | 
+                |
                 |     Returns or sets the Deep Search Activation attribute.
                 |     Role: The Deep Search Activation attribute manages the Deep Search option
                 |     available in the Search dialog box used to determine whether documents in
@@ -73,7 +74,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DefaultPowerInputContextPriority() As boolean
-                | 
+                |
                 |     Returns or sets the Default Power Input Context Priority
                 |     attribute.
                 |     Role: The Default Power Input Context Priority attribute manages whether
@@ -102,7 +103,7 @@ class SearchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DefaultPowerInputContextScope() As
                 | CATSearchContextScope
-                | 
+                |
                 |     Returns or sets the Default Power Input Context Scope
                 |     attribute.
                 |     Role: The Default Power Input Context Scope attribute manages the default
@@ -129,7 +130,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DefaultPowerInputPrefix() As CATBSTR
-                | 
+                |
                 |     Returns or sets the Default Power Input Prefix attribute.
                 |     Role: The Default Power Input Prefix attribute manages the default prefix
                 |     to be used when none is typed in the Power Input field
@@ -155,7 +156,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MaxDisplayedResults() As long
-                | 
+                |
                 |     Returns or sets the Max Displayed Results attribute.
                 |     Role: The Max Displayed Results attribute indicates the maximum number of
                 |     elements that can be displayed in the Search results page. Displaying too many
@@ -183,7 +184,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MaxPreHighlightedElements() As long
-                | 
+                |
                 |     Returns or sets the Max Pre-Highlighted Elements
                 |     attribute.
                 |     Role: The Max Pre-Highlighted Elements attribute indicates the maximum
@@ -204,7 +205,9 @@ class SearchSettingAtt(SettingController):
 
         self.search_setting_att.MaxPreHighlightedElements = value
 
-    def get_deep_search_activation_info(self, o_admin_level: str, o_locked: str) -> bool:
+    def get_deep_search_activation_info(
+        self, o_admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -212,7 +215,7 @@ class SearchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDeepSearchActivationInfo(CATBSTR oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Deep Search Activation setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -221,9 +224,13 @@ class SearchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.search_setting_att.GetDeepSearchActivationInfo(o_admin_level, o_locked)
+        return self.search_setting_att.GetDeepSearchActivationInfo(
+            o_admin_level, o_locked
+        )
 
-    def get_default_power_input_context_priority_info(self, o_admin_level: str, o_locked: str) -> bool:
+    def get_default_power_input_context_priority_info(
+        self, o_admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -232,7 +239,7 @@ class SearchSettingAtt(SettingController):
                 | o Func GetDefaultPowerInputContextPriorityInfo(CATBSTR
                 | oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Default Power Input Context Priority
                 |     setting parameter.
                 |     Refer to SettingController for a detailed description.
@@ -241,9 +248,13 @@ class SearchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.search_setting_att.GetDefaultPowerInputContextPriorityInfo(o_admin_level, o_locked)
+        return self.search_setting_att.GetDefaultPowerInputContextPriorityInfo(
+            o_admin_level, o_locked
+        )
 
-    def get_default_power_input_context_scope_info(self, o_admin_level: str, o_locked: str) -> bool:
+    def get_default_power_input_context_scope_info(
+        self, o_admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -252,7 +263,7 @@ class SearchSettingAtt(SettingController):
                 | o Func GetDefaultPowerInputContextScopeInfo(CATBSTR
                 | oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Default Power Input Context Scope setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -261,9 +272,13 @@ class SearchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.search_setting_att.GetDefaultPowerInputContextScopeInfo(o_admin_level, o_locked)
+        return self.search_setting_att.GetDefaultPowerInputContextScopeInfo(
+            o_admin_level, o_locked
+        )
 
-    def get_default_power_input_prefix_info(self, o_admin_level: str, o_locked: str) -> bool:
+    def get_default_power_input_prefix_info(
+        self, o_admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -271,7 +286,7 @@ class SearchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDefaultPowerInputPrefixInfo(CATBSTR oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Default Power Input Prefix setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -280,7 +295,9 @@ class SearchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.search_setting_att.GetDefaultPowerInputPrefixInfo(o_admin_level, o_locked)
+        return self.search_setting_att.GetDefaultPowerInputPrefixInfo(
+            o_admin_level, o_locked
+        )
 
     def get_max_displayed_results_info(self, o_admin_level: str, o_locked: str) -> bool:
         """
@@ -290,7 +307,7 @@ class SearchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMaxDisplayedResultsInfo(CATBSTR oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Max Displayed Results setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -299,9 +316,13 @@ class SearchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.search_setting_att.GetMaxDisplayedResultsInfo(o_admin_level, o_locked)
+        return self.search_setting_att.GetMaxDisplayedResultsInfo(
+            o_admin_level, o_locked
+        )
 
-    def get_max_pre_highlighted_elements_info(self, o_admin_level: str, o_locked: str) -> bool:
+    def get_max_pre_highlighted_elements_info(
+        self, o_admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -309,7 +330,7 @@ class SearchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetMaxPreHighlightedElementsInfo(CATBSTR oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Max Displayed Results setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -318,7 +339,9 @@ class SearchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.search_setting_att.GetMaxPreHighlightedElementsInfo(o_admin_level, o_locked)
+        return self.search_setting_att.GetMaxPreHighlightedElementsInfo(
+            o_admin_level, o_locked
+        )
 
     def set_deep_search_activation_lock(self, i_locked: bool) -> None:
         """
@@ -327,7 +350,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDeepSearchActivationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Deep Search Activation setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -336,7 +359,7 @@ class SearchSettingAtt(SettingController):
         :rtype: None
         """
         return self.search_setting_att.SetDeepSearchActivationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -360,7 +383,7 @@ class SearchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDefaultPowerInputContextPriorityLock(boolean
                 | iLocked)
-                | 
+                |
                 |     Locks or unlocks the Default Power Input Context Priority setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -369,7 +392,7 @@ class SearchSettingAtt(SettingController):
         :rtype: None
         """
         return self.search_setting_att.SetDefaultPowerInputContextPriorityLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -392,7 +415,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDefaultPowerInputContextScopeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Default Power Input Context Scope setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -401,7 +424,7 @@ class SearchSettingAtt(SettingController):
         :rtype: None
         """
         return self.search_setting_att.SetDefaultPowerInputContextScopeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -424,7 +447,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDefaultPowerInputPrefixLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Default Power Input Prefix setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -433,7 +456,7 @@ class SearchSettingAtt(SettingController):
         :rtype: None
         """
         return self.search_setting_att.SetDefaultPowerInputPrefixLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -456,7 +479,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMaxDisplayedResultsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Max Displayed Results setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -465,7 +488,7 @@ class SearchSettingAtt(SettingController):
         :rtype: None
         """
         return self.search_setting_att.SetMaxDisplayedResultsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -488,7 +511,7 @@ class SearchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetMaxPreHighlightedElementsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Max Displayed Results setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -497,7 +520,7 @@ class SearchSettingAtt(SettingController):
         :rtype: None
         """
         return self.search_setting_att.SetMaxPreHighlightedElementsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

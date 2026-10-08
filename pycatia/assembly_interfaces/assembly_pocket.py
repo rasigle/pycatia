@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.assembly_interfaces.assembly_feature import AssemblyFeature
 from pycatia.in_interfaces.reference import Reference
 from pycatia.part_interfaces.limit import Limit
@@ -17,21 +18,21 @@ from pycatia.sketcher_interfaces.sketch import Sketch
 
 class AssemblyPocket(AssemblyFeature):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATAssemblyInterfaces.AssemblyFeature
-                |                         AssemblyPocket
-                | 
-                | Represents the AssemblyPocket object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATAssemblyInterfaces.AssemblyFeature
+            |                         AssemblyPocket
+            |
+            | Represents the AssemblyPocket object.
+
     """
 
     def __init__(self, com_object):
@@ -46,14 +47,14 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DirectionOrientation() As CatPrismOrientation
-                | 
+                |
                 |     Returns or sets the pocket direction orientation.
-                | 
+                |
                 |     Example:
                 |         The following example saves in dirOrientation the direction orientation
                 |         of the pocket assemblyPocket, and then sets it so that the direction will be
                 |         now inversed.
-                | 
+                |
                 |          Dim dirOrientation
                 |          Set dirOrientation = assemblyPocket.DirectionOrientation
                 |          assemblyPocket.DirectionOrientation = catInverseOrientation
@@ -80,14 +81,14 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DirectionType() As CatPrismExtrusionDirection
-                | 
+                |
                 |     Returns or sets the pocket direction type.
-                | 
+                |
                 |     Example:
                 |         The following example saves in dirType the direction type of the pocket
                 |         assemblyPocket, and then sets it so that the direction will be now normal to
                 |         the sketch.
-                | 
+                |
                 |          Dim dirType
                 |          Set dirType = assemblyPocket.DirectionType
                 |          assemblyPocket.DirectionType = catNormalToSketchDirection
@@ -114,15 +115,15 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FirstLimit() As Limit (Read Only)
-                | 
+                |
                 |     Returns the first pocket limit.
                 |     A pocket has two limits that manage the way the pocket is
                 |     ended.
-                | 
+                |
                 |     Example:
                 |         The following example returns in firstLimit the first limit of the
                 |         pocket assemblyPocket.
-                | 
+                |
                 |          Dim firstLimit As Limit
                 |          Set firstLimit = assemblyPocket.FirstLimit
 
@@ -139,16 +140,16 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IsSymmetric() As boolean
-                | 
+                |
                 |     Returns or sets the pocket symmetry flag.
                 |     TRUE if the pocket is symmetric with respect to the base sketch, and FALSE
                 |     otherwise.
-                | 
+                |
                 |     Example:
                 |         The following example saves in symFlag the symmetry flag of the pocket
                 |         assemblyPocket, and then sets it so that it will be now symmetric with respect
                 |         to the base sketch.
-                | 
+                |
                 |          Dim symFlag As boolean
                 |          Set symFlag = assemblyPocket.IsSymmetric
                 |          assemblyPocket.IsSymmetric = TRUE
@@ -174,15 +175,15 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SecondLimit() As Limit (Read Only)
-                | 
+                |
                 |     Returns the second pocket limit.
                 |     A pocket has two limits that manage the way the pocket is
                 |     ended.
-                | 
+                |
                 |     Example:
                 |         The following example returns in secondLimit the second limit of the
                 |         pocket assemblyPocket.
-                | 
+                |
                 |          Dim secondLimit As Limit
                 |          Set secondLimit = assemblyPocket.SecondLimit
 
@@ -199,13 +200,13 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Sketch() As Sketch (Read Only)
-                | 
+                |
                 |     Returns the pocket sketch.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in sketch the sketch on which the
                 |         pocket assemblyPocket is built.
-                | 
+                |
                 |          Dim sketch As Sketch
                 |          Set sketch = assemblyPocket.Sketch
 
@@ -222,13 +223,13 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SketchComponent() As Product (Read Only)
-                | 
+                |
                 |     Returns the component containing the pocket sketch.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in skComp the component that contains
                 |         the sketch of the pocket assemblyPocket is built.
-                | 
+                |
                 |          Dim skComp As Product
                 |          Set skComp = assemblyPocket.SketchComponent
 
@@ -244,22 +245,22 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetDirection(CATSafeArrayVariant ioDirection)
-                | 
+                |
                 |     Retrieves the pocket direction vector components.
                 |     These components are expressed in millimeter according to the absolute
                 |     coordinate system.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioDirection
                 |             The pocket direction vector components, as a safe array made up of
                 |             three doubles: X, Y, Z
-                |             The array must be previously initialized. 
-                | 
+                |             The array must be previously initialized.
+                |
                 |     Example:
                 |         The following example retrieves in dirArray the direction vector
                 |         components of the pocket assemblyPocket.
-                | 
+                |
                 |          Dim dirArray(2)
                 |          Call assemblyPocket.GetDirection(dirArray)
                 |          Set x = dirArray[0]
@@ -270,7 +271,7 @@ class AssemblyPocket(AssemblyFeature):
         :rtype: None
         """
         return self.assembly_pocket.GetDirection()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -293,14 +294,14 @@ class AssemblyPocket(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ReverseInnerSide()
-                | 
+                |
                 |     Reverses the pocket inner side when the profile is open.
                 |     This is useful for finding the shape to reach.
-                | 
+                |
                 |     Example:
                 |         The following example reverses the current inner side of the pocket
                 |         assemblyPocket.
-                | 
+                |
                 |          assemblyPocket.ReverseInnerSide
 
         :rtype: None
@@ -315,31 +316,33 @@ class AssemblyPocket(AssemblyFeature):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDirection(Reference iLine,
                 | Product iLineComp)
-                | 
+                |
                 |     Sets the pocket associated direction.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLine
                 |             The pocket associated direction, as a reference to a line or an
-                |             edge. 
+                |             edge.
                 |         iLineComp
                 |             The component containing the associated direction
                 |             reference
-                | 
+                |
                 |             Example:
                 |                 The following example sets the associated direction of the
                 |                 pocket assemblyPocket using the dirRef line of the component
                 |                 dirComp.
-                | 
+                |
                 |                  assemblyPocket.SetDirection dirRef, dirComp
 
         :param Reference i_line:
         :param Product i_line_comp:
         :rtype: None
         """
-        return self.assembly_pocket.SetDirection(i_line.com_object, i_line_comp.com_object)
-        # # # # Autogenerated comment: 
+        return self.assembly_pocket.SetDirection(
+            i_line.com_object, i_line_comp.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

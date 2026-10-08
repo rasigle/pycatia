@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.knowledge_interfaces.parameter import Parameter
@@ -16,20 +16,20 @@ from pycatia.types.general import CATVariant
 
 class SFMStandardContourParameters(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     SfmStandardContourParameters
-                | 
-                | Interface to access Contour Parametrs from/to the collection.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     SfmStandardContourParameters
+            |
+            | Interface to access Contour Parametrs from/to the collection.
+
     """
 
     def __init__(self, com_object):
@@ -55,23 +55,23 @@ class SFMStandardContourParameters(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As Parameter
-                | 
+                |
                 |     Gets a Reference from the collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             [in] Index of the Reference to be retrieved. 
+                |             [in] Index of the Reference to be retrieved.
                 |         oReference
-                |             [out] Reference. 
-                | 
+                |             [out] Reference.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok.
-                | 
+                |
                 |         Example:
                 |             This example retrieves Contour Parameters. The Values to these
                 |             parameters then can be set.
-                | 
+                |
                 |              Dim oListCkeParms As SfmStandardContourParameters
                 |              Set oListCkeParms = ObjSfmContourMgr.GetStdOpeningContourParams("Sfm_Rect")
                 |              'Display List of Parameters for Selected Contour

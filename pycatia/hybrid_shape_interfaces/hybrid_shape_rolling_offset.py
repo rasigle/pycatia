@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -16,21 +16,21 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeRollingOffset(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeRollingOffset
-                | 
-                | The RollingOffset feature
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeRollingOffset
+            |
+            | The RollingOffset feature
+
     """
 
     def __init__(self, com_object):
@@ -45,20 +45,20 @@ class HybridShapeRollingOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Offset() As Length (Read Only)
-                | 
+                |
                 |     Role: To get_Offset on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOffset
                 |             offset value return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Length 
+                |         Length
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -75,20 +75,20 @@ class HybridShapeRollingOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Role: To manage the support on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSupport
                 |             return value for CATScript applications, with (IDLRETVAL) function
-                |             type 
-                | 
+                |             type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -112,24 +112,24 @@ class HybridShapeRollingOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func getCurve(long iPos) As Reference
-                | 
+                |
                 |     Role: To get_Curve on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPos
-                |             Position 
-                | 
+                |             Position
+                |
                 |     See also:
-                |         long 
+                |         long
                 |     oCurve
                 |         return value for CATScript applications, with (IDLRETVAL) function type
-                |         
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -145,19 +145,19 @@ class HybridShapeRollingOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func getNbCurve() As long
-                | 
+                |
                 |     Role: To get_NbCurve on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         CurvesNb
-                |             Number of curves 
-                | 
+                |             Number of curves
+                |
                 |     See also:
-                |         long 
+                |         long
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -172,19 +172,19 @@ class HybridShapeRollingOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func getOffset() As double
-                | 
+                |
                 |     Role: To getOffset on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOffset
-                |             offset value 
-                | 
+                |             offset value
+                |
                 |     See also:
-                |         double 
+                |         double
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -199,18 +199,18 @@ class HybridShapeRollingOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub putCurve(Reference iCurve)
-                | 
+                |
                 |     Role: To add or remove a curve on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCurve
                 |             Curve to Add/Remove if not present in the list, or to remove.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -218,7 +218,7 @@ class HybridShapeRollingOffset(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_rolling_offset.putCurve(i_curve.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -241,19 +241,19 @@ class HybridShapeRollingOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub putOffset(double iOffset)
-                | 
+                |
                 |     Role: To put_Offset on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iOffset
-                |             offset value 
-                | 
+                |             offset value
+                |
                 |     See also:
-                |         double 
+                |         double
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 

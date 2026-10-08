@@ -36,7 +36,7 @@ def close_all():
         for document in documents:
             document.close()
     except com_error:
-        application.logger.warning('Could not close document.')
+        application.logger.warning("Could not close document.")
 
 
 @pytest.fixture
@@ -67,7 +67,7 @@ def document_close_all_open_test_close(file_name: Path):
         for document in documents:
             document.close()
     except com_error:
-        application.logger.warning('Couuld not close document.')
+        application.logger.warning("Couuld not close document.")
     document = open_document(file_name)
     yield
     document.close()

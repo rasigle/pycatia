@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.kinematics_interfaces.mechanism import Mechanism
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,20 +16,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class Dressup(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Dressup
-                | 
-                | Interface to access the Dressup object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Dressup
+            |
+            | Interface to access the Dressup object.
+
     """
 
     def __init__(self, com_object):
@@ -43,16 +44,16 @@ class Dressup(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Context() As Product (Read Only)
-                | 
+                |
                 |     Returns the context product on which the mechanism is defined. This
                 |     property is read only.
-                | 
+                |
                 |     Returns:
-                |         The dressup mechanism's context 
+                |         The dressup mechanism's context
                 |     Example:
                 |         This example sets in MecaContext the context product of
                 |         MyDressup.
-                | 
+                |
                 |             Dim MecaContext As Product
                 |             Set MecaContext = MyDressup.Context
 
@@ -69,15 +70,15 @@ class Dressup(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Mechanism() As Mechanism (Read Only)
-                | 
+                |
                 |     Returns the mechanism on which a dressup is applied. This property is read
                 |     only.
-                | 
+                |
                 |     Returns:
-                |         The dressup's mechanism 
+                |         The dressup's mechanism
                 |     Example:
                 |         This example sets in Meca the mechanism of MyDressup.
-                | 
+                |
                 |           Dim Meca As Mechanism
                 |           Set Meca = MyDressup.Mechanism
 
@@ -94,27 +95,27 @@ class Dressup(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Attach(Product iLink,
                 | Product iAttachedProd)
-                | 
+                |
                 |     Attaches a given product to a link of the mechanism pointed by the
                 |     dressup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLink
                 |             The link (Product) on which the attachment should be done. It
                 |             should be a product that belongs to the mechanism pointed by the dressup,
-                |             otherwise the method will fail. 
+                |             otherwise the method will fail.
                 |         iAttachedProd
                 |             The Product that will be attached to the link. This product should
                 |             not be a product that is already attached by another link, otherwise the method
-                |             will fail. 
-                | 
+                |             will fail.
+                |
                 |     Returns:
-                |         Nothing 
+                |         Nothing
                 |     Example:
                 |         This example attaches inside MyDressup, Link1 as mechanism's part to
                 |         Product1.
-                | 
+                |
                 |             Dim Link1 As Product
                 |             Dim Product1 As Product
                 |             ...
@@ -125,7 +126,7 @@ class Dressup(AnyObject):
         :rtype: None
         """
         return self.dressup.Attach(i_link.com_object, i_attached_prod.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -148,22 +149,22 @@ class Dressup(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Detach(Product iAttachedProd)
-                | 
+                |
                 |     Detaches an attached product from its link.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttachedProd
                 |             The Product that will be detached. It should be a product that is
                 |             currently attached in the dressup, otherwise the method will fail.
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         Nothing 
+                |         Nothing
                 |     Example:
                 |         This example detaches Product1 previously attached to a mechanism's
                 |         part inside MyDressup.
-                | 
+                |
                 |             Dim Product1 As Product
                 |             ...
                 |             MyDressup.Detach(Product1)
@@ -172,7 +173,7 @@ class Dressup(AnyObject):
         :rtype: None
         """
         return self.dressup.Detach(i_attached_prod.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -195,21 +196,21 @@ class Dressup(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ListAttached(Product iLink) As CATSafeArrayVariant
-                | 
+                |
                 |     Returns the list of products attached to a given link.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLink
                 |             The Product on which the returned product list is attached to.
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         The Product list that is attached to iLink. 
+                |         The Product list that is attached to iLink.
                 |     Example:
                 |         The following example loops for all the products attached to
                 |         Link1.
-                | 
+                |
                 |             Dim ListAttached1 as Product
                 |             ListAttached1 = MyDressup.ListAttached(Link1)
                 |             Dim Maxi as Integer

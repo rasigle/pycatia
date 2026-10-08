@@ -1,12 +1,12 @@
 #! usr/bin/python3.6
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,21 +14,21 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class FasReportingSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         FASReportingSettingAtt
-                | 
-                | The interface to access a DNBIAFASReportingSettingAtt.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         FASReportingSettingAtt
+            |
+            | The interface to access a DNBIAFASReportingSettingAtt.
+
     """
 
     def __init__(self, com_object):
@@ -43,16 +43,16 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DefaultStyleSheet() As CATBSTR
-                | 
+                |
                 |     Gets value of "OLP Robot Program Directory" parameter.
                 |     Role: Gets value of "OLP Robot Program Directory"
                 |     parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRobotProgramDir
-                |             Variable to return value in. 
-                | 
+                |             Variable to return value in.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -79,15 +79,15 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property JavaClassPath() As CATBSTR
-                | 
+                |
                 |     Gets value of "Java Class Path" parameter.
                 |     Role: Gets value of "Java Class Path" parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         o
-                |             JavaClassPath Variable to return value in. 
-                | 
+                |             JavaClassPath Variable to return value in.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -114,15 +114,15 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property JavaExe() As CATBSTR
-                | 
+                |
                 |     Gets value of "Java Executable" parameter.
                 |     Role: Gets value of "Java Executable" parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oJavaExe
-                |             Variable to return value in. 
-                | 
+                |             Variable to return value in.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -149,16 +149,16 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ResultOutputDir() As CATBSTR
-                | 
+                |
                 |     Gets value of "OLP Robot Program Directory" parameter.
                 |     Role: Gets value of "OLP Robot Program Directory"
                 |     parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRobotProgramDir
-                |             Variable to return value in. 
-                | 
+                |             Variable to return value in.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -185,16 +185,16 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SVGViewer() As long
-                | 
+                |
                 |     Gets value of "OLP Robot Program Directory" parameter.
                 |     Role: Gets value of "OLP Robot Program Directory"
                 |     parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRobotProgramDir
-                |             Variable to return value in. 
-                | 
+                |             Variable to return value in.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -221,16 +221,16 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StyleSheetDir() As CATBSTR
-                | 
+                |
                 |     Gets value of "OLP Robot Program Directory" parameter.
                 |     Role: Gets value of "OLP Robot Program Directory"
                 |     parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRobotProgramDir
-                |             Variable to return value in. 
-                | 
+                |             Variable to return value in.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -257,24 +257,24 @@ class FasReportingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDefaultStyleSheetInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Gets information on "OLP Robot Program Directory"
                 |     parameter.
                 |     Role: Gets information on "OLP Robot Program Directory"
                 |     parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value. Legal values:
@@ -285,7 +285,9 @@ class FasReportingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.fas_reporting_setting_att.GetDefaultStyleSheetInfo(io_admin_level, io_locked)
+        return self.fas_reporting_setting_att.GetDefaultStyleSheetInfo(
+            io_admin_level, io_locked
+        )
 
     def get_java_class_path_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -295,22 +297,22 @@ class FasReportingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetJavaClassPathInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Gets information on "Java Class Path" parameter.
                 |     Role: Gets information on "Java Class Path" parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value. Legal values:
@@ -321,7 +323,9 @@ class FasReportingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.fas_reporting_setting_att.GetJavaClassPathInfo(io_admin_level, io_locked)
+        return self.fas_reporting_setting_att.GetJavaClassPathInfo(
+            io_admin_level, io_locked
+        )
 
     def get_java_exe_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -331,22 +335,22 @@ class FasReportingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetJavaExeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Gets information on "Java Executable" parameter.
                 |     Role: Gets information on "Java Executable" parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value. Legal values:
@@ -367,24 +371,24 @@ class FasReportingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetResultOutputDirInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Gets information on "OLP Robot Program Directory"
                 |     parameter.
                 |     Role: Gets information on "OLP Robot Program Directory"
                 |     parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value. Legal values:
@@ -395,7 +399,9 @@ class FasReportingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.fas_reporting_setting_att.GetResultOutputDirInfo(io_admin_level, io_locked)
+        return self.fas_reporting_setting_att.GetResultOutputDirInfo(
+            io_admin_level, io_locked
+        )
 
     def get_svg_viewer_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -405,24 +411,24 @@ class FasReportingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSVGViewerInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Gets information on "OLP Robot Program Directory"
                 |     parameter.
                 |     Role: Gets information on "OLP Robot Program Directory"
                 |     parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value. Legal values:
@@ -433,7 +439,9 @@ class FasReportingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.fas_reporting_setting_att.GetSVGViewerInfo(io_admin_level, io_locked)
+        return self.fas_reporting_setting_att.GetSVGViewerInfo(
+            io_admin_level, io_locked
+        )
 
     def get_style_sheet_dir_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -443,24 +451,24 @@ class FasReportingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetStyleSheetDirInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Gets information on "OLP Robot Program Directory"
                 |     parameter.
                 |     Role: Gets information on "OLP Robot Program Directory"
                 |     parameter
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value. Legal values:
@@ -471,7 +479,9 @@ class FasReportingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.fas_reporting_setting_att.GetStyleSheetDirInfo(io_admin_level, io_locked)
+        return self.fas_reporting_setting_att.GetStyleSheetDirInfo(
+            io_admin_level, io_locked
+        )
 
     def set_default_style_sheet_lock(self, i_locked: bool) -> None:
         """
@@ -480,21 +490,21 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDefaultStyleSheetLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the "OLP Robot Program Directory"
                 |     parameter.
                 |     Role: Locks or unlocks the "OLP Robot Program Directory" parameter if the
                 |     operation is allowed in the current administrated environment. In user mode
                 |     this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE : to lock the parameter.
-                |             FALSE: to unlock the parameter. 
-                | 
+                |             FALSE: to unlock the parameter.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -504,7 +514,7 @@ class FasReportingSettingAtt(SettingController):
         :rtype: None
         """
         return self.fas_reporting_setting_att.SetDefaultStyleSheetLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -527,20 +537,20 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetJavaClassPathLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the "Java Class Path" parameter.
                 |     Role: Locks or unlocks the "Java Class Path" parameter if the operation is
                 |     allowed in the current administrated environment. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE : to lock the parameter.
-                |             FALSE: to unlock the parameter. 
-                | 
+                |             FALSE: to unlock the parameter.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -550,7 +560,7 @@ class FasReportingSettingAtt(SettingController):
         :rtype: None
         """
         return self.fas_reporting_setting_att.SetJavaClassPathLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -573,20 +583,20 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetJavaExeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the "Java Executable" parameter.
                 |     Role: Locks or unlocks the "Java Executable" parameter if the operation is
                 |     allowed in the current administrated environment. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE : to lock the parameter.
-                |             FALSE: to unlock the parameter. 
-                | 
+                |             FALSE: to unlock the parameter.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -596,7 +606,7 @@ class FasReportingSettingAtt(SettingController):
         :rtype: None
         """
         return self.fas_reporting_setting_att.SetJavaExeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -619,21 +629,21 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetResultOutputDirLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the "OLP Robot Program Directory"
                 |     parameter.
                 |     Role: Locks or unlocks the "OLP Robot Program Directory" parameter if the
                 |     operation is allowed in the current administrated environment. In user mode
                 |     this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE : to lock the parameter.
-                |             FALSE: to unlock the parameter. 
-                | 
+                |             FALSE: to unlock the parameter.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -643,7 +653,7 @@ class FasReportingSettingAtt(SettingController):
         :rtype: None
         """
         return self.fas_reporting_setting_att.SetResultOutputDirLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -666,21 +676,21 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSVGViewerLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the "OLP Robot Program Directory"
                 |     parameter.
                 |     Role: Locks or unlocks the "OLP Robot Program Directory" parameter if the
                 |     operation is allowed in the current administrated environment. In user mode
                 |     this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE : to lock the parameter.
-                |             FALSE: to unlock the parameter. 
-                | 
+                |             FALSE: to unlock the parameter.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -690,7 +700,7 @@ class FasReportingSettingAtt(SettingController):
         :rtype: None
         """
         return self.fas_reporting_setting_att.SetSVGViewerLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -713,21 +723,21 @@ class FasReportingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetStyleSheetDirLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the "OLP Robot Program Directory"
                 |     parameter.
                 |     Role: Locks or unlocks the "OLP Robot Program Directory" parameter if the
                 |     operation is allowed in the current administrated environment. In user mode
                 |     this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE : to lock the parameter.
-                |             FALSE: to unlock the parameter. 
-                | 
+                |             FALSE: to unlock the parameter.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -737,7 +747,7 @@ class FasReportingSettingAtt(SettingController):
         :rtype: None
         """
         return self.fas_reporting_setting_att.SetStyleSheetDirLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

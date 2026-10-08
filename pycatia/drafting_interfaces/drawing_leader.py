@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 from typing import TYPE_CHECKING
 
@@ -19,20 +20,20 @@ if TYPE_CHECKING:
 
 class DrawingLeader(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DrawingLeader
-                | 
-                | Represents a drawing leader in a drawing view.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DrawingLeader
+            |
+            | Represents a drawing leader in a drawing view.
+
     """
 
     def __init__(self, com_object):
@@ -47,13 +48,13 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property AllAround() As boolean
-                | 
+                |
                 |     Returns or sets the status of all around.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the status of all around on MyLeader drawing
                 |         leader.
-                | 
+                |
                 |          oSymbol = MyLeader.AllAround
 
         :rtype: bool
@@ -77,13 +78,13 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property AnchorPoint() As long
-                | 
+                |
                 |     Returns or sets anchor point.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the anchor point on MyLeader drawing
                 |         leader.
-                | 
+                |
                 |          oAnchorPoint = MyLeader.AnchorPoint
 
         :rtype: int
@@ -118,7 +119,7 @@ class DrawingLeader(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.drawing_leader.AnchorSymbol
@@ -139,13 +140,13 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property HeadSymbol() As CatSymbolType
-                | 
+                |
                 |     Returns or sets symbol type of head side.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the symbol type of head side on MyLeader drawing
                 |         leader.
-                | 
+                |
                 |          oSymbol = MyLeader.HeadSymbol
 
         :rtype: int
@@ -169,13 +170,13 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property HeadTarget() As CATBaseDispatch
-                | 
+                |
                 |     Returns or sets target element of head side.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the target element of head side on MyLeader
                 |         drawing leader.
-                | 
+                |
                 |          oTarget = MyLeader.HeadTarget
 
         :rtype: AnyObject
@@ -192,27 +193,28 @@ class DrawingLeader(AnyObject):
         self.drawing_leader.HeadTarget = value
 
     @property
-    def leaders(self) -> 'DrawingLeaders':
+    def leaders(self) -> "DrawingLeaders":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Leaders() As DrawingLeaders (Read Only)
-                | 
+                |
                 |     Returns the secondary drawing leader collection of the drawing
                 |     leader.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in LeaderCollection the collection of leaders of
                 |         the Myleader drawing leader.
-                | 
+                |
                 |          Dim LeaderCollection As DrawingLeaders
                 |          Set LeaderCollection = MyLeader.Leaders
 
         :rtype: DrawingLeaders
         """
         from pycatia.drafting_interfaces.drawing_leaders import DrawingLeaders
+
         return DrawingLeaders(self.drawing_leader.Leaders)
 
     @property
@@ -223,13 +225,13 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property NbInterruption() As long (Read Only)
-                | 
+                |
                 |     Returns the number of interruptions of leader path.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the number of interruptions on MyLeader drawing
                 |         leader.
-                | 
+                |
                 |          oNbInterruption = MyLeader.NbInterruption
 
         :rtype: int
@@ -245,13 +247,13 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property NbPoint() As long (Read Only)
-                | 
+                |
                 |     Returns the number of points of leader path.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the number of points on MyLeader drawing
                 |         leader.
-                | 
+                |
                 |          oNbPoint = MyLeader.NbPoint
 
         :rtype: int
@@ -259,8 +261,13 @@ class DrawingLeader(AnyObject):
 
         return self.drawing_leader.NbPoint
 
-    def add_interruption(self, i_first_point_x: float, i_first_point_y: float, i_second_point_x: float,
-                         i_second_point_y: float) -> None:
+    def add_interruption(
+        self,
+        i_first_point_x: float,
+        i_first_point_y: float,
+        i_second_point_x: float,
+        i_second_point_y: float,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -270,22 +277,22 @@ class DrawingLeader(AnyObject):
                 | double iFirstPointY,
                 | double iSecondPointX,
                 | double iSecondPointY)
-                | 
+                |
                 |     Add an interruption to an leader.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFirstPointX
-                |             X coordinates of first point. 
+                |             X coordinates of first point.
                 |         iFirstPointY
-                |             Y coordinates of first point. 
+                |             Y coordinates of first point.
                 |         iSecondPointX
-                |             X coordinates of second point. 
+                |             X coordinates of second point.
                 |         iSecondPointY
-                |             Y coordinates of second point. 
+                |             Y coordinates of second point.
                 |         Example:
                 |             This example adds an interruption to MyLeader.
-                | 
+                |
                 |              iFirstPointX = 10.
                 |              iFirstPointY = 20.
                 |              iSecondPointX = 20.
@@ -299,7 +306,9 @@ class DrawingLeader(AnyObject):
         :param float i_second_point_y:
         :rtype: None
         """
-        return self.drawing_leader.AddInterruption(i_first_point_x, i_first_point_y, i_second_point_x, i_second_point_y)
+        return self.drawing_leader.AddInterruption(
+            i_first_point_x, i_first_point_y, i_second_point_x, i_second_point_y
+        )
 
     def add_point(self, i_num: int, i_x: float, i_y: float) -> None:
         """
@@ -310,21 +319,21 @@ class DrawingLeader(AnyObject):
                 | o Sub AddPoint(long iNum,
                 | double iX,
                 | double iY)
-                | 
+                |
                 |     Add a point to an leader.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
                 |             Point number. Point will be inserted at iNum+1 position.
-                |             
+                |
                 |         iX
-                |             X coordinates of point to add. 
+                |             X coordinates of point to add.
                 |         iY
-                |             Y coordinates of point to add. 
+                |             Y coordinates of point to add.
                 |         Example:
                 |             This example adds a point to MyLeader.
-                | 
+                |
                 |              iNum = 1
                 |              iX = 10.
                 |              iY = 20.
@@ -345,20 +354,20 @@ class DrawingLeader(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetInterruptions(CATSafeArrayVariant oInterruptions) As
                 | long
-                | 
+                |
                 |     Get leader path.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oInterruptions
                 |             List of interruptions coordinates (X1,Y1,X2,Y2,.....Xn,Yn).
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         oNbInterruptions Number of interruptions. 
+                |         oNbInterruptions Number of interruptions.
                 |     Example:
                 |         This example gets interruptions of MyLeader path.
-                | 
+                |
                 |          oNbInterruptions = MyLeader.GetInterruptions(oInterruptions)
 
         :param tuple o_interruptions:
@@ -375,20 +384,20 @@ class DrawingLeader(AnyObject):
                 | o Sub GetPoint(long iNum,
                 | double oX,
                 | double oY)
-                | 
+                |
                 |     Get leader point coordinates.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
-                |             Point number. 
+                |             Point number.
                 |         oX
-                |             X coordinates of point. 
+                |             X coordinates of point.
                 |         oY
-                |             Y coordinates of point. 
+                |             Y coordinates of point.
                 |         Example:
                 |             This example gets a point to MyLeader.
-                | 
+                |
                 |              iNum = 1
                 |              MyLeader.GetPoint(iNum, oX, oY)
 
@@ -406,20 +415,20 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPoints(CATSafeArrayVariant oPoints) As long
-                | 
+                |
                 |     Get leader path.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPoints
                 |             List of points coordinates (X1,Y1,X2,Y2,.....Xn,Yn).
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         oNbPoints Number of points. 
+                |         oNbPoints Number of points.
                 |     Example:
                 |         This example gets points of MyLeader path.
-                | 
+                |
                 |          oNbPoints = MyLeader.GetPoints(oPoints)
 
         :param tuple o_points:
@@ -436,20 +445,20 @@ class DrawingLeader(AnyObject):
                 | o Sub ModifyPoint(long iNum,
                 | double iX,
                 | double iY)
-                | 
+                |
                 |     Modify a point of an leader.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
-                |             Point number to modify. 
+                |             Point number to modify.
                 |         iX
-                |             X coordinates of new point. 
+                |             X coordinates of new point.
                 |         iY
-                |             Y coordinates of new point. 
+                |             Y coordinates of new point.
                 |         Example:
                 |             This example modifies a point to MyLeader.
-                | 
+                |
                 |              iNum = 1
                 |              iX = -10.
                 |              iY = -20.
@@ -469,19 +478,19 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub RemoveInterruption(long iNum)
-                | 
+                |
                 |     Remove an interruption to an leader.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
-                |             Interruption number to delete. 
+                |             Interruption number to delete.
                 |             - If iNum equals to 0, all interruptions will be removed.
-                |             
+                |
                 |         Example:
                 |             This example removes an interruption from
                 |             MyLeader.
-                | 
+                |
                 |              iNum = 2
                 |              MyLeader.RemoveInterruption iNum
 
@@ -497,16 +506,16 @@ class DrawingLeader(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub RemovePoint(long iNum)
-                | 
+                |
                 |     Remove a point from an leader.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
-                |             Point number to delete. 
+                |             Point number to delete.
                 |         Example:
                 |             This example removes a point from MyLeader.
-                | 
+                |
                 |              iNum = 2
                 |              MyLeader.RemovePoint iNum
 

@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 import inspect
 
 from pycatia.in_interfaces.reference import Reference
@@ -22,23 +23,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SPAWorkbench(Workbench):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     InfInterfaces.Workbench
-                |                         SPAWorkbench
-                |
-                | The object to manage all Space Analysis objects.
-                |
-                | This version allows you to manage inertia data, clashes, distances and
-                | sections.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     InfInterfaces.Workbench
+            |                         SPAWorkbench
+            |
+            | The object to manage all Space Analysis objects.
+            |
+            | This version allows you to manage inertia data, clashes, distances and
+            | sections.
 
     """
 
@@ -54,7 +55,7 @@ class SPAWorkbench(Workbench):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Clashes() As Clashes (Read Only)
-                | 
+                |
                 |     Returns the Clashes collection.
                 |
                 |     WARNING: this method will be DEPRECATED in the next release. It is
@@ -84,7 +85,7 @@ class SPAWorkbench(Workbench):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Distances() As Distances (Read Only)
-                | 
+                |
                 |     Returns the Distances collection.
                 |
                 |     WARNING: this method will be DEPRECATED in the next release. It is
@@ -114,7 +115,7 @@ class SPAWorkbench(Workbench):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Inertias() As Inertias (Read Only)
-                | 
+                |
                 |     Returns the Inertias collection.
                 |
                 |     WARNING: this method will be DEPRECATED in the next release. It is
@@ -144,7 +145,7 @@ class SPAWorkbench(Workbench):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Sections() As Sections (Read Only)
-                | 
+                |
                 |     Returns the Sections collection.
                 |
                 |     WARNING: this method will be DEPRECATED in the next release. It is
@@ -173,7 +174,7 @@ class SPAWorkbench(Workbench):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetMeasurable(Reference iMeasuredItem) As Measurable
-                | 
+                |
                 |     Returns the Measurable object.
                 |
                 |     Example:
@@ -193,7 +194,9 @@ class SPAWorkbench(Workbench):
         """
         return Measurable(self.spa_workbench.GetMeasurable(i_measured_item.com_object))
 
-    def get_measurable_in_context(self, i_measured_item: Reference, i_product_instance: AnyObject) -> Measurable:
+    def get_measurable_in_context(
+        self, i_measured_item: Reference, i_product_instance: AnyObject
+    ) -> Measurable:
         """
 
         Introduced in V5-6R2018.
@@ -229,11 +232,14 @@ class SPAWorkbench(Workbench):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return Measurable(
-            self.spa_workbench.GetMeasurableInContext(i_measured_item.com_object, i_product_instance.com_object))
+            self.spa_workbench.GetMeasurableInContext(
+                i_measured_item.com_object, i_product_instance.com_object
+            )
+        )
 
     def __repr__(self):
         return f'SpaWorkbench(name="{self.name}")'

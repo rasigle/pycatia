@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_plant_ship_interfaces.psp_list_of_bstrs import PSPListOfBSTRs
 from pycatia.cat_plant_ship_interfaces.psp_list_of_doubles import PSPListOfDoubles
 from pycatia.in_interfaces.reference import Reference
@@ -17,22 +18,22 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PSPPartConnector(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PspPartConnector
-                | 
-                | Represent the Part Connector to manage the technological data on
-                | connectors.
-                | Role: To access the technological data on connectors.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PspPartConnector
+            |
+            | Represent the Part Connector to manage the technological data on
+            | connectors.
+            | Role: To access the technological data on connectors.
+
     """
 
     def __init__(self, com_object):
@@ -48,9 +49,9 @@ class PSPPartConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AlignType() As CatPspIDLPartConnectorType (Read
                 | Only)
-                | 
+                |
                 |     Returns the alignment type for this connector.
-                | 
+                |
                 |     See also:
                 |         CatPspIDLPartConnectorType
                 |
@@ -75,10 +76,10 @@ class PSPPartConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AttributeNames() As PspListOfBSTRs
-                | 
+                |
                 |     Returns or sets a list of attribute names associated with this
                 |     connector.
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -108,10 +109,10 @@ class PSPPartConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ClockType() As CatPspIDLPartConnectorType (Read
                 | Only)
-                | 
+                |
                 |     Returns the clocking type (how symmetric this end is) for this
                 |     connector.
-                | 
+                |
                 |     See also:
                 |         CatPspIDLPartConnectorType
                 |
@@ -137,15 +138,15 @@ class PSPPartConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FaceType() As CatPspIDLPartConnectorType (Read
                 | Only)
-                | 
+                |
                 |     Returns the face type (normal or "transparent" support) for this
                 |     connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oFaceType
-                |             The face type. 
-                | 
+                |             The face type.
+                |
                 |     See also:
                 |         CatPspIDLPartConnectorType
                 |
@@ -169,14 +170,14 @@ class PSPPartConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAlignmentConnector() As Reference
-                | 
+                |
                 |     Returns the Alignmnet connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCntr
-                |             Alignment connector 
-                | 
+                |             Alignment connector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -196,19 +197,19 @@ class PSPPartConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAlignmentDirection(Product iRelAxis) As
                 | PspListOfDoubles
-                | 
+                |
                 |     Retrieves the alignment direction outward normal to the face place
                 |     position.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             the relative axis object (Nothing means relative to parent)
-                |             
+                |
                 |         oAlignmentDirection
                 |             Three double values stand for X,Y,Z components of the alignment
-                |             vector 
-                | 
+                |             vector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -220,7 +221,9 @@ class PSPPartConnector(AnyObject):
         :param Product i_rel_axis:
         :rtype: PSPListOfDoubles
         """
-        return PSPListOfDoubles(self.psp_part_connector.GetAlignmentDirection(i_rel_axis.com_object))
+        return PSPListOfDoubles(
+            self.psp_part_connector.GetAlignmentDirection(i_rel_axis.com_object)
+        )
 
     def get_connector_math_plane(self, i_rel_axis: Product) -> PSPListOfDoubles:
         """
@@ -230,14 +233,14 @@ class PSPPartConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConnectorMathPlane(Product iRelAxis) As
                 | PspListOfDoubles
-                | 
+                |
                 |     Returns the 9 doubles values for plane contains the connector position
                 |     (plane origin), alignment direction (plane z-axis), and the up direction (plane
                 |     y-axis). Nine double values stand for plane origin, and the two normalized
                 |     vectors
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             The relative axis object (Nothing means relative to parent).
                 |
@@ -252,7 +255,9 @@ class PSPPartConnector(AnyObject):
         :param Product i_rel_axis:
         :rtype: PSPListOfDoubles
         """
-        return PSPListOfDoubles(self.psp_part_connector.GetConnectorMathPlane(i_rel_axis.com_object))
+        return PSPListOfDoubles(
+            self.psp_part_connector.GetConnectorMathPlane(i_rel_axis.com_object)
+        )
 
     def get_datum_connector(self) -> Reference:
         """
@@ -261,14 +266,14 @@ class PSPPartConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDatumConnector() As Reference
-                | 
+                |
                 |     Returns the Datum connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCntr
-                |             Orientation connector 
-                | 
+                |             Orientation connector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -287,14 +292,14 @@ class PSPPartConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetFaceConnector() As Reference
-                | 
+                |
                 |     Returns the face connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCntr
-                |             Face connector 
-                | 
+                |             Face connector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -313,14 +318,14 @@ class PSPPartConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOrientationConnector() As Reference
-                | 
+                |
                 |     Get Orientation connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCntr
-                |             Orientation connector 
-                | 
+                |             Orientation connector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -339,20 +344,20 @@ class PSPPartConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetPosition(Product iRelAxis) As PspListOfDoubles
-                | 
+                |
                 |     Returns the Position of the connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             The relative axis object (NULL means relative to parent).
-                |             
+                |
                 |         oPosition
                 |             X-Y-Z coordinates of the part connector Three double values stand
-                |             for x,y,z coordinates 
-                | 
+                |             for x,y,z coordinates
+                |
                 |     Example:
-                | 
+                |
                 |          Dim objThisIntf As PspPartConnector
                 |          Dim objArg1 As Product
                 |          Dim objArg2 As PspListOfDoubles
@@ -362,7 +367,9 @@ class PSPPartConnector(AnyObject):
         :param Product i_rel_axis:
         :rtype: PSPListOfDoubles
         """
-        return PSPListOfDoubles(self.psp_part_connector.GetPosition(i_rel_axis.com_object))
+        return PSPListOfDoubles(
+            self.psp_part_connector.GetPosition(i_rel_axis.com_object)
+        )
 
     def get_up_direction(self, i_rel_axis: Product) -> PSPListOfDoubles:
         """
@@ -371,17 +378,17 @@ class PSPPartConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUpDirection(Product iRelAxis) As PspListOfDoubles
-                | 
+                |
                 |     Returns the UP direction of the connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             The relative axis object (Nothing means relative to parent).
-                |             
+                |
                 |         oUpDirection
-                |             The connector face plane. 
-                | 
+                |             The connector face plane.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -393,9 +400,13 @@ class PSPPartConnector(AnyObject):
         :param Product i_rel_axis:
         :rtype: PSPListOfDoubles
         """
-        return PSPListOfDoubles(self.psp_part_connector.GetUpDirection(i_rel_axis.com_object))
+        return PSPListOfDoubles(
+            self.psp_part_connector.GetUpDirection(i_rel_axis.com_object)
+        )
 
-    def set_alignment_connector(self, i_align_cntr: Reference, ie_align_type: int) -> None:
+    def set_alignment_connector(
+        self, i_align_cntr: Reference, ie_align_type: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -403,16 +414,16 @@ class PSPPartConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAlignmentConnector(Reference iAlignCntr,
                 | CatPspIDLPartConnectorType ieAlignType)
-                | 
+                |
                 |     Sets the Face connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAlignCntr
-                |             Alignment connector 
+                |             Alignment connector
                 |         ieAlignType
-                |             Alignment connector Type 
-                | 
+                |             Alignment connector Type
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -425,8 +436,10 @@ class PSPPartConnector(AnyObject):
         :param int ie_align_type: enum cat_psp_idl_part_connector_type
         :rtype: None
         """
-        return self.psp_part_connector.SetAlignmentConnector(i_align_cntr.com_object, ie_align_type)
-        # # # # Autogenerated comment: 
+        return self.psp_part_connector.SetAlignmentConnector(
+            i_align_cntr.com_object, ie_align_type
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -449,14 +462,14 @@ class PSPPartConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDatumConnector(Reference iDatumCntr)
-                | 
+                |
                 |     Sets the Datum connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDatumCntr
-                |             Datum connector. 
-                | 
+                |             Datum connector.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -468,7 +481,7 @@ class PSPPartConnector(AnyObject):
         :rtype: None
         """
         return self.psp_part_connector.SetDatumConnector(i_datum_cntr.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -492,16 +505,16 @@ class PSPPartConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetFaceConnector(Reference iFaceCntr,
                 | CatPspIDLPartConnectorType ieFaceType)
-                | 
+                |
                 |     Sets Face connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFaceCntr
-                |             Face connector 
+                |             Face connector
                 |         ieFaceType
-                |             Face connector Type 
-                | 
+                |             Face connector Type
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -514,8 +527,10 @@ class PSPPartConnector(AnyObject):
         :param int ie_face_type: enum cat_psp_idl_part_connector_type
         :rtype: None
         """
-        return self.psp_part_connector.SetFaceConnector(i_face_cntr.com_object, ie_face_type)
-        # # # # Autogenerated comment: 
+        return self.psp_part_connector.SetFaceConnector(
+            i_face_cntr.com_object, ie_face_type
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -531,7 +546,9 @@ class PSPPartConnector(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_orientation_connector(self, i_orient_cntr: Reference, ie_orientation: int) -> None:
+    def set_orientation_connector(
+        self, i_orient_cntr: Reference, ie_orientation: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -539,16 +556,16 @@ class PSPPartConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOrientationConnector(Reference iOrientCntr,
                 | CatPspIDLPartConnectorType ieOrientation)
-                | 
+                |
                 |     Sets Face connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iOrientCntr
-                |             Alignment connector 
+                |             Alignment connector
                 |         ieOrientation
-                |             Orientation connector Type 
-                | 
+                |             Orientation connector Type
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspPartConnector
@@ -561,8 +578,10 @@ class PSPPartConnector(AnyObject):
         :param int ie_orientation: enum cat_psp_idl_part_connector_type
         :rtype: None
         """
-        return self.psp_part_connector.SetOrientationConnector(i_orient_cntr.com_object, ie_orientation)
-        # # # # Autogenerated comment: 
+        return self.psp_part_connector.SetOrientationConnector(
+            i_orient_cntr.com_object, ie_orientation
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.abq_automation_interfaces.abq_boundary_conditions import ABQBoundaryConditions
+
+from pycatia.abq_automation_interfaces.abq_boundary_conditions import (
+    ABQBoundaryConditions,
+)
 from pycatia.abq_automation_interfaces.abq_loads import ABQLoads
 from pycatia.abq_automation_interfaces.abq_step import ABQStep
 from pycatia.in_interfaces.reference import Reference
@@ -17,23 +20,23 @@ from pycatia.product_structure_interfaces.product import Product
 
 class ABQFrequencyStep(ABQStep):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQStep
-                |                         ABQFrequencyStep
-                | 
-                | Represents an Abaqus frequency step (ABQFrequencyStep) object.
-                | Role: Access an Abaqus frequency step object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQStep
+            |                         ABQFrequencyStep
+            |
+            | Represents an Abaqus frequency step (ABQFrequencyStep) object.
+            | Role: Access an Abaqus frequency step object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -49,15 +52,15 @@ class ABQFrequencyStep(ABQStep):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BoundaryConditions() As ABQBoundaryConditions (Read
                 | Only)
-                | 
+                |
                 |     Returns the ABQBoundaryConditions container associated with the
                 |     step.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the ABQBoundaryConditions container
                 |         abqBCs.
-                | 
-                |          Dim abqFreqStep As ABQFrequencyStep 
+                |
+                |          Dim abqFreqStep As ABQFrequencyStep
                 |          Dim abqBCs As ABQBoundaryConditions
                 |          Set abqBCs = abqFreqStep.BoundaryConditions
 
@@ -74,10 +77,10 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Description() As CATBSTR
-                | 
+                |
                 |     Returns or sets the description of the Abaqus general static
                 |     step.
-                | 
+                |
                 |     Returns:
                 |         The description of the Abaqus general static step.
 
@@ -102,22 +105,22 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EigensolverValue() As short
-                | 
+                |
                 |     Returns or sets Eigensolver Value.
-                | 
+                |
                 |     Returns:
                 |         The Eigensolver Value.
-                | 
-                |           
+                |
+                |
                 |         Legal values:
                 |          1 - Lanczos.
                 |          2 - AMS.
-                |          
-                | 
+                |
+                |
                 |         Example:
                 |             This example sets eigensolver as Lanczos
                 |             abqFreqStep
-                | 
+                |
                 |              abqFreqStep.EigensolverValue = 1
 
         :rtype: int
@@ -141,16 +144,16 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FrequencyShift() As short
-                | 
+                |
                 |     Returns or sets frequency shift value.
-                | 
+                |
                 |     Returns:
                 |         The frequency shift value.
-                | 
+                |
                 |         Example:
                 |             This example sets the maximum frequency for
                 |             abqFreqStep
-                | 
+                |
                 |              abqFreqStep.FrequencyShift = 10
 
         :rtype: int
@@ -174,14 +177,14 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Loads() As ABQLoads (Read Only)
-                | 
+                |
                 |     Returns the ABQLoads container associated with the step.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the ABQLoads container
                 |         abqLoads:
-                | 
-                |          Dim abqFreqStep As ABQFrequencyStep 
+                |
+                |          Dim abqFreqStep As ABQFrequencyStep
                 |          Dim abqLoads As ABQLoads
                 |          Set abqLoads = abqFreqStep.Loads
 
@@ -198,16 +201,16 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaximumFrequency() As short
-                | 
+                |
                 |     Returns or sets maximum frequency value.
-                | 
+                |
                 |     Returns:
                 |         The maximum frequency value.
-                | 
+                |
                 |         Example:
                 |             This example sets the maximum frequency for
                 |             abqFreqStep
-                | 
+                |
                 |              abqFreqStep.MaximumFrequency = 100
 
         :rtype: int
@@ -231,16 +234,16 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MinimumFrequency() As short
-                | 
+                |
                 |     Returns or sets minimum frequency value.
-                | 
+                |
                 |     Returns:
                 |         The minimum frequency value.
-                | 
+                |
                 |         Example:
                 |             This example sets the minimum frequency for
                 |             abqFreqStep
-                | 
+                |
                 |              abqFreqStep.MinimumFrequency = 10
 
         :rtype: int
@@ -264,22 +267,22 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NormalizationValue() As short
-                | 
+                |
                 |     Returns or sets Normalization Value.
-                | 
+                |
                 |     Returns:
                 |         The Normalization Value.
-                | 
-                |           
+                |
+                |
                 |         Legal values:
                 |          1 - Displacement.
                 |          2 - Mass.
-                |          
-                | 
+                |
+                |
                 |         Example:
                 |             This example sets Normalization as Displacement
                 |             abqFreqStep
-                | 
+                |
                 |              abqFreqStep.NormalizationValue = 1
 
         :rtype: int
@@ -303,22 +306,22 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RequestedModesOption() As short
-                | 
+                |
                 |     Sets or returns the requested modes option.
-                | 
+                |
                 |     Returns:
                 |         The option of requested modes.
-                | 
-                |           
+                |
+                |
                 |         Legal values:
                 |          ABQ_ALL - All modes.
                 |          ABQ_VALUE - Specify the no of modes to be requested.
-                |          
-                | 
+                |
+                |
                 |         Example:
                 |             This example sets the requested modes option for abqFreqStep job to
                 |             every increment.
-                | 
+                |
                 |              abqFreqStep.RequestedModesOption = ABQ_ALL
 
         :return: enum abq_requested_modes_option
@@ -343,17 +346,17 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RequestedModesValue() As short
-                | 
+                |
                 |     Returns or sets requested modes value. This is only valid if
                 |     RestartRequestOption is ABQ_VALUE
-                | 
+                |
                 |     Returns:
                 |         The requested modes value.
-                | 
+                |
                 |         Example:
                 |             This example sets the requested modes for
                 |             abqFreqStep
-                | 
+                |
                 |              abqFreqStep.RequestedModesValue = 10
 
         :rtype: int
@@ -377,9 +380,9 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ResidualModeReqBoolean() As boolean
-                | 
+                |
                 |     Returns or sets Residual Mode Request Boolean Value.
-                | 
+                |
                 |     Returns:
                 |         The Residual Mode Request Boolean Value.
 
@@ -404,9 +407,9 @@ class ABQFrequencyStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SIMArchitectureReqBoolean() As boolean
-                | 
+                |
                 |     Returns or sets SIM Architecture Request Boolean Value.
-                | 
+                |
                 |     Returns:
                 |         The SIM Architecture Request Boolean Value.
 
@@ -423,7 +426,9 @@ class ABQFrequencyStep(ABQStep):
 
         self.abq_frequency_step.SIMArchitectureReqBoolean = value
 
-    def add_residual_mode_region(self, i_product: Product, i_support: Reference) -> None:
+    def add_residual_mode_region(
+        self, i_product: Product, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -431,11 +436,11 @@ class ABQFrequencyStep(ABQStep):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddResidualModeRegion(Product iProduct,
                 | Reference iSupport)
-                | 
+                |
                 |     Adds the Residual Mode Region.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIAProduct specifying the positioning
                 |             object.
@@ -447,8 +452,10 @@ class ABQFrequencyStep(ABQStep):
         :param Reference i_support:
         :rtype: None
         """
-        return self.abq_frequency_step.AddResidualModeRegion(i_product.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_frequency_step.AddResidualModeRegion(
+            i_product.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -472,11 +479,11 @@ class ABQFrequencyStep(ABQStep):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddResidualModeRegionDOF(short iDOF,
                 | short iIndex)
-                | 
+                |
                 |     Adds the Residual Mode Region DOF.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDOF
                 |             The DOF.
                 |         iIndex

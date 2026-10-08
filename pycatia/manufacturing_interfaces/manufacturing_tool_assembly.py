@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.knowledge_interfaces.parameter import Parameter
@@ -17,20 +17,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class ManufacturingToolAssembly(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ManufacturingToolAssembly
-                | 
-                | Represents the tool assembly.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ManufacturingToolAssembly
+            |
+            | Represents the tool assembly.
+
     """
 
     def __init__(self, com_object):
@@ -45,17 +45,17 @@ class ManufacturingToolAssembly(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AssemblyType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the type of the tool assembly.
                 |     Legal values: the type of the tool assembly can be either
                 |     MfgMillAndDrillToolAssembly or MfgLatheToolAssembly.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns the assembly type Type of the assembly
                 |           CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          Set Type=CurrentAssembly.AssemblyType
 
         :rtype: str
@@ -71,15 +71,15 @@ class ManufacturingToolAssembly(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Comment() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the default comment of a tool assembly.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns the comment Comment of the tool
                 |           assembly CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          Comment=CurrentAssembly.Comment
 
         :rtype: str
@@ -95,16 +95,16 @@ class ManufacturingToolAssembly(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Insert() As ManufacturingInsert (Read Only)
-                | 
+                |
                 |     Returns the insert of an assembly.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example retrieves in Insert the insert
-                |           
+                |
                 |          of the assembly CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          Set Insert = CurrentAssembly.Insert
 
         :rtype: ManufacturingInsert
@@ -120,15 +120,15 @@ class ManufacturingToolAssembly(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfAttributes() As short (Read Only)
-                | 
+                |
                 |     Returns the number of attributes of a tool assembly.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns the Number of attributes of the tool
                 |           assembly CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          Number = CurrentAssembly.NumberOfAttributes
 
         :rtype: int
@@ -144,16 +144,16 @@ class ManufacturingToolAssembly(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Tool() As ManufacturingTool (Read Only)
-                | 
+                |
                 |     Returns the tool of an assembly.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example retrieves in Tool the manufacturing tool
-                |           
+                |
                 |          of the assembly CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          Set Tool = CurrentAssembly.Tool
 
         :rtype: ManufacturingTool
@@ -169,15 +169,15 @@ class ManufacturingToolAssembly(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ToolNumber() As long (Read Only)
-                | 
+                |
                 |     Returns the number linked to a tool assembly.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns the Number linked to the tool assembly
                 |           CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          Number = CurrentAssembly.ToolNumber
 
         :rtype: int
@@ -192,25 +192,25 @@ class ManufacturingToolAssembly(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAttribute(CATBSTR iAttribute) As Parameter
-                | 
+                |
                 |     Returns an attribute of a tool assembly.
                 |     The attribute is identified using its name, and is retrieved as a Parameter
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttribute
-                |             The attribute name 
-                | 
+                |             The attribute name
+                |
                 |     Returns:
-                |         The retrieved attribute 
+                |         The retrieved attribute
                 |     Example:
-                | 
+                |
                 |           The following example retrieves in Diameter the attribute
-                |           
+                |
                 |          MfgDiameter of the tool assembly CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          Set Diameter = CurrentAssembly.GetAttribute(MfgDiameter)
 
         :param str i_attribute:
@@ -226,23 +226,23 @@ class ManufacturingToolAssembly(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAttributeNLSName(CATBSTR iAttributeName) As
                 | CATBSTR
-                | 
+                |
                 |     Returns the NLS value of an attribute.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttributeName
-                |             The attribute name 
-                | 
+                |             The attribute name
+                |
                 |     Returns:
-                |         The attribute NLS value 
+                |         The attribute NLS value
                 |     Example:
-                | 
+                |
                 |           The following example gives in NLSresult the NLS value of the
-                |           "MFG_COMMENT" attributes 
+                |           "MFG_COMMENT" attributes
                 |          of the tool assembly CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          NLSresult = CurrentAssembly.GetAttributeNLSName("MFG_COMMENT")
 
         :param str i_attribute_name:
@@ -258,32 +258,34 @@ class ManufacturingToolAssembly(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetListOfAttributeUnits(CATSafeArrayVariant
                 | ioListOfAttributeUnits)
-                | 
+                |
                 |     Retrieves the list of attribute units of a tool assembly.
                 |     The number of items in the output array is equal to the number of
                 |     attributes of the assembly. When an attribute has no unit definition, the
                 |     corresponding unit item in the output array is a blank
                 |     string.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioListOfAttributeUnits
-                |             The retrieved list of attributes units 
-                | 
+                |             The retrieved list of attributes units
+                |
                 |     Example:
-                | 
+                |
                 |           The following example retrieves in TabAttributeUnits the list of
-                |           attribute units 
+                |           attribute units
                 |          of the tool assembly CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          call CurrentAssembly.GetListOfAttributeUnits(TabAttributeUnits)
 
         :param tuple io_list_of_attribute_units:
         :rtype: None
         """
-        return self.manufacturing_tool_assembly.GetListOfAttributeUnits(io_list_of_attribute_units)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_tool_assembly.GetListOfAttributeUnits(
+            io_list_of_attribute_units
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -307,30 +309,32 @@ class ManufacturingToolAssembly(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetListOfAttributes(CATSafeArrayVariant
                 | ioListOfAttributes)
-                | 
+                |
                 |     Retrieves the list of attributes of a tool assembly.
                 |     Each attribute retrieved as a Parameter object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioListOfAttributes
-                |             The retrieved list of attributes 
-                | 
+                |             The retrieved list of attributes
+                |
                 |     Example:
-                | 
+                |
                 |           The following example retrieves in TabAttributes the list of
-                |           attributes 
+                |           attributes
                 |          of the tool assembly CurrentAssembly:
-                |          
-                | 
+                |
+                |
                 |          call
                 |          CurrentAssembly.GetListOfAttributes(TabAttributes)
 
         :param tuple io_list_of_attributes:
         :rtype: None
         """
-        return self.manufacturing_tool_assembly.GetListOfAttributes(io_list_of_attributes)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_tool_assembly.GetListOfAttributes(
+            io_list_of_attributes
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

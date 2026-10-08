@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class HtsTaskDisplaySettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         HtsTaskDisplaySettingAtt
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         HtsTaskDisplaySettingAtt
 
-    
+
     """
 
     def __init__(self, com_object):
@@ -42,9 +42,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AutoWalkActColor() As long
-                | 
+                |
                 |     Returns or sets the AutoWalkActColor parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -68,9 +68,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AutoWalkActLineType() As long
-                | 
+                |
                 |     Returns or sets the AutoWalkActLineType parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -94,9 +94,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AutoWalkActLineWeight() As long
-                | 
+                |
                 |     Returns or sets the AutoWalkActLineWeight parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -120,9 +120,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MTPActColor() As long
-                | 
+                |
                 |     Returns or sets the MTPActColor parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -146,9 +146,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MTPActSymbol() As long
-                | 
+                |
                 |     Returns or sets the MTPActSymbol parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -172,9 +172,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WalkActColor() As long
-                | 
+                |
                 |     Returns or sets the WalkActColor parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -198,9 +198,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WalkActLineType() As long
-                | 
+                |
                 |     Returns or sets the WalkActLineType parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -224,9 +224,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WalkActLineWeight() As long
-                | 
+                |
                 |     Returns or sets the WalkActLineWeight parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -242,7 +242,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
         self.hts_task_display_setting_att.WalkActLineWeight = value
 
-    def get_auto_walk_act_colour_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_auto_walk_act_colour_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -250,24 +252,24 @@ class HtsTaskDisplaySettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAutoWalkActColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AutoWalkActColor
                 |     parameter.
                 |     Role:Retrieves the state of the AutoWalkActColor parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -276,9 +278,13 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_task_display_setting_att.GetAutoWalkActColorInfo(io_admin_level, io_locked)
+        return self.hts_task_display_setting_att.GetAutoWalkActColorInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_auto_walk_act_line_type_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_auto_walk_act_line_type_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -286,24 +292,24 @@ class HtsTaskDisplaySettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAutoWalkActLineTypeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AutoWalkActLineType
                 |     parameter.
                 |     Role:Retrieves the state of the AutoWalkActLineType parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -312,9 +318,13 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_task_display_setting_att.GetAutoWalkActLineTypeInfo(io_admin_level, io_locked)
+        return self.hts_task_display_setting_att.GetAutoWalkActLineTypeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_auto_walk_act_line_weight_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_auto_walk_act_line_weight_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -322,24 +332,24 @@ class HtsTaskDisplaySettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAutoWalkActLineWeightInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AutoWalkActLineWeight
                 |     parameter.
                 |     Role:Retrieves the state of the AutoWalkActLineWeight parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -348,7 +358,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_task_display_setting_att.GetAutoWalkActLineWeightInfo(io_admin_level, io_locked)
+        return self.hts_task_display_setting_att.GetAutoWalkActLineWeightInfo(
+            io_admin_level, io_locked
+        )
 
     def get_mtp_act_colour_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -358,24 +370,24 @@ class HtsTaskDisplaySettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMTPActColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the MTPActColor
                 |     parameter.
                 |     Role:Retrieves the state of the MTPActColor parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -384,7 +396,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_task_display_setting_att.GetMTPActColorInfo(io_admin_level, io_locked)
+        return self.hts_task_display_setting_att.GetMTPActColorInfo(
+            io_admin_level, io_locked
+        )
 
     def get_mtp_act_symbol_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -394,24 +408,24 @@ class HtsTaskDisplaySettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMTPActSymbolInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the MTPActSymbol
                 |     parameter.
                 |     Role:Retrieves the state of the MTPActSymbol parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -420,7 +434,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_task_display_setting_att.GetMTPActSymbolInfo(io_admin_level, io_locked)
+        return self.hts_task_display_setting_att.GetMTPActSymbolInfo(
+            io_admin_level, io_locked
+        )
 
     def get_walk_act_colour_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -430,24 +446,24 @@ class HtsTaskDisplaySettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetWalkActColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the WalkActColor
                 |     parameter.
                 |     Role:Retrieves the state of the WalkActColor parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -456,7 +472,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_task_display_setting_att.GetWalkActColorInfo(io_admin_level, io_locked)
+        return self.hts_task_display_setting_att.GetWalkActColorInfo(
+            io_admin_level, io_locked
+        )
 
     def get_walk_act_line_type_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -466,24 +484,24 @@ class HtsTaskDisplaySettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetWalkActLineTypeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the WalkActLineType
                 |     parameter.
                 |     Role:Retrieves the state of the WalkActLineType parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -492,9 +510,13 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_task_display_setting_att.GetWalkActLineTypeInfo(io_admin_level, io_locked)
+        return self.hts_task_display_setting_att.GetWalkActLineTypeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_walk_act_line_weight_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_walk_act_line_weight_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -502,24 +524,24 @@ class HtsTaskDisplaySettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetWalkActLineWeightInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the WalkActLineWeight
                 |     parameter.
                 |     Role:Retrieves the state of the WalkActLineWeight parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -528,7 +550,9 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_task_display_setting_att.GetWalkActLineWeightInfo(io_admin_level, io_locked)
+        return self.hts_task_display_setting_att.GetWalkActLineWeightInfo(
+            io_admin_level, io_locked
+        )
 
     def set_auto_walk_act_colour_lock(self, i_locked: bool) -> None:
         """
@@ -537,14 +561,14 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAutoWalkActColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AutoWalkActColor parameter.
                 |     Role:Locks or unlocks the AutoWalkActColor parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -555,7 +579,7 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_task_display_setting_att.SetAutoWalkActColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -578,14 +602,14 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAutoWalkActLineTypeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AutoWalkActLineType parameter.
                 |     Role:Locks or unlocks the AutoWalkActLineType parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -596,7 +620,7 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_task_display_setting_att.SetAutoWalkActLineTypeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -619,14 +643,14 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAutoWalkActLineWeightLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AutoWalkActLineWeight parameter.
                 |     Role:Locks or unlocks the AutoWalkActLineWeight parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -637,7 +661,7 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_task_display_setting_att.SetAutoWalkActLineWeightLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -660,14 +684,14 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMTPActColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the MTPActColor parameter.
                 |     Role:Locks or unlocks the MTPActColor parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -678,7 +702,7 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_task_display_setting_att.SetMTPActColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -701,14 +725,14 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMTPActSymbolLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the MTPActSymbol parameter.
                 |     Role:Locks or unlocks the MTPActSymbol parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -719,7 +743,7 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_task_display_setting_att.SetMTPActSymbolLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -742,14 +766,14 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetWalkActColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the WalkActColor parameter.
                 |     Role:Locks or unlocks the WalkActColor parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -760,7 +784,7 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_task_display_setting_att.SetWalkActColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -783,14 +807,14 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetWalkActLineTypeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the WalkActLineType parameter.
                 |     Role:Locks or unlocks the WalkActLineType parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -801,7 +825,7 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_task_display_setting_att.SetWalkActLineTypeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -824,14 +848,14 @@ class HtsTaskDisplaySettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetWalkActLineWeightLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the WalkActLineWeight parameter.
                 |     Role:Locks or unlocks the WalkActLineWeight parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -842,7 +866,7 @@ class HtsTaskDisplaySettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_task_display_setting_att.SetWalkActLineWeightLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

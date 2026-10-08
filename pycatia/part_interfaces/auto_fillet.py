@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -17,22 +17,22 @@ from pycatia.part_interfaces.dress_up_shape import DressUpShape
 
 class AutoFillet(DressUpShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Shape
-                |                         PartInterfaces.DressUpShape
-                |                             AutoFillet
-                | 
-                | Represents the AutoFillet shape.
-                | A AutoFillet fillets all the edges of Solid
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Shape
+            |                         PartInterfaces.DressUpShape
+            |                             AutoFillet
+            |
+            | Represents the AutoFillet shape.
+            | A AutoFillet fillets all the edges of Solid
 
     """
 
@@ -48,13 +48,13 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CurvatureRadius() As Length (Read Only)
-                | 
+                |
                 |     Returns the Curvature radius.
-                | 
+                |
                 |     Example:
                 |         The following example returns in Curvature radius the Curvature radius
                 |         of the AutoFillet Autofillet:
-                | 
+                |
                 |          Set Curvatureradius = Autofillet.Radius
 
         :rtype: Length
@@ -70,14 +70,14 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FacesToFillet() As References (Read Only)
-                | 
+                |
                 |     Returns or sets the faces to fillet.
-                | 
+                |
                 |     Example:
                 |         The following example returns in facestofillet the faces required for
                 |         autofillet autoFillet, and then sets it to
                 |         NewFacestofillet:
-                | 
+                |
                 |          Set Facestofillet = autoFillet.Facestofillet
                 |          autofillet.Facestofillet = NewFacestofillet
 
@@ -116,13 +116,13 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FilletRadius() As Length (Read Only)
-                | 
+                |
                 |     Returns the Fillet radius.
-                | 
+                |
                 |     Example:
                 |         The following example returns in fillet radius the fillet radius of the
                 |         AutoFillet Autofillet:
-                | 
+                |
                 |          Set Filletradius = Autofillet.Radius
 
         :rtype: Length
@@ -160,14 +160,14 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FunctionalFaces() As References (Read Only)
-                | 
+                |
                 |     Returns or sets the functional face.
-                | 
+                |
                 |     Example:
                 |         The following example returns in functionalface the functional face of
                 |         the autofillet autoFillet, and then sets it to
                 |         NewfunctionalFace:
-                | 
+                |
                 |          Set functionalFace = autoFillet.FunctionalFace
                 |          autofillet.FunctionalFace = NewfunctionalFace
 
@@ -184,14 +184,14 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PartingElement() As Reference
-                | 
+                |
                 |     Returns or sets the parting element.
-                | 
+                |
                 |     Example:
                 |         The following example returns in partingelement the parting element of
                 |         the autofillet autoFillet, and then sets it to Newparting
                 |         element:
-                | 
+                |
                 |          Set Parting element = autoFillet.PartingElement
                 |          autofillet.PartingElement = NewPartingElement
 
@@ -216,13 +216,13 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RoundRadius() As Length (Read Only)
-                | 
+                |
                 |     Returns the Round radius.
-                | 
+                |
                 |     Example:
                 |         The following example returns in round radius the round radius of the
                 |         AutoFillet Autofillet:
-                | 
+                |
                 |          Set roundradius = Autofillet.Radius
 
         :rtype: Length
@@ -238,15 +238,15 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RoundRadiusActivation() As boolean
-                | 
+                |
                 |     Returns the AutoFillet RoundRadiusActivation flag (for AutoFillet
                 |     only).
                 |     It returns 1 if RoundRadius is activated, 0 if not.
-                | 
+                |
                 |     Returns:
                 |         oRoundRadActivation The RoundRadActivation flag as an
                 |         int
-                | 
+                |
                 |         Example:
 
         :rtype: bool
@@ -292,13 +292,13 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SliversAndCracks() As References (Read Only)
-                | 
+                |
                 |     Returns or sets the slivers face.
-                | 
+                |
                 |     Example:
                 |         The following example returns in slivers the sliver face of the
                 |         autofillet autoFillet, and then sets it to Newsliver:
-                | 
+                |
                 |          Set sliversFace = autoFillet.SliversFace
                 |          autofillet.SliversFace = NewsliversFace
 
@@ -315,14 +315,14 @@ class AutoFillet(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SupportSurface() As Reference
-                | 
+                |
                 |     Returns or sets the support surface.
-                | 
+                |
                 |     Example:
                 |         The following example returns in SupportSurface the support surface
                 |         required for autofillet autoFillet, and then sets it to
                 |         NewSupportSurface:
-                | 
+                |
                 |          Set SupportSurface = autoFillet.SupportSurface
                 |          autofillet.SupportSurface = NewSupportSurface
 

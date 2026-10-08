@@ -1,15 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
-from pycatia.hybrid_shape_interfaces.hybrid_shape_integrated_law import HybridShapeIntegratedLaw
+from pycatia.hybrid_shape_interfaces.hybrid_shape_integrated_law import (
+    HybridShapeIntegratedLaw,
+)
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.length import Length
 from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
@@ -17,28 +19,28 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeFilletBiTangent(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeFilletBiTangent
-                | 
-                | Fillet Bi-Tangent feature.
-                | Role: Manipulation of Fillet Bi-Tangent feature Allows to access data of the
-                | Fillet Bi-Tangent feature created by using two support surfaces, their
-                | orientation, a radius, and options (supports trimming and fillet extremities
-                | type)
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeFilletBiTangent
+            |
+            | Fillet Bi-Tangent feature.
+            | Role: Manipulation of Fillet Bi-Tangent feature Allows to access data of the
+            | Fillet Bi-Tangent feature created by using two support surfaces, their
+            | orientation, a radius, and options (supports trimming and fillet extremities
+            | type)
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -53,7 +55,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ConicalSectionParameter() As double
-                | 
+                |
                 |     Returns or Sets parameter for conical section.
 
         :rtype: float
@@ -77,7 +79,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstElem() As Reference
-                | 
+                |
                 |     Returns or Sets the first support surface feature.
 
         :rtype: Reference
@@ -101,14 +103,14 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstLawRelimiter() As Reference
-                | 
+                |
                 |     Gets or sets Law first relimiter for variable shape fillet with law
                 |     management.
                 |     Relimiters must be point on spine.
                 |     The input law will be mapped between first and second relimiters. This
                 |     example retrieves in HybLaw the first law relimiter for the Fillet hybrid shape
                 |     feature.
-                | 
+                |
                 |      Dim HybLaw As Reference
                 |      HybLaw = Fillet.FirstLawRelimiter
 
@@ -133,7 +135,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstOrientation() As long
-                | 
+                |
                 |     Returns or Setsthe first orientation used to specify fillet center
                 |     position.
                 |     Orientation is same or inverse than the normal to the first surface support
@@ -159,7 +161,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property HoldCurve() As Reference
-                | 
+                |
                 |     Returns or Sets the Hold Curve feature.
 
         :rtype: Reference
@@ -183,23 +185,25 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property IntegratedLaw() As HybridShapeIntegratedLaw
-                | 
+                |
                 |     Gets or sets Integrated Law to manage Variable Shape Fillet with
                 |     law.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oILaw
                 |             Integrated law This example retrieves in HybridIntegratedLaw the
                 |             IntegratedLaw for the Fillet hybrid shape feature.
-                | 
+                |
                 |              Dim HybridIntegratedLaw
                 |              Set HybridIntegratedLaw = Fillet.IntegratedLaw
 
         :rtype: HybridShapeIntegratedLaw
         """
 
-        return HybridShapeIntegratedLaw(self.hybrid_shape_fillet_bi_tangent.IntegratedLaw)
+        return HybridShapeIntegratedLaw(
+            self.hybrid_shape_fillet_bi_tangent.IntegratedLaw
+        )
 
     @integrated_law.setter
     def integrated_law(self, law: HybridShapeIntegratedLaw):
@@ -217,7 +221,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Radius() As Length (Read Only)
-                | 
+                |
                 |     Returns fillet radius in a CATIALength.
 
         :rtype: Length
@@ -233,7 +237,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RadiusType() As long
-                | 
+                |
                 |     Returns or Sets fillet radius type.
                 |     Fillet radius type :
                 |     - CATGSMRadiusDefault (0)
@@ -260,7 +264,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RadiusValue() As double
-                | 
+                |
                 |     Returns or Sets fillet radius value.
 
         :rtype: float
@@ -284,7 +288,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RibbonRelimitationMode() As long
-                | 
+                |
                 |     Returns or Sets fillet ribbon relimitation mode (or fillet extremities
                 |     mode).
                 |     Fillet extremities mode :
@@ -314,7 +318,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondElem() As Reference
-                | 
+                |
                 |     Returns or sets the Second support surface feature.
 
         :rtype: Reference
@@ -338,14 +342,14 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondLawRelimiter() As Reference
-                | 
+                |
                 |     Gets or sets Law second relimiter for variable shape fillet with law
                 |     management.
                 |     Relimiters must be point on spine.
                 |     The input law will be mapped between first and second relimiters. This
                 |     example retrieves in HybLaw the second law relimiter for the Fillet hybrid
                 |     shape feature.
-                | 
+                |
                 |      Dim HybLaw As Reference
                 |      HybLaw = Fillet.SecondLawRelimiter
 
@@ -360,7 +364,9 @@ class HybridShapeFilletBiTangent(HybridShape):
         :param Reference reference_law:
         """
 
-        self.hybrid_shape_fillet_bi_tangent.SecondLawRelimiter = reference_law.com_object
+        self.hybrid_shape_fillet_bi_tangent.SecondLawRelimiter = (
+            reference_law.com_object
+        )
 
     @property
     def second_orientation(self) -> int:
@@ -370,7 +376,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondOrientation() As long
-                | 
+                |
                 |     Returns or Sets the Second orientation used to specify fillet center
                 |     position.
                 |     Orientation is same or inverse than the normal to the Second surface
@@ -397,7 +403,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SectionType() As long
-                | 
+                |
                 |     Returns or Sets fillet section type.
                 |     Fillet radius type :
                 |     - CATGSMCircularSection(0)
@@ -424,7 +430,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Spine() As Reference
-                | 
+                |
                 |     Returns or Sets the spine feature.
 
         :rtype: Reference
@@ -448,7 +454,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SupportsTrimMode() As long
-                | 
+                |
                 |     Returns or Sets whether support surfaces are trimmed or not. Possible values of SupportsTrimMode =
                 |     0 : No trim of fillet supports. = 1 : Trim of both fillet supports. =
                 |     2 : Trim of fillet support 1. = 3 : Trim of fillet support 2.
@@ -473,18 +479,20 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AppendNewFaceToKeep(Reference iFace)
-                | 
+                |
                 |     Append a new face to keep.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFace
 
         :param Reference i_face:
         :rtype: None
         """
-        return self.hybrid_shape_fillet_bi_tangent.AppendNewFaceToKeep(i_face.com_object)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_fillet_bi_tangent.AppendNewFaceToKeep(
+            i_face.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -507,13 +515,13 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetFaceToKeep(long iPos) As Reference
-                | 
+                |
                 |     Gets the face to keep for fillet operation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oFace
-                |             The face to keep for fillet operation. 
+                |             The face to keep for fillet operation.
                 |         iPos
                 |             Position of the face to be retrieved.
 
@@ -529,7 +537,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InvertFirstOrientation()
-                | 
+                |
                 |     Inverts first orientation used to specify fillet center position.
 
         :rtype: None
@@ -543,7 +551,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InvertSecondOrientation()
-                | 
+                |
                 |     Inverts second orientation used to specify fillet center position.
 
         :rtype: None
@@ -557,7 +565,7 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveAllFacesToKeep()
-                | 
+                |
                 |     Remove all the faces to keep.
 
         :rtype: None
@@ -571,18 +579,18 @@ class HybridShapeFilletBiTangent(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveFaceToKeep(Reference iFace)
-                | 
+                |
                 |     Remove a face to keep.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFace
 
         :param Reference i_face:
         :rtype: None
         """
         return self.hybrid_shape_fillet_bi_tangent.RemoveFaceToKeep(i_face.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

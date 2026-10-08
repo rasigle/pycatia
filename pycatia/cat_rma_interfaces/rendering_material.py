@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.system_interfaces.any_object import AnyObject
@@ -1212,11 +1213,13 @@ class RenderingMaterial(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
         return int(value[0]), int(value[1]), int(value[2])
 
-    def get_3d_texture_color_coefficient(self, i_color_index: int) -> tuple[int, int, int]:
+    def get_3d_texture_color_coefficient(
+        self, i_color_index: int
+    ) -> tuple[int, int, int]:
         """
         .. note::
             :class: toggle
@@ -1256,7 +1259,7 @@ class RenderingMaterial(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
         return int(value[0]), int(value[1]), int(value[2])
 
@@ -1293,7 +1296,7 @@ class RenderingMaterial(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
         return value[0], value[1], value[2]
 
@@ -1330,7 +1333,7 @@ class RenderingMaterial(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
         return value[0], value[1], value[2]
 
@@ -1366,7 +1369,7 @@ class RenderingMaterial(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
         return int(value[0]), int(value[1]), int(value[2])
 
@@ -1401,7 +1404,7 @@ class RenderingMaterial(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
         return int(value[0]), int(value[1]), int(value[2])
 
@@ -1436,7 +1439,7 @@ class RenderingMaterial(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
         return int(value[0]), int(value[1]), int(value[2])
 
@@ -1467,12 +1470,11 @@ class RenderingMaterial(AnyObject):
             {vba_function_name} = oSpecularColor
         End Function
         """
-        value = (self.application.system_service.evaluate(
+        value = self.application.system_service.evaluate(
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
-        )
+            [self.com_object],
         )
         return int(value[0]), int(value[1]), int(value[2])
 
@@ -1510,11 +1512,13 @@ class RenderingMaterial(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
         return int(value[0]), int(value[1]), int(value[2])
 
-    def put_3d_texture_color(self, i_color_index: int, i_3d_texture_color: tuple) -> None:
+    def put_3d_texture_color(
+        self, i_color_index: int, i_3d_texture_color: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1542,9 +1546,13 @@ class RenderingMaterial(AnyObject):
         :param tuple i_3d_texture_color:
         :rtype: None
         """
-        return self.rendering_material.Put3DTextureColor(i_color_index, i_3d_texture_color)
+        return self.rendering_material.Put3DTextureColor(
+            i_color_index, i_3d_texture_color
+        )
 
-    def put_3d_texture_color_coefficient(self, i_color_index: int, i_3d_texture_color_coefficient: float) -> None:
+    def put_3d_texture_color_coefficient(
+        self, i_color_index: int, i_3d_texture_color_coefficient: float
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1573,7 +1581,9 @@ class RenderingMaterial(AnyObject):
         :param float i_3d_texture_color_coefficient:
         :rtype: None
         """
-        return self.rendering_material.Put3DTextureColorCoefficient(i_color_index, i_3d_texture_color_coefficient)
+        return self.rendering_material.Put3DTextureColorCoefficient(
+            i_color_index, i_3d_texture_color_coefficient
+        )
 
     def put_3d_texture_orientation(self, i_3d_texture_orientation: tuple) -> None:
         """

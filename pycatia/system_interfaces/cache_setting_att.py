@@ -1,36 +1,35 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class CacheSettingAtt(SettingController):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
+        CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         CacheSettingAtt
-                | 
-                | Represents the base object to handle the parameters of the
-                | cache.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         CacheSettingAtt
+            |
+            | Represents the base object to handle the parameters of the
+            | cache.
+
     """
 
     def __init__(self, com_object):
@@ -45,7 +44,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property ActivationMode() As boolean
-                | 
+                |
                 |     Returns or sets the activation state of cache.
                 |     Role: Returns or sets the value of cache activation.
 
@@ -70,7 +69,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property CacheMaxSizeMo() As long
-                | 
+                |
                 |     Returns or sets the value of the cache maximum size.
                 |     Role: Returns or sets the value of the maximum allowed cache size in Mo
 
@@ -95,7 +94,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property LODMode() As boolean
-                | 
+                |
                 |     Returns or sets the LOD generation mode parameter.
                 |     Role: Returns or sets the value of the LOD generation mode.
 
@@ -120,7 +119,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property LocalPath() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the cache local path.
                 |     Role: Retrieves or sets the value of the cache local path. If the local
                 |     path is defined with environment variables then this method return the
@@ -147,7 +146,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property ReleasedVoxel() As float
-                | 
+                |
                 |     Returns or sets the released voxel parameter.
                 |     Role: Returns or sets the value of the released voxel parameter.
 
@@ -172,7 +171,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property SizeControl() As boolean
-                | 
+                |
                 |     Return or sets the cache size control.
                 |     Role: Returns or sets the cache size control. The cache use this parameter
                 |     in conjunction with the maxixum allowed cache size. If it is turned off, the
@@ -199,7 +198,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property TimestampMode() As boolean
-                | 
+                |
                 |     Retrieves or sets the timestamp control.
                 |     Role: If the timestamp control is turned on, the cache will verify if the
                 |     cached object is uptodate with the master object. If not a new cached view will
@@ -228,7 +227,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property UTCTimeFormat() As boolean
-                | 
+                |
                 |     Retrieves or sets the the cache timestamp format.
                 |     Role: If the timestamp format is set to TRUE, then the time used used as
                 |     timestamp by the cache is expressed in UTC format (GMT), in the other case the
@@ -255,7 +254,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetActivationModeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Cache activation mode.
                 |     Refer to SettingController for a detailed description.
 
@@ -273,7 +272,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetCacheMaxSizeMoInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Cache maximum
                 |     size.
                 |     Refer to SettingController for a detailed description.
@@ -292,7 +291,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetLODModeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the LOD generation
                 |     mode.
                 |     Refer to SettingController for a detailed description.
@@ -311,7 +310,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetLocalPathInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Cache local
                 |     path.
                 |     Refer to SettingController for a detailed description.
@@ -329,15 +328,15 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetReleasePath() As CATSafeArrayVariant
-                | 
+                |
                 |     Retieves the cache release paths.
                 |     Role: Sets the cache release paths in a symbolic format.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioRelPath
-                |             a CATSafeArrayVariant of CATBSTR. 
-                | 
+                |             a CATSafeArrayVariant of CATBSTR.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -355,7 +354,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetReleasePathInfo(CATBSTR AdminLevel,
                 | CATBSTR Locked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Cache release
                 |     path.
                 |     Refer to SettingController for a detailed description.
@@ -374,7 +373,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetReleasedVoxelInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Cache released
                 |     voxel.
                 |     Refer to SettingController for a detailed description.
@@ -393,7 +392,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetSizeControlInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the size control
                 |     mode.
                 |     Refer to SettingController for a detailed description.
@@ -412,7 +411,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetTimestampModeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the timestamp control
                 |     mode.
                 |     Refer to SettingController for a detailed description.
@@ -431,7 +430,7 @@ class CacheSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetUTCTimeFormatInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the timestamp control
                 |     mode.
                 |     Refer to SettingController for a detailed description.
@@ -449,15 +448,15 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub PutReleasePath(CATSafeArrayVariant iRelPath)
-                | 
+                |
                 |     Sets the cache release paths.
                 |     Role: Sets the cache release paths in a symbolic format.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelPath
-                |             a CATSafeArrayVariant of CATBSTR. 
-                | 
+                |             a CATSafeArrayVariant of CATBSTR.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -467,7 +466,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.PutReleasePath(i_rel_path)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -490,7 +489,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetActivationModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Cache Activation mode.
                 |     Refer to SettingController for a detailed description.
 
@@ -498,7 +497,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetActivationModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -521,7 +520,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetCacheMaxSizeMoLock(boolean iLocked)
-                | 
+                |
                 |     Locks the paramater Cache maximum size.
                 |     Refer to SettingController for a detailed description.
 
@@ -529,7 +528,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetCacheMaxSizeMoLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -552,7 +551,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetLODModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the LOD generation mode.
                 |     Refer to SettingController for a detailed description.
 
@@ -560,7 +559,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetLODModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -583,7 +582,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetLocalPathLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the cache local path parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -591,7 +590,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetLocalPathLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -614,7 +613,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetReleasePathLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the cache local path parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -622,7 +621,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetReleasePathLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -645,7 +644,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetReleasedVoxelLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the released voxel parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -653,7 +652,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetReleasedVoxelLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -676,7 +675,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetSizeControlLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the cache size control parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -684,7 +683,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetSizeControlLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -707,7 +706,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetTimestampModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the timestamp control in cache.
                 |     Refer to SettingController for a detailed description.
 
@@ -715,7 +714,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetTimestampModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -738,7 +737,7 @@ class CacheSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetUTCTimeFormatLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the timestamp format.
                 |     Refer to SettingController for a detailed description.
 
@@ -746,7 +745,7 @@ class CacheSettingAtt(SettingController):
         :return: None
         """
         return self.cache_setting_att.SetUTCTimeFormatLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

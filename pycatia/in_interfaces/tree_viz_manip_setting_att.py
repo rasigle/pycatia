@@ -1,35 +1,40 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.enumeration.enums import CatTreeTypeEnum, CatTreeSizeTypeEnum, CatTreeOrientationEnum
+
+from pycatia.enumeration.enums import (
+    CatTreeTypeEnum,
+    CatTreeSizeTypeEnum,
+    CatTreeOrientationEnum,
+)
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class TreeVizManipSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         TreeVizManipSettingAtt
-                | 
-                | The Interface to retrieve and set the visual information on the specification
-                | tree.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         TreeVizManipSettingAtt
+            |
+            | The Interface to retrieve and set the visual information on the specification
+            | tree.
+
     """
 
     def __init__(self, com_object):
@@ -44,7 +49,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ArcSelectionActivation() As boolean
-                | 
+                |
                 |     Retrieves or Sets the arc-selection mode applied to the specification tree.
 
         :rtype: bool
@@ -68,7 +73,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AutoExpandActivation() As boolean
-                | 
+                |
                 |     Retrieves or Sets the automatic expand mode applied to the specification
                 |     tree.
 
@@ -93,7 +98,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AutoScrollActivation() As boolean
-                | 
+                |
                 |     Retrieves or Sets the automatic scrolling mode applied to the specification
                 |     tree.
 
@@ -118,7 +123,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DisplayGeomOnScrolling() As boolean
-                | 
+                |
                 |     Retrieves or Sets the "display geometry on scrolling" mode.
 
         :rtype: bool
@@ -142,7 +147,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Orientation() As CatTreeOrientationEnum
-                | 
+                |
                 |     Retrieves or Sets the orientation applied to the specification tree.
 
         :return: CatTreeOrientationEnum
@@ -166,7 +171,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ShowActivation() As boolean
-                | 
+                |
                 |     Retrieves or Sets the visualization Show/NoShow's mode applied to the
                 |     specification tree.
 
@@ -191,7 +196,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Size() As long
-                | 
+                |
                 |     Retrieves or Sets the number of characters shown for the text of the
                 |     specification tree.
 
@@ -216,7 +221,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SizeType() As CatTreeSizeTypeEnum
-                | 
+                |
                 |     Retrieves or Sets the type of size applied to the text of the specification
                 |     tree.
 
@@ -241,7 +246,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Type() As CatTreeTypeEnum
-                | 
+                |
                 |     Retrieves or Sets the type applied to the specification tree.
 
         :return: CatTreeTypeEnum
@@ -257,7 +262,9 @@ class TreeVizManipSettingAtt(SettingController):
 
         self.tree_viz_manip_setting_att.Type = value
 
-    def get_arc_selection_activation_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_arc_selection_activation_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -265,24 +272,24 @@ class TreeVizManipSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetArcSelectionActivationInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for arc-selection mode applied to the
                 |     specification tree.
                 |     Role:Retrieves the state of arc-selection mode applied to the specification
                 |     tree in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -291,9 +298,13 @@ class TreeVizManipSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.tree_viz_manip_setting_att.GetArcSelectionActivationInfo(io_admin_level, io_locked)
+        return self.tree_viz_manip_setting_att.GetArcSelectionActivationInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_auto_expand_activation_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_auto_expand_activation_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -301,24 +312,24 @@ class TreeVizManipSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetAutoExpandActivationInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for automatic expand mode applied to the
                 |     specification tree.
                 |     Role:Retrieves the state of automatic expand mode applied to the
                 |     specification tree in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -327,9 +338,13 @@ class TreeVizManipSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.tree_viz_manip_setting_att.GetAutoExpandActivationInfo(io_admin_level, io_locked)
+        return self.tree_viz_manip_setting_att.GetAutoExpandActivationInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_auto_scroll_activation_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_auto_scroll_activation_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -337,24 +352,24 @@ class TreeVizManipSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetAutoScrollActivationInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for automatic scrolling mode applied to
                 |     the specification tree.
                 |     Role:Retrieves the state of the automatic scrolling mode applied to the
                 |     specification tree in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -363,9 +378,13 @@ class TreeVizManipSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.tree_viz_manip_setting_att.GetAutoScrollActivationInfo(io_admin_level, io_locked)
+        return self.tree_viz_manip_setting_att.GetAutoScrollActivationInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_display_geom_on_scrolling_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_display_geom_on_scrolling_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -373,24 +392,24 @@ class TreeVizManipSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDisplayGeomOnScrollingInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for "display geometry on scrolling"
                 |     mode.
                 |     Role:Retrieves the state of "display geometry on scrolling" mode in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -399,7 +418,9 @@ class TreeVizManipSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.tree_viz_manip_setting_att.GetDisplayGeomOnScrollingInfo(io_admin_level, io_locked)
+        return self.tree_viz_manip_setting_att.GetDisplayGeomOnScrollingInfo(
+            io_admin_level, io_locked
+        )
 
     def get_orientation_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -409,24 +430,24 @@ class TreeVizManipSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetOrientationInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the orientation applied to the
                 |     specification tree.
                 |     Role:Retrieves the state of the orientation applied to the specification
                 |     tree in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -435,7 +456,9 @@ class TreeVizManipSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.tree_viz_manip_setting_att.GetOrientationInfo(io_admin_level, io_locked)
+        return self.tree_viz_manip_setting_att.GetOrientationInfo(
+            io_admin_level, io_locked
+        )
 
     def get_show_activation_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -445,24 +468,24 @@ class TreeVizManipSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetShowActivationInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the visualization Show/NoShow's mode
                 |     applied to the specification tree.
                 |     Role:Retrieves the state of the visualization Show/NoShow's mode applied to
                 |     the specification tree in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -471,7 +494,9 @@ class TreeVizManipSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.tree_viz_manip_setting_att.GetShowActivationInfo(io_admin_level, io_locked)
+        return self.tree_viz_manip_setting_att.GetShowActivationInfo(
+            io_admin_level, io_locked
+        )
 
     def get_size_type_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -481,26 +506,26 @@ class TreeVizManipSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSizeTypeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the type of size applied to the text
                 |     of the specification tree.
                 |     Role:Retrieves the state of the type of size applied to the text of the
                 |     specification tree in the current environment. Attributes "size" and "SizeType"
                 |     are linked together by the same lock. So there is no function
                 |     "GetSizeInfo".
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -509,7 +534,9 @@ class TreeVizManipSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.tree_viz_manip_setting_att.GetSizeTypeInfo(io_admin_level, io_locked)
+        return self.tree_viz_manip_setting_att.GetSizeTypeInfo(
+            io_admin_level, io_locked
+        )
 
     def get_type_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -519,24 +546,24 @@ class TreeVizManipSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetTypeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the type applied to the
                 |     specification tree.
                 |     Role:Retrieves the state of the type applied to the specification tree in
                 |     the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -554,15 +581,15 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetArcSelectionActivationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the arc-selection mode applied to the specification
                 |     tree.
                 |     Role:Locks or unlocks the arc-selection mode applied to the specification
                 |     tree if it is possible in the current administrative context. In user mode this
                 |     method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -573,7 +600,7 @@ class TreeVizManipSettingAtt(SettingController):
         :rtype: None
         """
         return self.tree_viz_manip_setting_att.SetArcSelectionActivationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -596,15 +623,15 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetAutoExpandActivationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the automatic expand mode applied to the specification
                 |     tree.
                 |     Role:Locks or unlocks the automatic expand mode applied to the
                 |     specification tree if it is possible in the current administrative context. In
                 |     user mode this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -615,7 +642,7 @@ class TreeVizManipSettingAtt(SettingController):
         :rtype: None
         """
         return self.tree_viz_manip_setting_att.SetAutoExpandActivationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -638,15 +665,15 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetAutoScrollActivationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the automatic scrolling mode applied to the specification
                 |     tree.
                 |     Role:Locks or unlocks the automatic scrolling mode applied to the
                 |     specification tree if it is possible in the current administrative context. In
                 |     user mode this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -657,7 +684,7 @@ class TreeVizManipSettingAtt(SettingController):
         :rtype: None
         """
         return self.tree_viz_manip_setting_att.SetAutoScrollActivationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -680,14 +707,14 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDisplayGeomOnScrollingLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the "display geometry on scrolling" mode.
                 |     Role:Locks or unlocks "display geometry on scrolling" mode if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -698,7 +725,7 @@ class TreeVizManipSettingAtt(SettingController):
         :rtype: None
         """
         return self.tree_viz_manip_setting_att.SetDisplayGeomOnScrollingLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -721,15 +748,15 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetOrientationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the orientation applied to the specification
                 |     tree.
                 |     Role:Locks or unlocks the orientation applied to the specification tree if
                 |     it is possible in the current administrative context. In user mode this method
                 |     will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -740,7 +767,7 @@ class TreeVizManipSettingAtt(SettingController):
         :rtype: None
         """
         return self.tree_viz_manip_setting_att.SetOrientationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -763,15 +790,15 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetShowActivationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the visualization Show/NoShow's mode applied to the
                 |     specification tree.
                 |     Role:Locks or unlocks the visualization Show/NoShow's mode applied to the
                 |     specification tree if it is possible in the current administrative context. In
                 |     user mode this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -782,7 +809,7 @@ class TreeVizManipSettingAtt(SettingController):
         :rtype: None
         """
         return self.tree_viz_manip_setting_att.SetShowActivationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -805,7 +832,7 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetSizeTypeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the type of size applied to the text of the specification
                 |     tree.
                 |     Role:Locks or unlocks the type of size applied to the text of the
@@ -813,9 +840,9 @@ class TreeVizManipSettingAtt(SettingController):
                 |     user mode this method will always return E_FAIL. Attributs "size" and
                 |     "SizeType" are linked together by the same lock. So there is no function
                 |     "SetSizeTypeLock".
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -826,7 +853,7 @@ class TreeVizManipSettingAtt(SettingController):
         :rtype: None
         """
         return self.tree_viz_manip_setting_att.SetSizeTypeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -849,14 +876,14 @@ class TreeVizManipSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetTypeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the type of the specification tree.
                 |     Role:Locks or unlocks the type applied to the specification tree if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -867,7 +894,7 @@ class TreeVizManipSettingAtt(SettingController):
         :rtype: None
         """
         return self.tree_viz_manip_setting_att.SetTypeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

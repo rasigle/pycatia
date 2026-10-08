@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_human_modeling_interfaces.swk_manikin import SWKManikin
 from pycatia.dnb_human_modeling_interfaces.swkik_constraint import SWKIKConstraint
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,22 +16,22 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SWKIKManager(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SWKIKManager
-                | 
-                | This interface represents the IK manager of the manikin.
-                | The methods on this interface allow to move the manikin in inverse
-                | kinematics.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SWKIKManager
+            |
+            | This interface represents the IK manager of the manikin.
+            | The methods on this interface allow to move the manikin in inverse
+            | kinematics.
+
     """
 
     def __init__(self, com_object):
@@ -45,7 +46,7 @@ class SWKIKManager(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Behavior() As CATBSTR
-                | 
+                |
                 |     Returns or sets the IK behaviors for this manikin. The string in this
                 |     property is the concatenation of the current IK behaviors, like
                 |     "Thoracic/Lumbar/Balance".
@@ -71,7 +72,7 @@ class SWKIKManager(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Manikin() As SWKManikin (Read Only)
-                | 
+                |
                 |     Returns the manikin which owns this IK manager.
 
         :rtype: SWKManikin
@@ -87,7 +88,7 @@ class SWKIKManager(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfConstraints() As long (Read Only)
-                | 
+                |
                 |     Returns the total number of constraints on the manikin.
 
         :rtype: int
@@ -103,14 +104,14 @@ class SWKIKManager(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AddConstraint(CATBSTR piEndEffector) As
                 | SWKIKConstraint
-                | 
+                |
                 |     Add a constraint with the given end effector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piEndEffector
                 |             The short name of the last segment (the end of the chain, i.e. the
-                |             end effector). 
+                |             end effector).
                 |         poConstraint
                 |             The constraint created.
 
@@ -119,7 +120,11 @@ class SWKIKManager(AnyObject):
         """
         return SWKIKConstraint(self.swkik_manager.AddConstraint(pi_end_effector))
 
-    def add_constraint_from(self, pi_constraint_from: SWKIKConstraint, po_created_constraint: SWKIKConstraint) -> None:
+    def add_constraint_from(
+        self,
+        pi_constraint_from: SWKIKConstraint,
+        po_created_constraint: SWKIKConstraint,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -127,13 +132,13 @@ class SWKIKManager(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddConstraintFrom(SWKIKConstraint piConstraintFrom,
                 | SWKIKConstraint poCreatedConstraint)
-                | 
+                |
                 |     Add a new constraint identical to the one given.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piConstraintFrom
-                |             The constraint to copy. 
+                |             The constraint to copy.
                 |         poCreatedConstraint
                 |             The new constraint
 
@@ -141,8 +146,10 @@ class SWKIKManager(AnyObject):
         :param SWKIKConstraint po_created_constraint:
         :rtype: None
         """
-        return self.swkik_manager.AddConstraintFrom(pi_constraint_from.com_object, po_created_constraint.com_object)
-        # # # # Autogenerated comment: 
+        return self.swkik_manager.AddConstraintFrom(
+            pi_constraint_from.com_object, po_created_constraint.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -165,7 +172,7 @@ class SWKIKManager(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConstraint(long piIndex) As SWKIKConstraint
-                | 
+                |
                 |     Returns the constraint at index piIndex. First element is at index 0.
 
         :param int pi_index:
@@ -180,7 +187,7 @@ class SWKIKManager(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveAllConstraints()
-                | 
+                |
                 |     Remove all existing constraints on the manikin.
 
         :rtype: None
@@ -194,11 +201,11 @@ class SWKIKManager(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveConstraint(SWKIKConstraint piConstraintToRemove)
-                | 
+                |
                 |     Remove the given constraint.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piConstraintToRemove
                 |             The constraint to remove.
 
@@ -206,7 +213,7 @@ class SWKIKManager(AnyObject):
         :rtype: None
         """
         return self.swkik_manager.RemoveConstraint(pi_constraint_to_remove.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -229,7 +236,7 @@ class SWKIKManager(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Resolve()
-                | 
+                |
                 |     Launch the IK solver to minimize the potential functions
                 |     of
                 |     the constraints (i.e. reach all defined targets).

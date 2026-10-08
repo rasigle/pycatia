@@ -1,15 +1,18 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import Stabilization_Type
-from pycatia.abq_automation_interfaces.abq_boundary_conditions import ABQBoundaryConditions
+from pycatia.abq_automation_interfaces.abq_boundary_conditions import (
+    ABQBoundaryConditions,
+)
 from pycatia.abq_automation_interfaces.abq_fields import ABQFields
 from pycatia.abq_automation_interfaces.abq_loads import ABQLoads
 from pycatia.abq_automation_interfaces.abq_step import ABQStep
@@ -17,24 +20,24 @@ from pycatia.abq_automation_interfaces.abq_step import ABQStep
 
 class ABQGeneralStaticStep(ABQStep):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQStep
-                |                         ABQGeneralStaticStep
-                | 
-                | Represents an Abaqus general static step (ABQGeneralStaticStep)
-                | object.
-                | Role: Access an Abaqus general static step object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQStep
+            |                         ABQGeneralStaticStep
+            |
+            | Represents an Abaqus general static step (ABQGeneralStaticStep)
+            | object.
+            | Role: Access an Abaqus general static step object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -50,15 +53,15 @@ class ABQGeneralStaticStep(ABQStep):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BoundaryConditions() As ABQBoundaryConditions (Read
                 | Only)
-                | 
+                |
                 |     Returns the ABQBoundaryConditions container associated with the
                 |     step.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the ABQBoundaryConditions container
                 |         abqBCs.
-                | 
-                |          Dim abqGenStep As ABQGeneralStaticStep 
+                |
+                |          Dim abqGenStep As ABQGeneralStaticStep
                 |          Dim abqBCs As ABQBoundaryConditions
                 |          Set abqBCs = abqGenStep.BoundaryConditions
 
@@ -75,10 +78,10 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Description() As CATBSTR
-                | 
+                |
                 |     Returns or sets the description of the Abaqus general static
                 |     step.
-                | 
+                |
                 |     Returns:
                 |         The description of the Abaqus general static step.
 
@@ -103,10 +106,10 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EnergyFraction() As double
-                | 
+                |
                 |     Returns or sets the EnergyFraction if the stabilization method is
                 |     DISSIPATION.
-                | 
+                |
                 |     Returns:
                 |         The energy fraction.
 
@@ -131,14 +134,14 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Fields() As ABQFields (Read Only)
-                | 
+                |
                 |     Returns the ABQFields container associated with the step.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the ABQFields container
                 |         abqFields.
-                | 
-                |          Dim abqGenStep As ABQGeneralStaticStep 
+                |
+                |          Dim abqGenStep As ABQGeneralStaticStep
                 |          Dim abqFields As ABQFields
                 |          Set abqFields = abqGenStep.Fields
 
@@ -155,9 +158,9 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InitialInc() As double
-                | 
+                |
                 |     Returns or sets the size of the initial increment.
-                | 
+                |
                 |     Returns:
                 |         The initial increment size.
 
@@ -182,14 +185,14 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Loads() As ABQLoads (Read Only)
-                | 
+                |
                 |     Returns the ABQLoads container associated with the step.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the ABQLoads container
                 |         abqLoads:
-                | 
-                |          Dim abqGenStep As ABQGeneralStaticStep 
+                |
+                |          Dim abqGenStep As ABQGeneralStaticStep
                 |          Dim abqLoads As ABQLoads
                 |          Set abqLoads = abqGenStep.Loads
 
@@ -206,10 +209,10 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxInc() As double
-                | 
+                |
                 |     Returns or sets the maximum increment if the type of the incrementation is
                 |     set to AUTO_INCREMENT.
-                | 
+                |
                 |     Returns:
                 |         The maximum increment.
 
@@ -234,10 +237,10 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxNumInc() As short
-                | 
+                |
                 |     Returns or sets the maximum number of increments if the type of the
                 |     incremention is set to AUTO_INCREMENT.
-                | 
+                |
                 |     Returns:
                 |         The maximum number of increments.
 
@@ -262,10 +265,10 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MinInc() As double
-                | 
+                |
                 |     Returns or sets the minimum increment if the type of the incrementation is
                 |     set to AUTO_INCREMENT.
-                | 
+                |
                 |     Returns:
                 |         The minimum increment.
 
@@ -290,10 +293,10 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NLGeom() As boolean
-                | 
+                |
                 |     Returns or sets whether the geometry remains linear during the analysis. A
                 |     value of true indicates that the geometry remains linear.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether the geometry remains linear during the
                 |         analysis.
@@ -319,16 +322,16 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Stabilization() As boolean (Read Only)
-                | 
+                |
                 |     Returns a boolean indicating whether the stabilization option was
                 |     selected.
-                | 
+                |
                 |     Returns:
-                |         The stabilization status. 
+                |         The stabilization status.
                 |     Example:
                 |         The following example returns the status of the stabilization option
                 |         bFlag in the general static step generalstaticstep.
-                | 
+                |
                 |          Dim generalstaticstep As ABQGeneralStaticStep
                 |          Dim bFlag As boolean
                 |          Set bFlag =  generalstaticstep.Stabilization
@@ -346,10 +349,10 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StabilizationMagnitude() As double
-                | 
+                |
                 |     Sets and Returns the damping factor if the stabilization method is
                 |     FACTOR.
-                | 
+                |
                 |     Returns:
                 |         The damping factor.
 
@@ -374,14 +377,14 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StabilizationMethod() As Stabilization_Type
-                | 
+                |
                 |     Returns or sets the stabilization method if the Stabilization option is
                 |     selected.
-                | 
+                |
                 |     Returns:
                 |         The stabilization method
-                | 
-                |           
+                |
+                |
                 |         Legal values:
                 |           DISSIPATION
                 |           FACTOR
@@ -407,14 +410,14 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TimeIncrementationMethod() As Incrementation_Type
-                | 
+                |
                 |     Returns or sets the type of the incrementation during the
                 |     step.
-                | 
+                |
                 |     Returns:
                 |         The type of the incrementation.
-                | 
-                |           
+                |
+                |
                 |         Legal values:
                 |           AUTO_INCREMENT
                 |           FIXED_INCREMENT
@@ -441,10 +444,10 @@ class ABQGeneralStaticStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TimePeriod() As double
-                | 
+                |
                 |     Returns or sets the total time period of the Abaqus general static
                 |     step.
-                | 
+                |
                 |     Returns:
                 |         The total time period of the Abaqus general static step.
 

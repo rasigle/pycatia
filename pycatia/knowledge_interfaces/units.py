@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import Iterator
 
 from pycatia.knowledge_interfaces.unit import Unit
@@ -17,22 +18,22 @@ from pycatia.types.general import CATVariant
 
 class Units(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Units
-                | 
-                | Represents the collection of Units.
-                | This collection can be retrieved via any collection of parameters (method
-                | Units).
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Units
+            |
+            | Represents the collection of Units.
+            | This collection can be retrieved via any collection of parameters (method
+            | Units).
+
     """
 
     def __init__(self, com_object):
@@ -46,25 +47,25 @@ class Units(Collection):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func Item(CATVariant iIndex) As Unit
-                | 
+                |
                 |     Returns a unit using its index or its name from the from the Parameters
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the unit to retrieve from the collection
                 |             of parameters. As a numerics, this index is the rank of the unit in the
                 |             collection. The index of the first unit in the collection is 1, and the index
                 |             of the last parameter is Count. As a string, it is the name you assigned to the
-                |             parameter using the 
-                | 
+                |             parameter using the
+                |
                 |         AnyObject.Name property or when creating the parameter.
-                |         
+                |
                 |     Example:
                 |         This example retrieves the millimeter unit in the units
                 |         collection:
-                | 
+                |
                 |          Set unitmm = units.Item("mm")
 
         :param CATVariant i_index:

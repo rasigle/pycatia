@@ -1,38 +1,39 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_human_modeling_interfaces.swk_segment import SWKSegment
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class SWKSegmentNode(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SWKSegmentNode
-                | 
-                | This interface characterizes a segment node.
-                | 
-                | A segment node is a convenient way to regroup segments. The segment nodes are
-                | the entities that appear under the manikin in the specification tree, and that
-                | regroup segments together (i.e. "Trunk", "Cervical", "Right
-                | Fingers").
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SWKSegmentNode
+            |
+            | This interface characterizes a segment node.
+            |
+            | A segment node is a convenient way to regroup segments. The segment nodes are
+            | the entities that appear under the manikin in the specification tree, and that
+            | regroup segments together (i.e. "Trunk", "Cervical", "Right
+            | Fingers").
+
     """
 
     def __init__(self, com_object):
@@ -47,7 +48,7 @@ class SWKSegmentNode(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NbChildrenNodes() As long (Read Only)
-                | 
+                |
                 |     Returns the number of children segment nodes under this node.
 
         :rtype: int
@@ -63,7 +64,7 @@ class SWKSegmentNode(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NbChildrenSegments() As long (Read Only)
-                | 
+                |
                 |     Returns the number of children segments under this node.
 
         :rtype: int
@@ -78,12 +79,12 @@ class SWKSegmentNode(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSegment(long piIndex) As SWKSegment
-                | 
+                |
                 |     Returns a specific child of the segment node, based on an
                 |     index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piIndex
                 |             The index of the segment to retrieve.
                 |             The first segment is at index 0.
@@ -95,19 +96,19 @@ class SWKSegmentNode(AnyObject):
         """
         return SWKSegment(self.swk_segment_node.GetSegment(pi_index))
 
-    def get_segment_node(self, pi_index: int) -> 'SWKSegmentNode':
+    def get_segment_node(self, pi_index: int) -> "SWKSegmentNode":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSegmentNode(long piIndex) As SWKSegmentNode
-                | 
+                |
                 |     Returns a specific child of the segment node, based on an
                 |     index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piIndex
                 |             The index of the segment node to retrieve.
                 |             The first segment is at index 0.
@@ -126,7 +127,7 @@ class SWKSegmentNode(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub MirrorCopyPosture()
-                | 
+                |
                 |     Copy the posture on the equivalent segment node, on the other side of the
                 |     manikin. For instance, it copies the posture from the right leg to the left
                 |     leg.
@@ -142,7 +143,7 @@ class SWKSegmentNode(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetPosture()
-                | 
+                |
                 |     Set the posture of all segment under this node back to their default
                 |     position.
 
@@ -157,7 +158,7 @@ class SWKSegmentNode(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SwapPosture()
-                | 
+                |
                 |     Swap the posture with the equivalent segment node, on the other side of the
                 |     manikin. For instance, the right leg takes the posture of the left leg, and
                 |     vice versa.

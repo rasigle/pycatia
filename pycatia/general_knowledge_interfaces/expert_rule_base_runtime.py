@@ -1,16 +1,21 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import TYPE_CHECKING
 
-from pycatia.enumeration.enums import CatShowResultType, CatSolveType, CatVisualizationType
+from pycatia.enumeration.enums import (
+    CatShowResultType,
+    CatSolveType,
+    CatVisualizationType,
+)
 from pycatia.general_knowledge_interfaces.expert_rule_set import ExpertRuleSet
 from pycatia.knowledge_interfaces.relation import Relation
 from pycatia.system_interfaces.any_object import AnyObject
@@ -21,39 +26,39 @@ if TYPE_CHECKING:
 
 class ExpertRuleBaseRuntime(Relation):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     KnowledgeInterfaces.KnowledgeObject
-                |                        KnowledgeInterfaces.KnowledgeActivateObject
-                |                             KnowledgeInterfaces.Relation
-                |                                 ExpertRuleBaseRuntime
-                | 
-                | Represents the Runtime part of the RuleBase.
-                | The following example shows how to create the Rule Base RB1 from a newly
-                | created part document:
-                | 
-                |  Dim CATDocs As Document
-                |  Set CATDocs   = CATIA.Documents
-                |  Dim partdoc As PartDocument
-                |  Set partdoc   = CATDocs.Add("CATPart")
-                |  Dim part As Part
-                |  Set part      = partdoc.Part
-                |  Dim relations As Relations
-                |  Set relations = part.Relations
-                |  Dim Rulebase As ExpertRuleBaseRuntime
-                |  Set RuleBase  = relations.CreateRuleBase("RB1")
-                |
-                | See also:
-                |     Relations
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     KnowledgeInterfaces.KnowledgeObject
+            |                        KnowledgeInterfaces.KnowledgeActivateObject
+            |                             KnowledgeInterfaces.Relation
+            |                                 ExpertRuleBaseRuntime
+            |
+            | Represents the Runtime part of the RuleBase.
+            | The following example shows how to create the Rule Base RB1 from a newly
+            | created part document:
+            |
+            |  Dim CATDocs As Document
+            |  Set CATDocs   = CATIA.Documents
+            |  Dim partdoc As PartDocument
+            |  Set partdoc   = CATDocs.Add("CATPart")
+            |  Dim part As Part
+            |  Set part      = partdoc.Part
+            |  Dim relations As Relations
+            |  Set relations = part.Relations
+            |  Dim Rulebase As ExpertRuleBaseRuntime
+            |  Set RuleBase  = relations.CreateRuleBase("RB1")
+            |
+            | See also:
+            |     Relations
+
     """
 
     def __init__(self, com_object):
@@ -69,12 +74,12 @@ class ExpertRuleBaseRuntime(Relation):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ReportDescriptionLength() As
                 | CatDescriptionLengthType
-                | 
+                |
                 |     Returns or sets the Report Description Length (For Text option
                 |     only).
-                | 
+                |
                 |     0
-                |         ShortText 
+                |         ShortText
                 |     1
                 |         LongText
 
@@ -100,15 +105,15 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ReportOutPutFormat() As CatOutPutFormatType
-                | 
+                |
                 |     Returns or sets the Report OutPut Format.
-                | 
+                |
                 |     0
-                |         Html 
+                |         Html
                 |     1
-                |         Text 
+                |         Text
                 |     2
-                |         Print 
+                |         Print
                 |     3
                 |         Email
 
@@ -134,7 +139,7 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ReportPath() As CATBSTR
-                | 
+                |
                 |     Returns or sets the Report output path.
 
         :rtype: str
@@ -158,13 +163,13 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ReportShowResult() As CatShowResultType
-                | 
+                |
                 |     Returns or sets the option for sorting the report.
-                | 
+                |
                 |     0
-                |         ByRule 
+                |         ByRule
                 |     1
-                |         ByObject 
+                |         ByObject
                 |     2
                 |         ByState
 
@@ -182,22 +187,22 @@ class ExpertRuleBaseRuntime(Relation):
         self.expert_rule_base_runtime.ReportShowResult = value
 
     @property
-    def rule_base_edition(self) -> 'ExpertRuleBase':
+    def rule_base_edition(self) -> "ExpertRuleBase":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RuleBaseEdition() As ExpertRuleBase (Read Only)
-                | 
+                |
                 |     Returns the editable object corresponding to this rulebase. Be careful
                 |     that, according to your licence, or the type of rulebase you're handling, you
-                |     may not have the right to edit the rulebase. 
+                |     may not have the right to edit the rulebase.
                 | Example:
-                | 
+                |
                 |      Dim aRBEdition As CATIAExpertRuleBase
                 |      Set aRBEdition = aRBRuntime.RuleBaseEdition
-                | 
+                |
                 |      If not(aRBEdition is Nothing) Then
                 |        ' .. action on the editable rulebase
                 |      End if
@@ -206,6 +211,7 @@ class ExpertRuleBaseRuntime(Relation):
         """
 
         from pycatia.general_knowledge_interfaces.expert_rule_base import ExpertRuleBase
+
         return ExpertRuleBase(self.expert_rule_base_runtime.RuleBaseEdition)
 
     @property
@@ -216,7 +222,7 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RuleSet() As ExpertRuleSet (Read Only)
-                | 
+                |
                 |     Returns the Set linked to the RuleBase. This is the main RuleSet that
                 |     contains all the RuleBase components.
 
@@ -233,7 +239,7 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SolveType() As CatSolveType
-                | 
+                |
                 |     Returns or sets the solve option.
 
         :return: CatSolveType
@@ -257,13 +263,13 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TextVisualization() As CatVisualizationType
-                | 
+                |
                 |     Returns or sets the Report option for visualization.
-                | 
+                |
                 |     0
-                |         Passed 
+                |         Passed
                 |     1
-                |         Failed 
+                |         Failed
                 |     2
                 |         Both
 
@@ -287,9 +293,9 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AccurateType() As CATBSTR
-                | 
+                |
                 |     Returns as a string the type of component.
-                | 
+                |
                 |     Returns:
                 |         A string among ("ExpertRuleBase", "ExpertRuleBaseRuntime")
 
@@ -304,19 +310,19 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddFact(AnyObject iFact)
-                | 
+                |
                 |     Adds new fact to the rule base resolution.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFact
-                |             Fact to be added 
-                | 
+                |             Fact to be added
+                |
                 |     Example:
-                | 
+                |
                 |           Dim pad3 as Shape
                 |           Dim rulebase as ExpertRuleBase
-                | 
+                |
                 |           Set pad3 = part.MainBody.Shapes.Item("Pad3")
                 |           Set rulebase = part.Relations.Item("RuleBase")
                 |           rulebase.AddFact (pad3)
@@ -333,11 +339,11 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddRootOfFacts(AnyObject iRootFacts)
-                | 
+                |
                 |     Adds a new root of facts to the rule base.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRootFacts
                 |             root of facts to be added.
 
@@ -353,12 +359,12 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Deduce()
-                | 
-                |     Launch a Forward chaining Solve on the current RuleBase. 
+                |
+                |     Launch a Forward chaining Solve on the current RuleBase.
                 | Example:
-                | 
+                |
                 |       Dim rulebase as ExpertRuleBase
-                | 
+                |
                 |       Set rulebase = part.Relations.Item("RuleBase")
                 |       rulebase.Deduce ()
 
@@ -373,20 +379,20 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Fingerprint() As boolean
-                | 
+                |
                 |     Returns the Fingerprint information. The fingerprint indicates
                 |     if the last result of the rulebase is relevant regarding to the
                 |     objects the rule base has checked. In other words, if the part
                 |     has evolved since last Deduce, the fingerprint is false.
                 |     Be careful : on volatile rulebases ( ExpertRuleBase.VolatileCopy ), it raises an error.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           on error resume next
                 |           part.Relations.Item("RuleBase").Fingerprint ()
                 |           on error goto 0
-                |          
-                | 
+                |
+                |
                 |     Returns:
                 |         Fingerprint information
 
@@ -401,9 +407,9 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNumberOfRootsOfFacts() As long
-                | 
+                |
                 |     Retrieves the number of roots of facts of the rule base.
-                | 
+                |
                 |     Returns:
                 |         Number of roots of facts.
 
@@ -418,11 +424,11 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetRootsOfFacts(CATSafeArrayVariant oRootsOfFacts)
-                | 
+                |
                 |     Retrieves all the roots of facts from the rule base.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRootsOfFacts
                 |             array of roots of facts.
 
@@ -430,7 +436,7 @@ class ExpertRuleBaseRuntime(Relation):
         :rtype: None
         """
         return self.expert_rule_base_runtime.GetRootsOfFacts(o_roots_of_facts)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -454,18 +460,18 @@ class ExpertRuleBaseRuntime(Relation):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Import(ExpertRuleSet iRuleSet,
                 | boolean iForce)
-                | 
+                |
                 |     Import from RuleSet.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRuleSet
-                |             CATIAExpertRuleSet : the RuleSet user want to import. 
+                |             CATIAExpertRuleSet : the RuleSet user want to import.
                 |         iForce
-                |             Boolean : if True (= 1), then if imported rules allready exist in target document, rules of target document are replaced. 
-                | 
+                |             Boolean : if True (= 1), then if imported rules allready exist in target document, rules of target document are replaced.
+                |
                 |     Example:
-                | 
+                |
                 |          Dim CATDocs As Documents
                 |          Set CATDocs   = CATIA.Documents
                 |          Dim partdoc As Document
@@ -485,7 +491,7 @@ class ExpertRuleBaseRuntime(Relation):
         :rtype: None
         """
         return self.expert_rule_base_runtime.Import(i_rule_set.com_object, i_force)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -509,13 +515,13 @@ class ExpertRuleBaseRuntime(Relation):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ImportFromFile(CATBSTR iPath,
                 | boolean iForce)
-                | 
+                |
                 |     Import from file.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
-                |             CATBSTR : the path of the document user want to import. 
+                |             CATBSTR : the path of the document user want to import.
                 |         iForce
                 |             Boolean : if True (= 1), then if imported rules allready
                 |             exist in target document, rules of target document are
@@ -523,7 +529,7 @@ class ExpertRuleBaseRuntime(Relation):
                 |             exist in target document, rules of imported document are ignored.*
                 |
                 |     Example:
-                | 
+                |
                 |           part.Relations.Item("RuleBase").ImportFromFile
                 |           ("e:/importeddocument.CATProduct",0)
 
@@ -532,7 +538,7 @@ class ExpertRuleBaseRuntime(Relation):
         :rtype: None
         """
         return self.expert_rule_base_runtime.ImportFromFile(i_path, i_force)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -556,21 +562,21 @@ class ExpertRuleBaseRuntime(Relation):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ImportWithLink(AnyObject iRoot,
                 | boolean iForce)
-                | 
+                |
                 |     Import with link to a document.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRoot
-                |             CATIABase : the root user want to import into. 
+                |             CATIABase : the root user want to import into.
                 |         iForce
                 |             Boolean : if True (= 1), then if imported rules allready exist
                 |             in target document, rules of target document are replaced.
                 |             if False (= 0), then if imported rules allready exist in
                 |             target document, rules of imported document are ignored.*
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           part.Relations.Item("RuleBase").ImportWithLink
                 |           (root,0)
 
@@ -579,7 +585,7 @@ class ExpertRuleBaseRuntime(Relation):
         :rtype: None
         """
         return self.expert_rule_base_runtime.ImportWithLink(i_root.com_object, i_force)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -602,11 +608,11 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveRootOfFacts(AnyObject iRootFacts)
-                | 
+                |
                 |     Removes a root of facts from the rule base.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRootFacts
                 |             root of facts to be removed.
 
@@ -622,23 +628,23 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Report(boolean reallyStartBrowser)
-                | 
+                |
                 |     Launch a Report. The default output format is HTML
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         reallyStartBrowser
-                |             Boolean : if True (= 1), then the browser is started on the report 
-                | 
+                |             Boolean : if True (= 1), then the browser is started on the report
+                |
                 |     Example:
-                | 
+                |
                 |           part.Relations.Item("RuleBase").Report (0)
 
         :param bool really_start_browser:
         :rtype: None
         """
         return self.expert_rule_base_runtime.Report(really_start_browser)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -661,13 +667,13 @@ class ExpertRuleBaseRuntime(Relation):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func SynchronizeStatus() As boolean
-                | 
+                |
                 |     Returns the Synchronize information. The synchronize status indicates
                 |     for a linked rule base if the rulebase is synchronized.
                 |     Be careful : on volatile rulebases ( ExpertRuleBase.VolatileCopy ), it raises an error.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           on error resume next
                 |           part.Relations.Item("RuleBase").SynchronizeStatus ()
                 |           on error goto 0

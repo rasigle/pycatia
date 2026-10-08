@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,23 +14,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PSPId(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PspID
-                | 
-                | Represents the interface to generate and set IDs for the Distributive System
-                | Objects.
-                | Role: This is the interface for Plant Ship object ID
-                | generation.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PspID
+            |
+            | Represents the interface to generate and set IDs for the Distributive System
+            | Objects.
+            | Role: This is the interface for Plant Ship object ID
+            | generation.
+
     """
 
     def __init__(self, com_object):
@@ -44,10 +44,10 @@ class PSPId(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GenAndPutID() As CATBSTR
-                | 
+                |
                 |     Returns the Generated ID with the sequence number and is stored on the
                 |     object.
-                | 
+                |
                 |     Returns:
                 |         ID generated
                 |
@@ -69,10 +69,10 @@ class PSPId(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GenAndPutIDNoGenSeqNum() As CATBSTR
-                | 
+                |
                 |     Generates ID without the sequence number and is stored on the
                 |     object.
-                | 
+                |
                 |     Returns:
                 |         ID generated
                 |
@@ -94,15 +94,15 @@ class PSPId(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GenIDNoGenSeqNum() As CATBSTR
-                | 
+                |
                 |     Generates ID without the sequence number( if not set previously) and is not
                 |     stored on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oGeneratedID
-                |             ID generated 
-                | 
+                |             ID generated
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspID
@@ -121,11 +121,11 @@ class PSPId(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetID() As CATBSTR
-                | 
+                |
                 |     Gets ID for the object.
-                | 
+                |
                 |     Returns:
-                |         ID of the object. 
+                |         ID of the object.
                 |     Example:
                 |
                 |          Dim objThisIntf As PspID
@@ -144,9 +144,9 @@ class PSPId(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetLocalID() As CATBSTR
-                | 
+                |
                 |     Retrieves local ID of the object.
-                | 
+                |
                 |     Returns:
                 |         Local ID generated
                 |
@@ -168,15 +168,15 @@ class PSPId(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsIDGenerated() As boolean
-                | 
+                |
                 |     Checks if the ID on the object is generated( based on the ID
                 |     Schema).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBIsGenerated
-                |             TRUE if ID is generated from the ID schema 
-                | 
+                |             TRUE if ID is generated from the ID schema
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspID
@@ -195,14 +195,14 @@ class PSPId(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetID(CATBSTR iID)
-                | 
+                |
                 |     Sets ID for the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oID
-                |             ID to be set. 
-                | 
+                |             ID to be set.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspID

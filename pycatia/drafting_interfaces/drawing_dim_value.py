@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,23 +14,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class DrawingDimValue(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DrawingDimValue
-                | 
-                | Manages dimension value of a dimension in drawing view.
-                | 
-                | This interface is obtained from DrawingDimension.GetValue
-                | method.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DrawingDimValue
+            |
+            | Manages dimension value of a dimension in drawing view.
+            |
+            | This interface is obtained from DrawingDimension.GetValue
+            | method.
+
     """
 
     def __init__(self, com_object):
@@ -45,13 +45,13 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property FakeDimType() As CatDimFake
-                | 
+                |
                 |     Returns or sets fake dimension type of value.
-                | 
+                |
                 |     Example:
                 |         This example retrieves fake dimension type of value MyDimValue drawing
                 |         dimension.
-                | 
+                |
                 |          oFakeType = MyDimValue.FakeDimType
 
         :return: enum cat_dim_fake
@@ -76,11 +76,11 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property ScoringMode() As CatDimScore
-                | 
-                |     Get dimension scoring mode. 
+                |
+                |     Get dimension scoring mode.
                 | Example:
                 |     This example gets dimension scoring mode of MyValue path.
-                | 
+                |
                 |      ValueScoreType = MyValue.ScoringMode
 
         :return: enum cat_dim_score
@@ -105,13 +105,13 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Value() As double (Read Only)
-                | 
+                |
                 |     Returns value of dimension.
-                | 
+                |
                 |     Example:
                 |         This example retrieves value of dimension MyDimValue drawing
                 |         dimension.
-                | 
+                |
                 |          oValue = MyDimValue.Value
 
         :rtype: float
@@ -127,12 +127,12 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property ValueFramedElement() As CatDimFramedElement
-                | 
-                |     Get dimension framed element. 
+                |
+                |     Get dimension framed element.
                 | Example:
                 |     This example gets dimension framed element of MyValue
                 |     path.
-                | 
+                |
                 |      ValueFramedElement = MyValue.ValueFramedElement
 
         :return: enum cat_dim_frame_element
@@ -157,13 +157,13 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property ValueFramedGroup() As CatDimFramedGroup
-                | 
+                |
                 |     Returns or sets dimension framed group.
-                | 
+                |
                 |     Example:
                 |         This example retrieves dimension framed group MyDimValue drawing
                 |         dimension.
-                | 
+                |
                 |          oValueFramedGroup = MyDimValue.FakeDimType
 
         :return: enum cat_dim_framed_group
@@ -191,24 +191,24 @@ class DrawingDimValue(AnyObject):
                 | CATBSTR oAfter,
                 | CATBSTR oUpper,
                 | CATBSTR oLower)
-                | 
+                |
                 |     Get bault text of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oBefore
-                |             before text. 
+                |             before text.
                 |         oAfter
-                |             after text 
+                |             after text
                 |         oUpper
-                |             upper text 
+                |             upper text
                 |         oLower
-                |             lower text 
+                |             lower text
                 |         Example:
                 |             This example gets bault text of MyValue path.
-                | 
+                |
                 |              MyValue.GetBaultText(iIndex, oBefore, oAfter, oUpper,
                 |              oLower)
 
@@ -224,18 +224,18 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetDisplayUnit(long iIndex) As long
-                | 
+                |
                 |     Get display unit of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Index
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oDisplUnit
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format unit of MyValue path.
-                | 
+                |
                 |              FrmUnit = MyValue.GetDisplayUnit(iIndex)
 
         :param int i_index:
@@ -250,18 +250,18 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetFakeDimValue(long iIndex) As CATBSTR
-                | 
+                |
                 |     Get fake value of dimension.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oFakeDimValue
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets fake value of MyValue path.
-                | 
+                |
                 |              FakeDimValue = MyValue.GetFakeDimValue(iIndex)
 
         :param int i_index:
@@ -276,19 +276,19 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetFormatDisplayFactor(long iIndex) As long
-                | 
+                |
                 |     Get format display factor of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oFrmDspFact
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format display factor of MyValue
                 |             path.
-                | 
+                |
                 |              FrmDspFact = MyValue.GetFormatDisplayFactor(iIndex)
 
         :param int i_index:
@@ -303,18 +303,18 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetFormatName(long iIndex) As CATBSTR
-                | 
+                |
                 |     Get format name of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oFmName
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format name of MyValue path.
-                | 
+                |
                 |              FmName = MyValue.GetFormatName(iIndex)
 
         :param int i_index:
@@ -329,19 +329,19 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetFormatPrecision(long Index) As double
-                | 
+                |
                 |     Get format precision of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oFrmPrecision
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format precision of MyValue
                 |             path.
-                | 
+                |
                 |              FrmPrecision = MyValue.GetFormatPrecision(iIndex)
 
         :param int index:
@@ -356,18 +356,18 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetFormatType(long iIndex) As long
-                | 
+                |
                 |     Get format type of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oFrmType
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format type of MyValue path.
-                | 
+                |
                 |              FrmType = MyValue.GetFormatType(iIndex)
 
         :param int i_index:
@@ -382,18 +382,18 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetFormatUnit(long iIndex) As long
-                | 
+                |
                 |     Get format unit of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Index
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oFrmUnit
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format unit of MyValue path.
-                | 
+                |
                 |              FrmUnit = MyValue.GetFormatUnit(iIndex)
 
         :param int i_index:
@@ -410,20 +410,20 @@ class DrawingDimValue(AnyObject):
                 | o Sub GetPSText(long iIndex,
                 | CATBSTR oPrefix,
                 | CATBSTR oSuffix)
-                | 
+                |
                 |     Get PS text to dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oPrefix
-                |             prefix text. 
+                |             prefix text.
                 |         oSuffix
-                |             suffix text 
+                |             suffix text
                 |         Example:
                 |             This example gets PS text of MyValue path.
-                | 
+                |
                 |              MyValue.GetBaultText(iIndex, oPrefix, oSuffix)
 
         :param int i_index:
@@ -438,20 +438,20 @@ class DrawingDimValue(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetScoredElement(long iIndex) As boolean
-                | 
+                |
                 |     Get dimension scored element.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         oScoredElement
                 |             TRUE: Scoring is applied to the all bloc text. FALSE: Scoring is
-                |             only applied to the value. 
+                |             only applied to the value.
                 |         Example:
                 |             This example gets dimension scored element of MyValue
                 |             path.
-                | 
+                |
                 |              ScoredElement = MyValue.GetScoredElement(iIndex)
 
         :param int i_index:
@@ -459,7 +459,9 @@ class DrawingDimValue(AnyObject):
         """
         return self.drawing_dim_value.GetScoredElement(i_index)
 
-    def set_bault_text(self, i_index: int, i_before: str, i_after: str, i_upper: str, i_lower: str) -> None:
+    def set_bault_text(
+        self, i_index: int, i_before: str, i_after: str, i_upper: str, i_lower: str
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -470,24 +472,24 @@ class DrawingDimValue(AnyObject):
                 | CATBSTR iAfter,
                 | CATBSTR iUpper,
                 | CATBSTR iLower)
-                | 
+                |
                 |     Set bault text to dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iBefore
-                |             before text. 
+                |             before text.
                 |         iAfter
-                |             after text 
+                |             after text
                 |         iUpper
-                |             upper text 
+                |             upper text
                 |         iLower
-                |             lower text 
+                |             lower text
                 |         Example:
                 |             This example sets bault text of MyValue path.
-                | 
+                |
                 |              MyValue.SetBaultText(iIndex, iBefore, iAfter, iUpper,
                 |              iLower)
 
@@ -498,7 +500,9 @@ class DrawingDimValue(AnyObject):
         :param str i_lower:
         :rtype: None
         """
-        return self.drawing_dim_value.SetBaultText(i_index, i_before, i_after, i_upper, i_lower)
+        return self.drawing_dim_value.SetBaultText(
+            i_index, i_before, i_after, i_upper, i_lower
+        )
 
     def set_fake_dim_value(self, i_index: int, i_fake_dim_value: str) -> None:
         """
@@ -508,18 +512,18 @@ class DrawingDimValue(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetFakeDimValue(long iIndex,
                 | CATBSTR iFakeDimValue)
-                | 
+                |
                 |     Set fake value of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iFakeDimValue
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets fake value of MyValue path.
-                | 
+                |
                 |              MyValue.SetFakeDimValue(iIndex, iFakeDimValue)
 
         :param int i_index:
@@ -536,19 +540,19 @@ class DrawingDimValue(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetFormatDisplayFactor(long iIndex,
                 | long iFrmDspFact)
-                | 
+                |
                 |     Set format display factor of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iFrmDspFact
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format display factor of MyValue
                 |             path.
-                | 
+                |
                 |              MyValue.SetFormatDisplayFactor(iIndex,
                 |              iFrmDspFact)
 
@@ -566,18 +570,18 @@ class DrawingDimValue(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetFormatName(long iIndex,
                 | CATBSTR iFrmName)
-                | 
+                |
                 |     Set format name of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iFrmName
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format name of MyValue path.
-                | 
+                |
                 |              MyValue.SetFormatName(iIndex, iFrmName)
 
         :param int i_index:
@@ -594,19 +598,19 @@ class DrawingDimValue(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetFormatPrecision(long iIndex,
                 | double iFrmPrecision)
-                | 
+                |
                 |     Set format precision of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iFrmPrecision
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format precision of MyValue
                 |             path.
-                | 
+                |
                 |              MyValue.SetFormatPrecision(iIndex, iFrmPrecision)
 
         :param int i_index:
@@ -623,18 +627,18 @@ class DrawingDimValue(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetFormatType(long iIndex,
                 | long iFrmType)
-                | 
+                |
                 |     Set format type of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iFrmType
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format type of MyValue path.
-                | 
+                |
                 |              MyValue.SetFormatType(iIndex, iFrmType)
 
         :param int i_index:
@@ -651,18 +655,18 @@ class DrawingDimValue(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetFormatUnit(long iIndex,
                 | long iFrmUnit)
-                | 
+                |
                 |     Set format unit of dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iFrmUnit
-                |             before text. 
+                |             before text.
                 |         Example:
                 |             This example gets format unit of MyValue path.
-                | 
+                |
                 |              MyValue.SetFormatUnit(iIndex, iFrmUnit)
 
         :param int i_index:
@@ -680,20 +684,20 @@ class DrawingDimValue(AnyObject):
                 | o Sub SetPSText(long iIndex,
                 | CATBSTR iPrefix,
                 | CATBSTR iSuffix)
-                | 
+                |
                 |     Set PS text to dimension value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iPrefix
-                |             prefix text. 
+                |             prefix text.
                 |         iSuffix
-                |             suffix text 
+                |             suffix text
                 |         Example:
                 |             This example sets PS text of MyValue path.
-                | 
+                |
                 |              MyValue.SetBaultText(iIndex, iPrefix, iSuffix)
 
         :param int i_index:
@@ -711,20 +715,20 @@ class DrawingDimValue(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetScoredElement(long iIndex,
                 | boolean iScoredElement)
-                | 
+                |
                 |     Set dimension scored element.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             1: main value 2: dual value 
+                |             1: main value 2: dual value
                 |         iScoredElement
                 |             TRUE: Scoring is applied to the all bloc text. FALSE: Scoring is
-                |             only applied to the value. 
+                |             only applied to the value.
                 |         Example:
                 |             This example gets dimension scored element of MyValue
                 |             path.
-                | 
+                |
                 |              MyValue.SetScoredElement(iIndex, iScoredElement)
 
         :param int i_index:
@@ -732,7 +736,7 @@ class DrawingDimValue(AnyObject):
         :rtype: None
         """
         return self.drawing_dim_value.SetScoredElement(i_index, i_scored_element)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

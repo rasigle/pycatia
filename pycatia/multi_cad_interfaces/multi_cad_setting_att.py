@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class MultiCADSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         MultiCADSettingAtt
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         MultiCADSettingAtt
 
-    
+
     """
 
     def __init__(self, com_object):
@@ -42,7 +42,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Annotation3DMode() As boolean
-                | 
+                |
                 |     Returns or sets the Annotation 3D mode R18sp3 on env. variable
 
         :rtype: bool
@@ -66,7 +66,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConversionTechnology() As long
-                | 
+                |
                 |     Returns or sets the Conversion Technology
 
         :rtype: int
@@ -90,7 +90,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LinkMode() As long
-                | 
+                |
                 |     Returns or sets the Link Mode
 
         :rtype: int
@@ -114,7 +114,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OutputPath() As CATBSTR
-                | 
+                |
                 |     Returns or sets the Output Path
 
         :rtype: str
@@ -138,7 +138,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PartsParameterMode() As long
-                | 
+                |
                 |     Returns or sets the parts parameterization mode
 
         :rtype: int
@@ -162,7 +162,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ProEInstanceMode() As boolean
-                | 
+                |
                 |     Returns or sets the ProEInstanceMode
 
         :rtype: bool
@@ -186,7 +186,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ProEInstanceName() As CATBSTR
-                | 
+                |
                 |     Returns or sets the ProEInstanceName
 
         :rtype: str
@@ -210,7 +210,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ProEQuiltsRead() As boolean
-                | 
+                |
                 |     Returns or sets the ProEQuiltsRead
 
         :rtype: bool
@@ -234,7 +234,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ProESimpRepMode() As boolean
-                | 
+                |
                 |     Returns or sets the ProESimpRepMode
 
         :rtype: bool
@@ -258,7 +258,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ProESimpRepName() As CATBSTR
-                | 
+                |
                 |     Returns or sets the ProESimpRepName
 
         :rtype: str
@@ -282,7 +282,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SaveCoorsysInCgr() As boolean
-                | 
+                |
                 |     Returns or sets the Save Coordinate Systems in CGR
 
         :rtype: bool
@@ -306,7 +306,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TranslatorMode() As long
-                | 
+                |
                 |     Returns or sets the Translator mode
 
         :rtype: int
@@ -330,7 +330,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UGActiveLayersOnly() As boolean
-                | 
+                |
                 |     Returns or sets the UGActiveLayersOnly
 
         :rtype: bool
@@ -354,7 +354,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UGDrawingName() As CATBSTR
-                | 
+                |
                 |     Returns or sets the UGDrawingName
 
         :rtype: str
@@ -378,7 +378,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UGLayerNumbers() As CATBSTR
-                | 
+                |
                 |     Returns or sets the UGLayerNumbers
 
         :rtype: str
@@ -402,7 +402,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UGOpenSurfaces() As boolean
-                | 
+                |
                 |     Returns or sets the UGOpenSurfaces
 
         :rtype: bool
@@ -426,7 +426,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UgReferenceSet() As CATBSTR
-                | 
+                |
                 |     Returns or sets the UgReferenceSet
 
         :rtype: str
@@ -450,7 +450,7 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property VisuFormatUnit() As float
-                | 
+                |
                 |     Returns or sets the Unit for Visu Format (number of milimeters per unit of
                 |     the file)
 
@@ -475,24 +475,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAnnotation3DModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Annotation3DMode
                 |     parameter.
                 |     Role:Retrieves the state of the Annotation3DMode parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -501,9 +501,13 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetAnnotation3DModeInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetAnnotation3DModeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_conversion_technology_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_conversion_technology_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -511,24 +515,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConversionTechnologyInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ConversionTechnology
                 |     parameter.
                 |     Role:Retrieves the state of the ConversionTechnology parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -537,7 +541,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetConversionTechnologyInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetConversionTechnologyInfo(
+            io_admin_level, io_locked
+        )
 
     def get_link_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -547,24 +553,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetLinkModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the LinkMode
                 |     parameter.
                 |     Role:Retrieves the state of the LinkMode parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -583,24 +589,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOutputPathInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the OutputPath
                 |     parameter.
                 |     Role:Retrieves the state of the OutputPath parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -611,7 +617,9 @@ class MultiCADSettingAtt(SettingController):
         """
         return self.multi_cad_setting_att.GetOutputPathInfo(io_admin_level, io_locked)
 
-    def get_parts_parameter_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_parts_parameter_mode_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -619,24 +627,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetPartsParameterModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PartsParameterMode
                 |     parameter.
                 |     Role:Retrieves the state of the PartsParameterMode parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -645,7 +653,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetPartsParameterModeInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetPartsParameterModeInfo(
+            io_admin_level, io_locked
+        )
 
     def get_pro_e_instance_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -655,24 +665,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetProEInstanceModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ProEInstanceMode
                 |     parameter.
                 |     Role:Retrieves the state of the ProEInstanceMode parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -681,7 +691,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetProEInstanceModeInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetProEInstanceModeInfo(
+            io_admin_level, io_locked
+        )
 
     def get_pro_e_instance_name_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -691,24 +703,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetProEInstanceNameInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ProEInstanceName
                 |     parameter.
                 |     Role:Retrieves the state of the ProEInstanceName parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -717,7 +729,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetProEInstanceNameInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetProEInstanceNameInfo(
+            io_admin_level, io_locked
+        )
 
     def get_pro_e_quilts_read_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -727,24 +741,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetProEQuiltsReadInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ProEQuiltsRead
                 |     parameter.
                 |     Role:Retrieves the state of the ProEQuiltsRead parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -753,7 +767,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetProEQuiltsReadInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetProEQuiltsReadInfo(
+            io_admin_level, io_locked
+        )
 
     def get_pro_e_simp_rep_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -763,24 +779,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetProESimpRepModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ProESimpRepMode
                 |     parameter.
                 |     Role:Retrieves the state of the ProESimpRepMode parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -789,7 +805,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetProESimpRepModeInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetProESimpRepModeInfo(
+            io_admin_level, io_locked
+        )
 
     def get_pro_e_simp_rep_name_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -799,24 +817,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetProESimpRepNameInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ProESimpRepName
                 |     parameter.
                 |     Role:Retrieves the state of the ProESimpRepName parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -825,7 +843,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetProESimpRepNameInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetProESimpRepNameInfo(
+            io_admin_level, io_locked
+        )
 
     def get_save_coorsys_in_cgr_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -835,24 +855,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSaveCoorsysInCgrInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the SaveCoorsysInCgr
                 |     parameter.
                 |     Role:Retrieves the state of the SaveCoorsysInCgr parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -861,7 +881,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetSaveCoorsysInCgrInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetSaveCoorsysInCgrInfo(
+            io_admin_level, io_locked
+        )
 
     def get_translator_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -871,24 +893,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTranslatorModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Translator mode
                 |     parameter.
                 |     Role:Retrieves the state of the Translator mode parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -897,9 +919,13 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetTranslatorModeInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetTranslatorModeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_ug_active_layers_only_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_ug_active_layers_only_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -907,24 +933,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUGActiveLayersOnlyInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the UGActiveLayersOnly
                 |     parameter.
                 |     Role:Retrieves the state of the UGActiveLayersOnly parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -933,7 +959,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetUGActiveLayersOnlyInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetUGActiveLayersOnlyInfo(
+            io_admin_level, io_locked
+        )
 
     def get_ug_drawing_name_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -943,24 +971,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUGDrawingNameInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the UGDrawingName
                 |     parameter.
                 |     Role:Retrieves the state of the UGDrawingName parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -969,7 +997,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetUGDrawingNameInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetUGDrawingNameInfo(
+            io_admin_level, io_locked
+        )
 
     def get_ug_layer_numbers_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -979,24 +1009,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUGLayerNumbersInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the UGLayerNumbers
                 |     parameter.
                 |     Role:Retrieves the state of the UGLayerNumbers parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1005,7 +1035,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetUGLayerNumbersInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetUGLayerNumbersInfo(
+            io_admin_level, io_locked
+        )
 
     def get_ug_open_surfaces_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1015,24 +1047,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUGOpenSurfacesInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the UGOpenSurfaces
                 |     parameter.
                 |     Role:Retrieves the state of the UGOpenSurfaces parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1041,7 +1073,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetUGOpenSurfacesInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetUGOpenSurfacesInfo(
+            io_admin_level, io_locked
+        )
 
     def get_ug_reference_set_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1051,24 +1085,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUgReferenceSetInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the UgReferenceSet
                 |     parameter.
                 |     Role:Retrieves the state of the UgReferenceSet parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1077,7 +1111,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetUgReferenceSetInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetUgReferenceSetInfo(
+            io_admin_level, io_locked
+        )
 
     def get_visu_format_unit_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1087,24 +1123,24 @@ class MultiCADSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetVisuFormatUnitInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the VisuFormatUnit
                 |     parameter.
                 |     Role:Retrieves the state of the VisuFormatUnit parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1113,7 +1149,9 @@ class MultiCADSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.multi_cad_setting_att.GetVisuFormatUnitInfo(io_admin_level, io_locked)
+        return self.multi_cad_setting_att.GetVisuFormatUnitInfo(
+            io_admin_level, io_locked
+        )
 
     def set_annotation_3d_mode_lock(self, i_locked: bool) -> None:
         """
@@ -1122,14 +1160,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnnotation3DModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Annotation3DMode parameter.
                 |     Role:Locks or unlocks the Annotation3DMode parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1140,7 +1178,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetAnnotation3DModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1163,14 +1201,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetConversionTechnologyLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ConversionTechnology parameter.
                 |     Role:Locks or unlocks the ConversionTechnology parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1181,7 +1219,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetConversionTechnologyLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1204,14 +1242,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetLinkModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the LinkMode parameter.
                 |     Role:Locks or unlocks the LinkMode parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1222,7 +1260,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetLinkModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1245,14 +1283,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOutputPathLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OutputPath parameter.
                 |     Role:Locks or unlocks the OutputPath parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1263,7 +1301,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetOutputPathLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1286,14 +1324,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPartsParameterModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PartsParameterMode parameter.
                 |     Role:Locks or unlocks the PartsParameterMode parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1304,7 +1342,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetPartsParameterModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1327,14 +1365,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetProEInstanceModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ProEInstanceMode parameter.
                 |     Role:Locks or unlocks the ProEInstanceMode parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1345,7 +1383,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetProEInstanceModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1368,14 +1406,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetProEInstanceNameLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ProEInstanceName parameter.
                 |     Role:Locks or unlocks the ProEInstanceName parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1386,7 +1424,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetProEInstanceNameLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1409,14 +1447,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetProEQuiltsReadLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ProEQuiltsRead parameter.
                 |     Role:Locks or unlocks the ProEQuiltsRead parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1427,7 +1465,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetProEQuiltsReadLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1450,14 +1488,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetProESimpRepModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ProESimpRepMode parameter.
                 |     Role:Locks or unlocks the ProESimpRepMode parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1468,7 +1506,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetProESimpRepModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1491,14 +1529,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetProESimpRepNameLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ProESimpRepName parameter.
                 |     Role:Locks or unlocks the ProESimpRepName parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1509,7 +1547,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetProESimpRepNameLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1532,14 +1570,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSaveCoorsysInCgrLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the SaveCoorsysInCgr parameter.
                 |     Role:Locks or unlocks the SaveCoorsysInCgr parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1550,7 +1588,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetSaveCoorsysInCgrLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1573,14 +1611,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetTranslatorModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Translator mode parameter.
                 |     Role:Locks or unlocks the Translator mode parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1591,7 +1629,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetTranslatorModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1614,14 +1652,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUGActiveLayersOnlyLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the UGActiveLayersOnly parameter.
                 |     Role:Locks or unlocks the UGActiveLayersOnly parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1632,7 +1670,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetUGActiveLayersOnlyLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1655,14 +1693,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUGDrawingNameLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the UGDrawingName parameter.
                 |     Role:Locks or unlocks the UGDrawingName parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1673,7 +1711,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetUGDrawingNameLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1696,14 +1734,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUGLayerNumbersLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the UGLayerNumbers parameter.
                 |     Role:Locks or unlocks the UGLayerNumbers parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1714,7 +1752,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetUGLayerNumbersLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1737,14 +1775,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUGOpenSurfacesLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the UGOpenSurfaces parameter.
                 |     Role:Locks or unlocks the UGOpenSurfaces parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1755,7 +1793,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetUGOpenSurfacesLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1778,14 +1816,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUgReferenceSetLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the UgReferenceSet parameter.
                 |     Role:Locks or unlocks the UgReferenceSet parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1796,7 +1834,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetUgReferenceSetLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1819,14 +1857,14 @@ class MultiCADSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetVisuFormatUnitLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the VisuFormatUnit parameter.
                 |     Role:Locks or unlocks the VisuFormatUnit parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1837,7 +1875,7 @@ class MultiCADSettingAtt(SettingController):
         :rtype: None
         """
         return self.multi_cad_setting_att.SetVisuFormatUnitLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

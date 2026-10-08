@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -16,22 +16,22 @@ from pycatia.part_interfaces.dress_up_shape import DressUpShape
 
 class AutoDraft(DressUpShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Shape
-                |                         PartInterfaces.DressUpShape
-                |                             AutoDraft
-                | 
-                | Represents the AutoDraft shape.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Shape
+            |                         PartInterfaces.DressUpShape
+            |                             AutoDraft
+            |
+            | Represents the AutoDraft shape.
+
     """
 
     def __init__(self, com_object):
@@ -68,14 +68,14 @@ class AutoDraft(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FunctionalFaces() As References (Read Only)
-                | 
+                |
                 |     Returns or sets the functional faces.
-                | 
+                |
                 |     Example:
                 |         The following example returns in FunctionalFaces the list functional
                 |         faces of the AutoDraft AutoDraft, and then sets NewFunctionalFace as a
                 |         functional face:
-                | 
+                |
                 |          Set FunctionalFaces = AutoDraft.FunctionalFace
                 |          AutoDraft.FunctionalFace = NewFunctionalFace
 
@@ -92,14 +92,14 @@ class AutoDraft(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MainDraftAngle() As Reference
-                | 
+                |
                 |     Returns or sets the main draft angle.
-                | 
+                |
                 |     Example:
                 |         The following example returns in MainDraftAngle the main draft angle of
                 |         the AutoDraft AutoDraft, and then sets it to
                 |         NewMainDraftAngle.:
-                | 
+                |
                 |          Set MainDraftAngle = AutoDraft.MainDraftAngle
                 |          AutoDraft.MainDraftAngle = NewMainDraftAngle
 
@@ -124,13 +124,13 @@ class AutoDraft(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Mode() As Reference
-                | 
+                |
                 |     Returns or sets the draft mode.
-                | 
+                |
                 |     Example:
                 |         The following example returns in Mode the mode of the draft AutoDraft
                 |         AutoDraft, and then sets it to NewMode:
-                | 
+                |
                 |          Set Mode = AutoDraft.Mode
                 |          AutoDraft.Mode = NewMode
 
@@ -155,14 +155,14 @@ class AutoDraft(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PartingElement() As Reference
-                | 
+                |
                 |     Returns or sets the parting element.
-                | 
+                |
                 |     Example:
                 |         The following example returns in PartingElement the parting element of
                 |         the AutoDraft AutoDraft, and then sets it to
                 |         NewpartingElement:
-                | 
+                |
                 |          Set PartingElement = AutoDraft.PartingElement
                 |          AutoDraft.PartingElement = NewPartingElement
 
@@ -187,14 +187,14 @@ class AutoDraft(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PullingDirection() As Reference
-                | 
+                |
                 |     Returns or sets the pulling direction.
-                | 
+                |
                 |     Example:
                 |         The following example returns in PullingDirection the pulling direction
                 |         of the AutoDraft AutoDraft, and then sets it to
                 |         NewPullingDirection.:
-                | 
+                |
                 |          Set PullingDirection = AutoDraft.PullingDirection
                 |          AutoDraft.PullingDirection = NewPullingDirection
 

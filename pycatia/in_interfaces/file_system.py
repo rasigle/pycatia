@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.file import File
@@ -16,26 +16,26 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class FileSystem(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     FileSystem
-                | 
-                | Represents the file system object.
-                | Role: The file system object allows you to access and manipulate folders and
-                | files. It can check the existence of, get, create, delete, or copy folders and
-                | files.
-                | 
-                | See also:
-                |     Folder, File
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     FileSystem
+            |
+            | Represents the file system object.
+            | Role: The file system object allows you to access and manipulate folders and
+            | files. It can check the existence of, get, create, delete, or copy folders and
+            | files.
+            |
+            | See also:
+            |     Folder, File
+
     """
 
     def __init__(self, com_object):
@@ -50,12 +50,12 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property FileSeparator() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the file separator string. (usually, // on Windows and / on
                 |     UNIX)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTmpDirectory
                 |             The file separator string.
 
@@ -72,11 +72,11 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PathSeparator() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the path separator string. (usually,; on Windows and : on UNIX)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTmpDirectory
                 |             The path separator string.
 
@@ -93,12 +93,12 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property TemporaryDirectory() As Folder (Read Only)
-                | 
+                |
                 |     Returns the temporary system directory. (usually, C://temp on Windows and
                 |     /tmp on UNIX)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTmpDirectory
                 |             A folder which corresponds to the temporary system
                 |             directory.
@@ -116,19 +116,19 @@ class FileSystem(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func ConcatenatePaths(CATBSTR iPathChunk1,
                 | CATBSTR iPathChunk2) As CATBSTR
-                | 
+                |
                 |     Concatenates two path chunks to make a new path. Either path chunk can be
                 |     empty. The resulting path does not have to exist. The method automatically
                 |     corrects improper path separators (/ Unix separators used on a Windows platform
                 |     are automatically replaced by // and vice versa).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPathChunk1
                 |             The first path chunk (for instance "E://tmp").
                 |         iPathChunk2
                 |             The second path chunk (for instance "local/myfile.txt").
-                |             
+                |
                 |         oPath
                 |             The resulting path (for instance
                 |             "E://tmp//local//myfile.txt").
@@ -139,7 +139,9 @@ class FileSystem(AnyObject):
         """
         return self.file_system.ConcatenatePaths(i_path_chunk1, i_path_chunk2)
 
-    def copy_file(self, i_path_source: str, i_path_destination: str, i_overwrite: bool) -> None:
+    def copy_file(
+        self, i_path_source: str, i_path_destination: str, i_overwrite: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -148,26 +150,26 @@ class FileSystem(AnyObject):
                 | o Sub CopyFile(CATBSTR iPathSource,
                 | CATBSTR iPathDestination,
                 | boolean iOverwrite)
-                | 
+                |
                 |     Copies a file from one location to another.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSourcePath
-                |             The full path of the source file. 
+                |             The full path of the source file.
                 |         iDestinationPath
                 |             The full destination path where the source file is to be copied.
-                |             
+                |
                 |         iOverwrite
                 |             Boolean value that is True if an existing file with the same name
                 |             can be overwritten; False if it is not, and the copy doesn't take
                 |             place.
-                | 
+                |
                 |             Example:
                 |                 This example copies the file C:/Tests/File1 to C:/Tests/File2
                 |                 from the file system object FileSys, except if a file with the name
                 |                 C:/Tests/File2 already exists.
-                | 
+                |
                 |                  FileSys.CopyFile("C:/Tests/File1", "C:/Tests/File2",
                 |                  False)
 
@@ -177,7 +179,7 @@ class FileSystem(AnyObject):
         :rtype: None
         """
         return self.file_system.CopyFile(i_path_source, i_path_destination, i_overwrite)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -201,24 +203,24 @@ class FileSystem(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub CopyFolder(CATBSTR iSourcePath,
                 | CATBSTR iDestinationPath)
-                | 
+                |
                 |     Recursively copies a folder from one location to another. Role: The folder
                 |     is copied along with its files, and all its subfolders and their own
                 |     files.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSourcePath
-                |             The full path of the source folder. 
+                |             The full path of the source folder.
                 |         iDestinationPath
                 |             The full destination path where the source folder, its files, and
                 |             its subfolders are to be copied.
-                | 
+                |
                 |             Example:
                 |                 This example copies the folder "C:/Tests/Fold1" to
                 |                 "C:/Tests/Fold2" of the file system object
                 |                 FileSys.
-                | 
+                |
                 |                  FileSys.CopyFolder("C:/Tests/Fold1",
                 |                  "C:/Tests/Fold2")
 
@@ -236,26 +238,26 @@ class FileSystem(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func CreateFile(CATBSTR iPath,
                 | boolean iOverwrite) As File
-                | 
+                |
                 |     Creates a file and returns the associated file object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
-                |             The full path where the file is to be created. 
+                |             The full path where the file is to be created.
                 |         iOverwrite
                 |             Boolean value that is True if an existing file with the same name
                 |             can be overwritten; False if it is not, and the creation doesn't take place.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         The created file
-                | 
+                |
                 |         Example:
                 |             This example creates the file C:/Tests/File1 and retrieves it in
                 |             the file object FileObj from the file system object FileSys, except if a file
                 |             with the name C:/Tests/File1 already exists.
-                | 
+                |
                 |              Dim FileObj As File
                 |              Set FileObj = FileSys.CreateFile("C:/Tests/File1", False)
 
@@ -272,22 +274,22 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func CreateFolder(CATBSTR iPath) As Folder
-                | 
+                |
                 |     Creates a folder and returns the associated folder object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
-                |             The full path where the folder is to be created. 
-                | 
+                |             The full path where the folder is to be created.
+                |
                 |     Returns:
                 |         The created folder object. If the folder already exists, the method
                 |         fails.
-                | 
+                |
                 |         Example:
                 |             This example creates the folder "C:/Tests/Fold1" and retrieves it
                 |             in FoldObj from the FileSystem FileSys.
-                | 
+                |
                 |              Dim FoldObj As Folder
                 |              Set FoldObj = FileSys.CreateFolder("C:/Tests/Fold1")
 
@@ -303,19 +305,19 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub DeleteFile(CATBSTR iPath)
-                | 
+                |
                 |     Deletes a file.
                 |     The method fails if the folder doesn't exist.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
                 |             The full path of the file to delete.
-                | 
+                |
                 |             Example:
                 |                 This example deletes the file "C:/Tests/File" from the file
                 |                 system object FileSys.
-                | 
+                |
                 |                  FileSys.DeleteFile("C:/Tests/File1")
 
         :param str i_path:
@@ -330,19 +332,19 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub DeleteFolder(CATBSTR iPath)
-                | 
+                |
                 |     Deletes a folder.
                 |     The method fails if the folder doesn't exist.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
                 |             The full path of the folder to delete.
-                | 
+                |
                 |             Example:
                 |                 This example deletes the folder "C:/Tests/Fold1" from the
                 |                 FileSystem FileSys.
-                | 
+                |
                 |                  FileSys.DeleteFolder("C:/Tests/Fold1")
 
         :param str i_path:
@@ -357,20 +359,20 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func FileExists(CATBSTR iPath) As boolean
-                | 
+                |
                 |     Returns whether a given file exists.
                 |     True if the file exists.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
                 |             The full path of the file.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves in Exists whether the file
                 |                 "C:/Tests/File1" exists in the file system object
                 |                 FileSys.
-                | 
+                |
                 |                  Dim Exists As Boolean
                 |                  Exists = FileSys.FileExists("C:/Tests/File1")
 
@@ -386,20 +388,20 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func FolderExists(CATBSTR iPath) As boolean
-                | 
+                |
                 |     Returns whether a given folder exists.
                 |     True if the folder exists.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
                 |             The full path of the folder.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves in Exists whether the folder
                 |                 "C:/Tests/Fold1" exists in the file system object
                 |                 FileSys.
-                | 
+                |
                 |                  Dim Exists As Boolean
                 |                  Exists=FileSys.FolderExists("C:/Tests/Fold1")
 
@@ -415,19 +417,19 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetFile(CATBSTR iPath) As File
-                | 
+                |
                 |     Returns a file using its full path.
                 |     The method fails if the folder doesn't exist.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
                 |             The full path of the file to retrieve.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the file C:/Tests in the FileObj from
                 |                 the file system object FileSys.
-                | 
+                |
                 |                  Dim FileObj As File
                 |                  Set FileObj = FileSys.GetFile("C:/Tests")
 
@@ -443,22 +445,22 @@ class FileSystem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetFolder(CATBSTR iPath) As Folder
-                | 
+                |
                 |     Returns a folder using its full path.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPath
-                |             The full path of the folder to retrieve. 
-                | 
+                |             The full path of the folder to retrieve.
+                |
                 |     Returns:
                 |         The retrieved folder. If the folder doesn't exist, the method
                 |         fails.
-                | 
+                |
                 |         Example:
                 |             This example retrieves the C:Tests folder in FoldObj from the file
                 |             system object FileSys.
-                | 
+                |
                 |              Dim FoldObj As Folder
                 |              Set FoldObj = FileSys.GetFolder("C:/Tests/")
 

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,40 +14,40 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class IgesSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         IgesSettingAtt
-                | 
-                | Represents the CATIA IGES setting controller object.
-                | Role: The CATIA IGES setting controller object deals with the setting
-                | attributes displayed in the IGES property page. To access this property
-                | page:
-                | 
-                |     Click the Options command in the Tools menu
-                |     Click + left of General to unfold the workbench list
-                |     Click Compatibility
-                |     Right scroll to display the property pages titles until you get
-                |     IGES
-                |     Click IGES
-                | 
-                | The New Elements setting controller object can be retrieved as an item of the
-                | setting controller collection using its name "CAACafNewEltSettingCtrl" as
-                | follows:
-                | 
-                |  Dim settingControllers1 As SettingControllers
-                |  Set settingControllers1 = CATIA.SettingControllers
-                |  Dim CATIAIGESSettingAtt1 As SettingController
-                |  Set CATIAIGESSettingAtt1 = settingControllers1.Item("CATIdeIgesSettingCtrl")
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         IgesSettingAtt
+            |
+            | Represents the CATIA IGES setting controller object.
+            | Role: The CATIA IGES setting controller object deals with the setting
+            | attributes displayed in the IGES property page. To access this property
+            | page:
+            |
+            |     Click the Options command in the Tools menu
+            |     Click + left of General to unfold the workbench list
+            |     Click Compatibility
+            |     Right scroll to display the property pages titles until you get
+            |     IGES
+            |     Click IGES
+            |
+            | The New Elements setting controller object can be retrieved as an item of the
+            | setting controller collection using its name "CAACafNewEltSettingCtrl" as
+            | follows:
+            |
+            |  Dim settingControllers1 As SettingControllers
+            |  Set settingControllers1 = CATIA.SettingControllers
+            |  Dim CATIAIGESSettingAtt1 As SettingController
+            |  Set CATIAIGESSettingAtt1 = settingControllers1.Item("CATIdeIgesSettingCtrl")
+
     """
 
     def __init__(self, com_object):
@@ -62,13 +62,13 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Angle() As double
-                | 
+                |
                 |     Returns or sets the Angle setting parameter value.
                 |     Role: The Angle setting parameter manages the maximal angle of
                 |     deformation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAngle
                 |             [out] The Angle parameter value
                 |             Legal values: value of angle in degree, between 0.0 and 10.0
@@ -95,13 +95,13 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ApplyJoin() As long
-                | 
+                |
                 |     Returns or sets the Apply join setting parameter value.
                 |     Role: The XXX setting parameter manages the Apply Join
                 |     mode
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oApplyJoin
                 |             [out] The Apply join parameter value
                 |             Legal values: 1 To Apply Join on faces, 0
@@ -128,13 +128,13 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AuthorName() As CATBSTR
-                | 
+                |
                 |     Returns or sets the Author Name setting parameter value.
                 |     Role: The Author Name setting parameter manages the Author
                 |     Name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAuthorName
                 |             [out] The Author Name parameter value
                 |             Legal values: (any text).
@@ -160,14 +160,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AuthorOrganization() As CATBSTR
-                | 
+                |
                 |     Returns or sets the Author Organization setting parameter
                 |     value.
                 |     Role: The Author Organization setting parameter manages the Author
                 |     Organization.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAuthorOrganization
                 |             [out] The Author Organization parameter value
                 |             Legal values: (any text).
@@ -193,14 +193,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CrvMod() As long
-                | 
+                |
                 |     Returns or sets the Export BSpline mode setting parameter
                 |     value.
                 |     Role: The Export BSpline mode setting parameter manages the mode to export
                 |     curves and surfaces
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCrvMod
                 |             [out] The Export BSpline mode parameter value
                 |             Legal values:
@@ -229,14 +229,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportMSBO() As long
-                | 
+                |
                 |     Returns or sets the Export Solid Mode setting parameter
                 |     value.
                 |     Role: The Export Solid Mode setting parameter manages the export of solids
                 |     and shells
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oExportMSBO
                 |             [out] The Export Solid Mode parameter value
                 |             Legal values: 1 to export solids and shells as 186/514 IGES
@@ -263,13 +263,13 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportUnit() As long
-                | 
+                |
                 |     Returns or sets the Export Units setting parameter value.
                 |     Role: The Export Units setting parameter manages the unit in exported IGES
                 |     Files.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oExportUnit
                 |             [out] The Export Units parameter value
                 |             Legal values: 0-10 :
@@ -306,14 +306,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportGroupAsSelSet() As long
-                | 
+                |
                 |     Returns or sets the Import Selection Set mode setting parameter
                 |     value.
                 |     Role: The Import Selection Set mode setting parameter manages the Import of
                 |     IGES groups.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oImportGroupAsSelSet
                 |             [out] The Import Selection Set mode parameter
                 |             value
@@ -342,14 +342,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OnlyShow() As long
-                | 
+                |
                 |     Returns or sets the Export only show setting parameter
                 |     value.
                 |     Role: The Export only show setting parameter manages the mode to export
                 |     entities in No-Show
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOnlyShow
                 |             [out] The Export only show parameter value
                 |             Legal values: 1 to export only visible elements, 0 to export
@@ -376,14 +376,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OptC2Mode() As long
-                | 
+                |
                 |     Returns or sets the Continuity Optimization Mode setting parameter
                 |     value.
                 |     Role: The Continuity Optimization Mode setting parameter manages the
                 |     ...
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOptC2Mode
                 |             [out] The Continuity Optimization Mode parameter
                 |             value
@@ -412,14 +412,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OptCleanTopoMode() As long
-                | 
+                |
                 |     Returns or sets the clean topo mode setting parameter
                 |     value.
                 |     Role: The clean topo mode setting parameter manages the the Fitting Mode,
                 |     in Advanced Optimize Continuity Mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOptCleanTopoMode
                 |             [out] The clean topo mode parameter value
                 |             Legal values: 0 to Disable the clean topo Mode, 1 to Enable the
@@ -446,13 +446,13 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OptFittingMode() As long
-                | 
+                |
                 |     Returns or sets the Fitting Mode setting parameter value.
                 |     Role: The Fitting Mode setting parameter manages the Fitting Mode, in
                 |     Advanced Optimize Continuity Mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOptFittingMode
                 |             [out] The Fitting Mode parameter value
                 |             Fitting Mode values: 0 to Disable the Fitting Mode, 1 to Enable the
@@ -479,14 +479,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OptInvalidGeomMode() As long
-                | 
+                |
                 |     Returns or sets the InvalidGeom mode setting parameter
                 |     value.
                 |     Role: The InvalidGeom mode setting parameter manages the Invalid Geometry
                 |     Checks.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOptInvalidGeomMode
                 |             [out] The InvalidGeom mode parameter value
                 |             Legal values: 0 to disable Invalid Geometry Checks, 1 to enable
@@ -513,13 +513,13 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OptLoop3DMode() As long
-                | 
+                |
                 |     Returns or sets the Force 3D Loop setting parameter value.
                 |     Role: The Force 3D Loop setting parameter manages the Import of IGES
                 |     boundaries, to use only the 3D representation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOptLoop3DMode
                 |             [out] The Force 3D Loop parameter value
                 |             Legal values: 0 to keep file preference, 1 to Force the use of 3D
@@ -546,14 +546,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PartProdMode() As long
-                | 
+                |
                 |     Returns or sets the Import Product mode setting parameter
                 |     value.
                 |     Role: The Import Product mode setting parameter manages the Product mode
                 |     for Import of 308/408 IGES entities.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPartProdMode
                 |             [out] The Import Product mode parameter value
                 |             Legal values: 0 to import 308/408 in a CATPart, 1 to create a
@@ -580,14 +580,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RepMod() As long
-                | 
+                |
                 |     Returns or sets the Export representation mode setting parameter
                 |     value.
                 |     Role: The Export representation mode setting parameter manages the export
                 |     of faces as surfaces or as wireframe.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRepMod
                 |             [out] The Export representation mode parameter
                 |             value
@@ -615,7 +615,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ShowCompletionDialogBox() As long
-                | 
+                |
                 |     Returns or sets the Show/No Show dialog box setting parameter
                 |     value.
                 |     Role: The Show/No Show dialog box setting parameter manages the visibility
@@ -643,14 +643,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TolJoin() As double
-                | 
+                |
                 |     Returns or sets the join tolerance setting parameter
                 |     value.
                 |     Role: The join tolerance setting parameter manages the Tolerance for
                 |     Join
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTolJoin
                 |             [out] The join tolerance parameter value
                 |             Legal values: Value of tolerance in mm, between 0.0 and 0.1
@@ -677,14 +677,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TolOptInvalidGeom() As double
-                | 
+                |
                 |     Returns or sets the InvalidGeom Tolerance setting parameter
                 |     value.
                 |     Role: The InvalidGeom Tolerance setting parameter manages the Tolerance for
                 |     invalid geometry checks.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTolOptInvalidGeom
                 |             [out] The InvalidGeom Tolerance parameter value
                 |             Legal values: value of tolerance, in mm, between 0.5 and 20
@@ -711,14 +711,14 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Tolerance() As double
-                | 
+                |
                 |     Returns or sets the tolerance ( optimize - fitting ) setting parameter
                 |     value.
                 |     Role: The tolerance ( optimize - fitting ) setting parameter manages the
                 |     tolerance for Optimize continuity and Fitting.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTolerance
                 |             [out] The tolerance ( optimize - fitting ) parameter
                 |             value
@@ -746,7 +746,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAngleInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Angle setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -764,7 +764,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetApplyJoinInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Apply Join setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -783,7 +783,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAuthorNameInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AuthorName
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -802,7 +802,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAuthorOrganizationInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AuthorOrganization
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -811,7 +811,9 @@ class IgesSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.iges_setting_att.GetAuthorOrganizationInfo(io_admin_level, io_locked)
+        return self.iges_setting_att.GetAuthorOrganizationInfo(
+            io_admin_level, io_locked
+        )
 
     def get_crv_mod_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -821,7 +823,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetCrvModInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Export BSpline mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -840,7 +842,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportMSBOInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Export Solid Mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -859,7 +861,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportUnitInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Export Units setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -870,7 +872,9 @@ class IgesSettingAtt(SettingController):
         """
         return self.iges_setting_att.GetExportUnitInfo(io_admin_level, io_locked)
 
-    def get_import_group_as_sel_set_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_import_group_as_sel_set_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -878,7 +882,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportGroupAsSelSetInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Import Selection Set mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -887,7 +891,9 @@ class IgesSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.iges_setting_att.GetImportGroupAsSelSetInfo(io_admin_level, io_locked)
+        return self.iges_setting_att.GetImportGroupAsSelSetInfo(
+            io_admin_level, io_locked
+        )
 
     def get_only_show_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -897,7 +903,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOnlyShowInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Export only show setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -916,7 +922,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOptC2ModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Continuity Optimization Mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -935,7 +941,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOptCleanTopoModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Clean Topo Mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -954,7 +960,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOptFittingModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Fitting Mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -965,7 +971,9 @@ class IgesSettingAtt(SettingController):
         """
         return self.iges_setting_att.GetOptFittingModeInfo(io_admin_level, io_locked)
 
-    def get_opt_invalid_geom_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_opt_invalid_geom_mode_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -973,7 +981,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOptInvalidGeomModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the InvalidGeom mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -982,7 +990,9 @@ class IgesSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.iges_setting_att.GetOptInvalidGeomModeInfo(io_admin_level, io_locked)
+        return self.iges_setting_att.GetOptInvalidGeomModeInfo(
+            io_admin_level, io_locked
+        )
 
     def get_opt_loop3_d_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -992,7 +1002,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOptLoop3DModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Force 3D Loop setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1011,7 +1021,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetPartProdModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Import Product mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1030,7 +1040,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetRepModInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Export representation mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1041,7 +1051,9 @@ class IgesSettingAtt(SettingController):
         """
         return self.iges_setting_att.GetRepModInfo(io_admin_level, io_locked)
 
-    def get_show_completion_dialog_box_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_show_completion_dialog_box_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1049,7 +1061,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetShowCompletionDialogBoxInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Show/No Show dialog box setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1058,7 +1070,9 @@ class IgesSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.iges_setting_att.GetShowCompletionDialogBoxInfo(io_admin_level, io_locked)
+        return self.iges_setting_att.GetShowCompletionDialogBoxInfo(
+            io_admin_level, io_locked
+        )
 
     def get_tol_join_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1068,7 +1082,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTolJoinInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the join tolerance setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1079,7 +1093,9 @@ class IgesSettingAtt(SettingController):
         """
         return self.iges_setting_att.GetTolJoinInfo(io_admin_level, io_locked)
 
-    def get_tol_opt_invalid_geom_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_tol_opt_invalid_geom_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1087,7 +1103,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTolOptInvalidGeomInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the InvalidGeom Tolerance setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1106,7 +1122,7 @@ class IgesSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetToleranceInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Tolerance ( optimize - fitting ) setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1124,7 +1140,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAngleLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Angle setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1132,7 +1148,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetAngleLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1155,7 +1171,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetApplyJoinLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Apply Join setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1163,7 +1179,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetApplyJoinLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1186,7 +1202,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAuthorNameLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AuthorName parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1194,7 +1210,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetAuthorNameLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1217,7 +1233,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAuthorOrganizationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AuthorOrganization parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1225,7 +1241,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetAuthorOrganizationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1248,7 +1264,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCrvModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export BSpline mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1257,7 +1273,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetCrvModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1280,7 +1296,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportMSBOLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Solid Mode setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1288,7 +1304,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetExportMSBOLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1311,7 +1327,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportUnitLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Units setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1319,7 +1335,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetExportUnitLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1342,7 +1358,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportGroupAsSelSetLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Import Selection Set mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1351,7 +1367,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetImportGroupAsSelSetLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1374,7 +1390,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOnlyShowLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export only show setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1382,7 +1398,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetOnlyShowLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1405,7 +1421,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOptC2ModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Continuity Optimizationmode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1414,7 +1430,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetOptC2ModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1437,7 +1453,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOptCleanTopoModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Clean Topo Mode setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1445,7 +1461,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetOptCleanTopoModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1468,7 +1484,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOptFittingModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Fitting Mode setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1476,7 +1492,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetOptFittingModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1499,7 +1515,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOptInvalidGeomModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the InvalidGeom mode setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1507,7 +1523,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetOptInvalidGeomModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1530,7 +1546,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOptLoop3DModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Force 3D Loop setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1538,7 +1554,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetOptLoop3DModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1561,7 +1577,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPartProdModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Import Product mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1570,7 +1586,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetPartProdModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1593,7 +1609,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetRepModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export representation mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1602,7 +1618,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetRepModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1625,7 +1641,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetShowCompletionDialogBoxLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Show/No Show dialog box setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1634,7 +1650,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetShowCompletionDialogBoxLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1657,7 +1673,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetTolJoinLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the join tolerance setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -1665,7 +1681,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetTolJoinLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1688,7 +1704,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetTolOptInvalidGeomLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the InvalidGeom Tolerance setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1697,7 +1713,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetTolOptInvalidGeomLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1720,7 +1736,7 @@ class IgesSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetToleranceLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Tolerance ( optimize - fitting ) setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -1729,7 +1745,7 @@ class IgesSettingAtt(SettingController):
         :rtype: None
         """
         return self.iges_setting_att.SetToleranceLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

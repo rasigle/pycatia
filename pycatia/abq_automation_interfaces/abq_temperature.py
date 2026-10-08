@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import Distribution_Type
 from pycatia.abq_automation_interfaces.abq_job import ABQJob
 from pycatia.in_interfaces.reference import Reference
@@ -18,23 +19,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class ABQTemperature(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQTemperature
-                | 
-                | Represents an Abaqus temperature object (ABQTemperature).
-                | Role: Access an Abaqus temperature object or determine its properties. It has
-                | common properties of ABQInitialTemperature,
-                | ABQTemperatureHistory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQTemperature
+            |
+            | Represents an Abaqus temperature object (ABQTemperature).
+            | Role: Access an Abaqus temperature object or determine its properties. It has
+            | common properties of ABQInitialTemperature,
+            | ABQTemperatureHistory
+
     """
 
     def __init__(self, com_object):
@@ -49,9 +50,9 @@ class ABQTemperature(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ApplyUserSubroutine() As boolean
-                | 
+                |
                 |     Sets or returns the user subroutine flag.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether a user subroutine will be
                 |         applied.
@@ -77,22 +78,22 @@ class ABQTemperature(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Distribution() As Distribution_Type
-                | 
+                |
                 |     Sets or returns the distribution type associated with this temperature
                 |     field.
-                | 
-                |       
+                |
+                |
                 |     Legal values:
                 |      UNIFORM
-                |      JOB 
-                |      USERDEFINED 
+                |      JOB
+                |      USERDEFINED
                 |      JOB_USERDEFINED
-                |      
-                | 
+                |
+                |
                 |     Example:
                 |         This example sets the distribution type to
                 |         USERDEFINED.
-                | 
+                |
                 |          Dim abqTemperature As ABQTemperature
                 |          abqTemperature.Distribution = USERDEFINED
 
@@ -117,17 +118,17 @@ class ABQTemperature(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Job() As ABQJob
-                | 
+                |
                 |     Sets or returns the Abaqus job associated with this temperature field. *
                 |     The job being attached to the temperature field must belong to a thermal case
                 |     and must not belong to same analysis case to which the temperature field
                 |     belongs.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the ABQJob abqJob.
-                | 
+                |
                 |          Dim abqTemperature As ABQTemperature
-                |          Dim abqJob As ABQJob 
+                |          Dim abqJob As ABQJob
                 |          Set abqJob = abqTemperature.Job
 
         :rtype: ABQJob
@@ -151,9 +152,9 @@ class ABQTemperature(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Magnitude() As double
-                | 
+                |
                 |     Sets or returns the magnitude of the temperature field.
-                | 
+                |
                 |     Returns:
                 |         The magnitude of the temperature field.
 
@@ -178,9 +179,9 @@ class ABQTemperature(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Type() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the type of the Temperature.
-                | 
+                |
                 |     Returns:
                 |         The type of the Temperature.
 
@@ -189,7 +190,9 @@ class ABQTemperature(AnyObject):
 
         return self.abq_temperature.Type
 
-    def add_support_from_product(self, i_product: Product, i_support: Reference) -> None:
+    def add_support_from_product(
+        self, i_product: Product, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -197,11 +200,11 @@ class ABQTemperature(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromProduct(Product iProduct,
                 | Reference iSupport)
-                | 
+                |
                 |     This adds the support from a product to the Field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIA Product specifying the object to which the field is
                 |             applied.
@@ -214,8 +217,10 @@ class ABQTemperature(AnyObject):
         :param Reference i_support:
         :rtype: None
         """
-        return self.abq_temperature.AddSupportFromProduct(i_product.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_temperature.AddSupportFromProduct(
+            i_product.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -231,7 +236,9 @@ class ABQTemperature(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_publication(self, i_product: Product, i_publication: Publication) -> None:
+    def add_support_from_publication(
+        self, i_product: Product, i_publication: Publication
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -239,27 +246,29 @@ class ABQTemperature(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromPublication(Product iProduct,
                 | Publication iPublication)
-                | 
+                |
                 |     Creates a new support and adds it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIA Product specifying the object to which the field is
                 |             applied.
                 |         iPublication
                 |             The CATIA Publication specifying the region to which the field is
                 |             applied.
-                | 
+                |
                 |             Refer: CATIAPublication
 
         :param Product i_product:
         :param Publication i_publication:
         :rtype: None
         """
-        return self.abq_temperature.AddSupportFromPublication(i_product.com_object, i_publication.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_temperature.AddSupportFromPublication(
+            i_product.com_object, i_publication.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

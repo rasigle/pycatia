@@ -1,8 +1,8 @@
-_vba_nothing = '''
+_vba_nothing = """
 Function N()        
     set N = Nothing        
 End Function
-'''
+"""
 
 
 class VBANothing(str):

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,21 +14,21 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class EndCutESSObjectSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         EndCutESSObjectSettingAtt
-                | 
-                | The interface to access a CATIAEndCutESSObjectSettingAtt.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         EndCutESSObjectSettingAtt
+            |
+            | The interface to access a CATIAEndCutESSObjectSettingAtt.
+
     """
 
     def __init__(self, com_object):
@@ -43,9 +43,9 @@ class EndCutESSObjectSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MemberEndCut() As CATBSTR
-                | 
+                |
                 |     Returns or sets the MemberEndCut parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: str
@@ -113,24 +113,24 @@ class EndCutESSObjectSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMemberEndCutInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the MemberEndCut
                 |     parameter.
                 |     Role:Retrieves the state of the MemberEndCut parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -139,7 +139,9 @@ class EndCutESSObjectSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.end_cut_ess_object_setting_att.GetMemberEndCutInfo(io_admin_level, io_locked)
+        return self.end_cut_ess_object_setting_att.GetMemberEndCutInfo(
+            io_admin_level, io_locked
+        )
 
     def get_sfe_end_cut_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -149,24 +151,24 @@ class EndCutESSObjectSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSFEEndCutInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the SFEEndCut
                 |     parameter.
                 |     Role:Retrieves the state of the SFEEndCut parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -175,7 +177,9 @@ class EndCutESSObjectSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.end_cut_ess_object_setting_att.GetSFEEndCutInfo(io_admin_level, io_locked)
+        return self.end_cut_ess_object_setting_att.GetSFEEndCutInfo(
+            io_admin_level, io_locked
+        )
 
     def get_stiffener_end_cut_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -185,24 +189,24 @@ class EndCutESSObjectSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetStiffenerEndCutInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the StiffenerEndCut
                 |     parameter.
                 |     Role:Retrieves the state of the StiffenerEndCut parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -211,7 +215,9 @@ class EndCutESSObjectSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.end_cut_ess_object_setting_att.GetStiffenerEndCutInfo(io_admin_level, io_locked)
+        return self.end_cut_ess_object_setting_att.GetStiffenerEndCutInfo(
+            io_admin_level, io_locked
+        )
 
     def set_member_end_cut_lock(self, i_locked: bool) -> None:
         """
@@ -225,7 +231,7 @@ class EndCutESSObjectSettingAtt(SettingController):
         :rtype: None
         """
         return self.end_cut_ess_object_setting_att.SetMemberEndCutLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -253,7 +259,7 @@ class EndCutESSObjectSettingAtt(SettingController):
         :rtype: None
         """
         return self.end_cut_ess_object_setting_att.SetSFEEndCutLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -281,7 +287,7 @@ class EndCutESSObjectSettingAtt(SettingController):
         :rtype: None
         """
         return self.end_cut_ess_object_setting_att.SetStiffenerEndCutLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

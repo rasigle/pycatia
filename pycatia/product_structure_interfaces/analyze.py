@@ -1,11 +1,11 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
 
@@ -14,19 +14,19 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class Analyze(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Analyze
-                |
-                | Represents the analysis object associated with a product.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Analyze
+            |
+            | Represents the analysis object associated with a product.
 
     """
 
@@ -150,7 +150,7 @@ class Analyze(AnyObject):
         # some methods require a system service call as the methods expects a vb array object
         # passed to it and there is no way to do this directly with python. In those cases the following code
         # should be uncommented and edited accordingly. Otherwise completely remove all this.
-        vba_function_name = 'get_gravity_center'
+        vba_function_name = "get_gravity_center"
         vba_code = """
         Public Function get_gravity_center(analyze)
             Dim oGravityCenterCoordinatesArray (2)
@@ -160,7 +160,9 @@ class Analyze(AnyObject):
         """
 
         system_service = self.application.system_service
-        return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
+        return system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.com_object]
+        )
 
     def get_inertia(self):
         """
@@ -207,7 +209,7 @@ class Analyze(AnyObject):
         # some methods require a system service call as the methods expects a vb array object
         # passed to it and there is no way to do this directly with python. In those cases the following code
         # should be uncommented and edited accordingly. Otherwise completely remove all this.
-        vba_function_name = 'get_inertia'
+        vba_function_name = "get_inertia"
         vba_code = """
         Public Function get_inertia(analyze)
             Dim oInertiaMatrixArray (8)
@@ -217,7 +219,9 @@ class Analyze(AnyObject):
         """
 
         system_service = self.application.system_service
-        return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
+        return system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.com_object]
+        )
 
     def __repr__(self):
         return f'Analyze(name="{self.name}")'

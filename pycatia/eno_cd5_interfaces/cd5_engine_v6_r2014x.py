@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CD5SaveOperation_Scope
 from pycatia.eno_cd5_interfaces.cd5_engine import CD5Engine
 from pycatia.eno_cd5_interfaces.cd5_save_operation import CD5SaveOperation
@@ -15,43 +16,45 @@ from pycatia.eno_cd5_interfaces.cd5_save_operation import CD5SaveOperation
 
 class CD5EngineV6R2014x(CD5Engine):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ENOCD5Interfaces.CD5Engine
-                |                         CD5EngineV6R2014x
-                | 
-                | Represents the ENOVIA V6 Integration Engine, that is to say the entry point to
-                | the CATIA/ENOVIA V6 Integration.
-                | 
-                | It allows end user to realize ENOVIA V6 Integration operations such as
-                | Connection, Disconnection, Open, Save...
-                | Note that all operations performed from this interface are the same as
-                | operations available in the ENOVIA V6 menu in CATIA, unless most of them are
-                | executed without panel.
-                | 
-                | Example:
-                | 
-                |       The following example indicates how to retrieve the ENOVIA V6 Integration
-                |       Engine.
-                |
-                |      Dim oCD5Engine As CD5EngineV6R2014x
-                |      Set oCD5Engine = CATIA.GetItem("CD5EngineV6R2014x")
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ENOCD5Interfaces.CD5Engine
+            |                         CD5EngineV6R2014x
+            |
+            | Represents the ENOVIA V6 Integration Engine, that is to say the entry point to
+            | the CATIA/ENOVIA V6 Integration.
+            |
+            | It allows end user to realize ENOVIA V6 Integration operations such as
+            | Connection, Disconnection, Open, Save...
+            | Note that all operations performed from this interface are the same as
+            | operations available in the ENOVIA V6 menu in CATIA, unless most of them are
+            | executed without panel.
+            |
+            | Example:
+            |
+            |       The following example indicates how to retrieve the ENOVIA V6 Integration
+            |       Engine.
+            |
+            |      Dim oCD5Engine As CD5EngineV6R2014x
+            |      Set oCD5Engine = CATIA.GetItem("CD5EngineV6R2014x")
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.cd5_engine_v6_r2014x = com_object
 
-    def create_save_operation(self, i_scope: CD5SaveOperation_Scope) -> CD5SaveOperation:
+    def create_save_operation(
+        self, i_scope: CD5SaveOperation_Scope
+    ) -> CD5SaveOperation:
         """
         .. note::
             :class: toggle
@@ -85,7 +88,9 @@ class CD5EngineV6R2014x(CD5Engine):
         :param CD5SaveOperation_Scope i_scope:
         :rtype: CD5SaveOperation
         """
-        return CD5SaveOperation(self.cd5_engine_v6_r2014x.CreateSaveOperation(i_scope).com_object)
+        return CD5SaveOperation(
+            self.cd5_engine_v6_r2014x.CreateSaveOperation(i_scope).com_object
+        )
 
     def generate_autoname(self, i_autoname_series: str, i_count: int) -> tuple:
         """

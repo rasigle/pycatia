@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_sch_platform_interfaces.sch_route import SchRoute
 from pycatia.in_interfaces.document import Document
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,20 +16,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SchAppRoute(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchAppRoute
-                | 
-                | Manage a schematic route.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchAppRoute
+            |
+            | Manage a schematic route.
+
     """
 
     def __init__(self, com_object):
@@ -42,14 +43,14 @@ class SchAppRoute(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppBreak() As AnyObject
-                | 
+                |
                 |     Break the application route into 2 routes.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNewAppRoute
-                |             New application route 
-                | 
+                |             New application route
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchAppRoute
@@ -61,7 +62,9 @@ class SchAppRoute(AnyObject):
         """
         return AnyObject(self.sch_app_route.AppBreak())
 
-    def app_create_local_reference(self, i_document_to_put_copy_in: Document) -> 'SchAppRoute':
+    def app_create_local_reference(
+        self, i_document_to_put_copy_in: Document
+    ) -> "SchAppRoute":
         """
         .. note::
             :class: toggle
@@ -69,21 +72,21 @@ class SchAppRoute(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppCreateLocalReference(Document iDocumentToPutCopyIn) As
                 | SchAppRoute
-                | 
+                |
                 |     Make a local route reference in another document by copying an existing one
                 |     in the current document.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDocumentToPutCopyIn
-                |             Pointer to the document to make the copy in 
+                |             Pointer to the document to make the copy in
                 |         oSchAppRoute
-                |             Pointer to the copy. 
-                | 
+                |             Pointer to the copy.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppRoute
                 |          Dim objArg1 As Document
                 |          Dim objArg2 As SchAppRoute
@@ -93,7 +96,11 @@ class SchAppRoute(AnyObject):
         :param Document i_document_to_put_copy_in:
         :rtype: SchAppRoute
         """
-        return SchAppRoute(self.sch_app_route.AppCreateLocalReference(i_document_to_put_copy_in.com_object))
+        return SchAppRoute(
+            self.sch_app_route.AppCreateLocalReference(
+                i_document_to_put_copy_in.com_object
+            )
+        )
 
     def app_ok_to_branch(self, i_branch_class_type: str, o_b_yes: bool) -> None:
         """
@@ -103,18 +110,18 @@ class SchAppRoute(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToBranch(CATBSTR iBranchClassType,
                 | boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to create branch.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iBranchClassType
-                |             Class type of the branch to create. 
+                |             Class type of the branch to create.
                 |         oBYes
                 |             If TRUE, then it is OK to create a branch from an application route
                 |
                 |     Example:
-                | 
+                |
                 |          Dim objThisIntf As SchAppRoute
                 |          Dim strVar1 As String
                 |          Dim bVar2 As boolean
@@ -126,7 +133,7 @@ class SchAppRoute(AnyObject):
         :rtype: None
         """
         return self.sch_app_route.AppOKToBranch(i_branch_class_type, o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -149,19 +156,19 @@ class SchAppRoute(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToBreak(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to break.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
                 |             If TRUE, then it is OK to break the application route
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppRoute
                 |          Dim bVar1 As boolean
                 |           ...
@@ -171,7 +178,7 @@ class SchAppRoute(AnyObject):
         :rtype: None
         """
         return self.sch_app_route.AppOKToBreak(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -194,15 +201,15 @@ class SchAppRoute(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToConcatenate(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to concatenate.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
                 |             If TRUE, then it is OK to concatenate the application route with
-                |             another 
-                | 
+                |             another
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchAppRoute
@@ -214,7 +221,7 @@ class SchAppRoute(AnyObject):
         :rtype: None
         """
         return self.sch_app_route.AppOKToConcatenate(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -237,16 +244,16 @@ class SchAppRoute(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToModifyPoints(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to modify (add or remove) the
                 |     points.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
                 |             If TRUE, then it is OK to add or remove the points from the
-                |             application route 
-                | 
+                |             application route
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchAppRoute
@@ -258,7 +265,7 @@ class SchAppRoute(AnyObject):
         :rtype: None
         """
         return self.sch_app_route.AppOKToModifyPoints(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -274,7 +281,9 @@ class SchAppRoute(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def app_post_break_process(self, i_old_app_route: SchRoute, i_new_app_route: SchRoute) -> None:
+    def app_post_break_process(
+        self, i_old_app_route: SchRoute, i_new_app_route: SchRoute
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -282,17 +291,17 @@ class SchAppRoute(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostBreakProcess(SchRoute iOldAppRoute,
                 | SchRoute iNewAppRoute)
-                | 
+                |
                 |     Post process after breaking an application route into 2
                 |     pieces.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iOldAppRoute
-                |             The old application route object 
+                |             The old application route object
                 |         iNewAppRoute
-                |             The new Application route object 
-                | 
+                |             The new Application route object
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchAppRoute
@@ -305,8 +314,10 @@ class SchAppRoute(AnyObject):
         :param SchRoute i_new_app_route:
         :rtype: None
         """
-        return self.sch_app_route.AppPostBreakProcess(i_old_app_route.com_object, i_new_app_route.com_object)
-        # # # # Autogenerated comment: 
+        return self.sch_app_route.AppPostBreakProcess(
+            i_old_app_route.com_object, i_new_app_route.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -329,12 +340,12 @@ class SchAppRoute(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostConcatenateProcess(SchRoute iSchRoute2)
-                | 
+                |
                 |     Post process after concatenate 2 application routes into
                 |     one.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSchRoute2
                 |             Second route to be concatenate to this. This route will be deleted.
                 |
@@ -349,7 +360,7 @@ class SchAppRoute(AnyObject):
         :rtype: None
         """
         return self.sch_app_route.AppPostConcatenateProcess(i_sch_route2.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

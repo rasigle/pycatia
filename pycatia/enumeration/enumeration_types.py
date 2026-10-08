@@ -307,9 +307,7 @@ cat_clash_computation_type = (
     "catClashComputationTypeBetweenTwo",
 )
 
-cat_clash_export_type = (
-    "CatClashExportTypeXMLResultOnly",
-)
+cat_clash_export_type = ("CatClashExportTypeXMLResultOnly",)
 
 cat_clash_import_type = (
     "CatClashImportTypeClashOnly",
@@ -1018,9 +1016,7 @@ cat_marker_2d_type = (
     "catMarker2DTypePicture",
 )
 
-cat_marker_3d_type = (
-    "catMarker3DTypeText",
-)
+cat_marker_3d_type = ("catMarker3DTypeText",)
 
 cat_marker_text_orientation = (
     "CatMarkerTextOrientationRight",
@@ -2476,10 +2472,7 @@ stabilization_type = (
     "FACTOR",
 )
 
-swk_anthro_sex = (
-    "Male",
-    "Female"
-)
+swk_anthro_sex = ("Male", "Female")
 
 swk_posture_spec = (
     "SWKPostureSpecDefault",
@@ -2498,12 +2491,12 @@ time_span_type = (
 )
 
 geometrical_feature_type = (
-    'Unknown',
-    'Point',
-    'Curve',
-    'Line',
-    'Circle',
-    'Surface',
-    'Plane',
-    'Solid / Volume'
+    "Unknown",
+    "Point",
+    "Curve",
+    "Line",
+    "Circle",
+    "Surface",
+    "Plane",
+    "Solid / Volume",
 )

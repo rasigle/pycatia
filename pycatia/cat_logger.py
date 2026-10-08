@@ -48,13 +48,13 @@ def create_logger() -> logging.Logger:
         logging.Formatter("[%(asctime)s] %(levelname)s in %(module)s: %(message)s")
     )
 
-    logger = logging.getLogger('pycatia')
+    logger = logging.getLogger("pycatia")
 
     logger.setLevel(logging.INFO)
-    
+
     # clear existed Handlers
     logger.handlers.clear()
-    
+
     logger.addHandler(default_handler)
 
     return logger

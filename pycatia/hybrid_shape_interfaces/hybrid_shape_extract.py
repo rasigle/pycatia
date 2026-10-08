@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -14,31 +14,30 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 
 class HybridShapeExtract(HybridShape):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeExtract
-                | 
-                | Represents the hybrid shape extract feature object.
-                | Role: To access the data of the hybrid shape extract feature
-                | object.
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeExtract
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory.AddNewExtract
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeExtract
+            |
+            | Represents the hybrid shape extract feature object.
+            | Role: To access the data of the hybrid shape extract feature
+            | object.
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeExtract
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory.AddNewExtract
+
     """
 
     def __init__(self, com_object):
@@ -53,12 +52,12 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AngularThreshold() As double
-                | 
+                |
                 |     Returns or sets the AngularThreshold.
-                | 
+                |
                 |     Example: This example retrieves the AngularThreshold of the hybShpExtract
                 |     in AngularThH.
-                | 
+                |
                 |      Dim AngularThH as double
                 |      AngularThH = hybShpExtract.AngularThreshold
 
@@ -83,13 +82,13 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AngularThresholdActivity() As boolean
-                | 
+                |
                 |     Returns or sets the AngularThresholdActivity.
-                | 
+                |
                 |     Example: This example retrieves the AngularThresholdActivity of the
                 |     hybShpExtract in AngularActivity .
-                | 
-                |      Dim AngularActivity as boolean 
+                |
+                |      Dim AngularActivity as boolean
                 |      AngularActivity = hybShpExtract.AngularThresholdActivity
 
         :rtype: bool
@@ -113,7 +112,7 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ComplementaryExtract() As boolean
-                | 
+                |
                 |     Returns or sets the ComplementaryExtract checked/unchecked for the extract.
 
         :rtype: bool
@@ -137,12 +136,12 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CurvatureThreshold() As double
-                | 
+                |
                 |     Returns or sets the CurvatureThreshold.
-                | 
+                |
                 |     Example: This example retrieves the CurvatureThreshold of the hybShpExtract
                 |     in CurvatureThH.
-                | 
+                |
                 |      Dim CurvatureThH as double
                 |      CurvatureThH = hybShpExtract.CurvatureThreshold
 
@@ -167,13 +166,13 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CurvatureThresholdActivity() As boolean
-                | 
+                |
                 |     Returns or sets the CurvatureThresholdActivity.
-                | 
+                |
                 |     Example: This example retrieves the CurvatureThresholdActivity of the
                 |     hybShpExtract in CurvatureActivity .
-                | 
-                |      Dim CurvatureActivity as boolean 
+                |
+                |      Dim CurvatureActivity as boolean
                 |      CurvatureActivity = hybShpExtract.CurvatureThresholdActivity
 
         :rtype: bool
@@ -197,12 +196,12 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DistanceThreshold() As double
-                | 
+                |
                 |     Returns or sets the DistanceThreshold.
-                | 
+                |
                 |     Example: This example retrieves the DistanceThreshold of the hybShpExtract
                 |     in DistanceThH.
-                | 
+                |
                 |      Dim DistanceThH as double
                 |      DistanceThH = hybShpExtract.DistanceThreshold
 
@@ -227,13 +226,13 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DistanceThresholdActivity() As boolean
-                | 
+                |
                 |     Returns or sets the DistanceThresholdActivity.
-                | 
+                |
                 |     Example: This example retrieves the DistanceThresholdActivity of the
                 |     hybShpExtract in DistanceActivity .
-                | 
-                |      Dim DistanceActivity as boolean 
+                |
+                |      Dim DistanceActivity as boolean
                 |      DistanceActivity = hybShpExtract.DistanceThresholdActivity
 
         :rtype: bool
@@ -257,10 +256,10 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Elem() As Reference
-                | 
+                |
                 |     Returns or sets the sub element used as init for the
                 |     propagation.
-                | 
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -285,7 +284,7 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property IsFederated() As boolean
-                | 
+                |
                 |     Returns or sets the IsFederated flag checked/unchecked for the extract.
 
         :rtype: bool
@@ -309,11 +308,11 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PropagationType() As long
-                | 
+                |
                 |     Returns or sets the type of propagation for the extract.
                 |     The propagation types for the extract can have the following
                 |     values:
-                | 
+                |
                 |         1 for extraction propagation in point continuity
                 |         2 for extraction propagation in tangent continuity
                 |         3 for extraction without propagation
@@ -339,7 +338,7 @@ class HybridShapeExtract(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns or sets the support for the extract.
 
         :rtype: Reference

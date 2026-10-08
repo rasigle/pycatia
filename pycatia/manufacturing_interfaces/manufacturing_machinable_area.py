@@ -1,40 +1,43 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.manufacturing_interfaces.manufacturing_machinable_feature import ManufacturingMachinableFeature
+
+from pycatia.manufacturing_interfaces.manufacturing_machinable_feature import (
+    ManufacturingMachinableFeature,
+)
 
 
 class ManufacturingMachinableArea(ManufacturingMachinableFeature):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                    ManufacturingInterfaces.ManufacturingFeature
-                |                        ManufacturingInterfaces.ManufacturingMachinableFeature
-                |                             ManufacturingMachinableArea
-                | 
-                | Machinable Area in Manufacturing.
-                | It is a manufacturing feature pointing design features through one or several
-                | machinable geometry. This manufacturing feature could be a target for a
-                | manufacturing activity.
-                | 
-                | See also:
-                |     ManufacturingMachinableGeometry, ManufacturingActivity
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                    ManufacturingInterfaces.ManufacturingFeature
+            |                        ManufacturingInterfaces.ManufacturingMachinableFeature
+            |                             ManufacturingMachinableArea
+            |
+            | Machinable Area in Manufacturing.
+            | It is a manufacturing feature pointing design features through one or several
+            | machinable geometry. This manufacturing feature could be a target for a
+            | manufacturing activity.
+            |
+            | See also:
+            |     ManufacturingMachinableGeometry, ManufacturingActivity
+
     """
 
     def __init__(self, com_object):
@@ -49,16 +52,16 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Freezed() As boolean
-                | 
+                |
                 |     Returns the manufacturing machinable area freezed state.
-                | 
+                |
                 |     Returns:
                 |         oFreezed The manufacturing machinable area freezed state
-                |         
+                |
                 |     Example:
                 |         The following example returns in bFreezed the freezed state of
                 |         manufacturing machinable area firstMachArea:
-                | 
+                |
                 |          Dim firstMachArea As ManufacturingMachinableArea
                 |          Set firstMachArea = ...
                 |          Dim bFreezed As boolean
@@ -85,18 +88,18 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property VisibleInMfgView() As boolean
-                | 
+                |
                 |     Returns the manufacturing machinable area visibility
                 |     state.
-                | 
+                |
                 |     Returns:
                 |         oVisibleInMfgView The manufacturing machinable area visibility state
-                |         
+                |
                 |     Example:
                 |         The following example returns in bVisibleInMfgView the visible state in
                 |         the Manufacturing View of manufacturing machinable area
                 |         firstMachArea:
-                | 
+                |
                 |          Dim firstMachArea As ManufacturingMachinableArea
                 |          Set firstMachArea = ...
                 |          Dim bVisibleInMfgView As boolean
@@ -115,7 +118,9 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
 
         self.manufacturing_machinable_area.VisibleInMfgView = value
 
-    def add_machinable_geometry(self, i_machinable_geometry: ManufacturingMachinableFeature) -> None:
+    def add_machinable_geometry(
+        self, i_machinable_geometry: ManufacturingMachinableFeature
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -123,18 +128,18 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddMachinableGeometry(ManufacturingMachinableFeature
                 | iMachinableGeometry)
-                | 
+                |
                 |     Adds a machinable geometry to the list.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMachinableGeometry
-                |             The machinable geometry to affect 
-                | 
+                |             The machinable geometry to affect
+                |
                 |     Example:
                 |         The following example adds the machinable geometry MachGeomToAdd to the
                 |         manufacturing machinable area firstMachArea.
-                | 
+                |
                 |          Dim firstMachArea As ManufacturingMachinableArea
                 |          Set firstMachArea = ...
                 |          Dim MachGeomToAdd As ManufacturingMachinableGeometry
@@ -145,8 +150,10 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
         :param ManufacturingMachinableFeature i_machinable_geometry:
         :rtype: None
         """
-        return self.manufacturing_machinable_area.AddMachinableGeometry(i_machinable_geometry.com_object)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machinable_area.AddMachinableGeometry(
+            i_machinable_geometry.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -170,23 +177,23 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListMachinableGeometry(CATSafeArrayVariant
                 | oListOfMachinableGeometry)
-                | 
+                |
                 |     Retrieves the machinable geometry list.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfMachinableGeometry
                 |             The retrieved list.
                 |             The array must be previously initialized using the
-                |             
-                | 
-                |         MachinableGeometryCount method. 
-                | 
+                |
+                |
+                |         MachinableGeometryCount method.
+                |
                 | Example:
                 |     The following example retrieves the machinable geometry list of the
                 |     manufacturing machinable area firstMachArea in
                 |     MachinableGeometryList.
-                | 
+                |
                 |      Dim firstMachArea As ManufacturingMachinableArea
                 |      Set firstMachArea = ...
                 |      Dim MachinableGeometryListSize As Long
@@ -201,8 +208,10 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
         :param tuple o_list_of_machinable_geometry:
         :rtype: tuple
         """
-        return self.manufacturing_machinable_area.ListMachinableGeometry(o_list_of_machinable_geometry)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machinable_area.ListMachinableGeometry(
+            o_list_of_machinable_geometry
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -218,7 +227,9 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def list_manufacturing_activity_connected(self, o_list_of_manufacturing_activity_connected: tuple) -> tuple:
+    def list_manufacturing_activity_connected(
+        self, o_list_of_manufacturing_activity_connected: tuple
+    ) -> tuple:
         """
         .. note::
             :class: toggle
@@ -226,23 +237,23 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListManufacturingActivityConnected(CATSafeArrayVariant
                 | oListOfManufacturingActivityConnected)
-                | 
+                |
                 |     Retrieves the manufacturing activity connected list.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfManufacturingActivityConnected
                 |             The retrieved list.
                 |             The array must be previously initialized using the
-                |             
-                | 
-                |         ManufacturingActivityConnectedCount method. 
-                | 
+                |
+                |
+                |         ManufacturingActivityConnectedCount method.
+                |
                 | Example:
                 |     The following example retrieves the manufacturing activity connected list
                 |     of the manufacturing machinable area firstMachArea in
                 |     ManufacturingActivityConnectedList.
-                | 
+                |
                 |      Dim firstMachArea As ManufacturingMachinableArea
                 |      Set firstMachArea = ...
                 |      Dim ManufacturingActivityConnectedListSize As Long
@@ -257,8 +268,9 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
         :rtype: tuple
         """
         return self.manufacturing_machinable_area.ListManufacturingActivityConnected(
-            o_list_of_manufacturing_activity_connected)
-        # # # # Autogenerated comment: 
+            o_list_of_manufacturing_activity_connected
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -281,11 +293,11 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func MachinableGeometryCount() As long
-                | 
+                |
                 |     Returns the machinable geometry list count.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMachinableGeometryCount
                 |             The number of machinable geometry connected to this feature
                 |
@@ -293,7 +305,7 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
                 |         The following example retrieves the machinable geometry list count of
                 |         the manufacturing machinable area firstMachArea in
                 |         MachinableGeometryListSize.
-                | 
+                |
                 |          Dim firstMachArea As ManufacturingMachinableArea
                 |          Set firstMachArea = ...
                 |          Dim MachinableGeometryListSize As Long
@@ -310,11 +322,11 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ManufacturingActivityConnectedCount() As long
-                | 
+                |
                 |     Returns the manufacturing activity connected list count.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oManufacturingActivityConnectedCount
                 |             The number of manufacturing activity pointing this feature
                 |
@@ -322,7 +334,7 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
                 |         The following example retrieves the manufacturing activity connected
                 |         list count of the manufacturing machinable area firstMachArea in
                 |         ManufacturingActivityConnectedListSize.
-                | 
+                |
                 |          Dim firstMachArea As ManufacturingMachinableArea
                 |          Set firstMachArea = ...
                 |          Dim ManufacturingActivityConnectedListSize As Long
@@ -332,7 +344,9 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
         """
         return self.manufacturing_machinable_area.ManufacturingActivityConnectedCount()
 
-    def remove_machinable_geometry(self, i_machinable_geometry: ManufacturingMachinableFeature) -> None:
+    def remove_machinable_geometry(
+        self, i_machinable_geometry: ManufacturingMachinableFeature
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -340,18 +354,18 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveMachinableGeometry(ManufacturingMachinableFeature
                 | iMachinableGeometry)
-                | 
+                |
                 |     Removes a machinable geometry from the list.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMachinableGeometry
-                |             The machinable geometry to remove 
-                | 
+                |             The machinable geometry to remove
+                |
                 |     Example:
                 |         The following example removes the machinable geometry MachGeomToRemove
                 |         to the manufacturing machinable area firstMachArea.
-                | 
+                |
                 |          Dim firstMachArea As ManufacturingMachinableArea
                 |          Set firstMachArea = ...
                 |          Dim MachGeomToRemove As
@@ -363,8 +377,10 @@ class ManufacturingMachinableArea(ManufacturingMachinableFeature):
         :param ManufacturingMachinableFeature i_machinable_geometry:
         :rtype: None
         """
-        return self.manufacturing_machinable_area.RemoveMachinableGeometry(i_machinable_geometry.com_object)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machinable_area.RemoveMachinableGeometry(
+            i_machinable_geometry.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_sch_platform_interfaces.sch_grr_cntr import SchGRRCntr
 from pycatia.cat_sch_platform_interfaces.sch_grr_route import SchGRRRoute
 from pycatia.cat_sch_platform_interfaces.sch_grr_route_ellipse import SchGRRRouteEllipse
@@ -18,21 +19,21 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SchGRRFactory(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchGRRFactory
-                | 
-                | Factory to create graphical representations of schematic
-                | objects.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchGRRFactory
+            |
+            | Factory to create graphical representations of schematic
+            | objects.
+
     """
 
     def __init__(self, com_object):
@@ -46,15 +47,15 @@ class SchGRRFactory(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateGRRCntr() As SchGRRCntr
-                | 
+                |
                 |     Create the graphical representation of a Schematic
                 |     Connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oGRRCntr
-                |             The graphical representation of the connector 
-                | 
+                |             The graphical representation of the connector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchGRRFactory
@@ -74,17 +75,17 @@ class SchGRRFactory(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateGRRGroup(SchListOfObjects iLPrimitive) As
                 | AnyObject
-                | 
+                |
                 |     Create the graphical representation of a Schematic Group.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLPrimitives
                 |             A list of 2D drafting detail pointers Members are CATI2DDetail
-                |             interface poiners. 
+                |             interface poiners.
                 |         oGRRGroup
-                |             The graphical representation of the Group 
-                | 
+                |             The graphical representation of the Group
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchGRRFactory
@@ -98,7 +99,9 @@ class SchGRRFactory(AnyObject):
         """
         return AnyObject(self.sch_grr_factory.CreateGRRGroup(i_l_primitive.com_object))
 
-    def create_grr_route(self, i_l_db_line_path: tuple, o_grr_route: SchGRRRoute) -> tuple:
+    def create_grr_route(
+        self, i_l_db_line_path: tuple, o_grr_route: SchGRRRoute
+    ) -> tuple:
         """
         .. note::
             :class: toggle
@@ -106,17 +109,17 @@ class SchGRRFactory(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CreateGRRRoute(CATSafeArrayVariant iLDbLinePath,
                 | SchGRRRoute oGRRRoute)
-                | 
+                |
                 |     Create the graphical representation of a Schematic Route.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLDbPtPath
                 |             A list of X-Y coordinates of points defining the Route. 2 doubles
-                |             per point. 
+                |             per point.
                 |         oGRRRoute
-                |             The graphical representation of the Route 
-                | 
+                |             The graphical representation of the Route
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchGRRFactory
@@ -129,8 +132,10 @@ class SchGRRFactory(AnyObject):
         :param SchGRRRoute o_grr_route:
         :rtype: tuple
         """
-        return self.sch_grr_factory.CreateGRRRoute(i_l_db_line_path, o_grr_route.com_object)
-        # # # # Autogenerated comment: 
+        return self.sch_grr_factory.CreateGRRRoute(
+            i_l_db_line_path, o_grr_route.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -146,7 +151,9 @@ class SchGRRFactory(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def create_grr_route_ellipse(self, i_db_xy_seed_pt: tuple, o_grr_route_ellipse: SchGRRRouteEllipse) -> tuple:
+    def create_grr_route_ellipse(
+        self, i_db_xy_seed_pt: tuple, o_grr_route_ellipse: SchGRRRouteEllipse
+    ) -> tuple:
         """
         .. note::
             :class: toggle
@@ -154,18 +161,18 @@ class SchGRRFactory(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CreateGRRRouteEllipse(CATSafeArrayVariant iDbXYSeedPt,
                 | SchGRRRouteEllipse oGRRRouteEllipse)
-                | 
+                |
                 |     Create the graphical representation of a Schematic Route
                 |     Ellipse.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDbXYSeedPt
                 |             X-Y coordinate of the seed point for the ellipse. If NULL, the seed
-                |             point will not be set. 
+                |             point will not be set.
                 |         oGRRRouteEllipse
-                |             The graphical representation of the Route Ellipse 
-                | 
+                |             The graphical representation of the Route Ellipse
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchGRRFactory
@@ -178,8 +185,10 @@ class SchGRRFactory(AnyObject):
         :param SchGRRRouteEllipse o_grr_route_ellipse:
         :rtype: tuple
         """
-        return self.sch_grr_factory.CreateGRRRouteEllipse(i_db_xy_seed_pt, o_grr_route_ellipse.com_object)
-        # # # # Autogenerated comment: 
+        return self.sch_grr_factory.CreateGRRRouteEllipse(
+            i_db_xy_seed_pt, o_grr_route_ellipse.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -203,17 +212,17 @@ class SchGRRFactory(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateGRRZone(SchListOfObjects iLPrimitive) As
                 | SchGRRZone
-                | 
+                |
                 |     Create the graphical representation of a Schematic Zone.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLPrimitives
                 |             A list of 2D drafting object pointers defining the zone boundaries.
-                |             
+                |
                 |         oGRRZone
-                |             The graphical representation of the Zone 
-                | 
+                |             The graphical representation of the Zone
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchGRRFactory

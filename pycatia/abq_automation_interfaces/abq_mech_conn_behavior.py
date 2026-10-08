@@ -1,37 +1,43 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.enumeration.enums import PressureOverclosure_Type, MaxStiffness_Type, Formulation_Type, ContactStiffness_Type
+
+from pycatia.enumeration.enums import (
+    PressureOverclosure_Type,
+    MaxStiffness_Type,
+    Formulation_Type,
+    ContactStiffness_Type,
+)
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
 
 
 class ABQMechConnBehavior(ABQProperty):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQProperty
-                |                         ABQMechConnBehavior
-                | 
-                | Represents an Abaqus mechanical connection behavior (ABQMechConnBehavior)
-                | object.
-                | Role: Access an Abaqus mechanical connection behaviour object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQProperty
+            |                         ABQMechConnBehavior
+            |
+            | Represents an Abaqus mechanical connection behavior (ABQMechConnBehavior)
+            | object.
+            | Role: Access an Abaqus mechanical connection behaviour object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -46,10 +52,10 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AllowSeparation() As boolean
-                | 
+                |
                 |     Sets or returns the seperation status for the hard contact pressure
                 |     overclosure.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether seperation status is on or
                 |         off.
@@ -75,9 +81,9 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ApplyUserSubroutine() As boolean
-                | 
+                |
                 |     Sets or returns the user subroutine flag.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether a user subroutine will be applied.
 
@@ -102,10 +108,10 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AugmentedLagrange() As boolean
-                | 
+                |
                 |     Sets or returns the augmented lagrange formulation in a mechanical
                 |     connection.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether augmented lagrange formulation is
                 |         applied.
@@ -131,10 +137,10 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ClearanceContactPressureValue() As double
-                | 
+                |
                 |     Sets or returns the clearance at which contact pressure is zero in a
                 |     mechanical connection.
-                | 
+                |
                 |     Returns:
                 |         clearance at which contact pressure is zero.
 
@@ -159,15 +165,15 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactStiffness() As ContactStiffness_Type
-                | 
+                |
                 |     Sets or returns the contact stiffness type hard contact pressure
                 |     overclosure.
-                | 
+                |
                 |     Returns:
                 |         The contact stiffness
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         DEFAULT
                 |         STIFF_VALUE
 
@@ -192,10 +198,10 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactStiffnessScaleFactorValue() As double
-                | 
+                |
                 |     Sets or returns the contact stiffness scale factor value in a mechanical
                 |     connection.
-                | 
+                |
                 |     Returns:
                 |         contact stiffness scale factor value.
 
@@ -220,10 +226,10 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ContactStiffnessValue() As double
-                | 
+                |
                 |     Sets or returns the contact stiffness value for hard contact pressure
                 |     overclosure.
-                | 
+                |
                 |     Returns:
                 |         The stiffness value.
 
@@ -248,9 +254,9 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Description() As CATBSTR
-                | 
+                |
                 |     Sets or returns the description.
-                | 
+                |
                 |     Returns:
                 |         The description of the step.
 
@@ -275,15 +281,15 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Formulation() As Formulation_Type
-                | 
+                |
                 |     Sets or returns the formulation in a mechanical
                 |     connection.
-                | 
+                |
                 |     Returns:
                 |         The formulation.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         FRICTIONLESS
                 |         PENALTY
 
@@ -308,10 +314,10 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FrictionCoefficient() As double
-                | 
+                |
                 |     Sets or returns the friction coefficient if the formulation is
                 |     PENALTY.
-                | 
+                |
                 |     Returns:
                 |         The friction coefficient.
 
@@ -336,15 +342,15 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxStiffness() As MaxStiffness_Type
-                | 
+                |
                 |     Sets or returns the contact stiffness type hard contact pressure
                 |     overclosure.
-                | 
+                |
                 |     Returns:
                 |         The contact stiffness
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         DEFAULT
                 |         STIFF_VALUE
 
@@ -369,10 +375,10 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxStiffnessValue() As double
-                | 
+                |
                 |     Sets or returns the max stiffness value for mechanical
                 |     connection.
-                | 
+                |
                 |     Returns:
                 |         The stiffness value.
 
@@ -397,10 +403,10 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PenaltyMethod() As boolean
-                | 
+                |
                 |     Sets or returns the penalty method formulation in a mechanical
                 |     connection.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether penalty method formulation is applied.
 
@@ -425,15 +431,15 @@ class ABQMechConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PressureOverclosure() As PressureOverclosure_Type
-                | 
+                |
                 |     Sets or returns the pressure overclosure in a mechanical
                 |     connection.
-                | 
+                |
                 |     Returns:
                 |         The pressure overclosure.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         HARD
                 |         EXPONENTIAL
                 |         LINEAR
@@ -452,7 +458,9 @@ class ABQMechConnBehavior(ABQProperty):
 
         self.abq_mech_conn_behavior.PressureOverclosure = value
 
-    def add_pressure_overclosure_table(self, i_pressure: tuple, i_overclosure: tuple) -> None:
+    def add_pressure_overclosure_table(
+        self, i_pressure: tuple, i_overclosure: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -461,13 +469,13 @@ class ABQMechConnBehavior(ABQProperty):
                 | o Sub AddPressureOverclosureTable(CATSafeArrayVariant
                 | iPressure,
                 | CATSafeArrayVariant iOverclosure)
-                | 
+                |
                 |     Adds a list of tabular pressure overclosure in the connection behavior. The
                 |     number of values in both of the parameters should match. If either list
                 |     contains extra values, the extra values are discarded.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPressure
                 |             The list of pressure values.
                 |         iOverclosure
@@ -477,8 +485,10 @@ class ABQMechConnBehavior(ABQProperty):
         :param tuple i_overclosure:
         :return: None
         """
-        return self.abq_mech_conn_behavior.AddPressureOverclosureTable(i_pressure, i_overclosure)
-        # # # # Autogenerated comment: 
+        return self.abq_mech_conn_behavior.AddPressureOverclosureTable(
+            i_pressure, i_overclosure
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -494,7 +504,9 @@ class ABQMechConnBehavior(ABQProperty):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_pressure_overclosure_table(self, o_pressure: tuple, o_overclosure: tuple) -> None:
+    def get_pressure_overclosure_table(
+        self, o_pressure: tuple, o_overclosure: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -503,12 +515,12 @@ class ABQMechConnBehavior(ABQProperty):
                 | o Sub GetPressureOverclosureTable(CATSafeArrayVariant
                 | oPressure,
                 | CATSafeArrayVariant oOverclosure)
-                | 
+                |
                 |     Returns a list of tabular pressure overclosure in connection
                 |     behavior.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPressure
                 |             The list of pressure values.
                 |         oOverclosure
@@ -518,8 +530,10 @@ class ABQMechConnBehavior(ABQProperty):
         :param tuple o_overclosure:
         :return: None
         """
-        return self.abq_mech_conn_behavior.GetPressureOverclosureTable(o_pressure, o_overclosure)
-        # # # # Autogenerated comment: 
+        return self.abq_mech_conn_behavior.GetPressureOverclosureTable(
+            o_pressure, o_overclosure
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

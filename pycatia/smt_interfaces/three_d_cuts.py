@@ -1,11 +1,11 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
 
@@ -17,19 +17,19 @@ from pycatia.system_interfaces.collection import Collection
 
 class ThreeDCuts(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     ThreeDCuts
-                |
-                | Interface to compute 3D cuts
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     ThreeDCuts
+            |
+            | Interface to compute 3D cuts
 
     """
 
@@ -60,12 +60,14 @@ class ThreeDCuts(Collection):
         :param Group group_of_selected_products:
         :rtype: Document
         """
-        return Document(self.three_d_cuts.Compute3DCut(group_of_selected_products.com_object))
+        return Document(
+            self.three_d_cuts.Compute3DCut(group_of_selected_products.com_object)
+        )
 
     def compute_3d_cut_with_reference(
-            self,
-            group_of_selected_products: Group,
-            i_reference_product: Product,
+        self,
+        group_of_selected_products: Group,
+        i_reference_product: Product,
     ) -> Document:
         """
         .. note::
@@ -126,12 +128,12 @@ class ThreeDCuts(Collection):
         :param Group group_of_selected_products:
         :rtype: Document
         """
-        return Document(self.three_d_cuts.GetCompute3DCut(group_of_selected_products.com_object))
+        return Document(
+            self.three_d_cuts.GetCompute3DCut(group_of_selected_products.com_object)
+        )
 
     def get_compute_3d_cut_with_a_reference(
-            self,
-            group_of_selected_products: Group,
-            i_reference_product: Product
+        self, group_of_selected_products: Group, i_reference_product: Product
     ) -> Document:
         """
         .. note::
@@ -162,12 +164,19 @@ class ThreeDCuts(Collection):
         """
         return Document(
             self.three_d_cuts.GetCompute3DCutWithAReference(
-                group_of_selected_products.com_object,
-                i_reference_product.com_object
+                group_of_selected_products.com_object, i_reference_product.com_object
             )
         )
 
-    def set_box(self, origin_x: float, origin_y: float, origin_z: float, vx: float, vy: float, vz: float) -> None:
+    def set_box(
+        self,
+        origin_x: float,
+        origin_y: float,
+        origin_z: float,
+        vx: float,
+        vy: float,
+        vz: float,
+    ) -> None:
         """
         .. note::
             :class: toggle

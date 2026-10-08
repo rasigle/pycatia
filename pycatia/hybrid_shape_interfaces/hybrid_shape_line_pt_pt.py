@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.line import Line
@@ -16,35 +16,35 @@ from pycatia.knowledge_interfaces.length import Length
 
 class HybridShapeLinePtPt(Line):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         CATGSMIDLItf.Line
-                |                             HybridShapeLinePtPt
-                | 
-                | Represents the hybrid shape line between two points feature
-                | object.
-                | Role: To access the data of the line feature created between two
-                | points.
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeLinePtPt
-                | object.
-                | 
-                | See also:
-                |     Reference 
-                | See also:
-                |     Length 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         CATGSMIDLItf.Line
+            |                             HybridShapeLinePtPt
+            |
+            | Represents the hybrid shape line between two points feature
+            | object.
+            | Role: To access the data of the line feature created between two
+            | points.
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeLinePtPt
+            | object.
+            |
+            | See also:
+            |     Reference
+            | See also:
+            |     Length
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -59,15 +59,15 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BeginOffset() As Length (Read Only)
-                | 
+                |
                 |     Returns the start length of the line.
                 |     Start length : extension of the line, beginning at the starting point
-                | 
+                |
                 |     Example:
                 |         This example retrieves in oStart the beginning offset length for the
                 |         LinePtPt hybrid shape feature.
-                | 
-                |          Dim oStart As  CATIALength 
+                |
+                |          Dim oStart As  CATIALength
                 |          Set oStart = LinePtPt.BeginOffset
 
         :rtype: Length
@@ -83,15 +83,15 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property EndOffset() As Length (Read Only)
-                | 
+                |
                 |     Returns the end length of the line.
                 |     End length : extension of the line, beginning at the ending point
-                | 
+                |
                 |     Example:
                 |         This example retrieves in oEnd the starting length for the LinePtPt
                 |         hybrid shape feature.
-                | 
-                |          Dim oEnd As  CATIALength 
+                |
+                |          Dim oEnd As  CATIALength
                 |          Set oEnd = LinePtPt.EndOffset
 
         :rtype: Length
@@ -107,16 +107,16 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PtExtremity() As Reference
-                | 
+                |
                 |     Returns or Sets the extremity point of the LinePtPt(Second
                 |     Point).
                 |     Sub-element(s) supported (see Boundary object): Vertex.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in oPtExtremity the ending point for the
                 |         LinePtPt hybrid shape feature.
-                | 
-                |          Dim oPtExtremity As Reference 
+                |
+                |          Dim oPtExtremity As Reference
                 |          Set oPtExtremity = LinePtPt.PtExtremity
 
         :rtype: Reference
@@ -140,16 +140,16 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PtOrigine() As Reference
-                | 
+                |
                 |     Returns or Sets the origin point of the LinePtPt(First
                 |     point).
                 |     Sub-element(s) supported (see Boundary object): Vertex.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in oPtOrigine the initial point for the LinePtPt
                 |         hybrid shape feature.
-                | 
-                |          Dim oPtOrigine As Reference 
+                |
+                |          Dim oPtOrigine As Reference
                 |          Set oPtOrigine = LinePtPt.PtOrigine
 
         :rtype: Reference
@@ -173,17 +173,17 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns or Sets the supporting surface.
                 |     Note: the support surface is not mandatory for LinePtPt
-                | 
+                |
                 |     Sub-element(s) supported (see Boundary object): Face.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in oSurface the supporting surface (if it exist)
                 |         for the LinePtPt hybrid shape feature.
-                | 
-                |          Dim oSurface As Reference 
+                |
+                |          Dim oSurface As Reference
                 |          Set oSurface = LinePtPt.Surface
 
         :rtype: Reference
@@ -206,11 +206,11 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetLengthType() As long
-                | 
+                |
                 |     Gets the length type Default is 0.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oType
                 |             The length type = 0 : length - the line is limited by its extremities =
                 |             1 : infinite - the line is infinite = 2 : infinite start point - the line is infinite on
@@ -228,12 +228,12 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSymmetricalExtension() As boolean
-                | 
+                |
                 |     Gets whether the symmetrical extension of the line is
                 |     active.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSym
                 |             Symetry flag
 
@@ -248,7 +248,7 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveSupport()
-                | 
+                |
                 |     Removes the support surface.
 
         :rtype: None
@@ -262,11 +262,11 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetLengthType(long iType)
-                | 
+                |
                 |     Sets the length type Default is 0.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iType
                 |             The length type = 0 : length - the line is limited by its extremities =
                 |             1 : infinite - the line is infinite = 2 : infinite start point - the line is infinite on
@@ -285,11 +285,11 @@ class HybridShapeLinePtPt(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetSymmetricalExtension(boolean iSym)
-                | 
+                |
                 |     Sets the symmetrical extension of the line (start = -end).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSym
                 |             Symetry flag
 
@@ -297,7 +297,7 @@ class HybridShapeLinePtPt(Line):
         :rtype: None
         """
         return self.hybrid_shape_line_pt_pt.SetSymmetricalExtension(i_sym)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

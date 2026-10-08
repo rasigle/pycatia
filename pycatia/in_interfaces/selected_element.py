@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.in_interfaces.document import Document
 from pycatia.in_interfaces.reference import Reference
@@ -16,23 +17,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SelectedElement(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SelectedElement
-                | 
-                | Represents an element contained by a Selection object.
-                | This object is an object contained by a Selection object. The Selection object
-                | contains SelectedElement objects, which are accessed through the
-                | Selection.Count2 and Selection.Item2 methods.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SelectedElement
+            |
+            | Represents an element contained by a Selection object.
+            | This object is an object contained by a Selection object. The Selection object
+            | contains SelectedElement objects, which are accessed through the
+            | Selection.Count2 and Selection.Item2 methods.
+
     """
 
     def __init__(self, com_object):
@@ -47,7 +48,7 @@ class SelectedElement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Document() As Document (Read Only)
-                | 
+                |
                 |     Returns the document to which the selected element belongs.
 
         :rtype: Document
@@ -63,7 +64,7 @@ class SelectedElement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property LeafProduct() As AnyObject (Read Only)
-                | 
+                |
                 |     Returns the leaf product corresponding to the selection in the
                 |     specification tree.
                 |     Role: Returns the leaf Product (component, corresponding for example to
@@ -75,11 +76,11 @@ class SelectedElement(AnyObject):
                 |     navigate into the object structure), the current property enables the scripter
                 |     to obtain the path, in the specification tree, corresponding to the
                 |     selection.
-                | 
+                |
                 |     Example:
-                | 
-                |           The following example supposes a 
-                | 
+                |
+                |           The following example supposes a
+                |
                 |     Part or a Product is opened. It asks the end user to select a Shape in the
                 |     current window. It then sends message boxes containing the names of the
                 |     automation objects contained in the specification tree path corresponding to
@@ -87,12 +88,12 @@ class SelectedElement(AnyObject):
                 |     (only products which are components), a message box containing the abcissa of
                 |     the translation of the product compared to its reference
                 |     product.
-                | 
+                |
                 |      Dim Status,Feature,LeafProduct,LeafProductProcessed,InputObjectType(0)
                 |      Dim Document,Selection,AutomationTreeNodeOrProduct,Position,AxisComponentsArray(11)
                 |      Set Document = CATIA.ActiveDocument : Set Selection = Document.Selection
                 |     'We propose to the user that he select a feature
-                |      InputObjectType(0)="AnyObject" 
+                |      InputObjectType(0)="AnyObject"
                 |      Status=Selection.SelectElement2(InputObjectType,"Select a
                 |      feature",true)
                 |      if (Status = "Cancel") then Exit Sub
@@ -143,11 +144,11 @@ class SelectedElement(AnyObject):
                 |              LeafProductProcessed = true
                 |          end if
                 |      loop
-                | 
+                |
                 |     If you run the preceeding piece of script, the current document beeing a
                 |     product with the following specification tree:
-                | 
-                |          +--------+ 
+                |
+                |          +--------+
                 |          !Product3!
                 |          +----+---+
                 |               !
@@ -157,7 +158,7 @@ class SelectedElement(AnyObject):
                 |               !     +- Product1 (Product1.1)       'translation value:
                 |               20
                 |               !           !
-                |               !           +- Part1 (Part1.1)       
+                |               !           +- Part1 (Part1.1)
                 |               !                !
                 |               !                +- Part1
                 |               !                     !
@@ -165,9 +166,9 @@ class SelectedElement(AnyObject):
                 |               !                           !
                 |               !                           +- Pad.1
                 |               +- Part2 (Part2.1)
-                | 
+                |
                 |     and you select Pad.1, the message boxes displayed will be:
-                | 
+                |
                 |          Pad.1
                 |          PartBody
                 |          Part1
@@ -191,7 +192,7 @@ class SelectedElement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Reference() As Reference (Read Only)
-                | 
+                |
                 |     Returns a Reference version of the Value property.
                 |     Role: Returns a Reference version of Value .
 
@@ -208,7 +209,7 @@ class SelectedElement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Type() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the string constant which describes the selected element Automation
                 |     type.
                 |     This type is returned by the Value property, and may be, for instance "Pad"
@@ -224,12 +225,12 @@ class SelectedElement(AnyObject):
                 |     corresponding to the iFilterType parameter with which Selection.SelectElement2
                 |     has previously been called, or even a CATSelectionFilter value
                 |     name.
-                | 
+                |
                 |     Example:
-                | 
-                |           Suppose you run the following piece of script: 
-                |          
-                | 
+                |
+                |           Suppose you run the following piece of script:
+                |
+                |
                 |          Set Selection = CATIA.ActiveDocument.Selection
                 |         '  We propose to the user that he select a Prism or a
                 |         Hole
@@ -238,13 +239,13 @@ class SelectedElement(AnyObject):
                 |          hole",true)
                 |          if (Status = "Cancel") then Exit Sub
                 |          AutomationType = Selection.Item(1).Type
-                | 
-                | 
+                |
+                |
                 |          If the user selects a Pad, the script AutomationType variable will
                 |          contain "Prism"
                 |          and not "Pad".
-                |          
-                | 
+                |
+                |
                 |         Consequently, in most cases, use the VBScript TypeName function instead
                 |         of this property.
 
@@ -261,7 +262,7 @@ class SelectedElement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Value() As CATBaseDispatch (Read Only)
-                | 
+                |
                 |     Returns the actual selected automation object.
 
         :rtype: AnyObject
@@ -276,22 +277,22 @@ class SelectedElement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetCoordinates(CATSafeArrayVariant ioPoint)
-                | 
+                |
                 |     Returns the coordinates of the pick point.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPoint
                 |             The coordinates of the pick point, i.e. the hit between the
                 |             geometric object and the cursor.
                 |             The length of this parameter will be 3, except if the document is a
                 |             DrawingDocument
                 |     Example:
-                | 
+                |
                 |           This example retrieves the coordinates of the pick point in
                 |           the
                 |          array myArray:
-                | 
+                |
                 |          Dim oSelElem As SelectedElement
                 |          Set oSelElem = CATIA.ActiveDocument.Selection.Item(1)
                 |          ReDim myArray(2)
@@ -300,7 +301,7 @@ class SelectedElement(AnyObject):
         :param tuple io_point:
         :rtype: None
         """
-        vba_function_name = 'get_coordinates'
+        vba_function_name = "get_coordinates"
         vba_code = """
         Public Function get_coordinates(selected_element)
             Dim ioPoint (2)
@@ -314,7 +315,7 @@ class SelectedElement(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def __repr__(self):

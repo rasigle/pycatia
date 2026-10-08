@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import TYPE_CHECKING
 
 from pycatia.in_interfaces.document import Document
@@ -39,34 +40,34 @@ class StiDBItem(AnyObject):
             |
             | See also:
             |     StiEngine
-    
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.sti_db_item = com_object
 
-    def get_children(self) -> 'StiDBChildren':
+    def get_children(self) -> "StiDBChildren":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetChildren() As StiDBChildren
-                | 
+                |
                 |     Returns both all the Children of the CATIA Document -associated to the
                 |     CATIAStiDBItem- and their corresponding Link Types with their Father CATIA
                 |     Document.
-                | 
+                |
                 |     See also:
-                |         StiDBChildren 
+                |         StiDBChildren
                 |     Returns:
                 |         This ouptut corresponds to the retrieved CATIAStiDBChildren from the
-                |         Father CATIAStiDBItem. 
+                |         Father CATIAStiDBItem.
                 |     Example:
-                | 
+                |
                 |           The following example returns in ochildrenList both all the Children
-                |           
+                |
                 |          and their Link Types with their CATIAStiDBItem Father
                 |          oStiDBItem.
                 |
@@ -86,6 +87,7 @@ class StiDBItem(AnyObject):
         """
 
         from pycatia.cat_smarteam_integ_interfaces.sti_db_children import StiDBChildren
+
         return StiDBChildren(self.sti_db_item.GetChildren())
 
     def get_document(self) -> Document:
@@ -95,17 +97,17 @@ class StiDBItem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDocument() As Document
-                | 
+                |
                 |     Returns the CATIA Document associated to the CATIAStiDBItem -the SmarTeam
                 |     Integration Object.
-                | 
+                |
                 |     Returns:
                 |         This ouptut corresponds to the retrieved CATIA Document.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns in oDocument the CATIA Document
-                |           corresponding to 
+                |           corresponding to
                 |          the CATIAStiDBItem oStiDBItem.
                 |
                 |          Dim oStiEngine As StiEngine
@@ -126,17 +128,17 @@ class StiDBItem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDocumentFullPath() As CATBSTR
-                | 
+                |
                 |     Returns the Full Path of the CATIA Document associated to the
                 |     CATIAStiDBItem.
-                | 
+                |
                 |     Returns:
                 |         This ouptut corresponds to the retrieved Full Path of the
-                |         CATIAStiDBItem. 
+                |         CATIAStiDBItem.
                 |     Example:
-                | 
+                |
                 |           The following example returns in oFullPath the full path
-                |           corresponding to 
+                |           corresponding to
                 |          the CATIAStiDBItem oStiDBItem.
                 |
                 |          Dim oStiDBItem As StiDBItem
@@ -154,16 +156,16 @@ class StiDBItem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsCFOType() As boolean
-                | 
+                |
                 |     Returns if the CATIA Document -associated to the CATIAStiDBItem- is a
                 |     Component File or not.
-                | 
+                |
                 |     Returns:
                 |         This ouptut corresponds to the boolean 'oIsCFOType'. 'oIsCFOType' is
                 |         True when the CATIAStiDBItem is a Component File, False otherwise.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |           The following example tests if the CATIAStiDBItem is a Component
                 |           File.
                 |
@@ -184,15 +186,15 @@ class StiDBItem(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsRoot() As boolean
-                | 
+                |
                 |     Returns if the CATIA Document -associated to the CATIAStiDBItem- is a Root.
                 |     This method returns True if the Document is a Root, False
                 |     otherwise.
-                | 
+                |
                 |     Returns:
-                |         This ouptut corresponds to the boolean 'oIsRootCFO'. 
+                |         This ouptut corresponds to the boolean 'oIsRootCFO'.
                 |     Example:
-                | 
+                |
                 |           The following example tests if the CATIAStiDBItem is a Root component
                 |           file.
                 |

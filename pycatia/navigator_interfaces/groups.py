@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import Iterator
 
 from pycatia.navigator_interfaces.group import Group
@@ -17,24 +18,24 @@ from pycatia.types.general import CATVariant
 
 class Groups(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Groups
-                | 
-                | A collection of all groups currently managed by the
-                | application.
-                | 
-                | The method Product.GetTechnologicalObject ("Groups") on the root product
-                | retrieves this collection.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Groups
+            |
+            | A collection of all groups currently managed by the
+            | application.
+            |
+            | The method Product.GetTechnologicalObject ("Groups") on the root product
+            | retrieves this collection.
+
     """
 
     def __init__(self, com_object):
@@ -48,18 +49,18 @@ class Groups(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func Add() As Group
-                | 
+                |
                 |     Creates an empty Group and adds it to the Groups
                 |     Collection.
-                | 
+                |
                 |     Returns:
-                |         The created group 
+                |         The created group
                 |     Example:
-                | 
+                |
                 |              This example creates a new group in the TheGroups
                 |              collection.
-                |             
-                | 
+                |
+                |
                 |             Dim NewGroup As Group
                 |             Set NewGroup = TheGroups.Add
 
@@ -74,19 +75,19 @@ class Groups(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func AddFromSel() As Group
-                | 
+                |
                 |     Creates a Group containing all products in the selection and adds it to the
                 |     Groups Collection.
-                | 
+                |
                 |     Returns:
-                |         The created group 
+                |         The created group
                 |     Example:
-                | 
+                |
                 |              This example creates a new group containing all products in the
                 |              selection
                 |             in the TheGroups collection.
-                |             
-                | 
+                |
+                |
                 |             Dim NewGroup As Group
                 |             Set NewGroup = TheGroups.AddFromSel
 
@@ -101,16 +102,16 @@ class Groups(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func AllLeaves() As Group
-                | 
+                |
                 |     Returns a group which contains all the terminal nodes of the current root
                 |     product.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the group in the TheGroups
                 |              collection.
-                |             
-                | 
+                |
+                |
                 |             Dim AllLeavesGroup As Group
                 |             Set AllLeavesGroup = TheGroups.AllLeaves
 
@@ -125,29 +126,29 @@ class Groups(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func Item(CATVariant iIndex) As Group
-                | 
+                |
                 |     Returns a group using its index or its name from the Groups
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Group to retrieve from the collection
                 |             of groups. As a numerics, this index is the rank of the Group in the
                 |             collection. The index of the first Group in the collection is 1, and the index
                 |             of the last Group is Count. As a string, it is the name you assigned to the
-                |             Group. 
-                | 
+                |             Group.
+                |
                 |     Returns:
-                |         The retrieved Group 
+                |         The retrieved Group
                 |     Example:
-                | 
+                |
                 |              This example retrieves in ThisGroup the ninth
                 |              Group,
                 |             and in ThatGroup the Group named
-                |             Group3 from the TheGroups collection. 
-                |             
-                | 
+                |             Group3 from the TheGroups collection.
+                |
+                |
                 |             Dim ThisGroup As Group
                 |             Set ThisGroup = TheGroups.Item(9)
                 |             Dim ThatGroup As Group
@@ -165,25 +166,25 @@ class Groups(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes a group from the Groups collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Group to retrieve from he collection
                 |             of groups. As a numerics, this index is the rank of the Group in the
                 |             collection. The index of the first Group in the collection is 1, and the index
                 |             of the last Group is Count. As a string, it is the name you assigned to the
-                |             Group. 
-                | 
+                |             Group.
+                |
                 |     Example:
-                | 
+                |
                 |              The following example removes the tenth Group and the Group
                 |              named
                 |             Group2 from the TheGroups collection.
-                |             
-                | 
+                |
+                |
                 |             TheGroups.Remove(10)
                 |             TheGroups.Remove("Group2")
 

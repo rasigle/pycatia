@@ -1,36 +1,39 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.knowledge_interfaces.free_parameters import FreeParameters
 from pycatia.knowledge_interfaces.knowledge_object import KnowledgeObject
-from pycatia.knowledge_interfaces.optimization_constraints import OptimizationConstraints
+from pycatia.knowledge_interfaces.optimization_constraints import (
+    OptimizationConstraints,
+)
 from pycatia.knowledge_interfaces.real_param import RealParam
 
 
 class Optimization(KnowledgeObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     KnowledgeInterfaces.KnowledgeObject
-                |                         Optimization
-                | 
-                | Represents an Optimization object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     KnowledgeInterfaces.KnowledgeObject
+            |                         Optimization
+            |
+            | Represents an Optimization object.
+
     """
 
     def __init__(self, com_object):
@@ -45,10 +48,10 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property AlgorithmType() As CatAlgorithmType
-                | 
+                |
                 |     Returns or sets the algorithm type. Currently available algorithms are
                 |     gradient and simulatedAnnealing
-                | 
+                |
                 |     See also:
                 |         CatAlgorithmType
 
@@ -75,7 +78,7 @@ class Optimization(KnowledgeObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Constraints() As OptimizationConstraints (Read
                 | Only)
-                | 
+                |
                 |     Returns the collection of optimization constraints.
 
         :rtype: OptimizationConstraints
@@ -91,7 +94,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property ConvSpeed() As long
-                | 
+                |
                 |     Returns or sets the convergence speed for some gradients and the simulated
                 |     annealing.
 
@@ -116,7 +119,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property FreeParameters() As FreeParameters (Read Only)
-                | 
+                |
                 |     Returns the collection of the free parameters.
 
         :rtype: FreeParameters
@@ -132,7 +135,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property MaxEvalsNb() As long
-                | 
+                |
                 |     Returns or sets the maximum number of model updates allowed during one run
                 |     of the optimization.
 
@@ -157,7 +160,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property MaxEvalsWoImprovement() As long
-                | 
+                |
                 |     Returns or sets the maximum number of model updates without improvement of
                 |     the problem solution during one run of the optimization.
 
@@ -182,7 +185,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property MaxTime() As long
-                | 
+                |
                 |     Returns or sets the maximum time allowed for one run of the optimization
                 |     (in minutes).
 
@@ -207,7 +210,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property ObjectiveParameter() As RealParam
-                | 
+                |
                 |     Returns or sets the objective parameter of the optimization. This parameter
                 |     can not exist (in this case the get method returns E_FAIL) when the
                 |     optimization contains only constraints and uses Simulated Annealing, or if the
@@ -234,10 +237,10 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property OptimizationType() As CatOptimizationType
-                | 
+                |
                 |     Returns or sets the type of the optimization: minimum, maximum or target
                 |     value searched on the objective parameter.
-                | 
+                |
                 |     See also:
                 |         CatOptimizationType
 
@@ -263,7 +266,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property TargetValue() As RealParam (Read Only)
-                | 
+                |
                 |     Returns the objective parameter target value. (used only if the
                 |     optimization type is a target value search)
 
@@ -280,7 +283,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property UseMaxEvalsWoImprovement() As boolean
-                | 
+                |
                 |     Returns or sets if the number of updates without improvement of the
                 |     solution has to be used as a termination criterion.
 
@@ -305,7 +308,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property UseMaxTime() As boolean
-                | 
+                |
                 |     Returns or sets if max time has to be used as a termination criterion.
 
         :rtype: bool
@@ -328,7 +331,7 @@ class Optimization(KnowledgeObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub Run(boolean iWithStopDialog)
-                | 
+                |
                 |     Runs the optimization as it is defined. The stop dialog appears if argument
                 |     is TRUE
                 |     Before running, a check is made to ensure that the optimization feature
@@ -341,7 +344,7 @@ class Optimization(KnowledgeObject):
         :rtype: None
         """
         return self.optimization.Run(i_with_stop_dialog)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

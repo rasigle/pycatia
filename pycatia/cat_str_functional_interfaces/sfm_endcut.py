@@ -1,39 +1,42 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import SFMConnectionParameters
+
+from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import (
+    SFMConnectionParameters,
+)
 from pycatia.cat_str_functional_interfaces.sfm_references import SFMReferences
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class SFMEndcut(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SfmEndcut
-                | 
-                | Interface to manage the EndCut on Super Profile.
-                | Role: Allows managing (mainly retreiving parameters)on existing
-                | EndCut.
-                | 
-                | See also:
-                |     SfmProfile, SfmEndcutManager, SfmConnectionParameters
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SfmEndcut
+            |
+            | Interface to manage the EndCut on Super Profile.
+            | Role: Allows managing (mainly retreiving parameters)on existing
+            | EndCut.
+            |
+            | See also:
+            |     SfmProfile, SfmEndcutManager, SfmConnectionParameters
+
     """
 
     def __init__(self, com_object):
@@ -47,22 +50,22 @@ class SFMEndcut(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConnectionCoordinate() As CATSafeArrayVariant
-                | 
+                |
                 |     Gets thelocation of existing endcut.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCoordinate
-                |             [out] The Coordinates. 
-                | 
+                |             [out] The Coordinates.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example
                 |         :
                 |             The example retrieves endcut Coordinates defined on start
                 |             end.
-                | 
+                |
                 |              Dim EndcutObj As SfmEndcut
                 |              Set EndcutObj = StiffObj.GetEndcut(1)
                 |              Dim Coord() As Variant
@@ -77,12 +80,12 @@ class SFMEndcut(AnyObject):
         return self.sfm_endcut.GetConnectionCoordinate()
 
     def get_endcutinfo(
-            self,
-            o_type_of_endcut: str,
-            o_name_of_endcut: str,
-            o_list_of_endcut_contexts: SFMReferences,
-            o_list_of_endcut_params: SFMConnectionParameters,
-            o_list_of_end_cut_param_names: tuple
+        self,
+        o_type_of_endcut: str,
+        o_name_of_endcut: str,
+        o_list_of_endcut_contexts: SFMReferences,
+        o_list_of_endcut_params: SFMConnectionParameters,
+        o_list_of_end_cut_param_names: tuple,
     ) -> tuple:
         """
         .. note::
@@ -94,33 +97,33 @@ class SFMEndcut(AnyObject):
                 | SfmReferences oListOfEndcutContexts,
                 | SfmConnectionParameters oListOfEndcutParams,
                 | CATSafeArrayVariant oListOfEndCutParamNames)
-                | 
+                |
                 |     Gets the information on existing Endcut.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTypeOfEndcut
-                |             [out] Type of Endcut(Snipe,Trim,Weld). 
+                |             [out] Type of Endcut(Snipe,Trim,Weld).
                 |         oNameOfEndcut
-                |             [out] Name of the Endcut. 
+                |             [out] Name of the Endcut.
                 |         oListOfEndcutContexts
                 |             [out] List of Contexts (Limits) defined for Cutbacks and Contextual
                 |             Endcuts. The list will be empty for custom UDF based endcuts.
-                |             
+                |
                 |         oListOfEndcutParams
                 |             [out] List of Parameters set when defining the Endcut.
-                |             
+                |
                 |         oListOfEndCutParamNames
                 |             [out] List of Parameter Names set when defining the Endcut.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example
                 |         :
                 |             The example retrieves endcut information.
-                | 
+                |
                 |              Dim EndcutObj As SfmEndcut
                 |              Set EndcutObj = StiffObj.GetEndcut(1)
                 |              Dim EndCutName, EndCutType As String
@@ -142,9 +145,9 @@ class SFMEndcut(AnyObject):
             o_name_of_endcut,
             o_list_of_endcut_contexts.com_object,
             o_list_of_endcut_params.com_object,
-            o_list_of_end_cut_param_names
+            o_list_of_end_cut_param_names,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -167,16 +170,16 @@ class SFMEndcut(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub UpdateConnectionsSet()
-                | 
+                |
                 |     Updates the Connection Set.
-                | 
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example
                 |         :
                 |             The example Updates the Connection Set.
-                | 
+                |
                 |              Dim EndcutObj As SfmEndcut
                 |              Set EndcutObj = StiffObj.GetEndcut(1)
                 |              EndcutObj.UpdateConnectionsSet

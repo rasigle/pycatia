@@ -1,37 +1,38 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.fitting_interfaces.shots import Shots
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class Sampled(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Sampled
-                | 
-                | The interface to access a CATIASampled based object.
-                | The Sampled class defines characteristics for simulatable tasks within DMU
-                | Fitting. CATIASampled is the parent class for tracks. Key samples are recorded
-                | (as shots or CATIAShots) for an object and then during simulation the object is
-                | interpolated with these shots over time.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Sampled
+            |
+            | The interface to access a CATIASampled based object.
+            | The Sampled class defines characteristics for simulatable tasks within DMU
+            | Fitting. CATIASampled is the parent class for tracks. Key samples are recorded
+            | (as shots or CATIAShots) for an object and then during simulation the object is
+            | interpolated with these shots over time.
+
     """
 
     def __init__(self, com_object):
@@ -46,7 +47,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Interpolater() As CATBSTR
-                | 
+                |
                 |     Retrieves/sets the sampled's interpolater. Role: Retrieves/sets the
                 |     interpolator used by the sampled during simulation. Note that the name of the
                 |     interpolater is used (which is a string).
@@ -72,7 +73,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Object() As CATBaseDispatch
-                | 
+                |
                 |     Returns or sets the Sampled object. Role:/b> Retrieves/stores the object
                 |     that will be used in the sampled based simulation. Please note that the object
                 |     will move to the shots defined in the sampled.
@@ -98,7 +99,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Scaling() As double
-                | 
+                |
                 |     Returns or sets the Sampled object.
 
         :rtype: float
@@ -122,7 +123,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Shots() As Shots (Read Only)
-                | 
+                |
                 |     Returns or sets the Sampled object.
 
         :rtype: Shots
@@ -138,7 +139,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Time() As double
-                | 
+                |
                 |     Retrieves/sets the sampled's time. Role: Retrieves/sets the internal time
                 |     associated to the current sampled object. Note that the time is handled as a
                 |     double.
@@ -156,14 +157,14 @@ class Sampled(AnyObject):
 
         self.sampled.Time = value
 
-    def append(self, i_tracks: tuple) -> 'Sampled':
+    def append(self, i_tracks: tuple) -> "Sampled":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Append(CATSafeArrayVariant iTracks) As Sampled
-                | 
+                |
                 |     Returns or sets the Sampled object.
 
         :param tuple i_tracks:
@@ -171,7 +172,9 @@ class Sampled(AnyObject):
         """
         return Sampled(self.sampled.Append(i_tracks))
 
-    def bind_analysis(self, i_object: AnyObject, i_analysis_mode: int, i_monitor_mode: bool) -> None:
+    def bind_analysis(
+        self, i_object: AnyObject, i_analysis_mode: int, i_monitor_mode: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -180,17 +183,17 @@ class Sampled(AnyObject):
                 | o Sub BindAnalysis(CATBaseDispatch iObject,
                 | CatSampledAnalysisMode iAnalysisMode,
                 | boolean iMonitorMode)
-                | 
+                |
                 |     Add (bind) an analysis object to a Track.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iObject
-                |             The analysis to add (bind) to the Track 
+                |             The analysis to add (bind) to the Track
                 |         iAnalysisMode
                 |             Indicates the analysis status for iAnalysis CatSampledAnalysisOff
                 |             CatSampledAnalysisOn, CatSampledAnalysisStop CatSampledAnalysisVerbose
-                |             
+                |
                 |         iMonitorMode
                 |             Indicates the monitor status for iAnalysis - Off (0) or On
                 |             (1)
@@ -200,8 +203,10 @@ class Sampled(AnyObject):
         :param bool i_monitor_mode:
         :rtype: None
         """
-        return self.sampled.BindAnalysis(i_object.com_object, i_analysis_mode, i_monitor_mode)
-        # # # # Autogenerated comment: 
+        return self.sampled.BindAnalysis(
+            i_object.com_object, i_analysis_mode, i_monitor_mode
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -224,7 +229,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub BreakInheritance()
-                | 
+                |
                 |     Returns or sets the Sampled object.
 
         :rtype: None
@@ -239,14 +244,14 @@ class Sampled(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetKnownInterpolaters(CATSafeArrayVariant
                 | oInterpolaters)
-                | 
+                |
                 |     Returns or sets the Sampled object.
 
         :param tuple o_interpolaters:
         :rtype: None
         """
         return self.sampled.GetKnownInterpolaters(o_interpolaters)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -269,7 +274,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTotalDuration() As double
-                | 
+                |
                 |     Returns the total duration
 
         :rtype: float
@@ -283,7 +288,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveAnalyses()
-                | 
+                |
                 |     Returns or sets the Sampled object.
 
         :rtype: None
@@ -297,7 +302,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ReverseTime()
-                | 
+                |
                 |     Returns or sets the Sampled object.
 
         :rtype: None
@@ -311,7 +316,7 @@ class Sampled(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetObjectKeepingPosition(CATBaseDispatch iObject)
-                | 
+                |
                 |     Sets the object in the sampled. Role: Stores the object that will be used
                 |     in the sampled based simulation. The object will not move and the sample's
                 |     shots will be repositioned relative to the object position.
@@ -329,7 +334,7 @@ class Sampled(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Split(CatSampledSplitType iType,
                 | short iIndice)
-                | 
+                |
                 |     Returns or sets the Sampled object.
 
         :param int i_type: enum cat_sampled_split_type

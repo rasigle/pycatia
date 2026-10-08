@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.dnb_igp_setup_interfaces.robot_motion import RobotMotion
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,40 +16,40 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class Operation(Activity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                         Operation
-                | 
-                | Represents an Operation.
-                | 
-                | Role: The interface is used manage the activities under an Operation and its
-                | attributes.
-                | The following code snippet can be used to obtain an Operation from a Robot
-                | Task.
-                | 
-                |    Dim objRobotTask as RobotTask
-                |    Dim objOperationList As Operation
-                |    objRobotTask.GetAllOperations objOperationList
-                |    Dim objOperation As Operation
-                |    objOperation=objOperationList[0]
-                |
-                | The Operation can also be obtained from an activity of the type
-                | Operation.
-                | 
-                |    Dim objActivity as Activity
-                |    ...
-                |    Dim objOperation as Operation
-                |    Set objOperation = objActivity.GetTechnologicalObject("Operation" )
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                         Operation
+            |
+            | Represents an Operation.
+            |
+            | Role: The interface is used manage the activities under an Operation and its
+            | attributes.
+            | The following code snippet can be used to obtain an Operation from a Robot
+            | Task.
+            |
+            |    Dim objRobotTask as RobotTask
+            |    Dim objOperationList As Operation
+            |    objRobotTask.GetAllOperations objOperationList
+            |    Dim objOperation As Operation
+            |    objOperation=objOperationList[0]
+            |
+            | The Operation can also be obtained from an activity of the type
+            | Operation.
+            |
+            |    Dim objActivity as Activity
+            |    ...
+            |    Dim objOperation as Operation
+            |    Set objOperation = objActivity.GetTechnologicalObject("Operation" )
+
     """
 
     def __init__(self, com_object):
@@ -56,10 +57,7 @@ class Operation(Activity):
         self.operation = com_object
 
     def create_robot_motion(
-            self,
-            i_ref_act: AnyObject,
-            i_before: bool,
-            o_target_motion: RobotMotion
+        self, i_ref_act: AnyObject, i_before: bool, o_target_motion: RobotMotion
     ) -> None:
         """
         .. note::
@@ -69,36 +67,36 @@ class Operation(Activity):
                 | o Sub CreateRobotMotion(AnyObject iRefAct,
                 | boolean iBefore,
                 | RobotMotion oTargetMotion)
-                | 
+                |
                 |     Creates Robot Motion as a child of Operation. If there is an already
                 |     existing RobotMotion we do not create a new one but return the handle to the
                 |     existing one, else creates it at the start and link
                 |     appropriately.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRefAct
                 |             Reference activity After/Before which the Target Motion needs to be
-                |             created. 
+                |             created.
                 |         iBefore
                 |             Created Target Motion can be Predecessor(True)/Successor(False) to
-                |             Reference activity. 
+                |             Reference activity.
                 |         oTargetMotion
-                |             The created Robot Motion. 
-                | 
+                |             The created Robot Motion.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The Robot Motion could be successfully created
                 |         E_FAIL
                 |             The Robot Motion could not be created.
-                | 
+                |
                 |         Example:
                 |             The following example creates a robot motion as a child of
                 |             Operation.
-                | 
+                |
                 |                Dim objOperation As Operation
                 |                Dim objRefAct as AnyObject
                 |                Dim objRobotmotion as RobotMotion
@@ -110,8 +108,10 @@ class Operation(Activity):
         :param RobotMotion o_target_motion:
         :rtype: None
         """
-        return self.operation.CreateRobotMotion(i_ref_act.com_object, i_before, o_target_motion.com_object)
-        # # # # Autogenerated comment: 
+        return self.operation.CreateRobotMotion(
+            i_ref_act.com_object, i_before, o_target_motion.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -134,27 +134,27 @@ class Operation(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetActions(CATSafeArrayVariant oChildrenList)
-                | 
+                |
                 |     Retrieves all the Basic Actions under the operation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oChildrenList
-                |             Returns the Basic Actions of the Robot 
-                | 
+                |             Returns the Basic Actions of the Robot
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The actions could be successfully queried
                 |         E_FAIL
                 |             The actions could not be queried.
-                | 
+                |
                 |         Example:
                 |             The following example gets the actions of the current
                 |             Operation.
-                | 
+                |
                 |                Dim objOperation As Operation
                 |                Dim ActionList(2)
                 |                objOperation.GetActions ActionList
@@ -163,7 +163,7 @@ class Operation(Activity):
         :rtype: None
         """
         return self.operation.GetActions(o_children_list)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -186,27 +186,27 @@ class Operation(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetRobotMotion(RobotMotion oRobotTargetMotion)
-                | 
+                |
                 |     Retrieves the RobotMotion.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRobotTargetMotion
-                |             Returned RobotMotion 
-                | 
+                |             Returned RobotMotion
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The Robot Motion could be successfully queried
                 |         E_FAIL
                 |             The Robot Motion could not be queried.
-                | 
+                |
                 |         Example:
                 |             The following example gets the robot motion of the current
                 |             Operation.
-                | 
+                |
                 |                Dim objOperation As Operation
                 |                Dim objRobotmotion as RobotMotion
                 |                objOperation.GetRobotMotion objRobotmotion
@@ -215,7 +215,7 @@ class Operation(Activity):
         :rtype: None
         """
         return self.operation.GetRobotMotion(o_robot_target_motion.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -238,28 +238,28 @@ class Operation(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetViaMode(short index)
-                | 
+                |
                 |     Retrieves the via mode of the operation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         index
                 |             The Via Mode (1 if the target is a via point and 0 if the Target is
-                |             Untyped (process)). 
-                | 
+                |             Untyped (process)).
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The via mode was successfully queried.
                 |         E_FAIL
                 |             The via mode could not be queried.
-                | 
+                |
                 |         Example:
                 |             The following example retrieves the Via Mode of the
                 |             Operation.
-                | 
+                |
                 |                Dim objOperation As Operation
                 |                Dim ViaMode
                 |                objOperation.GetViaMode ViaMode
@@ -276,28 +276,28 @@ class Operation(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetViaMode(short index)
-                | 
+                |
                 |     Sets the Via Mode of the Operation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         index
                 |             The Via Mode (1 if the target is a via point and 0 if the Target is
-                |             Untyped (process)). 
-                | 
+                |             Untyped (process)).
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The via mode was successfully set.
                 |         E_FAIL
                 |             The via mode could not be set.
-                | 
+                |
                 |         Example:
                 |             The following example sets the Via Mode of the
                 |             Operation.
-                | 
+                |
                 |                Dim objOperation As Operation
                 |                objOperation.SetViaMode 0
 

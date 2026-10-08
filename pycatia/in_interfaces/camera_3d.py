@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.camera import Camera
@@ -15,23 +15,23 @@ from pycatia.in_interfaces.viewpoint_3d import ViewPoint3D
 
 class Camera3D(Camera):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     InfInterfaces.Camera
-                |                         Camera3D
-                | 
-                | Represents a 3D camera.
-                | The 3D camera stores a 3D viewpoint, that is a Viewpoint3D
-                | object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     InfInterfaces.Camera
+            |                         Camera3D
+            |
+            | Represents a 3D camera.
+            | The 3D camera stores a 3D viewpoint, that is a Viewpoint3D
+            | object.
+
     """
 
     def __init__(self, com_object):
@@ -46,16 +46,16 @@ class Camera3D(Camera):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Viewpoint3D() As Viewpoint3D
-                | 
+                |
                 |     Returns or sets the 3D viewpoint of a 3D camera.
-                | 
+                |
                 |     Example:
                 |         Assume the active window is a SpecsAndGeomWindow object. This example
                 |         retrieves the Viewpoint3D of the active 3D viewer and creates from it a
                 |         Camera3D you handle using the MyCamera variable. Then the camera zoom is set to
                 |         2, and the camera's viewpoint is assigned to the active
                 |         viewer.
-                | 
+                |
                 |          Dim MyCamera As Camera3D
                 |          Set MyCamera = CATIA.ActiveWindow.ActiveViewer.NewCamera()
                 |          MyCamera.Viewpoint3D.Zoom = 2

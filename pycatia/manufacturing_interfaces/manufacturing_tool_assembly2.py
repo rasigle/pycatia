@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.manufacturing_interfaces.manufacturing_insert import ManufacturingInsert
 from pycatia.manufacturing_interfaces.manufacturing_tool import ManufacturingTool
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,20 +16,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class ManufacturingToolAssembly2(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ManufacturingToolAssembly2
-                | 
-                | Represents the tool assembly.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ManufacturingToolAssembly2
+            |
+            | Represents the tool assembly.
+
     """
 
     def __init__(self, com_object):
@@ -44,11 +45,11 @@ class ManufacturingToolAssembly2(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Insert(ManufacturingInsert iMfgInsert) (Write
                 | Only)
-                | 
+                |
                 |     Set the insert of an assembly.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMfgInsert
                 |             The insert to set to tool assembly
 
@@ -73,11 +74,11 @@ class ManufacturingToolAssembly2(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Tool(ManufacturingTool iMfgTool) (Write Only)
-                | 
+                |
                 |     Set the tool of an assembly.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMfgTool
                 |             The tool to set to tool assembly
 

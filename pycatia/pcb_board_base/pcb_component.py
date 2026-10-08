@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,19 +14,19 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PCBComponent(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PCBComponent
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PCBComponent
 
-    
+
     """
 
     def __init__(self, com_object):
@@ -41,11 +41,11 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CAPACITANCE() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the CAPACITANCE Type of a component.
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -71,12 +71,12 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property POWEROPR() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the Operating power rating of a component The possible
                 |     value are MECHANICAL or ELECTRICAL
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -102,11 +102,11 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property POWER_MAX() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the POWER MAX of a component.
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -132,11 +132,11 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PackageNumber() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the Package number of a component
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -162,11 +162,11 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RESISTANCE() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the RESISTANCE of a component.
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -192,12 +192,12 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property THERM_COND() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the thermal conductivity of a
                 |     component.
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -223,12 +223,12 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property THETA_JB() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the junction to board thermal resistance of a
                 |     component.
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -254,12 +254,12 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property THETA_JC() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the junction to case thermal resistance of a
                 |     component.
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -285,11 +285,11 @@ class PCBComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TOLERANCE() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the TOLERANCE of a component.
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed

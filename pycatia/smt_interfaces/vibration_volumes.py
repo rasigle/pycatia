@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.document import Document
@@ -18,20 +18,20 @@ from pycatia.system_interfaces.collection import Collection
 
 class VibrationVolumes(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     VibrationVolumes
-                | 
-                | Interface to compute vibration volumes
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     VibrationVolumes
+            |
+            | Interface to compute vibration volumes
+
     """
 
     def __init__(self, com_object):
@@ -45,7 +45,7 @@ class VibrationVolumes(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CleanUp()
-                | 
+                |
                 |     Cleans up.
 
         :rtype: None
@@ -53,11 +53,11 @@ class VibrationVolumes(Collection):
         return self.vibration_volumes.CleanUp()
 
     def compute_vibration_volume(
-            self,
-            group_of_selected_products: Group,
-            positions_file_path: str,
-            i_accuracy: float,
-            i_simplif_accuracy: float
+        self,
+        group_of_selected_products: Group,
+        positions_file_path: str,
+        i_accuracy: float,
+        i_simplif_accuracy: float,
     ) -> Document:
         """
         .. note::
@@ -68,21 +68,21 @@ class VibrationVolumes(Collection):
                 | CATBSTR PositionsFilePath,
                 | double iAccuracy,
                 | double iSimplifAccuracy) As Document
-                | 
+                |
                 |     Computes a vibration volume, from a position input file.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         GroupOfSelectedProducts
-                |             Selection of products to make vibrate. 
+                |             Selection of products to make vibrate.
                 |         PositionsFilePath
-                |             Positions file path. 
+                |             Positions file path.
                 |         iAccuracy
-                |             Grain for wrapping. 
+                |             Grain for wrapping.
                 |         iSimplifAccuracy
                 |             Accuracy for simplification. A non positive value makes the
-                |             simplification inactive. 
-                | 
+                |             simplification inactive.
+                |
                 |     Returns:
                 |         VibrationVolumeDocument: Document containing the result.
 
@@ -97,16 +97,16 @@ class VibrationVolumes(Collection):
                 group_of_selected_products.com_object,
                 positions_file_path,
                 i_accuracy,
-                i_simplif_accuracy
+                i_simplif_accuracy,
             )
         )
 
     def compute_vibration_volume_from_track(
-            self,
-            group_of_selected_products: Group,
-            i_swept_able: AnyObject,
-            i_accuracy: float,
-            i_simplify_accuracy: float
+        self,
+        group_of_selected_products: Group,
+        i_swept_able: AnyObject,
+        i_accuracy: float,
+        i_simplify_accuracy: float,
     ) -> Document:
         """
         .. note::
@@ -118,21 +118,21 @@ class VibrationVolumes(Collection):
                 | CATBaseDispatch iSweptAble,
                 | double iAccuracy,
                 | double iSimplifAccuracy) As Document
-                | 
+                |
                 |     Computes a vibration volume, from a track.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         GroupOfSelectedProducts
-                |             Selection of products to make vibrate. 
+                |             Selection of products to make vibrate.
                 |         iSweptAble
-                |             Track containing the positions. 
+                |             Track containing the positions.
                 |         iAccuracy
-                |             Grain for wrapping. 
+                |             Grain for wrapping.
                 |         iSimplifAccuracy
                 |             Accuracy for simplification. A non positive value makes the
-                |             simplification inactive. 
-                | 
+                |             simplification inactive.
+                |
                 |     Returns:
                 |         VibrationVolumeDocument: Document containing the result.
 
@@ -147,17 +147,17 @@ class VibrationVolumes(Collection):
                 group_of_selected_products.com_object,
                 i_swept_able.com_object,
                 i_accuracy,
-                i_simplify_accuracy
+                i_simplify_accuracy,
             )
         )
 
     def compute_vibration_volume_from_track_with_a_reference(
-            self,
-            group_of_selected_products: Group,
-            i_reference_product: Product,
-            i_swept_able: AnyObject,
-            i_accuracy: float,
-            i_simplify_accuracy: float
+        self,
+        group_of_selected_products: Group,
+        i_reference_product: Product,
+        i_swept_able: AnyObject,
+        i_accuracy: float,
+        i_simplify_accuracy: float,
     ) -> Document:
         """
         .. note::
@@ -170,24 +170,24 @@ class VibrationVolumes(Collection):
                 | CATBaseDispatch iSweptAble,
                 | double iAccuracy,
                 | double iSimplifAccuracy) As Document
-                | 
+                |
                 |     Computes a vibration volume, from a track, according to a reference
                 |     product.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         GroupOfSelectedProducts
-                |             Selection of products to make vibrate. 
+                |             Selection of products to make vibrate.
                 |         iReferenceProduct
-                |             Product taken as a reference. 
+                |             Product taken as a reference.
                 |         iSweptAble
-                |             Track containing the positions. 
+                |             Track containing the positions.
                 |         iAccuracy
-                |             Grain for wrapping. 
+                |             Grain for wrapping.
                 |         iSimplifAccuracy
                 |             Accuracy for simplification. A non positive value makes the
-                |             simplification inactive. 
-                | 
+                |             simplification inactive.
+                |
                 |     Returns:
                 |         VibrationVolumeDocument: Document containing the result.
 
@@ -204,17 +204,17 @@ class VibrationVolumes(Collection):
                 i_reference_product.com_object,
                 i_swept_able.com_object,
                 i_accuracy,
-                i_simplify_accuracy
+                i_simplify_accuracy,
             )
         )
 
     def compute_vibration_volume_with_a_reference(
-            self,
-            i_group_of_selected_products: Group,
-            i_reference_product: Product,
-            positions_file_path: str,
-            i_accuracy: float,
-            i_simplify_accuracy: float
+        self,
+        i_group_of_selected_products: Group,
+        i_reference_product: Product,
+        positions_file_path: str,
+        i_accuracy: float,
+        i_simplify_accuracy: float,
     ) -> Document:
         """
         .. note::
@@ -227,24 +227,24 @@ class VibrationVolumes(Collection):
                 | CATBSTR PositionsFilePath,
                 | double iAccuracy,
                 | double iSimplifAccuracy) As Document
-                | 
+                |
                 |     Computes a vibration volume, from a position input file, according to a
                 |     reference product.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iGroupOfSelectedProducts
-                |             Selection of products to make vibrate. 
+                |             Selection of products to make vibrate.
                 |         iReferenceProduct
-                |             Product taken as a reference. 
+                |             Product taken as a reference.
                 |         PositionsFilePath
-                |             Positions file path. 
+                |             Positions file path.
                 |         iAccuracy
-                |             Grain for wrapping. 
+                |             Grain for wrapping.
                 |         iSimplifAccuracy
                 |             Accuracy for simplification. A non positive value makes the
-                |             simplification inactive. 
-                | 
+                |             simplification inactive.
+                |
                 |     Returns:
                 |         VibrationVolumeDocument: Document containing the result.
 
@@ -261,7 +261,7 @@ class VibrationVolumes(Collection):
                 i_reference_product.com_object,
                 positions_file_path,
                 i_accuracy,
-                i_simplify_accuracy
+                i_simplify_accuracy,
             )
         )
 
@@ -272,7 +272,7 @@ class VibrationVolumes(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func VibrationVolumeShapeName() As CATBSTR
-                | 
+                |
                 |     Returns the name of the associated shape.
 
         :rtype: str

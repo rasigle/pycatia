@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_human_modeling_interfaces.swk_anthro_variable import SWKAnthroVariable
 from pycatia.dnb_human_modeling_interfaces.swk_manikin_part import SWKManikinPart
 
 
 class SWKAnthro(SWKManikinPart):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DNBHumanModelingInterfaces.SWKManikinPart
-                |                         SWKAnthro
-                | 
-                | This interface manages the anthropometry of the manikin.
-                | It provides access to the anthropometry data (variables,
-                | sex...)
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DNBHumanModelingInterfaces.SWKManikinPart
+            |                         SWKAnthro
+            |
+            | This interface manages the anthropometry of the manikin.
+            | It provides access to the anthropometry data (variables,
+            | sex...)
+
     """
 
     def __init__(self, com_object):
@@ -45,14 +46,14 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConstructionType() As CATBSTR
-                | 
+                |
                 |     Return or sets the construction type of the manikin. This property can take
                 |     the following two values: "Standing" and "Sitting".
                 |     If the construction is set to "Standing",
                 |     then the manikin is constructed as of type 'standing'.
                 |     If the construction is set to "Sitting",
                 |     then the manikin is constructed as of type 'sitting'.
-                | 
+                |
                 |     The chosen construction type influences the way the manikin's hips,
                 |     thighs and knees are constructed to reflect the changes in those body
                 |     parts when a human changes from a standing to a sitting posture.
@@ -78,7 +79,7 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Gender() As CATBSTR
-                | 
+                |
                 |     Returns or sets the gender of the manikin.
 
         :rtype: str
@@ -102,7 +103,7 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InterpolationMethod() As CATBSTR
-                | 
+                |
                 |     Returns or sets the interpolation. The interpolation is an
                 |     algorithm
                 |     that restricts the values entered by the user to a certain minimum and
@@ -129,7 +130,7 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LimitBound() As double
-                | 
+                |
                 |     Returns or sets the population accommodation, in terms of a limit
                 |     bound.
                 |     The population accommodation is used in the multi-normal
@@ -161,7 +162,7 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfVariables() As long (Read Only)
-                | 
+                |
                 |     Returns the number of variables contained in this anthropometry.
 
         :rtype: int
@@ -177,7 +178,7 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Population() As CATBSTR
-                | 
+                |
                 |     Return or sets the Population of the manikin. The population provided must
                 |     be one of the default populations ("American", "Canadian", "French",
                 |     "Japanese", "Korean", "German" or "Chinese (Taiwan)"), or an external
@@ -205,7 +206,7 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PopulationAccommodation() As double
-                | 
+                |
                 |     Returns or sets the population accommodation. The population accommodation
                 |     is used in the multi-normal
                 |     algorithm, to calculate the limits of the automatic
@@ -236,11 +237,11 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetVariableAtIndex(long piIndex) As SWKAnthroVariable
-                | 
+                |
                 |     Returns the variable at the specified index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piIndex
                 |             The index of the variable to retrieve.
 
@@ -257,11 +258,11 @@ class SWKAnthro(SWKManikinPart):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetVariableFromUsNumber(long piRefNumber) As
                 | SWKAnthroVariable
-                | 
+                |
                 |     Returns the variable from a specified us number.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piRefNumber
                 |             The reference number of the variable to retrieve (ex.: 3 for us3,
                 |             100 for us100, etc).
@@ -278,7 +279,7 @@ class SWKAnthro(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Reset()
-                | 
+                |
                 |     Reset the anthtropometry. This method resets each variable back to the
                 |     automatic mode, and then updates the anthropometry.
 

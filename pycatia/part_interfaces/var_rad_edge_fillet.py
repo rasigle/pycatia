@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 from typing import TYPE_CHECKING
 
@@ -23,26 +24,26 @@ if TYPE_CHECKING:
 
 class VarRadEdgeFillet(EdgeFillet):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Shape
-                |                         PartInterfaces.DressUpShape
-                |                             PartInterfaces.Fillet
-                |                                 PartInterfaces.EdgeFillet
-                |                                     VarRadEdgeFillet
-                | 
-                | Represents the edge fillet shape with a variable radius.
-                | The resulting shape is made up of edges fillets controlled by couples of
-                | radius/vertex.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Shape
+            |                         PartInterfaces.DressUpShape
+            |                             PartInterfaces.Fillet
+            |                                 PartInterfaces.EdgeFillet
+            |                                     VarRadEdgeFillet
+            |
+            | Represents the edge fillet shape with a variable radius.
+            | The resulting shape is made up of edges fillets controlled by couples of
+            | radius/vertex.
+
     """
 
     def __init__(self, com_object):
@@ -57,11 +58,11 @@ class VarRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BitangencyType() As CatFilletBitangencyType
-                | 
+                |
                 |     Returns or set the fillet bitangency type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iType
                 |             The type used to perform the fillet : catSphereBitangencyType or catCircleBitangencyType
 
@@ -86,13 +87,13 @@ class VarRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property EdgesToFillet() As References (Read Only)
-                | 
+                |
                 |     Returns the collection of edges to be filleted.
-                | 
+                |
                 |     Example:
                 |         The following example returns in edges the edges to fillet of variable
                 |         radius edge filletfirstVarEdgeFillet:
-                | 
+                |
                 |          Set edges = firstVarEdgeFillet.EdgesToFillet
 
         :rtype: References
@@ -108,11 +109,11 @@ class VarRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FilletSpine() As Reference
-                | 
+                |
                 |     Returns or set the spine for circle bitangency fillet.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSpin
                 |             The spine to be used for a circle bitangency
                 |             fillet
@@ -138,15 +139,15 @@ class VarRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FilletVariation() As CatFilletVariation
-                | 
+                |
                 |     Returns or sets the edge fillet radius variation mode.
-                | 
+                |
                 |     Example:
                 |         The following example returns in mode the radius variation mode of the
                 |         variable radius edge filletfirstVarEdgeFillet, and then sets it to
                 |         CATLinearFilletVariation so that the radius variation is linear between two
                 |         control vertices:
-                | 
+                |
                 |          mode = firstVarEdgeFillet.FilletVariation
                 |          firstVarEdgeFillet.FilletVariation = CATLinearFilletVariation
 
@@ -171,15 +172,15 @@ class VarRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ImposedVertices() As References (Read Only)
-                | 
+                |
                 |     Returns the collection of vertices where a radius has been
                 |     imposed.
-                | 
+                |
                 |     Example:
                 |         The following example returns in vertices the collection of imposed
                 |         vertices of the variable radius edge
                 |         filletfirstVarEdgeFillet:
-                | 
+                |
                 |          Set vertices = firstVarEdgeFillet.ImposedVertices
 
         :rtype: References
@@ -212,7 +213,7 @@ class VarRadEdgeFillet(EdgeFillet):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.var_rad_edge_fillet.SharpEdgeRemovalMode
@@ -233,24 +234,24 @@ class VarRadEdgeFillet(EdgeFillet):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddEdgeToFillet(Reference iEdge,
                 | double iRadius)
-                | 
+                |
                 |     Adds a new edge to the variable radius edge fillet.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEdge
                 |             The edge to be filleted
-                |             The following 
-                | 
-                |         Boundary object is supported: TriDimFeatEdge. 
+                |             The following
+                |
+                |         Boundary object is supported: TriDimFeatEdge.
                 |     iRadius
                 |         The radius to impose along the edge. This radius is imposed at both end
-                |         points of the edge. 
-                | 
+                |         points of the edge.
+                |
                 | Example:
                 |     The following example adds the new edge edge to be filleted to the variable
                 |     radius edge fillet firstVarEdgeFillet:
-                | 
+                |
                 |      call firstVarEdgeFillet.AddEdgeToFillet(edge, 5.)
 
         :param Reference i_edge:
@@ -258,7 +259,7 @@ class VarRadEdgeFillet(EdgeFillet):
         :rtype: None
         """
         return self.var_rad_edge_fillet.AddEdgeToFillet(i_edge.com_object, i_radius)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -282,22 +283,22 @@ class VarRadEdgeFillet(EdgeFillet):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddImposedVertex(Reference iVertex,
                 | double iRadius)
-                | 
+                |
                 |     Adds a new control couple. A control couple is made up of a vertex and a
                 |     radius.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iVertex
-                |             The vertex where to impose the radius 
+                |             The vertex where to impose the radius
                 |         iRadius
-                |             The radius to impose at the given vertex 
-                | 
+                |             The radius to impose at the given vertex
+                |
                 |     Example:
                 |         The following example adds a new control couple (vertex, radius) to the
                 |         variable radius edge fillet firstVarEdgeFillet set with the vertex vertex and a
                 |         radius of 50.
-                | 
+                |
                 |          call firstVarEdgeFillet.AddImposedVertex(vertex, 50.)
 
         :param Reference i_vertex:
@@ -305,7 +306,7 @@ class VarRadEdgeFillet(EdgeFillet):
         :rtype: None
         """
         return self.var_rad_edge_fillet.AddImposedVertex(i_vertex.com_object, i_radius)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -329,29 +330,31 @@ class VarRadEdgeFillet(EdgeFillet):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func ImposedVertexRadius(Reference iImposedVertex) As
                 | Length
-                | 
+                |
                 |     Returns the fillet radius on an imposed vertex.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iImposedVertex
-                |             The vertex where to retrieve the fillet radius 
-                | 
+                |             The vertex where to retrieve the fillet radius
+                |
                 |     Returns:
-                |         The fillet radius 
+                |         The fillet radius
                 |     Example:
                 |         The following example returns in radius the fillet radius of the
                 |         variable radius edge fillet firstVarEdgeFillet at the vertex
                 |         vertex:
-                | 
+                |
                 |          Set radius = firstVarEdgeFillet.ImposedVertexRadius(vertex)
 
         :param Reference i_imposed_vertex:
         :rtype: Length
         """
-        return Length(self.var_rad_edge_fillet.ImposedVertexRadius(i_imposed_vertex.com_object))
+        return Length(
+            self.var_rad_edge_fillet.ImposedVertexRadius(i_imposed_vertex.com_object)
+        )
 
-    def switch_to_const_fillet_type(self) -> 'ConstRadEdgeFillet':
+    def switch_to_const_fillet_type(self) -> "ConstRadEdgeFillet":
         """
 
         Introduced in V5-6R2018.
@@ -376,7 +379,7 @@ class VarRadEdgeFillet(EdgeFillet):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return ConstRadEdgeFillet(self.var_rad_edge_fillet.SwitchToConstFilletType())
@@ -388,28 +391,28 @@ class VarRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub WithdrawEdgeToFillet(Reference iEdge)
-                | 
+                |
                 |     Withdraws an edge from the variable radius edge fillet.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEdge
                 |             The edge to be withdrawn
-                |             The following 
-                | 
-                |         Boundary object is supported: TriDimFeatEdge. 
-                | 
+                |             The following
+                |
+                |         Boundary object is supported: TriDimFeatEdge.
+                |
                 | Example:
                 |     The following example withdraws the edge edge from those to be filleted of
                 |     the variable radius edge fillet firstVarEdgeFillet:
-                | 
+                |
                 |      call firstVarEdgeFillet.WithdrawEdgeToFillet(edge)
 
         :param Reference i_edge:
         :rtype: None
         """
         return self.var_rad_edge_fillet.WithdrawEdgeToFillet(i_edge.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -432,26 +435,26 @@ class VarRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub WithdrawImposedVertex(Reference iVertex)
-                | 
+                |
                 |     Withdraws a control couple.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iVertex
-                |             The vertex where the radius is imposed 
-                | 
+                |             The vertex where the radius is imposed
+                |
                 |     Example:
                 |         The following example withdraws the imposed radius on the vertex vertex
                 |         for the variable radius edge fillet
                 |         firstVarEdgeFillet:
-                | 
+                |
                 |          call firstVarEdgeFillet.WithdrawImposedVertex(vertex)
 
         :param Reference i_vertex:
         :rtype: None
         """
         return self.var_rad_edge_fillet.WithdrawImposedVertex(i_vertex.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

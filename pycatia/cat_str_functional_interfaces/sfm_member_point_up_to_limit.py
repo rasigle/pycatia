@@ -1,39 +1,40 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_str_functional_interfaces.sfm_member import SFMMember
 from pycatia.in_interfaces.reference import Reference
 
 
 class SFMMemberPointUpToLimit(SFMMember):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATStrFunctionalInterfaces.SfmObject
-                |                         CATStrFunctionalInterfaces.SfmProfile
-                |                            CATStrFunctionalInterfaces.SfmMember
-                |                                 SfmMemberPointUpToLimit
-                | 
-                | Interface to manage Member created with one point, one direction and one
-                | limit.
-                | Role: To manage member created with one point, one direction and one
-                | limit.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATStrFunctionalInterfaces.SfmObject
+            |                         CATStrFunctionalInterfaces.SfmProfile
+            |                            CATStrFunctionalInterfaces.SfmMember
+            |                                 SfmMemberPointUpToLimit
+            |
+            | Interface to manage Member created with one point, one direction and one
+            | limit.
+            | Role: To manage member created with one point, one direction and one
+            | limit.
+
     """
 
     def __init__(self, com_object):
@@ -48,13 +49,13 @@ class SFMMemberPointUpToLimit(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Direction() As Reference
-                | 
+                |
                 |     Returns or sets the direction.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Direction the direction for the
                 |         SfmMemberPointUpToLimit feature.
-                | 
+                |
                 |          Dim Direction As Reference
                 |          Set Direction = SfmMemberPointUpToLimit.Direction
 
@@ -79,13 +80,13 @@ class SFMMemberPointUpToLimit(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DirectionOrientation() As long
-                | 
+                |
                 |     Returns or sets the direction orientation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in DirectionOrientation the direction
                 |         orientation for the SfmMemberPointUpToLimit feature.
-                | 
+                |
                 |          Dim DirectionOrientation As Integer
                 |          Set DirectionOrientation = SfmMemberPointUpToLimit.DirectionOrientation
 
@@ -110,13 +111,13 @@ class SFMMemberPointUpToLimit(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Limit() As Reference
-                | 
+                |
                 |     Returns or sets the limit.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Limit the limit for the
                 |         SfmMemberPointUpToLimit feature.
-                | 
+                |
                 |          Dim Limit As Reference
                 |          Set Limit = SfmMemberPointUpToLimit.Limit
 
@@ -141,14 +142,14 @@ class SFMMemberPointUpToLimit(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Point() As Reference
-                | 
+                |
                 |     Returns or sets the point.
                 |     Sub-element(s) supported (see Boundary object): Vertex.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Point the point for the
                 |         SfmMemberPointUpToLimit feature.
-                | 
+                |
                 |          Dim Point As Reference
                 |          Set Point = SfmMemberPointUpToLimit.Point
 
@@ -172,13 +173,13 @@ class SFMMemberPointUpToLimit(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub InvertDirection()
-                | 
+                |
                 |     Inverts the direction orientation.
-                | 
+                |
                 |     Example:
                 |         This example inverts the orientation of the direction for the
                 |         SfmMemberPointUpToLimit feature.
-                | 
+                |
                 |          SfmMemberPointUpToLimit.InvertDirection
 
         :rtype: None

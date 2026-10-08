@@ -1,11 +1,11 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R31 on 2025-09-13 14:18:55.806894
+Module initially auto generated using V5Automation files from CATIA V5 R31 on 2025-09-13 14:18:55.806894
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
 
@@ -14,23 +14,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PageSetup(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2025-09-13 14:18:55.806894)
+        CAA V5 Visual Basic Help (2025-09-13 14:18:55.806894)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PageSetup
-                |
-                | Represents the page setup.
-                | The page setup is the object that stores data which defines how your documents
-                | and images are actually printed on paper. This data includes namely the paper
-                | size, the orientation, the bottom, top, right, and left margins, the zoom
-                | factor, the banner, and the printing quality.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PageSetup
+            |
+            | Represents the page setup.
+            | The page setup is the object that stores data which defines how your documents
+            | and images are actually printed on paper. This data includes namely the paper
+            | size, the orientation, the bottom, top, right, and left margins, the zoom
+            | factor, the banner, and the printing quality.
 
     """
 

@@ -1,38 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class DisconnectionSettingAtt(SettingController):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
+        CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         DisconnectionSettingAtt
-                | 
-                | Represents the base object to handle the parameters of automatic
-                | disconnection.
-                | If the automatic disconnection is enable, the V5 session will be kill after a
-                | user-defined duration of inactivity.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         DisconnectionSettingAtt
+            |
+            | Represents the base object to handle the parameters of automatic
+            | disconnection.
+            | If the automatic disconnection is enable, the V5 session will be kill after a
+            | user-defined duration of inactivity.
+
     """
 
     def __init__(self, com_object):
@@ -47,7 +46,7 @@ class DisconnectionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property ActivationState() As boolean
-                | 
+                |
                 |     Returns or sets the activation state of automatic
                 |     disconnection.
                 |     Role:Returns or sets the activation mode of automatic disconnection.
@@ -73,7 +72,7 @@ class DisconnectionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property InactivityDuration() As long
-                | 
+                |
                 |     Returns or sets the inactivity duration.
                 |     Role: Returns or sets the timeout in seconds before the automatic
                 |     disconnection when no activity has been detected, if the mechanism is enabled.
@@ -99,7 +98,7 @@ class DisconnectionSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetActivationStateInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the activation mode of automatic
                 |     disconnection.
                 |     Refer to SettingController for a detailed description.
@@ -108,7 +107,9 @@ class DisconnectionSettingAtt(SettingController):
         :param str o_locked:
         :return: None
         """
-        return self.disconnection_setting_att.GetActivationStateInfo(admin_level, o_locked)
+        return self.disconnection_setting_att.GetActivationStateInfo(
+            admin_level, o_locked
+        )
 
     def get_inactivity_duration_info(self, admin_level, o_locked):
         """
@@ -118,7 +119,7 @@ class DisconnectionSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetInactivityDurationInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for inactivity
                 |     duration.
                 |     Refer to SettingController for a detailed description.
@@ -127,7 +128,9 @@ class DisconnectionSettingAtt(SettingController):
         :param str o_locked:
         :return: None
         """
-        return self.disconnection_setting_att.GetInactivityDurationInfo(admin_level, o_locked)
+        return self.disconnection_setting_att.GetInactivityDurationInfo(
+            admin_level, o_locked
+        )
 
     def set_activation_state_lock(self, i_locked):
         """
@@ -136,7 +139,7 @@ class DisconnectionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetActivationStateLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the activation mode of automatic
                 |     disconnection.
                 |     Refer to SettingController for a detailed description.
@@ -145,7 +148,7 @@ class DisconnectionSettingAtt(SettingController):
         :return: None
         """
         return self.disconnection_setting_att.SetActivationStateLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -168,7 +171,7 @@ class DisconnectionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetInactivityDurationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the inactivity duration.
                 |     Refer to SettingController for a detailed description.
 
@@ -176,7 +179,7 @@ class DisconnectionSettingAtt(SettingController):
         :return: None
         """
         return self.disconnection_setting_att.SetInactivityDurationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

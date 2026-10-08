@@ -1,23 +1,32 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_str_functional_interfaces.sfm_manager import SFMManager
 from pycatia.cat_str_functional_interfaces.sfm_member import SFMMember
 from pycatia.cat_str_functional_interfaces.sfm_member2_points import SFMMember2Points
 from pycatia.cat_str_functional_interfaces.sfm_member_curve import SFMMemberCurve
-from pycatia.cat_str_functional_interfaces.sfm_member_plane2_curves import SFMMemberPlane2Curves
-from pycatia.cat_str_functional_interfaces.sfm_member_point_length import SFMMemberPointLength
-from pycatia.cat_str_functional_interfaces.sfm_member_point_up_to_limit import SFMMemberPointUpToLimit
+from pycatia.cat_str_functional_interfaces.sfm_member_plane2_curves import (
+    SFMMemberPlane2Curves,
+)
+from pycatia.cat_str_functional_interfaces.sfm_member_point_length import (
+    SFMMemberPointLength,
+)
+from pycatia.cat_str_functional_interfaces.sfm_member_point_up_to_limit import (
+    SFMMemberPointUpToLimit,
+)
 from pycatia.cat_str_functional_interfaces.sfm_member_surf_surf import SFMMemberSurfSurf
 from pycatia.cat_str_functional_interfaces.sfm_stiffener import SFMStiffener
-from pycatia.cat_str_functional_interfaces.sfm_stiffener_on_free_edge import SFMStiffenerOnFreeEdge
+from pycatia.cat_str_functional_interfaces.sfm_stiffener_on_free_edge import (
+    SFMStiffenerOnFreeEdge,
+)
 from pycatia.cat_str_functional_interfaces.sfm_super_plate import SFMSuperPlate
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.factory import Factory
@@ -25,30 +34,32 @@ from pycatia.mec_mod_interfaces.factory import Factory
 
 class SFMFactory(Factory):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Factory
-                |                         SfmFactory
-                | 
-                | Interface to create Structure Functional Modeler Objects.
-                | Role: To create the structure object such as SuperPlate, Stiffener,
-                | StiffenerOnFreeEdge, Beam, Opening and Connection.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Factory
+            |                         SfmFactory
+            |
+            | Interface to create Structure Functional Modeler Objects.
+            | Role: To create the structure object such as SuperPlate, Stiffener,
+            | StiffenerOnFreeEdge, Beam, Opening and Connection.
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.sfm_factory = com_object
 
-    def add_adv_super_plate(self, i_category: str, i_support: Reference, i_destination: Reference) -> SFMSuperPlate:
+    def add_adv_super_plate(
+        self, i_category: str, i_support: Reference, i_destination: Reference
+    ) -> SFMSuperPlate:
         """
         .. note::
             :class: toggle
@@ -57,24 +68,24 @@ class SFMFactory(Factory):
                 | o Func AddAdvSuperPlate(CATBSTR iCategory,
                 | Reference iSupport,
                 | Reference iDestination) As SfmSuperPlate
-                | 
+                |
                 |     Creates an advanced SuperPlate.
                 |     Role: Allows creating an advanced SuperPlate, ie with the concave limit
                 |     mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Category. 
+                |             [in] Category.
                 |         iSupport
-                |             [in] Support surface. 
+                |             [in] Support surface.
                 |         iDestination
-                |             [in] SuperPlate's destination. 
+                |             [in] SuperPlate's destination.
                 |         oSuperPlate
-                |             [out] SuperPlate. 
-                | 
+                |             [out] SuperPlate.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmSuperPlate
 
@@ -85,19 +96,18 @@ class SFMFactory(Factory):
         """
         return SFMSuperPlate(
             self.sfm_factory.AddAdvSuperPlate(
-                i_category,
-                i_support.com_object,
-                i_destination.com_object
+                i_category, i_support.com_object, i_destination.com_object
             )
         )
 
     def add_member_beams_and_plane(
-            self, i_category: str,
-            i_section_name: str,
-            i_member1: SFMMember,
-            i_member2: SFMMember,
-            i_ref_plane: Reference,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_member1: SFMMember,
+        i_member2: SFMMember,
+        i_ref_plane: Reference,
+        i_destination: Reference,
     ) -> SFMMemberPlane2Curves:
         """
         .. note::
@@ -110,28 +120,28 @@ class SFMFactory(Factory):
                 | SfmMember iMember2,
                 | Reference iRefPlane,
                 | Reference iDestination) As SfmMemberPlane2Curves
-                | 
+                |
                 |     Creates a Member between two existing members using Plane.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iMember1
-                |             [in] First Member. 
+                |             [in] First Member.
                 |         iMember1
-                |             [in] Second Member. 
+                |             [in] Second Member.
                 |         iRefPlane
-                |             [in] Plane 
+                |             [in] Plane
                 |         iDestination
-                |             [in] Member's destination. 
+                |             [in] Member's destination.
                 |         oMember
-                |             [out] Member. 
-                | 
+                |             [out] Member.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         CATIASfmMemberPlane2Members
 
@@ -150,16 +160,16 @@ class SFMFactory(Factory):
                 i_member1.com_object,
                 i_member2.com_object,
                 i_ref_plane.com_object,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
     def add_member_crv(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_curve: Reference,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_curve: Reference,
+        i_destination: Reference,
     ) -> SFMMemberCurve:
         """
         .. note::
@@ -170,27 +180,27 @@ class SFMFactory(Factory):
                 | CATBSTR iSectionName,
                 | Reference iCurve,
                 | Reference iDestination) As SfmMemberCurve
-                | 
+                |
                 |     Creates a SuperMember on a curve.
                 |     Role: Allows creating a member on a curve.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iCurve
                 |             [in] Curve.
-                |             Sub-element(s) supported (see 
-                | 
-                |         Boundary object): 
+                |             Sub-element(s) supported (see
+                |
+                |         Boundary object):
                 |     iDestination
-                |         [in] Member's destination. 
+                |         [in] Member's destination.
                 |     oMember
-                |         [out] Member. 
+                |         [out] Member.
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMemberCurve
 
@@ -202,20 +212,17 @@ class SFMFactory(Factory):
         """
         return SFMMemberCurve(
             self.sfm_factory.AddMemberCrv(
-                i_category,
-                i_section_name,
-                i_curve.com_object,
-                i_destination.com_object
+                i_category, i_section_name, i_curve.com_object, i_destination.com_object
             )
         )
 
     def add_member_crv_on_ref(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_curve: Reference,
-            i_reference: Reference,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_curve: Reference,
+        i_reference: Reference,
+        i_destination: Reference,
     ) -> SFMMemberCurve:
         """
         .. note::
@@ -227,31 +234,31 @@ class SFMFactory(Factory):
                 | Reference iCurve,
                 | Reference iReference,
                 | Reference iDestination) As SfmMemberCurve
-                | 
+                |
                 |     Creates a SuperMember on a curve and on a reference
                 |     surface.
                 |     Role: Allows creating a member on a curve, perpendicular to a reference
                 |     surface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iCurve
                 |             [in] Curve.
-                |             Sub-element(s) supported (see 
-                | 
-                |         Boundary object): 
+                |             Sub-element(s) supported (see
+                |
+                |         Boundary object):
                 |     iReference
-                |         [in] Surface on which the curve must lay down. 
+                |         [in] Surface on which the curve must lay down.
                 |     iDestination
-                |         [in] Member's destination. 
+                |         [in] Member's destination.
                 |     oMember
-                |         [out] Member. 
+                |         [out] Member.
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMemberCurve
 
@@ -268,18 +275,18 @@ class SFMFactory(Factory):
                 i_section_name,
                 i_curve.com_object,
                 i_reference.com_object,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
     def add_member_pt_length(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_point: Reference,
-            i_direction: Reference,
-            i_length: float,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_point: Reference,
+        i_direction: Reference,
+        i_length: float,
+        i_destination: Reference,
     ) -> SFMMemberPointLength:
         """
         .. note::
@@ -292,32 +299,32 @@ class SFMFactory(Factory):
                 | Reference iDirection,
                 | double iLength,
                 | Reference iDestination) As SfmMemberPointLength
-                | 
+                |
                 |     Creates a straight SuperMember defined by a point, a direction and a
                 |     length.
                 |     Role: Allows creating a member defined by a point, a direction and a
                 |     length.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iPoint
-                |             [in] Point. 
+                |             [in] Point.
                 |         iDirection
                 |             [in] Direction element: it can be a line or a plane.
-                |             
+                |
                 |         iLength
-                |             [in] Length. 
+                |             [in] Length.
                 |         iDestination
-                |             [in] Member's destination. 
+                |             [in] Member's destination.
                 |         oMember
-                |             [out] Member. 
-                | 
+                |             [out] Member.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMemberPointLength
 
@@ -336,19 +343,19 @@ class SFMFactory(Factory):
                 i_point.com_object,
                 i_direction.com_object,
                 i_length,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
     def add_member_pt_on_crv_pt(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_curve1: Reference,
-            i_ratio_mode1: bool,
-            i_offset1: float,
-            i_point2: Reference,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_curve1: Reference,
+        i_ratio_mode1: bool,
+        i_offset1: float,
+        i_point2: Reference,
+        i_destination: Reference,
     ) -> SFMMember2Points:
         """
         .. note::
@@ -362,34 +369,34 @@ class SFMFactory(Factory):
                 | double iOffset1,
                 | Reference iPoint2,
                 | Reference iDestination) As SfmMember2Points
-                | 
+                |
                 |     Creates a straight SuperMember between a point on curve and a
                 |     point.
                 |     Role: Allows creating a member between a point on curve and a
                 |     point.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iCurve1
-                |             [in] Curve. 
+                |             [in] Curve.
                 |         iRatioMode1
                 |             [in] If true then Ratio, if false then Length mode for the point on
-                |             curve. 
+                |             curve.
                 |         iOffset1
-                |             [in] Offset. 
+                |             [in] Offset.
                 |         iPoint2
-                |             [in] Point. 
+                |             [in] Point.
                 |         iDestination
-                |             [in] Member's destination. 
+                |             [in] Member's destination.
                 |         oMember
-                |             [out] Member. 
-                | 
+                |             [out] Member.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMember2Points
 
@@ -410,20 +417,21 @@ class SFMFactory(Factory):
                 i_ratio_mode1,
                 i_offset1,
                 i_point2.com_object,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
     def add_member_pt_on_crv_pt_on_crv(
-            self, i_category: str,
-            i_section_name: str,
-            i_curve1: Reference,
-            i_ratio_mode1: bool,
-            i_offset1: float,
-            i_curve2: Reference,
-            i_ratio_mode2: bool,
-            i_offset2: float,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_curve1: Reference,
+        i_ratio_mode1: bool,
+        i_offset1: float,
+        i_curve2: Reference,
+        i_ratio_mode2: bool,
+        i_offset2: float,
+        i_destination: Reference,
     ) -> SFMMember2Points:
         """
         .. note::
@@ -439,39 +447,39 @@ class SFMFactory(Factory):
                 | boolean iRatioMode2,
                 | double iOffset2,
                 | Reference iDestination) As SfmMember2Points
-                | 
+                |
                 |     Creates a straight SuperMember between two points on
                 |     curve.
                 |     Role: Allows creating a member between two points on
                 |     curve.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iCurve1
-                |             [in] Curve. 
+                |             [in] Curve.
                 |         iRatioMode1
                 |             [in] If true then Ratio, if false then Length mode for the point on
-                |             curve. 
+                |             curve.
                 |         iOffset1
-                |             [in] Offset. 
+                |             [in] Offset.
                 |         iCurve2
-                |             [in] Curve. 
+                |             [in] Curve.
                 |         iRatioMode2
                 |             [in] If true then Ratio, if false then Length mode for the point on
-                |             curve. 
+                |             curve.
                 |         iOffset2
-                |             [in] Offset. 
+                |             [in] Offset.
                 |         iDestination
-                |             [in] Member's destination. 
+                |             [in] Member's destination.
                 |         oMember
-                |             [out] Member. 
-                | 
+                |             [out] Member.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMember2Points
 
@@ -496,17 +504,17 @@ class SFMFactory(Factory):
                 i_curve2.com_object,
                 i_ratio_mode2,
                 i_offset2,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
     def add_member_pt_pt(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_point1: Reference,
-            i_point2: Reference,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_point1: Reference,
+        i_point2: Reference,
+        i_destination: Reference,
     ) -> SFMMember2Points:
         """
         .. note::
@@ -518,27 +526,27 @@ class SFMFactory(Factory):
                 | Reference iPoint1,
                 | Reference iPoint2,
                 | Reference iDestination) As SfmMember2Points
-                | 
+                |
                 |     Creates a straight SuperMember between two points.
                 |     Role: Allows creating a member between two points.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iPoint1
-                |             [in] Point. 
+                |             [in] Point.
                 |         iPoint2
-                |             [in] Point. 
+                |             [in] Point.
                 |         iDestination
-                |             [in] Member's destination. 
+                |             [in] Member's destination.
                 |         oMember
-                |             [out] Member. 
-                | 
+                |             [out] Member.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMember2Points
 
@@ -555,19 +563,19 @@ class SFMFactory(Factory):
                 i_section_name,
                 i_point1.com_object,
                 i_point2.com_object,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
     def add_member_pt_pt_on_crv(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_point1: Reference,
-            i_curve2: Reference,
-            i_ratio_mode2: bool,
-            i_offset2: float,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_point1: Reference,
+        i_curve2: Reference,
+        i_ratio_mode2: bool,
+        i_offset2: float,
+        i_destination: Reference,
     ) -> SFMMember2Points:
         """
         .. note::
@@ -581,34 +589,34 @@ class SFMFactory(Factory):
                 | boolean iRatioMode2,
                 | double iOffset2,
                 | Reference iDestination) As SfmMember2Points
-                | 
+                |
                 |     Creates a straight SuperMember between a point and a point on
                 |     curve.
                 |     Role: Allows creating a member between a point and a point on
                 |     curve.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iPoint1
-                |             [in] Point. 
+                |             [in] Point.
                 |         iCurve2
-                |             [in] Curve. 
+                |             [in] Curve.
                 |         iRatioMode2
                 |             [in] If true then Ratio, if false then Length mode for the point on
-                |             curve. 
+                |             curve.
                 |         iOffset2
-                |             [in] Offset. 
+                |             [in] Offset.
                 |         iDestination
-                |             [in] Member's destination. 
+                |             [in] Member's destination.
                 |         oMember
-                |             [out] Member. 
-                | 
+                |             [out] Member.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMember2Points
 
@@ -629,18 +637,18 @@ class SFMFactory(Factory):
                 i_curve2.com_object,
                 i_ratio_mode2,
                 i_offset2,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
     def add_member_pt_up_to_limit(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_point: Reference,
-            i_direction: Reference,
-            i_limit: Reference,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_point: Reference,
+        i_direction: Reference,
+        i_limit: Reference,
+        i_destination: Reference,
     ) -> SFMMemberPointUpToLimit:
         """
         .. note::
@@ -653,33 +661,33 @@ class SFMFactory(Factory):
                 | Reference iDirection,
                 | Reference iLimit,
                 | Reference iDestination) As SfmMemberPointUpToLimit
-                | 
+                |
                 |     Creates a straight member defined by a point, a direction and a
                 |     limit.
                 |     Role: Allows creating a member defined by a point, a direction and a
                 |     limit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iPoint
-                |             [in] Point. 
+                |             [in] Point.
                 |         iDirection
                 |             [in] Direction element: it can be a line or a plane.
-                |             
+                |
                 |         iLimit
                 |             [in] Limit: it can be any kind of geometric element.
-                |             
+                |
                 |         iDestination
-                |             [in] Member's destination. 
+                |             [in] Member's destination.
                 |         oMember
-                |             [out] Member. 
-                | 
+                |             [out] Member.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMemberPointUpToLimit
 
@@ -698,17 +706,17 @@ class SFMFactory(Factory):
                 i_point.com_object,
                 i_direction.com_object,
                 i_limit.com_object,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
     def add_member_surf_surf(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_surface1: Reference,
-            i_surface2: Reference,
-            i_destination: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_surface1: Reference,
+        i_surface2: Reference,
+        i_destination: Reference,
     ) -> SFMMemberSurfSurf:
         """
         .. note::
@@ -720,28 +728,28 @@ class SFMFactory(Factory):
                 | Reference iSurface1,
                 | Reference iSurface2,
                 | Reference iDestination) As SfmMemberSurfSurf
-                | 
+                |
                 |     Creates a SuperMember by the intersection of two surfaces.
                 |     Role: Allows creating a member by the intersection of two
                 |     surfaces.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Member's category. 
+                |             [in] Member's category.
                 |         iSectionName
-                |             [in] Name of the section. 
+                |             [in] Name of the section.
                 |         iSurface1
-                |             [in] First surface. 
+                |             [in] First surface.
                 |         iSurface2
-                |             [in] Second surface. 
+                |             [in] Second surface.
                 |         iDestination
-                |             [in] Member's destination. 
+                |             [in] Member's destination.
                 |         oMember
-                |             [out] Member. 
-                | 
+                |             [out] Member.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmMemberSurfSurf
 
@@ -758,11 +766,13 @@ class SFMFactory(Factory):
                 i_section_name,
                 i_surface1.com_object,
                 i_surface2.com_object,
-                i_destination.com_object
+                i_destination.com_object,
             )
         )
 
-    def add_super_plate(self, i_category: str, i_support: Reference, i_destination: Reference) -> SFMSuperPlate:
+    def add_super_plate(
+        self, i_category: str, i_support: Reference, i_destination: Reference
+    ) -> SFMSuperPlate:
         """
         .. note::
             :class: toggle
@@ -771,24 +781,24 @@ class SFMFactory(Factory):
                 | o Func AddSuperPlate(CATBSTR iCategory,
                 | Reference iSupport,
                 | Reference iDestination) As SfmSuperPlate
-                | 
+                |
                 |     Creates a SuperPlate.
                 |     Role: Allows creating a SuperPlate in the regular limit mode (split
                 |     mode).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Category. 
+                |             [in] Category.
                 |         iSupport
-                |             [in] Support surface. 
+                |             [in] Support surface.
                 |         iDestination
-                |             [in] SuperPlate's destination. 
+                |             [in] SuperPlate's destination.
                 |         oSuperPlate
-                |             [out] SuperPlate. 
-                | 
+                |             [out] SuperPlate.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmSuperPlate
 
@@ -797,10 +807,19 @@ class SFMFactory(Factory):
         :param Reference i_destination:
         :rtype: SFMSuperPlate
         """
-        return SFMSuperPlate(self.sfm_factory.AddSuperPlate(i_category, i_support.com_object, i_destination.com_object))
+        return SFMSuperPlate(
+            self.sfm_factory.AddSuperPlate(
+                i_category, i_support.com_object, i_destination.com_object
+            )
+        )
 
-    def add_super_stiffener(self, i_category: str, i_section_name: str, i_super_plate: SFMSuperPlate,
-                            i_web_support: Reference) -> SFMStiffener:
+    def add_super_stiffener(
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_super_plate: SFMSuperPlate,
+        i_web_support: Reference,
+    ) -> SFMStiffener:
         """
         .. note::
             :class: toggle
@@ -810,24 +829,24 @@ class SFMFactory(Factory):
                 | CATBSTR iSectionName,
                 | SfmSuperPlate iSuperPlate,
                 | Reference iWebSupport) As SfmStiffener
-                | 
+                |
                 |     Creates a SuperStiffener.
                 |     Role: Allows creating a SuperStiffener in the normal to plate mode with the
                 |     WebSideLeft anchor point.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Category. 
+                |             [in] Category.
                 |         iSectionName
-                |             [in] Section name. 
+                |             [in] Section name.
                 |         iSuperPlate
-                |             [in] SuperPlate to be stiffened. 
+                |             [in] SuperPlate to be stiffened.
                 |         oSuperStiffener
-                |             [out] SuperStiffener. 
-                | 
+                |             [out] SuperStiffener.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmStiffener
 
@@ -842,16 +861,16 @@ class SFMFactory(Factory):
                 i_category,
                 i_section_name,
                 i_super_plate.com_object,
-                i_web_support.com_object
+                i_web_support.com_object,
             )
         )
 
     def add_super_stiffener_on_free_edge(
-            self,
-            i_category: str,
-            i_section_name: str,
-            i_super_plate: SFMSuperPlate,
-            i_free_edge: Reference
+        self,
+        i_category: str,
+        i_section_name: str,
+        i_super_plate: SFMSuperPlate,
+        i_free_edge: Reference,
     ) -> SFMStiffenerOnFreeEdge:
         """
         .. note::
@@ -862,26 +881,26 @@ class SFMFactory(Factory):
                 | CATBSTR iSectionName,
                 | SfmSuperPlate iSuperPlate,
                 | Reference iFreeEdge) As SfmStiffenerOnFreeEdge
-                | 
+                |
                 |     Creates a SuperStiffener on Free Edge.
                 |     Role: Allows creating a SuperStiffener on Free Edge in the normal to plate
                 |     mode with the WebSideLeft anchor point.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCategory
-                |             [in] Category. 
+                |             [in] Category.
                 |         iSectionName
-                |             [in] Section name. 
+                |             [in] Section name.
                 |         iSuperPlate
-                |             [in] SuperPlate to be stiffened. 
+                |             [in] SuperPlate to be stiffened.
                 |         iFreeEdge
-                |             [in] Support to be used for creating SFE. 
+                |             [in] Support to be used for creating SFE.
                 |         oSuperStiffenerOnFreeEdge
-                |             [out] SuperStiffener on free edge. 
-                | 
+                |             [out] SuperStiffener on free edge.
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmStiffenerOnFreeEdge
 
@@ -896,7 +915,7 @@ class SFMFactory(Factory):
                 i_category,
                 i_section_name,
                 i_super_plate.com_object,
-                i_free_edge.com_object
+                i_free_edge.com_object,
             )
         )
 
@@ -907,12 +926,12 @@ class SFMFactory(Factory):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetManager() As SfmManager
-                | 
+                |
                 |     Retrieved the services manager.
                 |     Role: Allows getting the services manager.
-                | 
+                |
                 |     Returns:
-                |         S_OK if everything ran ok. 
+                |         S_OK if everything ran ok.
                 |     See also:
                 |         SfmManager
 

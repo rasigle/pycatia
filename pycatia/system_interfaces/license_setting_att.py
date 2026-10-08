@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,33 +14,33 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class LicenseSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
+        CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         LicenseSettingAtt
-                | 
-                | Interface to handle the licensing settings.
-                | Role: This interface is implemented by a component which represents the
-                | controller of the static Licenses.
-                | To access this property page:
-                | Click the Options command in the Tools menu
-                | Click General
-                | Click the Licensing Property Page
-                | 
-                | This interface defines:
-                | A method to set each License
-                | A method to get the value of each License
-                | A method to lock/unlock each parameter
-                | A method to retrieve the information concerning each parameter
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         LicenseSettingAtt
+            |
+            | Interface to handle the licensing settings.
+            | Role: This interface is implemented by a component which represents the
+            | controller of the static Licenses.
+            | To access this property page:
+            | Click the Options command in the Tools menu
+            | Click General
+            | Click the Licensing Property Page
+            |
+            | This interface defines:
+            | A method to set each License
+            | A method to get the value of each License
+            | A method to lock/unlock each parameter
+            | A method to retrieve the information concerning each parameter
+
     """
 
     def __init__(self, setting_controller):
@@ -55,7 +55,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property DemoMode() As boolean
-                | 
+                |
                 |     Retrieves or Sets the demo mode.
                 |     Role: Retrieves or sets the value of the parameter describing if the demo
                 |     mode is active.
@@ -81,7 +81,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property Frequency() As float
-                | 
+                |
                 |     Retrieves or Sets the contact frequency.
                 |     Role: Retrieves or sets the value of the parameter describing the server
                 |     contact frequency in minutes. Note that a null value represents the maximum
@@ -109,7 +109,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property NodelockAlert() As long
-                | 
+                |
                 |     Retrieves or Sets the license expiry alert.
                 |     Role: Retrieves or sets the value of the parameter describing the lthe
                 |     license expiry alertt in days. For more information about the range and
@@ -136,7 +136,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property ServerTimeOut() As float
-                | 
+                |
                 |     Retrieves or Sets the server time out.
                 |     Role: Retrieves or sets the value of the parameter describing the licensing
                 |     server time out in minutes. For more information about the range and maximum,
@@ -163,7 +163,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property ShowLicense() As boolean
-                | 
+                |
                 |     Retrieves or Sets the show license .
                 |     Role: Retrieves or sets the value of the parameter describing the complete
                 |     license information. When the parameter is set, the user gets more information
@@ -190,7 +190,7 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetDemoModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the DemoMode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -209,7 +209,7 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetFrequencyInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Frequency setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -228,14 +228,16 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetGrantedLicensesList(long iDefaultLicenses) As
                 | CATSafeArrayVariant
-                | 
+                |
                 |     Deprecated:
                 |         V5R15 CATSysLicenseSettingAtt#GetLicensesList
 
         :param int i_default_licenses:
         :return: tuple
         """
-        return tuple(self.license_setting_att.GetGrantedLicensesList(i_default_licenses))
+        return tuple(
+            self.license_setting_att.GetGrantedLicensesList(i_default_licenses)
+        )
 
     def get_license(self, i_license):
         """
@@ -244,15 +246,15 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetLicense(CATBSTR iLicense) As CATBSTR
-                | 
+                |
                 |     Retrieves the value of the license.
                 |     Role: Retrieves the mapping between a name of a license and the value of
                 |     the license. The license does not need to be returned by GetLicensesList(). But
                 |     if the license is not installed the license will be
                 |     "NotRequested"
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLicense
                 |             the name of the License: "PMG.prd", "_MD2.slt+", "_MD2.slt+GSD" for
                 |             example.
@@ -261,8 +263,8 @@ class LicenseSettingAtt(SettingController):
                 |             "_MD2.slt+" represent the license of the solution
                 |             MD2.
                 |             "_MD2.slt+GSD" represent the license of the solution MD2, with the
-                |             AddOn product GSD. 
-                | 
+                |             AddOn product GSD.
+                |
                 |     Returns:
                 |         the value of the License:
                 |         NotRequested : License is not Requested
@@ -284,7 +286,7 @@ class LicenseSettingAtt(SettingController):
                 | o Func GetLicenseInfo(CATBSTR iLicense,
                 | CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the License setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -293,7 +295,9 @@ class LicenseSettingAtt(SettingController):
         :param str io_locked:
         :return: None
         """
-        return self.license_setting_att.GetLicenseInfo(i_license, io_admin_level, io_locked)
+        return self.license_setting_att.GetLicenseInfo(
+            i_license, io_admin_level, io_locked
+        )
 
     def get_licenses_list(self, i_default_licenses):
         """
@@ -303,20 +307,20 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetLicensesList(long iDefaultLicenses) As
                 | CATSafeArrayVariant
-                | 
+                |
                 |     Retrieves the list of the requested or locked licenses.
                 |     Role: Retrieves the list of the requested or locked licenses. There is no
                 |     SetLicensesList() because the list is initialized using
                 |     LUM.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDefaultLicenses
                 |             If iDefaultLicenses!=0 and the settings are empty, returns the
                 |             default licenses, that is, the visible nodolocked licenses. If iDefaultLicenses
                 |             == 0 and the settings are empty, returns the selected licenses (not yet stored,
-                |             because not yet validated by OK button). 
-                | 
+                |             because not yet validated by OK button).
+                |
                 |     Returns:
                 |         The array of Licenses.
                 |         character meaning in license name:
@@ -340,7 +344,7 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetLicensesListInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLock) As boolean
-                | 
+                |
                 |     Retrieves information about the LicensesList setting
                 |     parameter.
                 |     Role: Retrieves information about the LicensesList setting locking state
@@ -350,21 +354,21 @@ class LicenseSettingAtt(SettingController):
                 |     the attribute. It does not means that an administrator has changed the value of
                 |     the attribute. The value of the setting is not updatable because it refers to a
                 |     lock on a list. That is why the return value is false.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel:
-                |             Level of administrator. 
+                |             Level of administrator.
                 |         ioLock:
-                |             Locked/Unlocked. 
-                | 
+                |             Locked/Unlocked.
+                |
                 |     Returns:
                 |         False
                 |         Information returned in the dump:
                 |         Parameter 1 : "Value taken in case of reset" : useless. Default value : "Default value"
                 |         Parameter 2 : "Locking state" value : unlocked / locked / locked at Admin Level n
                 |         Parameter 3 : "Returned value" : useless, default value : False
-                | 
+                |
                 |         Refer to SettingController for a detailed description.
 
         :param str io_admin_level:
@@ -381,7 +385,7 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetNodelockAlertInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the license expiry alert setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -400,7 +404,7 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetServerTimeOutInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the TimeOut setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -418,7 +422,7 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetShowLicenseInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the ShowLicense setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -436,7 +440,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetDemoModeLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the DemoMode setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -444,7 +448,7 @@ class LicenseSettingAtt(SettingController):
         :return: None
         """
         return self.license_setting_att.SetDemoModeLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -467,7 +471,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetFrequencyLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Frequency setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -475,7 +479,7 @@ class LicenseSettingAtt(SettingController):
         :return: None
         """
         return self.license_setting_att.SetFrequencyLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -499,12 +503,12 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetLicense(CATBSTR iLicense,
                 | CATBSTR iValue)
-                | 
+                |
                 |     Sets the License.
                 |     Role: Sets the value of the license.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLicense
                 |             the name of the License: "PMG.prd", "_MD2.slt+", "_MD2.slt+GSD" for
                 |             example.
@@ -513,9 +517,9 @@ class LicenseSettingAtt(SettingController):
                 |             "_MD2.slt+" represent the license of the solution
                 |             MD2.
                 |             "_MD2.slt+GSD" represent the license of the solution MD2, with the
-                |             AddOn product GSD. 
+                |             AddOn product GSD.
                 |         iValue
-                | 
+                |
                 |             the value of the License:
                 |             NotRequested : License is not Requested
                 |             key : the name of the license, the default available license has been chosen by the user.
@@ -537,7 +541,7 @@ class LicenseSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetLicenseLock(CATBSTR iLicense,
                 | boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the License setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -546,7 +550,7 @@ class LicenseSettingAtt(SettingController):
         :return: None
         """
         return self.license_setting_att.SetLicenseLock(i_license, i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -569,29 +573,29 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetLicensesListLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the LicensesList setting parameter.
                 |     Role:Locks or unlocks the LicensesList setting parameter. Locks or unlocks
                 |     the parameter describing the list of installed licenses, if the operation is
                 |     allowed in the current administrated environment. It is the global lock on all
                 |     the licenses. When the LicenseList is locked all the licenses are locked. When
                 |     the LicenseList is unlocked all the licenses are unlocked.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLock
                 |             the locking operation to be performed:
                 |             True: to lock the parameter.
                 |             False: to unlock the parameter.
-                |             Refer to 
-                | 
+                |             Refer to
+                |
                 |         SettingController for a detailed description.
 
         :param bool i_lock:
         :return: None
         """
         return self.license_setting_att.SetLicensesListLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -614,7 +618,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetNodelockAlertLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the license expiry alert setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -623,7 +627,7 @@ class LicenseSettingAtt(SettingController):
         :return: None
         """
         return self.license_setting_att.SetNodelockAlertLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -646,7 +650,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetServerTimeOutLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the TimeOut setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -654,7 +658,7 @@ class LicenseSettingAtt(SettingController):
         :return: None
         """
         return self.license_setting_att.SetServerTimeOutLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -677,7 +681,7 @@ class LicenseSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetShowLicenseLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the ShowLicense setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -685,7 +689,7 @@ class LicenseSettingAtt(SettingController):
         :return: None
         """
         return self.license_setting_att.SetShowLicenseLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

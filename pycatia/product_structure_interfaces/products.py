@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 from typing import Iterator
 from typing import TYPE_CHECKING
 
@@ -21,22 +22,22 @@ if TYPE_CHECKING:
 
 class Products(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Products
-                |
-                | The collection of the Product objects contained in a given Product object of a
-                | ProductDocument object.
-                | A Product object can aggregate one or zero Products
-                | collection.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Products
+            |
+            | The collection of the Product objects contained in a given Product object of a
+            | ProductDocument object.
+            | A Product object can aggregate one or zero Products
+            | collection.
 
     """
 
@@ -51,7 +52,7 @@ class Products(Collection):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func AddComponent(Product iReferenceProduct) As Product
-                | 
+                |
                 |     Creates a component and adds it to the Products collection. A component is
                 |     a Product object created from another Product object used as
                 |     reference.
@@ -60,7 +61,7 @@ class Products(Collection):
                 |
                 |         iReferenceProduct
                 |             The product used as reference
-                | 
+                |
                 |     Example:
                 |
                 |           The following example creates the SpareWheel component
@@ -69,7 +70,7 @@ class Products(Collection):
                 |          component
                 |          to the ToolKits collection.
                 |
-                | 
+                |
                 |          Dim SpareWheel As Product
                 |          Set SpareWheel = ToolKits.AddComponent(FrontRightWheel)
 
@@ -86,7 +87,7 @@ class Products(Collection):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub AddComponentsFromFiles(CATSafeArrayVariant iFilesList,
                 | CATBSTR iMethod)
-                | 
+                |
                 |     Creates a component for each file. The components are added to the Products
                 |     collection.
                 |
@@ -119,7 +120,7 @@ class Products(Collection):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_external_component(self, i_product_document: 'Document') -> Product:
+    def add_external_component(self, i_product_document: "Document") -> Product:
         """
         .. note::
             :class: toggle
@@ -127,7 +128,7 @@ class Products(Collection):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func AddExternalComponent(Document iProductDocument) As
                 | Product
-                | 
+                |
                 |     Creates a component from the root product of another ProductDocument
                 |     object. This root product is used as a reference to create the component. The
                 |     component is added to the Products collection.
@@ -137,7 +138,7 @@ class Products(Collection):
                 |         iProductDocument
                 |             The product document whose root object is to be used as reference
                 |             to create the component
-                | 
+                |
                 |     Example:
                 |
                 |           The following example creates the GearBox component
@@ -145,14 +146,16 @@ class Products(Collection):
                 |          referencing the GearBoxDocument and adds it
                 |          to the PowerTrains collection.
                 |
-                | 
+                |
                 |          Dim GearBox As Product
                 |          Set GearBox = PowerTrains.AddExternalComponent(GearBoxDocument)
 
         :param Document i_product_document:
         :rtype: Product
         """
-        return Product(self.products.AddExternalComponent(i_product_document.com_object))
+        return Product(
+            self.products.AddExternalComponent(i_product_document.com_object)
+        )
 
     def add_new_component(self, i_documen_type: str, i_part_number: str) -> Product:
         """
@@ -162,7 +165,7 @@ class Products(Collection):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func AddNewComponent(CATBSTR iDocumenType,
                 | CATBSTR iPartNumber) As Product
-                | 
+                |
                 |     Creates a component from the root product of a new ProductDocument object.
                 |     This root product is used as a reference to create the component. The component
                 |     is added to the Products collection.
@@ -172,7 +175,7 @@ class Products(Collection):
                 |         iProductDocument
                 |             The product document whose root object is to be used as reference
                 |             to create the component
-                | 
+                |
                 |     Example:
                 |
                 |           The following example creates the GearBox component
@@ -180,7 +183,7 @@ class Products(Collection):
                 |          referencing the GearBoxDocument and adds it
                 |          to the PowerTrains collection.
                 |
-                | 
+                |
                 |          Dim GearBox As Product
                 |          Set GearBox = PowerTrains.AddNewComponent(GearBoxDocument, "A120-253X-7")
 
@@ -197,7 +200,7 @@ class Products(Collection):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func AddNewProduct(CATBSTR iPartNumber) As Product
-                | 
+                |
                 |     Creates a Product reference object. This creates a Product reference object
                 |     and the associated component by specifying its type and adds it to the Products
                 |     collection.
@@ -209,12 +212,12 @@ class Products(Collection):
                 |             the collection
                 |
                 |     Example:
-                | 
+                |
                 |           The following example creates the Engine product
                 |          and adds the created component to the PowerTrains
                 |          collection.
                 |
-                | 
+                |
                 |          Dim Engine As Product
                 |          Set Engine = PowerTrains.AddNewProduct(V6Engine)
 
@@ -230,7 +233,7 @@ class Products(Collection):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func Item(CATVariant iIndex) As Product
-                | 
+                |
                 |     Returns a product from its index in the Products
                 |     collection.
                 |
@@ -243,18 +246,18 @@ class Products(Collection):
                 |             in the collection. The index of the first product in the collection is 1, and
                 |             the index of the last product is Count. As a string, it is the name you
                 |             assigned to the product using the
-                | 
+                |
                 |         AnyObject.Name property
                 |     Returns:
                 |         The retrieved product
                 |     Example:
-                | 
+                |
                 |           The following example returns in ThisProduct the third
                 |           product,
                 |          and in ThatProduct the product named
                 |          Wheel in the CarParts product collection.
                 |
-                | 
+                |
                 |          Dim ThisProduct As Product
                 |          Set ThisProduct = CarParts.Item(3)
                 |          Dim ThatProduct As Product
@@ -272,7 +275,7 @@ class Products(Collection):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes a product from the Products collection.
                 |
                 |     Parameters:
@@ -284,15 +287,15 @@ class Products(Collection):
                 |             index of the first product in the collection is 1, and the index of the last
                 |             product is Count. As a string, it is the name you assigned to the product using
                 |             the
-                | 
+                |
                 |         AnyObject.Name property
                 |     Example:
-                | 
+                |
                 |           The following example removes the sixth product and the product
                 |           named
                 |          LeftRearDisc from the Brakes product collection.
                 |
-                | 
+                |
                 |          Brakes.Remove(6)
                 |          Brakes.Remove("LeftRearDisc")
 
@@ -316,7 +319,9 @@ class Products(Collection):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def replace_component(self, i_old_component: Product, i_file_path: str, i_multi_instances: bool) -> Product:
+    def replace_component(
+        self, i_old_component: Product, i_file_path: str, i_multi_instances: bool
+    ) -> Product:
         """
         .. note::
             :class: toggle
@@ -325,7 +330,7 @@ class Products(Collection):
                 | o Func ReplaceComponent(Product iOldComponent,
                 | CATBSTR iFilePath,
                 | boolean iMultiInstances) As Product
-                | 
+                |
                 |     Creates a component which replace the given one.
                 |
                 |     Parameters:
@@ -349,9 +354,18 @@ class Products(Collection):
         :param bool i_multi_instances:
         :rtype: Product
         """
-        return Product(self.products.ReplaceComponent(i_old_component.com_object, i_file_path, i_multi_instances))
+        return Product(
+            self.products.ReplaceComponent(
+                i_old_component.com_object, i_file_path, i_multi_instances
+            )
+        )
 
-    def replace_product(self, i_old_component: Product, i_new_reference: Product, i_multi_instances: bool) -> Product:
+    def replace_product(
+        self,
+        i_old_component: Product,
+        i_new_reference: Product,
+        i_multi_instances: bool,
+    ) -> Product:
         """
         .. note::
             :class: toggle
@@ -360,7 +374,7 @@ class Products(Collection):
                 | o Func ReplaceProduct(Product iOldComponent,
                 | Product iNewReference,
                 | boolean iMultiInstances) As Product
-                | 
+                |
                 |     Creates a component which replace the given one.
                 |
                 |     Parameters:
@@ -384,7 +398,7 @@ class Products(Collection):
             self.products.ReplaceProduct(
                 i_old_component.com_object,
                 i_new_reference.com_object,
-                i_multi_instances
+                i_multi_instances,
             )
         )
 

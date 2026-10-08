@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import MotionBasis
 from pycatia.dnb_robot_interfaces.rob_generic_controller import RobGenericController
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,24 +16,24 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class GenericMotionProfile(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     GenericMotionProfile
-                | 
-                | Interface to manage Generic Motion Profile of Robot
-                | controller.
-                | 
-                | Role: This interface provides methods to get/set data related to Accuracy
-                | Profile.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     GenericMotionProfile
+            |
+            | Interface to manage Generic Motion Profile of Robot
+            | controller.
+            |
+            | Role: This interface provides methods to get/set data related to Accuracy
+            | Profile.
+
     """
 
     def __init__(self, com_object):
@@ -46,19 +47,19 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetAccelerationValue(double value)
-                | 
+                |
                 |     Retrieves acceleration value of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             This out parameter contains motion acceleration of the Profile.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -74,19 +75,19 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetAngularAccelerationValue(double value)
-                | 
+                |
                 |     Get Angular acceleration value of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             Percentage of max angular acceleration of robot. The value is used
-                |             when robot TCP rotate against a axis. 
-                | 
+                |             when robot TCP rotate against a axis.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -102,19 +103,19 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetAngularSpeedValue(double value)
-                | 
+                |
                 |     Retrieves Angular Speed value of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             This out parameter contains Angular Speed of the Profile.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -130,18 +131,18 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetController(RobGenericController oController)
-                | 
+                |
                 |     Retrieves controller owning the profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oController
-                |             This parameter contains pointer to controller. 
-                | 
+                |             This parameter contains pointer to controller.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -149,7 +150,7 @@ class GenericMotionProfile(AnyObject):
         :rtype: None
         """
         return self.generic_motion_profile.GetController(o_controller.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -172,19 +173,19 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetMotionBasis(MotionBasis basis)
-                | 
+                |
                 |     Retrieves motion basis of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         basis
                 |             motion basis, one of following: MOTION_ABSOLUTE, MOTION_PERCENT,
-                |             MOTION_TIME 
-                | 
+                |             MOTION_TIME
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -199,18 +200,18 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetName(CATBSTR oName)
-                | 
+                |
                 |     Gets name of the Motion Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oName
-                |             Name of the required Motion Profile. 
-                | 
+                |             Name of the required Motion Profile.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -225,18 +226,18 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetSpeedValue(double value)
-                | 
+                |
                 |     Retrieves speed value of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             This out parameter contains motion speed of the Profile.
                 |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -251,21 +252,21 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAccelerationValue(double value)
-                | 
+                |
                 |     Set acceleration value of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             meaning of the value is based on the motion basis:
                 |             MOTION_ABSOLUTE : absolute acceleration value. MOTION_PERCENT : 0-1, percent of
                 |             max acceleration of the device MOTION_TIME : percent of total move time used on
                 |             acceleration/deceleration
-                | 
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -281,19 +282,19 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAngularAccelerationValue(double value)
-                | 
+                |
                 |     Set Angular acceleration value of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             Percentage of max angular acceleration of robot. The value is used
-                |             when robot TCP rotate against a axis. 
-                | 
+                |             when robot TCP rotate against a axis.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -309,19 +310,19 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAngularSpeedValue(double value)
-                | 
+                |
                 |     Set Angular Speed value of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             Percentage of max angular speed of robot. The value is used when
-                |             robot TCP rotate against a axis. 
-                | 
+                |             robot TCP rotate against a axis.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -337,19 +338,19 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMotionBasis(MotionBasis basis)
-                | 
+                |
                 |     Set motion basis of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         basis
                 |             motion basis, one of following: MOTION_ABSOLUTE, MOTION_PERCENT,
-                |             MOTION_TIME 
-                | 
+                |             MOTION_TIME
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -365,18 +366,18 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetName(CATBSTR iName)
-                | 
+                |
                 |     Set name of the Motion Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
-                |             Name of the Motion Profile to be set. 
-                | 
+                |             Name of the Motion Profile to be set.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -392,20 +393,20 @@ class GenericMotionProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSpeedValue(double value)
-                | 
+                |
                 |     Set speed value of the Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             meaning of the value is based on the motion basis: MOTION_ABSOLUTE : absolute
                 |             speed value. MOTION_PERCENT : 0-1, percent of max speed of the device
                 |             MOTION_TIME : in seconds
-                | 
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 

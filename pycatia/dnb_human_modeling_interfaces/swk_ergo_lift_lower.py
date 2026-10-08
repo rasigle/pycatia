@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SWKErgoLiftLower(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SWKErgoLiftLower
-                | 
-                | This interface deals the lift/lower ergonomic analysis.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SWKErgoLiftLower
+            |
+            | This interface deals the lift/lower ergonomic analysis.
+
     """
 
     def __init__(self, com_object):
@@ -42,12 +42,12 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Coupling() As CATBSTR
-                | 
+                |
                 |     Returns or sets the coupling condition for the lift/lower
                 |     analysis.
                 |     The value of the parameter must be either "Good", "Fair", or
                 |     "Poor".
-                | 
+                |
                 |     N.B.: This coupling condition must be set before
                 |     attempting
                 |     to retrive any output value from the study, if the input gudeline
@@ -75,7 +75,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Duration() As double
-                | 
+                |
                 |     Returns or sets the lift duration.
                 |     This frequency must be expressed in hours per day, cannot be greater
                 |     than 8.0 and must be specified before attempting to retrive any output
@@ -103,7 +103,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Frequency() As double
-                | 
+                |
                 |     Returns or sets the lift frequecy.
                 |     This frequency must be expressed in lifts per second, and must
                 |     be specified before attempting to retrive any output value from the
@@ -131,11 +131,11 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property GuideLine() As CATBSTR
-                | 
+                |
                 |     Returns or sets the guideline for the lift/lower analysis.
                 |     The value of the parameter must be either "NIOSH1981", "NIOSH1991", or
                 |     "SnookCiriello1991".
-                | 
+                |
                 |     N.B.: This guideline must be set before attempting
                 |     to retrive any output value from the study, otherwise these outputs
                 |     will have invalid values.
@@ -161,7 +161,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_ActionLimit() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1981 analysis only.
                 |     It is the weight below which the task could be considered reasonably
                 |     safe.
@@ -180,7 +180,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_AngleOfAsymmetryFinal() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the angular measure of how far the object is displaced
@@ -203,7 +203,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_AngleOfAsymmetryInitial() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the angular measure of how far the object is displaced
@@ -226,7 +226,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_AsymmetricMultiplierFinal() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the asymmetric multiplier.
@@ -248,7 +248,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_AsymmetricMultiplierInitial() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the asymmetric multiplier.
@@ -270,7 +270,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_CouplingMultiplierFinal() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the coupling multiplier bases ont hte coupling
@@ -293,7 +293,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_CouplingMultiplierInitial() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the coupling multiplier bases ont hte coupling
@@ -314,7 +314,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_DistanceMultiplier() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the distance multiplier.
@@ -333,7 +333,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_FrequencyMultiplier() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the frequency depending upon the average of lifts/min
@@ -355,7 +355,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_HorizontalLocationFinal() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the distance of the hands from the mid-point between
@@ -378,7 +378,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_HorizontalLocationInitial() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the distance of the hands from the mid-point between
@@ -400,7 +400,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_HorizontalMultiplierFinal() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the horizontal multiplier.
@@ -422,7 +422,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_HorizontalMultiplierInitial() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the horizontal multiplier.
@@ -443,7 +443,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_LIFinal() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides a relative estimate of the level of physical
@@ -464,7 +464,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_LIInitial() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides a relative estimate of the level of physical
@@ -485,7 +485,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_LoadConstant() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the load constant.
@@ -505,7 +505,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_MaximumPermLimit() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1981 analysis
                 |     only.
                 |     This value represents a weight limit, above which the
@@ -524,7 +524,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_RWLFinal() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     It represents the weight of the load, that healthy workers
@@ -547,7 +547,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_RWLInitial() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     It represents the weight of the load that healthy workers
@@ -568,7 +568,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_TravelDistance() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the absolute value of the difference between the
@@ -590,7 +590,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_VerticalLocationFinal() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the distance of the hands above the floor, in the
@@ -613,7 +613,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_VerticalLocationInitial() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the distance of the hands above the floor, in in the
@@ -635,7 +635,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_VerticalMultiplierFinal() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the absolute value or deviation of V (vertical
@@ -658,7 +658,7 @@ class SWKErgoLiftLower(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NIOSH_VerticalMultiplierInitial() As CATBSTR (Read
                 | Only)
-                | 
+                |
                 |     This field is set to a valid value for the NIOSH 1991 analysis
                 |     only.
                 |     This value provides the absolute value or deviation of V (vertical
@@ -679,7 +679,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ObjectWeight() As CATBSTR
-                | 
+                |
                 |     Returns or sets the weight of the object being lifted.
                 |     This weight must specified at least once, if the current input guideline is
                 |     "NIOSH1991".
@@ -706,7 +706,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Population() As double
-                | 
+                |
                 |     Returns or sets the percentage of the population that should be able to
                 |     perform the lift/lower task safely.
                 |     This property can only take the values 50.0, 75.0 and 90.0,and must be
@@ -736,7 +736,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Snook_MaximumWeight() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is set to a valid value for the Snook/Ciriello 1991 analysis
                 |     only.
                 |     It is the maximum acceptable weight of the load that the selected
@@ -756,7 +756,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WarningMessage() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns an eventual warning message generated along with the study.
 
         :rtype: str
@@ -771,7 +771,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SaveFinalPosture()
-                | 
+                |
                 |     Saves the current posture of the mankin as the final posture for the
                 |     lift/lower analysis.
 
@@ -786,7 +786,7 @@ class SWKErgoLiftLower(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SaveInitialPosture()
-                | 
+                |
                 |     Saves the current posture of the mankin as the initial posture for the
                 |     lift/lower analysis.
 

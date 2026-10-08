@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import PositionTolerance_Type
 from pycatia.abq_automation_interfaces.abq_interaction import ABQInteraction
 from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
@@ -15,22 +16,22 @@ from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
 
 class ABQFastenedConnectionEnhancement(ABQInteraction):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQInteraction
-                |                         ABQFastenedConnectionEnhancement
-                | 
-                | This interface has been deprecated.
-                | Please use ABQFastenedPair instead.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQInteraction
+            |                         ABQFastenedConnectionEnhancement
+            |
+            | This interface has been deprecated.
+            | Please use ABQFastenedPair instead.
+
     """
 
     def __init__(self, com_object):
@@ -45,7 +46,7 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AdjustSlaveNode() As boolean
-                | 
+                |
                 |     Sets or returns the adjust slave node flag.
 
         :rtype: bool
@@ -69,13 +70,15 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConnectionProperty() As AnalysisEntity
-                | 
+                |
                 |     Sets or returns the connection property.
 
         :rtype: AnalysisEntity
         """
 
-        return AnalysisEntity(self.abq_fastened_connection_enhancement.ConnectionProperty)
+        return AnalysisEntity(
+            self.abq_fastened_connection_enhancement.ConnectionProperty
+        )
 
     @connection_property.setter
     def connection_property(self, value: AnalysisEntity):
@@ -93,14 +96,14 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FormulationOption() As FormulationOption_Type
-                | 
+                |
                 |     Sets or returns the formulation option.
-                | 
+                |
                 |     Returns:
                 |         The formulation option.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         SOLVERDEFAULT
                 |         SURFACETOSURFACE
                 |         NODETOSURFACE
@@ -127,7 +130,7 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IncludeShellThickness() As boolean
-                | 
+                |
                 |     Sets or returns the include shell element thickness flag.
 
         :rtype: bool
@@ -151,7 +154,7 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InvertMasterSurface() As boolean
-                | 
+                |
                 |     Sets or returns the invert master surface flag.
 
         :rtype: bool
@@ -175,7 +178,7 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InvertSlaveSurface() As boolean
-                | 
+                |
                 |     Sets or returns the invert slave surface flag.
 
         :rtype: bool
@@ -199,14 +202,14 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PositionTolerance() As PositionTolerance_Type
-                | 
+                |
                 |     Sets or returns the position tolerance.
-                | 
+                |
                 |     Returns:
                 |         The position tolerance.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         COMPUTED
                 |         SPECIFIED
 
@@ -231,7 +234,7 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PositionToleranceVal() As double
-                | 
+                |
                 |     Sets or returns the position tolerance value
 
         :rtype: float
@@ -255,7 +258,7 @@ class ABQFastenedConnectionEnhancement(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SwapMasterSlave() As boolean
-                | 
+                |
                 |     Sets or returns the swap master/slave surface flag.
 
         :rtype: bool

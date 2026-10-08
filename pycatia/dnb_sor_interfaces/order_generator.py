@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,39 +14,39 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class OrderGenerator(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     OrderGenerator
-                | 
-                | Interface representing Create Shop Order APIs which generates Shop Order
-                | Instance(SOI), against user-given option(s).
-                | 
-                | 
-                | Following gvies the major-steps encountered in a single SOI generation 1) Logs
-                | in and secures connection with DPE. 2) Loads the specified job Node. 3) Reslves
-                | the Work Instrucitons. 4) Captures Images for activities 5) Generates JobXML
-                | and Precedence XML 6) Generates PackNGo data ( Lite or Full) 7) Zips the SOI
-                | contents. 8) FTPs the zipped file to FTP server 9) Updates the Release table.
-                | 10) Disconnects from DPE.
-                | 
-                | 
-                | Role: Component that implement DNBIAOrderCreation is
-                | "OrderGenerator"
-                | 
-                | 
-                | Do not extend this interface
-                | 
-                | 
-                | Example : Refer to CreateShopOrder.CATScript or CreateSOI CATScript at intel_a/VBScript/DPM_SOR
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     OrderGenerator
+            |
+            | Interface representing Create Shop Order APIs which generates Shop Order
+            | Instance(SOI), against user-given option(s).
+            |
+            |
+            | Following gvies the major-steps encountered in a single SOI generation 1) Logs
+            | in and secures connection with DPE. 2) Loads the specified job Node. 3) Reslves
+            | the Work Instrucitons. 4) Captures Images for activities 5) Generates JobXML
+            | and Precedence XML 6) Generates PackNGo data ( Lite or Full) 7) Zips the SOI
+            | contents. 8) FTPs the zipped file to FTP server 9) Updates the Release table.
+            | 10) Disconnects from DPE.
+            |
+            |
+            | Role: Component that implement DNBIAOrderCreation is
+            | "OrderGenerator"
+            |
+            |
+            | Do not extend this interface
+            |
+            |
+            | Example : Refer to CreateShopOrder.CATScript or CreateSOI CATScript at intel_a/VBScript/DPM_SOR
+
     """
 
     def __init__(self, com_object):
@@ -60,9 +60,9 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateShopOrder() As short
-                | 
+                |
                 |     Create Shop Order method
-                | 
+                |
                 |     Returns:
                 |         SOI response, which in-turn can be obtained using
                 |         OrderGenerator.GetErrorDescription
@@ -78,11 +78,11 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CreateShopOrder2(CATBSTR iXMLInput)
-                | 
+                |
                 |     Create Shop Order using XML as SOI input.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iXMLInput
                 |             XML input file path Sample schema: Refer
                 |             intel_a/resources/xsd/DPM_SOR/CreateSOI.xsd Sample XML input: Refer
@@ -100,15 +100,15 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetErrorDescription(short ErrorCode) As CATBSTR
-                | 
+                |
                 |     Get Error Description. It deciphers return ERROR code of Create Shop Order
                 |     API.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iErrorCode
-                |             Create Shop Order API return code 
-                | 
+                |             Create Shop Order API return code
+                |
                 |     Returns:
                 |         oErrDescription Create Shop Order API return code description
 
@@ -125,13 +125,13 @@ class OrderGenerator(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_DPELoginInfo(CATBSTR iDPELoginId,
                 | CATBSTR iDPEPassword)
-                | 
+                |
                 |     Set DPE Login Information.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDPELoginId
-                |             E5 Login ID for authentication 
+                |             E5 Login ID for authentication
                 |         iDPEPassword
                 |             E5 Password for authentication
 
@@ -148,20 +148,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_Export3DXML(boolean iRequired)
-                | 
+                |
                 |     Set Export 3D XML Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_Export3DXML(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -184,20 +184,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportImageCapture(boolean iRequired)
-                | 
+                |
                 |     Set Export Image Capture Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_ExportImageCapture(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -220,20 +220,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportJobXML(boolean iRequired)
-                | 
+                |
                 |     Set Export Job XML Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_ExportJobXML(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -256,20 +256,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportPrecXML(boolean iRequired)
-                | 
+                |
                 |     Set Export Precedence XML Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_ExportPrecXML(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -292,20 +292,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_FTP(boolean iRequired)
-                | 
+                |
                 |     Set FTP Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_FTP(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -322,11 +322,11 @@ class OrderGenerator(AnyObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def set_ftp_server_information(
-            self,
-            iftp_host_name: str,
-            iftp_login_name: str,
-            iftp_password: str,
-            iftp_outputlocation: str
+        self,
+        iftp_host_name: str,
+        iftp_login_name: str,
+        iftp_password: str,
+        iftp_outputlocation: str,
     ) -> None:
         """
         .. note::
@@ -337,18 +337,18 @@ class OrderGenerator(AnyObject):
                 | CATBSTR iftpLoginName,
                 | CATBSTR iftpPassword,
                 | CATBSTR iftpOutputlocation)
-                | 
+                |
                 |     Set FTP Information.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iftpHostName
-                |             Service Host Name for transferering the data 
+                |             Service Host Name for transferering the data
                 |         iftpLoginName
                 |             Login Name for authentication to the Service Host Machine for
-                |             transfering the data 
+                |             transfering the data
                 |         iftpPassword
-                |             Password for the above login 
+                |             Password for the above login
                 |         iftpOutputlocation
                 |             Output Dir where to tranfer the data in the
                 |             Machine
@@ -360,10 +360,7 @@ class OrderGenerator(AnyObject):
         :rtype: None
         """
         return self.order_generator.set_FTPServerInformation(
-            iftp_host_name,
-            iftp_login_name,
-            iftp_password,
-            iftp_outputlocation
+            iftp_host_name, iftp_login_name, iftp_password, iftp_outputlocation
         )
 
     def set_filter_input_string(self, ifilter_input_string: str) -> None:
@@ -373,35 +370,35 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_FilterInputString(CATBSTR ifilterInputString)
-                | 
+                |
                 |     Specifies the filters to be applied while loading the project. The filters
                 |     can be specified either in the new way (V5R18 onwards) or the old
                 |     way.
-                | 
+                |
                 |      New Way of Filtering:
-                |      
+                |
                 |      In the new way of filtering different filters can be set for
                 |      P,P,R
                 |      by specifiying different filter sets for each area and also a global
                 |      filter set.
-                | 
-                | 
+                |
+                |
                 |      Old way of Filtering:
-                | 
+                |
                 |      In case of P,P,R filters, either
                 |       (a) A Filter string can be supplied OR
                 |       (b) A Calculation Model ID can be supplied
                 |      Note: Calculation Model filters MUST only be supplied through their IDs.
-                |      
-                | 
+                |
+                |
                 |      In case of extended filters, either
                 |       (a) A Filter string can be supplied OR
                 |       (b) A Calculation Model ID can be supplied OR
                 |       (c) Both string AND Model ID can be supplied (Combined effectivity
                 |       case)
                 |      Note: Calculation Model filters MUST only be supplied through their IDs.
-                |      
-                | 
+                |
+                |
                 |      In case of effectivity filter mode, one of the following rules can be
                 |      supplied
                 |       (a) Give the objects whose begin & end dates contains the begin & end
@@ -430,22 +427,22 @@ class OrderGenerator(AnyObject):
                 |      Note: If the user has not specified any value for this filter, then a
                 |      default value of 31 (combination of all rules) will be
                 |      used.
-                |      
-                | 
+                |
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFilters
                 |             [in]
-                | 
-                |               The filters to be set. 
+                |
+                |               The filters to be set.
                 |               This is a list of values separated by XML type tags. User Should
-                |               specify tags only from one of the below 
+                |               specify tags only from one of the below
                 |               set of tags applicable for new and old
                 |               filtering.
-                | 
+                |
                 |               The following tags are supported for New way of
                 |               Filtering:
-                | 
+                |
                 |                  <GlobalFilterSetName>Global Filter
                 |                  Name</GlobalFilterSetName>
                 |                  <ProductFilterSetName>Product Filter
@@ -453,7 +450,7 @@ class OrderGenerator(AnyObject):
                 |                  <ProcessFilterSetName>Process Filter
                 |                  Name</ProcessFilterSetName>
                 |                  <ResourceFilterSetName>Process Filter
-                |                  Name</ResourceFilterSetName>   
+                |                  Name</ResourceFilterSetName>
                 |                  <ModStatementFilterID>Filter
                 |                  Value</ModStatementFilterID>
                 |                  <ProductFilterByCO>Filter
@@ -467,14 +464,14 @@ class OrderGenerator(AnyObject):
                 |                  State</PlanningStateOtherFilterID>
                 |                  <ApplyImplicitFilter>TRUE or
                 |                  FALSE</ApplyImplicitFilter>
-                | 
-                | 
+                |
+                |
                 |               The following tags are supported for Old way of
                 |               Filtering:
-                | 
+                |
                 |                  <ProcessFilter>Filter Value</ProcessFilter>
                 |                  <ProcessFilterCalcModelID>ID of Calculation Model
-                |                  Filter</ProcessFilterCalcModelID>  
+                |                  Filter</ProcessFilterCalcModelID>
                 |                  <ProductFilter>Filter Value</ProductFilter>
                 |                  <ProductFilterCalcModelID>ID of Calculation Model
                 |                  Filter</ProductFilterCalcModelID>
@@ -507,7 +504,7 @@ class OrderGenerator(AnyObject):
                 |                  <ProductExtendedEffectivityFilterCalcModelID>ID of Calculation
                 |                  ModelFilter</ProductExtendedEffectivityFilterCalcModelID>
                 |                  <ResourceExtendedEffectivityFilter>Filter
-                |                  Value</ResourceExtendedEffectivityFilter> 
+                |                  Value</ResourceExtendedEffectivityFilter>
                 |                  <ResourceExtendedEffectivityFilterCalcModelID>ID of
                 |                  Calculation ModelFilter</ResourceExtendedEffectivityFilterCalcModelID>
                 |
@@ -529,7 +526,7 @@ class OrderGenerator(AnyObject):
                 |                    </AttributeFilter>
                 |                    Add more <AttributeFilter>...</AttributeFilter> if more
                 |                    attribute filters need to be specified
-                |                  </ProcessAttributeFilters>   
+                |                  </ProcessAttributeFilters>
                 |                  <ProductAttributeFilters>
                 |                    Add <AttributeFilter>...</AttributeFilter> as specified
                 |                    above
@@ -539,8 +536,8 @@ class OrderGenerator(AnyObject):
                 |                    above
                 |                  </ResourceAttributeFilters>
                 |               </AttributeFilters>
-                |               
-                | 
+                |
+                |
                 |             Note: Instead of specifying plantype name, the object typename
                 |             (e.g., "ergocompprocessdefault, "ergocomporgprocess", etc) can also be supplied
                 |             if filter is to be applicable to all plantypes
@@ -554,31 +551,31 @@ class OrderGenerator(AnyObject):
                 |                >=
                 |                LIKE
                 |                NOT LIKE
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |             In new way of filtering:
                 |            iFilters = "<ProcessFilterSetName>Name</ProcessFilterSetName><ProductFilterSetName>Name</ProductFilterSetName><ResourceFilterSetName>Name</ResourceFilterSetName>"
-                |            
+                |
                 |         The order is NOT important. e.g.,
                 |         "<ResourceFilterSetName>...</ResourceFilterSetName>" can come before
                 |         "<ProcessFilterSetName>...</ProcessFilterSetName>"
-                |          
+                |
                 |     Example:
-                | 
+                |
                 |             In old way of filtering:
                 |            iFilters = "<ProcessFilter>Process Type A</ProcessFilter><LabelFilter>Label B</LabelFilter><LineNumberFilter>10</LineNumberFilter>"
-                |            
+                |
                 |         The order is NOT important. e.g., "<LabelFilter>...</LabelFilter>" can
                 |         come before "<ProcessFilter>...</ProcessFilter>"
                 |
                 |     Example:
-                | 
+                |
                 |             In old way of filtering:
                 |            Example with attribute filers. Assuming user wishes to filter on
                 |            Line Number 10 and load only those Workplans that are labelled "Workplan A" and
                 |            "Workplan C"
-                |            
+                |
                 |         iFilters = "<LineNumberFilter>10</LineNumberFilter><AttributeFilters><ProcessAttributeFilters><AttributeFilter>
                 |            <PlanTypeName>Workplan</PlanTypeName>
                 |            <AttributeName>name</AttributeName>
@@ -604,20 +601,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_GeneratePackNGo(boolean iRequired)
-                | 
+                |
                 |     Set Generate PackNGo Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_GeneratePackNGo(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -640,20 +637,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_GenerateSMGMappingXML(boolean iRequired)
-                | 
+                |
                 |     Set Generate SMG Mapping XML Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_GenerateSMGMappingXML(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -676,20 +673,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_GenerateSMGXML(boolean iRequired)
-                | 
+                |
                 |     Set Generate SMG XML Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_GenerateSMGXML(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -712,11 +709,11 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_GenerateSMGXmlExePath(CATBSTR iRequired)
-                | 
+                |
                 |     Set Generate SMG XML EXE Path.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
                 |             Path to the SMG Generator EXE
 
@@ -732,20 +729,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_LitePackNGo(boolean iRequired)
-                | 
+                |
                 |     Set Lite PackNGo Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_LitePackNGo(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -768,14 +765,14 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_LoadContext(CATBSTR iRequired)
-                | 
+                |
                 |     Set Load Context Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequestType
                 |             Type Of Request
-                | 
+                |
                 |                 Manufacturing
                 |                 Volumetric
                 |                 User
@@ -792,14 +789,14 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_LoadPositions(CATBSTR iRequired)
-                | 
+                |
                 |     Set Load Positions Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequestType
                 |             Type Of Request
-                | 
+                |
                 |                 3DStates
                 |                 PublishedSimulation
 
@@ -815,20 +812,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ManufacturingContext(boolean iRequired)
-                | 
+                |
                 |     Set Manufacturing Context Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_ManufacturingContext(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -851,11 +848,11 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ProcessName(CATBSTR iprocessName)
-                | 
+                |
                 |     Set Process Name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iprocessName
                 |             Process Name to be set for PackNGo CATProcess
 
@@ -871,14 +868,14 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_RequestType(CATBSTR iRequsetType)
-                | 
+                |
                 |     Set Request Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequestType
                 |             Type Of Request
-                | 
+                |
                 |                 DPMSingleSOIGeneration
                 |                 DPMMultiSOIGeneration
                 |                 DPMMultiSOIGenerationAtCS
@@ -888,7 +885,9 @@ class OrderGenerator(AnyObject):
         """
         return self.order_generator.set_RequestType(i_requset_type)
 
-    def set_requested_node_details(self, i_proj_id: str, i_requested_node_id: str, i_effectivity: str) -> None:
+    def set_requested_node_details(
+        self, i_proj_id: str, i_requested_node_id: str, i_effectivity: str
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -897,21 +896,21 @@ class OrderGenerator(AnyObject):
                 | o Sub set_RequestedNodeDetails(CATBSTR iProjID,
                 | CATBSTR iRequestedNodeID,
                 | CATBSTR iEffectivity)
-                | 
+                |
                 |     Set Requested Node Details.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProjID
-                |             Object ID of the PPR Based Project 
+                |             Object ID of the PPR Based Project
                 |         iRequestedNodeID
                 |             Object ID of the node selected from PPR Based Project
-                |             
+                |
                 |         iEffectivity
-                | 
+                |
                 |             THIS PARAMETER HAS BEEN DEPRICATED FROM R17SP1 USE
-                |             
-                | 
+                |
+                |
                 |         OrderGenerator.set_FilterInputString method to set your filters
 
         :param str i_proj_id:
@@ -919,7 +918,9 @@ class OrderGenerator(AnyObject):
         :param str i_effectivity:
         :rtype: None
         """
-        return self.order_generator.set_RequestedNodeDetails(i_proj_id, i_requested_node_id, i_effectivity)
+        return self.order_generator.set_RequestedNodeDetails(
+            i_proj_id, i_requested_node_id, i_effectivity
+        )
 
     def set_set_encryption_mode(self, i_encryptmode: bool) -> None:
         """
@@ -928,11 +929,11 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_SetEncryptionMode(boolean iEncryptmode)
-                | 
+                |
                 |     Set Encryption Mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEncryptmode
                 |             Encryption to be done?(True/False) for encrypting the SOR Package
                 |             data
@@ -941,7 +942,7 @@ class OrderGenerator(AnyObject):
         :rtype: None
         """
         return self.order_generator.set_SetEncryptionMode(i_encryptmode)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -964,11 +965,11 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_TransactionID(CATBSTR iTransactionID)
-                | 
+                |
                 |     Set Transaction Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iTransactionID
                 |             Transaction ID
 
@@ -984,20 +985,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_UpdatereleaseTable(boolean iRequired)
-                | 
+                |
                 |     Set Update Release Table Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_UpdatereleaseTable(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1020,20 +1021,20 @@ class OrderGenerator(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_Zip(boolean iRequired)
-                | 
+                |
                 |     Set Zip Flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRequired
-                | 
+                |
                 |             Legal values: TRUE/FALSE
 
         :param bool i_required:
         :rtype: None
         """
         return self.order_generator.set_Zip(i_required)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

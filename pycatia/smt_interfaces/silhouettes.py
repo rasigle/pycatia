@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.document import Document
@@ -18,20 +18,20 @@ from pycatia.system_interfaces.collection import Collection
 
 class Silhouettes(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Silhouettes
-                | 
-                | Interface to compute Silhouettes.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Silhouettes
+            |
+            | Interface to compute Silhouettes.
+
     """
 
     def __init__(self, com_object):
@@ -39,13 +39,13 @@ class Silhouettes(Collection):
         self.silhouettes = com_object
 
     def add(
-            self,
-            i_product_to_silhouette: Product,
-            i_accuracy: float,
-            i_azimuts: tuple,
-            i_shape_name: str,
-            i_activated_shape: int,
-            i_default_shape: int
+        self,
+        i_product_to_silhouette: Product,
+        i_accuracy: float,
+        i_azimuts: tuple,
+        i_shape_name: str,
+        i_activated_shape: int,
+        i_default_shape: int,
     ) -> Silhouette:
         """
         .. note::
@@ -58,16 +58,16 @@ class Silhouettes(Collection):
                 | CATBSTR iShapeName,
                 | long iActivatedShape,
                 | long iDefaultShape) As Silhouette
-                | 
+                |
                 |     Creates a new Silhouette and adds it to the Silhouettes collection. This
                 |     function is deprecated.
-                | 
+                |
                 |     Returns:
-                |         The created Silhouette 
+                |         The created Silhouette
                 |     Example:
                 |         The following example creates a Silhouette newSilhouette in the
                 |         Silhouette collection.
-                | 
+                |
                 |          Set newSilhouette = Silhouettes.Add
 
         :param Product i_product_to_silhouette:
@@ -85,7 +85,7 @@ class Silhouettes(Collection):
                 i_azimuts,
                 i_shape_name,
                 i_activated_shape,
-                i_default_shape
+                i_default_shape,
             )
         )
 
@@ -96,7 +96,7 @@ class Silhouettes(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CleanUp()
-                | 
+                |
                 |     Performs some clean-up.
 
         :rtype: None
@@ -104,11 +104,11 @@ class Silhouettes(Collection):
         return self.silhouettes.CleanUp()
 
     def compute_a_silhouette(
-            self,
-            group_of_selected_products: Group,
-            i_view_points: tuple,
-            i_accuracy: float,
-            i_accuracy_for_simplification: float
+        self,
+        group_of_selected_products: Group,
+        i_view_points: tuple,
+        i_accuracy: float,
+        i_accuracy_for_simplification: float,
     ) -> Document:
         """
         .. note::
@@ -119,23 +119,23 @@ class Silhouettes(Collection):
                 | CATSafeArrayVariant iViewPoints,
                 | double iAccuracy,
                 | double iAccuracyForSimplification) As Document
-                | 
+                |
                 |     Computes a silhouette on the selected products.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         GroupOfSelectedProducts
                 |             The selected products on which you want to perform the silhouette.
-                |             
+                |
                 |         iViewPoints
                 |             Array containing the viewpoints (cameras) used to perform the
-                |             silhouette. 
+                |             silhouette.
                 |         iAccuracy
-                |             Grain value for the voxels. 
+                |             Grain value for the voxels.
                 |         iAccuracyForSimplification
                 |             Accuracy for simplification of the silhouette. Let it null for no
-                |             simplification. 
-                | 
+                |             simplification.
+                |
                 |     Returns:
                 |         SilhouetteDocument: Document containing the result.
 
@@ -150,17 +150,17 @@ class Silhouettes(Collection):
                 group_of_selected_products.com_object,
                 i_view_points,
                 i_accuracy,
-                i_accuracy_for_simplification
+                i_accuracy_for_simplification,
             )
         )
 
     def compute_a_silhouette_with_a_reference(
-            self,
-            i_group_of_selected_products: Group,
-            i_reference_product: Product,
-            i_view_points: tuple,
-            i_accuracy: float,
-            i_accuracy_for_simplification: float
+        self,
+        i_group_of_selected_products: Group,
+        i_reference_product: Product,
+        i_view_points: tuple,
+        i_accuracy: float,
+        i_accuracy_for_simplification: float,
     ) -> Document:
         """
         .. note::
@@ -173,26 +173,26 @@ class Silhouettes(Collection):
                 | CATSafeArrayVariant iViewPoints,
                 | double iAccuracy,
                 | double iAccuracyForSimplification) As Document
-                | 
+                |
                 |     Computes a silhouette on the selected products, according to a reference
                 |     product.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iGroupOfSelectedProducts
                 |             The selected products on which you want to perform the silhouette.
-                |             
+                |
                 |         iReferenceProduct
-                |             Product taken as a reference. 
+                |             Product taken as a reference.
                 |         iViewPoints
                 |             Array containing the viewpoints (cameras) used to perform the
-                |             silhouette. 
+                |             silhouette.
                 |         iAccuracy
-                |             Grain value for the voxels. 
+                |             Grain value for the voxels.
                 |         iAccuracyForSimplification
                 |             Accuracy for simplification of the silhouette. Let it null for no
-                |             simplification. 
-                | 
+                |             simplification.
+                |
                 |     Returns:
                 |         SilhouetteDocument: Document containing the result.
 
@@ -209,7 +209,7 @@ class Silhouettes(Collection):
                 i_reference_product.com_object,
                 i_view_points,
                 i_accuracy,
-                i_accuracy_for_simplification
+                i_accuracy_for_simplification,
             )
         )
 
@@ -220,7 +220,7 @@ class Silhouettes(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func SilhouetteShapeName() As CATBSTR
-                | 
+                |
                 |     Returns the name of the associated shape.
 
         :rtype: str

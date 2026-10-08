@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,19 +14,19 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PCBArea(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PCBArea
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PCBArea
 
-    
+
     """
 
     def __init__(self, com_object):
@@ -41,11 +41,11 @@ class PCBArea(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AreaType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Allow to get the Type of a constraint area The possible values are : ROUTE_OUTLINE,
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -63,13 +63,13 @@ class PCBArea(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Heightmax() As double
-                | 
+                |
                 |     Allow to get and set the Height max of the constraint area This property is
                 |     valid for the following constraints areas: OTHER_OUTLINE,
                 |     PLACE_REGION
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -95,12 +95,12 @@ class PCBArea(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Heightmin() As double
-                | 
+                |
                 |     Allow to get and set the Height min of the constraint area This property is
                 |     valid for the following constraints areas: PLACE_KEEPOUT
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -126,13 +126,13 @@ class PCBArea(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Identifier() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the Identifier of the constraint area This property is
                 |     valid for the following constraints areas: OTHER_OUTLINE,
                 |     PLACE_REGION
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -158,7 +158,7 @@ class PCBArea(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LAYER() As CATBSTR (Read Only)
-                | 
+                |
                 |     Allow to get the position of a hole The possible values are :
                 |     TOP,BOTTOM,BOTH,INNER,ALL It depends on the the type of the constraints
                 |     area according to the IDF format This property is valid for the following
@@ -169,9 +169,9 @@ class PCBArea(AnyObject):
                 |     ROUTE_KEEPOUT,
                 |     PLACE_KEEPOUT,
                 |     PLACE_REGION,
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed
@@ -189,12 +189,12 @@ class PCBArea(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OWNER() As CATBSTR
-                | 
+                |
                 |     Allow to get and set the OWNER of the constraint area The possible value
                 |     are MCAD,ECAD, UNOWNED
-                | 
+                |
                 |     Returns:
-                | 
+                |
                 |             The result of the method:
                 |             S_OK if succeeded
                 |             E_FAIL if failed

@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.analysis_interfaces.analysis_adaptivity_manager import AnalysisAdaptivityManager
+
+from pycatia.analysis_interfaces.analysis_adaptivity_manager import (
+    AnalysisAdaptivityManager,
+)
 from pycatia.analysis_interfaces.analysis_cases import AnalysisCases
 from pycatia.analysis_interfaces.analysis_mesh_manager import AnalysisMeshManager
 from pycatia.analysis_interfaces.analysis_post_manager import AnalysisPostManager
@@ -18,29 +21,29 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class AnalysisModel(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     AnalysisModel
-                | 
-                | Represent the analysis model object.
-                | Role: In the analysis document, an analysis model is the object dedicated to
-                | set and manage all the required data for the discretization and idealization of
-                | a Finite Element model.
-                | This object gives access to:
-                | 
-                |     A collection of AnalysisCase.
-                |     A collection of AnalysisSets (All the input sets like properties,
-                |     groups).
-                |     A AnalysisPostManager object for reporting.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     AnalysisModel
+            |
+            | Represent the analysis model object.
+            | Role: In the analysis document, an analysis model is the object dedicated to
+            | set and manage all the required data for the discretization and idealization of
+            | a Finite Element model.
+            | This object gives access to:
+            |
+            |     A collection of AnalysisCase.
+            |     A collection of AnalysisSets (All the input sets like properties,
+            |     groups).
+            |     A AnalysisPostManager object for reporting.
+
     """
 
     def __init__(self, com_object):
@@ -56,10 +59,10 @@ class AnalysisModel(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AdaptivityManager() As AnalysisAdaptivityManager (Read
                 | Only)
-                | 
+                |
                 |     Returns the AdaptivityManager defined on the analysis
                 |     model.
-                | 
+                |
                 |     Returns:
                 |         a CATIAAnalysisAdaptivityManager.
 
@@ -76,10 +79,10 @@ class AnalysisModel(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnalysisCases() As AnalysisCases (Read Only)
-                | 
+                |
                 |     Returns the collection of analysis cases defined on the analysis
                 |     model.
-                | 
+                |
                 |     Returns:
                 |         oAnalysisCases Collection of cases.
 
@@ -96,10 +99,10 @@ class AnalysisModel(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnalysisSets() As AnalysisSets (Read Only)
-                | 
+                |
                 |     Returns the analysis sets collection associated with a analysis
                 |     model.
-                | 
+                |
                 |     Returns:
                 |         a collection of CATIAAnalysisSets.
 
@@ -116,9 +119,9 @@ class AnalysisModel(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MeshManager() As AnalysisMeshManager (Read Only)
-                | 
+                |
                 |     Returns the MeshManager defined on the analysis model.
-                | 
+                |
                 |     Returns:
                 |         a CATIAAnalysisMeshManager.
 
@@ -135,10 +138,10 @@ class AnalysisModel(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PostManager() As AnalysisPostManager (Read Only)
-                | 
+                |
                 |     Returns the Postprocessing manager defined on the analysis
                 |     model.
-                | 
+                |
                 |     Returns:
                 |         oPostManager the AnalysisPostManager Object.
 
@@ -154,11 +157,11 @@ class AnalysisModel(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RunTransition(CATBSTR iTransitionName)
-                | 
+                |
                 |     Apply a transition to the analysis model.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Transition
                 |             name.
 

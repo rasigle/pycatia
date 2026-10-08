@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.in_interfaces.reference import Reference
@@ -16,32 +17,32 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeAssemble(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeAssemble
-                | 
-                | Represents the hybrid shape assemble feature object.
-                | Role: To access the data of the hybrid shape assemble feature object. This data
-                | includes:
-                | 
-                |     A list of the assembled elements
-                |     Some methods to access this data
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeAssemble
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeAssemble
+            |
+            | Represents the hybrid shape assemble feature object.
+            | Role: To access the data of the hybrid shape assemble feature object. This data
+            | includes:
+            |
+            |     A list of the assembled elements
+            |     Some methods to access this data
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeAssemble
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -56,18 +57,18 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Invert() As boolean
-                | 
+                |
                 |     Returns or sets the invert mode.
                 |     Legal values: True the result is inverted. False the result is not
                 |     inverted.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the invert mode of
                 |          the HybShpAssemble hybrid shape assemble feature to
                 |          True.
-                |          
-                | 
+                |
+                |
                 |          HybShpAssemble.Invert = True
 
         :rtype: bool
@@ -90,31 +91,31 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddElement(Reference iElement)
-                | 
+                |
                 |     Adds an element to the hybrid shape assemble feature
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iElement
                 |             The element to add to the hybrid shape assemble feature
                 |             object.
-                |             Sub-element(s) supported (see 
-                | 
+                |             Sub-element(s) supported (see
+                |
                 |         Boundary object): Face, TriDimFeatEdge and BiDimFeatEdge.
-                |         
-                | 
+                |
+                |
                 | Examples:
                 |     The following example adds the iElement feature object to the
                 |     HybridShapeAssemble object.
-                | 
+                |
                 |      HybridShapeAssemble.AddElement iElement
 
         :param Reference i_element:
         :rtype: None
         """
         return self.hybrid_shape_assemble.AddElement(i_element.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -137,12 +138,12 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddSubElement(Reference iSubElement)
-                | 
+                |
                 |     Adds a sub element to the hybrid shape assemble feature
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSubElement
                 |             The sub element to remove to the hybrid shape assemble feature
                 |             object.
@@ -151,7 +152,7 @@ class HybridShapeAssemble(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_assemble.AddSubElement(i_sub_element.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -174,14 +175,14 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AppendFederatedElement(Reference iElement)
-                | 
+                |
                 |     Appends an init to the list of elements to federate.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iElement
-                |             Element to append. 
-                | 
+                |             Element to append.
+                |
                 |     See also:
                 |         Reference
 
@@ -189,7 +190,7 @@ class HybridShapeAssemble(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_assemble.AppendFederatedElement(i_element.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -212,11 +213,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetAngularTolerance() As double
-                | 
+                |
                 |     Get the angular tolerance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
                 |             The angular tolerance.
 
@@ -231,11 +232,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetAngularToleranceMode() As boolean
-                | 
+                |
                 |     Get the angular tolerance mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
                 |             The angular tolerance mode.
 
@@ -250,11 +251,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetConnex() As boolean
-                | 
+                |
                 |     Get the connex checker flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oConnex
 
         :rtype: bool
@@ -268,11 +269,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDeviation() As double
-                | 
+                |
                 |     Get the deviation value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         odeviation
                 |             The deviation.
 
@@ -287,19 +288,19 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetElement(long iRank) As Reference
-                | 
+                |
                 |     Retrieves an element used by the hybrid shape assemble feature
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRank
-                |             The rank of the element to read. 
-                | 
+                |             The rank of the element to read.
+                |
                 |     Examples:
                 |         The following example gets the oElement feature object of the
                 |         HybridShapeAssemble object at the position iRank.
-                | 
+                |
                 |          Dim oElement As Reference
                 |          Set oElement = HybridShapeAssemble.GetElement (iRank).
 
@@ -315,19 +316,19 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetElementsSize() As long
-                | 
+                |
                 |     Returns the size of the list of elements to assemble in the hybrid shape
                 |     assemble feature object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSize
                 |             Number of elements in the Assemble.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the number of elements in the
                 |                 HybShpAssemble hybrid shape assemble.
-                | 
+                |
                 |                  Dim oSize As  long
                 |                  oSize = HybShpAssemble.GetElementsSize
 
@@ -342,17 +343,17 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetFederatedElement(long iRank) As Reference
-                | 
+                |
                 |     Retrieves an federated inits used by the hybrid shape assemble feature
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRank
-                |             The rank of the element to read. 
+                |             The rank of the element to read.
                 |         oElement
-                |             The federated element. 
-                | 
+                |             The federated element.
+                |
                 |     See also:
                 |         Reference
 
@@ -368,11 +369,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetFederatedElementsSize() As long
-                | 
+                |
                 |     Gets the number of federated inits.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Size
                 |             Number of elements.
 
@@ -387,11 +388,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetFederationPropagation() As long
-                | 
+                |
                 |     Gets the propagation mode of the federation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         i
                 |             type of propagation (0: No, 1: All, 2: Continuity,
                 |             3:Tangency).
@@ -423,7 +424,7 @@ class HybridShapeAssemble(HybridShape):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.hybrid_shape_assemble.GetHealingMode()
@@ -435,11 +436,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetManifold() As boolean
-                | 
+                |
                 |     Get the manifold checker flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oManifold
 
         :rtype: bool
@@ -453,11 +454,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSimplify() As boolean
-                | 
+                |
                 |     Get the simplify flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSimplify
 
         :rtype: bool
@@ -471,12 +472,12 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSubElement(long iRank) As Reference
-                | 
+                |
                 |     Retrieves a sub element used by the hybrid shape assemble feature
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRank
                 |             The rank of the subelement to read.
 
@@ -492,19 +493,19 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSubElementsSize() As long
-                | 
+                |
                 |     Returns the size of the list of sub-elements to remove in the hybrid shape
                 |     assemble feature object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSize
                 |             Number of sub elements in the Assemble.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the number of sub elements in the
                 |                 HybShpAssemble hybrid shape assemble.
-                | 
+                |
                 |                  Dim oSize As  long
                 |                  oSize = HybShpAssemble.GetSubElementsSize
 
@@ -519,11 +520,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSuppressMode() As boolean
-                | 
+                |
                 |     Get the SuppressMode flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSuppressMode
 
         :rtype: bool
@@ -537,11 +538,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetTangencyContinuity() As boolean
-                | 
+                |
                 |     Get the tangency continuity checker flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTangencyContinuity
 
         :rtype: bool
@@ -555,19 +556,19 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveElement(long iRank)
-                | 
+                |
                 |     Removes an element used by the hybrid shape assemble feature
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRank
-                |             The rank of the element to remove. 
-                | 
+                |             The rank of the element to remove.
+                |
                 |     Examples:
                 |         The following example removes the feature object from the
                 |         HybridShapeAssemble object at the position iRank.
-                | 
+                |
                 |          HybridShapeAssemble.RemoveElement iRank.
 
         :param int i_rank:
@@ -582,11 +583,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveFederatedElement(long iRank)
-                | 
+                |
                 |     Removes an element to the list of elements to federate.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRank
                 |             Position of the element to remove.
 
@@ -602,12 +603,12 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveSubElement(long iRank)
-                | 
+                |
                 |     Removes a sub element used by the hybrid shape assemble feature
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRank
                 |             The rank of the element to remove.
 
@@ -624,21 +625,21 @@ class HybridShapeAssemble(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub ReplaceElement(long iPos,
                 | Reference iElement)
-                | 
+                |
                 |     Replaces the element at specified position in the hybrid shape assemble
                 |     feature object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPos
-                |             Position at which the element should be replaced. 
+                |             Position at which the element should be replaced.
                 |         iElement
                 |             Reference of the element to be inserted.
-                | 
+                |
                 |             Example:
                 |                 This example replaces the element in the HybShpAssemble
                 |                 assemble feature at specified position iPos
-                | 
+                |
                 |                  HybShpAssemble.ReplaceElement iPos,iElement
 
         :param int i_pos:
@@ -646,7 +647,7 @@ class HybridShapeAssemble(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_assemble.ReplaceElement(i_pos, i_element.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -669,11 +670,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetAngularTolerance(double iValue)
-                | 
+                |
                 |     Set the angular tolerance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iValue
                 |             The angular tolerance.
 
@@ -689,11 +690,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetAngularToleranceMode(boolean iValue)
-                | 
+                |
                 |     Set the angular tolerance mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iValue
                 |             The angular tolerance mode.
 
@@ -701,7 +702,7 @@ class HybridShapeAssemble(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_assemble.SetAngularToleranceMode(i_value)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -724,18 +725,18 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetConnex(boolean iConnex)
-                | 
+                |
                 |     Set the connex checker flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iConnex
 
         :param bool i_connex:
         :rtype: None
         """
         return self.hybrid_shape_assemble.SetConnex(i_connex)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -758,11 +759,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDeviation(double ideviation)
-                | 
+                |
                 |     Set the deviation value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ideviation
                 |             The deviation.
 
@@ -778,11 +779,11 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetFederationPropagation(long iMode)
-                | 
+                |
                 |     Sets the propagation mode of federation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         i
                 |             type of propagation (0: No, 1: All, 2: Continuity,
                 |             3:Tangency).
@@ -816,7 +817,7 @@ class HybridShapeAssemble(HybridShape):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.hybrid_shape_assemble.SetHealingMode(i_heal)
@@ -828,18 +829,18 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetManifold(boolean iManifold)
-                | 
+                |
                 |     Set the manifold checker flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iManifold
 
         :param bool i_manifold:
         :rtype: None
         """
         return self.hybrid_shape_assemble.SetManifold(i_manifold)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -862,18 +863,18 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetSimplify(boolean iSimplify)
-                | 
+                |
                 |     Set the simplify flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSimplify
 
         :param bool i_simplify:
         :rtype: None
         """
         return self.hybrid_shape_assemble.SetSimplify(i_simplify)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -896,18 +897,18 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetSuppressMode(boolean iSuppressMode)
-                | 
+                |
                 |     Set the SuppressMode flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSuppressMode
 
         :param bool i_suppress_mode:
         :rtype: None
         """
         return self.hybrid_shape_assemble.SetSuppressMode(i_suppress_mode)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -930,18 +931,18 @@ class HybridShapeAssemble(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetTangencyContinuity(boolean iTangencyContinuity)
-                | 
+                |
                 |     Set the tangency continuity checker flag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iTangencyContinuity
 
         :param bool i_tangency_continuity:
         :rtype: None
         """
         return self.hybrid_shape_assemble.SetTangencyContinuity(i_tangency_continuity)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

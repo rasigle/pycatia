@@ -1,43 +1,44 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
-from pycatia.system_interfaces.general_statistics_setting_att import GeneralStatisticsSettingAtt
+from pycatia.system_interfaces.general_statistics_setting_att import (
+    GeneralStatisticsSettingAtt,
+)
 
 
 class ServerStatisticsSettingAtt(GeneralStatisticsSettingAtt):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
+        CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         System.GeneralStatisticsSettingAtt
-                |                             ServerStatisticsSettingAtt
-                | 
-                | Interface for Server statistic Controller
-                | Role: the server statistics controller manages the values of all or only a part
-                | of the attributes available for the thematic.
-                | 
-                | For the definitions of methods and variables common to every thematic, see the
-                | GeneralStatisticsSettingAtt
-                | 
-                | Copyright © 1999-2011, Dassault Systèmes. All rights reserved.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         System.GeneralStatisticsSettingAtt
+            |                             ServerStatisticsSettingAtt
+            |
+            | Interface for Server statistic Controller
+            | Role: the server statistics controller manages the values of all or only a part
+            | of the attributes available for the thematic.
+            |
+            | For the definitions of methods and variables common to every thematic, see the
+            | GeneralStatisticsSettingAtt
+            |
+            | Copyright © 1999-2011, Dassault Systèmes. All rights reserved.
+
     """
 
     def __init__(self, com_object):

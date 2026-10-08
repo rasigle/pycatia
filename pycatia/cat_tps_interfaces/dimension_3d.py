@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.drafting_interfaces.drawing_dimension import DrawingDimension
@@ -20,20 +21,20 @@ from pycatia.cat_tps_interfaces.envelope_condition import EnvelopeCondition
 
 class Dimension3D(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Dimension3D
-                | 
-                | Interface Managing Semantic Dimension.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Dimension3D
+            |
+            | Interface Managing Semantic Dimension.
+
     """
 
     def __init__(self, com_object):
@@ -47,11 +48,11 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ControledRadius() As ControledRadius
-                | 
+                |
                 |     Get the Dimension on the Controled Radius interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oContRadius
                 |             The Controled Radius.
 
@@ -66,11 +67,11 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DimensionLimit() As DimensionLimit
-                | 
+                |
                 |     Gets the Dimension on the DimensionLimit interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDimLim
                 |             The Dimension Limits.
 
@@ -85,11 +86,11 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DimensionPattern() As DimensionPattern
-                | 
+                |
                 |     Gets the Dimension on the DimensionPattern interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDimPatt
                 |             The Dimension Pattern.
 
@@ -104,11 +105,11 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func EnvelopCondition() As EnvelopCondition
-                | 
+                |
                 |     Gets the Dimension on the EnvelopCondition interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oEnvCond
                 |             The Envelop Condition.
 
@@ -123,11 +124,11 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Get2dAnnot() As DrawingDimension
-                | 
+                |
                 |     Retrieves Drafting Dimension.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDim
                 |             The Drafting Dimension.
 
@@ -142,13 +143,13 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAControledRadius() As boolean
-                | 
+                |
                 |     Checks if the Dimension has a Controled Radius.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHasConRad
-                | 
+                |
                 |                 TRUE: The dimension has a Controled Radius
                 |                 FALSE: The dimension has not a Controled
                 |                 Radius
@@ -164,13 +165,13 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAnEnvelopCondition() As boolean
-                | 
+                |
                 |     Checks if the Annotation has an Envelop Condition.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHasEnvCond
-                | 
+                |
                 |                 TRUE: The dimension has an Envelop Condition
                 |                 FALSE: The dimension has not an Envelop
                 |                 Condition
@@ -186,13 +187,13 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasDimensionLimit() As boolean
-                | 
+                |
                 |     Checks if the Dimension has a Dimension Limit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHasDimLim
-                | 
+                |
                 |                 TRUE: Dimension Limit exists
                 |                 FALSE: Dimension Limit does not exist
 
@@ -228,7 +229,7 @@ class Dimension3D(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.dimension_3d.IsAContinuousFeatureApplied()
@@ -240,13 +241,13 @@ class Dimension3D(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsADimensionPattern() As boolean
-                | 
+                |
                 |     Checks if the Semantic Dimension is a Dimension Pattern.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIsADimPatt
-                | 
+                |
                 |                 TRUE: The dimension is a Dimension Pattern
                 |                 FALSE: The dimension is not a Dimension
                 |                 Pattern
@@ -255,7 +256,9 @@ class Dimension3D(AnyObject):
         """
         return self.dimension_3d.IsADimensionPattern()
 
-    def move_value(self, x: float, y: float, sub_part: int, dim_angle_behavior: int) -> None:
+    def move_value(
+        self, x: float, y: float, sub_part: int, dim_angle_behavior: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -265,19 +268,19 @@ class Dimension3D(AnyObject):
                 | double Y,
                 | long SubPart,
                 | long DimAngleBehavior)
-                | 
+                |
                 |     Moves the dimension value at a given point.
-                | 
+                |
                 |     Returns:
-                |         HRESULT error returned code If the modification of the vertical offset value can not be performed because the parameter is locked in the current standard, the method return HRESULT = S_READ_ONLY. 
+                |         HRESULT error returned code If the modification of the vertical offset value can not be performed because the parameter is locked in the current standard, the method return HRESULT = S_READ_ONLY.
                 |     Parameters:
-                | 
+                |
                 |         X
                 |             Point abscissa on which the dimension value will be positionned.
-                |             
+                |
                 |         Y
                 |             Point ordinate on which the dimension value will be positionned.
-                |             
+                |
                 |         SubPart
                 |             Defines which part of the dimension should be
                 |             moved
@@ -289,15 +292,15 @@ class Dimension3D(AnyObject):
                 |             4 = Secondary part and value
                 |             5 = Secondary part and dimension line
                 |             6 = Secondary part, dimension line and value
-                |             7 = Value leader (for dimension line with leader one part or two parts) 
+                |             7 = Value leader (for dimension line with leader one part or two parts)
                 |         DimAngleBehavior
                 |             Defines angle dimension line behavior.
                 |             0 = Sector angle is switched when ptPos is in opposite sector (Default)
-                |             1 = Sector angle is kept what ever ptPos placement 
+                |             1 = Sector angle is kept what ever ptPos placement
                 |         Example:
                 |             This example move dimension value MyDimension
                 |             path.
-                | 
+                |
                 |              MyDimension.MoveValue(X, Y, SubPart,
                 |              DimAngleBehavior)
 

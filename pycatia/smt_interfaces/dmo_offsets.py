@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.document import Document
@@ -18,20 +18,20 @@ from pycatia.system_interfaces.collection import Collection
 
 class DMOOffsets(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     DMOOffsets
-                | 
-                | Interface to access a CATIADMOOffsets and compute Offsets
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     DMOOffsets
+            |
+            | Interface to access a CATIADMOOffsets and compute Offsets
+
     """
 
     def __init__(self, com_object):
@@ -39,14 +39,14 @@ class DMOOffsets(Collection):
         self.dmo_offsets = com_object
 
     def add(
-            self,
-            i_product_to_offset: Product,
-            i_offset1: float,
-            i_use_constraints: int,
-            i_constraints: tuple,
-            i_shape_name: str,
-            i_activated_shape: int,
-            i_default_shape: int
+        self,
+        i_product_to_offset: Product,
+        i_offset1: float,
+        i_use_constraints: int,
+        i_constraints: tuple,
+        i_shape_name: str,
+        i_activated_shape: int,
+        i_default_shape: int,
     ) -> DMOOffset:
         """
         .. note::
@@ -60,16 +60,16 @@ class DMOOffsets(Collection):
                 | CATBSTR iShapeName,
                 | long iActivatedShape,
                 | long iDefaultShape) As DMOOffset
-                | 
+                |
                 |     Creates a new Offset and adds it to the DMOOffsets collection. This
                 |     function is deprecated.
-                | 
+                |
                 |     Returns:
-                |         The created offset 
+                |         The created offset
                 |     Example:
                 |         The following example creates an offset newOffset in the Offset
                 |         collection.
-                | 
+                |
                 |          Set newOffset = DMOOffsets.Add
 
         :param Product i_product_to_offset:
@@ -89,18 +89,18 @@ class DMOOffsets(Collection):
                 i_constraints,
                 i_shape_name,
                 i_activated_shape,
-                i_default_shape
+                i_default_shape,
             )
         )
 
     def add_offset_from_vectors(
-            self,
-            i_product_to_offset: Product,
-            i_offset_vectors: tuple,
-            i_offset_values: tuple,
-            i_shape_name: str,
-            i_activated_shape: int,
-            i_default_shape: int
+        self,
+        i_product_to_offset: Product,
+        i_offset_vectors: tuple,
+        i_offset_values: tuple,
+        i_shape_name: str,
+        i_activated_shape: int,
+        i_default_shape: int,
     ) -> DMOOffset:
         """
         .. note::
@@ -113,16 +113,16 @@ class DMOOffsets(Collection):
                 | CATBSTR iShapeName,
                 | long iActivatedShape,
                 | long iDefaultShape) As DMOOffset
-                | 
+                |
                 |     Creates a new Offset from a set of vectors, and adds it to the DMOOffsets
                 |     collection. This function is deprecated.
-                | 
+                |
                 |     Returns:
-                |         The created offset 
+                |         The created offset
                 |     Example:
                 |         The following example creates an offset newOffset in the Offset
                 |         collection.
-                | 
+                |
                 |          Set newOffset = DMOOffsets.Add
 
         :param Product i_product_to_offset:
@@ -140,7 +140,7 @@ class DMOOffsets(Collection):
                 i_offset_values,
                 i_shape_name,
                 i_activated_shape,
-                i_default_shape
+                i_default_shape,
             )
         )
 
@@ -151,7 +151,7 @@ class DMOOffsets(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CleanUp()
-                | 
+                |
                 |     Cleans up.
 
         :rtype: None
@@ -159,11 +159,11 @@ class DMOOffsets(Collection):
         return self.dmo_offsets.CleanUp()
 
     def compute_an_offset(
-            self,
-            group_of_selected_products: Group,
-            i_offset: float,
-            i_use_constraints: int,
-            i_constraints: tuple
+        self,
+        group_of_selected_products: Group,
+        i_offset: float,
+        i_use_constraints: int,
+        i_constraints: tuple,
     ) -> Document:
         """
         .. note::
@@ -174,21 +174,21 @@ class DMOOffsets(Collection):
                 | double iOffset,
                 | long iUseConstraints,
                 | CATSafeArrayVariant iConstraints) As Document
-                | 
+                |
                 |     Compute a offset on the selected products.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         GroupOfSelectedProducts
                 |             The selected products on which you want to perform the offset.
-                |             
+                |
                 |         iOffset
-                |             Offset value. 
+                |             Offset value.
                 |         iUseConstraints
-                |             Do we use normals constraints or not ? 
+                |             Do we use normals constraints or not ?
                 |         iConstraints
-                |             Constraints array. 
-                | 
+                |             Constraints array.
+                |
                 |     Returns:
                 |         OffsetDocument: Document containing the result.
 
@@ -203,15 +203,15 @@ class DMOOffsets(Collection):
                 group_of_selected_products.com_object,
                 i_offset,
                 i_use_constraints,
-                i_constraints
+                i_constraints,
             )
         )
 
     def compute_an_offset_from_vectors(
-            self,
-            group_of_selected_products: Group,
-            i_offset_vectors: tuple,
-            i_offset_values: tuple
+        self,
+        group_of_selected_products: Group,
+        i_offset_vectors: tuple,
+        i_offset_values: tuple,
     ) -> Document:
         """
         .. note::
@@ -222,20 +222,20 @@ class DMOOffsets(Collection):
                 | GroupOfSelectedProducts,
                 | CATSafeArrayVariant iOffsetVectors,
                 | CATSafeArrayVariant iOffsetValues) As Document
-                | 
+                |
                 |     Compute an offset on the selected products, according to some
                 |     vectors
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         GroupOfSelectedProducts
                 |             The selected products on which you want to perform the offset.
-                |             
+                |
                 |         iOffsetVectors
-                |             Vectors taken into account for the computation 
+                |             Vectors taken into account for the computation
                 |         iOffsetValues
-                |             Offset values. 
-                | 
+                |             Offset values.
+                |
                 |     Returns:
                 |         OffsetDocument: Document containing the result.
 
@@ -246,18 +246,16 @@ class DMOOffsets(Collection):
         """
         return Document(
             self.dmo_offsets.ComputeAnOffsetFromVectors(
-                group_of_selected_products.com_object,
-                i_offset_vectors,
-                i_offset_values
+                group_of_selected_products.com_object, i_offset_vectors, i_offset_values
             )
         )
 
     def compute_an_offset_from_vectors_with_a_reference(
-            self,
-            i_group_of_selected_products: Group,
-            i_reference_product: Product,
-            i_offset_vectors: tuple,
-            i_offset_values: tuple
+        self,
+        i_group_of_selected_products: Group,
+        i_reference_product: Product,
+        i_offset_vectors: tuple,
+        i_offset_values: tuple,
     ) -> Document:
         """
         .. note::
@@ -269,22 +267,22 @@ class DMOOffsets(Collection):
                 | Product iReferenceProduct,
                 | CATSafeArrayVariant iOffsetVectors,
                 | CATSafeArrayVariant iOffsetValues) As Document
-                | 
+                |
                 |     Compute an offset on the selected products, according to some vectors and a
                 |     reference product.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iGroupOfSelectedProducts
                 |             The selected products on which you want to perform the offset.
-                |             
+                |
                 |         iReferenceProduct
-                |             The reference product. 
+                |             The reference product.
                 |         iOffsetVectors
-                |             Vectors taken into account for the computation 
+                |             Vectors taken into account for the computation
                 |         iOffsetValues
-                |             Offset values. 
-                | 
+                |             Offset values.
+                |
                 |     Returns:
                 |         OffsetDocument: Document containing the result.
 
@@ -299,17 +297,17 @@ class DMOOffsets(Collection):
                 i_group_of_selected_products.com_object,
                 i_reference_product.com_object,
                 i_offset_vectors,
-                i_offset_values
+                i_offset_values,
             )
         )
 
     def compute_an_offset_with_a_reference(
-            self,
-            i_group_of_selected_products: Group,
-            i_reference_product: Product,
-            i_offset: float,
-            i_use_constraints: int,
-            i_constraints: tuple
+        self,
+        i_group_of_selected_products: Group,
+        i_reference_product: Product,
+        i_offset: float,
+        i_use_constraints: int,
+        i_constraints: tuple,
     ) -> Document:
         """
         .. note::
@@ -322,24 +320,24 @@ class DMOOffsets(Collection):
                 | double iOffset,
                 | long iUseConstraints,
                 | CATSafeArrayVariant iConstraints) As Document
-                | 
+                |
                 |     Compute an offset on the selected products, according to a reference
                 |     product.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iGroupOfSelectedProducts
                 |             The selected products on which you want to perform the offset.
-                |             
+                |
                 |         iReferenceProduct
-                |             The reference product. 
+                |             The reference product.
                 |         iOffset
-                |             Offset value. 
+                |             Offset value.
                 |         iUseConstraints
-                |             Do we use normals constraints or not ? 
+                |             Do we use normals constraints or not ?
                 |         iConstraints
-                |             Constraints array. 
-                | 
+                |             Constraints array.
+                |
                 |     Returns:
                 |         OffsetDocument: Document containing the result.
 
@@ -356,7 +354,7 @@ class DMOOffsets(Collection):
                 i_reference_product.com_object,
                 i_offset,
                 i_use_constraints,
-                i_constraints
+                i_constraints,
             )
         )
 
@@ -367,7 +365,7 @@ class DMOOffsets(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func OffsetShapeName() As CATBSTR
-                | 
+                |
                 |     Returns the name of the associated shape.
 
         :rtype: str

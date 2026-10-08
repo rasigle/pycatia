@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class HtsGeneralSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         HtsGeneralSettingAtt
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         HtsGeneralSettingAtt
 
-    
+
     """
 
     def __init__(self, com_object):
@@ -86,9 +86,9 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConstraintsSimul() As short
-                | 
+                |
                 |     Returns or sets the ConstraintsSimul parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -112,9 +112,9 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DefaultWalkSpeed() As double
-                | 
+                |
                 |     Returns or sets the DefaultWalkSpeed parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: float
@@ -138,9 +138,9 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SideStepAngle() As double
-                | 
+                |
                 |     Returns or sets the SideStepAngle parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: float
@@ -164,9 +164,9 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SyncTimeAndSpeedInSimulation() As short
-                | 
+                |
                 |     Returns or sets the SyncTimeAndSpeed parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -190,9 +190,9 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UpdateAnalysisInSimulation() As short
-                | 
+                |
                 |     Returns or sets the UpdateAnalysisInSimulation parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -216,9 +216,9 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UserWalkSpeedStatus() As short
-                | 
+                |
                 |     Returns or sets the UserWalkSpeedStatus parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -242,9 +242,9 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WalkForwardAngle() As double
-                | 
+                |
                 |     Returns or sets the WalkForwardAngle parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: float
@@ -268,9 +268,9 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WalkForwardDistance() As double
-                | 
+                |
                 |     Returns or sets the WalkForwardDistance parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: float
@@ -299,9 +299,13 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetCollWalkClearanceInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetCollWalkClearanceInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_collision_search_intensity_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_collision_search_intensity_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -314,7 +318,9 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetCollisionSearchIntensityInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetCollisionSearchIntensityInfo(
+            io_admin_level, io_locked
+        )
 
     def get_constraints_simul_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -324,24 +330,24 @@ class HtsGeneralSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConstraintsSimulInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ConstraintsSimul
                 |     parameter.
                 |     Role:Retrieves the state of the ConstraintsSimul parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -350,7 +356,9 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetConstraintsSimulInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetConstraintsSimulInfo(
+            io_admin_level, io_locked
+        )
 
     def get_default_walk_speed_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -360,24 +368,24 @@ class HtsGeneralSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDefaultWalkSpeedInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DefaultWalkSpeed
                 |     parameter.
                 |     Role:Retrieves the state of the DefaultWalkSpeed parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -386,7 +394,9 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetDefaultWalkSpeedInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetDefaultWalkSpeedInfo(
+            io_admin_level, io_locked
+        )
 
     def get_side_step_angle_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -396,24 +406,24 @@ class HtsGeneralSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSideStepAngleInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the SideStepAngle
                 |     parameter.
                 |     Role:Retrieves the state of the SideStepAngle parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -422,9 +432,13 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetSideStepAngleInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetSideStepAngleInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_sync_time_and_speed_in_simulation_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_sync_time_and_speed_in_simulation_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -433,24 +447,24 @@ class HtsGeneralSettingAtt(SettingController):
                 | o Func GetSyncTimeAndSpeedInSimulationInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the SyncTimeAndSpeed
                 |     parameter.
                 |     Role:Retrieves the state of the SyncTimeAndSpeed parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -459,9 +473,13 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetSyncTimeAndSpeedInSimulationInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetSyncTimeAndSpeedInSimulationInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_update_analysis_in_simulation_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_update_analysis_in_simulation_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -470,24 +488,24 @@ class HtsGeneralSettingAtt(SettingController):
                 | o Func GetUpdateAnalysisInSimulationInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the UpdateAnalysisInSimulation
                 |     parameter.
                 |     Role:Retrieves the state of the UpdateAnalysisInSimulation parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -496,9 +514,13 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetUpdateAnalysisInSimulationInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetUpdateAnalysisInSimulationInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_user_walk_speed_status_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_user_walk_speed_status_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -506,24 +528,24 @@ class HtsGeneralSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUserWalkSpeedStatusInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the UserWalkSpeedStatus
                 |     parameter.
                 |     Role:Retrieves the state of the UserWalkSpeedStatus parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -532,7 +554,9 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetUserWalkSpeedStatusInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetUserWalkSpeedStatusInfo(
+            io_admin_level, io_locked
+        )
 
     def get_walk_forward_angle_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -542,24 +566,24 @@ class HtsGeneralSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetWalkForwardAngleInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the WalkForwardAngle
                 |     parameter.
                 |     Role:Retrieves the state of the WalkForwardAngle parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -568,9 +592,13 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetWalkForwardAngleInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetWalkForwardAngleInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_walk_forward_distance_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_walk_forward_distance_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -578,24 +606,24 @@ class HtsGeneralSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetWalkForwardDistanceInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the WalkForwardDistance
                 |     parameter.
                 |     Role:Retrieves the state of the WalkForwardDistance parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -604,7 +632,9 @@ class HtsGeneralSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.hts_general_setting_att.GetWalkForwardDistanceInfo(io_admin_level, io_locked)
+        return self.hts_general_setting_att.GetWalkForwardDistanceInfo(
+            io_admin_level, io_locked
+        )
 
     def set_coll_walk_clearance_lock(self, i_locked: bool) -> None:
         """
@@ -618,7 +648,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetCollWalkClearanceLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -646,7 +676,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetCollisionSearchIntensityLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -669,14 +699,14 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetConstraintsSimulLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ConstraintsSimul parameter.
                 |     Role:Locks or unlocks the ConstraintsSimul parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -687,7 +717,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetConstraintsSimulLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -710,14 +740,14 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDefaultWalkSpeedLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DefaultWalkSpeed parameter.
                 |     Role:Locks or unlocks the DefaultWalkSpeed parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -728,7 +758,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetDefaultWalkSpeedLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -751,14 +781,14 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSideStepAngleLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the SideStepAngle parameter.
                 |     Role:Locks or unlocks the SideStepAngle parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -769,7 +799,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetSideStepAngleLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -792,14 +822,14 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSyncTimeAndSpeedInSimulationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the SyncTimeAndSpeed parameter.
                 |     Role:Locks or unlocks the SyncTimeAndSpeed parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -809,8 +839,10 @@ class HtsGeneralSettingAtt(SettingController):
         :param bool i_locked:
         :rtype: None
         """
-        return self.hts_general_setting_att.SetSyncTimeAndSpeedInSimulationLock(i_locked)
-        # # # # Autogenerated comment: 
+        return self.hts_general_setting_att.SetSyncTimeAndSpeedInSimulationLock(
+            i_locked
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -833,14 +865,14 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUpdateAnalysisInSimulationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the UpdateAnalysisInSimulation parameter.
                 |     Role:Locks or unlocks the UpdateAnalysisInSimulation parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -851,7 +883,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetUpdateAnalysisInSimulationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -874,14 +906,14 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUserWalkSpeedStatusLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the UserWalkSpeedStatus parameter.
                 |     Role:Locks or unlocks the UserWalkSpeedStatus parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -892,7 +924,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetUserWalkSpeedStatusLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -915,14 +947,14 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetWalkForwardAngleLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the WalkForwardAngle parameter.
                 |     Role:Locks or unlocks the WalkForwardAngle parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -933,7 +965,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetWalkForwardAngleLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -956,14 +988,14 @@ class HtsGeneralSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetWalkForwardDistanceLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the WalkForwardDistance parameter.
                 |     Role:Locks or unlocks the WalkForwardDistance parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -974,7 +1006,7 @@ class HtsGeneralSettingAtt(SettingController):
         :rtype: None
         """
         return self.hts_general_setting_att.SetWalkForwardDistanceLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

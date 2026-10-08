@@ -8,9 +8,9 @@ from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.in_interfaces.application import Application
 
 COM_APPLICATION_NAMES = (
-    'CATIA.Application',
-    'DELMIA.Application',
-    'CNEXT.Application',
+    "CATIA.Application",
+    "DELMIA.Application",
+    "CNEXT.Application",
 )
 
 
@@ -41,5 +41,5 @@ def catia_application(co_initialise=False) -> Application:
             last_error = err
 
     raise CATIAApplicationException(
-        'Could not connect to CATIA.Application, DELMIA.Application or CNEXT.Application.'
+        "Could not connect to CATIA.Application, DELMIA.Application or CNEXT.Application."
     ) from last_error

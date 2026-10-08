@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
@@ -17,26 +17,26 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShape3DCurveOffset(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShape3DCurveOffset
-                | 
-                | Represents the hybrid shape 3DCurve Offset operation feature.
-                | Role: Allows you to access data of the 3D Curve Offset feature created by using
-                | a curve, a direction and three literal parameters
-                | 
-                | Use the HybridShapeFactory.AddNew3DCurveOffset to create a
-                | HybridShape3DCurveOffset object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShape3DCurveOffset
+            |
+            | Represents the hybrid shape 3DCurve Offset operation feature.
+            | Role: Allows you to access data of the 3D Curve Offset feature created by using
+            | a curve, a direction and three literal parameters
+            |
+            | Use the HybridShapeFactory.AddNew3DCurveOffset to create a
+            | HybridShape3DCurveOffset object.
+
     """
 
     def __init__(self, com_object):
@@ -51,7 +51,7 @@ class HybridShape3DCurveOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CornerRadiusValue() As Length
-                | 
+                |
                 |     Returns or sets the Corner Radius Value.
 
         :rtype: Length
@@ -75,7 +75,7 @@ class HybridShape3DCurveOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CornerTensionValue() As double
-                | 
+                |
                 |     Returns or sets the Corner Tension Value.
 
         :rtype: float
@@ -99,7 +99,7 @@ class HybridShape3DCurveOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CurveToOffset() As Reference
-                | 
+                |
                 |     Returns or sets the curve to offset.
 
         :rtype: Reference
@@ -123,7 +123,7 @@ class HybridShape3DCurveOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Direction() As HybridShapeDirection
-                | 
+                |
                 |     Returns or sets the direction.
 
         :rtype: HybridShapeDirection
@@ -147,7 +147,7 @@ class HybridShape3DCurveOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property InvertDirection() As boolean
-                | 
+                |
                 |     Returns or sets the direction orientation.
 
         :rtype: bool
@@ -171,7 +171,7 @@ class HybridShape3DCurveOffset(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property OffsetValue() As Length
-                | 
+                |
                 |     Returns or sets the OffsetValue.
 
         :rtype: Length

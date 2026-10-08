@@ -1,35 +1,34 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class Unit(AnyObject):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Unit
-                | 
-                | Represents CATIAUnit object.
-                | This interface allows convertion.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Unit
+            |
+            | Represents CATIAUnit object.
+            | This interface allows convertion.
+
     """
 
     def __init__(self, com_object):
@@ -44,7 +43,7 @@ class Unit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Magnitude() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the magnitude associated to the unit.
 
         :rtype: str
@@ -60,7 +59,7 @@ class Unit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Symbol() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the symbol associated to the unit.
 
         :rtype: str
@@ -75,14 +74,14 @@ class Unit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func ConvertFromMKS(double iValueInMKS) As double
-                | 
+                |
                 |     Convert the initial value (expressed in MKS unit) in its equivalent in the
                 |     current unit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iValueInThisUnit
-                |             The initial value in MKS unit. 
+                |             The initial value in MKS unit.
                 |         oValueInMKS
                 |             The final value in the current unit.
 
@@ -99,14 +98,14 @@ class Unit(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func ConvertFromStorageUnit(double iValueInStorageUnit) As
                 | double
-                | 
+                |
                 |     Convert the initial value (expressed in storage unit) in its equivalent in
                 |     the current unit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iValueInStorageUnit
-                |             The initial value in storage unit. 
+                |             The initial value in storage unit.
                 |         oValueInThisUnit
                 |             The final value in the current unit.
 
@@ -122,13 +121,13 @@ class Unit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func ConvertToMKS(double iValueInThisUnit) As double
-                | 
+                |
                 |     Convert the initial value in its equivalent in MKS unit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iValueInThisUnit
-                |             The initial value in the current unit. 
+                |             The initial value in the current unit.
                 |         oValueInMKS
                 |             The final value in the corresponding MKS unit.
 
@@ -145,14 +144,14 @@ class Unit(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func ConvertToStorageUnit(double iValueInThisUnit) As
                 | double
-                | 
+                |
                 |     Convert the initial value in its equivalent in storage
                 |     unit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iValueInThisUnit
-                |             The initial value in the current unit. 
+                |             The initial value in the current unit.
                 |         oValueInStorageUnit
                 |             The final value in the corresponding storage unit.
 

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,21 +14,21 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class MacrosSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         MacrosSettingAtt
-                | 
-                | Setting controller for the Macros tab page.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         MacrosSettingAtt
+            |
+            | Setting controller for the Macros tab page.
+
     """
 
     def __init__(self, com_object):
@@ -42,7 +42,7 @@ class MacrosSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDefaultMacroLibraries() As CATSafeArrayVariant
-                | 
+                |
                 |     Returns the list of default macro libraries.
 
         :rtype: tuple
@@ -57,23 +57,23 @@ class MacrosSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDefaultMacroLibrariesInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the default macro libraries
                 |     setting.
                 |     Role:Retrieves the state of the parameter default macro libraries setting
                 |     in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         oLocked
-                |             Indicates if the parameter has been locked. 
+                |             Indicates if the parameter has been locked.
                 |         oModified
                 |             Indicates if the parameter has been explicitly modified or remain
                 |             to the administrated value.
@@ -82,7 +82,9 @@ class MacrosSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.macros_setting_att.GetDefaultMacroLibrariesInfo(admin_level, o_locked)
+        return self.macros_setting_att.GetDefaultMacroLibrariesInfo(
+            admin_level, o_locked
+        )
 
     def get_external_references(self) -> tuple:
         """
@@ -91,7 +93,7 @@ class MacrosSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetExternalReferences() As CATSafeArrayVariant
-                | 
+                |
                 |     Returns the list of external references.
 
         :rtype: tuple
@@ -106,23 +108,23 @@ class MacrosSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetExternalReferencesInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the external references
                 |     setting.
                 |     Role:Retrieves the state of the parameter external references setting in
                 |     the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         oLocked
-                |             Indicates if the parameter has been locked. 
+                |             Indicates if the parameter has been locked.
                 |         oModified
                 |             Indicates if the parameter has been explicitly modified or remain
                 |             to the administrated value.
@@ -141,7 +143,7 @@ class MacrosSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetLanguageEditor(CATScriptLanguage iLanguage) As
                 | CATBSTR
-                | 
+                |
                 |     Returns the editor path for the specified language.
 
         :param int i_language: enum cat_script_language
@@ -157,23 +159,23 @@ class MacrosSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetLanguageEditorInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the language editors
                 |     setting.
                 |     Role:Retrieves the state of the parameter language editors setting in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         oLocked
-                |             Indicates if the parameter has been locked. 
+                |             Indicates if the parameter has been locked.
                 |         oModified
                 |             Indicates if the parameter has been explicitly modified or remain
                 |             to the administrated value.
@@ -192,14 +194,14 @@ class MacrosSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDefaultMacroLibraries(CATSafeArrayVariant
                 | iLibraries)
-                | 
+                |
                 |     Sets the list of default macro libraries.
 
         :param tuple i_libraries:
         :rtype: None
         """
         return self.macros_setting_att.SetDefaultMacroLibraries(i_libraries)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -222,14 +224,14 @@ class MacrosSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDefaultMacroLibrariesLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the default macro libraries setting.
                 |     Role:Locks or unlocks the default macro libraries setting if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -240,7 +242,7 @@ class MacrosSettingAtt(SettingController):
         :rtype: None
         """
         return self.macros_setting_att.SetDefaultMacroLibrariesLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -263,14 +265,14 @@ class MacrosSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetExternalReferences(CATSafeArrayVariant iReferences)
-                | 
+                |
                 |     Sets the list of external references.
 
         :param tuple i_references:
         :rtype: None
         """
         return self.macros_setting_att.SetExternalReferences(i_references)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -293,14 +295,14 @@ class MacrosSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetExternalReferencesLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the external references setting.
                 |     Role:Locks or unlocks the external references setting if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -311,7 +313,7 @@ class MacrosSettingAtt(SettingController):
         :rtype: None
         """
         return self.macros_setting_att.SetExternalReferencesLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -335,7 +337,7 @@ class MacrosSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetLanguageEditor(CATScriptLanguage iLanguage,
                 | CATBSTR iEditorPath)
-                | 
+                |
                 |     Sets the editor path for the specified language.
 
         :param int i_language: enum cat_script_language
@@ -351,14 +353,14 @@ class MacrosSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetLanguageEditorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the language editors setting.
                 |     Role:Locks or unlocks the language editors setting if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -369,7 +371,7 @@ class MacrosSettingAtt(SettingController):
         :rtype: None
         """
         return self.macros_setting_att.SetLanguageEditorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

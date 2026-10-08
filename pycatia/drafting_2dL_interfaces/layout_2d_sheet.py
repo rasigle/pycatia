@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatSheetProjectionMethod, CatVisuIn3DMode
 from pycatia.drafting_2dL_interfaces.layout_2d_views import Layout2DViews
 from pycatia.drafting_interfaces.drawing_page_setup import DrawingPageSetup
@@ -17,20 +18,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class Layout2DSheet(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Layout2DSheet
-                | 
-                | The interface to access a Layout2D Sheet.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Layout2DSheet
+            |
+            | The interface to access a Layout2D Sheet.
+
     """
 
     def __init__(self, com_object):
@@ -45,13 +46,13 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Orientation() As CatPaperOrientation
-                | 
+                |
                 |     Returns or sets the paper orientation.
-                | 
+                |
                 |     Example:
                 |         This example sets the paper orientation for the MySheet Layout2D sheet
                 |         to catPaperLandscape.
-                | 
+                |
                 |          MySheet.Orientation = catPaperLandscape
 
         :return: enum cat_paper_orientation
@@ -76,13 +77,13 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PageSetup() As DrawingPageSetup (Read Only)
-                | 
+                |
                 |     Returns the page setup.
-                | 
+                |
                 |     Example:
                 |         This example returns the page setup for the MySheet Layout2D
                 |         sheet.
-                | 
+                |
                 |          Dim MySheetPageSetup As DrawingPageSetup
                 |          Set MySheetPageSetup = MySheet.PageSetup
 
@@ -99,17 +100,17 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PaperHeight() As double
-                | 
+                |
                 |     Gets or Sets the paper width of the layout sheet.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPaperHeight
-                | 
+                |
                 |             Example:
                 |                 This example get the height of the
                 |                 Layout2DSheet1.
-                | 
+                |
                 |                  Layout2DSheet1.GetPaperHeight oPaperHeight
 
         :rtype: float
@@ -133,13 +134,13 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PaperName() As CATBSTR
-                | 
+                |
                 |     Returns or sets the paper format name.
-                | 
+                |
                 |     Example:
                 |         This example sets the paper format name for the MySheet Layout2D sheet
                 |         to DSFormat1.
-                | 
+                |
                 |          MySheet.PaperName = DSFormat1
 
         :rtype: str
@@ -163,13 +164,13 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PaperSize() As CatPaperSize
-                | 
+                |
                 |     Returns or sets the paper size.
-                | 
+                |
                 |     Example:
                 |         This example sets the page size for the MySheet Layout2D sheet to
                 |         catPaperA4.
-                | 
+                |
                 |          MySheet.PaperSize = catPaperA4
 
         :return: enum cat_paper_size
@@ -194,16 +195,16 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PaperWidth() As double
-                | 
+                |
                 |     Gets or Sets the paper width of the layout sheet.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPaperWidth
-                | 
+                |
                 |             Example:
                 |                 This example get the width of the Sheet1.
-                | 
+                |
                 |                  Sheet1.GetPaperWidth oPaperWidth
 
         :rtype: float
@@ -227,13 +228,13 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PrintArea() As PrintArea (Read Only)
-                | 
+                |
                 |     Returns the print area definition object.
-                | 
+                |
                 |     Example:
                 |         This example returns the print area for the MySheet Layout2D sheet
                 |         2DL.
-                | 
+                |
                 |          Dim MyPrintArea As PrintArea
                 |          Set MyPrintArea = MySheet.PrintArea
 
@@ -250,13 +251,13 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ProjectionMethod() As CatSheetProjectionMethod
-                | 
+                |
                 |     Returns or sets the sheet projection mode .
-                | 
+                |
                 |     Example:
                 |         This example sets the projection mode of the MySheet Layout2D sheet to
                 |         catFirstAngle.
-                | 
+                |
                 |          MySheet.ProjectionMethod = catFirstAngle
 
         :return: CatSheetProjectionMethod
@@ -280,13 +281,13 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SheetScale() As double
-                | 
+                |
                 |     Returns or sets the scale of the Layout2D sheet.
-                | 
+                |
                 |     Example:
                 |         This example sets the scale of the MySheet Layout2D sheet to
                 |         0.5.
-                | 
+                |
                 |          MySheet.SheetScale = 0.5
 
         :rtype: float
@@ -310,14 +311,14 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Views() As Layout2DViews (Read Only)
-                | 
+                |
                 |     Returns the Layout2D view collection of the Layout2D
                 |     sheet.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in ViewCollection the collection of views 2DL of
                 |         the MySheet Layout2D sheet.
-                | 
+                |
                 |          Dim ViewCollection As Layout2DViews
                 |          Set ViewCollection = MySheet.Views.
 
@@ -334,11 +335,11 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property VisuIn3D() As CatVisuIn3DMode
-                | 
+                |
                 |     Set/Get the 3D visualization mode of the sheet in the 3D Viewer ie in the
                 |     3D windows and in the background of each view in every 2D
                 |     context.
-                | 
+                |
                 |     See also:
                 |         CatVisuIn3DMode
 
@@ -362,15 +363,15 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Activate()
-                | 
+                |
                 |     Activates the Layout2D sheet. Activating a Layout2D sheet means that this
                 |     Layout2D sheet is the one on which the end user is now working. The window in
                 |     the application's window collection which contains this Layout2D sheet becomes
                 |     the active one.
-                | 
+                |
                 |     Example:
                 |         This example activates the MySheet layout2dsheet.
-                | 
+                |
                 |          MySheet.Activate
 
         :rtype: None
@@ -384,13 +385,13 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsDetail() As boolean
-                | 
+                |
                 |     Checks whether the sheet is a detail sheet.
                 |     TRUE if the sheet is a detail sheet.
-                | 
+                |
                 |     Example:
                 |         This example checks whether MySheet is a detail sheet.
-                | 
+                |
                 |          IsDetail = MySheet.IsDetail
 
         :rtype: bool
@@ -404,20 +405,20 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PrintOut(CatRenderingMode iRenderingMode)
-                | 
+                |
                 |     Prints the Layout2D sheet according to its page setup on the default
                 |     printer.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRenderingMode
                 |             The rendering mode to use for the backgrounds of the views in the
                 |             sheet.
-                | 
+                |
                 |             Example:
                 |                 This example prints the Layout2DSheet1 on the default
                 |                 printer.
-                | 
+                |
                 |                  Layout2DSheet1.PrintOut
                 |                  catRenderShadingWithEdges
 
@@ -433,16 +434,16 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PrintOut2()
-                | 
+                |
                 |     Prints the Layout2D sheet according to its page setup on the default
                 |     printer. If a rendering mode has been stored on the 2D Layout, it is used
                 |     during print process for the backgrounds. Otherwise, "Shading with edges"
                 |     rendering mode is used.
-                | 
+                |
                 |     Example:
                 |         This example prints the Layout2DSheet1 on the default
                 |         printer.
-                | 
+                |
                 |          Layout2DSheet1.PrintOut2
 
         :rtype: None
@@ -457,21 +458,21 @@ class Layout2DSheet(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PrintToFile(CATBSTR fileName,
                 | CatRenderingMode iRenderingMode)
-                | 
+                |
                 |     Prints the Layout2D sheet according its page setup in a file instead of
                 |     being sent to a printer.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         fileName
-                |             The full pathname of the file receiving the data. 
+                |             The full pathname of the file receiving the data.
                 |         iRenderingMode
                 |             The rendering mode to use for the backgrounds of the views in the
-                |             sheet. 
-                | 
+                |             sheet.
+                |
                 |     Example:
                 |         This example prints the Layout2DSheet1 in a file.
-                | 
+                |
                 |          Layout2DSheet1.PrintToFile
                 |          "e:\\temp\\sheet1.prn",catRenderShadingWithEdges
 
@@ -488,20 +489,20 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PrintToFile2(CATBSTR fileName)
-                | 
+                |
                 |     Prints the Layout2D sheet according its page setup in a file instead of
                 |     being sent to a printer. If a rendering mode has been stored on the 2D Layout,
                 |     it is used during print process for the backgrounds. Otherwise, "Shading with
                 |     edges" rendering mode is used.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         fileName
-                |             The full pathname of the file receiving the data. 
-                | 
+                |             The full pathname of the file receiving the data.
+                |
                 |     Example:
                 |         This example prints the Layout2DSheet1 in a file.
-                | 
+                |
                 |          Layout2DSheet1.PrintToFile2 "e:\\temp\\sheet1.prn"
 
         :param str file_name:
@@ -516,18 +517,18 @@ class Layout2DSheet(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub reorder_Views(CATSafeArrayVariant iOrderedViews)
-                | 
+                |
                 |     Changes the positions of the views in this sheet according to the given
                 |     ordered list. iOrderedViews is the result of a permutation applied to the list
                 |     of all the views of this sheet with the following constraint: the two first
                 |     elements of the list must be respectively the sheet's mainview and background
                 |     view.
-                | 
+                |
                 |     Example:
                 |         This example modifies the views order of a sheet made of a mainview, a
                 |         backgroundview and two user-created views. (user-created views are
                 |         inverted).
-                | 
+                |
                 |          Set drw =  CATIA.ActiveDocument.Part.GetItem("CATLayoutRoot")
                 |          Set drwviewsorder = drwsheetsorder.Sheets.ActiveSheet
                 |          Set drwviews = drwviewsorder.Views
@@ -542,7 +543,7 @@ class Layout2DSheet(AnyObject):
         :rtype: None
         """
         return self.layout_2d_sheet.reorder_Views(i_ordered_views)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

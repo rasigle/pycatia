@@ -1,33 +1,34 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_sch_platform_interfaces.sch_list_of_objects import SchListOfObjects
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class SchMovable(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchMovable
-                | 
-                | Manage the transformation of a schematic component.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchMovable
+            |
+            | Manage the transformation of a schematic component.
+
     """
 
     def __init__(self, com_object):
@@ -41,18 +42,18 @@ class SchMovable(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Rotate(double iDb1RotationAngleInRadian)
-                | 
+                |
                 |     Rotate a schematic object with an angle in radian.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDb1RotationAngleInRadian
-                |             Rotation angle (from x-axis) in radian. 
-                | 
+                |             Rotation angle (from x-axis) in radian.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchMovable
-                | 
+                |
                 |           ...
                 |          objThisIntf.Rotate
 
@@ -68,18 +69,18 @@ class SchMovable(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Scale(double iDb1ScaleFactor)
-                | 
+                |
                 |     Scale a schematic object with a scale factor.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDb1ScaleFactor
-                |             The current scale factor of the component. 
-                | 
+                |             The current scale factor of the component.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchMovable
-                | 
+                |
                 |           ...
                 |          objThisIntf.Scale
 
@@ -88,7 +89,9 @@ class SchMovable(AnyObject):
         """
         return self.sch_movable.Scale(i_db1_scale_factor)
 
-    def scale_selected_objects(self, i_l_cntbl_to_scale: SchListOfObjects, i_db1_scale_factor: float) -> None:
+    def scale_selected_objects(
+        self, i_l_cntbl_to_scale: SchListOfObjects, i_db1_scale_factor: float
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -96,21 +99,21 @@ class SchMovable(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ScaleSelectedObjects(SchListOfObjects iLCntblToScale,
                 | double iDb1ScaleFactor)
-                | 
+                |
                 |     Scale a list of schematic objects with a scale factor.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLCntblToScale
-                |             List of selected objects to scale. 
+                |             List of selected objects to scale.
                 |         oDb1ScaleFactor
-                |             The current scale factor. 
-                | 
+                |             The current scale factor.
+                |
                 |     Example:
-                | 
+                |
                 |          Dim objThisIntf As SchMovable
                 |          Dim objArg1 As SchListOfObjects
-                | 
+                |
                 |           ...
                 |          objThisIntf.ScaleSelectedObjectsobjArg1,objArg1
 
@@ -118,8 +121,10 @@ class SchMovable(AnyObject):
         :param float i_db1_scale_factor:
         :rtype: None
         """
-        return self.sch_movable.ScaleSelectedObjects(i_l_cntbl_to_scale.com_object, i_db1_scale_factor)
-        # # # # Autogenerated comment: 
+        return self.sch_movable.ScaleSelectedObjects(
+            i_l_cntbl_to_scale.com_object, i_db1_scale_factor
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -142,16 +147,16 @@ class SchMovable(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Transform(CATSafeArrayVariant iDb6TransMatrix)
-                | 
+                |
                 |     Transform a schematic object with a transformation matrix.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDb6TransMatrix
-                |             Transformation matrix. See 
-                | 
+                |             Transformation matrix. See
+                |
                 |         SchGRRComp.GetTransformation2D for explanation of this argument.
-                |         
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchMovable
@@ -163,7 +168,7 @@ class SchMovable(AnyObject):
         :rtype: tuple
         """
         return self.sch_movable.Transform(i_db6_trans_matrix)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -186,14 +191,14 @@ class SchMovable(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Translate(CATSafeArrayVariant iDb2Vector)
-                | 
+                |
                 |     Translate a schematic object with a vector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDb2Vector
-                |             X-Y components of a translation vector. 
-                | 
+                |             X-Y components of a translation vector.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchMovable
@@ -205,7 +210,7 @@ class SchMovable(AnyObject):
         :rtype: tuple
         """
         return self.sch_movable.Translate(i_db2_vector)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

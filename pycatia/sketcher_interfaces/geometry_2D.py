@@ -1,33 +1,34 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.sketcher_interfaces.geometric_element import GeometricElement
 
 
 class Geometry2D(GeometricElement):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SketcherInterfaces.GeometricElement
-                |                         Geometry2D
-                | 
-                | 2D wireframe geometric element.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SketcherInterfaces.GeometricElement
+            |                         Geometry2D
+            |
+            | 2D wireframe geometric element.
+
     """
 
     def __init__(self, com_object):
@@ -42,7 +43,7 @@ class Geometry2D(GeometricElement):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Construction() As boolean
-                | 
+                |
                 |     Returns the construction mode of the 2D geometry
 
         :rtype: bool
@@ -66,11 +67,11 @@ class Geometry2D(GeometricElement):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ReportName() As long
-                | 
+                |
                 |     Returns the report name of the 2D geometry
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oReportName
                 |             The integer value of the report name
 

@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_fastener_interfaces.curve_fastener import CurveFastener
 from pycatia.dnb_fastener_interfaces.fastener_group import FastenerGroup
 from pycatia.dnb_fastener_interfaces.point_fastener import PointFastener
@@ -16,58 +17,58 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class DnbFastenerManagement(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DNBFastenerManagement
-                | 
-                | Valid fastener process types and its fastening context *
-                | The valid known values for process types for fasteners and value for its
-                | fastening context
-                | 
-                |     Point fasteners fastening context
-                |     sealant point
-                |     1
-                |     spot weld
-                |     2
-                |     stud weld
-                |     2
-                |     Glue Drop
-                |     1
-                |     Rivet
-                |     2
-                |     Screw
-                |     2
-                |     clinch
-                |     2
-                |     Drill
-                |     2
-                |     adhesive point
-                |     1
-                |     stud
-                |     2 Curve fasteners
-                |     adhesive Curve
-                |     1
-                |     arc weld
-                |     2
-                |     sealant curve
-                |     1
-                |     glue bead
-                |     1
-                |     adhesive
-                |     1
-                |     sealant
-                |     1
-                |     spot glue
-                |     1
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DNBFastenerManagement
+            |
+            | Valid fastener process types and its fastening context *
+            | The valid known values for process types for fasteners and value for its
+            | fastening context
+            |
+            |     Point fasteners fastening context
+            |     sealant point
+            |     1
+            |     spot weld
+            |     2
+            |     stud weld
+            |     2
+            |     Glue Drop
+            |     1
+            |     Rivet
+            |     2
+            |     Screw
+            |     2
+            |     clinch
+            |     2
+            |     Drill
+            |     2
+            |     adhesive point
+            |     1
+            |     stud
+            |     2 Curve fasteners
+            |     adhesive Curve
+            |     1
+            |     arc weld
+            |     2
+            |     sealant curve
+            |     1
+            |     glue bead
+            |     1
+            |     adhesive
+            |     1
+            |     sealant
+            |     1
+            |     spot glue
+            |     1
+
     """
 
     def __init__(self, com_object):
@@ -75,15 +76,15 @@ class DnbFastenerManagement(AnyObject):
         self.dnb_fastener_management = com_object
 
     def create_curve_fastener(
-            self,
-            i_name: str,
-            i_parent_group_body: FastenerGroup,
-            i_list_of_joining_parts: tuple,
-            i_process_type: str,
-            i_fastening_context: int,
-            i_design_points_positions: tuple,
-            i_feature_cgr_path: str,
-            o_curve_fastener: CurveFastener
+        self,
+        i_name: str,
+        i_parent_group_body: FastenerGroup,
+        i_list_of_joining_parts: tuple,
+        i_process_type: str,
+        i_fastening_context: int,
+        i_design_points_positions: tuple,
+        i_feature_cgr_path: str,
+        o_curve_fastener: CurveFastener,
     ) -> None:
         """
         .. note::
@@ -98,23 +99,23 @@ class DnbFastenerManagement(AnyObject):
                 | CATSafeArrayVariant iDesignPointsPositions,
                 | CATBSTR iFeatureCGRPath,
                 | CurveFastener oCurveFastener)
-                | 
+                |
                 |     Creates a curve fastener in the V5 .. only for flat file
                 |     scenario.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         in
                 |             CATBSTR iName Name of the feature to be created.. a unique value
-                |             has to be provided. 
+                |             has to be provided.
                 |         inout
                 |             DELMIAFastenerGroup iParentGroupBody Parent under which fastener to
                 |             be created In case of no parent provided, fastener would be created under top
-                |             fastener group(assembly joint(s)) automatically. 
+                |             fastener group(assembly joint(s)) automatically.
                 |         in
                 |             CATSafeArrayVariant iListOfJoiningParts List of joining parts for
                 |             fastener In case, the parent assembly joint already has joining part
-                |             information empty list can be provided, 
+                |             information empty list can be provided,
                 |         in
                 |             CATBSTR iProcessType Process type for fastener : refer known values on top section of
                 |             file. any custom value other than known values can be provided
@@ -129,14 +130,14 @@ class DnbFastenerManagement(AnyObject):
                 |             Degree. if fastener has n points , then size of array should be exactly of 6n
                 |             now assign values for first point's poisition in XYZYPR format at location 0-5
                 |             .. next point's 6-11... next 12-17... 18-23... 6(n-1)-(6n-1)
-                |             
+                |
                 |         in
                 |             CATBSTR iFeatureCGRPath Representation for curve fastener Value
-                |             should be complete file path 
+                |             should be complete file path
                 |         out
                 |             DELMIACurveFastener oCurveFastener Created curve fastener *
-                |             
-                | 
+                |
+                |
                 |     Example:
                 |         Set myObject = CATIA.GetItem("DNBFastenerManagement")
                 |         myObject.CreateCurveFastener "Curve Fastener.1", ParentGroupObj,JoinPartArray,"arc weld",2, DesignPos, FeatureRepPath, oCurveFast
@@ -159,9 +160,9 @@ class DnbFastenerManagement(AnyObject):
             i_fastening_context,
             i_design_points_positions,
             i_feature_cgr_path,
-            o_curve_fastener.com_object
+            o_curve_fastener.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -178,11 +179,11 @@ class DnbFastenerManagement(AnyObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def create_fastener_group(
-            self,
-            i_name: str,
-            i_parent_group_body: FastenerGroup,
-            i_list_of_joining_parts: tuple,
-            o_fastener_group: FastenerGroup
+        self,
+        i_name: str,
+        i_parent_group_body: FastenerGroup,
+        i_list_of_joining_parts: tuple,
+        o_fastener_group: FastenerGroup,
     ) -> None:
         """
         .. note::
@@ -193,28 +194,28 @@ class DnbFastenerManagement(AnyObject):
                 | FastenerGroup iParentGroupBody,
                 | CATSafeArrayVariant iListOfJoiningParts,
                 | FastenerGroup oFastenerGroup)
-                | 
+                |
                 |     Creates a fastener group in the V5 .. only for flat file
                 |     scenario.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         in
                 |             CATBSTR iName Name of the feature to be created.. a unique value
-                |             has to be provided. 
+                |             has to be provided.
                 |         inout
                 |             DELMIAFastenerGroup iParentGroupBody Parent under which fastener
                 |             group to be created In case of no parent provided, fastener group would be
                 |             created under top fastener group(assembly joint(s)) automatically.
-                |             
+                |
                 |         in
                 |             CATSafeArrayVariant iListOfJoiningParts List of joining parts for
                 |             fastener If the List has joining parts .. an assembly joint is created If list
-                |             has no part .. a normal fastener group is created 
+                |             has no part .. a normal fastener group is created
                 |         out
                 |             DELMIAFastenerGroup oFastenerGroup Created fastener group *
-                |             
-                | 
+                |
+                |
                 |     Example:
                 |         Set myObject = CATIA.GetItem("DNBFastenerManagement")
                 |         myObject.CreateFastenerGroup "Assembly Joint.1", ParentGroupObj,JoinPartArray,oFastenerGroup
@@ -229,9 +230,9 @@ class DnbFastenerManagement(AnyObject):
             i_name,
             i_parent_group_body.com_object,
             i_list_of_joining_parts,
-            o_fastener_group.com_object
+            o_fastener_group.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -248,14 +249,14 @@ class DnbFastenerManagement(AnyObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def create_point_fastener(
-            self,
-            i_name: str,
-            i_parent_group_body: FastenerGroup,
-            i_list_of_joining_parts: tuple,
-            i_process_type: str,
-            i_fastening_context: int,
-            i_design_position: tuple,
-            o_point_fastener: PointFastener
+        self,
+        i_name: str,
+        i_parent_group_body: FastenerGroup,
+        i_list_of_joining_parts: tuple,
+        i_process_type: str,
+        i_fastening_context: int,
+        i_design_position: tuple,
+        o_point_fastener: PointFastener,
     ) -> None:
         """
         .. note::
@@ -269,23 +270,23 @@ class DnbFastenerManagement(AnyObject):
                 | short iFasteningContext,
                 | CATSafeArrayVariant iDesignPosition,
                 | PointFastener oPointFastener)
-                | 
+                |
                 |     Creates a point fastener in the V5 .. only for flat file
                 |     scenario.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         in
                 |             CATBSTR iName Name of the feature to be created.. a unique value
-                |             has to be provided. 
+                |             has to be provided.
                 |         inout
                 |             DELMIAFastenerGroup iParentGroupBody Parent under which fastener to
                 |             be created In case of no parent provided, fastener would be created under top
-                |             fastener group(assembly joint(s)) automatically. 
+                |             fastener group(assembly joint(s)) automatically.
                 |         in
                 |             CATSafeArrayVariant iListOfJoiningParts List of joining parts for
                 |             fastener In case, the parent assembly joint already has joining part
-                |             information empty list can be provided, 
+                |             information empty list can be provided,
                 |         in
                 |             CATBSTR iProcessType Process type for fastener : refer known values on top section of
                 |             file. any custom value other than known values can be provided
@@ -297,11 +298,11 @@ class DnbFastenerManagement(AnyObject):
                 |             CATSafeArrayVariant iDesignPointsPositions Design position for
                 |             point fastener in XYZYPR format .... YPR values should be in Degree. array
                 |             should be exactly of size of six array should contains values on index from 0-5
-                |             in a sequence order of XYZYPR format. 
+                |             in a sequence order of XYZYPR format.
                 |         out
                 |             DELMIAPointFastener oPointFastener Created point fastener *
-                |             
-                | 
+                |
+                |
                 |     Example:
                 |         Set myObject = CATIA.GetItem("DNBFastenerManagement")
                 |         myObject.CreatePointFastener "Point Fastener.1", ParentGroupObj,JoinPartArray,"spot weld",2, DesignPos, oPointFastener
@@ -322,9 +323,9 @@ class DnbFastenerManagement(AnyObject):
             i_process_type,
             i_fastening_context,
             i_design_position,
-            o_point_fastener.com_object
+            o_point_fastener.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

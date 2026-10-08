@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
@@ -19,37 +19,37 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeSpiral(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeSpiral
-                | 
-                | Represents the hybrid shape Spiral feature object.
-                | Role: Allows to access data of the Spiral feature. This data
-                | includes:
-                | 
-                |     type
-                |     support
-                |     centre point
-                |     axis
-                |     starting radius
-                |     orientation
-                |     ending angle
-                |     ending radius
-                |     revolution
-                |     pitch
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeSpiral
+            |
+            | Represents the hybrid shape Spiral feature object.
+            | Role: Allows to access data of the Spiral feature. This data
+            | includes:
+            |
+            |     type
+            |     support
+            |     centre point
+            |     axis
+            |     starting radius
+            |     orientation
+            |     ending angle
+            |     ending radius
+            |     revolution
+            |     pitch
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -64,7 +64,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Axis() As HybridShapeDirection
-                | 
+                |
                 |     Reads / Changes the Spiral axis (Reference direction).
 
         :rtype: HybridShapeDirection
@@ -88,7 +88,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CenterPoint() As Reference
-                | 
+                |
                 |     Reads / Changes the center point of the Spiral.
 
         :rtype: Reference
@@ -112,7 +112,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ClockwiseRevolution() As boolean
-                | 
+                |
                 |     Reads / Modifies the sense of revolutions .
                 |     FALSE means that revolutions are counter-clockwise.
                 |     TRUE means that revolutions are clockwise.
@@ -138,7 +138,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property EndingAngle() As Angle
-                | 
+                |
                 |     Reads / Changes the Ending Angle of the Spiral.
 
         :rtype: Angle
@@ -162,7 +162,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property EndingRadius() As Length
-                | 
+                |
                 |     Reads / Changes the ending radius of the Spiral.
 
         :rtype: Length
@@ -186,7 +186,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property InvertAxis() As boolean
-                | 
+                |
                 |     Reads / Modifies the orientation .
                 |     FALSE means that there is no invertion (natural
                 |     orientation).
@@ -213,7 +213,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Pitch() As Length
-                | 
+                |
                 |     Reads / Changes the pitch of the Spiral.
 
         :rtype: Length
@@ -237,7 +237,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RevolNumber() As RealParam
-                | 
+                |
                 |     Reads / Changes the revolution number of the Spiral.
 
         :rtype: RealParam
@@ -261,7 +261,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property StartingRadius() As Length
-                | 
+                |
                 |     Reads / Changes the starting radius of the Spiral.
 
         :rtype: Length
@@ -285,7 +285,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Reads / Changes the spiral plane support.
 
         :rtype: Reference
@@ -309,7 +309,7 @@ class HybridShapeSpiral(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Type() As long
-                | 
+                |
                 |     Reads / Changes the spiral type.
 
         :rtype: int
@@ -325,7 +325,9 @@ class HybridShapeSpiral(HybridShape):
 
         self.hybrid_shape_spiral.Type = value
 
-    def set_angle_pitch_param(self, i_end_angle: float, i_revol_number: float, i_pitch: float) -> None:
+    def set_angle_pitch_param(
+        self, i_end_angle: float, i_revol_number: float, i_pitch: float
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -334,7 +336,7 @@ class HybridShapeSpiral(HybridShape):
                 | o Sub SetAnglePitchParam(double iEndAngle,
                 | double iRevolNumber,
                 | double iPitch)
-                | 
+                |
                 |     Sets Angle pitch parameter.
 
         :param float i_end_angle:
@@ -342,9 +344,13 @@ class HybridShapeSpiral(HybridShape):
         :param float i_pitch:
         :rtype: None
         """
-        return self.hybrid_shape_spiral.SetAnglePitchParam(i_end_angle, i_revol_number, i_pitch)
+        return self.hybrid_shape_spiral.SetAnglePitchParam(
+            i_end_angle, i_revol_number, i_pitch
+        )
 
-    def set_angle_radius_param(self, i_end_angle: float, i_revol_number: float, i_end_radius: float) -> None:
+    def set_angle_radius_param(
+        self, i_end_angle: float, i_revol_number: float, i_end_radius: float
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -353,7 +359,7 @@ class HybridShapeSpiral(HybridShape):
                 | o Sub SetAngleRadiusParam(double iEndAngle,
                 | double iRevolNumber,
                 | double iEndRadius)
-                | 
+                |
                 |     Sets Angle radius parameters.
 
         :param float i_end_angle:
@@ -361,7 +367,9 @@ class HybridShapeSpiral(HybridShape):
         :param float i_end_radius:
         :rtype: None
         """
-        return self.hybrid_shape_spiral.SetAngleRadiusParam(i_end_angle, i_revol_number, i_end_radius)
+        return self.hybrid_shape_spiral.SetAngleRadiusParam(
+            i_end_angle, i_revol_number, i_end_radius
+        )
 
     def set_radius_pitch_param(self, i_end_radius: float, i_pitch: float) -> None:
         """
@@ -371,7 +379,7 @@ class HybridShapeSpiral(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetRadiusPitchParam(double iEndRadius,
                 | double iPitch)
-                | 
+                |
                 |     Sets Radius pitch parameter.
 
         :param float i_end_radius:

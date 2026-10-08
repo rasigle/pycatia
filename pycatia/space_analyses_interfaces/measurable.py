@@ -220,7 +220,9 @@ class Measurable(AnyObject):
 
         return self.measurable.GetAngleBetween(i_measured_item.com_object)
 
-    def get_angle_between_in_context(self, i_measured_item: Reference, i_product_instance: AnyObject) -> float:
+    def get_angle_between_in_context(
+        self, i_measured_item: Reference, i_product_instance: AnyObject
+    ) -> float:
         """
 
         Introduced in V5-6R2018.
@@ -262,10 +264,12 @@ class Measurable(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.measurable.GetAngleBetweenInContext(i_measured_item.com_object, i_product_instance.com_object)
+        return self.measurable.GetAngleBetweenInContext(
+            i_measured_item.com_object, i_product_instance.com_object
+        )
 
     def get_axis(self):
         """
@@ -288,19 +292,20 @@ class Measurable(AnyObject):
 
         :return: tuple(float, float, float)
         """
-        vba_function_name = 'get_axis'
-        vba_function = 'GetAxis'
-        vba_code = f'''   
+        vba_function_name = "get_axis"
+        vba_function = "GetAxis"
+        vba_code = f"""   
         Public Function {vba_function_name}(measurable)
             Dim AxisVector (2)
             measurable.{vba_function} AxisVector
             {vba_function_name} = AxisVector
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        result = system_service.evaluate(vba_code, 0, vba_function_name,
-                                         [self.measurable])
+        result = system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
         return result
 
@@ -335,17 +340,19 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float, float, float, float, float, float, float, float, float, float)
         """
 
-        vba_function_name = 'get_axis_system'
-        vba_function = 'GetAxisSystem'
-        vba_code = f'''        
+        vba_function_name = "get_axis_system"
+        vba_function = "GetAxisSystem"
+        vba_code = f"""        
             Public Function {vba_function_name}(measurable)
                 Dim Components (11)
                 measurable.{vba_function} Components
                 {vba_function_name} = Components
             End Function
-            '''
+            """
         system_service = self.application.system_service
-        result = system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable])
+        result = system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
         return result
 
@@ -371,18 +378,20 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float)
         """
 
-        vba_function_name = 'create_cog'
-        vba_function = 'GetCOG'
-        vba_code = f'''        
+        vba_function_name = "create_cog"
+        vba_function = "GetCOG"
+        vba_code = f"""        
         Public Function {vba_function_name}(measurable)
             Dim coord(2)
             measurable.{vba_function} coord
             {vba_function_name} = coord
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        result = system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable])
+        result = system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
         return result
 
@@ -408,18 +417,20 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float)
         """
 
-        vba_function_name = 'get_center'
-        vba_function = 'GetCenter'
-        vba_code = f'''        
+        vba_function_name = "get_center"
+        vba_function = "GetCenter"
+        vba_code = f"""        
         Public Function {vba_function_name}(measurable)
             Dim Coordinates (2)
             measurable.{vba_function} Coordinates
             {vba_function_name} = Coordinates
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        result = system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable])
+        result = system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
         return result
 
@@ -448,18 +459,20 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float)
         """
 
-        vba_function_name = 'get_direction'
-        vba_function = 'GetDirection'
-        vba_code = f'''        
+        vba_function_name = "get_direction"
+        vba_function = "GetDirection"
+        vba_code = f"""        
         Public Function {vba_function_name}(measurable)
             Dim direction (2) 
             measurable.{vba_function} direction
             {vba_function_name} = direction
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        result = system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable])
+        result = system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
         return result
 
@@ -503,7 +516,9 @@ class Measurable(AnyObject):
 
         return self.measurable.GetMinimumDistance(i_measured_item.com_object)
 
-    def get_minimum_distance_in_context(self, i_measured_item: Reference, i_product_instance: AnyObject) -> float:
+    def get_minimum_distance_in_context(
+        self, i_measured_item: Reference, i_product_instance: AnyObject
+    ) -> float:
         """
 
         Introduced in V5-6R2018.
@@ -546,10 +561,12 @@ class Measurable(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.measurable.GetMinimumDistanceInContext(i_measured_item.com_object, i_product_instance.com_object)
+        return self.measurable.GetMinimumDistanceInContext(
+            i_measured_item.com_object, i_product_instance.com_object
+        )
 
     def get_minimum_distance_points(self, i_measured_item):
         """
@@ -578,24 +595,29 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float, float, float, float, float, float, float)
         """
 
-        vba_function_name = 'get_minimum_distance_points'
-        vba_function = 'GetMinimumDistancePoints'
-        vba_code = f'''        
+        vba_function_name = "get_minimum_distance_points"
+        vba_function = "GetMinimumDistancePoints"
+        vba_code = f"""        
         Public Function {vba_function_name}(measurable, i_measured_item)
             Dim Coordinates (8) 
             measurable.{vba_function} i_measured_item, Coordinates
             {vba_function_name} = Coordinates
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        return system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable, i_measured_item.com_object])
+        return system_service.evaluate(
+            vba_code,
+            0,
+            vba_function_name,
+            [self.measurable, i_measured_item.com_object],
+        )
 
     def get_minimum_distance_points_in_context(
-            self,
-            i_measured_item: Reference,
-            i_product_instance: AnyObject,
-            o_coordinates: tuple
+        self,
+        i_measured_item: Reference,
+        i_product_instance: AnyObject,
+        o_coordinates: tuple,
     ) -> None:
         """
 
@@ -641,13 +663,11 @@ class Measurable(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.measurable.GetMinimumDistancePointsInContext(
-            i_measured_item.com_object,
-            i_product_instance.com_object,
-            o_coordinates
+            i_measured_item.com_object, i_product_instance.com_object, o_coordinates
         )
 
     def get_plane(self):
@@ -680,18 +700,20 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float, float, float, float, float, float)
         """
 
-        vba_function_name = 'get_plane'
-        vba_function = 'GetPlane'
-        vba_code = f'''        
+        vba_function_name = "get_plane"
+        vba_function = "GetPlane"
+        vba_code = f"""        
         Public Function {vba_function_name}(measurable)
             Dim Components (8)
             measurable.{vba_function} Components
             {vba_function_name} = Components
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        return system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable])
+        return system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
     def get_point(self):
         """
@@ -716,18 +738,20 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float)
         """
 
-        vba_function_name = 'get_point'
-        vba_function = 'GetPoint'
-        vba_code = f'''        
+        vba_function_name = "get_point"
+        vba_function = "GetPoint"
+        vba_code = f"""        
         Public Function {vba_function_name}(measurable)
             Dim Coordinates (2)
             measurable.{vba_function} Coordinates
             {vba_function_name} = Coordinates
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        return system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable])
+        return system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
     def get_points_on_axis(self):
         """
@@ -760,18 +784,20 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float, float, float, float, float, float)
         """
 
-        vba_function_name = 'get_points_on_axis'
-        vba_function = 'GetPointsOnAxis'
-        vba_code = f'''        
+        vba_function_name = "get_points_on_axis"
+        vba_function = "GetPointsOnAxis"
+        vba_code = f"""        
         Public Function {vba_function_name}(measurable)
             Dim Coordinates (8)
             measurable.{vba_function} Coordinates
             {vba_function_name} = Coordinates
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        return system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable])
+        return system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
     def get_points_on_curve(self):
         """
@@ -803,18 +829,20 @@ class Measurable(AnyObject):
         :return: tuple(float, float, float, float, float, float, float, float)
         """
 
-        vba_function_name = 'get_points_on_curve'
-        vba_function = 'GetPointsOnCurve'
-        vba_code = f'''        
+        vba_function_name = "get_points_on_curve"
+        vba_function = "GetPointsOnCurve"
+        vba_code = f"""        
         Public Function {vba_function_name}(measurable)
             Dim Coordinates (8)
             measurable.{vba_function} Coordinates
             {vba_function_name} = Coordinates
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
-        return system_service.evaluate(vba_code, 0, vba_function_name, [self.measurable])
+        return system_service.evaluate(
+            vba_code, 0, vba_function_name, [self.measurable]
+        )
 
     def __repr__(self):
-        return f'CATIAMeasurable({self.name})'
+        return f"CATIAMeasurable({self.name})"

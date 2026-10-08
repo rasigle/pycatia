@@ -1,16 +1,19 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
+Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 import inspect
 
-from pycatia.manufacturing_interfaces.manufacturing_operation import ManufacturingOperation
+from pycatia.manufacturing_interfaces.manufacturing_operation import (
+    ManufacturingOperation,
+)
 from pycatia.system_interfaces.any_object import AnyObject
 
 
@@ -40,10 +43,11 @@ class ManufacturingProgram2(AnyObject):
         self.manufacturing_program2 = com_object
 
     def append_operation_after(
-            self,
-            i_manufacturing_operation: ManufacturingOperation,
-            type_: str,
-            auto_sequence: int) -> ManufacturingOperation:
+        self,
+        i_manufacturing_operation: ManufacturingOperation,
+        type_: str,
+        auto_sequence: int,
+    ) -> ManufacturingOperation:
         """
 
         Introduced in V5-6R2020.
@@ -76,22 +80,20 @@ class ManufacturingProgram2(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return ManufacturingOperation(
             self.manufacturing_program2.AppendOperationAfter(
-                i_manufacturing_operation.com_object,
-                type_,
-                auto_sequence
+                i_manufacturing_operation.com_object, type_, auto_sequence
             )
         )
 
     def append_operation_before(
-            self,
-            i_manufacturing_operation: ManufacturingOperation,
-            type_: str,
-            auto_sequence: int
+        self,
+        i_manufacturing_operation: ManufacturingOperation,
+        type_: str,
+        auto_sequence: int,
     ) -> ManufacturingOperation:
         """
 
@@ -125,14 +127,12 @@ class ManufacturingProgram2(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return ManufacturingOperation(
             self.manufacturing_program2.AppendOperationBefore(
-                i_manufacturing_operation.com_object,
-                type_,
-                auto_sequence
+                i_manufacturing_operation.com_object, type_, auto_sequence
             )
         )
 

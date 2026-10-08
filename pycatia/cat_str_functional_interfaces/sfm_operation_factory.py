@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import SFMConnectionParameters
+
+from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import (
+    SFMConnectionParameters,
+)
 from pycatia.cat_str_functional_interfaces.sfm_endcut_manager import SFMEndcutManager
 from pycatia.cat_str_functional_interfaces.sfm_profile import SFMProfile
 from pycatia.mec_mod_interfaces.factory import Factory
@@ -16,28 +19,28 @@ from pycatia.mec_mod_interfaces.factory import Factory
 
 class SFMOperationFactory(Factory):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Factory
-                |                         SfmOperationFactory
-                | 
-                | Gets the Operation Factory.
-                | 
-                | Example:
-                |     This Example Retrieves SfmOperationFactory from Part.
-                | 
-                |      Set part1 = partDocument1.Part
-                |      Dim Factory As SfmOperationFactory
-                |      Set Factory =  part1.GetCustomerFactory("SfmOperationFactory")
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Factory
+            |                         SfmOperationFactory
+            |
+            | Gets the Operation Factory.
+            |
+            | Example:
+            |     This Example Retrieves SfmOperationFactory from Part.
+            |
+            |      Set part1 = partDocument1.Part
+            |      Dim Factory As SfmOperationFactory
+            |      Set Factory =  part1.GetCustomerFactory("SfmOperationFactory")
+
     """
 
     def __init__(self, com_object):
@@ -52,24 +55,24 @@ class SFMOperationFactory(Factory):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAvailableSlotsFromCatalog(SfmProfile iSfmProfile) As
                 | CATSafeArrayVariant
-                | 
+                |
                 |     Gets the list of available Slots from catalog for a given
                 |     Profile(Stiffener/Member).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSfmProfile
-                |             [in] The given profile. 
+                |             [in] The given profile.
                 |         oListofSlotNames
-                |             [out] The List of Slots available. 
-                | 
+                |             [out] The List of Slots available.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This Example retrieves the list of avaliable
                 |             Slots.
-                | 
+                |
                 |              Dim FactoryObj As SfmOperationFactory
                 |              Set FactoryObj = PartObj.GetCustomerFactory("SfmOperationFactory")
                 |              Dim ListOfAvailableSlots() As Variant
@@ -78,7 +81,9 @@ class SFMOperationFactory(Factory):
         :param SFMProfile i_sfm_profile:
         :rtype: tuple
         """
-        return self.sfm_operation_factory.GetAvailableSlotsFromCatalog(i_sfm_profile.com_object)
+        return self.sfm_operation_factory.GetAvailableSlotsFromCatalog(
+            i_sfm_profile.com_object
+        )
 
     def get_endcut_manager(self) -> SFMEndcutManager:
         """
@@ -87,21 +92,21 @@ class SFMOperationFactory(Factory):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetEndcutManager() As SfmEndcutManager
-                | 
+                |
                 |     Gets the Endcut Manager.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSfmEndcutManager
-                |             [out] The retrieved Manager. 
-                | 
+                |             [out] The retrieved Manager.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This Example retrieves the Endcut Manager from the
                 |             Factory.
-                | 
+                |
                 |              Dim FactoryObj As SfmOperationFactory
                 |              Set FactoryObj = PartObj.GetCustomerFactory("SfmOperationFactory")
                 |              Dim EndCutManagerObj As SfmEndcutManager
@@ -112,11 +117,11 @@ class SFMOperationFactory(Factory):
         return SFMEndcutManager(self.sfm_operation_factory.GetEndcutManager())
 
     def get_slot_parameters(
-            self,
-            i_sfm_profile: SFMProfile,
-            i_slot_name: str,
-            o_list_slot_parameters: SFMConnectionParameters,
-            o_list_slot_param_names: tuple
+        self,
+        i_sfm_profile: SFMProfile,
+        i_slot_name: str,
+        o_list_slot_parameters: SFMConnectionParameters,
+        o_list_slot_param_names: tuple,
     ) -> tuple:
         """
         .. note::
@@ -127,28 +132,28 @@ class SFMOperationFactory(Factory):
                 | CATBSTR iSlotName,
                 | SfmConnectionParameters oListSlotParameters,
                 | CATSafeArrayVariant oListSlotParamNames)
-                | 
+                |
                 |     Gets the Slot Parameters and Names for a slot from
                 |     catalog.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSfmProfile
-                |             [in] The given profile. 
+                |             [in] The given profile.
                 |         iSlotName
-                |             [in] Name of the Slot. 
+                |             [in] Name of the Slot.
                 |         oListSlotParameters
                 |             [out] The Slot UDF Parameters with deafult values.
-                |             
+                |
                 |         oListSlotParamNames
-                |             [out] Slot Parameter Names. 
-                | 
+                |             [out] Slot Parameter Names.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This Example retrieves Parameters for Slot.
-                | 
+                |
                 |              Dim FactoryObj As SfmOperationFactory
                 |              Set FactoryObj = PartObj.GetCustomerFactory("SfmOperationFactory")
                 |              Dim oListSlotParams As SfmConnectionParameters
@@ -176,8 +181,9 @@ class SFMOperationFactory(Factory):
             i_sfm_profile.com_object,
             i_slot_name,
             o_list_slot_parameters.com_object,
-            o_list_slot_param_names)
-        # # # # Autogenerated comment: 
+            o_list_slot_param_names,
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

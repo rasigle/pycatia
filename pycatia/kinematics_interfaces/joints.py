@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.kinematics_interfaces.joint import Joint
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
@@ -15,21 +16,21 @@ from pycatia.types.general import CATVariant
 
 class Joints(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Joints
-                | 
-                | A collection of all Joint entities currently managed by the
-                | application.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Joints
+            |
+            | A collection of all Joint entities currently managed by the
+            | application.
+
     """
 
     def __init__(self, com_object):
@@ -43,15 +44,15 @@ class Joints(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Add() As Joint
-                | 
+                |
                 |     Create a new Joint and adds it to the Joints collection.
-                | 
+                |
                 |     Returns:
-                |         The created Joint 
+                |         The created Joint
                 |     Example:
                 |         This example creates a new Joint in the TheJoints
                 |         collection.
-                | 
+                |
                 |             Dim NewJoint As Joint
                 |             Set NewJoint = TheJoints.Add()
 
@@ -66,26 +67,26 @@ class Joints(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As Joint
-                | 
+                |
                 |     Returns a Joint using its index or its name from the Joints
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Joint to retrieve from the collection
                 |             of Joints. As a numerics, this index is the rank of the Joint in the
                 |             collection. The index of the first Joint in the collection is 1, and the index
                 |             of the last Joint is Count. As a string, it is the name you assigned to the
-                |             Joint using the 
-                | 
-                |         AnyObject.Name property. 
+                |             Joint using the
+                |
+                |         AnyObject.Name property.
                 |     Returns:
-                |         The retrieved Joint 
+                |         The retrieved Joint
                 |     Example:
                 |         This example returns in ThisJoint the third Joint in the collection,
                 |         and in ThatJoint the Joint named MyJoint.
-                | 
+                |
                 |          Dim ThisJoint As Joint
                 |          Set ThisJoint = TheJoints.Item(3)
                 |          Dim ThatJoint As Joint
@@ -103,24 +104,24 @@ class Joints(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Remove a Joint from the Joints collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Joint to retrieve from the collection
                 |             of Joints. As a numerics, this index is the rank of the Joint in the
                 |             collection. The index of the first Joint in the collection is 1, and the index
                 |             of the last Joint is Count. As a string, it is the name you assigned to the
-                |             Joint. 
-                | 
+                |             Joint.
+                |
                 |     Returns:
-                |         Nothing 
+                |         Nothing
                 |     Example:
                 |         The following example removes the tenth Joint and the Joint named
                 |         JointTwo from the TheJoints collection.
-                | 
+                |
                 |             TheJoints.Remove(10)
                 |             TheJoints.Remove("JointTwo")
 
@@ -128,7 +129,7 @@ class Joints(Collection):
         :rtype: None
         """
         return self.joints.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_human_modeling_interfaces.swk_line_of_sight import SWKLineOfSight
 from pycatia.dnb_human_modeling_interfaces.swk_manikin_part import SWKManikinPart
 
 
 class SWKVision(SWKManikinPart):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DNBHumanModelingInterfaces.SWKManikinPart
-                |                         SWKVision
-                | 
-                | This interface manages the vision of the manikin.
-                | It provides
-                | access to the vision data (lines of sight, focal point...)
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DNBHumanModelingInterfaces.SWKManikinPart
+            |                         SWKVision
+            |
+            | This interface manages the vision of the manikin.
+            | It provides
+            | access to the vision data (lines of sight, focal point...)
+
     """
 
     def __init__(self, com_object):
@@ -45,7 +46,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ActiveLineOfSight() As SWKLineOfSight (Read Only)
-                | 
+                |
                 |     Returns the active line of sight, according to the vision type.
 
         :rtype: SWKLineOfSight
@@ -61,7 +62,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ActiveSide() As long (Read Only)
-                | 
+                |
                 |     Returns the vision active side.
                 |     The active line of sight is the one able to
                 |     control the two others. That is, when the active line of
@@ -85,7 +86,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AmbinocularAngle() As double
-                | 
+                |
                 |     Returns or sets the vision Ambinocular angle.
                 |     This angle is always in degrees.
 
@@ -110,7 +111,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BinocularAngle() As double
-                | 
+                |
                 |     Returns or sets the vision Binocular angle.
                 |     This angle is always in degrees.
 
@@ -135,7 +136,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CentralConeAngle() As double
-                | 
+                |
                 |     Returns or sets the vision Central cone angle.
                 |     This angle is always in degrees.
 
@@ -160,7 +161,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FocalDistance() As double
-                | 
+                |
                 |     Returns or sets the focal distance, in centimeters.
                 |     N.B.: if the value is -1.0,
                 |     then the focal distance is set to infinite.
@@ -186,7 +187,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FocalPointX() As double (Read Only)
-                | 
+                |
                 |     Returns the x coordinate (in millimeters) of the focal point.
 
         :rtype: float
@@ -202,7 +203,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FocalPointY() As double (Read Only)
-                | 
+                |
                 |     Returns the y coordinate (in millimeters) of the focal point.
 
         :rtype: float
@@ -218,7 +219,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FocalPointZ() As double (Read Only)
-                | 
+                |
                 |     Returns the z coordinate (in millimeters) of the focal point.
 
         :rtype: float
@@ -234,7 +235,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MonocularAngle() As double
-                | 
+                |
                 |     Returns or sets the vision Monocular angle.
                 |     This angle is always in degrees.
 
@@ -259,7 +260,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PonctumProximum() As double
-                | 
+                |
                 |     Returns or sets the ponctum proximum, in centimeters. The ponctum proximum
                 |     is the minimum value the focal distance can take.
 
@@ -284,7 +285,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PonctumRemotum() As double
-                | 
+                |
                 |     Returns or sets the ponctum remotum, in centimeters. The ponctum remotum is
                 |     the largest value that the focal distance can take. N.B.: if the value is -1.0,
                 |     then the ponctum remotum is set to infinite.
@@ -310,7 +311,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Type() As long
-                | 
+                |
                 |     Returns or sets the vision type. (binocular, ambinocular, monocular left,
                 |     monocular right or stereo.
                 |     When setting the type, the value given must be 0, 1, 2, 3, or 4
@@ -339,7 +340,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property VerticalBottomAngle() As double
-                | 
+                |
                 |     Returns or sets the vision Vertical Bottom angle.
                 |     This angle is always in degrees.
 
@@ -364,7 +365,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property VerticalTopAngle() As double
-                | 
+                |
                 |     Returns or sets the vision Vertical Top angle.
                 |     This angle is always in degrees.
 
@@ -388,7 +389,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CloseVisionWindows()
-                | 
+                |
                 |     Closes all open vision windows relating to the manikin on which the
                 |     function is called.
 
@@ -396,7 +397,9 @@ class SWKVision(SWKManikinPart):
         """
         return self.swk_vision.CloseVisionWindows()
 
-    def look_at(self, pi_focal_distance: float, pi_v_angle: float, pi_h_angle: float) -> None:
+    def look_at(
+        self, pi_focal_distance: float, pi_v_angle: float, pi_h_angle: float
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -405,22 +408,22 @@ class SWKVision(SWKManikinPart):
                 | o Sub LookAt(double piFocalDistance,
                 | double piVAngle,
                 | double piHAngle)
-                | 
+                |
                 |     Make the manikin look at the specified position in space.
                 |     This position is given by the focal distance, and two
                 |     deviation angles.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piFocalDistance
                 |             The focal distance (measured from the active eye), which is a
                 |             horizontal straight distance, measured in centimeters.
-                |             
+                |
                 |         piVAngle
                 |             The vertical angle (in radians) between the focal point
                 |             and
                 |             the active eye (positive angle deviates up, negative angle deviates
-                |             down). 
+                |             down).
                 |         piHAngle
                 |             The horizontal angle (in radians) between the
                 |             focal
@@ -445,12 +448,12 @@ class SWKVision(SWKManikinPart):
                 | o Sub LookAtPoint(double piX,
                 | double piY,
                 | double piZ)
-                | 
+                |
                 |     Make the manikin look at the specified position in space.
                 |     This position is given by three coordinates (expressed in
                 |     millimeters)
                 |     passed to the method.
-                | 
+                |
                 |     N.B.: the manikin's eyes will move only if it is able
                 |     to reach the specified point.
 
@@ -468,7 +471,7 @@ class SWKVision(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Reset()
-                | 
+                |
                 |     Resets all attributes of the vision to their default values. This method
                 |     resets the focal distance, the active line of sight, the ponctum proximum, the
                 |     ponctum remotum, the field of view angles, the convergence mode, and restores

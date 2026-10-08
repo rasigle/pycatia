@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import TYPE_CHECKING
 
 from pycatia.dmaps_interfaces.items import Items
@@ -24,24 +25,24 @@ if TYPE_CHECKING:
 
 class Activity(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Activity
-                | 
-                | The object that represents an activity.
-                | 
-                | It groups the most important methods related to an activity and enables to get
-                | the management interfaces (hierarchy management, control flow management, *
-                | ...).
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Activity
+            |
+            | The object that represents an activity.
+            |
+            | It groups the most important methods related to an activity and enables to get
+            | the management interfaces (hierarchy management, control flow management, *
+            | ...).
+
     """
 
     def __init__(self, com_object):
@@ -56,10 +57,10 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AttrCount() As long (Read Only)
-                | 
+                |
                 |     This property returns the number of attributes of the current
                 |     activity.
-                | 
+                |
                 |     Returns:
                 |         oNbAttr The number of attributes
 
@@ -76,10 +77,10 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BeginningDate() As double
-                | 
+                |
                 |     This property returns the beginning date of the current
                 |     activity.
-                | 
+                |
                 |     Returns:
                 |         oBegin The beginning date of the current activity
 
@@ -104,10 +105,10 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CalculatedBeginTime() As double (Read Only)
-                | 
+                |
                 |     This property returns and calculated time cyle on the current
                 |     activity.
-                | 
+                |
                 |     Returns:
                 |         oCBT The calculated begin time of the current activity
 
@@ -124,10 +125,10 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CalculatedCycleTime() As double (Read Only)
-                | 
+                |
                 |     This property returns and sets the calculated time cyle on the current
                 |     activity.
-                | 
+                |
                 |     Returns:
                 |         oCCT The calculated time cycle of the current activity
 
@@ -137,14 +138,14 @@ class Activity(AnyObject):
         return self.activity.CalculatedCycleTime
 
     @property
-    def children_activities(self) -> 'Activities':
+    def children_activities(self) -> "Activities":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ChildrenActivities() As Activities (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the children hierarchy on
                 |     the activity. Please note that it used to return all children, but from R20SP4
                 |     it returns only exposed children, which could be different from all children.
@@ -153,6 +154,7 @@ class Activity(AnyObject):
         """
 
         from pycatia.dmaps_interfaces.activities import Activities
+
         return Activities(self.activity.ChildrenActivities)
 
     @property
@@ -163,14 +165,14 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CycleTime() As double
-                | 
+                |
                 |     This property returns and set the time cyle on the current
                 |     activity.
-                | 
+                |
                 |     Returns:
-                |         oCT The time cycle of the current activity 
+                |         oCT The time cycle of the current activity
                 |     Parameters:
-                | 
+                |
                 |         iCT
                 |             The specified time cycle of the current activity
 
@@ -195,15 +197,15 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Description() As CATBSTR
-                | 
+                |
                 |     This property returns and set the description on the current
                 |     activity.
-                | 
+                |
                 |     Returns:
                 |         oDescriptionBSTR The description of the current activity
-                |         
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDescriptionBSTR
                 |             The specified description of the current activity
 
@@ -228,10 +230,10 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EndDate() As double (Read Only)
-                | 
+                |
                 |     This property returns the end date of the current
                 |     activity.
-                | 
+                |
                 |     Returns:
                 |         oEnd The end date of the current activity. Till V5R13, this method is
                 |         returning S_OK even if there is no good implementation. Starting from V5R14
@@ -251,7 +253,7 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Items() As Items (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the items or input
                 |     products/components assigned to the current activity
 
@@ -261,14 +263,14 @@ class Activity(AnyObject):
         return Items(self.activity.Items)
 
     @property
-    def next_cf_activities(self) -> 'Activities':
+    def next_cf_activities(self) -> "Activities":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NextCFActivities() As Activities (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the downstream control
                 |     flow hierarchy on the activity.
 
@@ -276,17 +278,18 @@ class Activity(AnyObject):
         """
 
         from pycatia.dmaps_interfaces.activities import Activities
+
         return Activities(self.activity.NextCFActivities)
 
     @property
-    def next_prf_activities(self) -> 'Activities':
+    def next_prf_activities(self) -> "Activities":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NextPRFActivities() As Activities (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the downstream product
                 |     flow hierarchy on the activity.
 
@@ -294,6 +297,7 @@ class Activity(AnyObject):
         """
 
         from pycatia.dmaps_interfaces.activities import Activities
+
         return Activities(self.activity.NextPRFActivities)
 
     @property
@@ -304,7 +308,7 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Outputs() As Outputs (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the output
                 |     products/components of the current activity
 
@@ -321,7 +325,7 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Parameters() As Parameters (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the knowlegde parameters
                 |     of the activity.
 
@@ -331,7 +335,7 @@ class Activity(AnyObject):
         return Parameters(self.activity.Parameters)
 
     @property
-    def possible_precedence_activities(self) -> 'Activities':
+    def possible_precedence_activities(self) -> "Activities":
         """
         .. note::
             :class: toggle
@@ -339,12 +343,12 @@ class Activity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PossiblePrecedenceActivities() As Activities (Read
                 | Only)
-                | 
+                |
                 |     This property returns list of Possible Precedence Activities defined on
                 |     Current Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oActivities
                 |             List of Activities that must precede the Current
                 |             Activity
@@ -353,22 +357,23 @@ class Activity(AnyObject):
         """
 
         from pycatia.dmaps_interfaces.activities import Activities
+
         return Activities(self.activity.PossiblePrecedenceActivities)
 
     @property
-    def precedence_activities(self) -> 'Activities':
+    def precedence_activities(self) -> "Activities":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PrecedenceActivities() As Activities (Read Only)
-                | 
+                |
                 |     This property returns list of Precedence Activities defined on Current
                 |     Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oActivities
                 |             List of Activities that must precede the Current
                 |             Activity
@@ -377,17 +382,18 @@ class Activity(AnyObject):
         """
 
         from pycatia.dmaps_interfaces.activities import Activities
+
         return Activities(self.activity.PrecedenceActivities)
 
     @property
-    def previous_cf_activities(self) -> 'Activities':
+    def previous_cf_activities(self) -> "Activities":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PreviousCFActivities() As Activities (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the upstream control flow
                 |     hierarchy on the activity.
 
@@ -395,17 +401,18 @@ class Activity(AnyObject):
         """
 
         from pycatia.dmaps_interfaces.activities import Activities
+
         return Activities(self.activity.PreviousCFActivities)
 
     @property
-    def previous_prf_activities(self) -> 'Activities':
+    def previous_prf_activities(self) -> "Activities":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PreviousPRFActivities() As Activities (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the upstream product flow
                 |     hierarchy on the activity.
 
@@ -413,6 +420,7 @@ class Activity(AnyObject):
         """
 
         from pycatia.dmaps_interfaces.activities import Activities
+
         return Activities(self.activity.PreviousPRFActivities)
 
     @property
@@ -423,12 +431,12 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ProcessID() As CATBSTR (Read Only)
-                | 
+                |
                 |     This property returns process identifier on the current
                 |     activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oProcessID
                 |             The process ID of the current activity
 
@@ -445,7 +453,7 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Relations() As Relations (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the knowlegde relations
                 |     of the activity.
 
@@ -455,14 +463,14 @@ class Activity(AnyObject):
         return Relations(self.activity.Relations)
 
     @property
-    def resources(self) -> 'Resources':
+    def resources(self) -> "Resources":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Resources() As Resources (Read Only)
-                | 
+                |
                 |     This property returns the interface which manages the resources hierarchy
                 |     on the activity.
 
@@ -470,6 +478,7 @@ class Activity(AnyObject):
         """
 
         from pycatia.dmaps_interfaces.resources import Resources
+
         return Resources(self.activity.Resources)
 
     @property
@@ -480,11 +489,11 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Type() As CATBSTR (Read Only)
-                | 
+                |
                 |     This method returns the type of the current activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oType
                 |             The type of the current activity
 
@@ -494,9 +503,7 @@ class Activity(AnyObject):
         return self.activity.Type
 
     def add_activity_constraint(
-            self,
-            i_activity: 'Activity',
-            i_constraint_type: str
+        self, i_activity: "Activity", i_constraint_type: str
     ) -> None:
         """
         .. note::
@@ -505,19 +512,19 @@ class Activity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddActivityConstraint(Activity iActivity,
                 | SPPProcessConstraintType iConstraintType)
-                | 
+                |
                 |     Create a constraint between current activity and input
                 |     activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iActivity
-                |             Activity with which the constraint to be created. 
+                |             Activity with which the constraint to be created.
                 |         iConstraintType
                 |             Type of the Constraint. It may be one of the following:
                 |             Precedence_Constraint, Start_Constraint, End_Constraint,
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |     S_OKOn Success
                 |     S_FALSEIf a constraint already exists.
@@ -527,8 +534,10 @@ class Activity(AnyObject):
         :param str i_constraint_type:
         :rtype: None
         """
-        return self.activity.AddActivityConstraint(i_activity.com_object, i_constraint_type)
-        # # # # Autogenerated comment: 
+        return self.activity.AddActivityConstraint(
+            i_activity.com_object, i_constraint_type
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -544,7 +553,9 @@ class Activity(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_attr(self, i_attribute_name: str, attr_type: str, i_attribute_prompt_name: str) -> None:
+    def add_attr(
+        self, i_attribute_name: str, attr_type: str, i_attribute_prompt_name: str
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -553,17 +564,17 @@ class Activity(AnyObject):
                 | o Sub AddAttr(CATBSTR iAttributeName,
                 | SPPProcessAttributeType AttrType,
                 | CATBSTR iAttributePromptName)
-                | 
+                |
                 |     Adds attribute to an Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttributeName
-                |             Name of the attribute to add 
+                |             Name of the attribute to add
                 |         AttrType
                 |             Type of the attribute to add. It may be one of the following:
                 |             Integer_Attribute or 0 for integer, Double_Attribute or 1 for double, or
-                |             String_Attribute or 2 for string 
+                |             String_Attribute or 2 for string
                 |         iAttributePromptName
                 |             Prompt Name of the attribute to add
 
@@ -572,8 +583,10 @@ class Activity(AnyObject):
         :param str i_attribute_prompt_name:
         :rtype: None
         """
-        return self.activity.AddAttr(i_attribute_name, attr_type, i_attribute_prompt_name)
-        # # # # Autogenerated comment: 
+        return self.activity.AddAttr(
+            i_attribute_name, attr_type, i_attribute_prompt_name
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -596,13 +609,13 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AttrName(long iIndex) As CATBSTR
-                | 
+                |
                 |     This method returns the name for the specified attribute.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             The attribute index 
+                |             The attribute index
                 |         oName
                 |             The attribute name
 
@@ -618,14 +631,14 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AttrValue(CATVariant iIndex) As CATVariant
-                | 
+                |
                 |     This method returns the value for the specified attribute.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             The attribute identifier 
-                | 
+                |             The attribute identifier
+                |
                 |     Returns:
                 |         oAttVal The attribute value
 
@@ -634,21 +647,21 @@ class Activity(AnyObject):
         """
         return self.activity.AttrValue(i_index)
 
-    def create_child(self, i_type_of_child: str) -> 'Activity':
+    def create_child(self, i_type_of_child: str) -> "Activity":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateChild(CATBSTR iTypeOfChild) As Activity
-                | 
+                |
                 |     This method creates a new child activity of the requested
                 |     type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iTypeOfChild
-                |             The type of the child activity to create. 
+                |             The type of the child activity to create.
                 |         oCreatedChild
                 |             The new created child activity.
 
@@ -657,19 +670,19 @@ class Activity(AnyObject):
         """
         return Activity(self.activity.CreateChild(i_type_of_child))
 
-    def create_link(self, i_second_activity: 'Activity') -> None:
+    def create_link(self, i_second_activity: "Activity") -> None:
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CreateLink(Activity iSecondActivity)
-                | 
+                |
                 |     This method creates a link from the current activity to another
                 |     activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSecondActivity
                 |             The activity that will be linked to the current
                 |             activity.
@@ -678,7 +691,7 @@ class Activity(AnyObject):
         :rtype: None
         """
         return self.activity.CreateLink(i_second_activity.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -694,7 +707,9 @@ class Activity(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_activity_constraints(self, i_constraint_type: str, o_constrt_list: 'Activities') -> None:
+    def get_activity_constraints(
+        self, i_constraint_type: str, o_constrt_list: "Activities"
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -703,26 +718,26 @@ class Activity(AnyObject):
                 | o Sub GetActivityConstraints(SPPProcessConstraintType
                 | iConstraintType,
                 | Activities oConstrtList)
-                | 
+                |
                 |     Get List of constraint activities that exists on the current
                 |     Activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iConstraintType
                 |             Type of the Constraints to be returned. It may be one of the
                 |             following: Precedence_Constraint, Start_Constraint, End_Constraint,
-                |             All_Constraints 
-                | 
+                |             All_Constraints
+                |
                 |     Returns:
                 |         oConstrtList ( Allocate the memory.If not, it allocates internally and
-                |         you need to clean it after usage) 
+                |         you need to clean it after usage)
                 |     List of Activities with which the current activity has
                 |     constraints
                 |     Returns:
                 |         oConstraintTypeList (It is an optional output used only if user
                 |         interested) ( Allocate the memory.If not, it allocates internally and you need
-                |         to clean it after usage) 
+                |         to clean it after usage)
                 |     List of constraint types for each actvity that exists in
                 |     oConstrtList
                 |     Current activity has a constraint with first activity in oConstrtList and
@@ -733,8 +748,10 @@ class Activity(AnyObject):
         :param Activities o_constrt_list:
         :rtype: None
         """
-        return self.activity.GetActivityConstraints(i_constraint_type, o_constrt_list.com_object)
-        # # # # Autogenerated comment: 
+        return self.activity.GetActivityConstraints(
+            i_constraint_type, o_constrt_list.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -758,24 +775,24 @@ class Activity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTechnologicalObject(CATBSTR iApplicationType) As
                 | CATBaseDispatch
-                | 
+                |
                 |     Returns the process's applicative data which type is the given parameter.
                 |     The data returned can be either a collection or a simple
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iApplicationType
-                |             The type of applicative data searched. 
-                | 
+                |             The type of applicative data searched.
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves the GraphEditor position for
                 |           the
                 |          Loading1 activity.
-                |          
-                | 
-                |          Dim GEPosition 
+                |
+                |
+                |          Dim GEPosition
                 |          Set GEPosition = Loading1.GetTechnologicalObject("GEPosition")
 
         :param str i_application_type:
@@ -790,15 +807,15 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsSubTypeOf(CATBSTR iName) As boolean
-                | 
+                |
                 |     This method allows to test the type of a specific
                 |     activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
-                |             The name of the type to test 
-                | 
+                |             The name of the type to test
+                |
                 |     Returns:
                 |         oVal The logical value returned by the test
 
@@ -807,7 +824,9 @@ class Activity(AnyObject):
         """
         return self.activity.IsSubTypeOf(i_name)
 
-    def remove_activity_constraint(self, i_activity: 'Activity', i_constraint_type: str) -> None:
+    def remove_activity_constraint(
+        self, i_activity: "Activity", i_constraint_type: str
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -815,19 +834,19 @@ class Activity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveActivityConstraint(Activity iActivity,
                 | SPPProcessConstraintType iConstraintType)
-                | 
+                |
                 |     Remove a constraint between current activity and input
                 |     activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iActivity
-                |             Activity with which the constraint to be removed. 
+                |             Activity with which the constraint to be removed.
                 |         iConstraintType
                 |             Type of the Constraint to be removed. It may be one of the
                 |             following: Precedence_Constraint, Start_Constraint, End_Constraint,
-                |             All_Constraints 
-                | 
+                |             All_Constraints
+                |
                 |     Returns:
                 |     S_OKOn Success
                 |     S_FALSEIf a constraint does not exists.
@@ -838,8 +857,10 @@ class Activity(AnyObject):
         :param str i_constraint_type:
         :rtype: None
         """
-        return self.activity.RemoveActivityConstraint(i_activity.com_object, i_constraint_type)
-        # # # # Autogenerated comment: 
+        return self.activity.RemoveActivityConstraint(
+            i_activity.com_object, i_constraint_type
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -862,11 +883,11 @@ class Activity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveAttr(CATBSTR iAttributeName)
-                | 
+                |
                 |     Removes attributes to an Activity type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttributeName
                 |             Name of the attribute to remove
 
@@ -875,19 +896,19 @@ class Activity(AnyObject):
         """
         return self.activity.RemoveAttr(i_attribute_name)
 
-    def remove_link(self, i_second_activity: 'Activity') -> None:
+    def remove_link(self, i_second_activity: "Activity") -> None:
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveLink(Activity iSecondActivity)
-                | 
+                |
                 |     This method removes a link existing on the current
                 |     activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSecondActivity
                 |             The activity on which the link will be removed.
 
@@ -895,7 +916,7 @@ class Activity(AnyObject):
         :rtype: None
         """
         return self.activity.RemoveLink(i_second_activity.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -919,13 +940,13 @@ class Activity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetProcessID(CATBSTR iProcessID,
                 | boolean iCheckUnique)
-                | 
+                |
                 |     Sets the process ID of the current activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProcessID
-                |             Input Process ID string 
+                |             Input Process ID string
                 |         iCheckUnique
                 |             Option to enable uniqueness check
 
@@ -934,7 +955,7 @@ class Activity(AnyObject):
         :rtype: None
         """
         return self.activity.SetProcessID(i_process_id, i_check_unique)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

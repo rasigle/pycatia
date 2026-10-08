@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import TYPE_CHECKING
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -18,26 +19,26 @@ if TYPE_CHECKING:
 
 class Behavior(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Behavior
-                | 
-                | Represents a behavior.
-                | Role: A behavior is a set of tasks performed on a technological object. It can
-                | be V5 command, CAA command, VBA command, external application or behavior
-                | defined into the BKT product. A behavior contains a set of variables: the
-                | inputs entered by the user and the outputs produced by the behavior. This
-                | interface manipulates the characteristics of a behavior: children behaviors,
-                | inputs/outputs and activity.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Behavior
+            |
+            | Represents a behavior.
+            | Role: A behavior is a set of tasks performed on a technological object. It can
+            | be V5 command, CAA command, VBA command, external application or behavior
+            | defined into the BKT product. A behavior contains a set of variables: the
+            | inputs entered by the user and the outputs produced by the behavior. This
+            | interface manipulates the characteristics of a behavior: children behaviors,
+            | inputs/outputs and activity.
+
     """
 
     def __init__(self, com_object):
@@ -45,20 +46,20 @@ class Behavior(AnyObject):
         self.behavior = com_object
 
     @property
-    def behaviors(self) -> 'Behaviors':
+    def behaviors(self) -> "Behaviors":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Behaviors() As Behaviors (Read Only)
-                | 
+                |
                 |     Returns the collection of children behaviors.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in BehCollection the collection of Behaviors
                 |         currently managed by a Behavior Beh.
-                | 
+                |
                 |          Dim BehCollection As Behaviors
                 |          Set BehCollection = Beh.Behaviors
 
@@ -66,6 +67,7 @@ class Behavior(AnyObject):
         """
 
         from pycatia.behavior_interfaces.behaviors import Behaviors
+
         return Behaviors(self.behavior.Behaviors)
 
     def activate(self) -> None:
@@ -75,12 +77,12 @@ class Behavior(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Activate()
-                | 
+                |
                 |     Activates a behavior.
-                | 
+                |
                 |     Example:
                 |         This example activates a Behavior Beh.
-                | 
+                |
                 |          Beh.Activate
 
         :rtype: None
@@ -94,12 +96,12 @@ class Behavior(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Deactivate()
-                | 
+                |
                 |     Deactivates a behavior.
-                | 
+                |
                 |     Example:
                 |         This example deactivates a Behavior Beh.
-                | 
+                |
                 |          Beh.Deactivate
 
         :rtype: None
@@ -113,19 +115,19 @@ class Behavior(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetInput(CATBSTR pName) As AnyObject
-                | 
+                |
                 |     Returns the value of one available input of the behavior.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         pName
-                |             the name of the input 
-                | 
+                |             the name of the input
+                |
                 |     Example:
                 |         This example retrieves in BehParameter the published input
                 |         CATIAParameter Nb_Cylinder currently managed by a Behavior
                 |         Beh.
-                | 
+                |
                 |          Dim BehParameter as Parameter
                 |          Set BehParameter = Beh.GetInput("Nb_Cylinder")
 
@@ -141,18 +143,18 @@ class Behavior(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOutput(CATBSTR pName) As AnyObject
-                | 
+                |
                 |     Returns the value of one available output of the behavior.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         pName
-                |             the name of the output 
-                | 
+                |             the name of the output
+                |
                 |     Example:
                 |         This example retrieves in BehPower the published output CATIAParameter
                 |         Power currently managed by a Behavior Beh.
-                | 
+                |
                 |          Dim BehPower as Parameter
                 |          Set BehPower = Beh.GetOutput("Power")
 
@@ -169,23 +171,23 @@ class Behavior(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PutOutput(CATBSTR pName,
                 | AnyObject oValue)
-                | 
+                |
                 |     Valuates an available output of the behavior. The behavior must be in
                 |     operating state, otherwise it fails.
                 |     It can be applicable from a CATIABehaviorVBScript Execution for
                 |     instance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         pName
-                |             the name of the output 
+                |             the name of the output
                 |         oValue
-                |             the value of the output 
-                | 
+                |             the value of the output
+                |
                 |     Example:
                 |         This example assigns to the published CATIAParameter Power of a
                 |         Behavior Beh. the value of BehPower
-                | 
+                |
                 |          Dim BehPower as Parameter
                 |          ...
                 |          Beh.PutOutput "Power", BehPower
@@ -203,19 +205,19 @@ class Behavior(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TestInput(CATBSTR pName) As long
-                | 
+                |
                 |     Tests if the behavior's input is set or not.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         pName
-                |             the name of the input 
-                | 
+                |             the name of the input
+                |
                 |     Example:
                 |         This example tests the existence of the value of the published
                 |         CATIAParameter Nb_Cylinder currently managed by a Behavior
                 |         Beh.
-                | 
+                |
                 |          if (Beh.TestInput("Nb_Cylinder"))
 
         :param str p_name:
@@ -230,19 +232,19 @@ class Behavior(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TestOutput(CATBSTR pName) As long
-                | 
+                |
                 |     Tests if the behavior's output is set or not.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         pName
-                |             the name of the output 
-                | 
+                |             the name of the output
+                |
                 |     Example:
                 |         This example tests the existence of the value of the published
                 |         CATIAParameter Power currently managed by a Behavior
                 |         Beh.
-                | 
+                |
                 |          if (Beh.TestOutput("Power"))
 
         :param str p_name:

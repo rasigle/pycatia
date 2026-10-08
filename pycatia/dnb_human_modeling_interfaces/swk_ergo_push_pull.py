@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SWKErgoPushPull(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SWKErgoPushPull
-                | 
-                | This interface deals the push/pull ergonomic analysis.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SWKErgoPushPull
+            |
+            | This interface deals the push/pull ergonomic analysis.
+
     """
 
     def __init__(self, com_object):
@@ -42,7 +42,7 @@ class SWKErgoPushPull(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DistanceOfPull() As CATBSTR
-                | 
+                |
                 |     Returns or sets the distance of pull.
                 |     This distance must specified at least once.
                 |     Failure to do so will result in invalid output values.
@@ -68,7 +68,7 @@ class SWKErgoPushPull(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DistanceOfPush() As CATBSTR
-                | 
+                |
                 |     Returns or sets the distance of push.
                 |     This distance must specified at least once.
                 |     Failure to do so will result in invalid output values.
@@ -94,7 +94,7 @@ class SWKErgoPushPull(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Frequency() As double
-                | 
+                |
                 |     Returns or sets the push/pull frequecy.
                 |     This frequency must be expressed in pushes or pulls per second, and
                 |     must be specified before attempting to retrive any output value from
@@ -122,7 +122,7 @@ class SWKErgoPushPull(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxInitialPullForce() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is the maximum initial pulling force, produced by the study,
                 |     given the current input guidelines.
 
@@ -139,7 +139,7 @@ class SWKErgoPushPull(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxInitialPushForce() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is the maximum initial pushing force, produced by the study,
                 |     given the current input guidelines.
 
@@ -156,7 +156,7 @@ class SWKErgoPushPull(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxSustainedPullForce() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is the maximum sustained pulling force, produced by the study,
                 |     given the current input guidelines.
 
@@ -173,7 +173,7 @@ class SWKErgoPushPull(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxSustainedPushForce() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field is the maximum sustained pushing force, produced by the study,
                 |     given the current input guidelines.
 
@@ -190,7 +190,7 @@ class SWKErgoPushPull(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Population() As double
-                | 
+                |
                 |     Returns or sets the percentage of the population that should be able to
                 |     perform the push/pull task safely.
                 |     This property can only take the values 50.0, 75.0 and 90.0, and must be

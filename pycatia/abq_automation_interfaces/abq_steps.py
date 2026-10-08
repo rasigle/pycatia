@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.abq_automation_interfaces.abq_step import ABQStep
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
@@ -15,22 +16,22 @@ from pycatia.types.general import CATVariant
 
 class ABQSteps(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     ABQSteps
-                | 
-                | The collection of Abaqus analysis step (ABQStep) objects contained in
-                | an
-                | ABQAnalysisCase object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     ABQSteps
+            |
+            | The collection of Abaqus analysis step (ABQStep) objects contained in
+            | an
+            | ABQAnalysisCase object.
+
     """
 
     def __init__(self, com_object):
@@ -44,25 +45,25 @@ class ABQSteps(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Add(CATBSTR iStepType) As ABQStep
-                | 
+                |
                 |     Creates a new Abaqus Step and adds it to the collection of Abaqus
                 |     steps.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStepType
                 |             The type of the step to create.
-                | 
+                |
                 |             Legal values: "ABQGeneralStaticStep", "ABQFrequencyStep",
                 |             "ABQExplicitDynamicsStep", "ABQHeatTransferStep" "ABQLinearDynamicStepModal"
-                |             "ABQLinearDynamicStepSubspace" 
-                | 
+                |             "ABQLinearDynamicStepSubspace"
+                |
                 |     Returns:
-                |         oStep The Abaqus step object that was created. 
+                |         oStep The Abaqus step object that was created.
                 |     Example:
                 |         The following example creates a general static step in the ABQSteps
                 |         collection:
-                | 
+                |
                 |          Dim abqCase As ABQAnalysisCase
                 |          Dim abaqusSteps As ABQSteps
                 |          Dim generalstaticstep As ABQGeneralStaticStep
@@ -82,27 +83,27 @@ class ABQSteps(Collection):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Insert(CATBSTR iStepType,
                 | CATVariant iIndex) As ABQStep
-                | 
+                |
                 |     Creates a new Abaqus Step and inserts it to the collection of Abaqus
                 |     steps.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStepType
                 |             The type of the step to create.
-                | 
+                |
                 |             Legal values: "ABQGeneralStaticStep", "ABQFrequencyStep",
-                |             "ABQExplicitDynamicsStep", "ABQHeatTransferStep" 
+                |             "ABQExplicitDynamicsStep", "ABQHeatTransferStep"
                 |         iIndex
                 |             Index of Abaqus step after which the new step is to be inserted.
                 |             for initialization step iIndex is 1
-                | 
+                |
                 |     Returns:
-                |         oStep The Abaqus step object that was inserted. 
+                |         oStep The Abaqus step object that was inserted.
                 |     Example:
                 |         The following example creates a general static step in the ABQSteps
                 |         collection:
-                | 
+                |
                 |          Dim abqCase As ABQAnalysisCase
                 |          Dim abaqusSteps As ABQSteps
                 |          Dim generalstaticstep As ABQGeneralStaticStep
@@ -122,28 +123,28 @@ class ABQSteps(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As ABQStep
-                | 
+                |
                 |     Returns an Abaqus step using its index or its name from the ABQSteps
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Abaqus step to retrieve from the
                 |             collection of Abaqus steps. If the index is a number, it specifies the rank of
                 |             the Abaqus step in the collection. The index of the first Abaqus step in the
                 |             collection is 1, and the index of the last step is Count. If the index is a
                 |             string, it specifies the name you assigned to the step using the
-                |             CATIACollection::Name property. 
-                | 
+                |             CATIACollection::Name property.
+                |
                 |     Returns:
-                |         The specified ABQStep. 
+                |         The specified ABQStep.
                 |     Example:
                 |         This example retrieves the fifth Abaqus step in the collection and
                 |         saves it in a variable called FirstStep. The example also retrieves the Abaqus
                 |         step named "MyStep" in the collection and saves it in a variable called
                 |         SecondStep.
-                | 
+                |
                 |          Set CaseColl = AnalysisDoc.ABQAnalysisModel.Cases
                 |          Set ThisCase = CaseColl.Item(5)
                 |          Set StepColl = ThisCase.Steps
@@ -162,12 +163,12 @@ class ABQSteps(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes an Abaqus step using its index or its name from the Step
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Abaqus step to retrieve from the
                 |             collection of Abaqus Steps. If the index is a number, it specifies the rank of
@@ -180,7 +181,7 @@ class ABQSteps(Collection):
         :rtype: None
         """
         return self.abq_steps.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

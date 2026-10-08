@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.document import Document
@@ -16,20 +16,20 @@ from pycatia.system_interfaces.collection import Collection
 
 class Merges(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Merges
-                | 
-                | Interface to compute CATIAMerges
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Merges
+            |
+            | Interface to compute CATIAMerges
+
     """
 
     def __init__(self, com_object):
@@ -43,7 +43,7 @@ class Merges(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CleanUp()
-                | 
+                |
                 |     Performs some clean-up.
 
         :rtype: None
@@ -51,11 +51,11 @@ class Merges(Collection):
         return self.merges.CleanUp()
 
     def compute_merge(
-            self,
-            group_of_selected_products: Group,
-            i_accuracy_for_simplification: float,
-            i_keep_edges: int,
-            i_decoration: int
+        self,
+        group_of_selected_products: Group,
+        i_accuracy_for_simplification: float,
+        i_keep_edges: int,
+        i_decoration: int,
     ) -> Document:
         """
         .. note::
@@ -66,22 +66,22 @@ class Merges(Collection):
                 | double iAccuracyForSimplification,
                 | long iKeepEdges,
                 | long iDecoration) As Document
-                | 
+                |
                 |     Computes the merge on the selected products.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         GroupOfSelectedProducts
                 |             The selected products on which you want to perform the 3D cut.
-                |             
+                |
                 |         iAccuracyForSimplification
                 |             Set this to a non null value to have the simplification activated.
-                |             
+                |
                 |         iKeepEdges
-                |             Do you want edges in the result? 
+                |             Do you want edges in the result?
                 |         iDecoration
-                |             Do you want decorations in the result? 
-                | 
+                |             Do you want decorations in the result?
+                |
                 |     Returns:
                 |         MergeDocument: Document containing the result.
 
@@ -96,7 +96,7 @@ class Merges(Collection):
                 group_of_selected_products.com_object,
                 i_accuracy_for_simplification,
                 i_keep_edges,
-                i_decoration
+                i_decoration,
             )
         )
 
@@ -107,7 +107,7 @@ class Merges(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func MergeShapeName() As CATBSTR
-                | 
+                |
                 |     Returns the name of the associated shape.
 
         :rtype: str

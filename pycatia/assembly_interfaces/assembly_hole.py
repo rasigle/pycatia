@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.assembly_interfaces.assembly_feature import AssemblyFeature
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.angle import Angle
@@ -19,21 +20,21 @@ from pycatia.sketcher_interfaces.sketch import Sketch
 
 class AssemblyHole(AssemblyFeature):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATAssemblyInterfaces.AssemblyFeature
-                |                         AssemblyHole
-                | 
-                | Represents the AssemblyHole object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATAssemblyInterfaces.AssemblyFeature
+            |                         AssemblyHole
+            |
+            | Represents the AssemblyHole object.
+
     """
 
     def __init__(self, com_object):
@@ -48,16 +49,16 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnchorMode() As CatHoleAnchorMode
-                | 
+                |
                 |     Returns or sets the hole anchor mode.
                 |     This property is valid when the hole type is Counterbored or
                 |     Counterdrilled.
-                | 
+                |
                 |     Example:
                 |         The following example saves in holeAnchorMode the anchor mode of the
                 |         hole assemblyHole and sets it so that the anchor mode will now be set to the
                 |         middle of its head.
-                | 
+                |
                 |          Dim holeAnchorMode
                 |          Set holeAnchorMode = assemblyHole.AnchorMode
                 |          assemblyHole.AnchorMode = catMiddlePointHoleAnchor
@@ -84,15 +85,15 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BottomAngle() As Angle (Read Only)
-                | 
+                |
                 |     Returns the hole bottom angle.
                 |     This property is valid when the hole bottom type is VBottom. The hole
                 |     bottom angle is returned as a Angle object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in holeBottomAngle the bottom angle of
                 |         the hole assemblyHole.
-                | 
+                |
                 |          Dim holeBottomAngle As Angle
                 |          Set holeBottomAngle = assemblyHole.BottomAngle
 
@@ -109,15 +110,15 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BottomLimit() As Limit (Read Only)
-                | 
+                |
                 |     Returns the hole bottom limit.
                 |     This limit manages the way the hole is ended. It is returned as a Limit
                 |     object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in limit the bottom limit of the hole
                 |         assemblyHole.
-                | 
+                |
                 |          Dim limit As Limit
                 |          Set limit = assemblyHole.BottomLimit
 
@@ -134,14 +135,14 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BottomType() As CatHoleBottomType
-                | 
+                |
                 |     Returns or sets the hole bottom type.
-                | 
+                |
                 |     Example:
                 |         The following example saves in holeBottomType the bottom type of the
                 |         hole assemblyHole and sets it so that the bottom will now be a V-like
                 |         one.
-                | 
+                |
                 |          Dim holeBottomType
                 |          Set holeBottomType = assemblyHole.BottomType
                 |          assemblyHole.BottomType = catVHoleBottom
@@ -168,14 +169,14 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Diameter() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole diameter.
                 |     It is returned as a Length object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in holeDiam the diameter of the hole
                 |         assemblyHole.
-                | 
+                |
                 |          Dim holeDiam As Length
                 |          Set holeDiam = assemblyHole.Diameter
 
@@ -192,16 +193,16 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property HeadAngle() As Angle (Read Only)
-                | 
+                |
                 |     Returns the hole head angle.
                 |     This property is valid when the hole type is Tapered, Counterdrilled or
                 |     Countersunk. The hole head angle is returned as a Angle
                 |     object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in holeHeadAngle the head angle of the
                 |         hole assemblyHole.
-                | 
+                |
                 |          Dim holeHeadAngle As Angle
                 |          Set holeHeadAngle = assemblyHole.HeadAngle
 
@@ -218,16 +219,16 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property HeadDepth() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole head depth.
                 |     This property is valid when the hole type is Counterbored, Counterdrilled
                 |     or Countersunk. The hole head depth is returned as a Length
                 |     object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in holeHeadDepth the head depth of the
                 |         hole assemblyHole.
-                | 
+                |
                 |          Dim holeHeadDepth As Length
                 |          Set holeHeadDepth = assemblyHole.HeadDepth
 
@@ -244,16 +245,16 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property HeadDiameter() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole head diameter.
                 |     This property is valid when the hole type is Counterbored or
                 |     Counterdrilled. The hole head diameter is returned as a Length
                 |     object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in holeHeadDiam the head diameter of
                 |         the hole assemblyHole.
-                | 
+                |
                 |          Dim holeHeadDiam As Length
                 |          Set holeHeadDiam = assemblyHole.HeadDiameter
 
@@ -270,13 +271,13 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Sketch() As Sketch (Read Only)
-                | 
+                |
                 |     Returns the hole positioning sketch.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in sketch the positioning sketch of the
                 |         hole assemblyHole.
-                | 
+                |
                 |          Dim sketch As Sketch
                 |          Set sketch = assemblyHole.Sketch
 
@@ -293,14 +294,14 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SketchComponent() As Product (Read Only)
-                | 
+                |
                 |     Returns the component containing the hole positioning
                 |     sketch.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in skComp the component that contains
                 |         the positioning sketch of the hole assemblyHole.
-                | 
+                |
                 |          Dim skComp As Product
                 |          Set skComp = assemblyHole.SketchComponent
 
@@ -317,14 +318,14 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Type() As CatHoleType
-                | 
+                |
                 |     Returns or sets the hole type.
-                | 
+                |
                 |     Example:
                 |         The following example saves in holeType the type of the hole
                 |         assemblyHole, and then sets it so that it will now be a tapered
                 |         hole.
-                | 
+                |
                 |          Set holeType = assemblyHole.Type
                 |          assemblyHole.Type = catTaperedHole
 
@@ -349,22 +350,22 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetDirection(CATSafeArrayVariant ioDirection)
-                | 
+                |
                 |     Retrieves the hole direction vector components.
                 |     These components are expressed in millimeter according to the absolute
                 |     coordinate system.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioDirection
                 |             The direction vector components, as a safe array made up of three
                 |             doubles: X, Y, Z
-                |             The array must be previously initialized. 
-                | 
+                |             The array must be previously initialized.
+                |
                 |     Example:
                 |         The following example returns in dirArray the direction vector
                 |         components of the hole assemblyHole.
-                | 
+                |
                 |          Dim dirArray(2)
                 |          Call assemblyHole.GetDirection(dirArray)
                 |          Set x = dirArray[0]
@@ -375,7 +376,7 @@ class AssemblyHole(AssemblyFeature):
         :rtype: None
         """
         return self.assembly_hole.GetDirection()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -398,23 +399,23 @@ class AssemblyHole(AssemblyFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetOrigin(CATSafeArrayVariant ioOrigin)
-                | 
+                |
                 |     Retrieves the origin point to which the hole is anchored.
                 |     This point belongs to a plane tangent to the hole. The coordinates are
                 |     expressed in millimeter according to the absolute coordinate
                 |     system.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioOrigin
                 |             The hole origin point coordinates, as a safe array made up of three
                 |             doubles: X, Y, Z
-                |             The array must be previously initialized. 
-                | 
+                |             The array must be previously initialized.
+                |
                 |     Example:
                 |         The following example returns in coordArray the coordinates of the hole
                 |         assemblyHole.
-                | 
+                |
                 |          Dim coordArray(2)
                 |          Call assemblyHole.GetOrigin coordArray
                 |          Set x = coordArray[0]
@@ -425,7 +426,7 @@ class AssemblyHole(AssemblyFeature):
         :rtype: None
         """
         return self.assembly_hole.GetOrigin()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -449,29 +450,31 @@ class AssemblyHole(AssemblyFeature):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDirection(Reference iLine,
                 | Product iLineComp)
-                | 
+                |
                 |     Sets the hole axis direction.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLine
                 |             The hole axis direction, as a reference to a line or an edge.
-                |             
+                |
                 |         iLineComp
-                |             The component containing the axis direction 
-                | 
+                |             The component containing the axis direction
+                |
                 |     Example:
                 |         The following example sets the axis direction of the hole assemblyHole
                 |         with the dirRef line of the component dirComp.
-                | 
+                |
                 |          assemblyHole.SetDirection dirRef, dirComp
 
         :param Reference i_line:
         :param Product i_line_comp:
         :rtype: None
         """
-        return self.assembly_hole.SetDirection(i_line.com_object, i_line_comp.com_object)
-        # # # # Autogenerated comment: 
+        return self.assembly_hole.SetDirection(
+            i_line.com_object, i_line_comp.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

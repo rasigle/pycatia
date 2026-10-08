@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.dnb_state_interfaces.dnb_3d_state import DNB3DState
 from pycatia.dnb_state_interfaces.dnb_3d_states import DNB3DStates
@@ -16,31 +17,33 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class DNB3DStateManagement(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DNB3DStateManagement
-                | 
-                | Interface representing the 3D State Management in the
-                | CATDocument.
-                | 
-                | Role: Provides access the C++ interfaces DNBIState, DNBIStateMgt to create and
-                | manage the 3D States.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DNB3DStateManagement
+            |
+            | Interface representing the 3D State Management in the
+            | CATDocument.
+            |
+            | Role: Provides access the C++ interfaces DNBIState, DNBIStateMgt to create and
+            | manage the 3D States.
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.dnb_3d_state_management = com_object
 
-    def create_3d_state(self, i_state_name: str, i_object: AnyObject, i_list_defn: tuple) -> DNB3DState:
+    def create_3d_state(
+        self, i_state_name: str, i_object: AnyObject, i_list_defn: tuple
+    ) -> DNB3DState:
         """
         .. note::
             :class: toggle
@@ -49,27 +52,27 @@ class DNB3DStateManagement(AnyObject):
                 | o Func Create3DState(CATBSTR iStateName,
                 | CATBaseDispatch iObject,
                 | CATSafeArrayVariant iListDefn) As DNB3DState
-                | 
+                |
                 |     Creates a 3D State object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStateName
-                |             The name of the 3D State to be created. 
+                |             The name of the 3D State to be created.
                 |         iObject
                 |             The object(Resource/MA/Product..)on which the state is to be
-                |             created 
+                |             created
                 |         iListDefn
                 |             The definition list(an existing 3D State/3D Position) on which the
-                |             new state is to be created 
-                | 
+                |             new state is to be created
+                |
                 |     Returns:
                 |         oState The 3D State object created.
-                | 
+                |
                 |         Example:
                 |             For example, Creating a 3D State with the name "My NewState" on the
                 |             already existing 3D State "My State".
-                | 
+                |
                 |              Dim MySelectedProduct
                 |              Dim MySelectedState as DNB3DState
                 |              Dim MyNewState1 as DNB3DState
@@ -81,7 +84,11 @@ class DNB3DStateManagement(AnyObject):
         :param tuple i_list_defn:
         :rtype: DNB3DState
         """
-        return DNB3DState(self.dnb_3d_state_management.Create3DState(i_state_name, i_object.com_object, i_list_defn))
+        return DNB3DState(
+            self.dnb_3d_state_management.Create3DState(
+                i_state_name, i_object.com_object, i_list_defn
+            )
+        )
 
     def delete_3d_state(self, i_state: DNB3DState) -> None:
         """
@@ -90,26 +97,26 @@ class DNB3DStateManagement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Delete3DState(DNB3DState iState)
-                | 
+                |
                 |     Deletes the specified state object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iState
                 |             The 3D State object to be deleted.
-                | 
+                |
                 |             Example:
-                | 
+                |
                 |                  Dim MySelectedProduct
                 |                  Dim MySelectedState as DNB3DState
-                |                 
+                |
                 |                 stateManagement.Delete3DState(MySelectedState)
 
         :param DNB3DState i_state:
         :rtype: None
         """
         return self.dnb_3d_state_management.Delete3DState(i_state.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -133,24 +140,24 @@ class DNB3DStateManagement(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Get3DState(CATBaseDispatch iObject,
                 | CATBSTR iStateName) As DNB3DState
-                | 
+                |
                 |     Returns the 3D State object given its name and the
                 |     object(Resource/MA/Product..) on which the state is
                 |     created.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iObject
                 |             The object(Resource/MA/Product..), on which the state is created.
-                |             
+                |
                 |         iStateName
-                |             The name of the 3D State. 
-                | 
+                |             The name of the 3D State.
+                |
                 |     Returns:
                 |         oState The 3D States object.
-                | 
+                |
                 |         Example:
-                | 
+                |
                 |              Dim MySelectedProduct
                 |              Dim state as DNB3DState
                 |              Set state = stateManagement.GetState(MySelectedProduct, "My State1")
@@ -159,7 +166,9 @@ class DNB3DStateManagement(AnyObject):
         :param str i_state_name:
         :rtype: DNB3DState
         """
-        return DNB3DState(self.dnb_3d_state_management.Get3DState(i_object.com_object, i_state_name))
+        return DNB3DState(
+            self.dnb_3d_state_management.Get3DState(i_object.com_object, i_state_name)
+        )
 
     def get_number_of_3d_states(self) -> int:
         """
@@ -168,16 +177,16 @@ class DNB3DStateManagement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNumberOf3DStates() As long
-                | 
+                |
                 |     Returns the number of 3D State objects in the process
                 |     document
-                | 
+                |
                 |     Returns:
                 |         numberOfStates The number of 3D States in the current
                 |         document.
-                | 
+                |
                 |         Example:
-                | 
+                |
                 |              stateCount = stateManagement.GetNumberOf3DStates
 
         :rtype: int
@@ -192,29 +201,33 @@ class DNB3DStateManagement(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNumberOf3DStatesOnObject(CATBaseDispatch iObj) As
                 | long
-                | 
+                |
                 |     Returns the number of 3D State objects on a given
                 |     object(Resource/MA/Product..)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iObject
                 |             The object(Resource/MA/Product..), whose states are to be listed.
-                | 
+                |
                 |     Returns:
                 |         numberOfStates The number of 3D States created on
                 |         iObjec.
-                | 
+                |
                 |         Example:
-                | 
+                |
                 |              stateCount = stateManagement.GetNumberOf3DStatesOnObject(MySelectedProduct)
 
         :param AnyObject i_obj:
         :rtype: int
         """
-        return self.dnb_3d_state_management.GetNumberOf3DStatesOnObject(i_obj.com_object)
+        return self.dnb_3d_state_management.GetNumberOf3DStatesOnObject(
+            i_obj.com_object
+        )
 
-    def get_number_of_3d_states_in_activity(self, i_process: Activity, i_condition_type: str) -> int:
+    def get_number_of_3d_states_in_activity(
+        self, i_process: Activity, i_condition_type: str
+    ) -> int:
         """
         .. note::
             :class: toggle
@@ -222,26 +235,26 @@ class DNB3DStateManagement(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNumberof3DStatesInActivity(Activity iProcess,
                 | CATBSTR iConditionType) As long
-                | 
+                |
                 |     Returns the number of 3D states assigned to the given activity, based on
                 |     the condition on which the activity has been assigned to the 3D
                 |     state.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProcess
-                |             The activity whose states are to be listed. 
+                |             The activity whose states are to be listed.
                 |         iConditionType
                 |             The type of assignment that has been made i.e., the condition on
                 |             which the state(s) have been assigned to the given activity. iConditionType
                 |             could be one of "Begin Condition", "End Condition", "3D Context" or "All"
-                | 
+                |
                 |     Returns:
                 |         oNumStates The number of 3D States that have been assigned to the given
                 |         activity.
-                | 
+                |
                 |         Example:
-                | 
+                |
                 |              Dim MySelectedActivity
                 |              NumStates = stateManagement.GetNumberof3DStatesInActivity(MySelectedActivity, "Begin Condition")
 
@@ -249,9 +262,13 @@ class DNB3DStateManagement(AnyObject):
         :param str i_condition_type:
         :rtype: int
         """
-        return self.dnb_3d_state_management.GetNumberof3DStatesInActivity(i_process.com_object, i_condition_type)
+        return self.dnb_3d_state_management.GetNumberof3DStatesInActivity(
+            i_process.com_object, i_condition_type
+        )
 
-    def list_3d_states_in_activity(self, i_process: Activity, i_condition_type: str, o_states: tuple) -> None:
+    def list_3d_states_in_activity(
+        self, i_process: Activity, i_condition_type: str, o_states: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -260,26 +277,26 @@ class DNB3DStateManagement(AnyObject):
                 | o Sub List3DStatesInActivity(Activity iProcess,
                 | CATBSTR iConditionType,
                 | CATSafeArrayVariant oStates)
-                | 
+                |
                 |     Returns the list of 3D states assigned to the given activity, based on the
                 |     condition on which the activity has been assigned to the 3D
                 |     state.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProcess
-                |             The activity whose states are to be listed. 
+                |             The activity whose states are to be listed.
                 |         iConditionType
                 |             The type of assignment that has been made i.e., the condition on
                 |             which the state(s) have been assigned to the given activity. iConditionType
                 |             could be one of "Begin Condition", "End Condition", "3D Context" or "All"
-                | 
+                |
                 |     Returns:
                 |         oStates The list of 3D States that have been assigned to the given
                 |         activity.
-                | 
+                |
                 |         Example:
-                | 
+                |
                 |              Dim activitiesArray() as AnyObject
                 |              Dim numActs
                 |              numActs = stateManagement.GetNumberof3DStatesInActivity(MySelectedActivity)
@@ -292,8 +309,10 @@ class DNB3DStateManagement(AnyObject):
         :param tuple o_states:
         :rtype: None
         """
-        return self.dnb_3d_state_management.List3DStatesInActivity(i_process.com_object, i_condition_type, o_states)
-        # # # # Autogenerated comment: 
+        return self.dnb_3d_state_management.List3DStatesInActivity(
+            i_process.com_object, i_condition_type, o_states
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -316,16 +335,16 @@ class DNB3DStateManagement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ListAll3DStates() As DNB3DStates
-                | 
+                |
                 |     Returns the list of all 3D State objects in the process
                 |     document
-                | 
+                |
                 |     Returns:
                 |         oListStates The list of all 3D States in the current
                 |         document.
-                | 
+                |
                 |         Example:
-                | 
+                |
                 |              Dim My3DStates as DNB3DStates
                 |              set My3DStates = stateManagement.ListAll3DStates
                 |              statesCount = My3DStates.Count
@@ -334,7 +353,9 @@ class DNB3DStateManagement(AnyObject):
         """
         return DNB3DStates(self.dnb_3d_state_management.ListAll3DStates())
 
-    def list_all_3d_states_on_object(self, i_obj: AnyObject, o_list_states: tuple) -> None:
+    def list_all_3d_states_on_object(
+        self, i_obj: AnyObject, o_list_states: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -342,22 +363,22 @@ class DNB3DStateManagement(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListAll3DStatesOnObject(CATBaseDispatch iObj,
                 | CATSafeArrayVariant oListStates)
-                | 
+                |
                 |     Returns the list of all 3D State objects on a given
                 |     object(Resource/MA/Product..)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iObject
                 |             The object(Resource/MA/Product..), whose states are to be listed.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         oListStates The list of all 3D States created on
                 |         iObject.
-                | 
+                |
                 |         Example:
-                | 
+                |
                 |              Dim statesArray() as AnyObject
                 |              Dim statesCount
                 |              statesCount = stateManagement.GetNumberOf3DStatesOnObject(MySelectedProduct)
@@ -368,8 +389,10 @@ class DNB3DStateManagement(AnyObject):
         :param tuple o_list_states:
         :rtype: None
         """
-        return self.dnb_3d_state_management.ListAll3DStatesOnObject(i_obj.com_object, o_list_states)
-        # # # # Autogenerated comment: 
+        return self.dnb_3d_state_management.ListAll3DStatesOnObject(
+            i_obj.com_object, o_list_states
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

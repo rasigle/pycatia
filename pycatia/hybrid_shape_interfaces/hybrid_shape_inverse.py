@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -15,21 +15,21 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeInverse(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeInverse
-                | 
-                | The Inverse feature : an Inverse is made up of a face to process and one Inverse parameter.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeInverse
+            |
+            | The Inverse feature : an Inverse is made up of a face to process and one Inverse parameter.
+
     """
 
     def __init__(self, com_object):
@@ -44,20 +44,20 @@ class HybridShapeInverse(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Element() As Reference
-                | 
+                |
                 |     Role: To get the element inverted.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Element inverted return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -82,7 +82,7 @@ class HybridShapeInverse(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Orientation() As long
-                | 
+                |
                 |     Gets or sets the element's orientation.
                 |     Orientation = 1 : the element is not inverted. = -1 : the element is inverted, =
                 |      2 : the element can not be inverted. Orientation can not be set to 2.

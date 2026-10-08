@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -15,37 +15,44 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeExtractMulti(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeExtractMulti
-                | 
-                | Represents the hybrid shape ExtractMulti feature object.
-                | Role: To access the data of the hybrid shape ExtractMulti feature
-                | object.
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeExtractMulti
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory.AddNewExtractMulti
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeExtractMulti
+            |
+            | Represents the hybrid shape ExtractMulti feature object.
+            | Role: To access the data of the hybrid shape ExtractMulti feature
+            | object.
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeExtractMulti
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory.AddNewExtractMulti
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.hybrid_shape_extract_multi = com_object
 
-    def add_constraint(self, i_constraint: Reference, i_type: int, i_complementaire: bool, i_is_federated: bool,
-                       i_crvtre_thsld: float, i_pos: int) -> None:
+    def add_constraint(
+        self,
+        i_constraint: Reference,
+        i_type: int,
+        i_complementaire: bool,
+        i_is_federated: bool,
+        i_crvtre_thsld: float,
+        i_pos: int,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -57,37 +64,37 @@ class HybridShapeExtractMulti(HybridShape):
                 | boolean iIsFederated,
                 | double iCrvtreThsld,
                 | long iPos)
-                | 
+                |
                 |     Deprecated:
                 |         V5R16 CATIAHybridShapeExtractMulti#AddConstraintTolerant Adds a
-                |         constraint to the list of Extracted Elements. 
+                |         constraint to the list of Extracted Elements.
                 |     Parameters:
-                | 
+                |
                 |         iConstraint
-                |             The constraint to add. 
+                |             The constraint to add.
                 |         iType
-                |             the type of propagation for the ExtractMulti. 
+                |             the type of propagation for the ExtractMulti.
                 |         iComplementaire
                 |             the Complementary flag checked/unchecked for for the constraint.
-                |             
+                |
                 |         iIsFederated
                 |             the Federated flag checked/unchecked for the constraint.
-                |             
+                |
                 |         iCrvtreThsld
-                |             the CurvatureThreshold for the constraint. 
+                |             the CurvatureThreshold for the constraint.
                 |         iPos
                 |             The position at which the element is to be added in the list of
                 |             constraints.
-                | 
+                |
                 |             Example:
                 |                 This example adds a body in the list of constraints at
                 |                 specified position with the type of propagation, the Federated flag and the
                 |                 CurvatureThreshold of the HybShpExtractMulti hybrid shape
                 |                 ExtractMulti.
-                | 
-                |                  Dim iType as long 
-                |                  Dim iComplementaire as boolean 
-                |                  Dim iIsFederated as boolean 
+                |
+                |                  Dim iType as long
+                |                  Dim iComplementaire as boolean
+                |                  Dim iIsFederated as boolean
                 |                  Dim iCrvtreThsld as double
                 |                  HybShpExtractMulti.AddConstraint iCst  iType  iComplementaire
                 |                  iIsFederated iCrvtreThsld  1
@@ -100,9 +107,15 @@ class HybridShapeExtractMulti(HybridShape):
         :param int i_pos:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.AddConstraint(i_constraint.com_object, i_type, i_complementaire,
-                                                             i_is_federated, i_crvtre_thsld, i_pos)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_extract_multi.AddConstraint(
+            i_constraint.com_object,
+            i_type,
+            i_complementaire,
+            i_is_federated,
+            i_crvtre_thsld,
+            i_pos,
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -118,9 +131,17 @@ class HybridShapeExtractMulti(HybridShape):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_constraint_tolerant(self, i_constraint: Reference, i_type: int, i_complementaire: bool,
-                                i_is_federated: bool, i_distre_thsld: float, i_angtre_thsld: float,
-                                i_crvtre_thsld: float, i_pos: int) -> None:
+    def add_constraint_tolerant(
+        self,
+        i_constraint: Reference,
+        i_type: int,
+        i_complementaire: bool,
+        i_is_federated: bool,
+        i_distre_thsld: float,
+        i_angtre_thsld: float,
+        i_crvtre_thsld: float,
+        i_pos: int,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -134,44 +155,44 @@ class HybridShapeExtractMulti(HybridShape):
                 | double iAngtreThsld,
                 | double iCrvtreThsld,
                 | long iPos)
-                | 
+                |
                 |     Adds a constraint to the list of Extracted Elements.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iConstraint
-                |             The constraint to add. 
+                |             The constraint to add.
                 |         iType
-                |             the type of propagation for the ExtractMulti. 
+                |             the type of propagation for the ExtractMulti.
                 |         iComplementaire
                 |             the Complementary flag checked/unchecked for for the constraint.
-                |             
+                |
                 |         iIsFederated
                 |             the Federated flag checked/unchecked for the constraint.
-                |             
+                |
                 |         iDistreThsld
-                |             the DistanceThreshold for the constraint. 
+                |             the DistanceThreshold for the constraint.
                 |         iAngtreThsld
-                |             the AngularThreshold for the constraint. 
+                |             the AngularThreshold for the constraint.
                 |         iCrvtreThsld
-                |             the CurvatureThreshold for the constraint. 
+                |             the CurvatureThreshold for the constraint.
                 |         iPos
                 |             The position at which the element is to be added in the list of
                 |             constraints.
-                | 
+                |
                 |             Example:
                 |                 This example adds a body in the list of constraints at
                 |                 specified position with the type of propagation, the Federated flag and the
                 |                 CurvatureThreshold of the HybShpExtractMulti hybrid shape
                 |                 ExtractMulti.
-                | 
-                |                  Dim iType as long 
-                |                  Dim iComplementaire as boolean 
-                |                  Dim iIsFederated as boolean 
+                |
+                |                  Dim iType as long
+                |                  Dim iComplementaire as boolean
+                |                  Dim iIsFederated as boolean
                 |                  Dim iDistreThsld as double
                 |                  Dim iAngtreThsld as double
                 |                  Dim iCrvtreThsld as double
-                |                  HybShpExtractMulti.AddConstraintTolerant iCst  iType 
+                |                  HybShpExtractMulti.AddConstraintTolerant iCst  iType
                 |                  iComplementaire iIsFederated iCrvtreThsld  1
 
         :param Reference i_constraint:
@@ -184,10 +205,17 @@ class HybridShapeExtractMulti(HybridShape):
         :param int i_pos:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.AddConstraintTolerant(i_constraint.com_object, i_type, i_complementaire,
-                                                                     i_is_federated, i_distre_thsld, i_angtre_thsld,
-                                                                     i_crvtre_thsld, i_pos)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_extract_multi.AddConstraintTolerant(
+            i_constraint.com_object,
+            i_type,
+            i_complementaire,
+            i_is_federated,
+            i_distre_thsld,
+            i_angtre_thsld,
+            i_crvtre_thsld,
+            i_pos,
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -210,15 +238,15 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetAngularThreshold(long iPos) As double
-                | 
+                |
                 |     Returns the AngularThreshold of the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the AngularThreshold in the list of constraints
                 |         at specified position of the hybShpExtractMulti in
                 |         AngularThH.
-                | 
+                |
                 |          Dim oAngtreThsld as double
                 |          AngularThH = HybShpExtractMulti.GetAngularThreshold(1)
 
@@ -234,16 +262,16 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetAngularThresholdActivity(long iPos) As boolean
-                | 
+                |
                 |     Returns the AngularThresholdActivity of the list of constraints at
                 |     specified position.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the AngularThresholdActivity of the list of
                 |         constraints at specified position of the hybShpExtractMulti in AngularActivity
                 |         .
-                | 
-                |          Dim oAngtreThsldActivity as boolean 
+                |
+                |          Dim oAngtreThsldActivity as boolean
                 |          oAngtreThsldActivity  = HybShpExtractMulti.GetAngularThresholdActivity (1)
 
         :param int i_pos:
@@ -258,15 +286,15 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetComplementaryExtractMulti(long iPos) As boolean
-                | 
+                |
                 |     Returns the Complementary flag checked/unchecked of the list of constraints
                 |     at specified position.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the Complementary flag in the list of
                 |         constraints at specified position of the hybShpExtractMulti in
                 |         Complementaire.
-                | 
+                |
                 |          Dim oComplementaire as boolean
                 |          oComplementaire  = HybShpExtractMulti.GetComplementaryExtractMulti(1)
 
@@ -282,15 +310,15 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetCurvatureThreshold(long iPos) As double
-                | 
+                |
                 |     Returns the CurvatureThreshold of the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the CurvatureThreshold in the list of
                 |         constraints at specified position of the hybShpExtractMulti in
                 |         CurvatureThH.
-                | 
+                |
                 |          Dim oCrvtreThsld as double
                 |          CurvatureThH = HybShpExtractMulti.GetCurvatureThreshold(1)
 
@@ -306,16 +334,16 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetCurvatureThresholdActivity(long iPos) As boolean
-                | 
+                |
                 |     Returns the CurvatureThresholdActivity of the list of constraints at
                 |     specified position.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the CurvatureThresholdActivity of the list of
                 |         constraints at specified position of the hybShpExtractMulti in
                 |         CurvatureActivity .
-                | 
-                |          Dim oCrvtreThsldActivity as boolean 
+                |
+                |          Dim oCrvtreThsldActivity as boolean
                 |          oCrvtreThsldActivity  = HybShpExtractMulti.GetCurvatureThresholdActivity (1)
 
         :param int i_pos:
@@ -330,15 +358,15 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDistanceThreshold(long iPos) As double
-                | 
+                |
                 |     Returns the DistanceThreshold of the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the DistanceThreshold in the list of constraints
                 |         at specified position of the hybShpExtractMulti in
                 |         DistanceThH.
-                | 
+                |
                 |          Dim oDistreThsld as double
                 |          DistanceThH = HybShpExtractMulti.GetDistanceThreshold(1)
 
@@ -354,16 +382,16 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDistanceThresholdActivity(long iPos) As boolean
-                | 
+                |
                 |     Returns the DistanceThresholdActivity of the list of constraints at
                 |     specified position.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the DistanceThresholdActivity of the list of
                 |         constraints at specified position of the hybShpExtractMulti in DistanceActivity
                 |         .
-                | 
-                |          Dim oDistreThsldActivity as boolean 
+                |
+                |          Dim oDistreThsldActivity as boolean
                 |          oDistreThsldActivity  = HybShpExtractMulti.GetDistanceThresholdActivity (1)
 
         :param int i_pos:
@@ -378,17 +406,17 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetElement(long iPos) As Reference
-                | 
+                |
                 |     Returns the sub element used as init for the propagation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the sub element in the list of constraints at
                 |         specified position of the hybShpExtractMulti in Elem.
-                | 
+                |
                 |          Dim oElem as CATIAReference
-                |          oElem = HybShpExtractMulti.GetElement(1)  
-                |          
-                | 
+                |          oElem = HybShpExtractMulti.GetElement(1)
+                |
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -404,16 +432,16 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetIsFederated(long iPos) As boolean
-                | 
+                |
                 |     Returns the IsFederated flag checked/unchecked of the list of constraints
                 |     at specified position.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the federated flag in the list of constraints at
                 |         specified position of the hybShpExtractMulti in
                 |         IsFederated.
-                | 
-                |          Dim oIsFederated as boolean 
+                |
+                |          Dim oIsFederated as boolean
                 |          oIsFederated  = HybShpExtractMulti.GetIsFederated(1)
 
         :param int i_pos:
@@ -429,28 +457,28 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetListOfConstraints(CATSafeArrayVariant
                 | oListOfExtractedConstraints)
-                | 
+                |
                 |     Returns the list of Extracted Elements.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfExtractedConstraints
                 |             The list of constraints. It is returned as an array of
                 |             nbconstraints in SafeArrayVariant.
-                | 
+                |
                 |             Example:
                 |                 This example returns the list of constraints of the
                 |                 HybShpExtractMulti hybrid shape ExtractMulti.
-                | 
+                |
                 |                  Dim oListOfExtractedConstraints as CATSafeArrayVariant
-                |                  
+                |
                 |                  HybShpExtractMulti.GetListOfConstraints
-                |                  (oListOfExtractedConstraints) 
-                |                  
-                | 
+                |                  (oListOfExtractedConstraints)
+                |
+                |
                 |                 Note: You can access each constraint as
                 |                 follows:
-                | 
+                |
                 |                     1 is in oListOfExtractedConstraints(0)
                 |                     2 is in oListOfExtractedConstraints(1)
                 |                     nbconstraints is in
@@ -459,8 +487,10 @@ class HybridShapeExtractMulti(HybridShape):
         :param tuple o_list_of_extracted_constraints:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.GetListOfConstraints(o_list_of_extracted_constraints)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_extract_multi.GetListOfConstraints(
+            o_list_of_extracted_constraints
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -483,22 +513,22 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetNbConstraints(long oNbConstraints)
-                | 
+                |
                 |     Returns number of constraints in the list of Extracted
                 |     Elements.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNbConstraints
                 |             number of constraints in the list of Extracted
                 |             Elements.
-                | 
+                |
                 |             Example:
                 |                 This example returns number of constraints in the list of
                 |                 constraints of the HybShpExtractMulti hybrid shape
                 |                 ExtractMulti.
-                | 
-                |                  Dim oNbConstraints as long 
+                |
+                |                  Dim oNbConstraints as long
                 |                  HybShpExtractMulti.GetNbConstraints (oNbConstraints )
 
         :param int o_nb_constraints:
@@ -513,23 +543,23 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPropagationType(long iPos) As long
-                | 
+                |
                 |     Returns the type of propagation of the list of constraints at specified
                 |     position.
                 |     The propagation types for the ExtractMulti can have the following
                 |     values:
-                | 
+                |
                 |         1 for extraction propagation in point continuity
                 |         2 for extraction propagation in tangent continuity
                 |         3 for extraction without propagation
                 |         4 for extraction propagation in curvature continuity
-                | 
+                |
                 |     Example:
                 |         This example retrieves the PropagationType in the list of constraints
                 |         at specified position of the hybShpExtractMulti in
                 |         TypePropag.
-                | 
-                |          Dim oTypePropag as long 
+                |
+                |          Dim oTypePropag as long
                 |          oTypePropag  = HybShpExtractMulti.GetPropagationType(1)
 
         :param int i_pos:
@@ -544,12 +574,12 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSupport(long iPos) As Reference
-                | 
+                |
                 |     Returns the support of the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSupport
                 |             The support.
 
@@ -565,20 +595,20 @@ class HybridShapeExtractMulti(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveElement(long iPosition)
-                | 
+                |
                 |     Removes the body to be extracted from the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPosition
                 |             Position at which the body is to be removed
-                | 
+                |
                 |             Example:
                 |                 This example removes the body from the list of constraints at
                 |                 specified position of the HybShpExtractMulti hybrid shape
                 |                 ExtractMulti.
-                | 
+                |
                 |                  HybShpExtractMulti.RemoveElement  1
 
         :param int i_position:
@@ -586,7 +616,9 @@ class HybridShapeExtractMulti(HybridShape):
         """
         return self.hybrid_shape_extract_multi.RemoveElement(i_position)
 
-    def replace_element(self, i_extract_to_replace: Reference, i_new_extract: Reference, i_pos: int) -> None:
+    def replace_element(
+        self, i_extract_to_replace: Reference, i_new_extract: Reference, i_pos: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -595,25 +627,25 @@ class HybridShapeExtractMulti(HybridShape):
                 | o Sub ReplaceElement(Reference iExtractToReplace,
                 | Reference iNewExtract,
                 | long iPos)
-                | 
+                |
                 |     Replaces an element to extract in the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExtractToReplace
-                |             The element to replace. 
+                |             The element to replace.
                 |         iNewExtract
-                |             The new element. 
+                |             The new element.
                 |         iPos
                 |             The position at which the element is to be replaced in the list of
                 |             constraints.
-                | 
+                |
                 |             Example:
                 |                 This example replaces the body from the list of constraints at
                 |                 specified position of the HybShpExtractMulti hybrid shape
                 |                 ExtractMulti.
-                | 
+                |
                 |                  Dim RefToRep  as CATIAReference
                 |                  Dim RefNewExtract  as CATIAReference
                 |                  HybShpExtractMulti.ReplaceElement RefToRep  RefNewExtract 1
@@ -623,9 +655,10 @@ class HybridShapeExtractMulti(HybridShape):
         :param int i_pos:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.ReplaceElement(i_extract_to_replace.com_object, i_new_extract.com_object,
-                                                              i_pos)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_extract_multi.ReplaceElement(
+            i_extract_to_replace.com_object, i_new_extract.com_object, i_pos
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -649,15 +682,15 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetAngularThreshold(long iPos,
                 | double iAngtreThsld)
-                | 
+                |
                 |     Sets the AngularThreshold in the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example sets the AngularThreshold of the list of constraints at
                 |         specified position of the hybShpExtractMulti in
                 |         AngularThH.
-                | 
+                |
                 |          Dim iAngtreThsld as double
                 |          HybShpExtractMulti.SetAngularThreshold 1 iAngtreThsld
 
@@ -665,9 +698,13 @@ class HybridShapeExtractMulti(HybridShape):
         :param float i_angtre_thsld:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.SetAngularThreshold(i_pos, i_angtre_thsld)
+        return self.hybrid_shape_extract_multi.SetAngularThreshold(
+            i_pos, i_angtre_thsld
+        )
 
-    def set_angular_threshold_activity(self, i_pos: int, i_angtre_thsld_activity: bool) -> None:
+    def set_angular_threshold_activity(
+        self, i_pos: int, i_angtre_thsld_activity: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -675,25 +712,27 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetAngularThresholdActivity(long iPos,
                 | boolean iAngtreThsldActivity)
-                | 
+                |
                 |     Sets the AngularThresholdActivity in the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example sets the AngularThresholdActivity in the list of
                 |         constraints at specified position of the hybShpExtractMulti in AngularActivity
                 |         .
-                | 
-                |          Dim iAngtreThsldActivity as boolean 
-                |          iAngtreThsldActivity = TRUE 
+                |
+                |          Dim iAngtreThsldActivity as boolean
+                |          iAngtreThsldActivity = TRUE
                 |          HybShpExtractMulti.SetAngularThresholdActivity 1  iAngtreThsldActivity
 
         :param int i_pos:
         :param bool i_angtre_thsld_activity:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.SetAngularThresholdActivity(i_pos, i_angtre_thsld_activity)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_extract_multi.SetAngularThresholdActivity(
+            i_pos, i_angtre_thsld_activity
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -709,7 +748,9 @@ class HybridShapeExtractMulti(HybridShape):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_complementary_extract_multi(self, i_pos: int, i_complementaire: bool) -> None:
+    def set_complementary_extract_multi(
+        self, i_pos: int, i_complementaire: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -717,25 +758,27 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetComplementaryExtractMulti(long iPos,
                 | boolean iComplementaire)
-                | 
+                |
                 |     Sets the Complementary flag checked/unchecked in the list of constraints at
                 |     specified position.
-                | 
+                |
                 |     Example:
                 |         This example sets the Complementary flag of the list of constraints at
                 |         specified position of the hybShpExtractMulti in
                 |         Complementaire.
-                | 
+                |
                 |          Dim iComplementaire as boolean
-                |          iComplementaire  = TRUE 
+                |          iComplementaire  = TRUE
                 |          HybShpExtractMulti.SetComplementaryExtractMulti 1   iComplementaire
 
         :param int i_pos:
         :param bool i_complementaire:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.SetComplementaryExtractMulti(i_pos, i_complementaire)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_extract_multi.SetComplementaryExtractMulti(
+            i_pos, i_complementaire
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -759,15 +802,15 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetCurvatureThreshold(long iPos,
                 | double iCrvtreThsld)
-                | 
+                |
                 |     Sets the CurvatureThreshold in the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example sets the CurvatureThreshold of the list of constraints at
                 |         specified position of the hybShpExtractMulti in
                 |         CurvatureThH.
-                | 
+                |
                 |          Dim iCrvtreThsld as double
                 |          HybShpExtractMulti.SetCurvatureThreshold 1 iCrvtreThsld
 
@@ -775,9 +818,13 @@ class HybridShapeExtractMulti(HybridShape):
         :param float i_crvtre_thsld:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.SetCurvatureThreshold(i_pos, i_crvtre_thsld)
+        return self.hybrid_shape_extract_multi.SetCurvatureThreshold(
+            i_pos, i_crvtre_thsld
+        )
 
-    def set_curvature_threshold_activity(self, i_pos: int, i_crvtre_thsld_activity: bool) -> None:
+    def set_curvature_threshold_activity(
+        self, i_pos: int, i_crvtre_thsld_activity: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -785,26 +832,28 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetCurvatureThresholdActivity(long iPos,
                 | boolean iCrvtreThsldActivity)
-                | 
+                |
                 |     Sets the CurvatureThresholdActivity in the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example sets the CurvatureThresholdActivity in the list of
                 |         constraints at specified position of the hybShpExtractMulti in
                 |         CurvatureActivity .
-                | 
-                |          Dim iCrvtreThsldActivity as boolean 
-                |          iCrvtreThsldActivity = TRUE 
-                |          HybShpExtractMulti.SetCurvatureThresholdActivity 1 
+                |
+                |          Dim iCrvtreThsldActivity as boolean
+                |          iCrvtreThsldActivity = TRUE
+                |          HybShpExtractMulti.SetCurvatureThresholdActivity 1
                 |          iCrvtreThsldActivity
 
         :param int i_pos:
         :param bool i_crvtre_thsld_activity:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.SetCurvatureThresholdActivity(i_pos, i_crvtre_thsld_activity)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_extract_multi.SetCurvatureThresholdActivity(
+            i_pos, i_crvtre_thsld_activity
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -828,15 +877,15 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDistanceThreshold(long iPos,
                 | double iDistreThsld)
-                | 
+                |
                 |     Sets the DistanceThreshold in the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example sets the DistanceThreshold of the list of constraints at
                 |         specified position of the hybShpExtractMulti in
                 |         DistanceThH.
-                | 
+                |
                 |          Dim iDistreThsld as double
                 |          HybShpExtractMulti.SetDistanceThreshold 1 iDistreThsld
 
@@ -844,9 +893,13 @@ class HybridShapeExtractMulti(HybridShape):
         :param float i_distre_thsld:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.SetDistanceThreshold(i_pos, i_distre_thsld)
+        return self.hybrid_shape_extract_multi.SetDistanceThreshold(
+            i_pos, i_distre_thsld
+        )
 
-    def set_distance_threshold_activity(self, i_pos: int, i_distre_thsld_activity: bool) -> None:
+    def set_distance_threshold_activity(
+        self, i_pos: int, i_distre_thsld_activity: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -854,26 +907,28 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDistanceThresholdActivity(long iPos,
                 | boolean iDistreThsldActivity)
-                | 
+                |
                 |     Sets the DistanceThresholdActivity in the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Example:
                 |         This example sets the DistanceThresholdActivity in the list of
                 |         constraints at specified position of the hybShpExtractMulti in DistanceActivity
                 |         .
-                | 
-                |          Dim iDistreThsldActivity as boolean 
-                |          iDistreThsldActivity = TRUE 
-                |          HybShpExtractMulti.SetDistanceThresholdActivity 1 
+                |
+                |          Dim iDistreThsldActivity as boolean
+                |          iDistreThsldActivity = TRUE
+                |          HybShpExtractMulti.SetDistanceThresholdActivity 1
                 |          iDistreThsldActivity
 
         :param int i_pos:
         :param bool i_distre_thsld_activity:
         :rtype: None
         """
-        return self.hybrid_shape_extract_multi.SetDistanceThresholdActivity(i_pos, i_distre_thsld_activity)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_extract_multi.SetDistanceThresholdActivity(
+            i_pos, i_distre_thsld_activity
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -897,18 +952,18 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetElement(long iPos,
                 | Reference iElem)
-                | 
+                |
                 |     Sets the sub element used as init for the propagation.
-                | 
+                |
                 |     Example:
                 |         This example sets the sub element in the list of constraints at
                 |         specified position of the hybShpExtractMulti in Elem.
-                | 
-                |          Dim iPos as long 
+                |
+                |          Dim iPos as long
                 |          Dim iElem as CATIAReference
-                |          HybShpExtractMulti.SetElement 1 iElem  
-                |          
-                | 
+                |          HybShpExtractMulti.SetElement 1 iElem
+                |
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -917,7 +972,7 @@ class HybridShapeExtractMulti(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_extract_multi.SetElement(i_pos, i_elem.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -941,17 +996,17 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetIsFederated(long iPos,
                 | boolean iIsFederated)
-                | 
+                |
                 |     Sets the IsFederated flag checked/unchecked in the list of constraints at
                 |     specified position.
-                | 
+                |
                 |     Example:
                 |         This example sets the federated flag in the list of constraints at
                 |         specified position of the hybShpExtractMulti in
                 |         IsFederated.
-                | 
-                |          Dim iIsFederated as boolean 
-                |           iIsFederated = TRUE 
+                |
+                |          Dim iIsFederated as boolean
+                |           iIsFederated = TRUE
                 |          HybShpExtractMulti.SetIsFederated 1  iIsFederated
 
         :param int i_pos:
@@ -959,7 +1014,7 @@ class HybridShapeExtractMulti(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_extract_multi.SetIsFederated(i_pos, i_is_federated)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -983,24 +1038,24 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPropagationType(long iPos,
                 | long iTypePropag)
-                | 
+                |
                 |     Sets the type of propagation for the ExtractMulti in the list of
                 |     constraints at specified position.
                 |     The propagation types for the ExtractMulti can have the following
                 |     values:
-                | 
+                |
                 |         1 for extraction propagation in point continuity
                 |         2 for extraction propagation in tangent continuity
                 |         3 for extraction without propagation
                 |         4 for extraction propagation in curvature continuity
-                | 
+                |
                 |     Example:
                 |         This example sets the PropagationType of the list of constraints at
                 |         specified position of the hybShpExtractMulti in
                 |         TypePropag.
-                | 
-                |          Dim iTypePropag as long 
-                |          iTypePropag = 1 
+                |
+                |          Dim iTypePropag as long
+                |          iTypePropag = 1
                 |          HybShpExtractMulti.SetPropagationType 1 iTypePropag
 
         :param int i_pos:
@@ -1017,12 +1072,12 @@ class HybridShapeExtractMulti(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetSupport(long iPos,
                 | Reference iSupport)
-                | 
+                |
                 |     Sets the support of the list of constraints at specified
                 |     position.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSupport
                 |             The support.
 
@@ -1031,7 +1086,7 @@ class HybridShapeExtractMulti(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_extract_multi.SetSupport(i_pos, i_support.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

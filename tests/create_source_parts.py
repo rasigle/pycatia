@@ -52,7 +52,9 @@ def create_cat_part_measurable(file_name):
 
     part_parameters.create_boolean("Activate", True)
     dim_pad_width = part_parameters.create_dimension("pad_width", "LENGTH", pad_width)
-    dim_pad_height = part_parameters.create_dimension("pad_height", "LENGTH", pad_height)
+    dim_pad_height = part_parameters.create_dimension(
+        "pad_height", "LENGTH", pad_height
+    )
     part_parameters.create_dimension("pad_depth", "LENGTH", pad_depth)
 
     main_body = part.main_body
@@ -226,11 +228,7 @@ def create_cat_part_measurable(file_name):
     direction = hybrid_shape_factory.add_new_direction(ref_xy_plane)
 
     line_3 = hybrid_shape_factory.add_new_line_pt_dir(
-        ref_point_1,
-        direction,
-        -100,
-        100,
-        True
+        ref_point_1, direction, -100, 100, True
     )
     line_3.name = "Line.3"
     hybrid_body_lines.append_hybrid_shape(line_3)
@@ -246,7 +244,9 @@ def create_cat_part_measurable(file_name):
     # ################ #
     # create a circle  #
     # ################ #
-    circle = hybrid_shape_factory.add_new_circle_ctr_rad(ref_point_4, ref_xy_plane, True, 25)
+    circle = hybrid_shape_factory.add_new_circle_ctr_rad(
+        ref_point_4, ref_xy_plane, True, 25
+    )
     hybrid_body_arcs.append_hybrid_shape(circle)
 
     part.update()
@@ -293,10 +293,7 @@ def create_cat_part_measurable(file_name):
 
     ref_line_1 = part.create_reference_from_object(line_1)
     ref_line_2 = part.create_reference_from_object(line_2)
-    plane_two_lines = hybrid_shape_factory.add_new_plane2_lines(
-        ref_line_1,
-        ref_line_2
-    )
+    plane_two_lines = hybrid_shape_factory.add_new_plane2_lines(ref_line_1, ref_line_2)
     plane_two_lines.name = "Plane.TwoLines"
     hybrid_body_planes.append_hybrid_shape(plane_two_lines)
 

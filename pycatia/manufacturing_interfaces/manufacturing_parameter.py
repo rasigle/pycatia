@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
+Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 import inspect
 
 from pycatia.knowledge_interfaces.parameter import Parameter
@@ -67,7 +68,7 @@ class ManufacturingParameter(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             31,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.manufacturing_parameter.GetBoolValue(i_name, o_value)
@@ -102,7 +103,7 @@ class ManufacturingParameter(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             31,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.manufacturing_parameter.GetDoubleValue(i_name, o_value, i_unit)
@@ -134,7 +135,7 @@ class ManufacturingParameter(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             31,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.manufacturing_parameter.GetLongValue(i_name, o_value)
@@ -166,7 +167,7 @@ class ManufacturingParameter(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             31,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.manufacturing_parameter.GetStringValue(i_name, o_value)
@@ -198,7 +199,7 @@ class ManufacturingParameter(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             31,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.manufacturing_parameter.GetValue(i_name, o_value.com_object)

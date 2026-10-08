@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.drafting_interfaces.drawing_component import DrawingComponent
@@ -17,20 +17,20 @@ from pycatia.types.general import CATVariant
 
 class Noa(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Noa
-                | 
-                | Interface for the TPS Noa object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Noa
+            |
+            | Interface for the TPS Noa object.
+
     """
 
     def __init__(self, com_object):
@@ -45,11 +45,11 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FlagText() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets Flag Text.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oText
                 |             Returned text for NOA hidden text.
 
@@ -74,11 +74,11 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Text() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets Text Representation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oText
                 |             Returned text for graphical representation.
 
@@ -102,11 +102,11 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddURL(CATBSTR iUrl)
-                | 
+                |
                 |     Sets an URL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iUrl
                 |             URL to Set
 
@@ -122,7 +122,7 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDitto() As DrawingComponent
-                | 
+                |
                 |     Gets the ditto as a DrawingComponent of the Noa entity.
 
         :rtype: DrawingComponent
@@ -136,14 +136,14 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetModifiableText(CATVariant iIndex) As AnyObject
-                | 
+                |
                 |     Gets by index a modifiable Text included in the ditto which represents this
                 |     NOA.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             Index of the modifiable text. 
+                |             Index of the modifiable text.
                 |         oText
                 |             returns a CATIADrawingText
 
@@ -159,12 +159,12 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetModifiableTextsCount() As long
-                | 
+                |
                 |     Gets the number of modifiable texts included in the ditto which represents
                 |     this NOA.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCount
                 |             returns the number of modifiable text included into the ditto which
                 |             represents this NOA.
@@ -180,7 +180,7 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetNbrURL(CATVariant oNumberOfURL)
-                | 
+                |
                 |     Deprecated:
                 |         V5-6R2017 This method is replaced by Noa.GetNbrURL2
 
@@ -188,7 +188,7 @@ class Noa(AnyObject):
         :rtype: None
         """
         return self.noa.GetNbrURL(o_number_of_url)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -211,11 +211,11 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNbrURL2() As long
-                | 
+                |
                 |     Gets the number of URL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNumberOfURL
                 |             returns param oNumberOfURL.
 
@@ -231,13 +231,13 @@ class Noa(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ModifyURL(CATBSTR iUrl,
                 | CATVariant iIndex)
-                | 
+                |
                 |     Modifies an URL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iUrl
-                |             URL to Set. 
+                |             URL to Set.
                 |         iIndex
                 |             index of the URL to modify.
 
@@ -246,7 +246,7 @@ class Noa(AnyObject):
         :rtype: None
         """
         return self.noa.ModifyURL(i_url, i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -269,11 +269,11 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveURL(CATVariant iIndex)
-                | 
+                |
                 |     Removes an URL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             position of the URL to remove.
 
@@ -281,7 +281,7 @@ class Noa(AnyObject):
         :rtype: None
         """
         return self.noa.RemoveURL(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -304,7 +304,7 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TPSParallelOnScreen() As TPSParallelOnScreen
-                | 
+                |
                 |     Gets the annotation on TPSParallelOnScreen interface.
 
         :rtype: TPSParallelOnScreen
@@ -319,13 +319,13 @@ class Noa(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func URL(CATVariant iIndex) As CATBSTR
-                | 
+                |
                 |     Retrieves URL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             Index of URL. 
+                |             Index of URL.
                 |         oUrl
                 |             URL
 

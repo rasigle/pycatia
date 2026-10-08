@@ -1,17 +1,20 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.cat_tps_interfaces.median_feature import MedianFeature
-from pycatia.cat_tps_interfaces.semantic_gdt_frame_extension import SemanticGDTFrameExtension
+from pycatia.cat_tps_interfaces.semantic_gdt_frame_extension import (
+    SemanticGDTFrameExtension,
+)
 from pycatia.cat_tps_interfaces.semantic_gdt_nx_display import SemanticGDTNxDisplay
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.cat_tps_interfaces.associated_ref_frame import AssociatedRefFrame
@@ -23,8 +26,12 @@ from pycatia.cat_tps_interfaces.projected_tolerance_zone import ProjectedToleran
 from pycatia.cat_tps_interfaces.shifted_profile_tolerance import ShiftedProfileTolerance
 from pycatia.cat_tps_interfaces.tps_parallel_on_screen import TPSParallelOnScreen
 from pycatia.cat_tps_interfaces.tangent_plane import TangentPlane
-from pycatia.cat_tps_interfaces.tolerance_per_unit_basis_restrictive_value import TolerancePerUnitBasisRestrictiveValue
-from pycatia.cat_tps_interfaces.tolerance_unit_basis_value import ToleranceUnitBasisValue
+from pycatia.cat_tps_interfaces.tolerance_per_unit_basis_restrictive_value import (
+    TolerancePerUnitBasisRestrictiveValue,
+)
+from pycatia.cat_tps_interfaces.tolerance_unit_basis_value import (
+    ToleranceUnitBasisValue,
+)
 from pycatia.cat_tps_interfaces.tolerance_zone import ToleranceZone
 
 
@@ -44,16 +51,16 @@ class SemanticGDT(AnyObject):
                 |             System.CATBaseDispatch
                 |                 System.AnyObject
                 |                     SemanticGDT
-                | 
+                |
                 | Interface managing Semantic GDT.
-    
+
     """
 
     def __init__(self, com_object):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         super().__init__(com_object)
         self.semantic_gdt = com_object
@@ -65,12 +72,12 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AssociatedRefFrame() As AssociatedRefFrame
-                | 
+                |
                 |     Returns the annotation on the AssociatedRefFrame
                 |     interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAssRefFra
                 |             The AssociatedRefFrame.
 
@@ -85,11 +92,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CompositeTolerance() As CompositeTolerance
-                | 
+                |
                 |     Returns the CompositeTolerance interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCompTol
                 |             The CompositeTolerance.
 
@@ -127,10 +134,12 @@ class SemanticGDT(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return SemanticGDTFrameExtension(self.semantic_gdt.FrameExtensions(i_frame_extent_index))
+        return SemanticGDTFrameExtension(
+            self.semantic_gdt.FrameExtensions(i_frame_extent_index)
+        )
 
     def free_state(self) -> FreeState:
         """
@@ -139,11 +148,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func FreeState() As FreeState
-                | 
+                |
                 |     Returns the FreeState interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oFreeState
                 |             The FreeState.
 
@@ -181,7 +190,7 @@ class SemanticGDT(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.semantic_gdt.HasACenteredElement()
@@ -217,7 +226,7 @@ class SemanticGDT(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.semantic_gdt.HasAFrameExtension()
@@ -229,13 +238,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAFreeState() As boolean
-                | 
+                |
                 |     Checks if the GDT has a Free State.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHasAFreeState
-                | 
+                |
                 |                 TRUE: There is a Free State
                 |                 FALSE: There is no Free State
 
@@ -250,13 +259,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAMaterialCondition() As boolean
-                | 
+                |
                 |     Checks if the GDT has a Material Condition.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHasMatCond
-                | 
+                |
                 |                 TRUE: A Material Condition exits
                 |                 FALSE: There is no Material Condition
 
@@ -271,13 +280,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAParticularTolElem() As boolean
-                | 
+                |
                 |     Checks if the GDT has a Particuler Element.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHasAParTolElem
-                | 
+                |
                 |                 TRUE: There is a Particuler Element
                 |                 FALSE: There is no Particuler Element
 
@@ -292,13 +301,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasATangentPlane() As boolean
-                | 
+                |
                 |     Checks if the GDT has a Tangent Plane Modifier.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIsATangentPlane
-                | 
+                |
                 |                 TRUE: There has a Tangent Plane
                 |                 FALSE: There has not Tangent Plane
 
@@ -313,14 +322,14 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasATolerancePerUnitBasisRestrictiveValue() As boolean
-                | 
+                |
                 |     Checks if the GDT has a Tolerance Per Unit Basis Restricted
                 |     Value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHasATolRes
-                | 
+                |
                 |                 TRUE: There is a Tolerance Per Unit Basis Restricted
                 |                 Value
                 |                 FALSE: There is no Tolerance Per Unit Basis Restricted
@@ -337,13 +346,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsACompositeTolerance() As boolean
-                | 
+                |
                 |     Checks if the GDT is a Composite Tolerance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIsACompTol
-                | 
+                |
                 |                 TRUE: There is a Composite Tolerance
                 |                 FALSE: There is no Composite Tolerance
 
@@ -358,13 +367,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAProjectedToleranceZone() As boolean
-                | 
+                |
                 |     Checks if the GDT is a Projected Zone.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIsAProjTolZone
-                | 
+                |
                 |                 TRUE: There is a Projected Zone
                 |                 FALSE: There is no Projected Zone
 
@@ -379,13 +388,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAShiftedProfileTolerance() As boolean
-                | 
+                |
                 |     Checks if the GDT is a Shifted Profile Tolerance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIsAShiftProTol
-                | 
+                |
                 |                 TRUE: There is a Shifted Profile Tolerance
                 |                 FALSE: There is no Shifted Profile Tolerance
 
@@ -400,13 +409,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAToleranceUnitBasisValue() As boolean
-                | 
+                |
                 |     Checks if the GDT is a Tolerance Unit Basis Value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIsATolUnitBas
-                | 
+                |
                 |                 TRUE: A Tolerance Zone exits
                 |                 FALSE: There is no Tolerance Zone
 
@@ -421,13 +430,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAToleranceZone() As boolean
-                | 
+                |
                 |     Checks if a Tolerance Zone exists.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIsATolZone
-                | 
+                |
                 |                 TRUE: A Tolerance Zone exits
                 |                 FALSE: There is no Tolerance Zone
 
@@ -442,13 +451,13 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAnAssociatedRefFrame() As boolean
-                | 
+                |
                 |     Checks if the GDT is an Associated Reference Frame.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIsAnAssRefFra
-                | 
+                |
                 |                 TRUE: There is an Associated Reference Frame
                 |                 FALSE: There is no Associated Reference Frame
 
@@ -483,7 +492,7 @@ class SemanticGDT(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.semantic_gdt.IsAppliedOnMultipleEntities()
@@ -495,11 +504,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func MaterialCondition() As MaterialCondition
-                | 
+                |
                 |     Returns the MaterialCondition interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMatCond
                 |             The Material Condition.
 
@@ -531,7 +540,7 @@ class SemanticGDT(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return MedianFeature(self.semantic_gdt.MedianFeature())
@@ -561,7 +570,7 @@ class SemanticGDT(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return SemanticGDTNxDisplay(self.semantic_gdt.NxDisplay())
@@ -573,11 +582,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ParticularTolElem() As ParticularTolElem
-                | 
+                |
                 |     Returns the ParticularTolElem interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oParTolElem
                 |             The ParticularTolElem.
 
@@ -592,11 +601,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ProjectedToleranceZone() As ProjectedToleranceZone
-                | 
+                |
                 |     Returrns the ProjectedToleranceZone interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oProjTolZone
                 |             The ProjectedToleranceZone.
 
@@ -611,11 +620,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ShiftedProfileTolerance() As ShiftedProfileTolerance
-                | 
+                |
                 |     Returns the ShiftedProfileTolerance interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oShiftProTol
                 |             The ShiftedProfileTolerance.
 
@@ -630,7 +639,7 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TPSParallelOnScreen() As TPSParallelOnScreen
-                | 
+                |
                 |     Gets the annotation on TPSParallelOnScreen interface.
 
         :rtype: TPSParallelOnScreen
@@ -644,11 +653,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TangentPlane() As TangentPlane
-                | 
+                |
                 |     Returns the Tangent Plane interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTangentPlane
                 |             The Tangent Plane.
 
@@ -656,7 +665,9 @@ class SemanticGDT(AnyObject):
         """
         return TangentPlane(self.semantic_gdt.TangentPlane())
 
-    def tolerance_per_unit_basis_restrictive_value(self) -> TolerancePerUnitBasisRestrictiveValue:
+    def tolerance_per_unit_basis_restrictive_value(
+        self,
+    ) -> TolerancePerUnitBasisRestrictiveValue:
         """
         .. note::
             :class: toggle
@@ -664,18 +675,20 @@ class SemanticGDT(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TolerancePerUnitBasisRestrictiveValue() As
                 | TolerancePerUnitBasisRestrictiveValue
-                | 
+                |
                 |     Returns the TolerancePerUnitBasisRestrictiveValue
                 |     interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTolRes
                 |             The TolerancePerUnitBasisRestrictiveValue.
 
         :rtype: TolerancePerUnitBasisRestrictiveValue
         """
-        return TolerancePerUnitBasisRestrictiveValue(self.semantic_gdt.TolerancePerUnitBasisRestrictiveValue())
+        return TolerancePerUnitBasisRestrictiveValue(
+            self.semantic_gdt.TolerancePerUnitBasisRestrictiveValue()
+        )
 
     def tolerance_unit_basis_value(self) -> ToleranceUnitBasisValue:
         """
@@ -684,11 +697,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ToleranceUnitBasisValue() As ToleranceUnitBasisValue
-                | 
+                |
                 |     Returns the ToleranceUnitBasisValue interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTolUnitBas
                 |             The Tolerance Unit Basis Value.
 
@@ -703,11 +716,11 @@ class SemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ToleranceZone() As ToleranceZone
-                | 
+                |
                 |     Returns the ToleranceZone interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTolZone
                 |             The Tolerance Zone.
 

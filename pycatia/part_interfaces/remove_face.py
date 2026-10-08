@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.in_interfaces.reference import Reference
 from pycatia.in_interfaces.references import References
 from pycatia.part_interfaces.dress_up_shape import DressUpShape
@@ -15,22 +16,22 @@ from pycatia.part_interfaces.dress_up_shape import DressUpShape
 
 class RemoveFace(DressUpShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Shape
-                |                         PartInterfaces.DressUpShape
-                |                             RemoveFace
-                | 
-                | Represents the Remove Face operation.
-                | It removes a face or a set of faces.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Shape
+            |                         PartInterfaces.DressUpShape
+            |                             RemoveFace
+            |
+            | Represents the Remove Face operation.
+            | It removes a face or a set of faces.
 
     """
 
@@ -45,15 +46,15 @@ class RemoveFace(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property KeepFace(Reference iKeepFace) (Write Only)
-                | 
+                |
                 |     Adds a new face to be Kept.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iKeepFace
                 |             The new face to process
-                |             The following 
-                | 
+                |             The following
+                |
                 |         Boundary object is supported: Face.
 
         :param Reference reference:
@@ -69,7 +70,7 @@ class RemoveFace(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property KeepFaces() As References (Read Only)
-                | 
+                |
                 |     Get the specified faces to be kept.
 
         :rtype: References
@@ -85,7 +86,7 @@ class RemoveFace(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Propagation() As References (Read Only)
-                | 
+                |
                 |     Get the faces that will be removed.
 
         :rtype: References
@@ -100,15 +101,15 @@ class RemoveFace(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RemoveFace(Reference iRemoveFace) (Write Only)
-                | 
+                |
                 |     Adds a new face to be removed.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRemoveFace
                 |             The new face to process
-                |             The following 
-                | 
+                |             The following
+                |
                 |         Boundary object is supported: Face.
 
         :param Reference reference:
@@ -124,7 +125,7 @@ class RemoveFace(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RemoveFaces() As References (Read Only)
-                | 
+                |
                 |     Get the specified faces to be removed.
 
         :rtype: References
@@ -139,15 +140,15 @@ class RemoveFace(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub remove_KeepFace(Reference iKeepFace)
-                | 
+                |
                 |     Removes a face to be Kept.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iKeepFace
                 |             The new face to process
-                |             The following 
-                | 
+                |             The following
+                |
                 |         Boundary object is supported: Face.
 
         :param Reference i_keep_face:
@@ -177,15 +178,15 @@ class RemoveFace(DressUpShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub remove_RemoveFace(Reference iRemoveFace)
-                | 
+                |
                 |     Removes a face to be removed.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRemoveFace
                 |             The new face to process
-                |             The following 
-                | 
+                |             The following
+                |
                 |         Boundary object is supported: Face.
 
         :param Reference i_remove_face:

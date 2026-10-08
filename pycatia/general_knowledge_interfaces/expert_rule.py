@@ -1,54 +1,55 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.general_knowledge_interfaces.expert_rule_runtime import ExpertRuleRuntime
 
 
 class ExpertRule(ExpertRuleRuntime):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                    GenKnowledgeInterfaces.ExpertRuleBaseComponentRuntime
-                |                        GenKnowledgeInterfaces.ExpertRuleRuntime
-                |                             ExpertRule
-                | 
-                | Represents the edition part of a rule.
-                | The following example shows how access the Rule Rule1 from an existing RuleSet
-                | RS1 of the RuleBase RB1
-                | 
-                |  Dim CATDocs As Document
-                |  Set CATDocs   = CATIA.Documents
-                |  Dim partdoc As PartDocument
-                |  Set partdoc   = CATDocs.Add("CATPart")
-                |  Dim part As Part
-                |  Set part      = partdoc.Part
-                |  Dim relations As Relations
-                |  Set relations = part.Relations
-                |  Dim Rulebase As ExpertRuleBaseRuntime
-                |  Set RuleBase  = relations.Item("RB1")
-                |  Dim Ruleset As ExpertRuleSetRuntime
-                |  Set RuleSet	 = RuleBase.ExpertRuleBaseComponentRuntimes.Item("RS1")
-                |  Dim Rule1 As ExpertRuleRuntime
-                |  Set Rule1	 = RuleSet.ExpertRuleBaseComponentRuntimes.Item("Rule1")
-                |
-                | See also:
-                |     Relations, ExpertRuleBase
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                    GenKnowledgeInterfaces.ExpertRuleBaseComponentRuntime
+            |                        GenKnowledgeInterfaces.ExpertRuleRuntime
+            |                             ExpertRule
+            |
+            | Represents the edition part of a rule.
+            | The following example shows how access the Rule Rule1 from an existing RuleSet
+            | RS1 of the RuleBase RB1
+            |
+            |  Dim CATDocs As Document
+            |  Set CATDocs   = CATIA.Documents
+            |  Dim partdoc As PartDocument
+            |  Set partdoc   = CATDocs.Add("CATPart")
+            |  Dim part As Part
+            |  Set part      = partdoc.Part
+            |  Dim relations As Relations
+            |  Set relations = part.Relations
+            |  Dim Rulebase As ExpertRuleBaseRuntime
+            |  Set RuleBase  = relations.Item("RB1")
+            |  Dim Ruleset As ExpertRuleSetRuntime
+            |  Set RuleSet	 = RuleBase.ExpertRuleBaseComponentRuntimes.Item("RS1")
+            |  Dim Rule1 As ExpertRuleRuntime
+            |  Set Rule1	 = RuleSet.ExpertRuleBaseComponentRuntimes.Item("Rule1")
+            |
+            | See also:
+            |     Relations, ExpertRuleBase
+
     """
 
     def __init__(self, com_object):
@@ -63,7 +64,7 @@ class ExpertRule(ExpertRuleRuntime):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Body() As CATBSTR
-                | 
+                |
                 |     Returns or sets the string that defines the body of a Rule.
                 |     For instance: "if ( H\\Diameter > 20mm ) H\\Activity = FALSE"
 
@@ -88,7 +89,7 @@ class ExpertRule(ExpertRuleRuntime):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Language() As long
-                | 
+                |
                 |     Returns or sets the language of a rule.
 
         :rtype: int
@@ -112,7 +113,7 @@ class ExpertRule(ExpertRuleRuntime):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Variables() As CATBSTR
-                | 
+                |
                 |     Returns or sets the variables scope of the a Rule. For instance: "H:Hole;
                 |     P: Pad"
 

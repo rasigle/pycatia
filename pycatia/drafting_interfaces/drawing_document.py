@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from typing import TYPE_CHECKING
@@ -22,21 +22,21 @@ if TYPE_CHECKING:
 
 class DrawingDocument(Document):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     InfInterfaces.Document
-                |                         DrawingDocument
-                | 
-                | Represents the Document object for drawings.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     InfInterfaces.Document
+            |                         DrawingDocument
+            |
+            | Represents the Document object for drawings.
+
     """
 
     def __init__(self, com_object):
@@ -44,25 +44,26 @@ class DrawingDocument(Document):
         self.drawing_document = com_object
 
     @property
-    def drawing_root(self) -> 'DrawingRoot':
+    def drawing_root(self) -> "DrawingRoot":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property DrawingRoot() As DrawingRoot (Read Only)
-                | 
+                |
                 |     Retrieves the drawing root in the drawing document.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the drawing from the active document, supposed
                 |         to be a drawing document.
-                | 
+                |
                 |          CATIA.ActiveDocument.DrawingRoot
 
         :rtype: DrawingRoot
         """
         from pycatia.drafting_interfaces.drawing_root import DrawingRoot
+
         return DrawingRoot(self.drawing_document.DrawingRoot)
 
     @property
@@ -73,19 +74,19 @@ class DrawingDocument(Document):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Parameters() As Parameters (Read Only)
-                | 
+                |
                 |     Returns the collection of parameters of the drawing
                 |     document.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves in DrawingParameters the collection
                 |           of
                 |          parameters currently managed by the active document, supposed to be
                 |          a
                 |          drawing document.
-                |          
-                | 
+                |
+                |
                 |          Dim DrawingParameters As Parameters
                 |          Set DrawingParameters = CATIA.ActiveDocument.Parameters
 
@@ -102,19 +103,19 @@ class DrawingDocument(Document):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Relations() As Relations (Read Only)
-                | 
+                |
                 |     Returns the collection of relations of the drawing
                 |     document.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves in DrawingRelations the collection
                 |           of
                 |          relations currently managed by the active document, supposed to be
                 |          a
                 |          drawing document.
-                |          
-                | 
+                |
+                |
                 |          Dim DrawingRelations As Relations
                 |          Set DrawingRelations = CATIA.ActiveDocument.Relations
 
@@ -131,15 +132,15 @@ class DrawingDocument(Document):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Sheets() As DrawingSheets (Read Only)
-                | 
+                |
                 |     Returns the collection of drawing sheets of the drawing
                 |     document.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in SheetCollection the collection of sheets
                 |         currently managed by the active document, supposed to be a drawing
                 |         document.
-                | 
+                |
                 |          Dim SheetCollection As DrawingSheets
                 |          Set SheetCollection = CATIA.ActiveDocument.Sheets
 
@@ -156,14 +157,14 @@ class DrawingDocument(Document):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Standard() As CatDrawingStandard
-                | 
+                |
                 |     Returns or sets the drawing standard of the drawing
                 |     document.
-                | 
+                |
                 |     Example:
                 |         This example sets the drawing standard of the active document, supposed
                 |         to be a drawing document, to ISO.
-                | 
+                |
                 |          CATIA.ActiveDocument.Standard = catISO
 
         :return: enum cat_drawing_standard
@@ -187,15 +188,15 @@ class DrawingDocument(Document):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub Isolate()
-                | 
+                |
                 |     Isolates all the drawing views of all the drawing sheets of the drawing
                 |     document.
-                | 
+                |
                 |     Example:
                 |         This example isolates all the drawing views of all the drawing sheets
                 |         of the active document, supposed to be a drawing
                 |         document.
-                | 
+                |
                 |          CATIA.ActiveDocument.Isolate
 
         :rtype: None
@@ -209,13 +210,13 @@ class DrawingDocument(Document):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub Update()
-                | 
+                |
                 |     Updates all the drawing sheets of the drawing document.
-                | 
+                |
                 |     Example:
                 |         This example updates the active document, supposed to be a drawing
                 |         document.
-                | 
+                |
                 |          CATIA.ActiveDocument.Update
 
         :rtype: None

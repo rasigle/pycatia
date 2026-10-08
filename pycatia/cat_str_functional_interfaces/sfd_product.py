@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.mec_mod_interfaces.part import Part
@@ -15,21 +15,21 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SFDProduct(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SfdProduct
-                | 
-                | Interface to create a SFD Functional System under a Product.
-                | Role: Allows creating Functional System under a Product.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SfdProduct
+            |
+            | Interface to create a SFD Functional System under a Product.
+            | Role: Allows creating Functional System under a Product.
+
     """
 
     def __init__(self, com_object):
@@ -43,9 +43,9 @@ class SFDProduct(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateFunctionalSystem() As Part
-                | 
+                |
                 |     Creates the Structure System inside a Product.
-                | 
+                |
                 |     Example:
                 |
                 |              This Example creates a SFD System inside a Product from

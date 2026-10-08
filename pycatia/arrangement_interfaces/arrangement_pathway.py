@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.arrangement_interfaces.arrangement_nodes import ArrangementNodes
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class ArrangementPathway(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ArrangementPathway
-                | 
-                | Use this object to access properties and methods of an ArrangementPathway
-                | object.
-                | Role: Use this interface to control the visualization mode, section parameters,
-                | nodes that define the ArrangementPathway object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ArrangementPathway
+            |
+            | Use this object to access properties and methods of an ArrangementPathway
+            | object.
+            | Role: Use this interface to control the visualization mode, section parameters,
+            | nodes that define the ArrangementPathway object.
+
     """
 
     def __init__(self, com_object):
@@ -45,14 +46,14 @@ class ArrangementPathway(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ArrangementNodes() As ArrangementNodes (Read Only)
-                | 
+                |
                 |     Returns the ArrangementNodes that make up the
                 |     ArrangementPathway.
-                | 
+                |
                 |     Example:
                 |         This example gets the ArrangementNodes for the objPathway1
                 |         object.
-                | 
+                |
                 |          Dim objArrNodes   As ArrangementNodes
                 |          Set objArrNodes = objPathway1.ArrangementNodes
 
@@ -69,13 +70,13 @@ class ArrangementPathway(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Length() As double (Read Only)
-                | 
+                |
                 |     Returns the length of the ArrangementPathway object.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the Length of the objPathway1
                 |         object.
-                | 
+                |
                 |          Dim dblLength   As Double
                 |          dblLength  = objPathway1.Length
 
@@ -92,14 +93,14 @@ class ArrangementPathway(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionDiameter() As double
-                | 
+                |
                 |     Returns or sets the SectionDiameter for an ArrangementPathway
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the SectionDiameter for the objPathway1
                 |         object.
-                | 
+                |
                 |          Dim dblSectionDia   As Double
                 |          dblSectionDia = objPathway1.SectionDiameter
 
@@ -124,14 +125,14 @@ class ArrangementPathway(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionHeight() As double
-                | 
+                |
                 |     Returns or sets the SectionHeight for an ArrangementPathway
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example gets the SectionHeight for the objPathway1
                 |         object.
-                | 
+                |
                 |          Dim dblSectionHeight   As Double
                 |          dblSectionHeight = objPathway1.SectionHeight
 
@@ -156,14 +157,14 @@ class ArrangementPathway(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionType() As CATArrangementRouteSection
-                | 
+                |
                 |     Returns or sets the Section for an ArrangementPathway
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example sets the SectionType for the objPathway1 object to
                 |         CatArrangementRouteSectionRectangular.
-                | 
+                |
                 |          objPathway1.SectionType = CatArrangementRouteSectionRectangular
 
         :return: enum cat_arrangement_route_section
@@ -188,14 +189,14 @@ class ArrangementPathway(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionWidth() As double
-                | 
+                |
                 |     Returns or sets the SectionWidth for an ArrangementPathway
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example gets the SectionWidth for the objPathway1
                 |         object.
-                | 
+                |
                 |          Dim dblSectionWidth   As Double
                 |          dblSectionWidth = objPathway1.SectionWidth
 
@@ -220,14 +221,14 @@ class ArrangementPathway(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property VisuMode() As CATArrangementRouteVisuMode
-                | 
+                |
                 |     Returns or sets the Visualization Mode for an ArrangementPathway
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example sets the Visualization Mode for the objPathway1 object to
                 |         CatArrangementRouteVisuModeSolid.
-                | 
+                |
                 |          objPathway1.VisuMode = CatArrangementRouteVisuModeSolid
 
         :return: enum cat_arrangement_route_visu_mode
@@ -252,21 +253,21 @@ class ArrangementPathway(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTechnologicalObject(CATBSTR iApplicationType) As
                 | CATBaseDispatch
-                | 
+                |
                 |     Returns the applicative data which type is the given
                 |     parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iApplicationType
-                |             The type of applicative data searched. 
+                |             The type of applicative data searched.
                 |         oApplicativeObj
                 |             The matched applicative object.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the desired applicative object from the
                 |                 objPathway1 object.
-                | 
+                |
                 |                  Dim objProd   As Product
                 |                  objProd  = objPathway1.GetTechnologicalObject("Product")
 

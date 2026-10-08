@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,48 +14,48 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class InteropSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         InteropSettingAtt
-                | 
-                | Represents the object to handle the setting parameters of the "V4 Data Reading"
-                | tab page.
-                | Role: This interface is implemented by a component named
-                | CATV4IInteropSettingCtrl which represents the controller of the Setting. The
-                | setting parameters of the tab are the following:
-                | 
-                |     "Display only elements with Sensitive Attribute"
-                |     "Display 3D elements labels"
-                |     "Open in Light Mode: 2D Data are not taken into account"
-                |     "Reading Code page"
-                |     "PROJECT File Path"
-                |     "DLNAME"
-                |     "Prj Warn"
-                |     "Characters Equivalence Table Path"
-                | 
-                | To access this property page:
-                | 
-                |     Click the Options command in the Tools menu
-                |     Click + left of General to unfold the workbench list
-                |     Click Compatibility
-                |
-                | This interface defines:
-                | 
-                |     A method to get each parameter
-                |     A method to set the value of each parameter
-                |     A method to lock/unlock each parameter
-                |     A method to retrieve the informations concerning each
-                |     parameter
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         InteropSettingAtt
+            |
+            | Represents the object to handle the setting parameters of the "V4 Data Reading"
+            | tab page.
+            | Role: This interface is implemented by a component named
+            | CATV4IInteropSettingCtrl which represents the controller of the Setting. The
+            | setting parameters of the tab are the following:
+            |
+            |     "Display only elements with Sensitive Attribute"
+            |     "Display 3D elements labels"
+            |     "Open in Light Mode: 2D Data are not taken into account"
+            |     "Reading Code page"
+            |     "PROJECT File Path"
+            |     "DLNAME"
+            |     "Prj Warn"
+            |     "Characters Equivalence Table Path"
+            |
+            | To access this property page:
+            |
+            |     Click the Options command in the Tools menu
+            |     Click + left of General to unfold the workbench list
+            |     Click Compatibility
+            |
+            | This interface defines:
+            |
+            |     A method to get each parameter
+            |     A method to set the value of each parameter
+            |     A method to lock/unlock each parameter
+            |     A method to retrieve the informations concerning each
+            |     parameter
+
     """
 
     def __init__(self, com_object):
@@ -70,7 +70,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Code_page() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the value of the "Reading Code page" setting
                 |     parameter.
                 |     Role: The "Reading Code page" declares the language to identify the data
@@ -98,7 +98,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Conversion_Table() As CATBSTR
-                | 
+                |
                 |     Retrieves the location of the "Characters Equivalence Table Path" setting
                 |     parameter.
                 |     Role: The "Characters Equivalence Table" allows to convert characters
@@ -127,7 +127,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DisplayMode() As boolean
-                | 
+                |
                 |     Retrieves or sets the state of the "Display only elements with Sensitive
                 |     Attribute" setting parameter.
                 |     Role: The "Display only elements with Sensitive Attribute" mode enables you
@@ -155,7 +155,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DisplayV4Text3D() As boolean
-                | 
+                |
                 |     Retrieves or sets the state of the "Display 3D elements labels" setting
                 |     parameter.
                 |     Role: The "Display 3D elements labels" mode is activated in order to enable
@@ -182,7 +182,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Dlname() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the "DLNAME" setting parameter.
                 |     Role: Retrieves the DLNAME referenced by the Model.
 
@@ -207,7 +207,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Draw() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "Open in Light Mode: 2D Data are not
                 |     taken into account" setting parameter.
                 |     Role: This mode is activated in order to disable the reading of DRAW data
@@ -234,7 +234,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PROJECT_File_Path() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the value of the "PROJECT File Path" setting
                 |     parameter.
                 |     Role: The "PROJECT File Path" field contains the location of the external
@@ -261,7 +261,7 @@ class InteropSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetCode_pageInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Reading Code page" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -280,7 +280,7 @@ class InteropSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConversion_TableInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Characters Equivalence Table Path" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -299,7 +299,7 @@ class InteropSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDisplayModeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Display only elements with Sensitive
                 |     Attribute" setting parameter.
                 |     Refer to SettingController for a detailed description.
@@ -318,7 +318,7 @@ class InteropSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDisplayV4Text3DInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Display 3D elements labels" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -337,7 +337,7 @@ class InteropSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDlnameInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "DlNAME" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -356,7 +356,7 @@ class InteropSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDrawInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Open in Light Mode: 2D Data are not taken
                 |     into account" setting parameter.
                 |     Refer to SettingController for a detailed description.
@@ -375,7 +375,7 @@ class InteropSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetPROJECT_File_PathInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "PROJECT File Path" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -393,7 +393,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCode_pageLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Reading Code page" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -402,7 +402,7 @@ class InteropSettingAtt(SettingController):
         :rtype: None
         """
         return self.interop_setting_att.SetCode_pageLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -425,7 +425,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetConversion_TableLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Characters Equivalence Table Path" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -434,7 +434,7 @@ class InteropSettingAtt(SettingController):
         :rtype: None
         """
         return self.interop_setting_att.SetConversion_TableLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -457,7 +457,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDisplayModeLock(boolean iLock)
-                | 
+                |
                 |     Retrieves information about the "Display only elements with Sensitive
                 |     Attribute" setting parameter.
                 |     Refer to SettingController for a detailed description.
@@ -466,7 +466,7 @@ class InteropSettingAtt(SettingController):
         :rtype: None
         """
         return self.interop_setting_att.SetDisplayModeLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -489,7 +489,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDisplayV4Text3DLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Display 3D elements labels" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -498,7 +498,7 @@ class InteropSettingAtt(SettingController):
         :rtype: None
         """
         return self.interop_setting_att.SetDisplayV4Text3DLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -521,7 +521,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDlnameLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "DLNAME" setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -529,7 +529,7 @@ class InteropSettingAtt(SettingController):
         :rtype: None
         """
         return self.interop_setting_att.SetDlnameLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -552,7 +552,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDrawLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Open in Light Mode: 2D Data are not taken into
                 |     account" setting parameter.
                 |     Refer to SettingController for a detailed description.
@@ -561,7 +561,7 @@ class InteropSettingAtt(SettingController):
         :rtype: None
         """
         return self.interop_setting_att.SetDrawLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -584,7 +584,7 @@ class InteropSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPROJECT_File_PathLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "PROJECT File Path" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -593,7 +593,7 @@ class InteropSettingAtt(SettingController):
         :rtype: None
         """
         return self.interop_setting_att.SetPROJECT_File_PathLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

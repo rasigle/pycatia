@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import Iterator
 
 from pycatia.in_interfaces.light_source import LightSource
@@ -16,21 +17,21 @@ from pycatia.system_interfaces.collection import Collection
 
 class LightSources(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     LightSources
-                | 
-                | A collection of all the LightSource objects.
-                | This collection is currently managed by a Viewer3D object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     LightSources
+            |
+            | A collection of all the LightSource objects.
+            | This collection is currently managed by a Viewer3D object.
+
     """
 
     def __init__(self, com_object):
@@ -44,13 +45,13 @@ class LightSources(Collection):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func Add() As LightSource
-                | 
-                |     Adds a new light source to the LightSources collection. 
-                | 
+                |
+                |     Adds a new light source to the LightSources collection.
+                |
                 | Example:
                 |     The following adds a light source to the collection attached to the active
                 |     viewer. This viewer must be a @see Viewer3D object.
-                | 
+                |
                 |      Dim MyViewer As Viewer
                 |      Set MyViewer = CATIA.ActiveWindow.ActiveViewer
                 |      Dim MyLightSource As LightSource
@@ -67,24 +68,24 @@ class LightSources(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func Item(long iIndex) As LightSource
-                | 
+                |
                 |     Returns a light source from its index in the LightSources
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of the light source to retrieve in the collection of
                 |             light sources. Compared with other collections, you cannot use the name of the
-                |             light source as argument. 
-                | 
+                |             light source as argument.
+                |
                 |     Returns:
-                |         The retrieved light source 
-                | 
+                |         The retrieved light source
+                |
                 | Example:
                 |     The following example returns in MyLightSource the sixth light source in
                 |     the collection.
-                | 
+                |
                 |      Dim MyLightSource As LightSource
                 |      Set MyLightSource = LightSources.Item(6)
 
@@ -100,22 +101,22 @@ class LightSources(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Remove(long iIndex)
-                | 
+                |
                 |     Removes a light source from the LightSources collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of the light source to remove. Compared with other
                 |             collections, you cannot use the name of the light source as argument.
-                |             
-                | 
+                |
+                |
                 |     Example:
                 |         The following example removes the second light source in the collection
-                |         attached to the active viewer. This viewer must be a 
-                | 
+                |         attached to the active viewer. This viewer must be a
+                |
                 |     Viewer3D object.
-                | 
+                |
                 |      Dim MyViewer As Viewer
                 |      Set MyViewer = CATIA.ActiveWindow.ActiveViewer
                 |      MyViewer.LightSources.Remove(2)

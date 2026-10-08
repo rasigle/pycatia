@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.drafting_interfaces.drawing_gdt import DrawingGDT
@@ -32,7 +33,7 @@ class NonSemanticGDT(AnyObject):
                 |                 System.AnyObject
                 |                     NonSemanticGDT
 
-    
+
     """
 
     def __init__(self, com_object):
@@ -56,7 +57,7 @@ class NonSemanticGDT(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return DrawingGDT(self.non_semantic_gdt.Get2dAnnot())
 
@@ -70,7 +71,7 @@ class NonSemanticGDT(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TPSParallelOnScreen() As TPSParallelOnScreen
-                | 
+                |
                 |     Gets the annotation on TPSParallelOnScreen interface.
 
         :rtype: TPSParallelOnScreen
@@ -78,7 +79,7 @@ class NonSemanticGDT(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return TPSParallelOnScreen(self.non_semantic_gdt.TPSParallelOnScreen())
 

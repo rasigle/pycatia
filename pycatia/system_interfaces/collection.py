@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-10 10:58:07.270911
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-10 10:58:07.270911
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 from typing import Iterator
 from typing import TYPE_CHECKING
 
@@ -22,20 +23,20 @@ if TYPE_CHECKING:
 
 class Collection(PyCATIA):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-10 10:58:07.270911)
+        CAA V5 Visual Basic Help (2020-06-10 10:58:07.270911)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 Collection
-                |
-                | Represents the base object for collections.
-                | As a base object, it provides properties and methods shared by any other
-                | object.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 Collection
+            |
+            | Represents the base object for collections.
+            | As a base object, it provides properties and methods shared by any other
+            | object.
 
     """
 
@@ -45,7 +46,7 @@ class Collection(PyCATIA):
         self.child_object = child_object
 
     @property
-    def application(self) -> 'Application':
+    def application(self) -> "Application":
         """
         .. note::
             :class: toggle
@@ -72,6 +73,7 @@ class Collection(PyCATIA):
         :rtype: Application
         """
         from pycatia.in_interfaces.application import Application
+
         return Application(self.com_object.Application)
 
     @property

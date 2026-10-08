@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,29 +14,29 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class AssemblyConstraintSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         AsmConstraintSettingAtt
-                | 
-                | Represents the Assembly Constraints setting controller object.
-                | Role: the Assembly Constraints setting controller object deals with the setting
-                | parameters displayed in the Assembly Constraints property page. To access this
-                | property page:
-                | 
-                |     Click the Options command in the Tools menu
-                |     Click + left of Mechanical Design to unfold the workbench
-                |     list
-                |     Click Assembly Design: Constraints tab
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         AsmConstraintSettingAtt
+            |
+            | Represents the Assembly Constraints setting controller object.
+            | Role: the Assembly Constraints setting controller object deals with the setting
+            | parameters displayed in the Assembly Constraints property page. To access this
+            | property page:
+            |
+            |     Click the Options command in the Tools menu
+            |     Click + left of Mechanical Design to unfold the workbench
+            |     list
+            |     Click Assembly Design: Constraints tab
+
     """
 
     def __init__(self, com_object):
@@ -52,7 +52,7 @@ class AssemblyConstraintSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConstraintCreationMode() As
                 | CatAsmConstraintCreationMode
-                | 
+                |
                 |     Returns or sets the constraint creation setting parameter.
                 |     Role: The constraint creation setting parameter manages the determination
                 |     of the kind of elements to constraint.
@@ -63,12 +63,12 @@ class AssemblyConstraintSettingAtt(SettingController):
                 |     geometry published on the direct child level
                 |     catUsePublishedGeometryAnyLevel The constraint can only be created on
                 |     geometry published on any assembly level
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the constraint creation setting
                 |         parameter of AsmConstraintSettingAtt1 in CreationMode and sets the mode to
                 |         catUsePublishedGeometryAnyLevel.
-                | 
+                |
                 |          Set CreationMode = AsmConstraintSettingAtt1.ConstraintCreationMode
                 |          AsmConstraintSettingAtt1.ConstraintCreationMode = catUsePublishedGeometryAnyLevel
 
@@ -94,7 +94,7 @@ class AssemblyConstraintSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PasteComponentMode() As CatAsmPasteComponentMode
-                | 
+                |
                 |     Returns or sets the component paste setting parameter.
                 |     Role: The component paste setting parameter manages the keeping of the
                 |     contraints of a component after a Copy/Paste or a
@@ -108,12 +108,12 @@ class AssemblyConstraintSettingAtt(SettingController):
                 |     after a Cut
                 |     catPasteWithCstOnCopyAndCut The component's constraints will be recreated
                 |     after a Copy or a Cut
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the component paste setting parameter
                 |         of AsmConstraintSettingAtt1 in PasteMode and sets the mode to With Cut
                 |         Only.
-                | 
+                |
                 |          Set PasteMode = AsmConstraintSettingAtt1.PasteComponentMode
                 |          AsmConstraintSettingAtt1.PasteComponentMode = catPasteWithCstOnCut
 
@@ -139,7 +139,7 @@ class AssemblyConstraintSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property QuickConstraintMode() As CatAsmQuickConstraintMode
-                | 
+                |
                 |     Returns or sets the quick constraint setting parameter.
                 |     Role: The quick constraint setting parameter manages the type of contraint
                 |     that will be created by tue Quick Constraint command.
@@ -147,12 +147,12 @@ class AssemblyConstraintSettingAtt(SettingController):
                 |     catSpecifiedOrder Use the specified order
                 |     catVerifiedConstraintFirst Create verified constraint
                 |     first
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the quick constraint setting parameter
                 |         of AsmConstraintSettingAtt1 in QuickMode and sets the mode to
                 |         catSpecifiedOrder.
-                | 
+                |
                 |          Set QuickMode = AsmConstraintSettingAtt1.QuickConstraintMode
                 |          AsmConstraintSettingAtt1.QuickConstraintMode = catSpecifiedOrder
 
@@ -179,7 +179,7 @@ class AssemblyConstraintSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RedundancyMode(CatAsmRedundancyMode
                 | iRedundancyMode)
-                | 
+                |
                 |     Sets redundancy check option for constraint creation.
                 |     Role: The Redundancy of the constraint is decided to be checked or not to
                 |     be checked, for constraint creation.
@@ -203,7 +203,9 @@ class AssemblyConstraintSettingAtt(SettingController):
 
         self.assembly_constraint_setting_att.RedundancyMode = value
 
-    def get_constraint_creation_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_constraint_creation_mode_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -211,7 +213,7 @@ class AssemblyConstraintSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConstraintCreationModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the constraint creation setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -220,9 +222,13 @@ class AssemblyConstraintSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.assembly_constraint_setting_att.GetConstraintCreationModeInfo(io_admin_level, io_locked)
+        return self.assembly_constraint_setting_att.GetConstraintCreationModeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_paste_component_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_paste_component_mode_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -230,7 +236,7 @@ class AssemblyConstraintSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetPasteComponentModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the component paste setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -239,9 +245,13 @@ class AssemblyConstraintSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.assembly_constraint_setting_att.GetPasteComponentModeInfo(io_admin_level, io_locked)
+        return self.assembly_constraint_setting_att.GetPasteComponentModeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_quick_constraint_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_quick_constraint_mode_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -249,7 +259,7 @@ class AssemblyConstraintSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetQuickConstraintModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the quick constraint setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -258,7 +268,9 @@ class AssemblyConstraintSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.assembly_constraint_setting_att.GetQuickConstraintModeInfo(io_admin_level, io_locked)
+        return self.assembly_constraint_setting_att.GetQuickConstraintModeInfo(
+            io_admin_level, io_locked
+        )
 
     def get_quick_constraint_ordered_list(self) -> tuple:
         """
@@ -267,22 +279,22 @@ class AssemblyConstraintSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetQuickConstraintOrderedList() As CATSafeArrayVariant
-                | 
+                |
                 |     Returns the quick constraint ordered list setting
                 |     parameter.
                 |     Role: The quick constraint ordered list setting parameter manages the
                 |     determination of the kind of elements to constraint.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioList
                 |             The ordered list of constraints type The constraints types must be
-                |             precise strings 
-                | 
+                |             precise strings
+                |
                 |     Example:
                 |         The following example retrieves the quick constraint ordered list of
                 |         AsmConstraintSettingAtt1 in QuickList
-                | 
+                |
                 |          Dim QuickList
                 |          QuickList = AsmConstraintSettingAtt1.GetQuickConstraintOrderedList()
 
@@ -297,7 +309,7 @@ class AssemblyConstraintSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetConstraintCreationModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the constraint creation setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -305,8 +317,10 @@ class AssemblyConstraintSettingAtt(SettingController):
         :param bool i_locked:
         :rtype: None
         """
-        return self.assembly_constraint_setting_att.SetConstraintCreationModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        return self.assembly_constraint_setting_att.SetConstraintCreationModeLock(
+            i_locked
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -329,7 +343,7 @@ class AssemblyConstraintSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPasteComponentModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the component paste setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -337,7 +351,7 @@ class AssemblyConstraintSettingAtt(SettingController):
         :rtype: None
         """
         return self.assembly_constraint_setting_att.SetPasteComponentModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -360,7 +374,7 @@ class AssemblyConstraintSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetQuickConstraintModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the quick constraint setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -368,7 +382,7 @@ class AssemblyConstraintSettingAtt(SettingController):
         :rtype: None
         """
         return self.assembly_constraint_setting_att.SetQuickConstraintModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -392,21 +406,21 @@ class AssemblyConstraintSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetQuickConstraintOrderedList(CATSafeArrayVariant
                 | iList)
-                | 
+                |
                 |     Sets the quick constraint ordered list setting parameter.
                 |     Role: The quick constraint ordered list setting parameter manages the
                 |     determination of the kind of elements to constraint.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iList
                 |             The ordered list of constraints type The constraints types must be
-                |             precise strings 
-                | 
+                |             precise strings
+                |
                 |     Example:
                 |         The following example sets the quick constraint ordered list of
                 |         AsmConstraintSettingAtt1
-                | 
+                |
                 |          Dim QuickList(5)
                 |          QuickList(0) = "CATAsmCoincidenceType"
                 |          QuickList(1) = "CATAsmSurfContactType"
@@ -419,8 +433,10 @@ class AssemblyConstraintSettingAtt(SettingController):
         :param tuple i_list:
         :rtype: None
         """
-        return self.assembly_constraint_setting_att.SetQuickConstraintOrderedList(i_list)
-        # # # # Autogenerated comment: 
+        return self.assembly_constraint_setting_att.SetQuickConstraintOrderedList(
+            i_list
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

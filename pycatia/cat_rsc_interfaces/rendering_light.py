@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class RenderingLight(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     RenderingLight
-                | 
-                | Represents a Rendering Light object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     RenderingLight
+            |
+            | Represents a Rendering Light object.
+
     """
 
     def __init__(self, com_object):
@@ -42,7 +42,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ActiveStatus() As short
-                | 
+                |
                 |     Returns or sets the light active status.
                 |     A light illuminates only when it is active. The active status can
                 |     be:
@@ -70,7 +70,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Ambient() As double
-                | 
+                |
                 |     Returns or sets the light ambient intensity of a light.
 
         :rtype: float
@@ -94,7 +94,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Angle() As double
-                | 
+                |
                 |     Returns or sets the light angle of a spot light.
                 |     The angle ranges from 0. (directional light) to 360. (point light).
 
@@ -119,7 +119,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AreaSamplesU() As short
-                | 
+                |
                 |     Changes the number of samples taken in U direction of the area source.
 
         :rtype: int
@@ -143,7 +143,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AreaSamplesV() As short
-                | 
+                |
                 |     Changes the number of samples taken in V direction of the area source.
 
         :rtype: int
@@ -167,7 +167,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AreaStatus() As short
-                | 
+                |
                 |     Returns or sets the light area visibility status.
                 |     The area visibility status can be:
                 |     1: light area is rendered
@@ -194,7 +194,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AttenuationAngleRatio() As double
-                | 
+                |
                 |     Returns or sets the light attenuation angle ratio.
                 |     It represents the fraction of the light angle where the illumination starts
                 |     to attenuate.
@@ -222,7 +222,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AttenuationStartRatio() As double
-                | 
+                |
                 |     Returns or sets the light attenuation start ratio.
                 |     It represents the fraction of the end distance where the light intensity
                 |     starts to attenuate.
@@ -250,7 +250,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CausticPhotonsNumber() As long
-                | 
+                |
                 |     Changes the maximum number of caustic photons to emit from the light
                 |     source.
 
@@ -275,7 +275,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CylinderLightHeight() As double
-                | 
+                |
                 |     Returns or sets the cylinder light area radius.
 
         :rtype: float
@@ -299,7 +299,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CylinderLightRadius() As double
-                | 
+                |
                 |     Returns or sets the cylinder light area radius.
 
         :rtype: float
@@ -323,7 +323,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Diffuse() As double
-                | 
+                |
                 |     Returns or sets the light diffuse intensity of a light.
 
         :rtype: float
@@ -347,7 +347,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DiskLightRadius() As double
-                | 
+                |
                 |     Returns or sets the disk light area radius.
 
         :rtype: float
@@ -371,7 +371,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EndDistance() As double
-                | 
+                |
                 |     Returns or sets the light maximum distance of
                 |     illumination.
                 |     The light illuminates from its origin to its end distance. Objects farther
@@ -398,7 +398,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EnergyFactor() As double
-                | 
+                |
                 |     Changes the factor for indirect illumination energy.
 
         :rtype: float
@@ -422,7 +422,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FalloffExponent() As short
-                | 
+                |
                 |     Changes the light falloff exponent. Exponent value can be 0, 1 or
                 |     2.
                 |     An exponent of 0 means that the light energy does not fall off with distance.
@@ -450,7 +450,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property GlobalPhotonsNumber() As long
-                | 
+                |
                 |     Changes the maximum number of global illumination photons to emit from the
                 |     light source.
 
@@ -475,7 +475,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property HardwareShadowSmoothing() As short
-                | 
+                |
                 |     Returns or sets the light shadow smoothing.
                 |     It is an integer in the scale 0 to 10 It represents the cleanliness of the
                 |     shadow limits
@@ -501,12 +501,12 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property HardwareShadowStatus() As short
-                | 
+                |
                 |     Returns or sets the light shadow status on environment.
                 |     The shadow status can be:
                 |     1: light casts shadows on environment
                 |     0: light does not cast shadows on environment
-                | 
+                |
                 |     The shadow status on environmemt can be activate only with a directional
                 |     light
 
@@ -531,7 +531,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property HardwareShadowTransparency() As double
-                | 
+                |
                 |     Returns or sets the light shadow transparency.
                 |     It is a float in the scale 0.0(no transparency) to 1.0 (full transparency)
 
@@ -556,7 +556,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IlluminationStatus() As short
-                | 
+                |
                 |     Changes the indirect illumination status.
                 |     The indirect illumination status can be:
                 |     1: indirect illumination is enabled
@@ -583,7 +583,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Intensity() As double
-                | 
+                |
                 |     Returns or sets the light intensity of a light.
 
         :rtype: float
@@ -607,9 +607,9 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LightAreaType() As short
-                | 
+                |
                 |     Returns or sets the light area type.
-                | 
+                |
                 |         Possible area light types are:
                 |         1: CATNone
                 |         2: CATRectangle
@@ -638,9 +638,9 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Mode() As short
-                | 
+                |
                 |     Returns or sets the light mode.
-                | 
+                |
                 |         Possible light modes are:
                 |         1: Light is linked to the viewpoint
                 |         2: Light is linked to the model
@@ -666,7 +666,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RectangleLightLength() As double
-                | 
+                |
                 |     Returns or sets the light area length.
 
         :rtype: float
@@ -690,7 +690,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RectangleLightWidth() As double
-                | 
+                |
                 |     Returns or sets the light area width.
 
         :rtype: float
@@ -714,7 +714,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ShadowFittingMode() As short
-                | 
+                |
                 |     Returns or sets the light shadow fitting mode.
                 |     The shadow fitting mode can be:
                 |     0: Standard
@@ -741,7 +741,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ShadowMapSize() As short
-                | 
+                |
                 |     Returns or sets the light shadow map size.
                 |     The shadow map size can be:
                 |     0: Small (512)
@@ -769,12 +769,12 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ShadowObjectStatus() As short
-                | 
+                |
                 |     Returns or sets the light shadow status on objet.
                 |     The shadow status can be:
                 |     1: light casts shadows on objet
                 |     0: light does not cast shadows on objet
-                | 
+                |
                 |     The shadow status on object can be activate only with a spot light
 
         :rtype: int
@@ -798,7 +798,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ShadowStatus() As short
-                | 
+                |
                 |     Returns or sets the light shadow status.
                 |     The shadow status can be:
                 |     1: light casts shadows
@@ -825,7 +825,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Specular() As double
-                | 
+                |
                 |     Returns or sets the light specular intensity of a light.
 
         :rtype: float
@@ -849,7 +849,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SphereLightRadius() As double
-                | 
+                |
                 |     Returns or sets the sphere light area radius.
 
         :rtype: float
@@ -873,9 +873,9 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Type() As short
-                | 
+                |
                 |     Returns or sets the light type.
-                | 
+                |
                 |         Possible light types are:
                 |         1: Spot light
                 |         2: Point light
@@ -901,13 +901,13 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetColor(CATSafeArrayVariant oColor)
-                | 
+                |
                 |     Returns the color of a light.
                 |     The color is expressed with r, g, and b coefficients (between 0 and
                 |     255)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oColor
                 |             The color as a safe array made up of three doubles: r, g,
                 |             b
@@ -917,7 +917,7 @@ class RenderingLight(AnyObject):
         :rtype: None
         """
         return self.rendering_light.GetColor(o_colour)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -940,7 +940,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetOrigin(CATSafeArrayVariant oOrigin)
-                | 
+                |
                 |     Returns the coordinates of the origin of the light.
                 |     These coordinates are set as an array of 3 Variants (double type).
 
@@ -948,7 +948,7 @@ class RenderingLight(AnyObject):
         :rtype: None
         """
         return self.rendering_light.GetOrigin(o_origin)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -971,13 +971,13 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetShadowColor(CATSafeArrayVariant oShadowColor)
-                | 
+                |
                 |     Returns the color of a shadow.
                 |     The color is expressed with r, g, and b coefficients (between 0 and
                 |     255)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oColor
                 |             The color as a safe array made up of three doubles: r, g,
                 |             b
@@ -987,7 +987,7 @@ class RenderingLight(AnyObject):
         :rtype: None
         """
         return self.rendering_light.GetShadowColor(o_shadow_colour)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1010,7 +1010,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetTarget(CATSafeArrayVariant oTarget)
-                | 
+                |
                 |     Returns the coordinates of the target point of the light.
                 |     These coordinates are set as an array of 3 Variants (double type).
 
@@ -1018,7 +1018,7 @@ class RenderingLight(AnyObject):
         :rtype: None
         """
         return self.rendering_light.GetTarget(o_target)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1041,7 +1041,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PutColor(CATSafeArrayVariant iColor)
-                | 
+                |
                 |     Sets the color of a light.
                 |     The color is expressed with r, g, and b coefficients (between 0 and
                 |     255)
@@ -1050,7 +1050,7 @@ class RenderingLight(AnyObject):
         :rtype: None
         """
         return self.rendering_light.PutColor(i_colour)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1073,22 +1073,22 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PutOrigin(CATSafeArrayVariant iOrigin)
-                | 
+                |
                 |     Sets the coordinates of the origin of the light.
                 |     These coordinates are set as an array of 3 Variants (double
                 |     type).
-                | 
+                |
                 |     Example:
                 |         This example sets the origin of the MyLight light. to the point with
                 |         coordinates (10, 25, 15).
-                | 
+                |
                 |          MyLight.PutOrigin Array(10, 25, 15)
 
         :param tuple i_origin:
         :rtype: None
         """
         return self.rendering_light.PutOrigin(i_origin)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1111,7 +1111,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PutShadowColor(CATSafeArrayVariant iShadowColor)
-                | 
+                |
                 |     Sets the color of a shadow.
                 |     The color is expressed with r, g, and b coefficients (between 0 and
                 |     255)
@@ -1120,7 +1120,7 @@ class RenderingLight(AnyObject):
         :rtype: None
         """
         return self.rendering_light.PutShadowColor(i_shadow_colour)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1143,7 +1143,7 @@ class RenderingLight(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PutTarget(CATSafeArrayVariant iTarget)
-                | 
+                |
                 |     Sets the coordinates of the target point of the light.
                 |     These coordinates are set as an array of 3 Variants (double type).
 
@@ -1151,7 +1151,7 @@ class RenderingLight(AnyObject):
         :rtype: None
         """
         return self.rendering_light.PutTarget(i_target)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

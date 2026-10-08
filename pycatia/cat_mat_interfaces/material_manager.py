@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from typing import Union
@@ -44,7 +44,9 @@ class MaterialManager(AnyObject):
         super().__init__(com_object)
         self.material_manager = com_object
 
-    def apply_material_on_body(self, i_body: Body, i_material: Union[Material, None], i_link_mode: int = 0) -> None:
+    def apply_material_on_body(
+        self, i_body: Body, i_material: Union[Material, None], i_link_mode: int = 0
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -69,10 +71,10 @@ class MaterialManager(AnyObject):
         )
 
     def apply_material_on_hybrid_body(
-            self,
-            i_hybrid_body: HybridBody,
-            i_material: Union[Material, None],
-            i_link_mode: int = 0,
+        self,
+        i_hybrid_body: HybridBody,
+        i_material: Union[Material, None],
+        i_link_mode: int = 0,
     ) -> None:
         """
         .. note::
@@ -98,7 +100,7 @@ class MaterialManager(AnyObject):
         )
 
     def apply_material_on_part(
-            self, i_part: Part, i_material: Union[Material, None], i_link_mode: int = 0
+        self, i_part: Part, i_material: Union[Material, None], i_link_mode: int = 0
     ) -> None:
         """
         .. note::
@@ -124,10 +126,10 @@ class MaterialManager(AnyObject):
         )
 
     def apply_material_on_product(
-            self,
-            i_product: Product,
-            i_material: Union[Material, None],
-            i_link_mode: int = 0,
+        self,
+        i_product: Product,
+        i_material: Union[Material, None],
+        i_link_mode: int = 0,
     ) -> None:
         """
         .. note::
@@ -153,10 +155,10 @@ class MaterialManager(AnyObject):
         )
 
     def apply_material_on_user_material(
-            self,
-            i_user_material: AnyObject,
-            i_material: Union[Material, None],
-            i_link_mode: int = 0,
+        self,
+        i_user_material: AnyObject,
+        i_material: Union[Material, None],
+        i_link_mode: int = 0,
     ) -> None:
         """
         .. note::
@@ -214,7 +216,7 @@ class MaterialManager(AnyObject):
                 vba_code,
                 CatScriptLanguage.CATVBScriptLanguage,
                 vba_function_name,
-                [self.com_object, i_body.com_object]
+                [self.com_object, i_body.com_object],
             )
         )
 
@@ -282,7 +284,7 @@ class MaterialManager(AnyObject):
                 vba_code,
                 CatScriptLanguage.CATVBScriptLanguage,
                 vba_function_name,
-                [self.com_object, i_part.com_object]
+                [self.com_object, i_part.com_object],
             )
         )
 
@@ -313,8 +315,10 @@ class MaterialManager(AnyObject):
         system_service = self.application.system_service
         return Material(
             system_service.evaluate(
-                vba_code, CatScriptLanguage.CATVBScriptLanguage, vba_function_name,
-                [self.com_object, i_product.com_object]
+                vba_code,
+                CatScriptLanguage.CATVBScriptLanguage,
+                vba_function_name,
+                [self.com_object, i_product.com_object],
             )
         )
 
@@ -355,7 +359,7 @@ class MaterialManager(AnyObject):
         )
 
     def replace_material_links(
-            self, i_material1: Material, i_material2: Material
+        self, i_material1: Material, i_material2: Material
     ) -> None:
         """
         .. note::

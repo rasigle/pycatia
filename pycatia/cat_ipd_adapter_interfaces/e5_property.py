@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,38 +14,38 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class E5Property(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     E5Property
-                | 
-                | Interface to access object properties.
-                | Role: This interface allow user to access and edit properties for those V5
-                | objects who were loaded from E5. Note
-                | 
-                | While getting or setting the value for any attribute the implementation
-                | attempts to access attribute value from V5 object first & then from
-                | Manufacturing Hub. If attribute happens to be one of the mapped attribute or if
-                | attribute with same name (user attribute, CATIA attribute ...) exists on V5
-                | object, then value will be returned from V5 object. If V5 object doesn't have
-                | that attribute, then value will be directly returned from Manufacturing Hub
-                | database. When we try to get attribute from V5 object, if required object will
-                | be loaded in memory and this may result in populating of cache (CGR, Selective
-                | loading...)
-                | 
-                | This interface expect caller to use attribute name define in PPPR server for
-                | example caller should use "note" to access Description .
-                | 
-                | Set calls will succeed only if user has editing privileges for that
-                | object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     E5Property
+            |
+            | Interface to access object properties.
+            | Role: This interface allow user to access and edit properties for those V5
+            | objects who were loaded from E5. Note
+            |
+            | While getting or setting the value for any attribute the implementation
+            | attempts to access attribute value from V5 object first & then from
+            | Manufacturing Hub. If attribute happens to be one of the mapped attribute or if
+            | attribute with same name (user attribute, CATIA attribute ...) exists on V5
+            | object, then value will be returned from V5 object. If V5 object doesn't have
+            | that attribute, then value will be directly returned from Manufacturing Hub
+            | database. When we try to get attribute from V5 object, if required object will
+            | be loaded in memory and this may result in populating of cache (CGR, Selective
+            | loading...)
+            |
+            | This interface expect caller to use attribute name define in PPPR server for
+            | example caller should use "note" to access Description .
+            |
+            | Set calls will succeed only if user has editing privileges for that
+            | object.
+
     """
 
     def __init__(self, com_object):
@@ -59,13 +59,13 @@ class E5Property(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetBooleanAttribute(CATBSTR iAttrName) As boolean
-                | 
+                |
                 |     This gets an CATBoolean Attribute value of an input Object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrName
-                |             The name of the Attribute whose value we need 
+                |             The name of the Attribute whose value we need
                 |         oAttrValue
                 |             CATBoolean value of the Attribute
 
@@ -81,13 +81,13 @@ class E5Property(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDoubleAttribute(CATBSTR iAttrName) As double
-                | 
+                |
                 |     This gets a Double Attribute value of an input Object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrName
-                |             The name of the Attribute whose value we need 
+                |             The name of the Attribute whose value we need
                 |         oAttrValue
                 |             Double value of the Attribute
 
@@ -103,13 +103,13 @@ class E5Property(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetLongAttribute(CATBSTR iAttrName) As long
-                | 
+                |
                 |     This gets a Long Attribute value of an input Object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrName
-                |             The name of the Attribute whose value we need 
+                |             The name of the Attribute whose value we need
                 |         oAttrValue
                 |             Long value of the Attribute
 
@@ -125,14 +125,14 @@ class E5Property(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetStringAttribute(CATBSTR iAttrName) As CATBSTR
-                | 
+                |
                 |     This gets a String Attribute value of an input Object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrName
-                |             The name of the Attribute whose value we need 
-                | 
+                |             The name of the Attribute whose value we need
+                |
                 |     Returns:
                 |         CATUnicodeString value of the Attribute
 
@@ -149,16 +149,16 @@ class E5Property(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetBooleanAttribute(CATBSTR iAttrName,
                 | boolean iAttrValue)
-                | 
+                |
                 |     This sets an CATBoolean Attribute value to an input Object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrName
-                |             The Attribute Name whose value we need to set 
+                |             The Attribute Name whose value we need to set
                 |         iAttrValue
-                |             CATBoolean value of the Attribute 
-                | 
+                |             CATBoolean value of the Attribute
+                |
                 |     Returns:
                 |         Value of iAttrName
 
@@ -167,7 +167,7 @@ class E5Property(AnyObject):
         :rtype: None
         """
         return self.e5_property.SetBooleanAttribute(i_attr_name, i_attr_value)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -191,16 +191,16 @@ class E5Property(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDoubleAttribute(CATBSTR iAttrName,
                 | double iAttrValue)
-                | 
+                |
                 |     This sets a Double Attribute value to an input Object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrName
-                |             The Attribute Name whose value we need to set 
+                |             The Attribute Name whose value we need to set
                 |         iAttrValue
-                |             Double value of the Attribute 
-                | 
+                |             Double value of the Attribute
+                |
                 |     Returns:
                 |         Value of iAttrName
 
@@ -218,14 +218,14 @@ class E5Property(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetLongAttribute(CATBSTR iAttrName,
                 | long iAttrValue)
-                | 
+                |
                 |     This sets a Long Attribute value to an input Object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrName
-                |             The Attribute Name whose value we need to set 
-                | 
+                |             The Attribute Name whose value we need to set
+                |
                 |     Returns:
                 |         Value of iAttrName
 
@@ -243,13 +243,13 @@ class E5Property(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetStringAttribute(CATBSTR iAttrName,
                 | CATBSTR iAttrValue)
-                | 
+                |
                 |     This sets a String Attribute value to an input Object
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrName
-                |             The Attribute Name whose value we need to set 
+                |             The Attribute Name whose value we need to set
                 |         iAttrValue
                 |             CATUnicodeString value of the Attribute
 

@@ -1,53 +1,54 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.eno_cd5_interfaces.cd5_save_items import CD5SaveItems
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class CD5SaveOperation(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CD5SaveOperation
-                | 
-                | Represents a Save Operation Object.
-                | 
-                | Various properties which are applicable for the complete save operation can be
-                | set using this.
-                | Also, end-user may either run the Save operation as per customization done so
-                | far or open the Advanced Save panel to finalize customization and run the Save
-                | manually.
-                | 
-                | Example:
-                | 
-                |       The following example indicates how to create a ENOVIA V6 Save
-                |       Operation.
-                |      
-                | 
-                |      Dim oCD5Engine As CD5EngineV6R2014x
-                |      Set oCD5Engine = CATIA.GetItem("CD5EngineV6R2014x")
-                |      Dim oSaveOperation As CD5SaveOperation
-                |      Set oSaveOperation = oCD5Engine.CreateSaveOperation(CD5SaveOperation_Session)
-                |
-                | See also:
-                |     CD5SaveItems
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CD5SaveOperation
+            |
+            | Represents a Save Operation Object.
+            |
+            | Various properties which are applicable for the complete save operation can be
+            | set using this.
+            | Also, end-user may either run the Save operation as per customization done so
+            | far or open the Advanced Save panel to finalize customization and run the Save
+            | manually.
+            |
+            | Example:
+            |
+            |       The following example indicates how to create a ENOVIA V6 Save
+            |       Operation.
+            |
+            |
+            |      Dim oCD5Engine As CD5EngineV6R2014x
+            |      Set oCD5Engine = CATIA.GetItem("CD5EngineV6R2014x")
+            |      Dim oSaveOperation As CD5SaveOperation
+            |      Set oSaveOperation = oCD5Engine.CreateSaveOperation(CD5SaveOperation_Session)
+            |
+            | See also:
+            |     CD5SaveItems
+
     """
 
     def __init__(self, com_object):
@@ -62,12 +63,12 @@ class CD5SaveOperation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AllowDiskSave() As boolean
-                | 
+                |
                 |     Returns (gets) or sets the value of the Save option "Allow Disk
                 |     Save".
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example sets the Allow Disk Save option to
                 |           True.
                 |
@@ -94,11 +95,11 @@ class CD5SaveOperation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Comment() As CATBSTR
-                | 
+                |
                 |     Returns (gets) or sets the value of the Save Comment.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example sets the Save Comment to
                 |           "ABC".
                 |
@@ -125,12 +126,12 @@ class CD5SaveOperation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CreateVersion() As boolean
-                | 
+                |
                 |     Returns (gets) or sets the value of the Save option "Create Version". The
                 |     default value is picked from the LCO/GCO.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example sets the Create Version option to
                 |           True.
                 |
@@ -157,16 +158,16 @@ class CD5SaveOperation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Items() As CD5SaveItems (Read Only)
-                | 
+                |
                 |     Returns (gets) the collection of all the items in the scope of the
                 |     Save.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example gets all the items in the scope of the
                 |           Save.
-                |          
-                | 
+                |
+                |
                 |          Dim oSaveItems As CD5SaveItems
                 |          Set oSaveItems = oSaveOperation.Items
 
@@ -183,12 +184,12 @@ class CD5SaveOperation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RetainLock() As boolean
-                | 
+                |
                 |     Returns (gets) or sets the value of the Save option "Retain Lock". The
                 |     default value is picked from the LCO/GCO.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example sets the Retain Lock option to
                 |           True.
                 |
@@ -214,13 +215,13 @@ class CD5SaveOperation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Run()
-                | 
+                |
                 |     Runs the Save as per the cusomization done so far.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example executes the Save operation as per the
-                |           customization done so far. 
+                |           customization done so far.
                 |
                 |          oSaveOperation.Run
 
@@ -235,11 +236,11 @@ class CD5SaveOperation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ShowPanel()
-                | 
+                |
                 |     Shows the Save dialog as per the cusomization done so far.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example shows the Save panel as per the cusomization
                 |           done so far.
                 |

@@ -1,33 +1,34 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_sch_platform_interfaces.sch_list_of_bst_rs import SchListOfBSTRs
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class SchAppClass(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchAppClass
-                | 
-                | Manage the class hierarchy of an application model.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchAppClass
+            |
+            | Manage the class hierarchy of an application model.
+
     """
 
     def __init__(self, com_object):
@@ -41,20 +42,20 @@ class SchAppClass(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppGetComponentBaseClass() As SchListOfBSTRs
-                | 
+                |
                 |     Provide the application class names for the base component
                 |     classes.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLBaseCompClasses
                 |             Class names of application base component classes.
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppClass
                 |          Dim objArg1 As SchListOfBSTRs
                 |           ...
@@ -71,19 +72,19 @@ class SchAppClass(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppGetGroupBaseClass(CATBSTR oGroupClassName)
-                | 
+                |
                 |     Provide the application class name for Schematic Group
                 |     class.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oGroupClassName
-                |             Class name of application class. 
-                | 
+                |             Class name of application class.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppClass
                 |          Dim strVar1 As String
                 |           ...
@@ -101,19 +102,19 @@ class SchAppClass(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppGetRouteBaseClass(CATBSTR oRouteClassName)
-                | 
+                |
                 |     Provide the application class name for Schematic Route
                 |     class.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRouteClassName
-                |             Class name of application class. 
-                | 
+                |             Class name of application class.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppClass
                 |          Dim strVar1 As String
                 |           ...
@@ -131,19 +132,19 @@ class SchAppClass(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppGetZoneBaseClass(CATBSTR oZoneClassName)
-                | 
+                |
                 |     Provide the application class name for Schematic Zone
                 |     class.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oZoneClassName
-                |             Class name of application class. 
-                | 
+                |             Class name of application class.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppClass
                 |          Dim strVar1 As String
                 |           ...
@@ -161,19 +162,19 @@ class SchAppClass(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppListValidRouteTypes() As SchListOfBSTRs
-                | 
+                |
                 |     List the valid application route types allowed to be
                 |     created.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLValidRouteTypes
-                |             A list of route class types allowed. 
-                | 
+                |             A list of route class types allowed.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppClass
                 |          Dim objArg1 As SchListOfBSTRs
                 |           ...

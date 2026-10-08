@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.enumeration.enums import CatSymbolType
@@ -16,20 +17,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class DrawingArrow(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DrawingArrow
-                | 
-                | Represents a drawing arrow in a drawing view.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DrawingArrow
+            |
+            | Represents a drawing arrow in a drawing view.
+
     """
 
     def __init__(self, com_object):
@@ -44,13 +45,13 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property HeadSymbol() As CatSymbolType
-                | 
+                |
                 |     Returns or sets symbol type of head side.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the symbol type of head side on MyArrow drawing
                 |         arrow.
-                | 
+                |
                 |          oSymbol = MyArrow.HeadSymbol
 
         :return: CatSymbolType
@@ -74,13 +75,13 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property HeadTarget() As CATBaseDispatch
-                | 
+                |
                 |     Returns or sets target element of head side.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the target element of head side on MyArrow
                 |         drawing arrow.
-                | 
+                |
                 |          oTarget = MyArrow.HeadTarget
 
         :return: AnyObject
@@ -104,13 +105,13 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property NbInterruption() As long (Read Only)
-                | 
+                |
                 |     Returns the number of interruptions of arrow path.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the number of interruptions on MyArrow drawing
                 |         arrow.
-                | 
+                |
                 |          oNbInterruption = MyArrow.NbInterruption
 
         :return: int
@@ -126,13 +127,13 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property NbPoint() As long (Read Only)
-                | 
+                |
                 |     Returns the number of points of arrow path.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the number of points on MyArrow drawing
                 |         arrow.
-                | 
+                |
                 |          oNbPoint = MyArrow.NbPoint
 
         :return: int
@@ -165,7 +166,7 @@ class DrawingArrow(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.drawing_arrow.ScaleOnExtremities
@@ -186,13 +187,13 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property TailSymbol() As CatSymbolType
-                | 
+                |
                 |     Returns or sets symbol type of tail side.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the symbol type of tail side on MyArrow drawing
                 |         arrow.
-                | 
+                |
                 |          oSymbol = MyArrow.TailSymbol
 
         :return: CatSymbolType
@@ -216,13 +217,13 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property TailTarget() As CATBaseDispatch
-                | 
+                |
                 |     Returns or sets target element of tail side.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the target element of tail side on MyArrow
                 |         drawing arrow.
-                | 
+                |
                 |          oTarget = MyArrow.TailTarget
 
         :return: AnyObject
@@ -238,11 +239,13 @@ class DrawingArrow(AnyObject):
 
         self.drawing_arrow.TailTarget = value
 
-    def add_interruption(self,
-                         i_first_point_x: float,
-                         i_first_point_y: float,
-                         i_second_point_x: float,
-                         i_second_point_y: float) -> None:
+    def add_interruption(
+        self,
+        i_first_point_x: float,
+        i_first_point_y: float,
+        i_second_point_x: float,
+        i_second_point_y: float,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -252,22 +255,22 @@ class DrawingArrow(AnyObject):
                 | double iFirstPointY,
                 | double iSecondPointX,
                 | double iSecondPointY)
-                | 
+                |
                 |     Add an interruption to an arrow.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFirstPointX
-                |             X coordinates of first point. 
+                |             X coordinates of first point.
                 |         iFirstPointY
-                |             Y coordinates of first point. 
+                |             Y coordinates of first point.
                 |         iSecondPointX
-                |             X coordinates of second point. 
+                |             X coordinates of second point.
                 |         iSecondPointY
-                |             Y coordinates of second point. 
+                |             Y coordinates of second point.
                 |         Example:
                 |             This example adds an interruption to MyArrow.
-                | 
+                |
                 |              iFirstPointX = 10.
                 |              iFirstPointY = 20.
                 |              iSecondPointX = 20.
@@ -281,7 +284,9 @@ class DrawingArrow(AnyObject):
         :param float i_second_point_y:
         :return: None
         """
-        return self.drawing_arrow.AddInterruption(i_first_point_x, i_first_point_y, i_second_point_x, i_second_point_y)
+        return self.drawing_arrow.AddInterruption(
+            i_first_point_x, i_first_point_y, i_second_point_x, i_second_point_y
+        )
 
     def add_point(self, i_num: int, i_x: float, i_y: float) -> None:
         """
@@ -292,21 +297,21 @@ class DrawingArrow(AnyObject):
                 | o Sub AddPoint(long iNum,
                 | double iX,
                 | double iY)
-                | 
+                |
                 |     Add a point to an arrow.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
                 |             Point number. Point will be inserted at iNum+1 position.
-                |             
+                |
                 |         iX
-                |             X coordinates of point to add. 
+                |             X coordinates of point to add.
                 |         iY
-                |             Y coordinates of point to add. 
+                |             Y coordinates of point to add.
                 |         Example:
                 |             This example adds a point to MyArrow.
-                | 
+                |
                 |              iNum = 1
                 |              iX = 10.
                 |              iY = 20.
@@ -327,20 +332,20 @@ class DrawingArrow(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetInterruptions(CATSafeArrayVariant oInterruptions) As
                 | long
-                | 
+                |
                 |     Get arrow path.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oInterruptions
                 |             List of interruptions coordinates (X1,Y1,X2,Y2,.....Xn,Yn).
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         oNbInterruptions Number of interruptions. 
+                |         oNbInterruptions Number of interruptions.
                 |     Example:
                 |         This example gets interruptions of MyArrow path.
-                | 
+                |
                 |          oNbInterruptions = MyArrow.GetInterruptions(oInterruptions)
 
         :param tuple o_interruptions:
@@ -357,20 +362,20 @@ class DrawingArrow(AnyObject):
                 | o Sub GetPoint(long iNum,
                 | double oX,
                 | double oY)
-                | 
+                |
                 |     Get arrow point coordinates.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
-                |             Point number. 
+                |             Point number.
                 |         oX
-                |             X coordinates of point. 
+                |             X coordinates of point.
                 |         oY
-                |             Y coordinates of point. 
+                |             Y coordinates of point.
                 |         Example:
                 |             This example gets a point to MyArrow.
-                | 
+                |
                 |              iNum = 1
                 |              MyArrow.GetPoint(iNum, oX, oY)
 
@@ -388,20 +393,20 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPoints(CATSafeArrayVariant oPoints) As long
-                | 
+                |
                 |     Get arrow path.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPoints
                 |             List of points coordinates (X1,Y1,X2,Y2,.....Xn,Yn).
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         oNbPoints Number of points. 
+                |         oNbPoints Number of points.
                 |     Example:
                 |         This example gets points of MyArrow path.
-                | 
+                |
                 |          oNbPoints = MyArrow.GetPoints(oPoints)
 
         :param tuple o_points:
@@ -418,20 +423,20 @@ class DrawingArrow(AnyObject):
                 | o Sub ModifyPoint(long iNum,
                 | double iX,
                 | double iY)
-                | 
+                |
                 |     Modify a point of an Arrow.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
-                |             Point number to modify. 
+                |             Point number to modify.
                 |         iX
-                |             X coordinates of new point. 
+                |             X coordinates of new point.
                 |         iY
-                |             Y coordinates of new point. 
+                |             Y coordinates of new point.
                 |         Example:
                 |             This example modifies a point to MyArrow.
-                | 
+                |
                 |              iNum = 1
                 |              iX = -10.
                 |              iY = -20.
@@ -451,18 +456,18 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub RemoveInterruption(long iNum)
-                | 
+                |
                 |     Remove an interruption to an arrow.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
-                |             Interruption number to delete. 
+                |             Interruption number to delete.
                 |             - If iNum equals to 0, all interruptions will be removed.
-                |             
+                |
                 |         Example:
                 |             This example removes an interruption from MyArrow.
-                | 
+                |
                 |              iNum = 2
                 |              MyArrow.RemoveInterruption iNum
 
@@ -478,16 +483,16 @@ class DrawingArrow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub RemovePoint(long iNum)
-                | 
+                |
                 |     Remove a point from an arrow.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNum
-                |             Point number to delete. 
+                |             Point number to delete.
                 |         Example:
                 |             This example removes a point from MyArrow.
-                | 
+                |
                 |              iNum = 2
                 |              MyArrow.RemovePoint iNum
 

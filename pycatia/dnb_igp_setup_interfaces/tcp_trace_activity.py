@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dmaps_interfaces.activity import Activity
 
 
 class TCPTraceActivity(Activity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                         TCPTraceActivity
-                | 
-                | Interface representing TCPTraceActivity.
-                | 
-                | Role: This interface is used to work with TCPTraceActivity which consists of a
-                | various attributes.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                         TCPTraceActivity
+            |
+            | Interface representing TCPTraceActivity.
+            |
+            | Role: This interface is used to work with TCPTraceActivity which consists of a
+            | various attributes.
+
     """
 
     def __init__(self, com_object):
@@ -46,11 +47,11 @@ class TCPTraceActivity(Activity):
                 | o Sub GetLineColor(long oR,
                 | long oG,
                 | long oB)
-                | 
+                |
                 |     Indicates the line Color property of trace.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oR,oG,oB
                 |             long. Get the line Color property defined in the trace
                 |             activity(R,G,B values).
@@ -69,11 +70,11 @@ class TCPTraceActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetLineThickness() As long
-                | 
+                |
                 |     Indicates the line thickness property of trace.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oThickness
                 |             long. Get the line thickness property defined in the trace
                 |             activity.
@@ -89,11 +90,11 @@ class TCPTraceActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetLineType() As long
-                | 
+                |
                 |     Indicates the line type property of trace.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oType
                 |             long. Get the line type property defined in the trace
                 |             activity.
@@ -109,14 +110,14 @@ class TCPTraceActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTCPTraceMode() As boolean
-                | 
+                |
                 |     Indicates if the tracing capability is active or not.
-                | 
+                |
                 |         True: tracing capability activated
                 |         False: tracing capability deactivated
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTCPTraceMode
                 |             Boolean. Indicates if the tracing capability is active or
                 |             not.
@@ -134,11 +135,11 @@ class TCPTraceActivity(Activity):
                 | o Sub SetLineColor(long iR,
                 | long iG,
                 | long iB)
-                | 
+                |
                 |     Indicates the line Color property of trace.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iR,iG,iB
                 |             long. Set the line Color property for the trace activity(R,G,B
                 |             values).
@@ -157,11 +158,11 @@ class TCPTraceActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetLineThickness(long iThickness)
-                | 
+                |
                 |     Indicates the line thickness property of trace.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iThickness
                 |             long. Set the line thickness property for the trace
                 |             activity.
@@ -178,11 +179,11 @@ class TCPTraceActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetLineType(long iType)
-                | 
+                |
                 |     Indicates the line type property of trace.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iType
                 |             long. Set the line type property for the trace.
 
@@ -198,14 +199,14 @@ class TCPTraceActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetTCPTraceMode(boolean iTCPTraceMode)
-                | 
+                |
                 |     Set the tracing capability as active or not.
-                | 
+                |
                 |         True: tracing capability activated
                 |         False: tracing capability deactivated
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iTCPTraceMode
                 |             Boolean. Value to set.
 
@@ -213,7 +214,7 @@ class TCPTraceActivity(Activity):
         :rtype: None
         """
         return self.tcp_trace_activity.SetTCPTraceMode(i_tcp_trace_mode)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

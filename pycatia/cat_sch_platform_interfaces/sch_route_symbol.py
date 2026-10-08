@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import TYPE_CHECKING
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -18,20 +19,20 @@ if TYPE_CHECKING:
 
 class SchRouteSymbol(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchRouteSymbol
-                | 
-                | Manage a symbol placed on a route.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchRouteSymbol
+            |
+            | Manage a symbol placed on a route.
+
     """
 
     def __init__(self, com_object):
@@ -45,10 +46,10 @@ class SchRouteSymbol(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub FlipOverLine()
-                | 
+                |
                 |     Mirror the symbol over the route segment line on which the symbol is
                 |     positioned.
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchRouteSymbol
@@ -66,11 +67,11 @@ class SchRouteSymbol(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub FlipOverOrthogonalLine()
-                | 
+                |
                 |     Mirror the symbol over the line orthogonal to the route segment line on
                 |     which the symbol is positioned and going through the symbol's position point on
                 |     that segment line.
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchRouteSymbol
@@ -81,19 +82,19 @@ class SchRouteSymbol(AnyObject):
         """
         return self.sch_route_symbol.FlipOverOrthogonalLine()
 
-    def get_grr_route(self) -> 'SchGRRRoute':
+    def get_grr_route(self) -> "SchGRRRoute":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetGRRRoute() As SchGRRRoute
-                | 
+                |
                 |     Get the graphical representation of a schematic route that owns this
                 |     symbol.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oGRRRoute
                 |             The graphical representation that owns this symbol.
                 |
@@ -108,6 +109,7 @@ class SchRouteSymbol(AnyObject):
         """
 
         from pycatia.cat_sch_platform_interfaces.sch_grr_route import SchGRRRoute
+
         return SchGRRRoute(self.sch_route_symbol.GetGRRRoute())
 
     def get_position(self, o_seg_num: int, o_seg_parm: float) -> None:
@@ -118,16 +120,16 @@ class SchRouteSymbol(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetPosition(long oSegNum,
                 | double oSegParm)
-                | 
+                |
                 |     Get the symbol's position on the route that own it.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSegNum
-                |             The route segment number. 
+                |             The route segment number.
                 |         oSegParm
-                |             The parameter along the segment. 
-                | 
+                |             The parameter along the segment.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchRouteSymbol
@@ -149,14 +151,14 @@ class SchRouteSymbol(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Scale(double iDbScaleFactor)
-                | 
+                |
                 |     Scale the symbol.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDbScaleFactor
-                |             The scale factor to scale the symbol by. 
-                | 
+                |             The scale factor to scale the symbol by.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchRouteSymbol
@@ -177,14 +179,14 @@ class SchRouteSymbol(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPosition(long iSegNum,
                 | double iSegParm)
-                | 
+                |
                 |     Set the symbol's position on the route that own it.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSegNum
                 |             The route segment number (<= number of segments in the route).
-                |             
+                |
                 |         iSegParm
                 |             The parameter along the segment (0.<=iSegParm<=1.).
                 |

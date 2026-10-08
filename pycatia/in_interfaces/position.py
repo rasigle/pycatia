@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.in_interfaces.move import Move
 
 
 class Position(Move):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     InfInterfaces.Move
-                |                         Position
-                | 
-                | Represents the position object.
-                | The position object is the 3D-axis system associated with an
-                | object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     InfInterfaces.Move
+            |                         Position
+            |
+            | Represents the position object.
+            | The position object is the 3D-axis system associated with an
+            | object.
+
     """
 
     def __init__(self, com_object):
@@ -45,31 +46,31 @@ class Position(Move):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetComponents(CATSafeArrayVariant
                 | oAxisComponentsArray)
-                | 
+                |
                 |     Returns the components of an object's position. This returns the 3D-axis
                 |     system associated with the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAxisComponentsArray
                 |             The array used to store the twelve components retrieved from the
                 |             objet's position. The first nine represent succcessively the components of the
                 |             x-axis, y-axis, and z-axis. The last three represent the coordinates of the
-                |             origin point. 
-                | 
+                |             origin point.
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves in oAxisComponentsArray
-                |          the 3D-axis system components from 
+                |          the 3D-axis system components from
                 |          the Position object associated with MyObject:
-                |          
-                | 
+                |
+                |
                 |          Dim oAxisComponentsArray ( 11 )
                 |          MyObject.Position.GetComponents oAxisComponentsArray
 
         :rtype: tuple
         """
-        vba_function_name = 'get_components'
+        vba_function_name = "get_components"
         vba_code = """
         Public Function get_components(position)
             Dim oAxisComponentsArray(11)
@@ -83,7 +84,7 @@ class Position(Move):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def set_components(self, i_axis_components_array: tuple) -> None:
@@ -94,26 +95,26 @@ class Position(Move):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetComponents(CATSafeArrayVariant
                 | iAxisComponentsArray)
-                | 
+                |
                 |     Sets the components of an object's position. This sets the 3D-axis system
                 |     associated with the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAxisComponentsArray
                 |             The array initialized with the components to set to the object's
                 |             position. The first nine represent succcessively the components of the x-axis,
                 |             y-axis, and z-axis. The last three represent the coordinates of the origin
-                |             point. 
-                | 
+                |             point.
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the 3D-axis system components stored
                 |           in
                 |          iAxisComponentsArray to
                 |          the Position object associated with MyObject:
-                |          
-                | 
+                |
+                |
                 |          Dim iAxisComponentsArray( 11 )
                 |          ' x axis components
                 |          iAxisComponentsArray( 0 )  = 1.000
@@ -137,7 +138,7 @@ class Position(Move):
         :rtype: None
         """
         return self.position.SetComponents(i_axis_components_array)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -24,64 +24,52 @@ AnyDocument = Union[
 ]
 
 document_types = {
-    'Analysis': {
-        'extension': 'CATAnalysis',
-        'type': AnalysisDocument,
+    "Analysis": {
+        "extension": "CATAnalysis",
+        "type": AnalysisDocument,
     },
-    'CatalogDocument': {
-        'extension': 'catalog',
-        'type': CatalogDocument,
+    "CatalogDocument": {
+        "extension": "catalog",
+        "type": CatalogDocument,
     },
-    'CATMaterial': {
-        'extension': 'CATMaterial',
-        'type': MaterialDocument,
+    "CATMaterial": {
+        "extension": "CATMaterial",
+        "type": MaterialDocument,
     },
-    'CATProcess': {
-        'extension': 'CATProcess',
-        'type': ProcessDocument,
+    "CATProcess": {
+        "extension": "CATProcess",
+        "type": ProcessDocument,
     },
-    'cgm': {
-        'extension': 'cgm',
-        'type': Document,
+    "cgm": {
+        "extension": "cgm",
+        "type": Document,
     },
-    'Drawing': {
-        'extension': 'CATDrawing',
-        'type': DrawingDocument,
+    "Drawing": {
+        "extension": "CATDrawing",
+        "type": DrawingDocument,
     },
-    'FeatureDictionary': {
-        'extension': 'CATfct',
-        'type': Document
+    "FeatureDictionary": {"extension": "CATfct", "type": Document},
+    "gl": {
+        "extension": "gl",
+        "type": Document,
     },
-    'gl': {
-        'extension': 'gl',
-        'type': Document,
+    "gl2": {
+        "extension": "gl2",
+        "type": Document,
     },
-    'gl2': {
-        'extension': 'gl2',
-        'type': Document,
+    "hpgl": {"extension": "hpgl", "type": Document},
+    "FunctionalSystem": {
+        "extension": "CATSystem",
+        "type": FunctionalDocument,
     },
-    'hpgl': {
-        'extension': 'hpgl',
-        'type': Document
+    "Part": {
+        "extension": "CATPart",
+        "type": PartDocument,
     },
-    'FunctionalSystem': {
-        'extension': 'CATSystem',
-        'type': FunctionalDocument,
+    "Product": {"extension": "CATProduct", "type": ProductDocument},
+    "ProcessLibrary": {
+        "extension": "act",
+        "type": ProcessDocument,
     },
-    'Part': {
-        'extension': 'CATPart',
-        'type': PartDocument,
-    },
-    'Product': {
-        'extension': 'CATProduct',
-        'type': ProductDocument
-    },
-    'ProcessLibrary': {
-        'extension': 'act',
-        'type': ProcessDocument,
-    },
-    'Default': {
-        'extension': None,
-        'type': Document
-    }
+    "Default": {"extension": None, "type": Document},
 }

@@ -1,37 +1,43 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.enumeration.enums import CatConflictType, CatConflictStatus, CatConflictComparison, CatScriptLanguage
+
+from pycatia.enumeration.enums import (
+    CatConflictType,
+    CatConflictStatus,
+    CatConflictComparison,
+    CatScriptLanguage,
+)
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class Conflict(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Conflict
-                | 
-                | Represents the Conflict object.
-                | 
-                | One Conflict object exists for each couple of products that are
-                | colliding.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Conflict
+            |
+            | Represents the Conflict object.
+            |
+            | One Conflict object exists for each couple of products that are
+            | colliding.
+
     """
 
     def __init__(self, com_object):
@@ -46,11 +52,11 @@ class Conflict(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Comment() As CATBSTR
-                | 
+                |
                 |     Returns or sets a comment on the conflict.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              The first example gets the comment of NewConflict
                 |              Conflict.
                 |
@@ -84,12 +90,12 @@ class Conflict(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ComparisonInfo() As CatConflictComparison (Read
                 | Only)
-                | 
+                |
                 |     Returns the information on the comparison between the conflict and the
                 |     previous one.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the comparison information of the
                 |              NewConflict Conflict.
                 |
@@ -109,11 +115,11 @@ class Conflict(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstProduct() As Product (Read Only)
-                | 
+                |
                 |     Returns the first product involved in the conflict.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the first product involved in the
                 |              NewConflict Conflict.
                 |
@@ -133,11 +139,11 @@ class Conflict(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondProduct() As Product (Read Only)
-                | 
+                |
                 |     Returns the second product involved in the conflict.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the second product involved in the
                 |              NewConflict Conflict.
                 |
@@ -157,11 +163,11 @@ class Conflict(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Status() As CatConflictStatus
-                | 
+                |
                 |     Returns or sets the status of the conflict.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              The first example gets the status of NewConflict
                 |              Conflict.
                 |
@@ -194,11 +200,11 @@ class Conflict(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Type() As CatConflictType (Read Only)
-                | 
+                |
                 |     Returns the type of the conflict.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the type of the NewConflict
                 |              Conflict.
                 |
@@ -218,14 +224,14 @@ class Conflict(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Value() As double (Read Only)
-                | 
+                |
                 |     Returns the conflict value.
-                | 
+                |
                 |     This value is the penetration lengh in case of a clash or the minimum
                 |     distance in case of clearance violation.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the value of the NewConflict
                 |              Conflict.
                 |
@@ -245,21 +251,21 @@ class Conflict(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetFirstPointCoordinates(CATSafeArrayVariant
                 | oCoordinates)
-                | 
+                |
                 |     Retrieves the coordinates of the point on the first product which realizes
                 |     the penetration or minimum distance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCoordinates
                 |             The coordinates of the point
-                | 
+                |
                 |                 oCoordinates(0) is the X coordinate
                 |                 oCoordinates(1) is the Y coordinate
-                |                 oCoordinates(2) is the Z coordinate 
-                | 
+                |                 oCoordinates(2) is the Z coordinate
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the first product involved in the
                 |              NewConflict Conflict.
                 |
@@ -269,7 +275,7 @@ class Conflict(AnyObject):
         :rtype: tuple
         """
 
-        vba_function_name = 'get_first_point_coordinates'
+        vba_function_name = "get_first_point_coordinates"
         vba_code = """
         Public Function get_first_point_coordinates(conflict)
             Dim oCoordinates(2)
@@ -283,7 +289,7 @@ class Conflict(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def get_second_point_coordinates(self) -> tuple:
@@ -294,21 +300,21 @@ class Conflict(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetSecondPointCoordinates(CATSafeArrayVariant
                 | oCoordinates)
-                | 
+                |
                 |     Retrieves the coordinates of the point on the second product which realizes
                 |     the penetration or minimum distance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCoordinates
                 |             The coordinates of the point
-                | 
+                |
                 |                 oCoordinates(0) is the X coordinate
                 |                 oCoordinates(1) is the Y coordinate
-                |                 oCoordinates(2) is the Z coordinate 
-                | 
+                |                 oCoordinates(2) is the Z coordinate
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the coordinates in the NewConflict
                 |              Conflict.
                 |
@@ -318,7 +324,7 @@ class Conflict(AnyObject):
         :rtype: tuple
         """
 
-        vba_function_name = 'get_second_point_coordinates'
+        vba_function_name = "get_second_point_coordinates"
         vba_code = """
         Public Function get_second_point_coordinates(conflict)
             Dim oCoordinates (2)
@@ -332,7 +338,7 @@ class Conflict(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def __repr__(self):

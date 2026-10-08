@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_sch_platform_interfaces.sch_app_connectable import SchAppConnectable
 from pycatia.cat_sch_platform_interfaces.sch_component import SchComponent
 from pycatia.cat_sch_platform_interfaces.sch_grr import SchGRR
@@ -19,20 +20,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SchAppComponent(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchAppComponent
-                | 
-                | Represents an application component object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchAppComponent
+            |
+            | Represents an application component object.
+
     """
 
     def __init__(self, com_object):
@@ -46,19 +47,19 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppCreateComponentInst() As AnyObject
-                | 
+                |
                 |     Create a component instance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNewAppCompInst
                 |             Interface pointer (CATISchAppComponent) to the new application
-                |             component instance placed. 
-                | 
+                |             component instance placed.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim objArg1 As AnyObject
                 |           ...
@@ -76,22 +77,22 @@ class SchAppComponent(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppCreateLocalReference(Document iDocToCopyTo) As
                 | AnyObject
-                | 
+                |
                 |     Create Local Reference object. Given a reference object (the "this"), This
                 |     method make a copy of the reference into another document.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDocToCopyTo
-                |             Pointer to a document to copy the reference to, 
+                |             Pointer to a document to copy the reference to,
                 |         oNewAppCompRef
                 |             Interface pointer (CATISchAppComponent) to the new application
-                |             component Reference copied. 
-                | 
+                |             component Reference copied.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim objArg1 As Document
                 |          Dim objArg2 As AnyObject
@@ -101,7 +102,9 @@ class SchAppComponent(AnyObject):
         :param Document i_doc_to_copy_to:
         :rtype: AnyObject
         """
-        return AnyObject(self.sch_app_component.AppCreateLocalReference(i_doc_to_copy_to.com_object))
+        return AnyObject(
+            self.sch_app_component.AppCreateLocalReference(i_doc_to_copy_to.com_object)
+        )
 
     def app_get_default_grr_name(self, o_grr_default_name: str) -> None:
         """
@@ -110,20 +113,20 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppGetDefaultGRRName(CATBSTR oGRRDefaultName)
-                | 
+                |
                 |     Get the default graphical representation names of an application
                 |     component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oGRRDefaultName
                 |             The default name to be used for the graphical representation of a
-                |             component 
-                | 
+                |             component
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim strVar1 As String
                 |           ...
@@ -141,20 +144,20 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AppListGRRNames() As SchListOfBSTRs
-                | 
+                |
                 |     Find all the valid graphical representation names of an application
                 |     component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLGRRNames
                 |             A list of all the valid graphical representation names with this
-                |             connector for connections. 
-                | 
+                |             connector for connections.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim objArg1 As SchListOfBSTRs
                 |           ...
@@ -171,15 +174,15 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToFlipConnected(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to reconnect a component to a different compatible
                 |     configuration.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, then it is OK to flip the component. 
-                | 
+                |             If TRUE, then it is OK to flip the component.
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchAppComponent
@@ -191,7 +194,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppOKToFlipConnected(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -214,19 +217,19 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToFlipHorizontal(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to flip the application component about
                 |     Y.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, then it is OK to flip the component. 
-                | 
+                |             If TRUE, then it is OK to flip the component.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim bVar1 As boolean
                 |           ...
@@ -236,7 +239,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppOKToFlipHorizontal(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -259,19 +262,19 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToFlipOnLine(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to flip a component about its inserted
                 |     line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, then it is OK to flip the component. 
-                | 
+                |             If TRUE, then it is OK to flip the component.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim bVar1 As boolean
                 |           ...
@@ -281,7 +284,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppOKToFlipOnLine(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -304,19 +307,19 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToFlipVertical(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to flip the application component about
                 |     X.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, then it is OK to flip the component. 
-                | 
+                |             If TRUE, then it is OK to flip the component.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim bVar1 As boolean
                 |           ...
@@ -326,7 +329,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppOKToFlipVertical(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -349,19 +352,19 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToPlaceInSpace(boolean oBYes)
-                | 
+                |
                 |     Query whether the application component can be placed in free
                 |     space.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, the component can be slided. 
-                | 
+                |             If TRUE, the component can be slided.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim bVar1 As boolean
                 |           ...
@@ -371,7 +374,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppOKToPlaceInSpace(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -394,18 +397,18 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToScale(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to scale the application component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, then it is OK to scale the component. 
-                | 
+                |             If TRUE, then it is OK to scale the component.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim bVar1 As boolean
                 |           ...
@@ -415,7 +418,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppOKToScale(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -438,18 +441,18 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToSlide(boolean oBYes)
-                | 
+                |
                 |     Query whether the application component can be slided.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, the component can be slided. 
-                | 
+                |             If TRUE, the component can be slided.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim bVar1 As boolean
                 |           ...
@@ -459,7 +462,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppOKToSlide(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -482,19 +485,19 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppOKToUninsert(boolean oBYes)
-                | 
+                |
                 |     Query whether it is OK to uninsert the application
                 |     component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBYes
-                |             If TRUE, then it is OK to uninsert the component. 
-                | 
+                |             If TRUE, then it is OK to uninsert the component.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim bVar1 As boolean
                 |           ...
@@ -504,7 +507,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppOKToUninsert(o_b_yes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -527,14 +530,14 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostFlipConnectedProcess()
-                | 
+                |
                 |     Post process after reconnecting a component to a different compatible
                 |     configuration.
-                | 
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |           ...
                 |          objThisIntf.AppPostFlipConnectedProcess
@@ -550,13 +553,13 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostFlipHorizontalProcess()
-                | 
+                |
                 |     Post process after flipping a component in "x".
-                | 
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |           ...
                 |          objThisIntf.AppPostFlipHorizontalProcess
@@ -572,14 +575,14 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostFlipOnLineProcess()
-                | 
+                |
                 |     Post process after flipping an inserted component about the inserted line
                 |     segment of the route.
-                | 
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |           ...
                 |          objThisIntf.AppPostFlipOnLineProcess
@@ -595,13 +598,13 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostFlipVerticalProcess()
-                | 
+                |
                 |     Post process after flipping a component in "y".
-                | 
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |           ...
                 |          objThisIntf.AppPostFlipVerticalProcess
@@ -611,9 +614,7 @@ class SchAppComponent(AnyObject):
         return self.sch_app_component.AppPostFlipVerticalProcess()
 
     def app_post_place_process(
-            self,
-            i_new_comp_inst: SchComponent,
-            i_cntbl_connected_to: SchAppConnectable
+        self, i_new_comp_inst: SchComponent, i_cntbl_connected_to: SchAppConnectable
     ) -> None:
         """
         .. note::
@@ -622,23 +623,23 @@ class SchAppComponent(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostPlaceProcess(SchComponent iNewCompInst,
                 | SchAppConnectable iCntblConnectedTo)
-                | 
+                |
                 |     Post process after placing an application component
                 |     instance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNewCompInst
                 |             The newly placed component instance (CATISchComponent interface
-                |             pointer). 
+                |             pointer).
                 |         iCntbleConnectedTo
                 |             The connectable that the placed component is connected to or placed
-                |             onto 
-                | 
+                |             onto
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim objArg1 As SchComponent
                 |          Dim objArg2 As SchAppConnectable
@@ -649,8 +650,10 @@ class SchAppComponent(AnyObject):
         :param SchAppConnectable i_cntbl_connected_to:
         :rtype: None
         """
-        return self.sch_app_component.AppPostPlaceProcess(i_new_comp_inst.com_object, i_cntbl_connected_to.com_object)
-        # # # # Autogenerated comment: 
+        return self.sch_app_component.AppPostPlaceProcess(
+            i_new_comp_inst.com_object, i_cntbl_connected_to.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -673,13 +676,13 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostSlideProcess()
-                | 
+                |
                 |     Post process after sliding a component.
-                | 
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |           ...
                 |          objThisIntf.AppPostSlideProcess
@@ -695,14 +698,14 @@ class SchAppComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AppPostSwitchGraphicProcess(SchGRR iGRR)
-                | 
+                |
                 |     Post process after switching a component's graphic
                 |     representation.
-                | 
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim objArg1 As SchGRR
                 |           ...
@@ -712,7 +715,7 @@ class SchAppComponent(AnyObject):
         :rtype: None
         """
         return self.sch_app_component.AppPostSwitchGraphicProcess(i_grr.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -729,10 +732,10 @@ class SchAppComponent(AnyObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def app_post_uninsert_process(
-            self,
-            i_old_app_route1: SchRoute,
-            i_old_app_route2: SchRoute,
-            i_new_app_route: SchRoute
+        self,
+        i_old_app_route1: SchRoute,
+        i_old_app_route2: SchRoute,
+        i_new_app_route: SchRoute,
     ) -> None:
         """
         .. note::
@@ -742,27 +745,27 @@ class SchAppComponent(AnyObject):
                 | o Sub AppPostUninsertProcess(SchRoute iOldAppRoute1,
                 | SchRoute iOldAppRoute2,
                 | SchRoute iNewAppRoute)
-                | 
+                |
                 |     Post process after uninserting a component, disconnecting it from a
                 |     route.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iOldAppRoute1
                 |             One of the route that was connected to one connector of the
-                |             inserted component before the operation. 
+                |             inserted component before the operation.
                 |         iOldAppRoute2
                 |             The other route that was connected to the other connector of the
                 |             inserted component before the operation. This would be NULL if the component
-                |             was connected at extremity. 
+                |             was connected at extremity.
                 |         iNewAppRoute
                 |             The new route created after the operation. This would be NULL if
-                |             the component was connected at extremity. 
-                | 
+                |             the component was connected at extremity.
+                |
                 |     Example:
-                | 
-                |           
-                | 
+                |
+                |
+                |
                 |          Dim objThisIntf As SchAppComponent
                 |          Dim objArg1 As SchRoute
                 |          Dim objArg2 As SchRoute
@@ -778,9 +781,9 @@ class SchAppComponent(AnyObject):
         return self.sch_app_component.AppPostUninsertProcess(
             i_old_app_route1.com_object,
             i_old_app_route2.com_object,
-            i_new_app_route.com_object
+            i_new_app_route.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

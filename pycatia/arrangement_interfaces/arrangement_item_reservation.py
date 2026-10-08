@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,23 +14,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class ArrangementItemReservation(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ArrangementItemReservation
-                | 
-                | Use this object to access the ArrangementItemReservation properties and
-                | methods.
-                | Role: Use this object to control the visualization mode, dimensions of the
-                | ArrangementItemReservation.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ArrangementItemReservation
+            |
+            | Use this object to access the ArrangementItemReservation properties and
+            | methods.
+            | Role: Use this object to control the visualization mode, dimensions of the
+            | ArrangementItemReservation.
+
     """
 
     def __init__(self, com_object):
@@ -45,14 +45,14 @@ class ArrangementItemReservation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Height() As double
-                | 
+                |
                 |     Returns or sets the height of the
                 |     ArrangementItemReservation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the Height of the objItemRes1
                 |         object.
-                | 
+                |
                 |          Dim dblHeight   As Double
                 |          dblHeight  = objItemRes1.Height
 
@@ -77,14 +77,14 @@ class ArrangementItemReservation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property VisuMode() As CATArrangementItemResVisuMode
-                | 
+                |
                 |     Returns or set the Visualization Mode for the
                 |     ArrangementItemReservation.
-                | 
+                |
                 |     Example:
                 |         This example Sets the Visualization Mode of the objItemRes1 object to
                 |         CatArrangementItemReservationVisuModeBox .
-                | 
+                |
                 |          objItemRes1.VisuMode = CatArrangementItemReservationVisuModeBox
 
         :return: enum cat_arrangement_item_res_visu_mode
@@ -109,14 +109,14 @@ class ArrangementItemReservation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property XLength() As double
-                | 
+                |
                 |     Returns or sets the XLength of the
                 |     ArrangementItemReservation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the XLength of the objItemRes1
                 |         object.
-                | 
+                |
                 |          Dim dblXLength   As Double
                 |          dblXLength  = objItemRes1.XLength
 
@@ -141,14 +141,14 @@ class ArrangementItemReservation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property YLength() As double
-                | 
+                |
                 |     Returns or sets the YLength of the
                 |     ArrangementItemReservation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the YLength of the objItemRes1
                 |         object.
-                | 
+                |
                 |          Dim dblYLength   As Double
                 |          dblYLength  = objItemRes1.YLength
 
@@ -172,21 +172,21 @@ class ArrangementItemReservation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetDimension(CATSafeArrayVariant ioItemResDimensions)
-                | 
+                |
                 |     Returns the Dimensions of the ArrangementItemReservation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioItemResDimensions
                 |             The output array initialized with the dimensions that make up the
                 |             ArrangementItemReservation. The first three components represent the Minimum
                 |             XCoord, YCoord and Z Coord while the remaining three components represent the
                 |             Maximum XCoord, YCoord and Z Coord respectively.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the coordinate dimensions of the
                 |                 objItemRes1 object.
-                | 
+                |
                 |                  Dim dblDimension(6)   As Double
                 |                  objItemRes1.GetDimension(dblDimension)
 
@@ -194,7 +194,7 @@ class ArrangementItemReservation(AnyObject):
         :rtype: None
         """
         return self.arrangement_item_reservation.GetDimension(io_item_res_dimensions)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -218,28 +218,30 @@ class ArrangementItemReservation(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTechnologicalObject(CATBSTR iApplicationType) As
                 | CATBaseDispatch
-                | 
+                |
                 |     Returns the applicative data whose type is the given
                 |     parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iApplicationType
-                |             The type of applicative data searched. 
+                |             The type of applicative data searched.
                 |         oApplicativeObj
                 |             The matched applicative object.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the desired applicative object from the
                 |                 objItemRes1 object.
-                | 
+                |
                 |                  Dim objProd   As Product
                 |                  objProd  = objItemRes1.GetTechnologicalObject("Product")
 
         :param str i_application_type:
         :rtype: AnyObject
         """
-        return self.arrangement_item_reservation.GetTechnologicalObject(i_application_type)
+        return self.arrangement_item_reservation.GetTechnologicalObject(
+            i_application_type
+        )
 
     def set_dimension(self, i_item_res_dimensions: tuple) -> None:
         """
@@ -248,21 +250,21 @@ class ArrangementItemReservation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimension(CATSafeArrayVariant iItemResDimensions)
-                | 
+                |
                 |     Sets the Dimensions of the ArrangementItemReservation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iItemResDimensions
                 |             The input array initialized with the dimensions that make up the
                 |             ArrangementItemReservation. The first three components represent the Minimum
                 |             XCoord, YCoord and Z Coord while the remaining three components represent the
                 |             Maximum XCoord, YCoord and Z Coord respectively.
-                | 
+                |
                 |             Example:
                 |                 This example sets the coordinate dimensions of the objItemRes1
                 |                 object.
-                | 
+                |
                 |                  Dim dblDimension(6)   As Double
                 |                  dblDimension(0)       = 300.0 '//XMin
                 |                  dblDimension(1)       = 500.0 '//YMin
@@ -276,7 +278,7 @@ class ArrangementItemReservation(AnyObject):
         :rtype: None
         """
         return self.arrangement_item_reservation.SetDimension(i_item_res_dimensions)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

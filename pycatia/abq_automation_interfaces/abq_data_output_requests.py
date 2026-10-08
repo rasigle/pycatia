@@ -1,37 +1,40 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.abq_automation_interfaces.abq_data_output_request import ABQDataOutputRequest
+
+from pycatia.abq_automation_interfaces.abq_data_output_request import (
+    ABQDataOutputRequest,
+)
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
 
 
 class ABQDataOutputRequests(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     ABQDataOutputRequests
-                | 
-                | The collection of Abaqus data output request (ABQDataOutputRequest) objects
-                | attached to an
-                | ABQGeneralStaticStep, an ABQFrequencyStep, or an ABQHeatTransferStep
-                | object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     ABQDataOutputRequests
+            |
+            | The collection of Abaqus data output request (ABQDataOutputRequest) objects
+            | attached to an
+            | ABQGeneralStaticStep, an ABQFrequencyStep, or an ABQHeatTransferStep
+            | object.
+
     """
 
     def __init__(self, com_object):
@@ -45,17 +48,17 @@ class ABQDataOutputRequests(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Add() As ABQDataOutputRequest
-                | 
+                |
                 |     Creates a new Abaqus data output request and adds it to the collection of
                 |     Abaqus data output requests.
-                | 
+                |
                 |     Returns:
                 |         oDataOutputRequest The Abaqus data output request object that was
-                |         created. 
+                |         created.
                 |     Example:
                 |         The following example creates a data output request in the
                 |         ABQDataOutputRequests collection:
-                | 
+                |
                 |          Dim abqDataOutputRequests As ABQDataOutputRequests
                 |          Set abqDataOutputRequests = generalstaticstep.DataOutputRequests
                 |          Dim abqDataOutputRequest As ABQDataOutputRequest
@@ -72,12 +75,12 @@ class ABQDataOutputRequests(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As ABQDataOutputRequest
-                | 
+                |
                 |     Returns an Abaqus data output request using its index or its name from the
                 |     ABQDataOutputRequests collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Abaqus data output request to retrieve
                 |             from the collection of Abaqus data output requests. If the index is a number,
@@ -85,8 +88,8 @@ class ABQDataOutputRequests(Collection):
                 |             index of the first Abaqus data output request in the collection is 1, and the
                 |             index of the last data output request is Count. If the index is a string, it
                 |             specifies the name you assigned to the data output request using the
-                |             CATIACollection::Name property. 
-                | 
+                |             CATIACollection::Name property.
+                |
                 |     Returns:
                 |         The specified ABQDataOutputRequest.
 
@@ -102,12 +105,12 @@ class ABQDataOutputRequests(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes an Abaqus data output request using its index or its name from the
                 |     data output requests collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the data output request to retrieve from
                 |             the collection of data output requests. As a numeric, this index is the rank of
@@ -120,7 +123,7 @@ class ABQDataOutputRequests(Collection):
         :rtype: None
         """
         return self.abq_data_output_requests.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

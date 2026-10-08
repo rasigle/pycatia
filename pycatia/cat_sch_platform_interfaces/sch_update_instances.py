@@ -1,41 +1,44 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_sch_platform_interfaces.sch_component import SchComponent
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class SchUpdateInstances(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchUpdateInstances
-                | 
-                | Interface to update all component instances when the catalog reference
-                | component has been changed.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchUpdateInstances
+            |
+            | Interface to update all component instances when the catalog reference
+            | component has been changed.
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.sch_update_instances = com_object
 
-    def update_all_instances_from_reference(self, i_comp_local_ref: SchComponent) -> None:
+    def update_all_instances_from_reference(
+        self, i_comp_local_ref: SchComponent
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -43,19 +46,19 @@ class SchUpdateInstances(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub UpdateAllInstancesFromReference(SchComponent
                 | iCompLocalRef)
-                | 
+                |
                 |     Update all the instances of a given local reference in a document. Both the
                 |     local reference and all its instances will be updated to account for any
                 |     changes in the corresponding catalog reference.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example illustrates how to update all the schematic component
                 |           instances
                 |          in the active document by selecting any one of the instances or their
                 |          local reference.
-                |          
-                | 
+                |
+                |
                 |          ' --- get SchUpdateInstances interface
                 |          Dim objCurrentDoc As Document
                 |          Dim objPrdRoot As Product
@@ -65,8 +68,8 @@ class SchUpdateInstances(AnyObject):
                 |          Set objPrdRoot = objCurrentDoc.Product
                 |          Set objSchRoot = objPrdRoot.GetTechnologicalObject ("SchematicRoot")
                 |          Set objUpdateInstances = objSchRoot.GetInteface ("CATIASchUpdateInstances",objCurrentDoc)
-                | 
-                |          ' --- get the local reference 
+                |
+                |          ' --- get the local reference
                 |          Dim objPrdInst As Product
                 |          Dim objPrdRef As Product
                 |          Dim objCompRef As SchComponent
@@ -75,7 +78,7 @@ class SchUpdateInstances(AnyObject):
                 |          Set objPrdInst = objCurrentDoc.Selection.FindObject("CATIAProduct")
                 |          Set objPrdRef = objPrdInst.ReferenceProduct
                 |          Set objCompRef = objSchRoot.GetInterface ("CATIASchComponent",objPrdRef)
-                | 
+                |
                 |          ' --- update all the instances
                 |          objUpdateInstances.UpdateAllInstancesFromReference
                 |          objCompRef
@@ -83,8 +86,10 @@ class SchUpdateInstances(AnyObject):
         :param SchComponent i_comp_local_ref:
         :rtype: None
         """
-        return self.sch_update_instances.UpdateAllInstancesFromReference(i_comp_local_ref.com_object)
-        # # # # Autogenerated comment: 
+        return self.sch_update_instances.UpdateAllInstancesFromReference(
+            i_comp_local_ref.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

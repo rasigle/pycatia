@@ -270,7 +270,9 @@ class SWKHumanCatalog(AnyObject):
 
         return self.com_object.Save()
 
-    def set_attach_or_cst_object(self, pi_description_index: int, pi_item_index: int, pi_reference: Reference) -> None:
+    def set_attach_or_cst_object(
+        self, pi_description_index: int, pi_item_index: int, pi_reference: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -285,4 +287,6 @@ class SWKHumanCatalog(AnyObject):
         :rtype: None
         """
 
-        return self.com_object.SetAttachOrCstObject(pi_description_index, pi_item_index, pi_reference)
+        return self.com_object.SetAttachOrCstObject(
+            pi_description_index, pi_item_index, pi_reference
+        )

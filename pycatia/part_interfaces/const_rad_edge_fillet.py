@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.in_interfaces.reference import Reference
@@ -19,26 +20,26 @@ from pycatia.part_interfaces.var_rad_edge_fillet import VarRadEdgeFillet
 
 class ConstRadEdgeFillet(EdgeFillet):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Shape
-                |                         PartInterfaces.DressUpShape
-                |                             PartInterfaces.Fillet
-                |                                 PartInterfaces.EdgeFillet
-                |                                     ConstRadEdgeFillet
-                | 
-                | Represents the edge fillet shape with a constant radius.
-                | The resulting shape is made up of edge fillets built with a constant
-                | radius.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Shape
+            |                         PartInterfaces.DressUpShape
+            |                             PartInterfaces.Fillet
+            |                                 PartInterfaces.EdgeFillet
+            |                                     ConstRadEdgeFillet
+            |
+            | Represents the edge fillet shape with a constant radius.
+            | The resulting shape is made up of edge fillets built with a constant
+            | radius.
+
     """
 
     def __init__(self, com_object):
@@ -53,15 +54,15 @@ class ConstRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ObjectsToFillet() As References (Read Only)
-                | 
+                |
                 |     Returns the collection of reference elements to be
                 |     filleted.
-                | 
+                |
                 |     Example:
                 |         The following example returns in elements the reference elements to be
                 |         filleted of the constant radius edge fillet
                 |         firstCstEdgeFillet:
-                | 
+                |
                 |          Set elements = firstCstEdgeFillet.ObjectsToFillet
 
         :rtype: References
@@ -77,13 +78,13 @@ class ConstRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Radius() As Length (Read Only)
-                | 
+                |
                 |     Returns the edge fillet constant radius.
-                | 
+                |
                 |     Example:
                 |         The following example returns in radius the radius of the constant
                 |         radius edge fillet firstCstEdgeFillet:
-                | 
+                |
                 |          Set radius = firstCstEdgeFillet.Radius
 
         :rtype: Length
@@ -98,29 +99,31 @@ class ConstRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddObjectToFillet(Reference iObjectToFillet)
-                | 
+                |
                 |     Adds a new sub-element to be filleted. This sub-element is usually an
                 |     edge.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iObjectToFillet
                 |             The sub-element to be filleted
-                |             The following 
-                | 
-                |         Boundary object is supported: TriDimFeatEdge. 
-                | 
+                |             The following
+                |
+                |         Boundary object is supported: TriDimFeatEdge.
+                |
                 | Example:
                 |     The following example adds a new geometrical element element to be filleted
                 |     by the constant radius edge fillet firstCstEdgeFillet:
-                | 
+                |
                 |      firstCstEdgeFillet.AddObjectToFillet(element)
 
         :param Reference i_object_to_fillet:
         :rtype: None
         """
-        return self.const_rad_edge_fillet.AddObjectToFillet(i_object_to_fillet.com_object)
-        # # # # Autogenerated comment: 
+        return self.const_rad_edge_fillet.AddObjectToFillet(
+            i_object_to_fillet.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -160,7 +163,7 @@ class ConstRadEdgeFillet(EdgeFillet):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return VarRadEdgeFillet(self.const_rad_edge_fillet.SwitchToVarFilletType())
@@ -172,30 +175,32 @@ class ConstRadEdgeFillet(EdgeFillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub WithdrawObjectToFillet(Reference iObjectToWithdraw)
-                | 
+                |
                 |     Withdraws a sub-element from those to be filleted. This sub-element is
                 |     usually an edge.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iObjectToWithdraw
                 |             The sub-element to withdraw
-                |             The following 
-                | 
-                |         Boundary object is supported: TriDimFeatEdge. 
-                | 
+                |             The following
+                |
+                |         Boundary object is supported: TriDimFeatEdge.
+                |
                 | Example:
                 |     The following example withdraws the geometrical element element from those
                 |     to be filleted by the constant radius edge fillet
                 |     firstCstEdgeFillet:
-                | 
+                |
                 |      firstCstEdgeFillet.WithdrawObjectToFillet(element)
 
         :param Reference i_object_to_withdraw:
         :rtype: None
         """
-        return self.const_rad_edge_fillet.WithdrawObjectToFillet(i_object_to_withdraw.com_object)
-        # # # # Autogenerated comment: 
+        return self.const_rad_edge_fillet.WithdrawObjectToFillet(
+            i_object_to_withdraw.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

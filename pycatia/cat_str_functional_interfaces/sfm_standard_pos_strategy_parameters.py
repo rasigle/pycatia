@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_str_functional_interfaces.sfm_references import SFMReferences
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.system_interfaces.cat_base_unknown import CATBaseUnknown
@@ -16,20 +17,20 @@ from pycatia.types.general import CATVariant
 
 class SFMStandardPosStrategyParameters(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SfmStandardPosStrategyParameters
-                | 
-                | Sets the Required data for Positioning the Contour.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SfmStandardPosStrategyParameters
+            |
+            | Sets the Required data for Positioning the Contour.
+
     """
 
     def __init__(self, com_object):
@@ -44,14 +45,14 @@ class SFMStandardPosStrategyParameters(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Count() As long (Read Only)
-                | 
+                |
                 |     Returns the count of reference elements.
-                | 
+                |
                 |     Example
                 |     :
                 |         This example retrieves gets the count of the
                 |         References
-                | 
+                |
                 |          Cnt = VrefList.Count
 
         :rtype: int
@@ -73,13 +74,13 @@ class SFMStandardPosStrategyParameters(AnyObject):
         return self.sfm_standard_pos_strategy_parameters.Item(i_index)
 
     def set_pos_param_data(
-            self,
-            i_pos_strategy_name: str,
-            i_rotation_angle: float,
-            i_uref_elem: SFMReferences,
-            i_u_offset: float,
-            i_v_ref_elem: SFMReferences,
-            i_v_offset: float
+        self,
+        i_pos_strategy_name: str,
+        i_rotation_angle: float,
+        i_uref_elem: SFMReferences,
+        i_u_offset: float,
+        i_v_ref_elem: SFMReferences,
+        i_v_offset: float,
     ) -> None:
         """
         .. note::
@@ -92,44 +93,44 @@ class SFMStandardPosStrategyParameters(AnyObject):
                 | double iUOffset,
                 | SfmReferences iVRefElem,
                 | double iVOffset)
-                | 
+                |
                 |     Sets the Position Parameter Data for different Strategies.Different
                 |     Strategies require different inputs.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPosStrategyName
                 |             [in] Legal Values:
                 |             CATSfmPosOffsetOffset,CATSfmPosHalfHeightOffset,CATSfmPosMidDistOffset,CATSfmPosMidDistMidDist,CATSfmPosHalfHeightMidDist
-                |             
+                |
                 |         iRotationAngle
-                |             [in] Enter Rotaion angle for Contour 
+                |             [in] Enter Rotaion angle for Contour
                 |         iUrefElem
                 |             [in] List of U reference Elements CATSfmPosOffsetOffset: This
                 |             Strategy can take Multiple U References CATSfmPosHalfHeightOffset: This
                 |             Strategy can take Multiple U References CATSfmPosMidDistOffset: This Strategy
                 |             can take Multiple U References CATSfmPosMidDistMidDist: This strategy can take
                 |             Multiple U References CATSfmPosHalfHeightMidDist: This strategy can take
-                |             Multiple U References 
+                |             Multiple U References
                 |         iUOffset
-                |             [in] Enter U Offset value 
+                |             [in] Enter U Offset value
                 |         iVrefElem
                 |             [in] List of V reference Elements CATSfmPosOffsetOffset: This
                 |             Strategy can take only one V Reference CATSfmPosHalfHeightOffset: This Strategy
                 |             does not take any V Reference CATSfmPosMidDistOffset: This Strategy can take
                 |             only one V Reference CATSfmPosMidDistMidDist: This strategy can take only two V
                 |             References CATSfmPosHalfHeightMidDist: This Strategy does not take any V
-                |             Reference 
+                |             Reference
                 |         iVOffset
-                |             [in] Enter V Offset value 
-                | 
+                |             [in] Enter V Offset value
+                |
                 |     Returns:
                 |         S_OK if everything ran ok.
-                | 
+                |
                 |         Example:
                 |             This example sets the data required for Positioning the Contour for
                 |             CATSfmPosMidDistMidDist in details.
-                | 
+                |
                 |              'For MidDistance-MidDistance Strategy
                 |              'Populate List for U references with 4 Reference
                 |              elements
@@ -208,7 +209,7 @@ class SFMStandardPosStrategyParameters(AnyObject):
                 |               Next
                 |               ' Example for CATSfmPosMidDistOffset Strategy: Uref elements are
                 |               passed in group of two.VRefList Contains only one Reference element.
-                |               
+                |
                 |               For nUrefCnt = 1 To NbofURef Step 2
                 |                  If (nUrefCnt + 1) <= NbofURef Then
                 |                  URefListinternal.Add UrefList.Item(nUrefCnt)
@@ -276,9 +277,9 @@ class SFMStandardPosStrategyParameters(AnyObject):
             i_uref_elem.com_object,
             i_u_offset,
             i_v_ref_elem.com_object,
-            i_v_offset
+            i_v_offset,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

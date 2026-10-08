@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
@@ -17,28 +17,28 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeExtrude(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeExtrude
-                | 
-                | The Extrude feature : an Extrude is made up of a face to process and one Extrude parameter.
-                | Role: To access the data of the hybrid shape extrude feature
-                | object.
-                | 
-                | LICENSING INFORMATION: Creation of volume result requires GSO
-                | License
-                | if GSO License is not granted , setting of Volume context has not
-                | effect
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeExtrude
+            |
+            | The Extrude feature : an Extrude is made up of a face to process and one Extrude parameter.
+            | Role: To access the data of the hybrid shape extrude feature
+            | object.
+            |
+            | LICENSING INFORMATION: Creation of volume result requires GSO
+            | License
+            | if GSO License is not granted , setting of Volume context has not
+            | effect
+
     """
 
     def __init__(self, com_object):
@@ -53,23 +53,23 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BeginOffset() As Length (Read Only)
-                | 
+                |
                 |     Role: To get_BeginOffset on the object. For surface extrude, if limit type
                 |     is upto, this offset value is not used. In case of Volume Extrude, if the up-to
                 |     element is specified, this will act as offset value from the upto
                 |     element.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oExtrude
                 |             return value for CATScript applications, with (IDLRETVAL) function
-                |             type 
-                | 
+                |             type
+                |
                 |     See also:
-                |         Length 
+                |         Length
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -86,20 +86,20 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Context() As long
-                | 
+                |
                 |     Returns or sets the context on Extrude feature.
                 |     Legal values:
-                | 
+                |
                 |         0 This option creates surface of extrusion.
                 |         1 This option creates volume of extrusion.
-                | 
-                | 
+                |
+                |
                 |     Note: Setting volume result requires GSO License.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in oContext the context for the Extrude1 hybrid
                 |         shape feature.
-                | 
+                |
                 |          Dim oContext
                 |          Set oContext = Extrude1.Context
 
@@ -124,20 +124,20 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Direction() As HybridShapeDirection
-                | 
+                |
                 |     Role: To get_Direction on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDir
                 |             return value for CATScript applications, with (IDLRETVAL) function
-                |             type 
-                | 
+                |             type
+                |
                 |     See also:
-                |         HybridShapeDirection 
+                |         HybridShapeDirection
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -162,23 +162,23 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property EndOffset() As Length (Read Only)
-                | 
+                |
                 |     Role: To get_EndOffset on the object. For surface extrude, if limit type is
                 |     upto, this offset value is not used. In case of Volume Extrude, if the up-to
                 |     element is specified, this will act as offset value from the upto
                 |     element.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oExtrude
                 |             return value for CATScript applications, with (IDLRETVAL) function
-                |             type 
-                | 
+                |             type
+                |
                 |     See also:
-                |         Length 
+                |         Length
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -195,20 +195,20 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ExtrudedObject() As Reference
-                | 
+                |
                 |     Role: To get_ExtrudedObject on the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oFaceToExtrude
                 |             return value for CATScript applications, with (IDLRETVAL) function
-                |             type 
-                | 
+                |             type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -233,10 +233,10 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstLimitType() As long
-                | 
+                |
                 |     Returns or sets the First limit type.
                 |     Legal values:
-                | 
+                |
                 |     0
                 |         Unknown Limit type.
                 |     1
@@ -245,11 +245,11 @@ class HybridShapeExtrude(HybridShape):
                 |     2
                 |         Limit type is UptoElement. It implies that limit is defined by a
                 |         geometrical element
-                | 
+                |
                 | Example:
                 |     This example retrieves in oLim1Type the first limit type for the Extrude
                 |     hybrid shape feature.
-                | 
+                |
                 |      Dim oLim1Type
                 |      Set oLim1Type = Extrude.FirstLimitType
 
@@ -274,22 +274,22 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstUptoElement() As Reference
-                | 
+                |
                 |     Returns or sets the First up-to element used to limit
                 |     extrusion.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Lim1Elem the First up-to element for the
                 |         Extrude hybrid shape feature.
-                | 
-                |          Dim Lim1Elem As Reference 
+                |
+                |          Dim Lim1Elem As Reference
                 |          Set Lim1Elem = Extrude.FirstUptoElement
 
         :rtype: Reference
         """
 
         return Reference(self.hybrid_shape_extrude.FirstUptoElement)
-    
+
     @first_upto_element.setter
     def first_upto_element(self, reference_element: Reference):
         """
@@ -306,12 +306,12 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Orientation(boolean iOrientation)
-                | 
-                |     Gets or sets orientation of the extrude. 
-                |     Orientation = TRUE : The natural orientation is taken. = 
-                |     FALSE : The opposite orientation is taken This example retrieves in IsInverted orientation of the 
+                |
+                |     Gets or sets orientation of the extrude.
+                |     Orientation = TRUE : The natural orientation is taken. =
+                |     FALSE : The opposite orientation is taken This example retrieves in IsInverted orientation of the
                 |     extrude for the Extrude hybrid shape feature.
-                | 
+                |
                 |      Dim IsInverted As boolean
                 |      IsInverted = Extrude.Orientation
 
@@ -336,10 +336,10 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondLimitType() As long
-                | 
+                |
                 |     Returns or sets the Second limit type.
                 |     Legal values:
-                | 
+                |
                 |     0
                 |         Unknown Limit type.
                 |     1
@@ -348,11 +348,11 @@ class HybridShapeExtrude(HybridShape):
                 |     2
                 |         Limit type is UptoElement. It implies that limit is defined by a
                 |         geometrical element
-                | 
+                |
                 | Example:
                 |     This example retrieves in oLim2Type the second limit type for the Extrude
                 |     hybrid shape feature.
-                | 
+                |
                 |      Dim oLim2Type
                 |      Set oLim2Type = Extrude.SecondLimitType
 
@@ -377,15 +377,15 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondUptoElement() As Reference
-                | 
+                |
                 |     Returns or sets the Second up-to element used to limit
                 |     extrusion.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Lim2Elem the Second up-to element for the
                 |         Extrude hybrid shape feature.
-                | 
-                |          Dim Lim2Elem As Reference 
+                |
+                |          Dim Lim2Elem As Reference
                 |          Set Lim2Elem = Extrude.SecondUptoElement
 
         :rtype: Reference
@@ -409,11 +409,11 @@ class HybridShapeExtrude(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SymmetricalExtension() As boolean
-                | 
+                |
                 |     Returns or Sets the Symmetrical Extension of Extrude (Limit 2 = -Limit 1).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSym
                 |             Symetry flag
 

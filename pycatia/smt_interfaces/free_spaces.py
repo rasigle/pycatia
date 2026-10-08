@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.smt_interfaces.free_space import FreeSpace
 from pycatia.system_interfaces.collection import Collection
@@ -15,20 +16,20 @@ from pycatia.system_interfaces.collection import Collection
 
 class FreeSpaces(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     FreeSpaces
-                | 
-                | Interface to compute Free Spaces.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     FreeSpaces
+            |
+            | Interface to compute Free Spaces.
+
     """
 
     def __init__(self, com_object):
@@ -36,23 +37,23 @@ class FreeSpaces(Collection):
         self.free_spaces = com_object
 
     def add(
-            self,
-            i_product_for_free_space: Product,
-            i_accuracy: float,
-            i_xmin: float,
-            i_xmax: float,
-            i_ymin: float,
-            i_ymax: float,
-            i_zmin: float,
-            i_zmax: float,
-            i_type_free_space: int,
-            i_xpt: float,
-            i_ypt: float,
-            i_zpt: float,
-            i_holes: tuple,
-            i_shape_name: str,
-            i_activated_shape: int,
-            i_default_shape: int
+        self,
+        i_product_for_free_space: Product,
+        i_accuracy: float,
+        i_xmin: float,
+        i_xmax: float,
+        i_ymin: float,
+        i_ymax: float,
+        i_zmin: float,
+        i_zmax: float,
+        i_type_free_space: int,
+        i_xpt: float,
+        i_ypt: float,
+        i_zpt: float,
+        i_holes: tuple,
+        i_shape_name: str,
+        i_activated_shape: int,
+        i_default_shape: int,
     ) -> FreeSpace:
         """
         .. note::
@@ -75,7 +76,7 @@ class FreeSpaces(Collection):
                 | CATBSTR iShapeName,
                 | long iActivatedShape,
                 | long iDefaultShape) As FreeSpace
-                | 
+                |
                 |     Compute a free space around a selected product.
 
         :param Product i_product_for_free_space:
@@ -113,22 +114,22 @@ class FreeSpaces(Collection):
                 i_holes,
                 i_shape_name,
                 i_activated_shape,
-                i_default_shape
+                i_default_shape,
             )
         )
 
     def add_around_any(
-            self,
-            i_accuracy: float,
-            i_xmin: float,
-            i_xmax: float,
-            i_ymin: float,
-            i_ymax: float,
-            i_zmin: float,
-            i_zmax: float,
-            i_shape_name: str,
-            i_type_free_space: int,
-            i_holes: tuple
+        self,
+        i_accuracy: float,
+        i_xmin: float,
+        i_xmax: float,
+        i_ymin: float,
+        i_ymax: float,
+        i_zmin: float,
+        i_zmax: float,
+        i_shape_name: str,
+        i_type_free_space: int,
+        i_holes: tuple,
     ) -> FreeSpace:
         """
         .. note::
@@ -145,7 +146,7 @@ class FreeSpaces(Collection):
                 | CATBSTR iShapeName,
                 | long iTypeFreeSpace,
                 | CATSafeArrayVariant iHoles) As FreeSpace
-                | 
+                |
                 |     Compute a free space around any products.
 
         :param float i_accuracy:
@@ -171,23 +172,23 @@ class FreeSpaces(Collection):
                 i_zmax,
                 i_shape_name,
                 i_type_free_space,
-                i_holes
+                i_holes,
             )
         )
 
     def add_around_products(
-            self,
-            i_accuracy: float,
-            i_xmin: float,
-            i_xmax: float,
-            i_ymin: float,
-            i_ymax: float,
-            i_zmin: float,
-            i_zmax: float,
-            i_shape_name: str,
-            i_type_free_space: int,
-            i_holes: tuple,
-            i_reference_selection: tuple
+        self,
+        i_accuracy: float,
+        i_xmin: float,
+        i_xmax: float,
+        i_ymin: float,
+        i_ymax: float,
+        i_zmin: float,
+        i_zmax: float,
+        i_shape_name: str,
+        i_type_free_space: int,
+        i_holes: tuple,
+        i_reference_selection: tuple,
     ) -> FreeSpace:
         """
         .. note::
@@ -205,7 +206,7 @@ class FreeSpaces(Collection):
                 | long iTypeFreeSpace,
                 | CATSafeArrayVariant iHoles,
                 | CATSafeArrayVariant iReferenceSelection) As FreeSpace
-                | 
+                |
                 |     Compute a free space around a reference selection
 
         :param float i_accuracy:
@@ -233,7 +234,7 @@ class FreeSpaces(Collection):
                 i_shape_name,
                 i_type_free_space,
                 i_holes,
-                i_reference_selection
+                i_reference_selection,
             )
         )
 
@@ -245,7 +246,7 @@ class FreeSpaces(Collection):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AddFromFile(CATBSTR iFileName,
                 | CATBSTR iShapeName) As FreeSpace
-                | 
+                |
                 |     Compute a free space from a file.
 
         :param str i_file_name:
@@ -262,25 +263,27 @@ class FreeSpaces(Collection):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AddInflatingFromFile(CATBSTR iFileName,
                 | CATBSTR iShapeName) As FreeSpace
-                | 
+                |
                 |     Compute an inflating free space from a file.
 
         :param str i_file_name:
         :param str i_shape_name:
         :rtype: FreeSpace
         """
-        return FreeSpace(self.free_spaces.AddInflatingFromFile(i_file_name, i_shape_name))
+        return FreeSpace(
+            self.free_spaces.AddInflatingFromFile(i_file_name, i_shape_name)
+        )
 
     def add_split_from_file(
-            self,
-            i_x: float,
-            i_y: float,
-            i_z: float,
-            i_nx: float,
-            i_ny: float,
-            i_nz: float,
-            i_file_name: str,
-            i_shape_name: str
+        self,
+        i_x: float,
+        i_y: float,
+        i_z: float,
+        i_nx: float,
+        i_ny: float,
+        i_nz: float,
+        i_file_name: str,
+        i_shape_name: str,
     ) -> FreeSpace:
         """
         .. note::
@@ -295,7 +298,7 @@ class FreeSpaces(Collection):
                 | double iNz,
                 | CATBSTR iFileName,
                 | CATBSTR iShapeName) As FreeSpace
-                | 
+                |
                 |     Compute a split free space from a file.
 
         :param float i_x:
@@ -308,7 +311,11 @@ class FreeSpaces(Collection):
         :param str i_shape_name:
         :rtype: FreeSpace
         """
-        return FreeSpace(self.free_spaces.AddSplitFromFile(i_x, i_y, i_z, i_nx, i_ny, i_nz, i_file_name, i_shape_name))
+        return FreeSpace(
+            self.free_spaces.AddSplitFromFile(
+                i_x, i_y, i_z, i_nx, i_ny, i_nz, i_file_name, i_shape_name
+            )
+        )
 
     def __repr__(self):
         return f'FreeSpaces(name="{self.name}")'

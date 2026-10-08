@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.abq_automation_interfaces.abq_output_request import ABQOutputRequest
 
 
 class ABQFHOutputRequest(ABQOutputRequest):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQOutputRequest
-                |                         ABQFHOutputRequest
-                | 
-                | Represents the base interface for field and history output request
-                | objects.
-                | Role: The ABQFHOutputRequest interface manages the common properties of field
-                | and history output requests.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQOutputRequest
+            |                         ABQFHOutputRequest
+            |
+            | Represents the base interface for field and history output request
+            | objects.
+            | Role: The ABQFHOutputRequest interface manages the common properties of field
+            | and history output requests.
+
     """
 
     def __init__(self, com_object):
@@ -46,12 +47,12 @@ class ABQFHOutputRequest(ABQOutputRequest):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EquallySpacedIncr(long iAtEquallySpacedIncr) (Write
                 | Only)
-                | 
+                |
                 |     For explicit dynamic step: Sets request for output results at equally
                 |     spaced increments.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAtEquallySpacedIncr
                 |             The increment number which allows the user to set output results at
                 |             this interval
@@ -78,12 +79,12 @@ class ABQFHOutputRequest(ABQOutputRequest):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EveryXIncrOfTime(double iAtEveryXIncr) (Write
                 | Only)
-                | 
+                |
                 |     For explicit dynamic step: Sets request for output results at every
                 |     specified units of time.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAtEveryXIncr
                 |             The time interval which allows the user to set output results at
                 |             this interval
@@ -110,17 +111,17 @@ class ABQFHOutputRequest(ABQOutputRequest):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OutputAtDefOrAllSecPts(ABQOutputAtSecPts iOutputAtSecPts) (Write
                 | Only)
-                | 
+                |
                 |     Sets request for output results at section points.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iOutputAtSecPts
                 |             The option to request output results at section points: Default or
                 |             All
-                | 
+                |
                 |             Legal values:
-                | 
+                |
                 |             "ABQDEFAULTSECPTS"
                 |             "ABQALLSECPTS"
 
@@ -147,18 +148,18 @@ class ABQFHOutputRequest(ABQOutputRequest):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PreSelectDefaultOrAll(ABQOutputVariableType iOutputVarType) (Write
                 | Only)
-                | 
+                |
                 |     Sets request for results for preselect default or ALL
                 |     variables.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iOutputVarType
                 |             The option to request output results for set of variables:
                 |             Preselected or All
-                | 
+                |
                 |             Legal values:
-                | 
+                |
                 |             "ABQPRESELECTDEFVAR"
                 |             "ABQALLVAR"
 
@@ -185,12 +186,12 @@ class ABQFHOutputRequest(ABQOutputRequest):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SpecifiedModes(CATSafeArrayVariant iSpecifiedModes) (Write
                 | Only)
-                | 
+                |
                 |     For frequency step: Sets request for output results at specified
                 |     modes.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSpecifiedModes
                 |             The list of modes for which output is requested
 
@@ -216,12 +217,12 @@ class ABQFHOutputRequest(ABQOutputRequest):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SpecifiedOutputVariables(CATBSTR iVariableNameBSTR) (Write
                 | Only)
-                | 
+                |
                 |     Sets the specified variables for which results are
                 |     requested.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iVariableNameBSTR
                 |             The list of variables for which output is requested For example: If
                 |             user wants to request output for variables 'U' and 'S', then iVariableNameBSTR
@@ -249,12 +250,12 @@ class ABQFHOutputRequest(ABQOutputRequest):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SpecifiedSecPts(CATSafeArrayVariant iSpecifiedSecPts) (Write
                 | Only)
-                | 
+                |
                 |     Sets request for output results at specified section
                 |     points.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSpecifiedSecPts
                 |             The list of section points at which output is
                 |             requested
@@ -280,11 +281,11 @@ class ABQFHOutputRequest(ABQOutputRequest):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TimingFlag() As boolean
-                | 
+                |
                 |     Returns or sets a flag for output at approximate or exact times. A true
                 |     value indicates that request for output results at approximate times and a
                 |     false value for output results at exact times.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether request for output results at approximate
                 |         or exact times.
@@ -309,7 +310,7 @@ class ABQFHOutputRequest(ABQOutputRequest):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOutputAtAllModes()
-                | 
+                |
                 |     For frequency step: Sets request for output results at all modes.
 
         :rtype: None

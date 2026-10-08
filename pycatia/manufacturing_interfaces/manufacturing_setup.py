@@ -1,17 +1,24 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.manufacturing_interfaces.manufacturing_activities import ManufacturingActivities
-from pycatia.manufacturing_interfaces.manufacturing_activity import ManufacturingActivity
+
+from pycatia.manufacturing_interfaces.manufacturing_activities import (
+    ManufacturingActivities,
+)
+from pycatia.manufacturing_interfaces.manufacturing_activity import (
+    ManufacturingActivity,
+)
 from pycatia.manufacturing_interfaces.manufacturing_machine import ManufacturingMachine
-from pycatia.manufacturing_interfaces.manufacturing_machining_axis import ManufacturingMachiningAxis
+from pycatia.manufacturing_interfaces.manufacturing_machining_axis import (
+    ManufacturingMachiningAxis,
+)
 from pycatia.manufacturing_interfaces.manufacturing_view import ManufacturingView
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
@@ -19,22 +26,22 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class ManufacturingSetup(ManufacturingActivity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                        ManufacturingInterfaces.ManufacturingActivity
-                |                             ManufacturingSetup
-                | 
-                | A ManufacturingSetup for a Manufacturing Document.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                        ManufacturingInterfaces.ManufacturingActivity
+            |                             ManufacturingSetup
+            |
+            | A ManufacturingSetup for a Manufacturing Document.
+
     """
 
     def __init__(self, com_object):
@@ -49,13 +56,13 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Comment() As CATBSTR
-                | 
+                |
                 |     Return the Default Comment of a Manufacturing Setup.
-                | 
+                |
                 |     Example:
                 |         The following example return the comment SetupComment of to the
                 |         manufacturing setup CurrentSetup
-                | 
+                |
                 |          Set CurrentSetup.Comment
 
         :rtype: str
@@ -79,13 +86,13 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Machine() As ManufacturingMachine
-                | 
+                |
                 |     Give the Machine linked to a Manufacturing Setup.
-                | 
+                |
                 |     Example:
                 |         The following example returns the Machine linked to the manufacturing
                 |         setup CurrentSetup
-                | 
+                |
                 |          Set Machine = CurrentSetup.Machine
 
         :rtype: ManufacturingMachine
@@ -110,15 +117,15 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MachiningAxisSystem() As
                 | ManufacturingMachiningAxis
-                | 
+                |
                 |     Retrieves the Machining Axis system from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the Machining Axis system
                 |         oMachiningAxis from the manufacturing setup
                 |         CurrentSetup
-                | 
+                |
                 |          Set oMachiningAxis = CurrentSetup.MachiningAxisSystem
 
         :rtype: ManufacturingMachiningAxis
@@ -142,13 +149,13 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Product(Product iProduct)
-                | 
+                |
                 |     Associate the Product to a Manufacturing Setup.
-                | 
+                |
                 |     Example:
                 |         The following example associates the Product iProduct to the
                 |         manufacturing setup CurrentSetup
-                | 
+                |
                 |          CurrentSetup.Product = iProduct
 
         :rtype: None
@@ -172,13 +179,13 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Programs() As MfgActivities (Read Only)
-                | 
+                |
                 |     Give the List of Programs linked to a Manufacturing Setup.
-                | 
+                |
                 |     Example:
                 |         The following example returns the list of Programs ProgramsList linked
                 |         to the manufacturing Setup CurrentSetup
-                | 
+                |
                 |          Set ProgramsList = CurrentSetup.Programs
 
         :rtype: ManufacturingActivities
@@ -194,21 +201,23 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateMachine(CATBSTR iTypeMachine) As
                 | ManufacturingMachine
-                | 
+                |
                 |     Initialise the Manufacturing Machine linked to a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example initialise the machine
                 |         Mfg3AxisWithTableRotationMachine as Manufacturing Machine in the manufacturing
                 |         setup CurrentSetup
-                | 
+                |
                 |          call CurrentSetup.CreateMachine(Mfg3AxisWithTableRotationMachine)
 
         :param str i_type_machine:
         :rtype: ManufacturingMachine
         """
-        return ManufacturingMachine(self.manufacturing_setup.CreateMachine(i_type_machine))
+        return ManufacturingMachine(
+            self.manufacturing_setup.CreateMachine(i_type_machine)
+        )
 
     def design_geometries_count(self) -> int:
         """
@@ -217,19 +226,19 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DesignGeometriesCount() As long
-                | 
+                |
                 |     Returns the number of design geometries from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDesignGeometriesListSize
-                |             The number of design geometries of this setup 
-                | 
+                |             The number of design geometries of this setup
+                |
                 |     Example:
                 |         The following example retrieves the number of design geometries of the
                 |         setup CurrentSetup in DesignGeometriesListSize.
-                | 
+                |
                 |          Dim CurrentSetup As ManufacturingSetup
                 |          Set CurrentSetup = ...
                 |          Dim DesignGeometriesListSize As Long
@@ -246,7 +255,7 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ExportCATSetting(CATBSTR dirPath)
-                | 
+                |
                 |     ExportCATSetting. Export All Machining CATSetting file to a location in xml format.
                 |     dirPath = Absolute path to the location where all settings should be exported.
                 |     eg, "D:/dir/" Call on Current Manufacturngsetup
@@ -263,19 +272,19 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func FixtureGeometriesCount() As long
-                | 
+                |
                 |     Returns the number of fixture geometries from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oFixtureGeometriesListSize
-                |             The number of fixture geometries of this setup 
-                | 
+                |             The number of fixture geometries of this setup
+                |
                 |     Example:
                 |         The following example retrieves the number of fixture geometries of the
                 |         setup CurrentSetup in FixtureGeometriesListSize.
-                | 
+                |
                 |          Dim CurrentSetup As ManufacturingSetup
                 |          Set CurrentSetup = ...
                 |          Dim FixtureGeometriesListSize As Long
@@ -292,15 +301,15 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMachiningAxisSystemName() As CATBSTR
-                | 
+                |
                 |     Retrieves the Name of the Machining Axis system from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the Name of the Machining Axis
                 |         systemoMachiningAxisSystemName from the manufacturing setup
                 |         CurrentSetup
-                | 
+                |
                 |          Set oMachiningAxisSystemName = CurrentSetup.GetMachiningAxisSystemName
 
         :rtype: str
@@ -314,14 +323,14 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetManufacturingView() As ManufacturingView
-                | 
+                |
                 |     Retrieves the Manufacturing View from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example retrievec the Manufacturing View MfgView from the
                 |         manufacturing setup CurrentSetup
-                | 
+                |
                 |          Set MfgView = CurrentSetup.GetManufacturingView
 
         :rtype: ManufacturingView
@@ -335,14 +344,14 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetPartName() As CATBSTR
-                | 
+                |
                 |     Retrieves the Name of the Design Part from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the Name of the Design PartoPartName
                 |         from the manufacturing setup CurrentSetup
-                | 
+                |
                 |          Set oPartName = CurrentSetup.GetPartName
 
         :rtype: str
@@ -356,14 +365,14 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetProductInstance() As Product
-                | 
+                |
                 |     Give the Product of the ProductList linked to a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example returns the Product linked to the manufacturing
                 |         setup CurrentSetup
-                | 
+                |
                 |          Set Product = CurrentSetup.GetProductInstance
 
         :rtype: Product
@@ -377,14 +386,14 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSafetyPlane() As CATSafeArrayVariant
-                | 
+                |
                 |     Retrieves the Safety Plane from a Manufacturing Setup.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the Safety Plane oMathPLane from the
                 |         manufacturing setup CurrentSetup The size of oMathPlane is 9 (origin, first
                 |         direction, second direction)
-                | 
+                |
                 |          Set oMathPlane= CurrentSetup.GetSafetyPlane
 
         :rtype: tuple
@@ -398,15 +407,15 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetStockFromSetup(CATBSTR oStockPath)
-                | 
+                |
                 |     Retrieves the path of the Stock file from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the the path of the Stock
                 |         fileoStockPath from the manufacturing setup
                 |         CurrentSetup
-                | 
+                |
                 |          call CurrentSetup.GetStockFromSetup(oStockPath)
 
         :rtype: str
@@ -422,15 +431,15 @@ class ManufacturingSetup(ManufacturingActivity):
                 | o Sub GetToolChangePoint(double oX,
                 | double oY,
                 | double oZ)
-                | 
+                |
                 |     Get the ToolChange point of the machine linked to a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example gets the point with coordinates X,Y,Z as
                 |         ToolChangePoint in the manufacturing setup
                 |         CurrentSetup
-                | 
+                |
                 |          call CurrentSetup.GetToolChangePoint(X,Y,Z)
 
         :rtype: tuple
@@ -444,7 +453,7 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ImportCATSetting(CATBSTR XMLFilePath)
-                | 
+                |
                 |     ImportCATSetting. Import the CATSetting in xml format from a specified location.
                 |     XMLFilePath = Path to the xml file.
                 |     eg, "D:/dirs/settings.xml" Call on Current Manufacturngsetup
@@ -461,20 +470,20 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func InProcessModelBodiesCount() As long
-                | 
+                |
                 |     Returns the number of In Process Model Bodies from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oIPMBodiesListSize
                 |             The number of In Process Model Bodies of this setup
-                |             
-                | 
+                |
+                |
                 |     Example:
                 |         The following example retrieves the number of In Process Model Bodies
                 |         of the setup CurrentSetup in IPMBodiesListSize.
-                | 
+                |
                 |          Dim CurrentSetup As ManufacturingSetup
                 |          Set CurrentSetup = ...
                 |          Dim IPMBodiesListSize As Long
@@ -492,24 +501,24 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListDesignGeometries(CATSafeArrayVariant
                 | oListOfDesignGeometries)
-                | 
+                |
                 |     Retrieves the design geometries list from a Manufacturing Setup. Each of
                 |     these geometries may be either a Product or a Body.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfDesignGeometries
                 |             The retrieved list.
                 |             The array must be previously initialized using the
-                |             
-                | 
-                |         DesignGeometriesCount method. 
-                | 
+                |
+                |
+                |         DesignGeometriesCount method.
+                |
                 | Example:
                 |     The following example retrieves the design geometries list of the
                 |     manufacturing setup CurrentSetup in
                 |     ListOfDesignGeometries.
-                | 
+                |
                 |      Dim CurrentSetup As ManufacturingSetup
                 |      Set CurrentSetup = ...
                 |      Dim DesignGeometriesListSize As Long
@@ -524,7 +533,7 @@ class ManufacturingSetup(ManufacturingActivity):
         :rtype: tuple
         """
         return self.manufacturing_setup.ListDesignGeometries()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -548,24 +557,24 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListDesignGeometriesProducts(CATSafeArrayVariant
                 | oListOfDesignGeometriesProducts)
-                | 
+                |
                 |     Retrieves the design geometries products list from a Manufacturing Setup.
                 |     Each of these geometries may be either a Product or a
                 |     Body.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfDesignGeometriesProducts
                 |             The retrieved list.
                 |             The array must be previously initialized using the
-                |             
+                |
                 |         DesignGeometriesCount method.
-                | 
+                |
                 | Example:
                 |     The following example retrieves the design geometries list of the
                 |     manufacturing setup CurrentSetup in
                 |     ListOfDesignGeometriesProducts.
-                | 
+                |
                 |      Dim CurrentSetup As ManufacturingSetup
                 |      Set CurrentSetup = ...
                 |      Dim DesignGeometriesListSize As Long
@@ -580,7 +589,7 @@ class ManufacturingSetup(ManufacturingActivity):
         :rtype: tuple
         """
         return self.manufacturing_setup.ListDesignGeometriesProducts()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -604,24 +613,24 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListFixtureGeometries(CATSafeArrayVariant
                 | oListOfFixtureGeometries)
-                | 
+                |
                 |     Retrieves the fixture geometries list from a Manufacturing Setup. Each of
                 |     these geometries may be either a Product or a Body.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfFixtureGeometries
                 |             The retrieved list.
                 |             The array must be previously initialized using the
-                |             
-                | 
-                |         FixtureGeometriesCount method. 
-                | 
+                |
+                |
+                |         FixtureGeometriesCount method.
+                |
                 | Example:
                 |     The following example retrieves the fixture geometries list of the
                 |     manufacturing setup CurrentSetup in
                 |     ListOfFixtureGeometries.
-                | 
+                |
                 |      Dim CurrentSetup As ManufacturingSetup
                 |      Set CurrentSetup = ...
                 |      Dim FixtureGeometriesListSize As Long
@@ -636,7 +645,7 @@ class ManufacturingSetup(ManufacturingActivity):
         :rtype: tuple
         """
         return self.manufacturing_setup.ListFixtureGeometries(tuple)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -652,7 +661,9 @@ class ManufacturingSetup(ManufacturingActivity):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def list_fixture_geometries_products(self, o_list_of_fixture_geometries_products: tuple) -> tuple:
+    def list_fixture_geometries_products(
+        self, o_list_of_fixture_geometries_products: tuple
+    ) -> tuple:
         """
         .. note::
             :class: toggle
@@ -660,24 +671,24 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListFixtureGeometriesProducts(CATSafeArrayVariant
                 | oListOfFixtureGeometriesProducts)
-                | 
+                |
                 |     Retrieves the Fixture geometries products list from a Manufacturing Setup.
                 |     Each of these geometries may be either a Product or a
                 |     Body.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfFixtureGeometriesProducts
                 |             The retrieved list.
                 |             The array must be previously initialized using the
                 |
-                |         FixtureGeometriesCount method. 
-                | 
+                |         FixtureGeometriesCount method.
+                |
                 | Example:
                 |     The following example retrieves the Fixture geometries list of the
                 |     manufacturing setup CurrentSetup in
                 |     ListOfFixtureGeometriesProducts.
-                | 
+                |
                 |      Dim CurrentSetup As ManufacturingSetup
                 |      Set CurrentSetup = ...
                 |      Dim FixtureGeometriesListSize As Long
@@ -692,8 +703,10 @@ class ManufacturingSetup(ManufacturingActivity):
         :param tuple o_list_of_fixture_geometries_products:
         :rtype: tuple
         """
-        return self.manufacturing_setup.ListFixtureGeometriesProducts(o_list_of_fixture_geometries_products)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_setup.ListFixtureGeometriesProducts(
+            o_list_of_fixture_geometries_products
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -717,22 +730,22 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListInProcessModelBodies(CATSafeArrayVariant
                 | oListOfIPMBodies)
-                | 
+                |
                 |     Retrieves the In Process Model Bodies list from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfIPMBodies
                 |             The retrieved list.
                 |             The array must be previously initialized using the
                 |
-                |         InProcessModelBodiesCount method. 
-                | 
+                |         InProcessModelBodiesCount method.
+                |
                 | Example:
                 |     The following example retrieves the In Process Model Bodies list of the
                 |     manufacturing setup CurrentSetup in ListOfIPMBodies.
-                | 
+                |
                 |      Dim CurrentSetup As ManufacturingSetup
                 |      Set CurrentSetup = ...
                 |      Dim IPMBodiesListSize As Long
@@ -746,7 +759,7 @@ class ManufacturingSetup(ManufacturingActivity):
         :rtype: tuple
         """
         return self.manufacturing_setup.ListInProcessModelBodies()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -770,23 +783,23 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListStockGeometries(CATSafeArrayVariant
                 | oListOfStockGeometries)
-                | 
+                |
                 |     Retrieves the stock geometries list from a Manufacturing Setup. Each of
                 |     these geometries may be either a Product or a Body.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfStockGeometries
                 |             The retrieved list.
                 |             The array must be previously initialized using the
-                |             
-                | 
-                |         StockGeometriesCount method. 
-                | 
+                |
+                |
+                |         StockGeometriesCount method.
+                |
                 | Example:
                 |     The following example retrieves the stock geometries list of the
                 |     manufacturing setup CurrentSetup in ListOfStockGeometries.
-                | 
+                |
                 |      Dim CurrentSetup As ManufacturingSetup
                 |      Set CurrentSetup = ...
                 |      Dim StockGeometriesListSize As Long
@@ -800,7 +813,7 @@ class ManufacturingSetup(ManufacturingActivity):
         :rtype: tuple
         """
         return self.manufacturing_setup.ListStockGeometries()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -824,24 +837,24 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListStockGeometriesProducts(CATSafeArrayVariant
                 | oListOfStockGeometriesProducts)
-                | 
+                |
                 |     Retrieves the Stock geometries products list from a Manufacturing Setup.
                 |     Each of these geometries may be either a Product or a
                 |     Body.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oListOfStockGeometriesProducts
                 |             The retrieved list.
                 |             The array must be previously initialized using the
                 |
-                |         StockGeometriesCount method. 
-                | 
+                |         StockGeometriesCount method.
+                |
                 | Example:
                 |     The following example retrieves the Stock geometries list of the
                 |     manufacturing setup CurrentSetup in
                 |     ListOfStockGeometriesProducts.
-                | 
+                |
                 |      Dim CurrentSetup As ManufacturingSetup
                 |      Set CurrentSetup = ...
                 |      Dim StockGeometriesListSize As Long
@@ -855,7 +868,7 @@ class ManufacturingSetup(ManufacturingActivity):
         :rtype: tuple
         """
         return self.manufacturing_setup.ListStockGeometriesProducts()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -879,7 +892,7 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ReadMfgData(CATBSTR iFileName,
                 | CATSafeArrayVariant iNCMILLSET)
-                | 
+                |
                 |     ReadMfgData. Read Manufacturing V4 data.
                 |     iFileName = Path for V4 product
                 |     iNCMILLSET = NC sets Acts Same as command "Read Manufacturing data from V4 model"
@@ -891,7 +904,7 @@ class ManufacturingSetup(ManufacturingActivity):
         :rtype: None
         """
         return self.manufacturing_setup.ReadMfgData(i_file_name, i_ncmillset)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -915,24 +928,26 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDesignPart(AnyObject iPart,
                 | Product iProduct)
-                | 
+                |
                 |     Associates the design part to a Manufacturing Setup.
                 |     The part must be a Body feature (Geometrical Set, Ordered Geometrical Set,
                 |     PartBody, Body.n)
-                | 
+                |
                 |     Example:
                 |         The following example associates the part iPart belonging to the
                 |         Product iProduct to the manufacturing setup
                 |         CurrentSetup
-                | 
+                |
                 |          call CurrentSetup.SetPart(iPart,iProduct)
 
         :param AnyObject i_part:
         :param Product i_product:
         :rtype: None
         """
-        return self.manufacturing_setup.SetDesignPart(i_part.com_object, i_product.com_object)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_setup.SetDesignPart(
+            i_part.com_object, i_product.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -955,21 +970,21 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetProductAndReconciliate(Product iProduct)
-                | 
+                |
                 |     Associate the Product to a Manufacturing Setup and reconciliate
                 |     links.
-                | 
+                |
                 |     Example:
                 |         The following example associates the Product iProduct to the
                 |         manufacturing setup CurrentSetup
-                | 
+                |
                 |          call CurrentSetup.SetProductAndReconciliate(iProduct)
 
         :param Product i_product:
         :rtype: None
         """
         return self.manufacturing_setup.SetProductAndReconciliate(i_product.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -993,14 +1008,14 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSafetyPlane(AnyObject iSafetyPlane,
                 | Product iProduct)
-                | 
+                |
                 |     Associates a Safety Plane to a Manufacturing Setup.
-                | 
+                |
                 |     Example:
                 |         The following example associates the Safety Plane iSafetyPlane
                 |         belonging to the Product iProduct to the manufacturing setup
                 |         CurrentSetup
-                | 
+                |
                 |          call
                 |          CurrentSetup.SetSafetyPlane(iSafetyPlane,iProduct)
 
@@ -1008,8 +1023,10 @@ class ManufacturingSetup(ManufacturingActivity):
         :param Product i_product:
         :rtype: None
         """
-        return self.manufacturing_setup.SetSafetyPlane(i_safety_plane.com_object, i_product.com_object)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_setup.SetSafetyPlane(
+            i_safety_plane.com_object, i_product.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1033,24 +1050,26 @@ class ManufacturingSetup(ManufacturingActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetStock(AnyObject iStock,
                 | Product iProduct)
-                | 
+                |
                 |     Associates a stock to a Manufacturing Setup.
                 |     The stock must be either a Body feature (Geometrical Set, Ordered
                 |     Geometrical Set, PartBody, Body.n) either a CGR product.
-                | 
+                |
                 |     Example:
                 |         The following example associates the stock iStock belonging to the
                 |         Product iProduct to the manufacturing setup
                 |         CurrentSetup
-                | 
+                |
                 |          call CurrentSetup.SetStock(iStock,iProduct)
 
         :param AnyObject i_stock:
         :param Product i_product:
         :rtype: None
         """
-        return self.manufacturing_setup.SetStock(i_stock.com_object, i_product.com_object)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_setup.SetStock(
+            i_stock.com_object, i_product.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1075,15 +1094,15 @@ class ManufacturingSetup(ManufacturingActivity):
                 | o Sub SetToolChangePoint(double iX,
                 | double iY,
                 | double iZ)
-                | 
+                |
                 |     Initialise the ToolChange point of the machine linked to a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example initialise the point with coordinates X,Y,Z as
                 |         ToolChangePoint in the manufacturing setup
                 |         CurrentSetup
-                | 
+                |
                 |          call CurrentSetup.SetToolChangePoint(X,Y,Z)
 
         :param float i_x:
@@ -1100,14 +1119,14 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetToolChangePointByName(CATBSTR iPointName)
-                | 
+                |
                 |     Initialise the ToolChange point of the machine linked to a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Example:
                 |         The following example initialise the point PT23 as ToolChangePoint in
                 |         the manufacturing setup CurrentSetup
-                | 
+                |
                 |          call CurrentSetup.SetToolChangePointByName(PT23)
 
         :param str i_point_name:
@@ -1122,19 +1141,19 @@ class ManufacturingSetup(ManufacturingActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func StockGeometriesCount() As long
-                | 
+                |
                 |     Returns the number of stock geometries from a Manufacturing
                 |     Setup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStockGeometriesListSize
-                |             The number of stock geometries of this setup 
-                | 
+                |             The number of stock geometries of this setup
+                |
                 |     Example:
                 |         The following example retrieves the number of stock geometries of the
                 |         setup CurrentSetup in StockGeometriesListSize.
-                | 
+                |
                 |          Dim CurrentSetup As ManufacturingSetup
                 |          Set CurrentSetup = ...
                 |          Dim StockGeometriesListSize As Long

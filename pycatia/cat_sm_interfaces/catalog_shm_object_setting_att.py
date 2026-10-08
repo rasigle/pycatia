@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,39 +14,39 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class CatalogShmObjectSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         CatalogSHMObjectSettingAtt
-                | 
-                | Represents the CATIA Sheet Metal Aerospace General setting controller
-                | object.
-                | Role: The CATIA Sheet Metal Aerospace setting General controller object deals
-                | with the setting attributes displayed in the Aerospace Sheet Metal Design
-                | General property page. To access this property page:
-                | 
-                |     Click the Options command in the Tools menu
-                |     Click + left of Mechanical Design to unfold the workbench
-                |     list
-                |     Click General
-                | 
-                | The Sheet Metal Aerospace General setting controller object can be retrieved as
-                | an item of the setting controller collection using its name
-                | "CATIStmCatalogSHMObjectSettingCtrl" as follows:
-                | 
-                |  Dim settingControllers1 As SettingControllers
-                |  Set settingControllers1 = CATIA.SettingControllers
-                |  Dim CATIAStmCatalogSHMObjectSettingAtt1 As SettingController
-                |  Set CATIAStmCatalogSHMObjectSettingAtt1 = settingControllers1.Item("CATIStmCatalogSHMObjectSettingCtrl")
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         CatalogSHMObjectSettingAtt
+            |
+            | Represents the CATIA Sheet Metal Aerospace General setting controller
+            | object.
+            | Role: The CATIA Sheet Metal Aerospace setting General controller object deals
+            | with the setting attributes displayed in the Aerospace Sheet Metal Design
+            | General property page. To access this property page:
+            |
+            |     Click the Options command in the Tools menu
+            |     Click + left of Mechanical Design to unfold the workbench
+            |     list
+            |     Click General
+            |
+            | The Sheet Metal Aerospace General setting controller object can be retrieved as
+            | an item of the setting controller collection using its name
+            | "CATIStmCatalogSHMObjectSettingCtrl" as follows:
+            |
+            |  Dim settingControllers1 As SettingControllers
+            |  Set settingControllers1 = CATIA.SettingControllers
+            |  Dim CATIAStmCatalogSHMObjectSettingAtt1 As SettingController
+            |  Set CATIAStmCatalogSHMObjectSettingAtt1 = settingControllers1.Item("CATIStmCatalogSHMObjectSettingCtrl")
+
     """
 
     def __init__(self, com_object):
@@ -61,7 +61,7 @@ class CatalogShmObjectSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SHMStdProfPath() As CATBSTR
-                | 
+                |
                 |     Returns or sets the SHMStdProfPath setting parameter
                 |     value.
                 |     Role: The SHMStdProfPath setting parameter stores the path to the CATIA
@@ -90,7 +90,7 @@ class CatalogShmObjectSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSHMStdProfPathInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the SHMStdProfPath setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -99,7 +99,9 @@ class CatalogShmObjectSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.catalog_shm_object_setting_att.GetSHMStdProfPathInfo(io_admin_level, io_locked)
+        return self.catalog_shm_object_setting_att.GetSHMStdProfPathInfo(
+            io_admin_level, io_locked
+        )
 
     def set_shm_std_prof_path_lock(self, i_locked: bool) -> None:
         """
@@ -108,7 +110,7 @@ class CatalogShmObjectSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSHMStdProfPathLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the SHMStdProfPath setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -116,7 +118,7 @@ class CatalogShmObjectSettingAtt(SettingController):
         :rtype: None
         """
         return self.catalog_shm_object_setting_att.SetSHMStdProfPathLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

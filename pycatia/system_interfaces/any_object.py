@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 from typing import TYPE_CHECKING
 
 from pycatia.base_interfaces.pycatia import PyCATIA
@@ -18,21 +19,21 @@ if TYPE_CHECKING:
 
 class AnyObject(PyCATIA):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
+        CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 AnyObject
-                |
-                | Represents the base object for all other objects except collection and
-                | reference objects.
-                | As a base object, it provides properties shared by any other
-                | object.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 AnyObject
+            |
+            | Represents the base object for all other objects except collection and
+            | reference objects.
+            | As a base object, it provides properties shared by any other
+            | object.
 
     """
 
@@ -41,7 +42,7 @@ class AnyObject(PyCATIA):
         self.com_object = com_object
 
     @property
-    def application(self) -> 'Application':
+    def application(self) -> "Application":
         """
         .. note::
             :class: toggle
@@ -75,6 +76,7 @@ class AnyObject(PyCATIA):
         :rtype: com_object
         """
         from pycatia.in_interfaces.application import Application
+
         return Application(self.com_object.Application)
 
     @property
@@ -119,7 +121,7 @@ class AnyObject(PyCATIA):
         self.com_object.Name = value
 
     @property
-    def parent(self) -> 'AnyObject':
+    def parent(self) -> "AnyObject":
         """
         .. note::
             :class: toggle
@@ -147,7 +149,7 @@ class AnyObject(PyCATIA):
 
         return AnyObject(self.com_object.Parent)
 
-    def get_item(self, id_name: str) -> 'AnyObject':
+    def get_item(self, id_name: str) -> "AnyObject":
         """
         .. note::
             :class: toggle

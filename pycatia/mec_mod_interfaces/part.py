@@ -1,11 +1,11 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
 
@@ -34,27 +34,27 @@ from pycatia.cat_tps_interfaces.annotation_sets import AnnotationSets
 
 class Part(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Part
-                |
-                | The root level object inside a PartDocument object.
-                | Role: It aggregates all the objects making up the part
-                | document.
-                | It provides many factories and collections. The collections list only the
-                | direct children of the part. Selection.Search allows to get all objects of one
-                | type.
-                |
-                | See also:
-                |     PartDocument
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Part
+            |
+            | The root level object inside a PartDocument object.
+            | Role: It aggregates all the objects making up the part
+            | document.
+            | It provides many factories and collections. The collections list only the
+            | direct children of the part. Selection.Search allows to get all objects of one
+            | type.
+            |
+            | See also:
+            |     PartDocument
 
     """
 
@@ -98,7 +98,7 @@ class Part(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property AnnotationSets() As Collection (Read Only)
-                | 
+                |
                 |     Returns the collection object containing the annotation sets. All the
                 |     annotation sets that are aggregated in the part might be accessed thru that
                 |     collection.
@@ -132,7 +132,7 @@ class Part(AnyObject):
                 |     Example:
                 |         The following example returns in axisSystems the coordinate systems of
                 |         the partRoot part from the partDoc part document:
-                | 
+                |
                 |          Set partRoot = partDoc.Part
                 |          Dim axisSystems As AxisSystems
                 |          Set axisSystems = partRoot.AxisSystems
@@ -153,7 +153,7 @@ class Part(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Bodies() As Bodies (Read Only)
-                | 
+                |
                 |     Returns the collection object containing the bodies that are direct
                 |     children of the part.
                 |     It does not return all the bodies of the part, particularly the bodies in a
@@ -180,7 +180,7 @@ class Part(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Constraints() As Constraints (Read Only)
-                | 
+                |
                 |     Returns the collection object containing the part constraints. Only 3D
                 |     constraints are concerned here, 2D constraints are managed in
                 |     sketches.
@@ -207,7 +207,7 @@ class Part(AnyObject):
                 | o Property Density() As double (Read Only)
                 |
                 |     Returns the part density.
-                | 
+                |
                 |     Example:
                 |         The following example displays the density of the
                 |         part:
@@ -257,7 +257,7 @@ class Part(AnyObject):
                 |     Example:
                 |         The following example returns in geomElts the 3D elements of the
                 |         partRoot part from the partDoc part document:
-                | 
+                |
                 |          Set partRoot = partDoc.Part
                 |          Set geomElts = partRoot.GeometricElements
 
@@ -282,7 +282,7 @@ class Part(AnyObject):
                 |         The following example returns in hybridBodiesColl the collection of
                 |         hybrid bodies of the partRoot part from the partDoc part
                 |         document:
-                | 
+                |
                 |          Set partRoot = partDoc.Part
                 |          Set hybridBodiesColl = partRoot.HybridBodies
 
@@ -299,7 +299,7 @@ class Part(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property HybridShapeFactory() As Factory (Read Only)
-                | 
+                |
                 |     Returns the part hybrid shape factory. It allows the creation of hybrid
                 |     shapes in the part.
                 |
@@ -415,7 +415,7 @@ class Part(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property OriginElements() As OriginElements (Read Only)
-                | 
+                |
                 |     Returns the object defining the part 3D reference axis
                 |     system.
                 |
@@ -612,7 +612,9 @@ class Part(AnyObject):
         """
         return self.part.Activate(i_object.com_object)
 
-    def create_reference_from_b_rep_name(self, i_label: str, i_object_context: AnyObject):
+    def create_reference_from_b_rep_name(
+        self, i_label: str, i_object_context: AnyObject
+    ):
         """
         .. note::
             :class: toggle
@@ -642,7 +644,9 @@ class Part(AnyObject):
         :param AnyObject i_object_context:
         :rtype: Reference
         """
-        return Reference(self.part.CreateReferenceFromBRepName(i_label, i_object_context.com_object))
+        return Reference(
+            self.part.CreateReferenceFromBRepName(i_label, i_object_context.com_object)
+        )
 
     def create_reference_from_geometry(self, i_object: AnyObject) -> Reference:
         """
@@ -755,7 +759,7 @@ class Part(AnyObject):
         if self.part.FindObjectByName(i_obj_name):
             return AnyObject(self.part.FindObjectByName(i_obj_name))
         else:
-            raise CATIAApplicationException('Could not find object.')
+            raise CATIAApplicationException("Could not find object.")
 
     def get_customer_factory(self, i_factory_iid: str) -> Factory:
         """
@@ -890,7 +894,7 @@ class Part(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub Update()
-                | 
+                |
                 |     Updates of the part result with respect to its specifications. Any
                 |     composing specification that hasn't its result up-to-date will recompute it,
                 |     thus propagating changes to the whole part.
@@ -912,7 +916,7 @@ class Part(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub UpdateObject(AnyObject iObject)
-                | 
+                |
                 |     Updates an object with respect to its specifications. Any composing
                 |     specification of the object that hasn't its result up-to-date will recompute
                 |     it, thus propagating changes to the object.

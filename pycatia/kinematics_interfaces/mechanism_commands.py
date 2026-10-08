@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.kinematics_interfaces.mechanism_command import MechanismCommand
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
@@ -15,21 +16,21 @@ from pycatia.types.general import CATVariant
 
 class MechanismCommands(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     MechanismCommands
-                | 
-                | A collection of all MechanismCommand entities currently managed by the
-                | application.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     MechanismCommands
+            |
+            | A collection of all MechanismCommand entities currently managed by the
+            | application.
+
     """
 
     def __init__(self, com_object):
@@ -43,16 +44,16 @@ class MechanismCommands(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Add() As MechanismCommand
-                | 
+                |
                 |     Creates a new MechanismCommand and adds it to the MechanismCommands
                 |     collection.
-                | 
+                |
                 |     Returns:
-                |         The created MechanismCommand 
+                |         The created MechanismCommand
                 |     Example:
                 |         This example creates a new MechanismCommand in the TheCommands
                 |         collection.
-                | 
+                |
                 |             Dim NewCommand As MechanismCommand
                 |             Set NewCommand = TheCommands.Add()
 
@@ -67,28 +68,28 @@ class MechanismCommands(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As MechanismCommand
-                | 
+                |
                 |     Returns a MechanismCommand using its index or its name from the Commands
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the MechanismCommand to retrieve from the
                 |             collection of Commands. As a numerics, this index is the rank of the
                 |             MechanismCommand in the collection. The index of the first MechanismCommand in
                 |             the collection is 1, and the index of the last MechanismCommand is Count. As a
                 |             string, it is the name you assigned to the MechanismCommand using the
-                |             
-                | 
-                |         AnyObject.Name property. 
+                |
+                |
+                |         AnyObject.Name property.
                 |     Returns:
-                |         The retrieved MechanismCommand 
+                |         The retrieved MechanismCommand
                 |     Example:
                 |         This example returns in ThisCommand the third MechanismCommand in the
                 |         collection, and in ThatCommand the MechanismCommand named
                 |         MyCommand.
-                | 
+                |
                 |          Dim ThisCommand As MechanismCommand
                 |          Set ThisCommand = TheCommands.Item(3)
                 |          Dim ThatCommand As MechanismCommand
@@ -106,27 +107,27 @@ class MechanismCommands(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Remove a MechanismCommand from the MechanismCommands
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the MechanismCommand to retrieve from the
                 |             collection of MechanismCommands. As a numerics, this index is the rank of the
                 |             MechanismCommand in the collection. The index of the first MechanismCommand in
                 |             the collection is 1, and the index of the last MechanismCommand is Count. As a
                 |             string, it is the name you assigned to the MechanismCommand.
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         Nothing 
+                |         Nothing
                 |     Example:
                 |         The following example removes the tenth MechanismCommand and the
                 |         MechanismCommand named CommandTwo from the TheCommands
                 |         collection.
-                | 
+                |
                 |             TheCommands.Remove(10)
                 |             TheCommands.Remove("CommandTwo")
 
@@ -134,7 +135,7 @@ class MechanismCommands(Collection):
         :rtype: None
         """
         return self.mechanism_commands.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

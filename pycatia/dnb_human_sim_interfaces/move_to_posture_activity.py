@@ -1,14 +1,19 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.enumeration.enums import HTSMotionBasis, HTSManikinReferential, HTSEndEffector
+
+from pycatia.enumeration.enums import (
+    HTSMotionBasis,
+    HTSManikinReferential,
+    HTSEndEffector,
+)
 from pycatia.dnb_human_modeling_interfaces.swkik_constraint import SWKIKConstraint
 from pycatia.dnb_human_sim_interfaces.worker_activity import WorkerActivity
 from pycatia.product_structure_interfaces.product import Product
@@ -16,25 +21,25 @@ from pycatia.product_structure_interfaces.product import Product
 
 class MoveToPostureActivity(WorkerActivity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                         DNBHumanSimInterfaces.WorkerActivity
-                |                             MoveToPostureActivity
-                | 
-                | The object that represents an MoveToPosture(MTP) Activity.
-                | MTP allows to store a target posture for a specific manikin at a specific time
-                | in the process. When a MTP is created, the current posture of the manikin along
-                | with any constraints (if any).
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                         DNBHumanSimInterfaces.WorkerActivity
+            |                             MoveToPostureActivity
+            |
+            | The object that represents an MoveToPosture(MTP) Activity.
+            | MTP allows to store a target posture for a specific manikin at a specific time
+            | in the process. When a MTP is created, the current posture of the manikin along
+            | with any constraints (if any).
+
     """
 
     def __init__(self, com_object):
@@ -49,7 +54,7 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AccelerationPercent() As double
-                | 
+                |
                 |     Returns or Sets Acceleration Percentage
 
         :rtype: float
@@ -73,7 +78,7 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CornerRounding() As double
-                | 
+                |
                 |     Returns or Sets Corner Rounding
 
         :rtype: float
@@ -97,7 +102,7 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MotionBasis() As HTSMotionBasis
-                | 
+                |
                 |     Returns or Sets Motion-Basis (see HTSMotionBasis for list of possible
                 |     values)
 
@@ -122,7 +127,7 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Referential() As HTSManikinReferential
-                | 
+                |
                 |     Returns or Sets Manikin Referential (see HTSManikinReferential for list of
                 |     possible values)
 
@@ -147,7 +152,7 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SpeedPercent() As double
-                | 
+                |
                 |     Returns or Sets Speed Percentage
 
         :rtype: float
@@ -170,21 +175,21 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddConstraint(SWKIKConstraint piConstraint)
-                | 
+                |
                 |     Adds the given constraint to MoveToPosture activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piConstraint
-                |             Constraint to be added. (see 
-                | 
+                |             Constraint to be added. (see
+                |
                 |         SWKIKConstraint for list of possible values)
 
         :param SWKIKConstraint pi_constraint:
         :rtype: None
         """
         return self.move_to_posture_activity.AddConstraint(pi_constraint.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -207,7 +212,7 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ApplyPostureToManikin()
-                | 
+                |
                 |     Set the MoveToPosture(MTP) Activity's DegreeOfFreedom(DOF) values onto
                 |     Manikin (which owns this MTP activity).
 
@@ -222,14 +227,14 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConstraint(long iIndex) As SWKIKConstraint
-                | 
+                |
                 |     Returns the constraint at given index
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             Index in the constraint-list to be retrieved 
-                | 
+                |             Index in the constraint-list to be retrieved
+                |
                 |     Returns:
                 |         pioConstraint Constraint at given index (see SWKIKConstraint for list
                 |         of possible values)
@@ -246,13 +251,13 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetJointValues(CATSafeArrayVariant oJointVals)
-                | 
+                |
                 |     Gets the Manikin's Position and Posture values in 137 doubles. (Array
                 |     includeds Position information - first 6 values represent X,Y,Z and R,P,Y value
                 |     of Manikin w.r.to its Father.)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oJointVals
                 |             Joint Values
 
@@ -260,7 +265,7 @@ class MoveToPostureActivity(WorkerActivity):
         :rtype: None
         """
         return self.move_to_posture_activity.GetJointValues(o_joint_vals)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -283,10 +288,10 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNumberOfConstraints() As long
-                | 
+                |
                 |     Returns the number of constraints on the MoveToPosture
                 |     activity
-                | 
+                |
                 |     Returns:
                 |         iNumber Number of Constraints
 
@@ -294,7 +299,9 @@ class MoveToPostureActivity(WorkerActivity):
         """
         return self.move_to_posture_activity.GetNumberOfConstraints()
 
-    def get_part_relation(self, e_ee: HTSEndEffector, o_product: Product, o_offset_trans: tuple) -> bool:
+    def get_part_relation(
+        self, e_ee: HTSEndEffector, o_product: Product, o_offset_trans: tuple
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -303,7 +310,7 @@ class MoveToPostureActivity(WorkerActivity):
                 | o Func GetPartRelation(HTSEndEffector eEE,
                 | Product oProduct,
                 | CATSafeArrayVariant oOffsetTrans) As boolean
-                | 
+                |
                 |     DEPRECATED. DO NOT USE
 
         :param HTSEndEffector e_ee:
@@ -311,7 +318,9 @@ class MoveToPostureActivity(WorkerActivity):
         :param tuple o_offset_trans:
         :rtype: bool
         """
-        return self.move_to_posture_activity.GetPartRelation(e_ee, o_product.com_object, o_offset_trans)
+        return self.move_to_posture_activity.GetPartRelation(
+            e_ee, o_product.com_object, o_offset_trans
+        )
 
     def get_position(self, o_trans_matrix: tuple) -> None:
         """
@@ -320,11 +329,11 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetPosition(CATSafeArrayVariant oTransMatrix)
-                | 
+                |
                 |     This gets the position value in 12 doubles
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTransMatrix
                 |             The first nine represent succcessively the components of the
                 |             x-axis, y-axis, and z-axis. The last three represent the coordinates of the
@@ -334,7 +343,7 @@ class MoveToPostureActivity(WorkerActivity):
         :rtype: None
         """
         return self.move_to_posture_activity.GetPosition(o_trans_matrix)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -357,12 +366,12 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetPostureValues(CATSafeArrayVariant oPosVals)
-                | 
+                |
                 |     Gets the Manikin's Posture values in 131 doubles. (This array excludes
                 |     Position information)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPosVals
                 |             Posture values
 
@@ -370,7 +379,7 @@ class MoveToPostureActivity(WorkerActivity):
         :rtype: None
         """
         return self.move_to_posture_activity.GetPostureValues(o_pos_vals)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -394,14 +403,14 @@ class MoveToPostureActivity(WorkerActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetSegmentValues(CATBSTR inSegName,
                 | CATSafeArrayVariant oDofVals)
-                | 
+                |
                 |     Gets the DOF values of the given segment from MoveToPosture
                 |     activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         inSegName
-                |             Name of the Segment 
+                |             Name of the Segment
                 |         oDofVals
                 |             Dof values of constraint, array of size 3
 
@@ -410,7 +419,7 @@ class MoveToPostureActivity(WorkerActivity):
         :rtype: None
         """
         return self.move_to_posture_activity.GetSegmentValues(in_seg_name, o_dof_vals)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -433,7 +442,7 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasPartRelation() As boolean
-                | 
+                |
                 |     DEPRECATED. DO NOT USE
 
         :rtype: bool
@@ -447,21 +456,21 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveConstraint(SWKIKConstraint piConstraint)
-                | 
+                |
                 |     Removes the given constraint from MoveToPosture activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piConstraint
-                |             Constraint to be removed. (see 
-                | 
+                |             Constraint to be removed. (see
+                |
                 |         SWKIKConstraint for list of possible values)
 
         :param SWKIKConstraint pi_constraint:
         :rtype: None
         """
         return self.move_to_posture_activity.RemoveConstraint(pi_constraint.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -484,7 +493,7 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCurrentConstraintSet()
-                | 
+                |
                 |     Set the current Constraints existing on Manikin onto MoveToPosture activity
 
         :rtype: None
@@ -498,13 +507,13 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetJointValues(CATSafeArrayVariant oJointVals)
-                | 
+                |
                 |     Sets the Manikin's Position and Posture values with 137 doubles. (Array
                 |     should includes Position information - first 6 values represent X,Y,Z and R,P,Y
                 |     value of Manikin w.r.to its Father.)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oJointVals
                 |             Joint Values
 
@@ -512,7 +521,7 @@ class MoveToPostureActivity(WorkerActivity):
         :rtype: None
         """
         return self.move_to_posture_activity.SetJointValues(o_joint_vals)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -536,7 +545,7 @@ class MoveToPostureActivity(WorkerActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPartRelation(HTSEndEffector eEE,
                 | Product oProduct)
-                | 
+                |
                 |     DEPRECATED. DO NOT USE
 
         :param HTSEndEffector e_ee:
@@ -544,7 +553,7 @@ class MoveToPostureActivity(WorkerActivity):
         :rtype: None
         """
         return self.move_to_posture_activity.SetPartRelation(e_ee, o_product.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -560,7 +569,9 @@ class MoveToPostureActivity(WorkerActivity):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_part_relation_with_offset(self, e_ee: int, o_product: Product, o_offset_trans: tuple) -> None:
+    def set_part_relation_with_offset(
+        self, e_ee: int, o_product: Product, o_offset_trans: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -569,7 +580,7 @@ class MoveToPostureActivity(WorkerActivity):
                 | o Sub SetPartRelationWithOffset(HTSEndEffector eEE,
                 | Product oProduct,
                 | CATSafeArrayVariant oOffsetTrans)
-                | 
+                |
                 |     DEPRECATED. DO NOT USE
 
         :param int e_ee: enum hts_end_effector
@@ -577,8 +588,10 @@ class MoveToPostureActivity(WorkerActivity):
         :param tuple o_offset_trans:
         :rtype: None
         """
-        return self.move_to_posture_activity.SetPartRelationWithOffset(e_ee, o_product.com_object, o_offset_trans)
-        # # # # Autogenerated comment: 
+        return self.move_to_posture_activity.SetPartRelationWithOffset(
+            e_ee, o_product.com_object, o_offset_trans
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -601,20 +614,20 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPosition(CATSafeArrayVariant oTransMatrix)
-                | 
+                |
                 |     Sets the Manikin's position value in the MoveToPosture Activity. ( Pos.
                 |     vals are w.r.to Manikin's Father )
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTransMatrix
                 |             The array initialized with the components to set to the Manikin's
                 |             position. The first nine represent succcessively the components of the x-axis,
                 |             y-axis, and z-axis. The last three represent the coordinates of the origin
-                |             point. 
-                | 
+                |             point.
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the Position of Manikin
                 |          oTransMatrix for MoveToPosture oMTP
                 |
@@ -636,14 +649,14 @@ class MoveToPostureActivity(WorkerActivity):
                 |          oTransMatrix( 9 ) = 0
                 |          oTransMatrix( 10 ) = 0
                 |          oTransMatrix( 11 ) = 947.0
-                | 
+                |
                 |          oMTP.SetPosition(oTransMatrix)
 
         :param tuple o_trans_matrix:
         :rtype: None
         """
         return self.move_to_posture_activity.SetPosition(o_trans_matrix)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -666,11 +679,11 @@ class MoveToPostureActivity(WorkerActivity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPostureValues(CATSafeArrayVariant oPosVals)
-                | 
+                |
                 |     Sets the Manikin's Posture values with 131 values
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPosVals
                 |             Posture values
 
@@ -678,7 +691,7 @@ class MoveToPostureActivity(WorkerActivity):
         :rtype: None
         """
         return self.move_to_posture_activity.SetPostureValues(o_pos_vals)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -702,14 +715,14 @@ class MoveToPostureActivity(WorkerActivity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSegmentValues(CATBSTR inSegName,
                 | CATSafeArrayVariant oDofVals)
-                | 
+                |
                 |     Sets the given DOF values for Segments from MoveToPosture
                 |     activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         inSegName
-                |             Name of the Segment 
+                |             Name of the Segment
                 |         oDofVals
                 |             Dof values of constraint, array of size 3
 
@@ -718,7 +731,7 @@ class MoveToPostureActivity(WorkerActivity):
         :rtype: None
         """
         return self.move_to_posture_activity.SetSegmentValues(in_seg_name, o_dof_vals)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -17,21 +17,21 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeBump(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeBump
-                | 
-                | The Bump feature : an Bump is made up of a body to process and some Bump parameters.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeBump
+            |
+            | The Bump feature : an Bump is made up of a body to process and some Bump parameters.
+
     """
 
     def __init__(self, com_object):
@@ -46,7 +46,7 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BodyToBump() As Reference
-                | 
+                |
                 |     Returns or sets the element to Bump.
 
         :rtype: Reference
@@ -70,7 +70,7 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CenterTension() As RealParam
-                | 
+                |
                 |     Returns or sets the tension center parameter.
 
         :rtype: RealParam
@@ -94,12 +94,12 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ContinuityType() As long
-                | 
+                |
                 |     Returns or sets the continuity type ..
                 |     Legal values: the continuity type is either
-                | 
+                |
                 |      PointContinuity      =0
-                |      TangentContinuity    =1 
+                |      TangentContinuity    =1
                 |      CurvatureContinuity  =2
 
         :rtype: int
@@ -123,7 +123,7 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DeformationCenter() As Reference
-                | 
+                |
                 |     Returns or sets the Deformation Center.
 
         :rtype: Reference
@@ -147,7 +147,7 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DeformationDir() As Reference
-                | 
+                |
                 |     Returns or sets the Deformation Direction.
 
         :rtype: Reference
@@ -171,7 +171,7 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DeformationDist() As Length
-                | 
+                |
                 |     Returns the translate distance (CATIA Parameter).
                 |     Note: Distance value is set or retrieve trough a Literaql
                 |     parameter
@@ -199,7 +199,7 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DeformationDistValue() As double
-                | 
+                |
                 |     Returns or sets the Deformation distance (double) .
                 |     Note: Distance value is expressed in MKS = Meters
                 |     Example to set up 1mm , use .001
@@ -225,7 +225,7 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property LimitCurve() As Reference
-                | 
+                |
                 |     Returns or sets the limit curve.
 
         :rtype: Reference
@@ -249,7 +249,7 @@ class HybridShapeBump(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ProjectionDir() As Reference
-                | 
+                |
                 |     Returns or sets the limit curve.
 
         :rtype: Reference

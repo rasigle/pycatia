@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.cat_sch_platform_interfaces.sch_app_object_factory import SchAppObjectFactory
+
+from pycatia.cat_sch_platform_interfaces.sch_app_object_factory import (
+    SchAppObjectFactory,
+)
 from pycatia.cat_sch_platform_interfaces.sch_base_factory import SchBaseFactory
 from pycatia.cat_sch_platform_interfaces.sch_component import SchComponent
 from pycatia.cat_sch_platform_interfaces.sch_grr import SchGRR
@@ -22,30 +25,32 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SchematicRoot(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchematicRoot
-                | 
-                | Represents the top node of the schematic object tree.
-                | From this node all the queries for lists of schematic objects can be made.
-                | Furthermore, all the factories handles can be obtained through this
-                | interface.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchematicRoot
+            |
+            | Represents the top node of the schematic object tree.
+            | From this node all the queries for lists of schematic objects can be made.
+            | Furthermore, all the factories handles can be obtained through this
+            | interface.
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.schematic_root = com_object
 
-    def get_appl_obj_fact_from_virtual_type(self, i_application_id: str) -> SchAppObjectFactory:
+    def get_appl_obj_fact_from_virtual_type(
+        self, i_application_id: str
+    ) -> SchAppObjectFactory:
         """
         .. note::
             :class: toggle
@@ -53,17 +58,17 @@ class SchematicRoot(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetApplObjFactFromVirtualType(CATBSTR iApplicationID) As
                 | SchAppObjectFactory
-                | 
+                |
                 |     Returns the object factory for specific schematic
                 |     application.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example illustrates how to get the object factory of user
-                |           defined virtual type. 
+                |           defined virtual type.
                 |          User provides implementation to this type.
-                |          
-                | 
+                |
+                |
                 |          Dim objSchPlatformRoot As SchematicRoot
                 |          Dim objSchObjFact As SchAppObjectFactory
                 |          Dim objProductRoot As Product
@@ -74,9 +79,13 @@ class SchematicRoot(AnyObject):
         :param str i_application_id:
         :rtype: SchAppObjectFactory
         """
-        return SchAppObjectFactory(self.schematic_root.GetApplObjFactFromVirtualType(i_application_id))
+        return SchAppObjectFactory(
+            self.schematic_root.GetApplObjFactFromVirtualType(i_application_id)
+        )
 
-    def get_application_object_factory(self, i_application_id: int) -> SchAppObjectFactory:
+    def get_application_object_factory(
+        self, i_application_id: int
+    ) -> SchAppObjectFactory:
         """
         .. note::
             :class: toggle
@@ -84,15 +93,15 @@ class SchematicRoot(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetApplicationObjectFactory(CatSchIDLApplicationID iApplicationID) As
                 | SchAppObjectFactory
-                | 
+                |
                 |     Returns the object factory for specific schematic
                 |     application.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example illustrates how to get the object factory of Piping
                 |          and Instrumentation Diagram application.
-                |          
+                |
                 |          Dim objSchPlatformRoot As SchematicRoot
                 |          Dim objSchObjFact As SchAppObjectFactory
                 |          Dim objProductRoot As Product
@@ -103,9 +112,13 @@ class SchematicRoot(AnyObject):
         :param int i_application_id: enum cat_sch_idl_application_id
         :rtype: SchAppObjectFactory
         """
-        return SchAppObjectFactory(self.schematic_root.GetApplicationObjectFactory(i_application_id))
+        return SchAppObjectFactory(
+            self.schematic_root.GetApplicationObjectFactory(i_application_id)
+        )
 
-    def get_comp_group_from_catalog(self, i_catalog_entry_name: str, i_ctlg_doc: Document) -> SchComponent:
+    def get_comp_group_from_catalog(
+        self, i_catalog_entry_name: str, i_ctlg_doc: Document
+    ) -> SchComponent:
         """
         .. note::
             :class: toggle
@@ -113,15 +126,15 @@ class SchematicRoot(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetCompGroupFromCatalog(CATBSTR iCatalogEntryName,
                 | Document iCtlgDoc) As SchComponent
-                | 
+                |
                 |     Returns specific component group entry in a schematic component catalog
                 |     document.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example illustrates how to get a specific component group entry
                 |           in a schematic component catalog document.
-                |          
+                |
                 |          Dim objSchPlatformRoot As SchematicRoot
                 |          Dim objSchComponent As SchComponent
                 |          Dim objProductRoot As Product
@@ -135,9 +148,15 @@ class SchematicRoot(AnyObject):
         :param Document i_ctlg_doc:
         :rtype: SchComponent
         """
-        return SchComponent(self.schematic_root.GetCompGroupFromCatalog(i_catalog_entry_name, i_ctlg_doc.com_object))
+        return SchComponent(
+            self.schematic_root.GetCompGroupFromCatalog(
+                i_catalog_entry_name, i_ctlg_doc.com_object
+            )
+        )
 
-    def get_comp_symbol_from_catalog(self, i_catalog_entry_name: str, i_ctlg_doc: Document) -> SchGRR:
+    def get_comp_symbol_from_catalog(
+        self, i_catalog_entry_name: str, i_ctlg_doc: Document
+    ) -> SchGRR:
         """
         .. note::
             :class: toggle
@@ -145,15 +164,15 @@ class SchematicRoot(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetCompSymbolFromCatalog(CATBSTR iCatalogEntryName,
                 | Document iCtlgDoc) As SchGRR
-                | 
+                |
                 |     Returns specific entry in a schematic component catalog
                 |     document.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example illustrates how to get a specific entry in a schematic
                 |           component catalog document.
-                |          
+                |
                 |          Dim objSchPlatformRoot As SchematicRoot
                 |          Dim objSchGRRComp As SchGRRComp
                 |          Dim objProductRoot As Product
@@ -167,7 +186,11 @@ class SchematicRoot(AnyObject):
         :param Document i_ctlg_doc:
         :rtype: SchGRR
         """
-        return SchGRR(self.schematic_root.GetCompSymbolFromCatalog(i_catalog_entry_name, i_ctlg_doc.com_object))
+        return SchGRR(
+            self.schematic_root.GetCompSymbolFromCatalog(
+                i_catalog_entry_name, i_ctlg_doc.com_object
+            )
+        )
 
     def get_components(self) -> SchListOfObjects:
         """
@@ -176,15 +199,15 @@ class SchematicRoot(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetComponents() As SchListOfObjects
-                | 
+                |
                 |     Returns a list of schematic component instances under the
                 |     root.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example illustrates how to get the list of component instances
                 |           from a schematic product document.
-                |          
+                |
                 |          Dim objSchPlatformRoot As SchematicRoot
                 |          Dim objSchListComps As SchListOfObjects
                 |          Set objoSchListComps = objSchPlatformRoot.GetComponents
@@ -200,11 +223,11 @@ class SchematicRoot(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDrawing() As DrawingRoot
-                | 
+                |
                 |     Retrieves the drawing root in the schematic document.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example illustrates how to get the drawing of a schematic
                 |           document.
                 |
@@ -274,7 +297,9 @@ class SchematicRoot(AnyObject):
         :param AnyObject i_object:
         :rtype: AnyObject
         """
-        return AnyObject(self.schematic_root.GetInterface(i_interface_name, i_object.com_object))
+        return AnyObject(
+            self.schematic_root.GetInterface(i_interface_name, i_object.com_object)
+        )
 
     def get_ref_components(self) -> SchListOfObjects:
         """

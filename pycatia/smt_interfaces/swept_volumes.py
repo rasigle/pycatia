@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.document import Document
@@ -19,20 +19,20 @@ from pycatia.system_interfaces.collection import Collection
 
 class SweptVolumes(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     SweptVolumes
-                | 
-                | Interface to compute swept volumes.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     SweptVolumes
+            |
+            | Interface to compute swept volumes.
+
     """
 
     def __init__(self, com_object):
@@ -40,15 +40,15 @@ class SweptVolumes(Collection):
         self.swept_volumes = com_object
 
     def add(
-            self,
-            replay: Replay,
-            i_products_to_swept: tuple,
-            i_product_reference: Product,
-            i_lod_mode: int,
-            i_accuracy: float,
-            i_shape_name: str,
-            i_activated_shape: int,
-            i_default_shape: int
+        self,
+        replay: Replay,
+        i_products_to_swept: tuple,
+        i_product_reference: Product,
+        i_lod_mode: int,
+        i_accuracy: float,
+        i_shape_name: str,
+        i_activated_shape: int,
+        i_default_shape: int,
     ) -> SweptVolume:
         """
         .. note::
@@ -63,16 +63,16 @@ class SweptVolumes(Collection):
                 | CATBSTR iShapeName,
                 | long iActivatedShape,
                 | long iDefaultShape) As SweptVolume
-                | 
+                |
                 |     Creates a new SweptVolume and adds it to the SweptVolumes collection. This
                 |     function is deprecated.
-                | 
+                |
                 |     Returns:
-                |         The created SweptVolume 
+                |         The created SweptVolume
                 |     Example:
                 |         The following example creates a SweptVolume newSweptVolume in the
                 |         SweptVolume collection.
-                | 
+                |
                 |          Set SweptVolume = SweptVolumes.Add
 
         :param Replay replay:
@@ -94,20 +94,20 @@ class SweptVolumes(Collection):
                 i_accuracy,
                 i_shape_name,
                 i_activated_shape,
-                i_default_shape
+                i_default_shape,
             )
         )
 
     def add_from_swept_able(
-            self,
-            i_swept_able: AnyObject,
-            i_products_to_swept: tuple,
-            i_product_reference: Product,
-            i_lod_mode: int,
-            i_accuracy: float,
-            i_shape_name: str,
-            i_activated_shape: int,
-            i_default_shape: int
+        self,
+        i_swept_able: AnyObject,
+        i_products_to_swept: tuple,
+        i_product_reference: Product,
+        i_lod_mode: int,
+        i_accuracy: float,
+        i_shape_name: str,
+        i_activated_shape: int,
+        i_default_shape: int,
     ) -> SweptVolume:
         """
         .. note::
@@ -122,10 +122,10 @@ class SweptVolumes(Collection):
                 | CATBSTR iShapeName,
                 | long iActivatedShape,
                 | long iDefaultShape) As SweptVolume
-                | 
+                |
                 |     Creates a new SweptVolume and adds it to the SweptVolumes collection. This
                 |     function is deprecated.
-                | 
+                |
                 |     Returns:
                 |         The created SweptVolume
 
@@ -148,7 +148,7 @@ class SweptVolumes(Collection):
                 i_accuracy,
                 i_shape_name,
                 i_activated_shape,
-                i_default_shape
+                i_default_shape,
             )
         )
 
@@ -159,7 +159,7 @@ class SweptVolumes(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CleanUp()
-                | 
+                |
                 |     Cleans up.
 
         :rtype: None
@@ -167,16 +167,16 @@ class SweptVolumes(Collection):
         return self.swept_volumes.CleanUp()
 
     def compute_a_swept_volume(
-            self,
-            i_replay: Replay,
-            i_swept_able: AnyObject,
-            i_products_to_swept: tuple,
-            i_product_reference: Product,
-            i_lod_mode: int,
-            i_accuracy: float,
-            i_wrapping_grain: float,
-            i_wrapping_ratio: float,
-            i_simplify_accuracy: float
+        self,
+        i_replay: Replay,
+        i_swept_able: AnyObject,
+        i_products_to_swept: tuple,
+        i_product_reference: Product,
+        i_lod_mode: int,
+        i_accuracy: float,
+        i_wrapping_grain: float,
+        i_wrapping_ratio: float,
+        i_simplify_accuracy: float,
     ) -> Document:
         """
         .. note::
@@ -192,9 +192,9 @@ class SweptVolumes(Collection):
                 | double iWrappingGrain,
                 | double iWrappingRatio,
                 | double iSimplifAccuracy) As Document
-                | 
+                |
                 |     Computes a swept volume. This function is deprecated.
-                | 
+                |
                 |     Returns:
                 |         The created SweptVolume
 
@@ -219,20 +219,20 @@ class SweptVolumes(Collection):
                 i_accuracy,
                 i_wrapping_grain,
                 i_wrapping_ratio,
-                i_simplify_accuracy
+                i_simplify_accuracy,
             )
         )
 
     def compute_a_swept_volume_from_replay(
-            self,
-            i_replay: Replay,
-            i_products_to_swept: tuple,
-            i_product_reference: Product,
-            i_lod_mode: int,
-            i_accuracy: float,
-            i_wrapping_grain: float,
-            i_wrapping_ratio: float,
-            i_simplif_accuracy: float
+        self,
+        i_replay: Replay,
+        i_products_to_swept: tuple,
+        i_product_reference: Product,
+        i_lod_mode: int,
+        i_accuracy: float,
+        i_wrapping_grain: float,
+        i_wrapping_ratio: float,
+        i_simplif_accuracy: float,
     ) -> Document:
         """
         .. note::
@@ -247,9 +247,9 @@ class SweptVolumes(Collection):
                 | double iWrappingGrain,
                 | double iWrappingRatio,
                 | double iSimplifAccuracy) As Document
-                | 
+                |
                 |     Computes a swept volume. This function is deprecated.
-                | 
+                |
                 |     Returns:
                 |         The created SweptVolume
 
@@ -272,20 +272,20 @@ class SweptVolumes(Collection):
                 i_accuracy,
                 i_wrapping_grain,
                 i_wrapping_ratio,
-                i_simplif_accuracy
+                i_simplif_accuracy,
             )
         )
 
     def compute_a_swept_volume_from_sweptable(
-            self,
-            i_swept_able: AnyObject,
-            i_products_to_swept: tuple,
-            i_product_reference: Product,
-            i_lod_mode: int,
-            i_accuracy: float,
-            i_wrapping_grain: float,
-            i_wrapping_ratio: float,
-            i_simplify_accuracy: float
+        self,
+        i_swept_able: AnyObject,
+        i_products_to_swept: tuple,
+        i_product_reference: Product,
+        i_lod_mode: int,
+        i_accuracy: float,
+        i_wrapping_grain: float,
+        i_wrapping_ratio: float,
+        i_simplify_accuracy: float,
     ) -> Document:
         """
         .. note::
@@ -301,9 +301,9 @@ class SweptVolumes(Collection):
                 | double iWrappingGrain,
                 | double iWrappingRatio,
                 | double iSimplifAccuracy) As Document
-                | 
+                |
                 |     Computes a swept volume. This function is deprecated.
-                | 
+                |
                 |     Returns:
                 |         The created SweptVolume
 
@@ -326,24 +326,24 @@ class SweptVolumes(Collection):
                 i_accuracy,
                 i_wrapping_grain,
                 i_wrapping_ratio,
-                i_simplify_accuracy
+                i_simplify_accuracy,
             )
         )
 
     def compute_swept_volumes(
-            self,
-            i_replay: Replay,
-            i_swept_able: AnyObject,
-            i_products_to_swept: tuple,
-            i_product_reference: Product,
-            i_lod_mode: int,
-            i_accuracy: float,
-            i_perform_wrapping: int,
-            i_perform_simplif: int,
-            i_wrapping_grain: float,
-            i_wrapping_ratio: float,
-            i_simplify_accuracy: float,
-            o_swept_volume_documents: tuple
+        self,
+        i_replay: Replay,
+        i_swept_able: AnyObject,
+        i_products_to_swept: tuple,
+        i_product_reference: Product,
+        i_lod_mode: int,
+        i_accuracy: float,
+        i_perform_wrapping: int,
+        i_perform_simplif: int,
+        i_wrapping_grain: float,
+        i_wrapping_ratio: float,
+        i_simplify_accuracy: float,
+        o_swept_volume_documents: tuple,
     ) -> None:
         """
         .. note::
@@ -362,36 +362,36 @@ class SweptVolumes(Collection):
                 | double iWrappingRatio,
                 | double iSimplifAccuracy,
                 | CATSafeArrayVariant oSweptVolumeDocuments)
-                | 
+                |
                 |     Computes a swept volume, from a replay or a track.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iReplay
                 |             Replay on which we perfom the swept volume. Can be NULL.
-                |             
+                |
                 |         iSweptAble
                 |             Track (or any other thing that implements CATISweptAble) on which
-                |             we perfom the swept volume. Can be NULL. 
+                |             we perfom the swept volume. Can be NULL.
                 |         iProductsToSwept
-                |             Selection of products to sweep. 
+                |             Selection of products to sweep.
                 |         iProductReference
-                |             Product taken as a reference. 
+                |             Product taken as a reference.
                 |         iLODMode
-                |             Do we want levels of details or not? 
+                |             Do we want levels of details or not?
                 |         iAccuracy
-                |             Filtering positions parameter. 
+                |             Filtering positions parameter.
                 |         iPerformWrapping
-                |             Do we perform a wrapping? 
+                |             Do we perform a wrapping?
                 |         iPerformSimplif
-                |             Do we perform a simplification? 
+                |             Do we perform a simplification?
                 |         iWrappingGrain
-                |             Grain for wrapping. 
+                |             Grain for wrapping.
                 |         iWrappingRatio
-                |             Offset ratio for wrapping. 
+                |             Offset ratio for wrapping.
                 |         iSimplifAccuracy
-                |             Accuracy for simplification. 
-                | 
+                |             Accuracy for simplification.
+                |
                 |     Returns:
                 |         oSweptVolumeDocuments: Documents containing the results.
 
@@ -421,9 +421,9 @@ class SweptVolumes(Collection):
             i_wrapping_grain,
             i_wrapping_ratio,
             i_simplify_accuracy,
-            o_swept_volume_documents
+            o_swept_volume_documents,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -440,18 +440,18 @@ class SweptVolumes(Collection):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def compute_swept_volumes_from_replay(
-            self,
-            i_replay: Replay,
-            i_products_to_swept: tuple,
-            i_product_reference: Product,
-            i_lod_mode: int,
-            i_accuracy: float,
-            i_perform_wrapping: int,
-            i_perform_simplify: int,
-            i_wrapping_grain: float,
-            i_wrapping_ratio: float,
-            i_simplif_accuracy: float,
-            o_swept_volume_documents: tuple
+        self,
+        i_replay: Replay,
+        i_products_to_swept: tuple,
+        i_product_reference: Product,
+        i_lod_mode: int,
+        i_accuracy: float,
+        i_perform_wrapping: int,
+        i_perform_simplify: int,
+        i_wrapping_grain: float,
+        i_wrapping_ratio: float,
+        i_simplif_accuracy: float,
+        o_swept_volume_documents: tuple,
     ) -> None:
         """
         .. note::
@@ -469,32 +469,32 @@ class SweptVolumes(Collection):
                 | double iWrappingRatio,
                 | double iSimplifAccuracy,
                 | CATSafeArrayVariant oSweptVolumeDocuments)
-                | 
+                |
                 |     Computes a swept volume from a replay.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iReplay
-                |             Replay on which we perfom the swept volume. 
+                |             Replay on which we perfom the swept volume.
                 |         iProductsToSwept
-                |             Selection of products to sweep. 
+                |             Selection of products to sweep.
                 |         iProductReference
-                |             Product taken as a reference. 
+                |             Product taken as a reference.
                 |         iLODMode
-                |             Do we want levels of details or not? 
+                |             Do we want levels of details or not?
                 |         iAccuracy
-                |             Filtering positions parameter. 
+                |             Filtering positions parameter.
                 |         iPerformWrapping
-                |             Do we perform a wrapping? 
+                |             Do we perform a wrapping?
                 |         iPerformSimplif
-                |             Do we perform a simplification? 
+                |             Do we perform a simplification?
                 |         iWrappingGrain
-                |             Grain for wrapping. 
+                |             Grain for wrapping.
                 |         iWrappingRatio
-                |             Offset ratio for wrapping. 
+                |             Offset ratio for wrapping.
                 |         iSimplifAccuracy
-                |             Accuracy for simplification. 
-                | 
+                |             Accuracy for simplification.
+                |
                 |     Returns:
                 |         oSweptVolumeDocuments: Documents containing the results.
 
@@ -522,9 +522,9 @@ class SweptVolumes(Collection):
             i_wrapping_grain,
             i_wrapping_ratio,
             i_simplif_accuracy,
-            o_swept_volume_documents
+            o_swept_volume_documents,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -541,18 +541,18 @@ class SweptVolumes(Collection):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def compute_swept_volumes_from_sweptable(
-            self,
-            i_swept_able: AnyObject,
-            i_products_to_swept: tuple,
-            i_product_reference: Product,
-            i_lod_mode: int,
-            i_accuracy: float,
-            i_perform_wrapping: int,
-            i_perform_simplify: int,
-            i_wrapping_grain: float,
-            i_wrapping_ratio: float,
-            i_simplify_accuracy: float,
-            o_swept_volume_documents: tuple
+        self,
+        i_swept_able: AnyObject,
+        i_products_to_swept: tuple,
+        i_product_reference: Product,
+        i_lod_mode: int,
+        i_accuracy: float,
+        i_perform_wrapping: int,
+        i_perform_simplify: int,
+        i_wrapping_grain: float,
+        i_wrapping_ratio: float,
+        i_simplify_accuracy: float,
+        o_swept_volume_documents: tuple,
     ) -> None:
         """
         .. note::
@@ -571,33 +571,33 @@ class SweptVolumes(Collection):
                 | double iWrappingRatio,
                 | double iSimplifAccuracy,
                 | CATSafeArrayVariant oSweptVolumeDocuments)
-                | 
+                |
                 |     Computes a swept volume from a track.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSweptAble
                 |             Track (or any other thing that implements CATISweptAble) on which
-                |             we perfom the swept volume. 
+                |             we perfom the swept volume.
                 |         iProductsToSwept
-                |             Selection of products to sweep. 
+                |             Selection of products to sweep.
                 |         iProductReference
-                |             Product taken as a reference. 
+                |             Product taken as a reference.
                 |         iLODMode
-                |             Do we want levels of details or not? 
+                |             Do we want levels of details or not?
                 |         iAccuracy
-                |             Filtering positions parameter. 
+                |             Filtering positions parameter.
                 |         iPerformWrapping
-                |             Do we perform a wrapping? 
+                |             Do we perform a wrapping?
                 |         iPerformSimplif
-                |             Do we perform a simplification? 
+                |             Do we perform a simplification?
                 |         iWrappingGrain
-                |             Grain for wrapping. 
+                |             Grain for wrapping.
                 |         iWrappingRatio
-                |             Offset ratio for wrapping. 
+                |             Offset ratio for wrapping.
                 |         iSimplifAccuracy
-                |             Accuracy for simplification. 
-                | 
+                |             Accuracy for simplification.
+                |
                 |     Returns:
                 |         oSweptVolumeDocuments: Documents containing the results.
 
@@ -625,9 +625,9 @@ class SweptVolumes(Collection):
             i_wrapping_grain,
             i_wrapping_ratio,
             i_simplify_accuracy,
-            o_swept_volume_documents
+            o_swept_volume_documents,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -650,7 +650,7 @@ class SweptVolumes(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSilhouette(long OnOff)
-                | 
+                |
                 |     Adds the possibility to make a silhouette before the swept volume
 
         :param int on_off:
@@ -665,7 +665,7 @@ class SweptVolumes(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSpatialSplit(long OnOff)
-                | 
+                |
                 |     Adds the possibility to parallelize swept&wrapping after a spatial split.
                 |     This gains in memory but not in CPU usage (takes longer.)
 

@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.osm_interfaces.scene import Scene
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.collection import Collection
@@ -15,20 +16,20 @@ from pycatia.system_interfaces.collection import Collection
 
 class Scenes(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Scenes
-                | 
-                | A collection of scenes contained in a given ProductDocument.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Scenes
+            |
+            | A collection of scenes contained in a given ProductDocument.
+
     """
 
     def __init__(self, com_object):
@@ -43,21 +44,21 @@ class Scenes(Collection):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AddCopyScene(CATBSTR iName,
                 | Scene iReferenceScene) As Scene
-                | 
+                |
                 |     Creates a scene from another and adds it to the Scenes
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
-                |             The name of the scene 
+                |             The name of the scene
                 |         iReferenceScene
-                |             The scene to be copied 
-                | 
+                |             The scene to be copied
+                |
                 |     Returns:
-                |         The created scene 
+                |         The created scene
                 |     Example:
-                | 
+                |
                 |              This example creates the Engine scene from the SpareWheel
                 |              scene
                 |             and adds the scene to the ToolKits collection.
@@ -79,21 +80,21 @@ class Scenes(Collection):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AddNewScene(CATBSTR iName,
                 | Product iReferenceProduct) As Scene
-                | 
+                |
                 |     Creates a scene from a product and adds it to the Scenes
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
-                |             The name of the scene 
+                |             The name of the scene
                 |         iReferenceProduct
-                |             The product used as reference 
-                | 
+                |             The product used as reference
+                |
                 |     Returns:
-                |         The created scene 
+                |         The created scene
                 |     Example:
-                | 
+                |
                 |              This example creates the SpareWheel scene from the reference
                 |              product
                 |             FrontRightWheel and adds the scene to the ToolKits
@@ -115,16 +116,16 @@ class Scenes(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(Scene iScene)
-                | 
+                |
                 |     Removes a scene from the Scenes collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iScene
-                |             The scene to remove. 
-                | 
+                |             The scene to remove.
+                |
                 |     Example:
-                | 
+                |
                 |              This example removes the Engine scene from the ToolKits
                 |              collection.
                 |
@@ -134,7 +135,7 @@ class Scenes(Collection):
         :rtype: None
         """
         return self.scenes.Remove(i_scene.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

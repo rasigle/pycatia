@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SchGRRRoute2(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SchGRRRoute2
-                | 
-                | Manage the graphical representation of a schematic route.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SchGRRRoute2
+            |
+            | Manage the graphical representation of a schematic route.
+
     """
 
     def __init__(self, com_object):
@@ -42,21 +42,21 @@ class SchGRRRoute2(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetReshapeMode(CatSchIDLGRRRouteReshapeMode
                 | oReshapeMode)
-                | 
+                |
                 |     Get the reshape mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oReshapeMode
                 |             Whether or not the route shape is fixed for the purpose of reshaping the route.
                 |             = SchFixedShapeOff : no restriction on how to reshape the route.
                 |             = SchFixedShapeOn : reshape only the route's extremity (the segment directly connected to
                 |             the object that's being moved).
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchGRRRoute2
-                | 
+                |
                 |           ...
                 |          objThisIntf.GetReshapeModeCatSchIDLGRRRouteReshapeMode_Enum
 
@@ -73,21 +73,21 @@ class SchGRRRoute2(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetReshapeMode(CatSchIDLGRRRouteReshapeMode
                 | iReshapeMode)
-                | 
+                |
                 |     Set the reshape mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iReshapeMode
                 |             Whether or not the route shape is fixed for the purpose of reshaping the route.
                 |             = SchFixedShapeOff : no restriction on how to reshape the route.
                 |             = SchFixedShapeOn : reshape only the route's extremity (the segment directly connected
                 |               to the object that's being moved).
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As SchGRRRoute2
-                | 
+                |
                 |           ...
                 |          objThisIntf.SetReshapeModeCatSchIDLGRRRouteReshapeMode_Enum
 

@@ -1,55 +1,56 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_smarteam_integ_interfaces.sti_db_item import StiDBItem
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class StiEngine(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     StiEngine
-                | 
-                | Represents the SmarTeam Integration Engine, that is to say the entry point to
-                | the CATIA/SmarTeam Integration.
-                | 
-                | It allows end user to realize the following operations (also called StiEngine
-                | methods): connection and disconnection to SmarTeam Integration, creation of
-                | SmarTeam Integration Objects (StiDBItem) and management of their lifecycle
-                | (Save, Check In, Check Out, Release, New Release, ...).
-                | Note that all operations performed from this interface are the same as
-                | operations available and launched from the SmarTeam menu in
-                | CATIA.
-                | Warning: By Default, these operations launched from this interface are executed
-                | Without Panel.
-                | 
-                | Example:
-                | 
-                |       The following example indicates how to retrieve the SmarTeam Integration
-                |       Engine.
-                | 
-                |      Dim oStiEngine As StiEngine
-                |      Set oStiEngine = CATIA.GetItem("CAIEngine")
-                | 
-                | See also:
-                |     StiDBItem
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     StiEngine
+            |
+            | Represents the SmarTeam Integration Engine, that is to say the entry point to
+            | the CATIA/SmarTeam Integration.
+            |
+            | It allows end user to realize the following operations (also called StiEngine
+            | methods): connection and disconnection to SmarTeam Integration, creation of
+            | SmarTeam Integration Objects (StiDBItem) and management of their lifecycle
+            | (Save, Check In, Check Out, Release, New Release, ...).
+            | Note that all operations performed from this interface are the same as
+            | operations available and launched from the SmarTeam menu in
+            | CATIA.
+            | Warning: By Default, these operations launched from this interface are executed
+            | Without Panel.
+            |
+            | Example:
+            |
+            |       The following example indicates how to retrieve the SmarTeam Integration
+            |       Engine.
+            |
+            |      Dim oStiEngine As StiEngine
+            |      Set oStiEngine = CATIA.GetItem("CAIEngine")
+            |
+            | See also:
+            |     StiDBItem
+
     """
 
     def __init__(self, com_object):
@@ -64,7 +65,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IntegrationType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the Engine Integration Type.
                 |     Warning: Do Not use this method. It is Not implemented.
 
@@ -81,7 +82,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UseGraphicalUI() As boolean
-                | 
+                |
                 |     Returns (gets) or sets the use of Graphical User Interface (GUI) in order
                 |     to display or not panels. This method allows programmer to define if methods of
                 |     this Interface Definition Language (IDL) will be executed With or Without user
@@ -96,11 +97,11 @@ class StiEngine(AnyObject):
                 |     Mode.
                 |     Note that the Connection to SmarTeam Integration is totally Independent of
                 |     the Value of UseGraphicalUI.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns in the boolean bIsActive the current
-                |           value of this option -that is to say 
+                |           value of this option -that is to say
                 |          if we use or not GUI for StiEngine methods- and then sets it -if
                 |          needed- to 'True' -that corresponds to GUI operating
                 |          mode.
@@ -126,7 +127,9 @@ class StiEngine(AnyObject):
 
         self.sti_engine.UseGraphicalUI = value
 
-    def build_doc_db_item_from_smar_team_id(self, iobject_id: int, iclass_id: int) -> StiDBItem:
+    def build_doc_db_item_from_smar_team_id(
+        self, iobject_id: int, iclass_id: int
+    ) -> StiDBItem:
         """
         .. note::
             :class: toggle
@@ -134,31 +137,31 @@ class StiEngine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func BuildDocDBItemFromSmarTeamID(long iobjectId,
                 | short iclassId) As StiDBItem
-                | 
+                |
                 |     Copys the SmarTeam object -and its children- to default Work directory,
                 |     opens it into CATIA session and returns the corresponding
                 |     CATIAStiDBItem.
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iobjectId
                 |             This input corresponds to the Object ID of the required SmarTeam
-                |             object. 
+                |             object.
                 |         iclassId
                 |             This input corresponds to the Class ID of the required SmarTeam
-                |             object. 
-                | 
+                |             object.
+                |
                 |     Returns:
                 |         This output corresponds to the retrieved CATIAStiDBItem.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |           The following example retrieves a loaded document corresponding to a
                 |           SmarTeam ID {Object ID, Class ID}.
-                |          
-                | 
+                |
+                |
                 |          Dim oStiEngine As StiEngine
                 |          Set oStiEngine = CATIA.GetItem("CAIEngine")
                 |          Dim iobjectId As long
@@ -172,9 +175,13 @@ class StiEngine(AnyObject):
         :param int iclass_id:
         :rtype: StiDBItem
         """
-        return StiDBItem(self.sti_engine.BuildDocDBItemFromSmarTeamID(iobject_id, iclass_id))
+        return StiDBItem(
+            self.sti_engine.BuildDocDBItemFromSmarTeamID(iobject_id, iclass_id)
+        )
 
-    def build_file_db_item_from_smar_team_id(self, iobject_id: int, iclass_id: int) -> StiDBItem:
+    def build_file_db_item_from_smar_team_id(
+        self, iobject_id: int, iclass_id: int
+    ) -> StiDBItem:
         """
         .. note::
             :class: toggle
@@ -182,27 +189,27 @@ class StiEngine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func BuildFileDBItemFromSmarTeamID(long iobjectId,
                 | short iclassId) As StiDBItem
-                | 
+                |
                 |     Copys the SmarTeam object -and its children- to default Work directory and
                 |     returns the corresponding CATIAStiDBItem, Without opening the file into CATIA
                 |     session.
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iobjectId
                 |             This input corresponds to the Object ID of the required SmarTeam
-                |             object. 
+                |             object.
                 |         iclassId
                 |             This input corresponds to the Class ID of the required SmarTeam
-                |             object. 
-                | 
+                |             object.
+                |
                 |     Returns:
                 |         This output corresponds to the retrieved CATIAStiDBItem.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |           The following example retrieves a loaded document corresponding to a
                 |           SmarTeam ID {Object ID, Class ID}.
                 |
@@ -219,7 +226,9 @@ class StiEngine(AnyObject):
         :param int iclass_id:
         :rtype: StiDBItem
         """
-        return StiDBItem(self.sti_engine.BuildFileDBItemFromSmarTeamID(iobject_id, iclass_id))
+        return StiDBItem(
+            self.sti_engine.BuildFileDBItemFromSmarTeamID(iobject_id, iclass_id)
+        )
 
     def connect(self, i_user_login: str, i_user_password: str) -> None:
         """
@@ -229,32 +238,32 @@ class StiEngine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Connect(CATBSTR iUserLogin,
                 | CATBSTR iUserPassword)
-                | 
+                |
                 |     Connects to SmarTeam Integration.
                 |     This connection to SmarTeam Integration is equivalent to launch in CATIA
                 |     the command SmarTeam/Connect.
                 |     Note that this method is totally independent of the value returned by
                 |     'UseGraphicalUI' and that the 'SmarTeam User Login' panel (dedicated connection
                 |     panel) may be displayed.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iUserLogin
                 |             This input corresponds to the Login name of the end user, who wants
-                |             to connect to SmarTeam Integration. 
+                |             to connect to SmarTeam Integration.
                 |         iUserPassword
                 |             This input corresponds to the associated Password of this end
                 |             user.
-                | 
+                |
                 |             Note that when 'iUserLogin' is EMPTY, the 'SmarTeam User Login'
                 |             panel is displayed and the end user has to login himself. Note that
                 |             'iUserPassword' is taken into account if and only if 'iUserLogin' is NOT empty.
                 |
                 |     Example:
-                | 
+                |
                 |           ********** Connection With 'iUserLogin' & 'iUserPassword'
                 |           **********
-                |          
+                |
                 |         The following example connects end user to SmarTeam database on
                 |         StiEngine oStiEngine Without displaying
                 |          'SmarTeam User Login' panel. The User Login is "xxx" and his
@@ -263,7 +272,7 @@ class StiEngine(AnyObject):
                 |          'SmarTeam User Login' panel will be displayed.
                 |          If User Login or Password are NOT correct, the connection
                 |          failed.
-                |          
+                |
                 |          Dim oStiEngine As StiEngine
                 |          Set oStiEngine = CATIA.GetItem("CAIEngine")
                 |          Dim iUserLogin As CATBSTR
@@ -274,7 +283,7 @@ class StiEngine(AnyObject):
                 |
                 |          ********** Connection Without 'iUserLogin' & 'iUserPassword'
                 |          **********
-                |          
+                |
                 |         The following example connects end user to SmarTeam database on
                 |         stiEngine oStiEngine With 'SmarTeam User Login' panel.
                 |          The end user will have to type his Login and his Password in the
@@ -282,7 +291,7 @@ class StiEngine(AnyObject):
                 |          Note that if the User Login and his Password are specified, the
                 |          'SmarTeam User Login' panel will NOT be displayed.
                 |          If the end user only specifies his Login or if User Login and/or
-                |          Password are NOT correct, the connection failed. 
+                |          Password are NOT correct, the connection failed.
                 |          In these cases, the 'SmarTeam User Login' panel will NOT be
                 |          displayed.
                 |
@@ -303,19 +312,19 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Disconnect()
-                | 
+                |
                 |     Disconnects to SmarTeam Integration.
                 |     This disconnection to SmarTeam Integration is equivalent to launch in CATIA
                 |     the command SmarTeam/Disconnect.
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example disconnects end user to SmarTeam database on
                 |           StiEngine oStiEngine.
-                |          
-                | 
+                |
+                |
                 |          Dim oStiEngine As StiEngine
                 |          Set oStiEngine = CATIA.GetItem("CAIEngine")
                 |          oStiEngine.Connect "",""
@@ -333,7 +342,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSMARTEAMClassID(StiDBItem iStiDBItem) As short
-                | 
+                |
                 |     Returns the Class Identifier of a SmarTeam Integration Object
                 |     CATIAStiDBItem -at least saved in SmarTeam.
                 |     Note that the Class Identifier is unique for each Class defined in SmarTeam
@@ -341,17 +350,17 @@ class StiEngine(AnyObject):
                 |     the SmarTeam Release (RXX).
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
-                |             This input corresponds to the CATIAStiDBItem. 
-                | 
+                |             This input corresponds to the CATIAStiDBItem.
+                |
                 |     Returns:
                 |         This output corresponds to the retrieved Class Identifier of the
-                |         CATIAStiDBItem. 
+                |         CATIAStiDBItem.
                 |     Example:
-                | 
+                |
                 |           The following example returns in oClassId the Class Identifier of the
                 |           CATIAStiDBItem oStiDBItem.
                 |
@@ -378,25 +387,25 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSMARTEAMObjectID(StiDBItem iStiDBItem) As long
-                | 
+                |
                 |     Returns the Object Identifier of a SmarTeam Integration Object
                 |     CATIAStiDBItem -at least saved in SmarTeam.
                 |     This data is linked to the current DataBase, that is to say to the SmarTeam
                 |     Release (RXX).
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
-                |             This input corresponds to the CATIAStiDBItem. 
-                | 
+                |             This input corresponds to the CATIAStiDBItem.
+                |
                 |     Returns:
                 |         This output corresponds to the retrieved Object Identifier of the
                 |         CATIAStiDBItem.
                 |
                 |     Example:
-                | 
+                |
                 |           The following example returns in oObjectId the Object Identifier of
                 |           the CATIAStiDBItem oStiDBItem.
                 |
@@ -424,25 +433,25 @@ class StiEngine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetStiDBItemFromAnyObject(AnyObject iAnyObject) As
                 | StiDBItem
-                | 
+                |
                 |     Returns the SmarTeam Integration Object CATIAStiDBItem from an AnyObject
                 |     object.
                 |     This method is useful to convert whatever CATIA V5 Object to a
                 |     CATIAStiDBItem.
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAnyObject
                 |             This input corresponds to a CATIA V5 Object. It must be a Document,
-                |             a Product, a Part or a DrawingSheet. 
-                | 
+                |             a Product, a Part or a DrawingSheet.
+                |
                 |     Returns:
                 |         This output corresponds to the retrieved CATIAStiDBItem.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns in oStiDBItem the CATIAStiDBItem
                 |           corresponding to the Document iDocument.
                 |
@@ -458,7 +467,9 @@ class StiEngine(AnyObject):
         :param AnyObject i_any_object:
         :rtype: StiDBItem
         """
-        return StiDBItem(self.sti_engine.GetStiDBItemFromAnyObject(i_any_object.com_object))
+        return StiDBItem(
+            self.sti_engine.GetStiDBItemFromAnyObject(i_any_object.com_object)
+        )
 
     def get_sti_db_item_from_catbstr(self, i_full_path: str) -> StiDBItem:
         """
@@ -468,7 +479,7 @@ class StiEngine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetStiDBItemFromCATBSTR(CATBSTR iFullPath) As
                 | StiDBItem
-                | 
+                |
                 |     Returns the SmarTeam Integration Object CATIAStiDBItem from a Full
                 |     Path.
                 |     This method is useful to convert a path to a CATIAStiDBItem, that is to say
@@ -477,20 +488,20 @@ class StiEngine(AnyObject):
                 |     Release, ... it).
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     See also:
-                |         CATIAStiDBItem 
+                |         CATIAStiDBItem
                 |     Parameters:
-                | 
+                |
                 |         iFullPath
                 |             This input corresponds to the Full Path of the object to retrieve.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         This output corresponds to the retrieved CATIAStiDBItem.
-                |         
+                |
                 |     Example:
-                | 
+                |
                 |           The following example returns in oStiDBItem the CATIAStiDBItem
                 |           corresponding to the full path.
                 |
@@ -513,7 +524,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTeamPDMURL(StiDBItem iStiDBItem) As CATBSTR
-                | 
+                |
                 |     Returns the Team PDM URL of a CATIAStiDBItem.
                 |     Note that the Team PDM URL has the following syntax:
                 |     "TeamPDM://DBExtractor?CLASSID.EQ.www.
@@ -524,18 +535,18 @@ class StiEngine(AnyObject):
                 |     Note that this method is always executed With GUI. Indeed it returns a
                 |     SmarTeam panel displaying the TEAM PDM URL. It is so totally independent of the
                 |     value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
-                |             This input corresponds to the CATIAStiDBItem. 
-                | 
+                |             This input corresponds to the CATIAStiDBItem.
+                |
                 |     Returns:
                 |         This output corresponds to the retrieved Team PDM URL of the
                 |         CATIAStiDBItem.
                 |
                 |     Example:
-                | 
+                |
                 |           The following example returns the Team PDM URL from a
                 |           CATIAStiDBItem.
                 |
@@ -562,21 +573,21 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsConnected() As boolean
-                | 
+                |
                 |     Returns if end user Is Connected to SmarTeam Integration (True) or not
                 |     (False).
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           The following example tests if end user is connected to SmarTeam
                 |           Integration on StiEngine oStiEngine.
                 |          If end user is not connected, this code sample allows her/him to
                 |          connect to SmarTeam Integration by displaying the 'SmarTeam User Login'
                 |          panel.
-                |          
-                | 
+                |
+                |
                 |          Dim oStiEngine As StiEngine
                 |          Set oStiEngine = CATIA.GetItem("CAIEngine")
                 |          Dim oIsConnected As boolean
@@ -596,7 +607,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LifeCycleCheckIn(StiDBItem iStiDBItem)
-                | 
+                |
                 |     Checks the CATIAStiDBItem Into SmarTeam Check-In Vault.
                 |     This LifeCycleCheckIn operation is equivalent to launch in CATIA the
                 |     command SmarTeam/LifeCycle/CheckIn.
@@ -605,20 +616,20 @@ class StiEngine(AnyObject):
                 |     into the vault.
                 |     Note that this method should be executed With GUI and is so totally
                 |     dependent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
                 |             This input corresponds to the CATIAStiDBItem to Check-In.
                 |
                 |     Example:
-                | 
+                |
                 |           ********** LifeCycleCheckIn With GUI **********
-                |          
+                |
                 |         The following example checks the current activated document -associated
                 |         to the CATIAStiDBItem oStiDBItem and
                 |          already saved in SmarTeam -into the vault.
-                |          
+                |
                 |         Note that in the dedicated panel, the end user should choose to
                 |         activate the following options 'Keep Local File' or 'Keep
                 |         Checked-Out'.
@@ -639,7 +650,7 @@ class StiEngine(AnyObject):
                 |          oStiEngine.LifeCycleCheckIn iStiDBItem
                 |
                 |          ********** LifeCycleCheckIn Without GUI **********
-                |          
+                |
                 |         The following example checks the current activated document -associated
                 |         to the CATIAStiDBItem oStiDBItem and
                 |          already saved in SmarTeam- into the vault.
@@ -649,7 +660,7 @@ class StiEngine(AnyObject):
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If bIsActive Then
-                |            oStiEngine.UseGraphicalUI = False 
+                |            oStiEngine.UseGraphicalUI = False
                 |          End If
                 |          ' Retrieve the Current Activated Product
                 |          Dim productDocument01 As Document
@@ -663,7 +674,7 @@ class StiEngine(AnyObject):
         :rtype: None
         """
         return self.sti_engine.LifeCycleCheckIn(i_sti_db_item.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -686,23 +697,23 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LifeCycleCheckOut(StiDBItem iStiDBItem)
-                | 
+                |
                 |     Checks Out Without Propagation the CATIAStiDBItem in
                 |     SmarTeam.
                 |     This LifeCycleCheckOut operation is equivalent to launch in CATIA the
                 |     command SmarTeam/LifeCycle/CheckOut.
                 |     Note that this method should be executed With GUI and is so totally
                 |     dependent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
                 |             This input corresponds to the CATIAStiDBItem to Check-Out.
                 |
                 |     Example:
-                | 
+                |
                 |           ********** LifeCycleCheckOut With GUI **********
-                |          
+                |
                 |         The following example checks out from the vault the current activated
                 |         document -associated to the CATIAStiDBItem oStiDBItem.
                 |          Note that in the dedicated panel, the end user is able to realize the
@@ -727,7 +738,7 @@ class StiEngine(AnyObject):
                 |          oStiEngine.LifeCycleCheckOut iStiDBItem
                 |
                 |          **********  LifeCycleCheckOut Without GUI **********
-                |          
+                |
                 |         The following example Checks Out from the vault the current activated
                 |         document -associated to the StiDBItem oStiDBItem.
                 |
@@ -736,7 +747,7 @@ class StiEngine(AnyObject):
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If bIsActive Then
-                |            oStiEngine.UseGraphicalUI = False 
+                |            oStiEngine.UseGraphicalUI = False
                 |          End If
                 |          ' Retrieve the Current Activated Product
                 |          Dim productDocument01 As Document
@@ -750,7 +761,7 @@ class StiEngine(AnyObject):
         :rtype: None
         """
         return self.sti_engine.LifeCycleCheckOut(i_sti_db_item.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -773,7 +784,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LifeCycleCheckOutPropagated(StiDBItem iStiDBItem)
-                | 
+                |
                 |     Checks Out With Propagation the CATIAStiDBItem in
                 |     SMARTEAM.
                 |     This LifeCycleCheckOutPropagated operation is equivalent to launch in CATIA
@@ -781,17 +792,17 @@ class StiEngine(AnyObject):
                 |     SmarTeam panel 'Actions/Propagate Operation'.
                 |     Note that this method should be executed With GUI and is so totally
                 |     dependent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
                 |             This input corresponds to the CATIAStiDBItem to be Checked-Out.
                 |
                 |     Example:
-                | 
+                |
                 |           **********  LifeCycleCheckOutPropagated With GUI
                 |           **********
-                |          
+                |
                 |         The following example Checks Out from the vault the current activated
                 |         document -associated to the CATIAStiDBItem oStiDBItem
                 |          AND its children.
@@ -815,7 +826,7 @@ class StiEngine(AnyObject):
                 |
                 |          **********  LifeCycleCheckOutPropagated Without GUI
                 |          **********
-                |          
+                |
                 |         The following example Checks Out from the vault the current activated
                 |         document -associated to the StiDBItem oStiDBItem
                 |          AND its children.
@@ -825,7 +836,7 @@ class StiEngine(AnyObject):
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If bIsActive Then
-                |            oStiEngine.UseGraphicalUI = False 
+                |            oStiEngine.UseGraphicalUI = False
                 |          End If
                 |          ' Retrieve the Current Activated Product
                 |          Dim productDocument01 As Document
@@ -839,7 +850,7 @@ class StiEngine(AnyObject):
         :rtype: None
         """
         return self.sti_engine.LifeCycleCheckOutPropagated(i_sti_db_item.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -862,27 +873,27 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LifeCycleNewRelease(StiDBItem iStiDBItem)
-                | 
+                |
                 |     Enables a New Release Without Propagation for the CATIAStiDBItem in
                 |     SmarTeam.
                 |     This LifeCycleNewRelease operation to SmarTeam Integration is equivalent to
                 |     launch in CATIA the command SmarTeam/LifeCycle/NewRelease.
                 |     Note that this method should be executed With GUI and is so totally
                 |     dependent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
                 |             This input corresponds to the CATIAStiDBItem to New Release.
                 |
                 |     Example:
-                | 
+                |
                 |           **********  LifeCycleNewRelease With GUI **********
-                |          
+                |
                 |         The following example makes a new copy of a Released document
                 |         associated to the CATIAStiDBItem oStiDBItem
                 |          that was moved into the Released vault. The resulting document is a
-                |          new revision of the source document. 
+                |          new revision of the source document.
                 |          Note that in the dedicated panel,the end user is also able to realize
                 |          the following action 'Propagate Operation' to select which
                 |          children
@@ -906,18 +917,18 @@ class StiEngine(AnyObject):
                 |
                 |          **********  LifeCycleNewRelease Without GUI
                 |          **********
-                |          
+                |
                 |         The following example makes a new copy of a Released document
                 |         associated to the CATIAStiDBItem oStiDBItem
                 |          that was moved into the Released vault. The resulting document is a
-                |          new revision of the source document. 
+                |          new revision of the source document.
                 |
                 |          Dim oStiEngine As StiEngine
                 |          Set oStiEngine = CATIA.GetItem("CAIEngine")
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If bIsActive Then
-                |            oStiEngine.UseGraphicalUI = False 
+                |            oStiEngine.UseGraphicalUI = False
                 |          End If
                 |          ' Retrieve the Current Activated Product
                 |          Dim productDocument01 As Document
@@ -931,7 +942,7 @@ class StiEngine(AnyObject):
         :rtype: None
         """
         return self.sti_engine.LifeCycleNewRelease(i_sti_db_item.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -954,7 +965,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LifeCycleNewReleasePropagated(StiDBItem iStiDBItem)
-                | 
+                |
                 |     Enables a NewRelease action With Propagation for the CATIAStiDBItem in
                 |     SmarTeam.
                 |     This LifeCycleNewReleasePropagated operation is equivalent to launch in
@@ -962,23 +973,23 @@ class StiEngine(AnyObject):
                 |     associated SmarTeam panel 'Propagate Operation'.
                 |     Note that this method should be executed With GUI and is so totally
                 |     dependent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
                 |             This input corresponds to the CATIAStiDBItem to be New Released.
                 |
                 |     Example:
-                | 
+                |
                 |            ********** LifeCycleNewReleasePropagated With GUI
                 |            **********
-                |          
+                |
                 |         The following example makes a new copy of the Released document
                 |         associated to the CATIAStiDBItem oStiDBItem and of its
                 |         children.
                 |          This document was previously saved into the Released vault. The
                 |          resulting document is a new revision of the source document.
-                |          
+                |
                 |          She/he has also access to the SmarTeam panel option 'Do not get the
                 |          file from vault'.
                 |
@@ -997,7 +1008,7 @@ class StiEngine(AnyObject):
                 |
                 |          ********** LifeCycleNewReleasePropagated Without GUI
                 |          **********
-                |          
+                |
                 |         The following example makes a new copy of a Released document
                 |         associated to the CATIAStiDBItem oStiDBItem and of its
                 |         children.
@@ -1007,7 +1018,7 @@ class StiEngine(AnyObject):
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If bIsActive Then
-                |            oStiEngine.UseGraphicalUI = False 
+                |            oStiEngine.UseGraphicalUI = False
                 |          End If
                 |          ' Retrieve the Current Activated Product
                 |          Dim productDocument01 As Document
@@ -1021,7 +1032,7 @@ class StiEngine(AnyObject):
         :rtype: None
         """
         return self.sti_engine.LifeCycleNewReleasePropagated(i_sti_db_item.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1044,7 +1055,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LifeCycleRelease(StiDBItem iStiDBItem)
-                | 
+                |
                 |     Releases the CATIAStiDBItem in SmarTeam Release Vault.
                 |     This LifeCycleRelease operation is equivalent to launch in CATIA the
                 |     command SmarTeam/LifeCycle/Release.
@@ -1054,20 +1065,20 @@ class StiEngine(AnyObject):
                 |     the Release one.
                 |     Note that this method should be executed With GUI and is so totally
                 |     dependent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
                 |             This input corresponds to the CATIAStiDBItem to Released.
                 |
                 |     Example:
-                | 
-                |           ********** LifeCycleRelease With GUI ********** 
-                |          
+                |
+                |           ********** LifeCycleRelease With GUI **********
+                |
                 |         The following example releases the current activated document
                 |         -associated to the CATIAStiDBItem oStiDBItem and
                 |          already saved in SmarTeam- into the vault.
-                |          
+                |
                 |         Note that in the dedicated panel, the end user should choose to
                 |         activate the following options 'Keep Local File' or 'Keep
                 |         Checked-Out'.
@@ -1088,7 +1099,7 @@ class StiEngine(AnyObject):
                 |          oStiEngine.LifeCycleRelease iStiDBItem
                 |
                 |          ********** LifeCycleRelease Without GUI **********
-                |          
+                |
                 |         The following example moves the current activated document -associated
                 |         to the CATIAStiDBItem oStiDBItem and
                 |          already saved in SmarTeam -into the Released vault.
@@ -1098,7 +1109,7 @@ class StiEngine(AnyObject):
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If bIsActive Then
-                |            oStiEngine.UseGraphicalUI = False 
+                |            oStiEngine.UseGraphicalUI = False
                 |          End If
                 |          ' Retrieve the Current activated document
                 |          Dim productDocument01 As Document
@@ -1112,7 +1123,7 @@ class StiEngine(AnyObject):
         :rtype: None
         """
         return self.sti_engine.LifeCycleRelease(i_sti_db_item.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1135,7 +1146,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LifeCycleUndoCheckOut(StiDBItem iStiDBItem)
-                | 
+                |
                 |     Cancels Check-Out operation on the CATIAStiDBItem in SmarTeam. So the
                 |     programmer is able to retrieve the previous latest state (Checked-In or
                 |     Released) of the CATIAStiDBItem.
@@ -1143,39 +1154,39 @@ class StiEngine(AnyObject):
                 |     command SmarTeam/LifeCycle/UndoCheckOut.
                 |     Note that this method should be executed With GUI and is so totally
                 |     dependent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
                 |             This input corresponds to the CATIAStiDBItem to be Undo
-                |             Checked-Out. 
-                | 
+                |             Checked-Out.
+                |
                 |     Example:
-                | 
+                |
                 |           **********  LifeCycleUndoCheckOut With GUI
                 |           **********
-                |          
+                |
                 |         The following example retrieves a copy of a document associated to the
                 |         CATIAStiDBItem oStiDBItem
                 |          in the previous latest state (Checked-In or
                 |          Released).
-                |          
+                |
                 |         A CATIA panel is firstly displayed to warn the end user that it is
                 |         strongly recommanded to confirm the file deletion when
                 |         asked.
                 |          If, the end user clicks "OK", a SmarTeam panel is then displayed "File
                 |          '(...)/Work/CATPRD-XXXX.CATProduct' is referenced only by
-                |          
+                |
                 |          Object 'CATPRD-XXXX RevX.X', and will be deleted. Do you want to
                 |          delete this file?" The end user had better accept.
-                |          
-                | 
+                |
+                |
                 |          Dim oStiEngine As StiEngine
                 |          Set oStiEngine = CATIA.GetItem("CAIEngine")
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If Not bIsActive Then
-                |            oStiEngine.UseGraphicalUI = True 
+                |            oStiEngine.UseGraphicalUI = True
                 |          End If
                 |          ' Retrieve the Current Activated Product
                 |          Dim productDocument01 As Document
@@ -1187,20 +1198,20 @@ class StiEngine(AnyObject):
                 |
                 |          **********  LifeCycleUndoCheckOut Without GUI
                 |          **********
-                |          
+                |
                 |         The following example cancels the Check-Out of the document associated
-                |         to the CATIAStiDBItem oStiDBItem 
+                |         to the CATIAStiDBItem oStiDBItem
                 |          in the previous latest state (Checked-In or
                 |          Released).
-                |          
+                |
                 |         By default, the Undo Check-Out operation is not propagated, i.e.
                 |         available only for the current CATIAStiDBItem.
-                |          
-                | 
+                |
+                |
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If bIsActive Then
-                |            oStiEngine.UseGraphicalUI = False 
+                |            oStiEngine.UseGraphicalUI = False
                 |          End If
                 |          ' Retrieve the Current Activated Product
                 |          Dim productDocument01 As Document
@@ -1214,7 +1225,7 @@ class StiEngine(AnyObject):
         :rtype: None
         """
         return self.sti_engine.LifeCycleUndoCheckOut(i_sti_db_item.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1237,25 +1248,25 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RefreshInfo()
-                | 
+                |
                 |     Refreshes Information concerning all CATIA Documents in
                 |     session.
                 |     This RefreshInfo operation is equivalent to launch in CATIA the command
                 |     SmarTeam/Tools/Refresh.
                 |     Note that this method is always executed Without any GUI and is so totally
                 |     independent of the value returned by 'UseGraphicalUI'.
-                | 
+                |
                 |     During this RefreshInfo operation, the following steps are
                 |     executed:
-                |         - Checking the document synchronization on disk, 
-                |         - Updating internal info, 
-                |         - Updating Read/Write status for valid documents, 
-                |         - Updating icons, 
+                |         - Checking the document synchronization on disk,
+                |         - Updating internal info,
+                |         - Updating Read/Write status for valid documents,
+                |         - Updating icons,
                 |         - Sending error or warning message for not synchronized or removed
-                |         documents if GUIs are activated. 
-                | 
+                |         documents if GUIs are activated.
+                |
                 |     Example:
-                | 
+                |
                 |           The following example refreshs the CATIA session:
                 |
                 |          Dim oStiEngine As StiEngine
@@ -1273,7 +1284,7 @@ class StiEngine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Save(StiDBItem iStiDBItem)
-                | 
+                |
                 |     Saves the CATIAStiDBItem in SmarTeam.
                 |     This Save operation is equivalent to launch in CATIA the command
                 |     SmarTeam/Save.
@@ -1281,16 +1292,16 @@ class StiEngine(AnyObject):
                 |     dependent of the value returned by 'UseGraphicalUI'. The SmarTeam Integration
                 |     Object (and its children) is(are) saved in the current Work -if NOT already
                 |     saved on disc.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStiDBItem
                 |             This input corresponds to the CATIAStiDBItem to save.
                 |
                 |     Example:
-                | 
+                |
                 |           ********** Save With GUI **********
-                |          
+                |
                 |         Note that in the 'Projects Manager' panel, the end user should select
                 |         the 'Project' in which she/he wants to save the corresponding
                 |         file.
@@ -1298,8 +1309,8 @@ class StiEngine(AnyObject):
                 |          Projects' and then 'Secured By' and to finish 'Propagate
                 |          security'.
                 |          She/he is also able to choose to activate the following option 'Add To
-                |          Desktop'. 
-                |          
+                |          Desktop'.
+                |
                 |         The following example saves in SmarTeam the CATIAStiDBItem oStiDBItem
                 |         With GUI.
                 |
@@ -1316,15 +1327,15 @@ class StiEngine(AnyObject):
                 |          ' Retrieve the StiDBItem from the Document
                 |          Dim iStiDBItem As StiDBItem
                 |          Set iStiDBItem = oStiEngine.GetStiDBItemFromAnyObject(productDocument01)
-                |          oStiEngine.Save iStiDBItem 
+                |          oStiEngine.Save iStiDBItem
                 |
                 |          ********** Save Without GUI **********
-                |          
+                |
                 |         By Default, the SmarTeam Integration Object (and its children) is(are)
                 |         saved in the current Work -if NOT already saved on disc,
-                |         
+                |
                 |          NOT linked With any Project and NOT Added to Desktop.
-                |          
+                |
                 |         The following example saves in SmarTeam the CATIAStiDBItem oStiDBItem
                 |         Without GUI.
                 |
@@ -1333,7 +1344,7 @@ class StiEngine(AnyObject):
                 |          Dim bIsActive As boolean
                 |          bIsActive = oStiEngine.UseGraphicalUI
                 |          If bIsActive Then
-                |            oStiEngine.UseGraphicalUI = False 
+                |            oStiEngine.UseGraphicalUI = False
                 |          End If
                 |          ' Retrieve the Current Activated Product
                 |          Dim productDocument01 As Document
@@ -1348,7 +1359,7 @@ class StiEngine(AnyObject):
         :rtype: None
         """
         return self.sti_engine.Save(i_sti_db_item.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

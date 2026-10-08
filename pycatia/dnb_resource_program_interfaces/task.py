@@ -1,44 +1,45 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.product_structure_interfaces.product import Product
 
 
 class Task(Activity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                         Task
-                | 
-                | Represents the Task of a resource.
-                | 
-                | Role: Task is the object used to access and manage the attributes of the
-                | task.
-                | The following code snippet can be used to obtain the Task from the Resource
-                | program manager.
-                | 
-                |    Dim objResourceProgramManager As ResourceProgramManager
-                |    Dim oTask As Task
-                |    
-                |    objResourceProgramManager.GetTask  "RobotTask.1", oTask
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                         Task
+            |
+            | Represents the Task of a resource.
+            |
+            | Role: Task is the object used to access and manage the attributes of the
+            | task.
+            | The following code snippet can be used to obtain the Task from the Resource
+            | program manager.
+            |
+            |    Dim objResourceProgramManager As ResourceProgramManager
+            |    Dim oTask As Task
+            |
+            |    objResourceProgramManager.GetTask  "RobotTask.1", oTask
+
     """
 
     def __init__(self, com_object):
@@ -52,26 +53,26 @@ class Task(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetName(CATBSTR oName)
-                | 
+                |
                 |     Get the name of the Task
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oName
-                |             The user defined name of the Task. 
-                | 
+                |             The user defined name of the Task.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The name of the task was corrrectly retrieved
                 |         E_FAIL
                 |             The name of the task was not corrrectly retrieved
-                | 
+                |
                 |         Example:
                 |             The following example get the name of the task.
-                | 
+                |
                 |                Dim objTask As Task
                 |                Dim strTaskName As String
                 |                ..
@@ -89,28 +90,28 @@ class Task(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetResource(Product oRes)
-                | 
+                |
                 |     Gets the Owning Resource
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRes
-                |             The Owning Resource. 
-                | 
+                |             The Owning Resource.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The owning resource was corrrectly retrieved
                 |         E_FAIL
                 |             The owning resource was not corrrectly retrieved
-                | 
+                |
                 |         Example:
                 |             The following example retrieves the owning resource of the
                 |             task.
-                | 
-                |                Dim objTask As Task   
+                |
+                |                Dim objTask As Task
                 |                Dim objRobot as Product
                 |                ..
                 |                objTask.GetResource objRobot
@@ -119,7 +120,7 @@ class Task(Activity):
         :rtype: None
         """
         return self.task.GetResource(o_res.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -142,27 +143,27 @@ class Task(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetName(CATBSTR iName)
-                | 
+                |
                 |     Set the name of the task
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
-                |             The user defined name of the Task. 
-                | 
+                |             The user defined name of the Task.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
-                |             The name of the task was set corrrectly 
+                |             The name of the task was set corrrectly
                 |         E_FAIL
-                |             The name of the task was not set corrrectly 
-                | 
+                |             The name of the task was not set corrrectly
+                |
                 |         Example:
                 |             The following example set the name of the task.
-                | 
-                |                Dim objTask As Task     
+                |
+                |                Dim objTask As Task
                 |                ..
                 |                objTask.SetName("RobotTask.2")
 

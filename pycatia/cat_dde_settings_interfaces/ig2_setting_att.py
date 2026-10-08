@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -15,25 +16,25 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class Ig2SettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         Ig2SettingAtt
-                | 
-                | Interface dedicated to modify or read the current settings corresponding to the
-                | IG2 Data Exchange
-                | 
-                | Ensure consistency with the C++ interface to which the work is
-                | delegated.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         Ig2SettingAtt
+            |
+            | Interface dedicated to modify or read the current settings corresponding to the
+            | IG2 Data Exchange
+            |
+            | Ensure consistency with the C++ interface to which the work is
+            | delegated.
+
     """
 
     def __init__(self, com_object):
@@ -48,15 +49,15 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportMode() As CatIg2ExportModeEnum (Read Only)
-                | 
+                |
                 |     Get the Export Mode option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMode
                 |             Legal values: An available value of the enum CatIg2ExportModeEnum.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -77,15 +78,15 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportSheets() As CatIg2ExportSheetsEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the Exported Sheets option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSheets
                 |             Legal values: An available value of the enum
-                |             CatIg2ExportSheetsEnum. 
-                | 
+                |             CatIg2ExportSheetsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -129,7 +130,7 @@ class Ig2SettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.ig2_setting_att.ExportViewAsViewport
@@ -143,15 +144,15 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportDestinationView() As CatIg2ImportDestinationViewEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the destination view.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDestinationView
                 |             Legal values: An available value of the enum
-                |             CatIg2ImportDestinationViewEnum. 
-                | 
+                |             CatIg2ImportDestinationViewEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -171,16 +172,16 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportDftStandard() As CATBSTR (Read Only)
-                | 
+                |
                 |     Get the name of the Drafting standard, which define the standard of the
                 |     resulting CATDrawing file.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDftStandard
                 |             the CATBSTR corresponding to the Drafting standard.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -200,15 +201,15 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportDimensions() As CatIg2ImportDimensionsEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the Import dimensions option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDimensions
                 |             Legal values: An available value of the enum
-                |             CatIg2ImportDimensionsEnum. 
-                | 
+                |             CatIg2ImportDimensionsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -229,15 +230,15 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportEndPoints() As CatIg2ImportCreateEndPointsEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the Create End Points option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oEndPoints
                 |             Legal values: An available value of the enum
-                |             CatIg2ImportCreateEndPointsEnum. 
-                | 
+                |             CatIg2ImportCreateEndPointsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -257,15 +258,15 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportUnit() As CatIg2ImportUnitEnum (Read Only)
-                | 
+                |
                 |     Get the import unit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oUnit
                 |             Legal values: An available value of the enum CatIg2ImportUnitEnum.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -285,25 +286,25 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Export Mode
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -323,25 +324,25 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportSheetsInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Exported Sheets
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -353,7 +354,9 @@ class Ig2SettingAtt(SettingController):
         """
         return self.ig2_setting_att.GetExportSheetsInfo(io_admin_level, io_locked)
 
-    def get_export_view_as_viewport_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_export_view_as_viewport_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2019.
@@ -395,12 +398,16 @@ class Ig2SettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.ig2_setting_att.GetExportViewAsViewportInfo(io_admin_level, io_locked)
+        return self.ig2_setting_att.GetExportViewAsViewportInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_import_destination_view_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_import_destination_view_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -408,25 +415,25 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportDestinationViewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the destination view
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -436,7 +443,9 @@ class Ig2SettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.ig2_setting_att.GetImportDestinationViewInfo(io_admin_level, io_locked)
+        return self.ig2_setting_att.GetImportDestinationViewInfo(
+            io_admin_level, io_locked
+        )
 
     def get_import_dft_standard_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -446,25 +455,25 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportDftStandardInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Drafting standard
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -484,25 +493,25 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportDimensionsInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Import dimensions
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -522,25 +531,25 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportEndPointsInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Create End Points
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -560,25 +569,25 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportUnitInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the import unit
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -597,19 +606,19 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Mode option if the operation is allowed in the
                 |     current administrated environment. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -619,7 +628,7 @@ class Ig2SettingAtt(SettingController):
         :rtype: None
         """
         return self.ig2_setting_att.SetExportModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -642,19 +651,19 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportSheetsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Exported Sheets option if the operation is allowed in
                 |     the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -664,7 +673,7 @@ class Ig2SettingAtt(SettingController):
         :rtype: None
         """
         return self.ig2_setting_att.SetExportSheetsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -714,7 +723,7 @@ class Ig2SettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.ig2_setting_att.SetExportViewAsViewportLock(i_locked)
@@ -726,19 +735,19 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportDestinationViewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the import destination view if the operation is allowed in
                 |     the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -748,7 +757,7 @@ class Ig2SettingAtt(SettingController):
         :rtype: None
         """
         return self.ig2_setting_att.SetImportDestinationViewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -771,19 +780,19 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportDftStandardLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Drafting standard option if the operation is allowed
                 |     in the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -793,7 +802,7 @@ class Ig2SettingAtt(SettingController):
         :rtype: None
         """
         return self.ig2_setting_att.SetImportDftStandardLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -816,19 +825,19 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportDimensionsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Import dimensions option if the operation is allowed
                 |     in the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -838,7 +847,7 @@ class Ig2SettingAtt(SettingController):
         :rtype: None
         """
         return self.ig2_setting_att.SetImportDimensionsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -861,19 +870,19 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportEndPointsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Create End Points option if the operation is allowed
                 |     in the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -883,7 +892,7 @@ class Ig2SettingAtt(SettingController):
         :rtype: None
         """
         return self.ig2_setting_att.SetImportEndPointsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -906,19 +915,19 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportUnitLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the import unit option if the operation is allowed in the
                 |     current administrated environment. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -928,7 +937,7 @@ class Ig2SettingAtt(SettingController):
         :rtype: None
         """
         return self.ig2_setting_att.SetImportUnitLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -951,15 +960,15 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportMode(CatIg2ExportModeEnum iMode)
-                | 
+                |
                 |     Set the Export Mode option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMode
                 |             Legal values: An available value of the enum CatIg2ExportModeEnum.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -977,15 +986,15 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportSheets(CatIg2ExportSheetsEnum iSheets)
-                | 
+                |
                 |     set the Exported Sheets option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSheets
                 |             Legal values: An available value of the enum
-                |             CatIg2ExportSheetsEnum. 
-                | 
+                |             CatIg2ExportSheetsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1029,7 +1038,7 @@ class Ig2SettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.ig2_setting_att.set_ExportViewAsViewport(i_views_as_viewports)
@@ -1042,15 +1051,15 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportDestinationView(CatIg2ImportDestinationViewEnum
                 | iDestinationView)
-                | 
+                |
                 |     Set the destination view.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDestinationView
                 |             Legal values: An available value of the enum
-                |             CatIg2ImportDestinationViewEnum 
-                | 
+                |             CatIg2ImportDestinationViewEnum
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1068,16 +1077,16 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportDftStandard(CATBSTR iDftStandard)
-                | 
+                |
                 |     Set the name of the Drafting standard, which define the standard of the
                 |     resulting CATDrawing file.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDftStandard
                 |             the CATBSTR corresponding to the Drafting standard.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1096,15 +1105,15 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportDimensions(CatIg2ImportDimensionsEnum
                 | iDimensions)
-                | 
+                |
                 |     Set the Import dimensions option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDimensions
                 |             Legal values: An available value of the enum
-                |             CatIg2ImportDimensionsEnum. 
-                | 
+                |             CatIg2ImportDimensionsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1123,15 +1132,15 @@ class Ig2SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportEndPoints(CatIg2ImportCreateEndPointsEnum
                 | iEndPoints)
-                | 
+                |
                 |     Set the Create End Points option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEndPoints
                 |             Legal values: An available value of the enum
-                |             CatIg2ImportCreateEndPointsEnum. 
-                | 
+                |             CatIg2ImportCreateEndPointsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1149,15 +1158,15 @@ class Ig2SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportUnit(CatIg2ImportUnitEnum iUnit)
-                | 
+                |
                 |     Set the import unit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iUnit
                 |             Legal values: An available value of the enum CatIg2ImportUnitEnum
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success

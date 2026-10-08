@@ -1,34 +1,35 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CATFTADimCreateOn, CATFTADimConfigureSnapping
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class FTASettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         FTASettingAtt
-                | 
-                | The interface to access a CATIAFTASettingAtt.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         FTASettingAtt
+            |
+            | The interface to access a CATIAFTASettingAtt.
+
     """
 
     def __init__(self, com_object):
@@ -43,7 +44,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AlphabeticOrder() As boolean
-                | 
+                |
                 |     Returns or sets the AlphabeticOrder setting parameter
                 |     value.
                 |     True if the AlphabeticOrder setting parameter is checked.
@@ -71,7 +72,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnalysisDisplayMode() As boolean
-                | 
+                |
                 |     Returns the AnalysisDisplayMode parameter.
 
         :rtype: bool
@@ -95,9 +96,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AngulaireGeneralTolClass() As long
-                | 
+                |
                 |     Returns or sets the Dimension general class parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -121,7 +122,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnnotDimInvalid() As boolean
-                | 
+                |
                 |     Returns the AnnotDimInvalid parameter.
 
         :rtype: bool
@@ -145,7 +146,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnnotDimOnDeletedGeom() As boolean
-                | 
+                |
                 |     Returns the AnnotDimOnDeletedGeom parameter.
 
         :rtype: bool
@@ -169,7 +170,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnnotDimOnUnloadedGeom() As boolean
-                | 
+                |
                 |     Returns the AnnotDimOnUnloadedGeom parameter.
 
         :rtype: bool
@@ -193,7 +194,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnnotOnZeroZSetting() As boolean
-                | 
+                |
                 |     Returns the AnnotOnZeroZSetting parameter.
 
         :rtype: bool
@@ -217,10 +218,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BodyHideInCapture() As long
-                | 
+                |
                 |     Returns or sets the Visibility of Part instances, bodies and geometrical
                 |     sets in Capture.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -244,7 +245,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CATFTAChamferGeneralTolClass() As long
-                | 
+                |
                 |     Returns the CATFTAChamferGeneralTolClass parameter.
 
         :rtype: int
@@ -268,7 +269,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CATFTAEdgesLineType() As long
-                | 
+                |
                 |     Returns the CATFTAEdgesLineType parameter.
 
         :rtype: int
@@ -292,7 +293,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CATFTAEdgesThickness() As long
-                | 
+                |
                 |     Returns the CATFTAEdgesThickness parameter.
 
         :rtype: int
@@ -316,7 +317,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CATFTAUFAutoTolerancing() As CATBSTR
-                | 
+                |
                 |     Returns the CATFTAUFAutoTolerancing parameter.
 
         :rtype: str
@@ -340,7 +341,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CATFTAUseLastTolerances() As boolean
-                | 
+                |
                 |     Returns the CATFTAUseLastTolerances parameter.
 
         :rtype: bool
@@ -364,9 +365,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimAfterCre() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension After Creaation parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -390,10 +391,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimAfterMod() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension After Modification
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -417,9 +418,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimBeforeCre() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Before Creation parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -443,10 +444,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimBeforeMod() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Before Modification
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -470,9 +471,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimBlankingCre() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Blanking Creation parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -496,10 +497,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimBlankingMod() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Blanking Modification
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -524,9 +525,9 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimConfigureSnapping() As
                 | CATFTADimConfigureSnapping
-                | 
+                |
                 |     Returns or sets the DimConfigureSnapping parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :return: CATFTADimConfigureSnapping
@@ -550,9 +551,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimConstantOffset() As boolean
-                | 
+                |
                 |     Returns or sets the Constant Offset parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -576,9 +577,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimCreateOn() As CATFTADimCreateOn
-                | 
+                |
                 |     Returns or sets the DimCreateOn parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :return: CATFTADimCreateOn
@@ -602,10 +603,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLinePosValue() As double
-                | 
+                |
                 |     Returns or sets the Dimension Line Position Value
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: float
@@ -629,10 +630,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpBaseAngle() As double
-                | 
+                |
                 |     Returns or sets the Dimension Line Up Base Angle
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: float
@@ -656,10 +657,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpBaseLength() As double
-                | 
+                |
                 |     Returns or sets the Dimension Line Up Base Length
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: float
@@ -683,9 +684,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpCumul() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Line Up Cululated parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -709,9 +710,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpFunnel() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Line Up Funnel parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -735,11 +736,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpOffsetBetDimAngle() As double
-                | 
+                |
                 |     Returns gets the DimLineUpOffsetBetDimAngle parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
                 |             Output value of the DimLineUpOffsetBetDimAngle. If return code
                 |             E_FAIL oValue is not obtained. If return code S_OK oValue is obtained.
@@ -765,11 +766,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpOffsetBetDimLength() As double
-                | 
+                |
                 |     Returns gets the DimLineUpOffsetBetDimLength parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
                 |             Output value of the DimLineUpOffsetBetDimLength. If return code
                 |             E_FAIL oValue is not obtained. If return code S_OK oValue is obtained.
@@ -795,11 +796,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpOffsetToRefAngle() As double
-                | 
+                |
                 |     Returns gets the DimLineUpOffsetToRefAngle parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
                 |             Output value of the DimLineUpOffsetToRefAngle. If return code
                 |             E_FAIL oValue is not obtained. If return code S_OK oValue is obtained.
@@ -825,11 +826,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpOffsetToRefLength() As double
-                | 
+                |
                 |     Returns gets the DimLineUpOffsetToRefLength parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
                 |             Output value of the DimLineUpOffsetToRefLength. If return code
                 |             E_FAIL oValue is not obtained. If return code S_OK oValue is obtained.
@@ -855,9 +856,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimLineUpStack() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Line Up Stack parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -881,9 +882,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimManualPositionning() As boolean
-                | 
+                |
                 |     Returns or sets the Manual Positionning parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -907,9 +908,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMove2dPartCre() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Move 2D Creation parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -933,10 +934,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMove2dPartMod() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Move 2D Modification
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -960,10 +961,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMoveDimLineCre() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Move Dimension Line Creation
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -987,10 +988,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMoveDimLineMod() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Move Dimension Line Modification
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1014,11 +1015,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMoveLeaderCre() As boolean
-                | 
+                |
                 |     Get the Dimension leader Creation parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
                 |             Output value of the Dimension Leader creation check box status. If
                 |             return code E_FAIL oValue is not obtained. If return code S_OK oValue is
@@ -1045,11 +1046,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMoveLeaderMod() As boolean
-                | 
+                |
                 |     Returns gets the Dimension leader modification parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
                 |             Output value of the Dimension Leader modification check box status.
                 |             If return code E_FAIL oValue is not obtained. If return code S_OK oValue is
@@ -1076,9 +1077,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMoveSubPart() As boolean
-                | 
+                |
                 |     Returns or sets the DimMoveSubPart parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1102,10 +1103,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMoveValueCre() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Move Value Creation
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1129,10 +1130,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimMoveValueMod() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Move Value Modification
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1156,9 +1157,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimORunCre() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Over Run Creation parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1182,10 +1183,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimORunMod() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Over Run Modification
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1209,10 +1210,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimOriDefaultSymb() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Orientation Default Symbol
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1236,9 +1237,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimSnapping() As boolean
-                | 
+                |
                 |     Returns or sets the Dimension Snapping parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1262,9 +1263,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property GeneralTolClass() As long
-                | 
+                |
                 |     Returns or sets the Dimension general class parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -1288,9 +1289,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property HighlightDefAnnot() As boolean
-                | 
+                |
                 |     Returns or sets the Highlight Def Annot parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1314,9 +1315,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NoaCreation() As boolean
-                | 
+                |
                 |     Returns or sets the Noa Creation parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1340,9 +1341,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NonSemanticAllwaysUpgrade() As boolean
-                | 
+                |
                 |     Returns or sets the Non SemanticAllways Upgrade parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1366,10 +1367,10 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NonSemanticAllwaysUpgradeGeneralTol() As boolean
-                | 
+                |
                 |     Returns or sets the Non SemanticAllways Upgrade general tolerance
                 |     parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1393,9 +1394,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NonSemanticDimAllowed() As boolean
-                | 
+                |
                 |     Returns or sets the Non Semantic Dim Allowed parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1419,9 +1420,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NonSemanticMarked() As boolean
-                | 
+                |
                 |     Returns or sets the Non Semantic Marked parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1445,9 +1446,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NonSemanticTolAllowed() As boolean
-                | 
+                |
                 |     Returns or sets the Non Semantic Tol Allowed parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1471,9 +1472,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ParametersInTree() As boolean
-                | 
+                |
                 |     Returns or sets the Parameters in tree parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1497,9 +1498,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RotationSnapAngle() As double
-                | 
+                |
                 |     Returns or sets the Rotation Snap Angle parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: float
@@ -1523,9 +1524,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RotationSnapAuto() As boolean
-                | 
+                |
                 |     Returns or sets the Rotation Snap Auto parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1549,7 +1550,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectPattern() As boolean
-                | 
+                |
                 |     Returns or sets the Pattern of Visu setting parameter
                 |     value.
                 |     True if the Pattern of Visu setting parameter is checked.
@@ -1577,9 +1578,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SelectPublishedGeometry() As boolean
-                | 
+                |
                 |     Returns or sets the Slect Published Geometry parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1603,9 +1604,9 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ShiftedProfile() As boolean
-                | 
+                |
                 |     Returns or sets the Shifted Profile parameter.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -1629,7 +1630,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TrueDimension() As boolean
-                | 
+                |
                 |     Returns the TrueDimension parameter.
 
         :rtype: bool
@@ -1653,7 +1654,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAlphabeticOrderInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the AlphabeticOrder setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -1672,24 +1673,24 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAnalysisDisplayModeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AnalysisDisplayMode
                 |     parameter.
                 |     Role:Retrieves the state of the AnalysisDisplayMode parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1700,7 +1701,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetAnalysisDisplayModeInfo(admin_level, o_locked)
 
-    def get_angulaire_general_tol_class_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_angulaire_general_tol_class_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1708,7 +1711,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAngulaireGeneralTolClassInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension general class tolerance setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -1717,9 +1720,13 @@ class FTASettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetAngulaireGeneralTolClassInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetAngulaireGeneralTolClassInfo(
+            admin_level, o_locked
+        )
 
-    def get_annot_dim_invalid_colour(self, o_value_r: int, o_value_g: int, o_value_b: int) -> None:
+    def get_annot_dim_invalid_colour(
+        self, o_value_r: int, o_value_g: int, o_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1728,7 +1735,7 @@ class FTASettingAtt(SettingController):
                 | o Sub GetAnnotDimInvalidColor(long oValueR,
                 | long oValueG,
                 | long oValueB)
-                | 
+                |
                 |     Returns the AnnotDimInvalidColor parameter.
 
         :param int o_value_r:
@@ -1736,9 +1743,13 @@ class FTASettingAtt(SettingController):
         :param int o_value_b:
         :rtype: None
         """
-        return self.fta_setting_att.GetAnnotDimInvalidColor(o_value_r, o_value_g, o_value_b)
+        return self.fta_setting_att.GetAnnotDimInvalidColor(
+            o_value_r, o_value_g, o_value_b
+        )
 
-    def get_annot_dim_invalid_colour_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_annot_dim_invalid_colour_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1747,24 +1758,24 @@ class FTASettingAtt(SettingController):
                 | o Sub GetAnnotDimInvalidColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the AnnotDimInvalidColor
                 |     parameter.
                 |     Role:Retrieves the state of the AnnotDimInvalidColor parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1774,8 +1785,10 @@ class FTASettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.fta_setting_att.GetAnnotDimInvalidColorInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.fta_setting_att.GetAnnotDimInvalidColorInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1799,14 +1812,14 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAnnotDimInvalidInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Locks or unlocks the AnnotDimInvalid parameter.
                 |     Role:Locks or unlocks the AnnotDimInvalid parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1819,7 +1832,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetAnnotDimInvalidInfo(admin_level, o_locked)
 
-    def get_annot_dim_on_deleted_geom_colour(self, o_value_r: int, o_value_g: int, o_value_b: int) -> None:
+    def get_annot_dim_on_deleted_geom_colour(
+        self, o_value_r: int, o_value_g: int, o_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1828,7 +1843,7 @@ class FTASettingAtt(SettingController):
                 | o Sub GetAnnotDimOnDeletedGeomColor(long oValueR,
                 | long oValueG,
                 | long oValueB)
-                | 
+                |
                 |     Returns the AnnotDimOnDeletedGeomColor parameter.
 
         :param int o_value_r:
@@ -1836,9 +1851,13 @@ class FTASettingAtt(SettingController):
         :param int o_value_b:
         :rtype: None
         """
-        return self.fta_setting_att.GetAnnotDimOnDeletedGeomColor(o_value_r, o_value_g, o_value_b)
+        return self.fta_setting_att.GetAnnotDimOnDeletedGeomColor(
+            o_value_r, o_value_g, o_value_b
+        )
 
-    def get_annot_dim_on_deleted_geom_colour_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_annot_dim_on_deleted_geom_colour_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1848,24 +1867,24 @@ class FTASettingAtt(SettingController):
                 | ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the AnnotDimOnDeletedGeomColor
                 |     parameter.
                 |     Role:Retrieves the state of the AnnotDimOnDeletedGeomColor parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1875,8 +1894,10 @@ class FTASettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.fta_setting_att.GetAnnotDimOnDeletedGeomColorInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.fta_setting_att.GetAnnotDimOnDeletedGeomColorInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1892,7 +1913,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_annot_dim_on_deleted_geom_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_annot_dim_on_deleted_geom_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1900,24 +1923,24 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAnnotDimOnDeletedGeomInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AnnotDimOnDeletedGeom
                 |     parameter.
                 |     Role:Retrieves the state of the AnnotDimOnDeletedGeom parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1928,7 +1951,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetAnnotDimOnDeletedGeomInfo(admin_level, o_locked)
 
-    def get_annot_dim_on_unloaded_geom_colour(self, o_value_r: int, o_value_g: int, o_value_b: int) -> None:
+    def get_annot_dim_on_unloaded_geom_colour(
+        self, o_value_r: int, o_value_g: int, o_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1937,7 +1962,7 @@ class FTASettingAtt(SettingController):
                 | o Sub GetAnnotDimOnUnloadedGeomColor(long oValueR,
                 | long oValueG,
                 | long oValueB)
-                | 
+                |
                 |     Returns the AnnotDimOnUnloadedGeomColor parameter.
 
         :param int o_value_r:
@@ -1945,9 +1970,13 @@ class FTASettingAtt(SettingController):
         :param int o_value_b:
         :rtype: None
         """
-        return self.fta_setting_att.GetAnnotDimOnUnloadedGeomColor(o_value_r, o_value_g, o_value_b)
+        return self.fta_setting_att.GetAnnotDimOnUnloadedGeomColor(
+            o_value_r, o_value_g, o_value_b
+        )
 
-    def get_annot_dim_on_unloaded_geom_colour_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_annot_dim_on_unloaded_geom_colour_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1957,24 +1986,24 @@ class FTASettingAtt(SettingController):
                 | ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the AnnotDimOnUnloadedGeomColor
                 |     parameter.
                 |     Role:Retrieves the state of the AnnotDimOnUnloadedGeomColor parameter in
                 |     the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -1984,8 +2013,10 @@ class FTASettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.fta_setting_att.GetAnnotDimOnUnloadedGeomColorInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.fta_setting_att.GetAnnotDimOnUnloadedGeomColorInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2001,7 +2032,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_annot_dim_on_unloaded_geom_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_annot_dim_on_unloaded_geom_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2009,24 +2042,24 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAnnotDimOnUnloadedGeomInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AnnotDimOnUnloadedGeom
                 |     parameter.
                 |     Role:Retrieves the state of the AnnotDimOnUnloadedGeom parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2045,24 +2078,24 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAnnotOnZeroZSettingInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the AnnotOnZeroZSetting
                 |     parameter.
                 |     Role:Retrieves the state of the AnnotOnZeroZSetting parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2081,7 +2114,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetBodyHideInCaptureInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Visibility of Part instances, bodies and
                 |     geometrical sets in Capture.
                 |     Refer to SettingController for a detailled description.
@@ -2092,7 +2125,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetBodyHideInCaptureInfo(admin_level, o_locked)
 
-    def get_cat_fta_chamfer_general_tol_class_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_cat_fta_chamfer_general_tol_class_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2101,24 +2136,24 @@ class FTASettingAtt(SettingController):
                 | o Func GetCATFTAChamferGeneralTolClassInfo(CATBSTR
                 | AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the CATFTAChamferGeneralTolClass
                 |     parameter.
                 |     Role:Retrieves the state of the CATFTAChamferGeneralTolClass parameter in
                 |     the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2127,9 +2162,13 @@ class FTASettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetCATFTAChamferGeneralTolClassInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetCATFTAChamferGeneralTolClassInfo(
+            admin_level, o_locked
+        )
 
-    def get_cat_fta_edges_colour(self, o_value_r: int, o_value_g: int, o_value_b: int) -> None:
+    def get_cat_fta_edges_colour(
+        self, o_value_r: int, o_value_g: int, o_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -2138,7 +2177,7 @@ class FTASettingAtt(SettingController):
                 | o Sub GetCATFTAEdgesColor(long oValueR,
                 | long oValueG,
                 | long oValueB)
-                | 
+                |
                 |     Returns the GetCATFTAEdgesColor parameter.
 
         :param int o_value_r:
@@ -2148,7 +2187,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetCATFTAEdgesColor(o_value_r, o_value_g, o_value_b)
 
-    def get_cat_fta_edges_colour_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_cat_fta_edges_colour_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -2157,24 +2198,24 @@ class FTASettingAtt(SettingController):
                 | o Sub GetCATFTAEdgesColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the GetCATFTAEdgesColor
                 |     parameter.
                 |     Role:Retrieves the state of the GetCATFTAEdgesColor parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2184,8 +2225,10 @@ class FTASettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.fta_setting_att.GetCATFTAEdgesColorInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.fta_setting_att.GetCATFTAEdgesColorInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2201,7 +2244,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_cat_fta_edges_line_type_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_cat_fta_edges_line_type_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -2210,24 +2255,24 @@ class FTASettingAtt(SettingController):
                 | o Sub GetCATFTAEdgesLineTypeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the CATFTAEdgesLineType
                 |     parameter.
                 |     Role:Retrieves the state of the CATFTAEdgesLineType parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2237,8 +2282,10 @@ class FTASettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.fta_setting_att.GetCATFTAEdgesLineTypeInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.fta_setting_att.GetCATFTAEdgesLineTypeInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2254,7 +2301,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_cat_fta_edges_thickness_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_cat_fta_edges_thickness_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -2263,24 +2312,24 @@ class FTASettingAtt(SettingController):
                 | o Sub GetCATFTAEdgesThicknessInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the CATFTAEdgesThickness
                 |     parameter.
                 |     Role:Retrieves the state of the CATFTAEdgesThickness parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2290,8 +2339,10 @@ class FTASettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.fta_setting_att.GetCATFTAEdgesThicknessInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.fta_setting_att.GetCATFTAEdgesThicknessInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2307,7 +2358,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_cat_fta_uf_auto_tolerancing_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_cat_fta_uf_auto_tolerancing_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -2316,24 +2369,24 @@ class FTASettingAtt(SettingController):
                 | o Sub GetCATFTAUFAutoTolerancingInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the CATFTAUFAutoTolerancing
                 |     parameter.
                 |     Role:Retrieves the state of the CATFTAUFAutoTolerancing parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2343,8 +2396,10 @@ class FTASettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.fta_setting_att.GetCATFTAUFAutoTolerancingInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.fta_setting_att.GetCATFTAUFAutoTolerancingInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2360,7 +2415,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_cat_fta_use_last_tolerances_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_cat_fta_use_last_tolerances_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2368,24 +2425,24 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetCATFTAUseLastTolerancesInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the CATFTAUseLastTolerances
                 |     parameter.
                 |     Role:Retrieves the state of the CATFTAUseLastTolerances parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -2394,7 +2451,9 @@ class FTASettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetCATFTAUseLastTolerancesInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetCATFTAUseLastTolerancesInfo(
+            admin_level, o_locked
+        )
 
     def get_dim_after_cre_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -2404,7 +2463,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimAfterCreInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension After Creation setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -2423,7 +2482,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimAfterModInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension After Modification setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2442,7 +2501,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimBeforeCreInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Before Creation setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2461,7 +2520,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimBeforeModInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Before Modification setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2480,7 +2539,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimBlankingCreInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Blanking Creation setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2499,7 +2558,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimBlankingModInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Blanking Modification setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2518,7 +2577,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimConfigureSnappingInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the DimMoveSubPart setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -2537,7 +2596,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimConstantOffsetInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Constant Offset setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2556,7 +2615,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimCreateOnInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the DimCreateOn setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -2575,7 +2634,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLinePosValueInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Line Position Value setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2594,7 +2653,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLineUpBaseAngleInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Line Up Base Angle setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2613,7 +2672,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLineUpBaseLengthInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Line Up Base Length setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2632,7 +2691,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLineUpCumulInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Line Up Cululated setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2651,7 +2710,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLineUpFunnelInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Line Up Funnel setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -2662,7 +2721,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetDimLineUpFunnelInfo(admin_level, o_locked)
 
-    def get_dim_line_up_offset_bet_dim_angle_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_dim_line_up_offset_bet_dim_angle_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2670,33 +2731,37 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLineUpOffsetBetDimAngleInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the DimLineUpOffsetBetDimAngle setting
                 |     parameter value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
                 |             Input/Output parameter, is the administration level.
-                |             
+                |
                 |         oLocked
                 |             Input/Output parameter, is the lock status of the check button.
-                |             
+                |
                 |         oModified
                 |             Output paramter which gives the status as boolean if the status is
                 |             modified. If return code E_FAIL the values are not obtained. If return code
                 |             S_OK the values are obtained.
-                |             Refer to 
-                | 
+                |             Refer to
+                |
                 |         SettingController for a detailled description.
 
         :param str admin_level:
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetDimLineUpOffsetBetDimAngleInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetDimLineUpOffsetBetDimAngleInfo(
+            admin_level, o_locked
+        )
 
-    def get_dim_line_up_offset_bet_dim_length_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_dim_line_up_offset_bet_dim_length_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2705,33 +2770,37 @@ class FTASettingAtt(SettingController):
                 | o Func GetDimLineUpOffsetBetDimLengthInfo(CATBSTR
                 | AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the DimLineUpOffsetBetDimLength setting
                 |     parameter value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
                 |             Input/Output parameter, is the administration level.
-                |             
+                |
                 |         oLocked
                 |             Input/Output parameter, is the lock status of the check button.
-                |             
+                |
                 |         oModified
                 |             Output paramter which gives the status as boolean if the status is
                 |             modified. If return code E_FAIL the values are not obtained. If return code
                 |             S_OK the values are obtained.
-                |             Refer to 
-                | 
+                |             Refer to
+                |
                 |         SettingController for a detailled description.
 
         :param str admin_level:
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetDimLineUpOffsetBetDimLengthInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetDimLineUpOffsetBetDimLengthInfo(
+            admin_level, o_locked
+        )
 
-    def get_dim_line_up_offset_to_ref_angle_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_dim_line_up_offset_to_ref_angle_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2739,33 +2808,37 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLineUpOffsetToRefAngleInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the DimLineUpOffsetToRefAngle setting
                 |     parameter value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
                 |             Input/Output parameter, is the administration level.
-                |             
+                |
                 |         oLocked
                 |             Input/Output parameter, is the lock status of the check button.
-                |             
+                |
                 |         oModified
                 |             Output paramter which gives the status as boolean if the status is
                 |             modified. If return code E_FAIL the values are not obtained. If return code
                 |             S_OK the values are obtained.
-                |             Refer to 
-                | 
+                |             Refer to
+                |
                 |         SettingController for a detailled description.
 
         :param str admin_level:
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetDimLineUpOffsetToRefAngleInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetDimLineUpOffsetToRefAngleInfo(
+            admin_level, o_locked
+        )
 
-    def get_dim_line_up_offset_to_ref_length_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_dim_line_up_offset_to_ref_length_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -2773,31 +2846,33 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLineUpOffsetToRefLengthInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the DimLineUpOffsetToRefLength setting
                 |     parameter value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
                 |             Input/Output parameter, is the administration level.
-                |             
+                |
                 |         oLocked
                 |             Input/Output parameter, is the lock status of the check button.
-                |             
+                |
                 |         oModified
                 |             Output paramter which gives the status as boolean if the status is
                 |             modified. If return code E_FAIL the values are not obtained. If return code
                 |             S_OK the values are obtained.
-                |             Refer to 
-                | 
+                |             Refer to
+                |
                 |         SettingController for a detailled description.
 
         :param str admin_level:
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetDimLineUpOffsetToRefLengthInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetDimLineUpOffsetToRefLengthInfo(
+            admin_level, o_locked
+        )
 
     def get_dim_line_up_stack_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -2807,7 +2882,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimLineUpStackInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Line Up Stack setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -2826,7 +2901,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimManualPositionningInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Manual Positionning setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2845,7 +2920,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMove2dPartCreInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Move 2D Creation setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2864,7 +2939,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMove2dPartModInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Move 2D Modification setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2883,7 +2958,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMoveDimLineCreInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Move Dimension Line Creation
                 |     setting parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2902,7 +2977,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMoveDimLineModInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Move Dimension Line Modification
                 |     setting parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -2921,24 +2996,24 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMoveLeaderCreInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension leader Creation setting
                 |     parameter value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
                 |             Input/Output parameter, is the administration level.
-                |             
+                |
                 |         oLocked
                 |             Input/Output parameter, is the lock status of the check button.
-                |             
+                |
                 |         oModified
                 |             Output paramter which gives the status as boolean if the status is
                 |             modified. If return code E_FAIL the values are not obtained. If return code
                 |             S_OK the values are obtained.
-                |             Refer to 
-                | 
+                |             Refer to
+                |
                 |         SettingController for a detailled description.
 
         :param str admin_level:
@@ -2955,24 +3030,24 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMoveLeaderModInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension leader modification setting
                 |     parameter value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdminLevel
                 |             Input/Output parameter, is the administration level.
-                |             
+                |
                 |         oLocked
                 |             Input/Output parameter, is the lock status of the check button.
-                |             
+                |
                 |         oModified
                 |             Output paramter which gives the status as boolean if the status is
                 |             modified. If return code E_FAIL the values are not obtained. If return code
                 |             S_OK the values are obtained.
-                |             Refer to 
-                | 
+                |             Refer to
+                |
                 |         SettingController for a detailled description.
 
         :param str admin_level:
@@ -2989,7 +3064,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMoveSubPartInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the DimMoveSubPart setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3008,7 +3083,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMoveValueCreInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Move Value Creation setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3027,7 +3102,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimMoveValueModInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Move Value Modification setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3046,7 +3121,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimORunCreInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Over Run Creation setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3065,7 +3140,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimORunModInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Over Run Modification setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3084,7 +3159,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimOriDefaultSymbInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Orientation Default Symbol
                 |     setting parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3103,7 +3178,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDimSnappingInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension Snapping setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3122,7 +3197,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetGeneralTolClassInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Dimension general class tolerance setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3141,7 +3216,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetHighlightDefAnnotInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Highlight Def Annot setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3160,7 +3235,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNoaCreationInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Noa Creation setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3171,7 +3246,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetNoaCreationInfo(admin_level, o_locked)
 
-    def get_non_semantic_always_upgrade_general_tol_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_non_semantic_always_upgrade_general_tol_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -3180,7 +3257,7 @@ class FTASettingAtt(SettingController):
                 | o Func GetNonSemanticAllwaysUpgradeGeneralTolInfo(CATBSTR
                 | AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Non Semantic Allways Upgrade general
                 |     tolerance setting parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3189,9 +3266,13 @@ class FTASettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetNonSemanticAllwaysUpgradeGeneralTolInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetNonSemanticAllwaysUpgradeGeneralTolInfo(
+            admin_level, o_locked
+        )
 
-    def get_non_semantic_always_upgrade_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_non_semantic_always_upgrade_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -3199,7 +3280,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNonSemanticAllwaysUpgradeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Non Semantic Allways Upgrade setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3208,9 +3289,13 @@ class FTASettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetNonSemanticAllwaysUpgradeInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetNonSemanticAllwaysUpgradeInfo(
+            admin_level, o_locked
+        )
 
-    def get_non_semantic_dim_allowed_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_non_semantic_dim_allowed_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -3218,7 +3303,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNonSemanticDimAllowedInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Non Semantic Dim Allowed setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3237,7 +3322,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNonSemanticMarkedInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Non Semantic Marked setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3248,7 +3333,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetNonSemanticMarkedInfo(admin_level, o_locked)
 
-    def get_non_semantic_tol_allowed_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_non_semantic_tol_allowed_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -3256,7 +3343,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNonSemanticTolAllowedInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Non Semantic Tol Allowed setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3275,7 +3362,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetParametersInTreeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Parameters in tree setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3294,7 +3381,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetRotationSnapAngleInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Rotation Snap Angle setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3313,7 +3400,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetRotationSnapAutoInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Rotation Snap Auto setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3332,7 +3419,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSectPatternInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Pattern of Visu setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3343,7 +3430,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetSectPatternInfo(admin_level, o_locked)
 
-    def get_select_published_geometry_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_select_published_geometry_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -3351,7 +3440,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSelectPublishedGeometryInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Select Published Geometry setting
                 |     parameter value.
                 |     Refer to SettingController for a detailled description.
@@ -3360,7 +3449,9 @@ class FTASettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.fta_setting_att.GetSelectPublishedGeometryInfo(admin_level, o_locked)
+        return self.fta_setting_att.GetSelectPublishedGeometryInfo(
+            admin_level, o_locked
+        )
 
     def get_shifted_profile_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -3370,7 +3461,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetShiftedProfileInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves informations about the Shifted Profile setting parameter
                 |     value.
                 |     Refer to SettingController for a detailled description.
@@ -3381,7 +3472,9 @@ class FTASettingAtt(SettingController):
         """
         return self.fta_setting_att.GetShiftedProfileInfo(admin_level, o_locked)
 
-    def get_true_dimension_colour(self, o_value_r: int, o_value_g: int, o_value_b: int) -> None:
+    def get_true_dimension_colour(
+        self, o_value_r: int, o_value_g: int, o_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -3390,7 +3483,7 @@ class FTASettingAtt(SettingController):
                 | o Sub GetTrueDimensionColor(long oValueR,
                 | long oValueG,
                 | long oValueB)
-                | 
+                |
                 |     Returns the TrueDimensionColor parameter.
 
         :param int o_value_r:
@@ -3398,9 +3491,13 @@ class FTASettingAtt(SettingController):
         :param int o_value_b:
         :rtype: None
         """
-        return self.fta_setting_att.GetTrueDimensionColor(o_value_r, o_value_g, o_value_b)
+        return self.fta_setting_att.GetTrueDimensionColor(
+            o_value_r, o_value_g, o_value_b
+        )
 
-    def get_true_dimension_colour_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_true_dimension_colour_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -3409,24 +3506,24 @@ class FTASettingAtt(SettingController):
                 | o Sub GetTrueDimensionColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the TrueDimensionColor
                 |     parameter.
                 |     Role:Retrieves the state of the TrueDimensionColor parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -3436,8 +3533,10 @@ class FTASettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.fta_setting_att.GetTrueDimensionColorInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.fta_setting_att.GetTrueDimensionColorInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3461,24 +3560,24 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTrueDimensionInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the TrueDimension
                 |     parameter.
                 |     Role:Retrieves the state of the TrueDimension parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -3496,7 +3595,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAlphabeticOrderLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AlphabeticOrder setting parameter
                 |     value.
                 |     Refer to SettingController for a detailed description.
@@ -3505,7 +3604,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAlphabeticOrderLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3528,14 +3627,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnalysisDisplayModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AnalysisDisplayMode parameter.
                 |     Role:Locks or unlocks the AnalysisDisplayMode parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3546,7 +3645,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAnalysisDisplayModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3569,14 +3668,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAngulaireGeneralTolClassLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension general class parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetAngulaireGeneralTolClassLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3592,7 +3691,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_annot_dim_invalid_colour(self, i_value_r: int, i_value_g: int, i_value_b: int) -> None:
+    def set_annot_dim_invalid_colour(
+        self, i_value_r: int, i_value_g: int, i_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -3601,7 +3702,7 @@ class FTASettingAtt(SettingController):
                 | o Sub SetAnnotDimInvalidColor(long iValueR,
                 | long iValueG,
                 | long iValueB)
-                | 
+                |
                 |     Sets the AnnotDimInvalidColor parameter.
 
         :param int i_value_r:
@@ -3609,7 +3710,9 @@ class FTASettingAtt(SettingController):
         :param int i_value_b:
         :rtype: None
         """
-        return self.fta_setting_att.SetAnnotDimInvalidColor(i_value_r, i_value_g, i_value_b)
+        return self.fta_setting_att.SetAnnotDimInvalidColor(
+            i_value_r, i_value_g, i_value_b
+        )
 
     def set_annot_dim_invalid_colour_lock(self, i_locked: bool) -> None:
         """
@@ -3618,14 +3721,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnnotDimInvalidColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AnnotDimInvalidColor parameter.
                 |     Role:Locks or unlocks the AnnotDimInvalidColor parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3636,7 +3739,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAnnotDimInvalidColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3659,24 +3762,24 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnnotDimInvalidLock(boolean iLocked)
-                | 
+                |
                 |     Retrieves environment informations for the AnnotDimInvalid
                 |     parameter.
                 |     Role:Retrieves the state of the AnnotDimInvalid parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -3685,7 +3788,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAnnotDimInvalidLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3701,7 +3804,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_annot_dim_on_deleted_geom_colour(self, i_value_r: int, i_value_g: int, i_value_b: int) -> None:
+    def set_annot_dim_on_deleted_geom_colour(
+        self, i_value_r: int, i_value_g: int, i_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -3710,7 +3815,7 @@ class FTASettingAtt(SettingController):
                 | o Sub SetAnnotDimOnDeletedGeomColor(long iValueR,
                 | long iValueG,
                 | long iValueB)
-                | 
+                |
                 |     Sets the AnnotDimOnDeletedGeomColor parameter.
 
         :param int i_value_r:
@@ -3718,7 +3823,9 @@ class FTASettingAtt(SettingController):
         :param int i_value_b:
         :rtype: None
         """
-        return self.fta_setting_att.SetAnnotDimOnDeletedGeomColor(i_value_r, i_value_g, i_value_b)
+        return self.fta_setting_att.SetAnnotDimOnDeletedGeomColor(
+            i_value_r, i_value_g, i_value_b
+        )
 
     def set_annot_dim_on_deleted_geom_colour_lock(self, i_locked: bool) -> None:
         """
@@ -3727,14 +3834,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnnotDimOnDeletedGeomColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AnnotDimOnDeletedGeomColor parameter.
                 |     Role:Locks or unlocks the AnnotDimOnDeletedGeomColor parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3745,7 +3852,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAnnotDimOnDeletedGeomColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3768,14 +3875,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnnotDimOnDeletedGeomLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AnnotDimOnDeletedGeom parameter.
                 |     Role:Locks or unlocks the AnnotDimOnDeletedGeom parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3786,7 +3893,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAnnotDimOnDeletedGeomLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3802,7 +3909,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_annot_dim_on_unloaded_geom_colour(self, i_value_r: int, i_value_g: int, i_value_b: int) -> None:
+    def set_annot_dim_on_unloaded_geom_colour(
+        self, i_value_r: int, i_value_g: int, i_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -3811,7 +3920,7 @@ class FTASettingAtt(SettingController):
                 | o Sub SetAnnotDimOnUnloadedGeomColor(long iValueR,
                 | long iValueG,
                 | long iValueB)
-                | 
+                |
                 |     Sets the AnnotDimOnUnloadedGeomColor parameter.
 
         :param int i_value_r:
@@ -3819,7 +3928,9 @@ class FTASettingAtt(SettingController):
         :param int i_value_b:
         :rtype: None
         """
-        return self.fta_setting_att.SetAnnotDimOnUnloadedGeomColor(i_value_r, i_value_g, i_value_b)
+        return self.fta_setting_att.SetAnnotDimOnUnloadedGeomColor(
+            i_value_r, i_value_g, i_value_b
+        )
 
     def set_annot_dim_on_unloaded_geom_colour_lock(self, i_locked: bool) -> None:
         """
@@ -3828,15 +3939,15 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnnotDimOnUnloadedGeomColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AnnotDimOnUnloadedGeomColor
                 |     parameter.
                 |     Role:Locks or unlocks the AnnotDimOnUnloadedGeomColor parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3847,7 +3958,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAnnotDimOnUnloadedGeomColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3870,14 +3981,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnnotDimOnUnloadedGeomLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AnnotDimOnUnloadedGeom parameter.
                 |     Role:Locks or unlocks the AnnotDimOnUnloadedGeom parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3888,7 +3999,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAnnotDimOnUnloadedGeomLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3911,14 +4022,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAnnotOnZeroZSettingLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the AnnotOnZeroZSetting parameter.
                 |     Role:Locks or unlocks the AnnotOnZeroZSetting parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -3929,7 +4040,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetAnnotOnZeroZSettingLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3952,14 +4063,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetBodyHideInCaptureLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension general class parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetBodyHideInCaptureLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -3982,15 +4093,15 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCATFTAChamferGeneralTolClassLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the CATFTAChamferGeneralTolClass
                 |     parameter.
                 |     Role:Locks or unlocks the CATFTAChamferGeneralTolClass parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4001,7 +4112,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetCATFTAChamferGeneralTolClassLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4017,7 +4128,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_cat_fta_edges_colour(self, i_value_r: int, i_value_g: int, i_value_b: int) -> None:
+    def set_cat_fta_edges_colour(
+        self, i_value_r: int, i_value_g: int, i_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -4026,7 +4139,7 @@ class FTASettingAtt(SettingController):
                 | o Sub SetCATFTAEdgesColor(long iValueR,
                 | long iValueG,
                 | long iValueB)
-                | 
+                |
                 |     Sets the GetCATFTAEdgesColor parameter.
 
         :param int i_value_r:
@@ -4043,14 +4156,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCATFTAEdgesColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the GetCATFTAEdgesColor parameter.
                 |     Role:Locks or unlocks the GetCATFTAEdgesColor parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4061,7 +4174,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetCATFTAEdgesColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4084,14 +4197,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCATFTAEdgesLineTypeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the CATFTAEdgesLineType parameter.
                 |     Role:Locks or unlocks the CATFTAEdgesLineType parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4102,7 +4215,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetCATFTAEdgesLineTypeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4125,14 +4238,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCATFTAEdgesThicknessLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the CATFTAEdgesThickness parameter.
                 |     Role:Locks or unlocks the CATFTAEdgesThickness parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4143,7 +4256,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetCATFTAEdgesThicknessLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4166,14 +4279,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCATFTAUFAutoTolerancingLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the CATFTAUFAutoTolerancing parameter.
                 |     Role:Locks or unlocks the CATFTAUFAutoTolerancing parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4184,7 +4297,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetCATFTAUFAutoTolerancingLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4207,14 +4320,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCATFTAUseLastTolerancesLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the CATFTAUseLastTolerances parameter.
                 |     Role:Locks or unlocks the CATFTAUseLastTolerances parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -4225,7 +4338,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetCATFTAUseLastTolerancesLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4248,14 +4361,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimAfterCreLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension After Creaation parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimAfterCreLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4278,14 +4391,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimAfterModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension After Modification parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimAfterModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4308,14 +4421,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimBeforeCreLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Before Creation parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimBeforeCreLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4338,14 +4451,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimBeforeModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Before Modification parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimBeforeModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4368,14 +4481,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimBlankingCreLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Blanking Creation parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimBlankingCreLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4398,14 +4511,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimBlankingModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Blanking Modification parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimBlankingModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4428,14 +4541,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimConfigureSnappingLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DimConfigureSnapping parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimConfigureSnappingLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4458,14 +4571,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimConstantOffsetLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Constant Offset parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimConstantOffsetLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4488,14 +4601,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimCreateOnLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DimCreateOn parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimCreateOnLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4518,14 +4631,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLinePosValueLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Line Position Value parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimLinePosValueLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4548,14 +4661,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpBaseAngleLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Line Up Base Angle parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpBaseAngleLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4578,14 +4691,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpBaseLengthLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Line Up Base Length parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpBaseLengthLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4608,14 +4721,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpCumulLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Line Up Cululated parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpCumulLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4638,14 +4751,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpFunnelLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Line Up Funnel parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpFunnelLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4668,11 +4781,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpOffsetBetDimAngleLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DimLineUpOffsetBetDimAngle parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             Input value of the DimLineUpOffsetBetDimAngle (lock/unlock). If
                 |             return code E_FAIL iLocked is not set. If return code S_OK iLocked is
@@ -4682,7 +4795,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpOffsetBetDimAngleLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4705,12 +4818,12 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpOffsetBetDimLengthLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DimLineUpOffsetBetDimLength
                 |     parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             Input value of the DimLineUpOffsetBetDimLength (lock/unlock). If
                 |             return code E_FAIL iLocked is not set. If return code S_OK iLocked is
@@ -4720,7 +4833,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpOffsetBetDimLengthLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4743,11 +4856,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpOffsetToRefAngleLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DimLineUpOffsetToRefAngle parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             Input value of the DimLineUpOffsetToRefAngle (lock/unlock). If
                 |             return code E_FAIL iLocked is not set. If return code S_OK iLocked is
@@ -4757,7 +4870,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpOffsetToRefAngleLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4780,11 +4893,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpOffsetToRefLengthLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DimLineUpOffsetToRefLength parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             Input value of the DimLineUpOffsetToRefLength (lock/unlock). If
                 |             return code E_FAIL iLocked is not set. If return code S_OK iLocked is
@@ -4794,7 +4907,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpOffsetToRefLengthLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4817,14 +4930,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimLineUpStackLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Line Up Stack parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimLineUpStackLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4847,14 +4960,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimManualPositionningLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Manual Positionning parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimManualPositionningLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4877,14 +4990,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMove2dPartCreLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Move 2D Creation parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimMove2dPartCreLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4907,14 +5020,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMove2dPartModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Move 2D Modification parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimMove2dPartModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4937,14 +5050,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMoveDimLineCreLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Move Dimension Line Creation parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimMoveDimLineCreLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4967,14 +5080,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMoveDimLineModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Move Dimension Line Modification parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimMoveDimLineModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -4997,11 +5110,11 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMoveLeaderCreLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension leader Creation parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             Input value of the Dimension leader creation check box lock/unlock
                 |             status. If return code E_FAIL iLocked is not set. If return code S_OK iLocked
@@ -5011,7 +5124,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetDimMoveLeaderCreLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5034,12 +5147,12 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMoveLeaderModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension leader modification
                 |     parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             Input value of the Dimension leader modification check box
                 |             (lock/unlock). If return code E_FAIL iLocked is not set. If return code S_OK
@@ -5049,7 +5162,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetDimMoveLeaderModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5072,14 +5185,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMoveSubPartLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DimMoveSubPart parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimMoveSubPartLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5102,14 +5215,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMoveValueCreLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Move Value Creation parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimMoveValueCreLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5132,14 +5245,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimMoveValueModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Move Value Modification parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimMoveValueModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5162,14 +5275,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimORunCreLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Over Run Creation parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimORunCreLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5192,14 +5305,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimORunModLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Over Run Modification parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimORunModLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5222,14 +5335,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimOriDefaultSymbLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Orientation Default Symbol parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimOriDefaultSymbLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5252,14 +5365,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDimSnappingLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension Snapping parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetDimSnappingLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5282,14 +5395,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetGeneralTolClassLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Dimension general class parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetGeneralTolClassLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5312,14 +5425,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetHighlightDefAnnotLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Highlight Def Annot parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetHighlightDefAnnotLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5342,14 +5455,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetNoaCreationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Noa Creation parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetNoaCreationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5373,7 +5486,7 @@ class FTASettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetNonSemanticAllwaysUpgradeGeneralTolLock(boolean
                 | iLocked)
-                | 
+                |
                 |     Locks or unlocks the Non Semantic Allways Upgrade general tolerance
                 |     parameter.
 
@@ -5381,7 +5494,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetNonSemanticAllwaysUpgradeGeneralTolLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5404,14 +5517,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetNonSemanticAllwaysUpgradeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Non Semantic Allways Upgrade parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetNonSemanticAllwaysUpgradeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5434,14 +5547,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetNonSemanticDimAllowedLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Non Semantic Dim Allowed parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetNonSemanticDimAllowedLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5464,14 +5577,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetNonSemanticMarkedLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Non Semantic Marked parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetNonSemanticMarkedLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5494,14 +5607,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetNonSemanticTolAllowedLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Non Semantic Tol Allowed parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetNonSemanticTolAllowedLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5524,14 +5637,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetParametersInTreeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Parameters in tree parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetParametersInTreeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5554,14 +5667,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetRotationSnapAngleLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Rotation Snap Angle parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetRotationSnapAngleLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5584,14 +5697,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetRotationSnapAutoLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Rotation Snap Auto parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetRotationSnapAutoLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5614,7 +5727,7 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSectPatternLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Pattern of Visu setting parameter
                 |     value.
                 |     Refer to SettingController for a detailed description.
@@ -5623,7 +5736,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetSectPatternLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5646,14 +5759,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSelectPublishedGeometryLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Select Published Geometry parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetSelectPublishedGeometryLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5676,14 +5789,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetShiftedProfileLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Shifted Profile parameter.
 
         :param bool i_locked:
         :rtype: None
         """
         return self.fta_setting_att.SetShiftedProfileLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5699,7 +5812,9 @@ class FTASettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_true_dimension_color(self, i_value_r: int, i_value_g: int, i_value_b: int) -> None:
+    def set_true_dimension_color(
+        self, i_value_r: int, i_value_g: int, i_value_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -5708,7 +5823,7 @@ class FTASettingAtt(SettingController):
                 | o Sub SetTrueDimensionColor(long iValueR,
                 | long iValueG,
                 | long iValueB)
-                | 
+                |
                 |     Sets the TrueDimensionColor parameter.
 
         :param int i_value_r:
@@ -5716,7 +5831,9 @@ class FTASettingAtt(SettingController):
         :param int i_value_b:
         :rtype: None
         """
-        return self.fta_setting_att.SetTrueDimensionColor(i_value_r, i_value_g, i_value_b)
+        return self.fta_setting_att.SetTrueDimensionColor(
+            i_value_r, i_value_g, i_value_b
+        )
 
     def set_true_dimension_color_lock(self, i_locked: bool) -> None:
         """
@@ -5725,14 +5842,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetTrueDimensionColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the TrueDimensionColor parameter.
                 |     Role:Locks or unlocks the TrueDimensionColor parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -5743,7 +5860,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetTrueDimensionColorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -5766,14 +5883,14 @@ class FTASettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetTrueDimensionLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the TrueDimension parameter.
                 |     Role:Locks or unlocks the TrueDimension parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -5784,7 +5901,7 @@ class FTASettingAtt(SettingController):
         :rtype: None
         """
         return self.fta_setting_att.SetTrueDimensionLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

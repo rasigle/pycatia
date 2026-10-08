@@ -1,46 +1,47 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CATV4IV4V5SpecDraftMigrationEnum
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class SpecV4SettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         SpecV4SettingAtt
-                | 
-                | Represents the V4/V5 SPEC setting controller object.
-                | Role: The V4/V5 SPEC setting controller object deals with the setting
-                | parameters displayed in the V4/V5SPEC property page. To access this property
-                | page:
-                | 
-                |     Click the Options command in the Tools menu
-                |     Click + left of General to unfold the workbench list
-                |     Click Compatibility
-                | 
-                | 
-                | The different options for V4/V5SPEC tab:
-                | The Step By Step Update And Reroute
-                | The Draft Feature Migration Mode
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         SpecV4SettingAtt
+            |
+            | Represents the V4/V5 SPEC setting controller object.
+            | Role: The V4/V5 SPEC setting controller object deals with the setting
+            | parameters displayed in the V4/V5SPEC property page. To access this property
+            | page:
+            |
+            |     Click the Options command in the Tools menu
+            |     Click + left of General to unfold the workbench list
+            |     Click Compatibility
+            |
+            |
+            | The different options for V4/V5SPEC tab:
+            | The Step By Step Update And Reroute
+            | The Draft Feature Migration Mode
+
     """
 
     def __init__(self, com_object):
@@ -56,7 +57,7 @@ class SpecV4SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DraftFeatureMigrationMode() As
                 | CATV4IV4V5SpecDraftMigrationEnum
-                | 
+                |
                 |     Returns or sets the activation state of the mode of migration for draft
                 |     feature.
                 |     Role: This setting parameter manages the activation of the mode of
@@ -84,7 +85,7 @@ class SpecV4SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StepByStepUpdateAndReroute() As boolean
-                | 
+                |
                 |     Returns or sets the activation state of Step By Step Update And
                 |     Reroute.
                 |     Role: The Step By Step Update And Reroute setting parameter manages the
@@ -104,7 +105,9 @@ class SpecV4SettingAtt(SettingController):
 
         self.spec_v4_setting_att.StepByStepUpdateAndReroute = value
 
-    def get_draft_feature_migration_mode_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_draft_feature_migration_mode_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -112,7 +115,7 @@ class SpecV4SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDraftFeatureMigrationModeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the DraftFeatureMigrationMode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -121,9 +124,13 @@ class SpecV4SettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.spec_v4_setting_att.GetDraftFeatureMigrationModeInfo(admin_level, o_locked)
+        return self.spec_v4_setting_att.GetDraftFeatureMigrationModeInfo(
+            admin_level, o_locked
+        )
 
-    def get_step_by_step_update_and_reroute_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_step_by_step_update_and_reroute_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -131,7 +138,7 @@ class SpecV4SettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetStepByStepUpdateAndRerouteInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the StepByStepUpdateAndReroute setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -140,7 +147,9 @@ class SpecV4SettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.spec_v4_setting_att.GetStepByStepUpdateAndRerouteInfo(admin_level, o_locked)
+        return self.spec_v4_setting_att.GetStepByStepUpdateAndRerouteInfo(
+            admin_level, o_locked
+        )
 
     def set_draft_feature_migration_mode_lock(self, i_lock: bool) -> None:
         """
@@ -149,7 +158,7 @@ class SpecV4SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDraftFeatureMigrationModeLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the DraftFeatureMigrationMode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -158,7 +167,7 @@ class SpecV4SettingAtt(SettingController):
         :rtype: None
         """
         return self.spec_v4_setting_att.SetDraftFeatureMigrationModeLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -181,7 +190,7 @@ class SpecV4SettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetStepByStepUpdateAndRerouteLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the StepByStepUpdateAndReroute setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -190,7 +199,7 @@ class SpecV4SettingAtt(SettingController):
         :rtype: None
         """
         return self.spec_v4_setting_att.SetStepByStepUpdateAndRerouteLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,35 +1,36 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.ppr_interfaces.ppr_products import PPRProducts
 
 
 class PPRActivity(Activity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                         PPRActivity
-                | 
-                | The interface is used to retrieve the items and resources of the current
-                | Activity.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                         PPRActivity
+            |
+            | The interface is used to retrieve the items and resources of the current
+            | Activity.
+
     """
 
     def __init__(self, com_object):
@@ -44,10 +45,10 @@ class PPRActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PPRItems() As PPRProducts (Read Only)
-                | 
+                |
                 |     Retrieves the list of items as Products aggregated by the
                 |     Activity.
-                | 
+                |
                 |     Returns:
                 |         The list of items of the current Activity.
 
@@ -64,10 +65,10 @@ class PPRActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PPRItemsAndFTA() As CATIAPPRItems (Read Only)
-                | 
+                |
                 |     Retrieves the list of items as CATIAItems aggregated by the
                 |     Activity.
-                | 
+                |
                 |     Returns:
                 |         The list of items of the current Activity, including ASMPRODUCT and
                 |         possibly FTA objects
@@ -85,10 +86,10 @@ class PPRActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PPRResources() As PPRProducts (Read Only)
-                | 
+                |
                 |     Retrieves the list of resources as Products aggregated by the
                 |     Activity.
-                | 
+                |
                 |     Returns:
                 |         The list of resources of the current Activity.
 

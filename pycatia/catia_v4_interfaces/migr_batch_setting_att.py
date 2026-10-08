@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,53 +14,53 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class MigrBatchSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         MigrBatchSettingAtt
-                | 
-                | Represents the object to handle the setting parameters of the "Migration Batch"
-                | tab page.
-                | Role: This interface is implemented by a component named
-                | CATV4IMigrBatchSettingCtrl which represents the controller of the Setting. The
-                | setting parameters of the tab are the following:
-                | 
-                |     "Format"
-                |     "V4 Part Definition"
-                |     "Conversion Mode"
-                |     "Display Report Attribute"
-                |     "Initial Drawing Path "
-                |     "Projection of Space for transparent views"
-                |     "Mapping Files Location for Saving "
-                |     "Specified Directory "
-                |     "Mapping Files Location for Retrieving "
-                |     "Interface Name"
-                | 
-                | To access this property page:
-                | 
-                |     Click the Options command in the Tools menu
-                |     Click + left of General to unfold the workbench list
-                |     Click Compatibility
-                |     Click on the Migration Batch
-                |     tabpage 
-                | 
-                | 
-                | This interface defines:
-                | 
-                |     A method to get each parameter
-                |     A method to set the value of each parameter
-                |     A method to lock/unlock each parameter
-                |     A method to retrieve the informations concerning each
-                |     parameter
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         MigrBatchSettingAtt
+            |
+            | Represents the object to handle the setting parameters of the "Migration Batch"
+            | tab page.
+            | Role: This interface is implemented by a component named
+            | CATV4IMigrBatchSettingCtrl which represents the controller of the Setting. The
+            | setting parameters of the tab are the following:
+            |
+            |     "Format"
+            |     "V4 Part Definition"
+            |     "Conversion Mode"
+            |     "Display Report Attribute"
+            |     "Initial Drawing Path "
+            |     "Projection of Space for transparent views"
+            |     "Mapping Files Location for Saving "
+            |     "Specified Directory "
+            |     "Mapping Files Location for Retrieving "
+            |     "Interface Name"
+            |
+            | To access this property page:
+            |
+            |     Click the Options command in the Tools menu
+            |     Click + left of General to unfold the workbench list
+            |     Click Compatibility
+            |     Click on the Migration Batch
+            |     tabpage
+            |
+            |
+            | This interface defines:
+            |
+            |     A method to get each parameter
+            |     A method to set the value of each parameter
+            |     A method to lock/unlock each parameter
+            |     A method to retrieve the informations concerning each
+            |     parameter
+
     """
 
     def __init__(self, com_object):
@@ -75,7 +75,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Affiche_Attribut() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "Display Report Attribute" setting
                 |     parameter.
                 |     Role: This functionality allows the visualization of 3D elements attributes
@@ -103,7 +103,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Mapping_File_Save_Mode() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "Mapping Files Location for Saving"
                 |     setting parameter.
                 |     Role: The "Mapping Files Location for Saving " mode enables you to store a
@@ -132,7 +132,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Mapping_Saving_File() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "Specified Directory" setting
                 |     parameter.
                 |     Role: The "Specified Directory" mode enables you to find pointed entities
@@ -160,7 +160,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Migration_Format() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "Format" setting
                 |     parameter.
                 |     Role: The "Format" mode enables you to select the format of the Migration
@@ -187,7 +187,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Migration_Interface() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the "Migration Interace" setting
                 |     parameter.
                 |     Role: This option allows you to customize migrations from CATIA V4 to CATIA
@@ -215,7 +215,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Migration_Type() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "Conversion Mode" setting
                 |     parameter.
                 |     Role: The "Conversion Mode" mode enables you to separate the treatment of
@@ -242,7 +242,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Search_List_Size() As long
-                | 
+                |
                 |     Retrieves or sets the size of the "Mapping Files Location for Retrieving"
                 |     list.
                 |     Role: This setting enables to retrieve the size of the "Mapping Files
@@ -269,7 +269,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StartUp_Model_For_Drawing() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "Initial Drawing Path" setting
                 |     parameter.
                 |     Role: The "Initial Drawing Path" mode enables you to specify a .CATDrawing
@@ -297,7 +297,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property V4_Part_Definition() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "V4 Part Definition" setting
                 |     parameter.
                 |     Role: The "V4 Part Definition" mode enables you to define the CATParts
@@ -325,7 +325,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Visu_Mode_2D() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the state of the "Projection of Space for transparent
                 |     views" setting parameter.
                 |     Role: The "Projection of Space for transparent views" mode enables you to
@@ -353,7 +353,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAffiche_AttributInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Display Report Attribute" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -362,7 +362,9 @@ class MigrBatchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.migr_batch_setting_att.GetAffiche_AttributInfo(admin_level, o_locked)
+        return self.migr_batch_setting_att.GetAffiche_AttributInfo(
+            admin_level, o_locked
+        )
 
     def get_mapping_file_save_mode_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -372,7 +374,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMapping_File_Save_ModeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Mapping Files Location for Saving" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -381,7 +383,9 @@ class MigrBatchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.migr_batch_setting_att.GetMapping_File_Save_ModeInfo(admin_level, o_locked)
+        return self.migr_batch_setting_att.GetMapping_File_Save_ModeInfo(
+            admin_level, o_locked
+        )
 
     def get_mapping_saving_file_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -391,7 +395,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMapping_Saving_FileInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Specified Directory" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -400,7 +404,9 @@ class MigrBatchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.migr_batch_setting_att.GetMapping_Saving_FileInfo(admin_level, o_locked)
+        return self.migr_batch_setting_att.GetMapping_Saving_FileInfo(
+            admin_level, o_locked
+        )
 
     def get_migration_format_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -410,7 +416,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMigration_FormatInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Format" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -419,7 +425,9 @@ class MigrBatchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.migr_batch_setting_att.GetMigration_FormatInfo(admin_level, o_locked)
+        return self.migr_batch_setting_att.GetMigration_FormatInfo(
+            admin_level, o_locked
+        )
 
     def get_migration_interface_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -429,7 +437,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMigration_InterfaceInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Migration Interface" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -438,7 +446,9 @@ class MigrBatchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.migr_batch_setting_att.GetMigration_InterfaceInfo(admin_level, o_locked)
+        return self.migr_batch_setting_att.GetMigration_InterfaceInfo(
+            admin_level, o_locked
+        )
 
     def get_migration_type_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -448,7 +458,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMigration_TypeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Conversion" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -466,7 +476,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSearch_Mapping_List() As CATSafeArrayVariant
-                | 
+                |
                 |     Retrieves the state of the "Mapping Files Location for Retrieving" setting
                 |     parameter.
                 |     Role: The "Mapping Files Location for Retrieving " mode enables you to
@@ -476,7 +486,9 @@ class MigrBatchSettingAtt(SettingController):
         """
         return self.migr_batch_setting_att.GetSearch_Mapping_List()
 
-    def get_start_up_model_for_drawing_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_start_up_model_for_drawing_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -484,7 +496,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetStartUp_Model_For_DrawingInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Initial Drawing Path" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -493,7 +505,9 @@ class MigrBatchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.migr_batch_setting_att.GetStartUp_Model_For_DrawingInfo(admin_level, o_locked)
+        return self.migr_batch_setting_att.GetStartUp_Model_For_DrawingInfo(
+            admin_level, o_locked
+        )
 
     def get_v4_part_definition_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -503,7 +517,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetV4_Part_DefinitionInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "V4 Part Definition" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -512,7 +526,9 @@ class MigrBatchSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.migr_batch_setting_att.GetV4_Part_DefinitionInfo(admin_level, o_locked)
+        return self.migr_batch_setting_att.GetV4_Part_DefinitionInfo(
+            admin_level, o_locked
+        )
 
     def get_visu_mode_2d_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -522,7 +538,7 @@ class MigrBatchSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetVisu_Mode_2DInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the "Projection of Space for transparent views"
                 |     setting parameter.
                 |     Refer to SettingController for a detailed description.
@@ -540,7 +556,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PutSearch_Mapping_List(CATSafeArrayVariant iRelPath)
-                | 
+                |
                 |     Sets the state of the "Mapping Files Location for Retrieving" setting
                 |     parameter.
                 |     Role: The "Mapping Files Location for Retrieving " mode enables you to
@@ -550,7 +566,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.PutSearch_Mapping_List(i_rel_path)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -573,7 +589,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAffiche_AttributLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Display Report Attribute" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -582,7 +598,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetAffiche_AttributLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -605,7 +621,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMapping_File_Save_ModeLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Mapping Files Location for Saving" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -614,7 +630,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetMapping_File_Save_ModeLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -637,7 +653,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMapping_Saving_FileLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Specified Directory" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -646,7 +662,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetMapping_Saving_FileLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -669,7 +685,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMigration_FormatLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Format" setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -677,7 +693,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetMigration_FormatLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -700,7 +716,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMigration_InterfaceLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Migration Interface" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -709,7 +725,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetMigration_InterfaceLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -732,7 +748,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetMigration_TypeLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Conversion" setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -740,7 +756,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetMigration_TypeLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -763,7 +779,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetStartUp_Model_For_DrawingLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Initial Drawing Path" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -772,7 +788,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetStartUp_Model_For_DrawingLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -795,7 +811,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetV4_Part_DefinitionLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "V4 Part Definition" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -804,7 +820,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetV4_Part_DefinitionLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -827,7 +843,7 @@ class MigrBatchSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetVisu_Mode_2DLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the "Projection of Space for transparent views" setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -836,7 +852,7 @@ class MigrBatchSettingAtt(SettingController):
         :rtype: None
         """
         return self.migr_batch_setting_att.SetVisu_Mode_2DLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

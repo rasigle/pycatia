@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.arrangement_interfaces.arrangement_item_reservation import ArrangementItemReservation
+
+from pycatia.arrangement_interfaces.arrangement_item_reservation import (
+    ArrangementItemReservation,
+)
 from pycatia.in_interfaces.move import Move
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
@@ -16,22 +19,22 @@ from pycatia.types.general import CATVariant
 
 class ArrangementItemReservations(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     ArrangementItemReservations
-                | 
-                | A collection object for ArrangementItemReservation objects.
-                | Role: Use this collection object to manage (create, retrieve and remove)
-                | ArrangementItemReservation objects.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     ArrangementItemReservations
+            |
+            | A collection object for ArrangementItemReservation objects.
+            | Role: Use this collection object to manage (create, retrieve and remove)
+            | ArrangementItemReservation objects.
+
     """
 
     def __init__(self, com_object):
@@ -39,15 +42,15 @@ class ArrangementItemReservations(Collection):
         self.arrangement_item_reservations = com_object
 
     def add_item_reservation(
-            self,
-            i_rel_axis: Move,
-            i_position: tuple,
-            i_x_min: float,
-            i_y_min: float,
-            i_z_min: float,
-            i_x_max: float,
-            i_y_max: float,
-            i_z_max: float
+        self,
+        i_rel_axis: Move,
+        i_position: tuple,
+        i_x_min: float,
+        i_y_min: float,
+        i_z_min: float,
+        i_x_max: float,
+        i_y_max: float,
+        i_z_max: float,
     ) -> ArrangementItemReservation:
         """
         .. note::
@@ -62,36 +65,36 @@ class ArrangementItemReservations(Collection):
                 | double iXMax,
                 | double iYMax,
                 | double iZMax) As ArrangementItemReservation
-                | 
+                |
                 |     Creates an ArrangementItemReservation and adds it to the
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
-                |             Relative Axis to be considered. 
+                |             Relative Axis to be considered.
                 |         iPosition
                 |             Position information for the ItemReservation (rotation and
-                |             location). 
+                |             location).
                 |         iXMin
                 |             Minium X Coordinate of the bounding box on the Item Reservation.
-                |             
+                |
                 |         iYMin
                 |             Minium Y Coordinate of the bounding box on the Item Reservation.
-                |             
+                |
                 |         iZMin
                 |             Minium Z Coordinate of the bounding box on the Item Reservation.
-                |             
+                |
                 |         iXMax
                 |             Maximum X Coordinate of the bounding box on the Item Reservation.
-                |             
+                |
                 |         iYMax
                 |             Maximum Y Coordinate of the bounding box on the Item Reservation.
-                |             
+                |
                 |         iZMax
                 |             Maximum Z Coordinate of the bounding box on the Item Reservation.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Returns the newly created ArrangementItemReservation object and adds it
                 |         to the collection.
@@ -115,7 +118,7 @@ class ArrangementItemReservations(Collection):
                 i_z_min,
                 i_x_max,
                 i_y_max,
-                i_z_max
+                i_z_max,
             )
         )
 
@@ -126,31 +129,33 @@ class ArrangementItemReservations(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As ArrangementItemReservation
-                | 
+                |
                 |     Returns the specified ArrangementItemReservation item of the
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the ArrangementItemReservation to retrieve
                 |             from this collection.
-                | 
+                |
                 |             To retrieve a specific object by number, use the rank of the
                 |             ArrangementItemReservation in that collection.
                 |                 Note that the index of the first element in the collection is
                 |                 1, and the index of the last element is Count. To retrieve a specific
                 |                 ArrangementItemReservation by name, use name that you assigned using the
-                |                 
-                | 
-                |         AnyObject.Name property. 
+                |
+                |
+                |         AnyObject.Name property.
                 |     Returns:
                 |         The retrieved ArrangementItemReservation object.
 
         :param CATVariant i_index:
         :rtype: ArrangementItemReservation
         """
-        return ArrangementItemReservation(self.arrangement_item_reservations.Item(i_index))
+        return ArrangementItemReservation(
+            self.arrangement_item_reservations.Item(i_index)
+        )
 
     def remove(self, i_index: CATVariant) -> None:
         """
@@ -159,30 +164,30 @@ class ArrangementItemReservations(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes the specified ArrangementItemReservation object from the
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the ArrangementItemReservation to remove
                 |             from this collection.
-                | 
+                |
                 |             To remove a specific object by number, use the rank of the
                 |             ArrangementItemReservation in that collection.
                 |                 Note that the index of the first element in the collection is
                 |                 1, and the index of the last element is Count. To remove a specific
                 |                 ArrangementItemReservation by name, use name that you assigned using the
-                |                 
-                | 
+                |
+                |
                 |         AnyObject.Name property.
 
         :param CATVariant i_index:
         :rtype: None
         """
         return self.arrangement_item_reservations.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

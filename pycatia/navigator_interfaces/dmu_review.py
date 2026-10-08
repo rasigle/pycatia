@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from typing import TYPE_CHECKING
@@ -19,19 +19,19 @@ if TYPE_CHECKING:
 
 class DMUReview(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMUReview
-                | 
-                | Represents a DMU Review.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMUReview
+            |
+            | Represents a DMU Review.
 
     """
 
@@ -47,21 +47,21 @@ class DMUReview(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Activation() As long
-                | 
+                |
                 |     Returns or sets the activation.
-                | 
+                |
                 |     Returns:
                 |         The activation
-                | 
+                |
                 |             0: the DMU Review is inactivated.
-                |             1: the DMU Review is activated. 
-                | 
+                |             1: the DMU Review is activated.
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the activation of the oDMUReview DMU Review
                 |              and activates it.
-                |             
-                | 
+                |
+                |
                 |             Activation = oDMUReview.Activation
                 |             oDMUReview.Activation = 1
 
@@ -79,28 +79,29 @@ class DMUReview(AnyObject):
         self.dmu_review.Activation = value
 
     @property
-    def dmu_reviews(self) -> 'DMUReviews':
+    def dmu_reviews(self) -> "DMUReviews":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DMUReviews() As DMUReviews (Read Only)
-                | 
+                |
                 |     Returns the DMUReviews Collection associated with the DMUReview
                 |     (children).
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the cDMUReviews collection
                 |             from the oDMUReview DMU Review.
-                |             
-                | 
+                |
+                |
                 |             Set cDMUReviews = oDMUReview.DMUReviews(9)
 
         :rtype: DMUReviews
         """
         from pycatia.navigator_interfaces.dmu_reviews import DMUReviews
+
         return DMUReviews(self.dmu_review.DMUReviews)
 
     def __repr__(self):

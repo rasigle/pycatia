@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_plant_ship_interfaces.psp_list_of_doubles import PSPListOfDoubles
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,21 +16,21 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PSPLightConnector(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PspLightConnector
-                | 
-                | Represents the light connector.
-                | Role: To access light connector data.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PspLightConnector
+            |
+            | Represents the light connector.
+            | Role: To access light connector data.
+
     """
 
     def __init__(self, com_object):
@@ -44,18 +45,18 @@ class PSPLightConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAlignmentVector(Product iRelAxis) As
                 | PspListOfDoubles
-                | 
+                |
                 |     Returns the position of the connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             the relative axis object (Nothing means relative to parent)
-                |             
+                |
                 |         oAlignmentDirection
                 |             Three double values stand for X,Y,Z components of the alignment
-                |             vector 
-                | 
+                |             vector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspLightConnector
@@ -67,7 +68,9 @@ class PSPLightConnector(AnyObject):
         :param Product i_rel_axis:
         :rtype: PSPListOfDoubles
         """
-        return PSPListOfDoubles(self.psp_light_connector.GetAlignmentVector(i_rel_axis.com_object))
+        return PSPListOfDoubles(
+            self.psp_light_connector.GetAlignmentVector(i_rel_axis.com_object)
+        )
 
     def get_orientation_vector(self, i_rel_axis: Product) -> PSPListOfDoubles:
         """
@@ -77,18 +80,18 @@ class PSPLightConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOrientationVector(Product iRelAxis) As
                 | PspListOfDoubles
-                | 
+                |
                 |     Returns the Orientation Direction of the connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             the relative axis object (Nothing means relative to parent)
-                |             
+                |
                 |         oAlignmentDirection
                 |             Three double values stand for X,Y,Z components of the alignment
-                |             vector 
-                | 
+                |             vector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspLightConnector
@@ -100,7 +103,9 @@ class PSPLightConnector(AnyObject):
         :param Product i_rel_axis:
         :rtype: PSPListOfDoubles
         """
-        return PSPListOfDoubles(self.psp_light_connector.GetOrientationVector(i_rel_axis.com_object))
+        return PSPListOfDoubles(
+            self.psp_light_connector.GetOrientationVector(i_rel_axis.com_object)
+        )
 
     def get_origin(self, i_rel_axis: Product) -> PSPListOfDoubles:
         """
@@ -109,14 +114,14 @@ class PSPLightConnector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetOrigin(Product iRelAxis) As PspListOfDoubles
-                | 
+                |
                 |     Returns the position of the connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             the relative axis object (Nothing means relative to parent)
-                |             
+                |
                 |         oOrigin
                 |             Origin point position-three double values stand for x,y,z
                 |
@@ -131,9 +136,13 @@ class PSPLightConnector(AnyObject):
         :param Product i_rel_axis:
         :rtype: PSPListOfDoubles
         """
-        return PSPListOfDoubles(self.psp_light_connector.GetOrigin(i_rel_axis.com_object))
+        return PSPListOfDoubles(
+            self.psp_light_connector.GetOrigin(i_rel_axis.com_object)
+        )
 
-    def set_alignment_vector(self, i_rel_axis: Product, i_alignment_direction: tuple) -> tuple:
+    def set_alignment_vector(
+        self, i_rel_axis: Product, i_alignment_direction: tuple
+    ) -> tuple:
         """
         .. note::
             :class: toggle
@@ -141,18 +150,18 @@ class PSPLightConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAlignmentVector(Product iRelAxis,
                 | CATSafeArrayVariant iAlignmentDirection)
-                | 
+                |
                 |     Sets the alignment direction of the connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             the relative axis object (Nothing means relative to parent)
-                |             
+                |
                 |         iAlignmentDirection
                 |             Three double values stand for X,Y,Z component of the Alignment
-                |             vector 
-                | 
+                |             vector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspLightConnector
@@ -165,8 +174,10 @@ class PSPLightConnector(AnyObject):
         :param tuple i_alignment_direction:
         :rtype: tuple
         """
-        return self.psp_light_connector.SetAlignmentVector(i_rel_axis.com_object, i_alignment_direction)
-        # # # # Autogenerated comment: 
+        return self.psp_light_connector.SetAlignmentVector(
+            i_rel_axis.com_object, i_alignment_direction
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -182,7 +193,9 @@ class PSPLightConnector(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_orientation_vector(self, i_rel_axis: Product, i_orientation_direction: tuple) -> tuple:
+    def set_orientation_vector(
+        self, i_rel_axis: Product, i_orientation_direction: tuple
+    ) -> tuple:
         """
         .. note::
             :class: toggle
@@ -190,18 +203,18 @@ class PSPLightConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOrientationVector(Product iRelAxis,
                 | CATSafeArrayVariant iOrientationDirection)
-                | 
+                |
                 |     Sets the Orientation Direction of the connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             the relative axis object (Nothing means relative to parent)
-                |             
+                |
                 |         iAlignmentDirection
                 |             Three double values stand for X,Y,Z component of the Alignment
-                |             vector 
-                | 
+                |             vector
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspLightConnector
@@ -214,8 +227,10 @@ class PSPLightConnector(AnyObject):
         :param tuple i_orientation_direction:
         :rtype: tuple
         """
-        return self.psp_light_connector.SetOrientationVector(i_rel_axis.com_object, i_orientation_direction)
-        # # # # Autogenerated comment: 
+        return self.psp_light_connector.SetOrientationVector(
+            i_rel_axis.com_object, i_orientation_direction
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -239,18 +254,18 @@ class PSPLightConnector(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetOrigin(Product iRelAxis,
                 | CATSafeArrayVariant iDb3Position)
-                | 
+                |
                 |     Sets the position of the connector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
                 |             the relative axis object (Nothing means relative to parent)
-                |             
+                |
                 |         iDb3Position
                 |             absolute X-Y-Z coordinates of the current position of the connector
-                |             to be set 
-                | 
+                |             to be set
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspLightConnector
@@ -264,7 +279,7 @@ class PSPLightConnector(AnyObject):
         :rtype: tuple
         """
         return self.psp_light_connector.SetOrigin(i_rel_axis.com_object, i_db3_position)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

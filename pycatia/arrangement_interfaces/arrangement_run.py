@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.arrangement_interfaces.arrangement_nodes import ArrangementNodes
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class ArrangementRun(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ArrangementRun
-                | 
-                | Use this object to access the properties and methods of an ArrangementRun
-                | object.
-                | Role: Use this interface to control the visualization mode, section parameters,
-                | nodes that define the ArrangementRun object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ArrangementRun
+            |
+            | Use this object to access the properties and methods of an ArrangementRun
+            | object.
+            | Role: Use this interface to control the visualization mode, section parameters,
+            | nodes that define the ArrangementRun object.
+
     """
 
     def __init__(self, com_object):
@@ -45,14 +46,14 @@ class ArrangementRun(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ArrangementNodes() As ArrangementNodes (Read Only)
-                | 
+                |
                 |     Returns the ArrangementNodes that make up the
                 |     ArrangementRun.
-                | 
+                |
                 |     Example:
                 |         This example gets the ArrangementNodes for the objRun1
                 |         object.
-                | 
+                |
                 |          Dim objArrNodes   As ArrangementNodes
                 |          Set objArrNodes = objRun1.ArrangementNodes
 
@@ -69,13 +70,13 @@ class ArrangementRun(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Length() As double (Read Only)
-                | 
+                |
                 |     Returns the length of the ArrangementRun object.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the Length of the objRun1
                 |         object.
-                | 
+                |
                 |          Dim dblLength   As Double
                 |          dblLength  = objRun1.Length
 
@@ -92,14 +93,14 @@ class ArrangementRun(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionDiameter() As double
-                | 
+                |
                 |     Returns or sets the SectionDiameter for an ArrangementRun
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the SectionDiameter for the objRun1
                 |         object.
-                | 
+                |
                 |          Dim dblSectionDia   As Double
                 |          dblSectionDia = objRun1.SectionDiameter
 
@@ -124,14 +125,14 @@ class ArrangementRun(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionHeight() As double
-                | 
+                |
                 |     Returns or sets the SectionHeight for an ArrangementRun
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example gets the SectionHeight for the objRun1
                 |         object.
-                | 
+                |
                 |          Dim dblSectionHeight   As Double
                 |          dblSectionHeight = objRun1.SectionHeight
 
@@ -156,14 +157,14 @@ class ArrangementRun(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionType() As CATArrangementRouteSection
-                | 
+                |
                 |     Returns or sets the SectionType for an ArrangementRun
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example sets the SectionType for the objRun1 object to
                 |         CatArrangementRouteSectionRectangular.
-                | 
+                |
                 |          objRun1.SectionType = CatArrangementRouteSectionRectangular
 
         :rtype: int
@@ -187,14 +188,14 @@ class ArrangementRun(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionWidth() As double
-                | 
+                |
                 |     Returns or sets the SectionWidth for an ArrangementRun
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example gets the SectionWidth for the objRun1
                 |         object.
-                | 
+                |
                 |          Dim dblSectionWidth   As Double
                 |          dblSectionWidth = objRun1.SectionWidth
 
@@ -219,14 +220,14 @@ class ArrangementRun(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property VisuMode() As CATArrangementRouteVisuMode
-                | 
+                |
                 |     Returns or sets the Visualization Mode for an ArrangementRun
                 |     object.
-                | 
+                |
                 |     Example:
                 |         This example sets the Visualization Mode for the objRun1 object to
                 |         CatArrangementRouteVisuModeSolid.
-                | 
+                |
                 |          objRun1.VisuMode = CatArrangementRouteVisuModeSolid
 
         :return: enum cat_arrangement_route_visu_mode
@@ -251,21 +252,21 @@ class ArrangementRun(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetTechnologicalObject(CATBSTR iApplicationType) As
                 | CATBaseDispatch
-                | 
+                |
                 |     Returns the applicative data which type is the given
                 |     parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iApplicationType
-                |             The type of applicative data searched. 
+                |             The type of applicative data searched.
                 |         oApplicativeObj
                 |             The matched applicative object.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the desired applicative object from the
                 |                 objRun1 object.
-                | 
+                |
                 |                  Dim objProd   As Product
                 |                  objProd  = objRun1.GetTechnologicalObject("Product")
 

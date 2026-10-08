@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
 
 
 class ABQThermalConnBehavior(ABQProperty):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQProperty
-                |                         ABQThermalConnBehavior
-                | 
-                | Represents an Abaqus thermal connection behavior (ABQThermalConnBehavior)
-                | object.
-                | Role: Access an Abaqus thermal connection behaviour object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQProperty
+            |                         ABQThermalConnBehavior
+            |
+            | Represents an Abaqus thermal connection behavior (ABQThermalConnBehavior)
+            | object.
+            | Role: Access an Abaqus thermal connection behaviour object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -45,9 +46,9 @@ class ABQThermalConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConductanceTableSize() As long (Read Only)
-                | 
+                |
                 |     Returns the size of the conductance table.
-                | 
+                |
                 |     Returns:
                 |         The size of the conductance table.
 
@@ -64,9 +65,9 @@ class ABQThermalConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Description() As CATBSTR
-                | 
+                |
                 |     Sets or returns the description.
-                | 
+                |
                 |     Returns:
                 |         The description of the step.
 
@@ -91,9 +92,9 @@ class ABQThermalConnBehavior(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property temperatureDependency() As boolean
-                | 
+                |
                 |     Sets or returns the temperature dependency.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether the values are dependent on temperature.
 
@@ -110,7 +111,9 @@ class ABQThermalConnBehavior(ABQProperty):
 
         self.abq_thermal_conn_behavior.temperatureDependency = value
 
-    def add_gap_conduction_table(self, i_conductance: tuple, i_clearance: tuple, i_temperature: tuple) -> None:
+    def add_gap_conduction_table(
+        self, i_conductance: tuple, i_clearance: tuple, i_temperature: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -120,15 +123,15 @@ class ABQThermalConnBehavior(ABQProperty):
                 | iConductance,
                 | CATSafeArrayVariant iClearance,
                 | CATSafeArrayVariant iTemperature)
-                | 
+                |
                 |     Adds a gap-conductance table using three lists containing gap, conductance,
                 |     and temperature values. Temperature list will be ignored if the temperature
                 |     dependency is OFF. The number of values in all of the parameter lists must
                 |     match. If either list contains extra values, the extra values are
                 |     discarded.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iConductance
                 |             The list of conductance values (in W/degK/m^2).
                 |         iClearance
@@ -141,8 +144,10 @@ class ABQThermalConnBehavior(ABQProperty):
         :param tuple i_temperature:
         :rtype: None
         """
-        return self.abq_thermal_conn_behavior.AddGapConductionTable(i_conductance, i_clearance, i_temperature)
-        # # # # Autogenerated comment: 
+        return self.abq_thermal_conn_behavior.AddGapConductionTable(
+            i_conductance, i_clearance, i_temperature
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -158,7 +163,9 @@ class ABQThermalConnBehavior(ABQProperty):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_gap_conduction_table(self, o_conductance: tuple, o_clearance: tuple, o_temperature: tuple) -> None:
+    def get_gap_conduction_table(
+        self, o_conductance: tuple, o_clearance: tuple, o_temperature: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -168,16 +175,16 @@ class ABQThermalConnBehavior(ABQProperty):
                 | oConductance,
                 | CATSafeArrayVariant oClearance,
                 | CATSafeArrayVariant oTemperature)
-                | 
+                |
                 |     Returns list(s) containing gap, conductance, and temperature
                 |     values.
-                | 
+                |
                 |     Returns:
                 |         The lists of gap, conductance, and temperature values. The list of
                 |         temperature values will be ignored if the temperature dependency is OFF.
-                |         
+                |
                 |     Parameters:
-                | 
+                |
                 |         oConductance
                 |             The list of conductance values (in W/degK/m^2).
                 |         oClearance
@@ -190,8 +197,10 @@ class ABQThermalConnBehavior(ABQProperty):
         :param tuple o_temperature:
         :rtype: None
         """
-        return self.abq_thermal_conn_behavior.GetGapConductionTable(o_conductance, o_clearance, o_temperature)
-        # # # # Autogenerated comment: 
+        return self.abq_thermal_conn_behavior.GetGapConductionTable(
+            o_conductance, o_clearance, o_temperature
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

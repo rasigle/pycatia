@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -16,34 +16,34 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeMidSurface(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeMidSurface
-                | 
-                | Represents the hybrid shape MidSurface feature object.
-                | Role: To access the data of the hybrid shape MidSurface feature
-                | object.
-                | This data includes:
-                | 
-                |     Support Body
-                |     Creation Mode
-                |     Threshold Thickness
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeMidSurface
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeMidSurface
+            |
+            | Represents the hybrid shape MidSurface feature object.
+            | Role: To access the data of the hybrid shape MidSurface feature
+            | object.
+            | This data includes:
+            |
+            |     Support Body
+            |     Creation Mode
+            |     Threshold Thickness
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeMidSurface
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -58,7 +58,7 @@ class HybridShapeMidSurface(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AutoThicknessThreshold() As long
-                | 
+                |
                 |     Returns or sets AutoThicknessThreshold. Automatic Thickmess Threshold Check Button ON :1,
                 |     OFF : 0 (Only Automatic Creation Mode Available for Automation)
 
@@ -83,7 +83,7 @@ class HybridShapeMidSurface(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CreationMode() As long
-                | 
+                |
                 |     Returns or sets CreationMode. Face Pairs : 0, Faces To Offset : 1, Automatic :
                 |     2 (Only Automatic Creation Mode Available for Automation)
 
@@ -108,7 +108,7 @@ class HybridShapeMidSurface(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns or sets Support Body. Reference.
 
         :rtype: Reference
@@ -132,7 +132,7 @@ class HybridShapeMidSurface(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Threshold() As Length
-                | 
+                |
                 |     Returns or sets Threshold Thickness. Length.
 
         :rtype: Length

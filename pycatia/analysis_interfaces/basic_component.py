@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from typing import TYPE_CHECKING
@@ -25,32 +25,32 @@ if TYPE_CHECKING:
 
 class BasicComponent(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     BasicComponent
-                | 
-                | Interface designed to manage Analysis Basic Components.
-                | 
-                | A Basic Component is the low level of physical descriptive data. It is a
-                | "brick" dedicated to build the Analysis Entity or an Analysis Set
-                | .
-                | 
-                | A Basic Components can contain several Blocks. A Block is identified by a
-                | label. It contains entity data of the same type, organized in superimposed
-                | tables.
-                | 
-                | To create Analysis Entities with a complex structure, we have also created a
-                | particular Basic Component dedicated to encapsulate other Basic
-                | Components.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     BasicComponent
+            |
+            | Interface designed to manage Analysis Basic Components.
+            |
+            | A Basic Component is the low level of physical descriptive data. It is a
+            | "brick" dedicated to build the Analysis Entity or an Analysis Set
+            | .
+            |
+            | A Basic Components can contain several Blocks. A Block is identified by a
+            | label. It contains entity data of the same type, organized in superimposed
+            | tables.
+            |
+            | To create Analysis Entities with a complex structure, we have also created a
+            | particular Basic Component dedicated to encapsulate other Basic
+            | Components.
+
     """
 
     def __init__(self, com_object):
@@ -65,7 +65,7 @@ class BasicComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnalysisSupports() As AnalysisSupports (Read Only)
-                | 
+                |
                 |     Returns the list of Analysis Supports. The support defines the area on
                 |     which the analysis is applied on.
 
@@ -75,24 +75,24 @@ class BasicComponent(AnyObject):
         return AnalysisSupports(self.basic_component.AnalysisSupports)
 
     @property
-    def basic_components(self) -> 'BasicComponents':
+    def basic_components(self) -> "BasicComponents":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BasicComponents() As BasicComponents (Read Only)
-                | 
+                |
                 |     Returns the collection of Basic Components agregated by the basic
                 |     component. It can be (scalar value, vector, tensor,...). Depending on the type
                 |     of the Basic component, the collection can be empty.
-                | 
+                |
                 |     Example:
-                | 
-                |           This example retrieves Basic components collection 
-                | 
-                |          
-                | 
+                |
+                |           This example retrieves Basic components collection
+                |
+                |
+                |
                 |          Dim MyBasicComp As BasicComponent
                 |          Dim myBasicComponents As BasicComponents
                 |          Set myBasicComponents = MyBasicComp.BasicComponents
@@ -100,6 +100,7 @@ class BasicComponent(AnyObject):
         :rtype: BasicComponents
         """
         from pycatia.analysis_interfaces.basic_components import BasicComponents
+
         return BasicComponents(self.basic_component.BasicComponents)
 
     @property
@@ -110,17 +111,17 @@ class BasicComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Entities() As AnalysisEntities (Read Only)
-                | 
+                |
                 |     Returns the collection of Entities agregated by the basic component.
                 |     Depending on the type of the Basic component,the collection can be
                 |     empty.
-                | 
+                |
                 |     Example:
-                | 
-                |           This example retrieves Basic components collection 
-                | 
-                |          
-                | 
+                |
+                |           This example retrieves Basic components collection
+                |
+                |
+                |
                 |          Dim MyBasicComp As BasicComponent
                 |          Dim myEntities AnalysisEntities
                 |          Set myEntities = MyBasicComp.AnalysisEntities
@@ -138,9 +139,9 @@ class BasicComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Type() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the type of the Basic Component.
-                | 
+                |
                 |     Returns:
                 |         The string that represent the Basic Component type.
 
@@ -149,7 +150,9 @@ class BasicComponent(AnyObject):
 
         return self.basic_component.Type
 
-    def add_support_from_product(self, i_product: Product, i_support: Reference) -> None:
+    def add_support_from_product(
+        self, i_product: Product, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -157,19 +160,19 @@ class BasicComponent(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromProduct(Product iProduct,
                 | Reference iSupport)
-                | 
+                |
                 |     Creates a new support and add it to the description of the basic
                 |     component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             the CATIA Product that represent the object to
                 |             linked.
                 |         iSupport
                 |             the CATIA Reference that represent the object to
                 |             linked.
-                | 
+                |
                 |     See also:
                 |         Reference, Product
 
@@ -177,8 +180,10 @@ class BasicComponent(AnyObject):
         :param Reference i_support:
         :rtype: None
         """
-        return self.basic_component.AddSupportFromProduct(i_product.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.basic_component.AddSupportFromProduct(
+            i_product.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -194,7 +199,9 @@ class BasicComponent(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_publication(self, i_product: Product, i_publication: Publication) -> None:
+    def add_support_from_publication(
+        self, i_product: Product, i_publication: Publication
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -202,19 +209,19 @@ class BasicComponent(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromPublication(Product iProduct,
                 | Publication iPublication)
-                | 
+                |
                 |     Creates a new support and add it to the description of the Basic
                 |     Component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             the CATIA Product that represent the object to
                 |             linked.
                 |         iPublication
                 |             the CATIA Publication that represent the object to
                 |             linked.
-                | 
+                |
                 |     See also:
                 |         Publication, Product
 
@@ -222,8 +229,10 @@ class BasicComponent(AnyObject):
         :param Publication i_publication:
         :rtype: None
         """
-        return self.basic_component.AddSupportFromPublication(i_product.com_object, i_publication.com_object)
-        # # # # Autogenerated comment: 
+        return self.basic_component.AddSupportFromPublication(
+            i_product.com_object, i_publication.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -239,7 +248,9 @@ class BasicComponent(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_reference(self, i_reference: Reference, i_support: Reference) -> None:
+    def add_support_from_reference(
+        self, i_reference: Reference, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -247,19 +258,19 @@ class BasicComponent(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromReference(Reference iReference,
                 | Reference iSupport)
-                | 
+                |
                 |     Creates a new support and add it to the description of the basic
                 |     component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iReference
                 |             the CATIA Reference that represent the object to
                 |             linked.
                 |         iSupport
                 |             the CATIA Reference that represent the object to
                 |             linked.
-                | 
+                |
                 |     See also:
                 |         Reference, Product
 
@@ -267,8 +278,10 @@ class BasicComponent(AnyObject):
         :param Reference i_support:
         :rtype: None
         """
-        return self.basic_component.AddSupportFromReference(i_reference.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.basic_component.AddSupportFromReference(
+            i_reference.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -291,12 +304,12 @@ class BasicComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetColumnsNumber(CATBSTR iLabel) As long
-                | 
+                |
                 |     Return one of the dimensions information of the Basic Component
                 |     structure.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oColumnsNumber
                 |             = Number of Columns.
 
@@ -312,12 +325,12 @@ class BasicComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetLayersNumber(CATBSTR iLabel) As long
-                | 
+                |
                 |     Return one of the dimensions information of the Basic Component
                 |     structure.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLayersNumber
                 |             = Number of Layers.
 
@@ -333,12 +346,12 @@ class BasicComponent(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetLinesNumber(CATBSTR iLabel) As long
-                | 
+                |
                 |     Return one of the dimensions information of the Basic Component
                 |     structure.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLinesNumber
                 |             = Number of lines.
 
@@ -347,7 +360,9 @@ class BasicComponent(AnyObject):
         """
         return self.basic_component.GetLinesNumber(i_label)
 
-    def get_value(self, i_label: str, i_line_index: int, i_column_index: int, i_layer_index: int) -> CATVariant:
+    def get_value(
+        self, i_label: str, i_line_index: int, i_column_index: int, i_layer_index: int
+    ) -> CATVariant:
         """
         .. note::
             :class: toggle
@@ -357,11 +372,11 @@ class BasicComponent(AnyObject):
                 | long iLineIndex,
                 | long iColumnIndex,
                 | long iLayerIndex) As CATVariant
-                | 
+                |
                 |     Return the value corresponding to the given coordinates.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLabel
                 |             = Label of the block containing the value.
                 |         iLineIndex
@@ -379,9 +394,13 @@ class BasicComponent(AnyObject):
         :param int i_layer_index:
         :rtype: CATVariant
         """
-        return self.basic_component.GetValue(i_label, i_line_index, i_column_index, i_layer_index)
+        return self.basic_component.GetValue(
+            i_label, i_line_index, i_column_index, i_layer_index
+        )
 
-    def set_dimensions(self, i_line_count: int, i_column_count: int, i_layer_count: int) -> None:
+    def set_dimensions(
+        self, i_line_count: int, i_column_count: int, i_layer_count: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -390,11 +409,11 @@ class BasicComponent(AnyObject):
                 | o Sub SetDimensions(long iLineCount,
                 | long iColumnCount,
                 | long iLayerCount)
-                | 
+                |
                 |     Sets the dimensions of the basic component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLineCount
                 |             Number of lines.
                 |         iColumnCount
@@ -407,15 +426,18 @@ class BasicComponent(AnyObject):
         :param int i_layer_count:
         :rtype: None
         """
-        return self.basic_component.SetDimensions(i_line_count, i_column_count, i_layer_count)
+        return self.basic_component.SetDimensions(
+            i_line_count, i_column_count, i_layer_count
+        )
 
     def set_reference(
-            self,
-            i_label: str,
-            i_line_index: int,
-            i_column_index: int,
-            i_layer_index: int,
-            i_value: Reference) -> None:
+        self,
+        i_label: str,
+        i_line_index: int,
+        i_column_index: int,
+        i_layer_index: int,
+        i_value: Reference,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -426,11 +448,11 @@ class BasicComponent(AnyObject):
                 | long iColumnIndex,
                 | long iLayerIndex,
                 | Reference iValue)
-                | 
+                |
                 |     Sets the reference corresponding to the given component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLabel
                 |             The label of the block containing the value.
                 |         iLineIndex
@@ -450,12 +472,9 @@ class BasicComponent(AnyObject):
         :rtype: None
         """
         return self.basic_component.SetReference(
-            i_label,
-            i_line_index,
-            i_column_index,
-            i_layer_index,
-            i_value.com_object)
-        # # # # Autogenerated comment: 
+            i_label, i_line_index, i_column_index, i_layer_index, i_value.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -472,12 +491,13 @@ class BasicComponent(AnyObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def set_value(
-            self,
-            i_label: str,
-            i_line_index: int,
-            i_column_index: int,
-            i_layer_index: int,
-            i_value: CATVariant) -> None:
+        self,
+        i_label: str,
+        i_line_index: int,
+        i_column_index: int,
+        i_layer_index: int,
+        i_value: CATVariant,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -488,11 +508,11 @@ class BasicComponent(AnyObject):
                 | long iColumnIndex,
                 | long iLayerIndex,
                 | CATVariant iValue)
-                | 
+                |
                 |     Set the value corresponding to the given coordinates.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLabel
                 |             = Label of the block containing the value.
                 |         iLineIndex
@@ -512,13 +532,9 @@ class BasicComponent(AnyObject):
         :rtype: None
         """
         return self.basic_component.SetValue(
-            i_label,
-            i_line_index,
-            i_column_index,
-            i_layer_index,
-            i_value
+            i_label, i_line_index, i_column_index, i_layer_index, i_value
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

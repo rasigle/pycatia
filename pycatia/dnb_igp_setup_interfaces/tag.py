@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,27 +14,27 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class Tag(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Tag
-                | 
-                | Interface representing a Tag.
-                | 
-                | Role: This interface is used to work with Tag.
-                | The following code snippet can be used to obtain a Tag from a selected
-                | Product
-                | 
-                |   Set ParentObject = CATIA.ActiveDocument.Selection.FindObject("CATIAProduct")	
-                |   Set objTag = ParentObject.GetTechnologicalObject("Tag")
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Tag
+            |
+            | Interface representing a Tag.
+            |
+            | Role: This interface is used to work with Tag.
+            | The following code snippet can be used to obtain a Tag from a selected
+            | Product
+            |
+            |   Set ParentObject = CATIA.ActiveDocument.Selection.FindObject("CATIAProduct")
+            |   Set objTag = ParentObject.GetTechnologicalObject("Tag")
+
     """
 
     def __init__(self, com_object):
@@ -48,26 +48,26 @@ class Tag(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetName(CATBSTR oTagName)
-                | 
+                |
                 |     Retreives name of the Tag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTagName
-                |             Name of the Tag. 
-                | 
+                |             Name of the Tag.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
-                |             . 
-                | 
+                |             .
+                |
                 |     Example:
-                | 
-                |               
-                | 
+                |
+                |
+                |
                 |              Dim objTag As Tag
                 |              ...
                 |              Dim Name as String
@@ -85,33 +85,33 @@ class Tag(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetType(CATBSTR oFrameName)
-                | 
+                |
                 |     Get Frame Type of the Tag by Name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oFrameName
                 |             Name of the Required Frame.
                 |             Legal values : Returned tag frame by Name is either :
-                | 
+                |
                 |             Manufacturing,
                 |             Design,
                 |             Tool,
                 |             Base,
                 |             Custom
-                | 
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
-                |             . 
-                | 
+                |             .
+                |
                 |     Example:
-                | 
-                |               
-                | 
+                |
+                |
+                |
                 |              Dim objTag As Tag
                 |              ...
                 |              Dim FrameType as String
@@ -129,26 +129,26 @@ class Tag(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetXYZ(CATSafeArrayVariant ioXYZ)
-                | 
+                |
                 |     Gets the Position(X, Y, Z) of the Tag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioXYZ
-                |             The underlying Tag position. 
-                | 
+                |             The underlying Tag position.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
-                |             . 
-                | 
+                |             .
+                |
                 |     Example:
-                | 
-                |               
-                | 
+                |
+                |
+                |
                 |              Dim objTag As Tag
                 |              ...
                 |              Dim List(3)
@@ -158,7 +158,7 @@ class Tag(AnyObject):
         :rtype: None
         """
         return self.tag.GetXYZ(io_xyz)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -181,26 +181,26 @@ class Tag(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetYPR(CATSafeArrayVariant ioYPR)
-                | 
+                |
                 |     Gets the Orientation (Y, P, R) of the Tag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioYPR
-                |             The underlying Tag orientation. 
-                | 
+                |             The underlying Tag orientation.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
-                |             . 
-                | 
+                |             .
+                |
                 |     Example:
-                | 
-                |               
-                | 
+                |
+                |
+                |
                 |              Dim objTag As Tag
                 |              ...
                 |              Dim List(3)
@@ -210,7 +210,7 @@ class Tag(AnyObject):
         :rtype: None
         """
         return self.tag.GetYPR(io_ypr)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -233,26 +233,26 @@ class Tag(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetName(CATBSTR iTagName)
-                | 
+                |
                 |     Sets name of the Tag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iTagName
-                |             Name of the Tag. 
-                | 
+                |             Name of the Tag.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
-                |             . 
-                | 
+                |             .
+                |
                 |     Example:
-                | 
-                |               
-                | 
+                |
+                |
+                |
                 |              Dim objTag As Tag
                 |              ...
                 |              objTag.SetName("My_Tag")
@@ -269,33 +269,33 @@ class Tag(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetType(CATBSTR iFrameName)
-                | 
+                |
                 |     Sets Frame Type of the Tag by Name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFrameName
                 |             Name of the Required Frame.
                 |             Legal values : Tag frame can be set by name to either :
-                | 
+                |
                 |             Manufacturing,
                 |             Design,
                 |             Tool,
                 |             Base,
                 |             Custom
-                | 
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
-                |             . 
-                | 
+                |             .
+                |
                 |     Example:
-                | 
-                |               
-                | 
+                |
+                |
+                |
                 |              Dim objTag As Tag
                 |              ...
                 |              objTag.SetType("Design")
@@ -314,30 +314,30 @@ class Tag(AnyObject):
                 | o Sub SetXYZ(double iX,
                 | double iY,
                 | double iZ)
-                | 
+                |
                 |     Sets the Position(X, Y, Z) of the Tag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iX
-                |             The X value of the position 
+                |             The X value of the position
                 |         iY
-                |             The Y value of the position 
+                |             The Y value of the position
                 |         iZ
-                |             The Z value of the position 
-                | 
+                |             The Z value of the position
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
-                |             . 
-                | 
+                |             .
+                |
                 |     Example:
-                | 
-                |               
-                | 
+                |
+                |
+                |
                 |              Dim objTag As Tag
                 |              ...
                 |              objTag.SetXYZ 2800.0, 1800.0, 800.0
@@ -358,30 +358,30 @@ class Tag(AnyObject):
                 | o Sub SetYPR(double iY,
                 | double iP,
                 | double iR)
-                | 
+                |
                 |     Sets the Orientation (Y, P, R) of the Tag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iY
-                |             The yaw value of the oreintation 
+                |             The yaw value of the oreintation
                 |         iP
-                |             The pitch value of the orientation 
+                |             The pitch value of the orientation
                 |         iR
-                |             The roll value of the orientation 
-                | 
+                |             The roll value of the orientation
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
-                |             . 
-                | 
+                |             .
+                |
                 |     Example:
-                | 
-                |               
-                | 
+                |
+                |
+                |
                 |              Dim objTag As Tag
                 |              ...
                 |              objTag.SetYPR 1.4, 0.5, 3.14

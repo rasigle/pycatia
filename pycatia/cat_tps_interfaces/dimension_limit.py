@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class DimensionLimit(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DimensionLimit
-                | 
-                | Represents the limit object of tolerance dimensions.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DimensionLimit
+            |
+            | Represents the limit object of tolerance dimensions.
+
     """
 
     def __init__(self, com_object):
@@ -42,10 +42,10 @@ class DimensionLimit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DimensionLimitType() As CATBSTR
-                | 
+                |
                 |     Returns or sets the dimension limit type.
                 |     Legal values: Valid dimension limit type values are:
-                | 
+                |
                 |         CATTPSDLNotDefined
                 |         CATTPSDLNumerical
                 |         CATTPSDLTabulated
@@ -72,7 +72,7 @@ class DimensionLimit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Modifier() As CATBSTR
-                | 
+                |
                 |     Returns or sets the dimension single limit modifier.
 
         :rtype: str
@@ -96,7 +96,7 @@ class DimensionLimit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Nominalvalue() As double (Read Only)
-                | 
+                |
                 |     Returns the dimension limit nominal value.
                 |     This value is expressed in millimeters.
 
@@ -113,7 +113,7 @@ class DimensionLimit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SymetricValue() As boolean
-                | 
+                |
                 |     Returns or sets whether the dimension limit is symmetric.
                 |     TRUE if it is symmetric.
 
@@ -138,7 +138,7 @@ class DimensionLimit(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TabulatedLimit() As CATBSTR
-                | 
+                |
                 |     Returns or sets the dimension tabulated limit.
                 |     This tabulated limit is expressed as a string.
 
@@ -163,14 +163,14 @@ class DimensionLimit(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Limits(double oBottom,
                 | double oUp)
-                | 
+                |
                 |     Retrieves dimension limit values.
                 |     These values are expressed in millimeters.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oBottom
-                |             The dimension limit bottom value 
+                |             The dimension limit bottom value
                 |         oUp
                 |             The dimension limit up value
 
@@ -188,14 +188,14 @@ class DimensionLimit(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub PutLimits(double iBottom,
                 | double iUp)
-                | 
+                |
                 |     Sets dimension limit values.
                 |     These values are expressed in millimeters.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iBottom
-                |             The dimension limit bottom value 
+                |             The dimension limit bottom value
                 |         iUp
                 |             The dimension limit up value
 

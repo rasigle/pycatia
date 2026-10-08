@@ -1,37 +1,36 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class GlobalStatisticsSettingAtt(SettingController):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
+        CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         GlobalStatisticsSettingAtt
-                | 
-                | Interface for Global statistic Controller
-                | Role: the global statistics controller manages the values of all or only a part
-                | of the attributes available for all the statistics thematics.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         GlobalStatisticsSettingAtt
+            |
+            | Interface for Global statistic Controller
+            | Role: the global statistics controller manages the values of all or only a part
+            | of the attributes available for all the statistics thematics.
+
     """
 
     def __init__(self, com_object):
@@ -46,10 +45,10 @@ class GlobalStatisticsSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property BufferSize() As long
-                | 
+                |
                 |     Returns or sets the size of buffer.
                 |     Role: Returns or sets the size of the buffer.
-                | 
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -76,11 +75,11 @@ class GlobalStatisticsSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property CopyDirectory() As CATBSTR
-                | 
+                |
                 |     Returns or sets the path of the copy directory.
                 |     Role: Returns or sets the path of the directory where the copy files are
                 |     located.
-                | 
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -107,11 +106,11 @@ class GlobalStatisticsSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property MaxCopyFile() As long
-                | 
+                |
                 |     Returns or sets the maximum number of copy files.
                 |     Role: Returns or sets the value of the maximum number of statistics files
                 |     copies.
-                | 
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -138,11 +137,11 @@ class GlobalStatisticsSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property MaxSizePerFile() As long
-                | 
+                |
                 |     Returns or sets the maximum size per file.
                 |     Role: Returns or sets the value of the maximum size of statistics
                 |     files.
-                | 
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -169,7 +168,7 @@ class GlobalStatisticsSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetThematicsParameterInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the global statistics
                 |     parameters.
                 |     Refer to SettingController for a detailed description.
@@ -178,7 +177,9 @@ class GlobalStatisticsSettingAtt(SettingController):
         :param str o_locked:
         :return: None
         """
-        return self.global_statistics_setting_att.GetThematicsParameterInfo(admin_level, o_locked)
+        return self.global_statistics_setting_att.GetThematicsParameterInfo(
+            admin_level, o_locked
+        )
 
     def set_thematics_parameter_lock(self, i_locked):
         """
@@ -187,18 +188,18 @@ class GlobalStatisticsSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetThematicsParameterLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the global statistics parameters.
                 |     Role:Locks or unlocks the global statistics parameters.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE : to lock the parameter.
-                |             FALSE: to unlock the parameter. 
-                | 
+                |             FALSE: to unlock the parameter.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -208,7 +209,7 @@ class GlobalStatisticsSettingAtt(SettingController):
         :return: None
         """
         return self.global_statistics_setting_att.SetThematicsParameterLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

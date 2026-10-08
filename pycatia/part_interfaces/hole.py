@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.enumeration.enums import CatScriptLanguage
@@ -21,22 +22,22 @@ from pycatia.part_interfaces.sketch_based_shape import SketchBasedShape
 
 class Hole(SketchBasedShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Shape
-                |                         PartInterfaces.SketchBasedShape
-                |                             Hole
-                | 
-                | Hole Feature in Part Design.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Shape
+            |                         PartInterfaces.SketchBasedShape
+            |                             Hole
+            |
+            | Hole Feature in Part Design.
+
     """
 
     def __init__(self, com_object):
@@ -51,19 +52,19 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AnchorMode() As CatHoleAnchorMode
-                | 
+                |
                 |     Returns the hole anchor mode.
                 |     This information is pertinent when hole type is Counterbored or
                 |     Counterdrilled only.
-                | 
+                |
                 |     Returns:
                 |         oMode The hole anchor mode (see CatHoleAnchorMode for list of possible
                 |         types)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeAnchorMode the anchor mode of
                 |             hole firstHole:
-                | 
+                |
                 |              Set holeAnchorMode = firstHole.AnchorMode
 
         :return: enum cat_hole_anchor_mode
@@ -88,18 +89,18 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BottomAngle() As Angle (Read Only)
-                | 
+                |
                 |     Returns the hole bottom angle.
                 |     This call is valid when the hole bottom type is : VBottom.
-                | 
+                |
                 |     Returns:
                 |         oBottomAngle An Angle object controlling the hole bottom angle (see
                 |         Angle for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeBottomAngle the bottom angle
                 |             of hole firstHole:
-                | 
+                |
                 |              Set holeBottomAngle = firstHole.BottomAngle
 
         :rtype: Angle
@@ -115,18 +116,18 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BottomLimit() As Limit (Read Only)
-                | 
+                |
                 |     Returns the bottom limit.
                 |     This call is valid when the hole bottom type is : BlindHole or ThruHole.
-                | 
+                |
                 |     Returns:
                 |         oBottomLimit A Limit object controlling the hole bottom limit (see
                 |         Limit for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeBottomLimit the bottom limit
                 |             of hole firstHole:
-                | 
+                |
                 |              Set holeBottomLimit = firstHole.BottomLimit
 
         :rtype: Limit
@@ -142,17 +143,17 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BottomType() As CatHoleBottomType
-                | 
+                |
                 |     Returns the hole bottom type.
-                | 
+                |
                 |     Returns:
                 |         oBottomType The hole bottom type (see CatHoleBottomType for list of
                 |         possible types)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeBottomType the bottom type of
                 |             hole firstHole:
-                | 
+                |
                 |              Set holeBottomType = firstHole.BottomType
 
         :return: enum cat_hole_bottom_type
@@ -200,7 +201,7 @@ class Hole(SketchBasedShape):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.hole.CounterDrilledMode
@@ -221,17 +222,17 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CounterSunkMode() As CatCSHoleMode
-                | 
+                |
                 |     Returns the mode of a countersunk hole .
-                | 
+                |
                 |     Returns:
                 |         CSMode Value of the countersunk mode (see CatCSHoleMode for list of
                 |         possible types)
-                | 
+                |
                 |         Example:
                 |             The following example returns in CSMode the CSMode of hole
                 |             firsthole:
-                | 
+                |
                 |              Set CSMode = firsthole.CounterSunkMode
 
         :return: enum cat_cs_hole_mode
@@ -256,17 +257,17 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Diameter() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole diameter.
-                | 
+                |
                 |     Returns:
                 |         oDiameter A Length object controlling the hole diameter (see Length for
                 |         more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeDiam the diameter of hole
                 |             firstHole:
-                | 
+                |
                 |              Set holeDiam = firstHole.Diameter
 
         :rtype: Length
@@ -282,18 +283,18 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property HeadAngle() As Angle (Read Only)
-                | 
+                |
                 |     Returns the hole head angle.
                 |     This call is valid when the hole type is : Tapered or Counterdrilled or Countersunk.
-                | 
+                |
                 |     Returns:
                 |         oHeadAngle An Angle object controlling the hole head angle (see Angle
                 |         for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeHeadAngle the head angle of
                 |             hole firstHole:
-                | 
+                |
                 |              Set holeHeadAngle = firstHole.HeadAngle
 
         :rtype: Angle
@@ -309,18 +310,18 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property HeadDepth() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole head depth.
                 |     This call is valid when the hole type is : Counterbored or Counterdrilled or Countersunk.
-                | 
+                |
                 |     Returns:
                 |         oHeadDepth A Length object controlling the hole head depth (see Length
                 |         for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeHeadDepth the head depth of
                 |             hole firstHole:
-                | 
+                |
                 |              Set holeHeadDepth = firstHole.HeadDepth
 
         :rtype: Length
@@ -336,18 +337,18 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property HeadDiameter() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole head diameter.
                 |     This call is valid when the hole type is : Counterbored or Counterdrilled.
-                | 
+                |
                 |     Returns:
                 |         oHeadDiameter A Length object controlling the hole head diameter (see
                 |         Length for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeHeadDiam the head diameter of
                 |             hole firstHole:
-                | 
+                |
                 |              Set holeHeadDiam = firstHole.HeadDiameter
 
         :rtype: Length
@@ -363,20 +364,20 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property HoleThreadDescription() As StrParam (Read Only)
-                | 
+                |
                 |     Returns the hole thread description parameter.
                 |     This call is valid when the hole threading mode is : CATThreadedHoleThreading.
                 |     This call is valid only when a standard/user design table
                 |     exists
-                | 
+                |
                 |     Returns:
                 |         oThreadDescParam A Parameter object controlling the hole thread
                 |         description (see StrParam for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeThreadDescription the thread
                 |             description (M12 etc) of hole firstHole:
-                | 
+                |
                 |              Set holeThreadDescription = firstHole.HoleThreadDescription
 
         :rtype: StrParam
@@ -392,18 +393,18 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ThreadDepth() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole thread depth.
                 |     This call is valid when the hole threading mode is : CATThreadedHoleThreading.
-                | 
+                |
                 |     Returns:
                 |         oThreadDepth A Length object controlling the hole thread depth (see
                 |         Length for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeThreadDepth the thread depth
                 |             of hole firstHole:
-                | 
+                |
                 |              Set holeThreadDepth = firstHole.ThreadDepth
 
         :rtype: Length
@@ -419,18 +420,18 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ThreadDiameter() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole thread diameter.
                 |     This call is valid when the hole threading mode is : CATThreadedHoleThreading.
-                | 
+                |
                 |     Returns:
                 |         oThreadDiameter A Length object controlling the hole thread diameter
                 |         (see Length for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeThreadDiameter the thread
                 |             diameter of hole firstHole:
-                | 
+                |
                 |              Set holeThreadDiameter = firstHole.ThreadDiameter
 
         :rtype: Length
@@ -446,18 +447,18 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ThreadPitch() As Length (Read Only)
-                | 
+                |
                 |     Returns the hole thread pitch.
                 |     This call is valid when the hole threading mode is : CATThreadedHoleThreading.
-                | 
+                |
                 |     Returns:
                 |         oThreadPitch A Length object controlling the hole thread pitch (see
                 |         Length for more information)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeThreadPitch the thread pitch
                 |             of hole firstHole:
-                | 
+                |
                 |              Set holeThreadPitch = firstHole.ThreadPitch
 
         :rtype: Length
@@ -473,17 +474,17 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ThreadSide() As CatHoleThreadSide
-                | 
+                |
                 |     Returns the hole thread side.
-                | 
+                |
                 |     Returns:
                 |         oThreadSide The hole thread side (see CatHoleThreadSide for list of
                 |         possible sides)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeThreadSide the thread side of
                 |             hole firstHole:
-                | 
+                |
                 |              Set holeThreadSide = firstHole.ThreadSide
 
         :return: enum cat_hole_thread_side
@@ -508,17 +509,17 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ThreadingMode() As CatHoleThreadingMode
-                | 
+                |
                 |     Returns the hole threading mode.
-                | 
+                |
                 |     Returns:
                 |         oThreadingMode The hole threading mode (see CatHoleThreadingMode for
                 |         list of possible types)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeThreadingMode the threading
                 |             mode of hole firstHole:
-                | 
+                |
                 |              Set holeThreadingMode = firstHole.ThreadingMode
 
         :return: enum cat_hole_threading_mode
@@ -543,17 +544,17 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Type() As CatHoleType
-                | 
+                |
                 |     Returns the hole type.
-                | 
+                |
                 |     Returns:
                 |         oType The hole type (see CatHoleType for list of possible
                 |         types)
-                | 
+                |
                 |         Example:
                 |             The following example returns in holeType the type of hole
                 |             firstHole:
-                | 
+                |
                 |              Set holeType = firstHole.Type
 
         :return: enum cat_hole_type
@@ -578,21 +579,21 @@ class Hole(SketchBasedShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub CreateStandardThreadDesignTable(CatHoleThreadStandard
                 | iStandardType)
-                | 
+                |
                 |     Creates a Standard Thread design table .
                 |     This call is valid when the hole threading mode is : CATThreadedHoleThreading.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStandardType
-                |             Standard type for thread (see 
-                | 
+                |             Standard type for thread (see
+                |
                 |         CatHoleThreadStandard for list of possible types)
-                | 
+                |
                 |         Example:
                 |             The following example creates a standard table for MetricThinPitch
                 |             for hole firstHole:
-                | 
+                |
                 |              firstHole.CreateStandardThreadDesignTable
                 |              catHoleMetricThinPitch
 
@@ -601,7 +602,9 @@ class Hole(SketchBasedShape):
         """
         return self.hole.CreateStandardThreadDesignTable(i_standard_type)
 
-    def create_user_standard_design_table(self, i_standard_name: str, i_path: str) -> None:
+    def create_user_standard_design_table(
+        self, i_standard_name: str, i_path: str
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -609,32 +612,32 @@ class Hole(SketchBasedShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub CreateUserStandardDesignTable(CATBSTR iStandardName,
                 | CATBSTR iPath)
-                | 
+                |
                 |     Creates a UserStandard Thread design table .
                 |     This call is valid when the hole threading mode is : CATThreadedHoleThreading.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStandardName
                 |             Name of the UserStandard thread. iStandardName should be empty if
-                |             filepath is to be defined. 
+                |             filepath is to be defined.
                 |         iPath
                 |             Path of the UserStandard file. iPath is empty if the filepath is
                 |             already defined through CATReffilesPath.
-                | 
+                |
                 |             Example1:
                 |                 The following example creates a standard table for UserStandard
                 |                 for hole firstHole. The file path is already defined thru
                 |                 CATReffilesPath:
-                | 
+                |
                 |                  firstHole.CreateUserStandardDesignTable
                 |                  "UserStandard",""
-                | 
+                |
                 |             Example2:
                 |                 The following example creates a standard table for UserStandard
                 |                 for hole firstHole when file path is not defined thru
                 |                 CATReffilesPath:
-                | 
+                |
                 |                  firstHole.CreateUserStandardDesignTable
                 |                  "","E:\\user\\standard\\UserStandard.txt"
 
@@ -651,17 +654,17 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetDirection(CATSafeArrayVariant ioDirection)
-                | 
+                |
                 |     Returns the hole direction with absolute coordinates.
                 |     It provides a safe array with 3 elements : X, Y, Z direction coordinates
-                | 
+                |
                 |     Returns:
                 |         oDirection The direction coordinates
-                | 
+                |
                 |         Example:
                 |             The following example returns in dirArray the direction coordinates
                 |             of hole firstHole:
-                | 
+                |
                 |              Call firstHole.GetDirection dirArray
                 |              Set x = dirArray[1]
                 |              Set y = dirArray[2]
@@ -669,7 +672,7 @@ class Hole(SketchBasedShape):
 
         :rtype: tuple
         """
-        vba_function_name = 'get_direction'
+        vba_function_name = "get_direction"
         vba_code = """
         Public Function get_direction(hole)
             Dim ioDirection (2)
@@ -683,7 +686,7 @@ class Hole(SketchBasedShape):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def get_origin(self) -> tuple:
@@ -693,17 +696,17 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetOrigin(CATSafeArrayVariant ioOrigin)
-                | 
+                |
                 |     Returns the origin point which the hole is anchored to.
                 |     This point belongs to a tangent plane.
-                | 
+                |
                 |     Returns:
                 |         oOrigin A Safe Array made up of 3 doubles : X, Y, Z - Hole origin point coordinates
-                | 
+                |
                 |         Example:
                 |             The following example returns in coordArray the coordinates of hole
                 |             firstHole:
-                | 
+                |
                 |              Call firstHole.GetOrigin coordArray
                 |              Set x = coordArray[1]
                 |              Set y = coordArray[2]
@@ -711,7 +714,7 @@ class Hole(SketchBasedShape):
 
         :rtype: tuple
         """
-        vba_function_name = 'get_origin'
+        vba_function_name = "get_origin"
         vba_code = """
         Public Function get_origin(hole)
             Dim ioOrigin (2)
@@ -725,7 +728,7 @@ class Hole(SketchBasedShape):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def reverse(self) -> None:
@@ -735,13 +738,13 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Reverse()
-                | 
+                |
                 |     Reverses the hole direction .
-                | 
+                |
                 |     Example:
                 |         The following example reverses the current direction of hole
                 |         firstHole:
-                | 
+                |
                 |          firstHole.Reverse()
 
         :rtype: None
@@ -755,30 +758,30 @@ class Hole(SketchBasedShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDirection(Reference iDirection)
-                | 
+                |
                 |     Sets the hole associative direction.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDirection
-                |             A Reference object to an edge or a line (see 
-                | 
+                |             A Reference object to an edge or a line (see
+                |
                 |         Reference for more information)
                 |         The following Boundary objects are supported:
                 |         RectilinearTriDimFeatEdge, RectilinearBiDimFeatEdge and
                 |         RectilinearMonoDimFeatEdge.
-                | 
+                |
                 |         Example:
                 |             The following example sets the support direction of hole firstHole
                 |             with holeDirRef direction reference :
-                | 
+                |
                 |              firstHole.SetDirection holeDirref
 
         :param Reference i_direction:
         :rtype: None
         """
         return self.hole.SetDirection(i_direction.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -803,24 +806,24 @@ class Hole(SketchBasedShape):
                 | o Sub SetOrigin(double iX,
                 | double iY,
                 | double iZ)
-                | 
+                |
                 |     Sets the origin point which the hole is anchored to.
                 |     If mandatory, the entry point will be projected onto a tangent
                 |     plane.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iX
-                |             Origin point x absolute coordinate 
+                |             Origin point x absolute coordinate
                 |         iY
-                |             Origin point y absolute coordinate 
+                |             Origin point y absolute coordinate
                 |         iZ
                 |             Origin point z absolute coordinate
-                | 
+                |
                 |             Example:
                 |                 The following example sets the coordinates of hole firstHole to
                 |                 10., 20., -5. :
-                | 
+                |
                 |                  firstHole.SetOrigin 10., 20., 5.
 
         :param float i_x:

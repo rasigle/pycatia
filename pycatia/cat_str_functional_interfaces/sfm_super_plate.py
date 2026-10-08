@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_str_functional_interfaces.sfm_object import SFMObject
 from pycatia.cat_str_functional_interfaces.sfm_slots import SFMSlots
 from pycatia.cat_str_functional_interfaces.sfm_split_plates import SFMSplitPlates
@@ -19,26 +20,26 @@ from pycatia.types.general import CATVariant
 
 class SFMSuperPlate(SFMObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATStrFunctionalInterfaces.SfmObject
-                |                         SfmSuperPlate
-                | 
-                | Interface to manage the Structure Functional Modeler SuperPlate
-                | object.
-                | Role: Allows accessing and setting of SuperPlate's data.
-                | 
-                | See also:
-                |     SfmFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATStrFunctionalInterfaces.SfmObject
+            |                         SfmSuperPlate
+            |
+            | Interface to manage the Structure Functional Modeler SuperPlate
+            | object.
+            | Role: Allows accessing and setting of SuperPlate's data.
+            |
+            | See also:
+            |     SfmFactory
+
     """
 
     def __init__(self, com_object):
@@ -53,13 +54,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LimitMode() As long
-                | 
+                |
                 |     Returns or sets the SuperPlate's limit mode.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in LimitMode the limit mode of the SuperPlate
                 |         feature.
-                | 
+                |
                 |          Dim LimitMode As Integer
                 |          Set LimitMode = SuperPlate.LimitMode
 
@@ -84,13 +85,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MoldedSurface() As Reference (Read Only)
-                | 
+                |
                 |     Returns the molded surface.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in MoldedSurface the molded surface for the
                 |         SuperPlate feature.
-                | 
+                |
                 |          Dim MoldedSurface As Reference
                 |          Set MoldedSurface = SuperPlate.MoldedSurface
 
@@ -107,13 +108,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SplitPlates() As References (Read Only)
-                | 
+                |
                 |     Returns the SplitPlates.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in SplitPlates the list of SplitPlates for the
                 |         SuperPlate feature.
-                | 
+                |
                 |          Dim SplitPlates As References
                 |          Set SplitPlates = SuperPlate.SplitPlates
 
@@ -130,13 +131,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SplitPlatesObjects() As SfmSplitPlates (Read Only)
-                | 
+                |
                 |     Returns the SplitPlates.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in SplitPlates the list of SplitPlates for the
                 |         SuperPlate feature.
-                | 
+                |
                 |          Dim SuperPlate2 As SfmSuperPlate
                 |          Set SuperPlate2 = SuperPlates.Item(2)
                 |          Dim OperatedSuperPlateObject  As SfmSuperPlateObject
@@ -157,13 +158,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns the SuperPlate's support.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Support the support of the SuperPlate
                 |         feature.
-                | 
+                |
                 |          Dim Support As Reference
                 |          Set Support = SuperPlate.Support
 
@@ -188,13 +189,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SupportOffset() As double
-                | 
+                |
                 |     Returns or sets the SuperPlate's support offset.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Offset the support offset of the SuperPlate
                 |         feature.
-                | 
+                |
                 |          Dim Offset As Double
                 |          Set Offset = SuperPlate.SupportOffset
 
@@ -233,13 +234,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Thickness() As double
-                | 
+                |
                 |     Returns or sets the SuperPlate's Thickness.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the Thickness of existing
                 |         SuperPlate.
-                | 
+                |
                 |          Dim ThicknessValue As Double
                 |          Set ThicknessValue = SuperPlate.Thickness
 
@@ -264,13 +265,13 @@ class SFMSuperPlate(SFMObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddLimit(Reference iLimit,
                 | long iOrientation)
-                | 
+                |
                 |     Adds one object to the list of connected object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLimit
-                |             [in] New Limit to add. 
+                |             [in] New Limit to add.
                 |         iOrientation
                 |             [in] iOrientation value can be selected from
                 |                  InvertOrientation = -1,
@@ -288,11 +289,11 @@ class SFMSuperPlate(SFMObject):
                 |                  [Toward center line] GlobalOrientation_LOutboard = 11
                 |                  [Opposite of previous one ] GlobalOrientation_TInboard = 12 [Toward midship ]
                 |                  GlobalOrientation_TOutboard = 13 [Opposite of previous one]
-                | 
+                |
                 |             Example:
                 |                 This example adds one limit to Deck Plate, and keeps Fore
                 |                 Side.
-                | 
+                |
                 |                  Set PlateLimit = ObjPart.FindObjectByName("CROSS.60")
                 |                  Dim LimitRef As Reference
                 |                  Set LimitRef = ObjPart.CreateReferenceFromObject(PlateLimit)
@@ -305,7 +306,7 @@ class SFMSuperPlate(SFMObject):
         :rtype: None
         """
         return self.sfm_super_plate.AddLimit(i_limit.com_object, i_orientation)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -328,14 +329,14 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetFreeEdges() As References
-                | 
+                |
                 |     Returns the Free Edges of Super Plate.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in FreeEdges the list of free edges for the
                 |         SuperPlate feature.
-                | 
-                |           
+                |
+                |
                 |         Dim FreeEdges As References
                 |         Set FreeEdges = SuperPlate.GetFreeEdges
 
@@ -350,20 +351,20 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSlotsOnPlate() As SfmSlots
-                | 
+                |
                 |     Retrieves Slots on Plate.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSfmSlots
-                |             [out] Slots. 
-                | 
+                |             [out] Slots.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This example gets the Slots.
-                | 
+                |
                 |              Dim SlotsonPlate As SfmSlots
                 |              Set SlotsonPlate = PlateObj.GetSlotsOnPlate
 
@@ -372,11 +373,11 @@ class SFMSuperPlate(SFMObject):
         return SFMSlots(self.sfm_super_plate.GetSlotsOnPlate())
 
     def get_split_plate_attributes(
-            self,
-            i_split_plate_number: int,
-            o_thickness: float,
-            o_material_name: str,
-            o_grade_name: str
+        self,
+        i_split_plate_number: int,
+        o_thickness: float,
+        o_material_name: str,
+        o_grade_name: str,
     ) -> None:
         """
         .. note::
@@ -387,26 +388,26 @@ class SFMSuperPlate(SFMObject):
                 | double oThickness,
                 | CATBSTR oMaterialName,
                 | CATBSTR oGradeName)
-                | 
+                |
                 |     Returns the SplitPlate(ChildPlate)
                 |     Attributes(Thickness,Material,Grade).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSplitPlateNumber
                 |             [in] This Number is the Split Plate number desired.
-                |             
+                |
                 |         oThickness
-                |             [out] Thickness of the child Plate. 
+                |             [out] Thickness of the child Plate.
                 |         oMaterialName
-                |             [out] Material of the child Plate. 
+                |             [out] Material of the child Plate.
                 |         oGradeName
                 |             [out] Grade of the child Plate.
-                | 
+                |
                 |             Example:
                 |                 This example retrieves the attributes of the
                 |                 ChildPlate.
-                | 
+                |
                 |                  'Retrieve the Split Plates under the
                 |                  SuperPlate
                 |                  Dim SplitPlates as References
@@ -421,7 +422,7 @@ class SFMSuperPlate(SFMObject):
                 |                  Set SplitPlateObj = SelctionObj.FindObject("CATIASfmSuperPlate")
                 |                  Dim Thickness As Double
                 |                  Dim Material As String
-                |                  Dim Grade As String    
+                |                  Dim Grade As String
                 |                  SplitPlateObj.GetSplitPlateAttributes 1, Thickness ,Material
                 |                  ,Grade
 
@@ -432,10 +433,7 @@ class SFMSuperPlate(SFMObject):
         :rtype: None
         """
         return self.sfm_super_plate.GetSplitPlateAttributes(
-            i_split_plate_number,
-            o_thickness,
-            o_material_name,
-            o_grade_name
+            i_split_plate_number, o_thickness, o_material_name, o_grade_name
         )
 
     def invert_limit(self, i_index: CATVariant) -> None:
@@ -445,20 +443,20 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub InvertLimit(CATVariant iIndex)
-                | 
+                |
                 |     Invert a limit orientation by its index or its name.
-                | 
+                |
                 |     Example:
                 |         This example removes the first object from the list of connected
                 |         objects for the StfConnection feature.
-                | 
+                |
                 |          StfConnection.RemoveObject 1
 
         :param CATVariant i_index:
         :rtype: None
         """
         return self.sfm_super_plate.InvertLimit(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -481,13 +479,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LimitOrientations(CATSafeArrayVariant ioOrientations)
-                | 
+                |
                 |     Returns the orientation of the limits.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Orientations the list of orientations limit
                 |         for the SuperPlate feature.
-                | 
+                |
                 |          Dim Orientations As References
                 |          SuperPlate.LimitOrientations Orientations
 
@@ -495,7 +493,7 @@ class SFMSuperPlate(SFMObject):
         :rtype: None
         """
         return self.sfm_super_plate.LimitOrientations(io_orientations)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -518,13 +516,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Limits() As References
-                | 
+                |
                 |     Returns the limits.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Limits the list of limits for the SuperPlate
                 |         feature.
-                | 
+                |
                 |          Dim Limits As References
                 |          SuperPlate.Limits Limits, Orientations
 
@@ -539,21 +537,21 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveLimit(CATVariant iIndex)
-                | 
+                |
                 |     Removes one object from the list of limits by its index or its
                 |     name.
-                | 
+                |
                 |     Example:
                 |         This example removes the first object from the list of connected
                 |         objects for the StfConnection feature.
-                | 
+                |
                 |          StfConnection.RemoveObject 1
 
         :param CATVariant i_index:
         :rtype: None
         """
         return self.sfm_super_plate.RemoveLimit(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -576,13 +574,13 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Run()
-                | 
+                |
                 |     Build the SplitPlates.
-                | 
+                |
                 |     Example:
                 |         This example build the SplitPlates for the SuperPlate
                 |         feature.
-                | 
+                |
                 |          SuperPlate.Run
 
         :rtype: None
@@ -596,20 +594,20 @@ class SFMSuperPlate(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAsLastLimit(CATVariant iIndex)
-                | 
+                |
                 |     Adds one limit at the end of the list.
-                | 
+                |
                 |     Example:
                 |         This example sets the limit at the end of the list of
                 |         limits.
-                | 
+                |
                 |          SuperPlate.SetAsLastLimit Index
 
         :param CATVariant i_index:
         :rtype: None
         """
         return self.sfm_super_plate.SetAsLastLimit(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -626,11 +624,11 @@ class SFMSuperPlate(SFMObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def set_split_plate_attributes(
-            self,
-            i_split_plate_number: int,
-            i_thickness: float,
-            i_material_name: str,
-            i_grade_name: str
+        self,
+        i_split_plate_number: int,
+        i_thickness: float,
+        i_material_name: str,
+        i_grade_name: str,
     ) -> None:
         """
         .. note::
@@ -641,25 +639,25 @@ class SFMSuperPlate(SFMObject):
                 | double iThickness,
                 | CATBSTR iMaterialName,
                 | CATBSTR iGradeName)
-                | 
+                |
                 |     Set the SplitPlate(ChildPlate)
                 |     Attributes(Thickness,Material,Grade).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSplitPlateNumber
-                |             [in] iSplitPlateNumber will be 1,2,3... 
+                |             [in] iSplitPlateNumber will be 1,2,3...
                 |         iThickness
-                |             [in] Thickness of the child Plate. 
+                |             [in] Thickness of the child Plate.
                 |         iMaterialName
-                |             [in] Material of the child Plate. 
+                |             [in] Material of the child Plate.
                 |         iGradeName
                 |             [in] Grade of the child Plate.
-                | 
+                |
                 |             Example:
                 |                 This example sets the attributes of the
                 |                 ChildPlate.
-                | 
+                |
                 |                  'Retrieve the Split Plates under the
                 |                  SuperPlate
                 |                  Dim SplitPlates as References
@@ -682,10 +680,7 @@ class SFMSuperPlate(SFMObject):
         :rtype: None
         """
         return self.sfm_super_plate.SetSplitPlateAttributes(
-            i_split_plate_number,
-            i_thickness,
-            i_material_name,
-            i_grade_name
+            i_split_plate_number, i_thickness, i_material_name, i_grade_name
         )
 
     def __repr__(self):

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -15,27 +15,26 @@ from pycatia.part_interfaces.fillet import Fillet
 
 
 class FaceFillet(Fillet):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.Shape
-                |                         PartInterfaces.DressUpShape
-                |                             PartInterfaces.Fillet
-                |                                 FaceFillet
-                | 
-                | Represents the face fillet shape.
-                | A face fillet shape is built between two faces with a fillet
-                | radius.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.Shape
+            |                         PartInterfaces.DressUpShape
+            |                             PartInterfaces.Fillet
+            |                                 FaceFillet
+            |
+            | Represents the face fillet shape.
+            | A face fillet shape is built between two faces with a fillet
+            | radius.
+
     """
 
     def __init__(self, com_object):
@@ -50,16 +49,16 @@ class FaceFillet(Fillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstFace() As Reference
-                | 
+                |
                 |     Returns or sets the first limiting face.
                 |     To set the property, you can use the following Boundary object:
                 |     Face.
-                | 
+                |
                 |     Example:
                 |         The following example returns in face1 the first limiting face of the
                 |         face fillet firstFaceFillet, and then sets it to
                 |         NewFace1:
-                | 
+                |
                 |          Set face1 = firstFaceFillet.FirstFace
                 |          firstFaceFillet.FirstFace = NewFace1
 
@@ -84,13 +83,13 @@ class FaceFillet(Fillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Radius() As Length (Read Only)
-                | 
+                |
                 |     Returns the face fillet radius.
-                | 
+                |
                 |     Example:
                 |         The following example returns in radius the fillet radius of the face
                 |         fillet firstFaceFillet:
-                | 
+                |
                 |          Set radius = firstFaceFillet.Radius
 
         :rtype: Length
@@ -106,16 +105,16 @@ class FaceFillet(Fillet):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondFace() As Reference
-                | 
+                |
                 |     Returns or sets the second limiting face.
                 |     To set the property, you can use the following Boundary object:
                 |     Face.
-                | 
+                |
                 |     Example:
                 |         The following example returns in face2 the second limiting face of the
                 |         face fillet firstFaceFillet, and then sets it to
                 |         NewFace2:
-                | 
+                |
                 |          Set face2 = firstFaceFillet.SecondFace
                 |          firstFaceFillet.SecondFace = NewFace2
 

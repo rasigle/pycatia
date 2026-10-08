@@ -1,55 +1,59 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.enumeration.enums import CATV4IV5V4InternalCurveCreationEnum, CATV4IV5V4ErrorFeatureCreationEnum, \
-    CATV4IV5V4AssociativityModeEnum
+
+from pycatia.enumeration.enums import (
+    CATV4IV5V4InternalCurveCreationEnum,
+    CATV4IV5V4ErrorFeatureCreationEnum,
+    CATV4IV5V4AssociativityModeEnum,
+)
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class V4WritingSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         V4WritingSettingAtt
-                | 
-                | Represents the Saving As V4 Data setting controller object.
-                | Role: The Saving As V4 Data setting controller object deals with the setting
-                | parameters displayed in the Saving As V4 Data property page. To access this
-                | property page:
-                | 
-                |     Click the Options command in the Tools menu
-                |     Click + left of General to unfold the workbench list
-                |     Click Compatibility
-                | 
-                | 
-                | The different options for V4/V5SPEC tab:
-                | The Writing Code Page
-                | The Model Dimension
-                | The Model Unit
-                | The Initial Model File Path
-                | The Associativity Mode
-                | The Layer For Non Associative Data
-                | The Error Feature Creation if the Save is not complete
-                | The Curves Associated To Face Boundaries Creation
-                | The V4 Model File Name In Capitals Letters
-                | The Small Edges And Faces Cleaning Tolerance
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         V4WritingSettingAtt
+            |
+            | Represents the Saving As V4 Data setting controller object.
+            | Role: The Saving As V4 Data setting controller object deals with the setting
+            | parameters displayed in the Saving As V4 Data property page. To access this
+            | property page:
+            |
+            |     Click the Options command in the Tools menu
+            |     Click + left of General to unfold the workbench list
+            |     Click Compatibility
+            |
+            |
+            | The different options for V4/V5SPEC tab:
+            | The Writing Code Page
+            | The Model Dimension
+            | The Model Unit
+            | The Initial Model File Path
+            | The Associativity Mode
+            | The Layer For Non Associative Data
+            | The Error Feature Creation if the Save is not complete
+            | The Curves Associated To Face Boundaries Creation
+            | The V4 Model File Name In Capitals Letters
+            | The Small Edges And Faces Cleaning Tolerance
+
     """
 
     def __init__(self, com_object):
@@ -64,7 +68,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Asso_mode() As CATV4IV5V4AssociativityModeEnum
-                | 
+                |
                 |     Returns or sets the associativity mode of migration.
                 |     Role: Returns or sets the associativity mode of migration.If non
                 |     associative mode is chosen, it is possible to create or not the solid.
@@ -90,7 +94,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CleanTolCheck() As boolean
-                | 
+                |
                 |     Returns or sets the small edges and faces cleaning tolerance
                 |     activation.
                 |     Role: Returns or sets the small edges and faces cleaning tolerance
@@ -117,7 +121,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CleanTolValue() As double
-                | 
+                |
                 |     Returns or sets the small edges and faces cleaning tolerance value if
                 |     activated.
                 |     Role: Returns or sets the small edges and faces cleaning tolerance value if
@@ -144,7 +148,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Code_page_Dest() As long
-                | 
+                |
                 |     Returns or sets the activation state of the writing code
                 |     page.
                 |     Role: Returns or sets the value of the writing code page.
@@ -170,7 +174,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Initial_Model_File_Path() As CATBSTR
-                | 
+                |
                 |     Returns or sets the initial model file path.
                 |     Role: Returns or sets the initial model file path.
 
@@ -195,7 +199,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Layer_for_No_Asso() As long
-                | 
+                |
                 |     Returns or sets the layer for not associative data.
                 |     Role: Returns or sets the layer for not associative data.
 
@@ -221,7 +225,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ModeCreateDisplay() As
                 | CATV4IV5V4InternalCurveCreationEnum
-                | 
+                |
                 |     Returns or sets the curves associated to faces'boundaries creation
                 |     option.
                 |     Role: Returns or sets the curves associated to faces'boundaries creation
@@ -249,7 +253,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ModeErrorDisplay() As
                 | CATV4IV5V4ErrorFeatureCreationEnum
-                | 
+                |
                 |     Returns or sets the error feature creation option.
                 |     Role: Returns or sets the error feature creation option.
 
@@ -274,7 +278,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Model_Dimension() As double
-                | 
+                |
                 |     Returns or sets the model dimension.
                 |     Role: Returns or sets the model dimension.
 
@@ -299,7 +303,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Model_Factor() As double
-                | 
+                |
                 |     Returns or sets the model factor.
                 |     Role: Returns or sets the model factor that manages the conversion of model
                 |     dimension in millimeters.
@@ -325,7 +329,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Model_File_Name() As boolean
-                | 
+                |
                 |     Returns or sets the model file name in capital letters
                 |     option.
                 |     Role: Returns or sets the model file name in capital letters option.
@@ -351,7 +355,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Model_Unit() As long
-                | 
+                |
                 |     Returns or sets the model unit.
                 |     Role: Returns or sets the model unit.
 
@@ -376,7 +380,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAsso_modeInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Asso_mode setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -395,7 +399,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetCleanTolCheckInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the CleanTolCheck setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -414,7 +418,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetCleanTolValueInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the CleanTolValue setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -433,7 +437,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetCode_page_DestInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Code_page_Dest setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -452,7 +456,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetInitial_Model_File_PathInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Initial_Model_File_Path setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -461,7 +465,9 @@ class V4WritingSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.v4_writing_setting_att.GetInitial_Model_File_PathInfo(admin_level, o_locked)
+        return self.v4_writing_setting_att.GetInitial_Model_File_PathInfo(
+            admin_level, o_locked
+        )
 
     def get_layer_for_no_asso_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -471,7 +477,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetLayer_for_No_AssoInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Layer_for_No_Asso setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -480,7 +486,9 @@ class V4WritingSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.v4_writing_setting_att.GetLayer_for_No_AssoInfo(admin_level, o_locked)
+        return self.v4_writing_setting_att.GetLayer_for_No_AssoInfo(
+            admin_level, o_locked
+        )
 
     def get_mode_create_display_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -490,7 +498,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetModeCreateDisplayInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the ModeCreateDisplay setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -499,7 +507,9 @@ class V4WritingSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.v4_writing_setting_att.GetModeCreateDisplayInfo(admin_level, o_locked)
+        return self.v4_writing_setting_att.GetModeCreateDisplayInfo(
+            admin_level, o_locked
+        )
 
     def get_mode_error_display_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -509,7 +519,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetModeErrorDisplayInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the ModeErrorDisplay setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -518,7 +528,9 @@ class V4WritingSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.v4_writing_setting_att.GetModeErrorDisplayInfo(admin_level, o_locked)
+        return self.v4_writing_setting_att.GetModeErrorDisplayInfo(
+            admin_level, o_locked
+        )
 
     def get_model_dimension_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -528,7 +540,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetModel_DimensionInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Model_Dimension setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -547,7 +559,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetModel_FactorInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Model_Factor setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -566,7 +578,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetModel_File_NameInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Model_File_Name setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -585,7 +597,7 @@ class V4WritingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetModel_UnitInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Model_Unit setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -603,7 +615,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAsso_modeLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Asso_mode setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -611,7 +623,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetAsso_modeLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -634,7 +646,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCleanTolCheckLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the CleanTolCheck setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -642,7 +654,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetCleanTolCheckLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -665,7 +677,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCleanTolValueLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the CleanTolValue setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -673,7 +685,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetCleanTolValueLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -696,7 +708,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetCode_page_DestLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Code_page_Dest setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -704,7 +716,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetCode_page_DestLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -727,7 +739,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetInitial_Model_File_PathLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Initial_Model_File_Path setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -736,7 +748,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetInitial_Model_File_PathLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -759,7 +771,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetLayer_for_No_AssoLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Layer_for_No_Asso setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -767,7 +779,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetLayer_for_No_AssoLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -790,7 +802,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetModeCreateDisplayLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the ModeCreateDisplay setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -798,7 +810,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetModeCreateDisplayLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -821,7 +833,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetModeErrorDisplayLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the ModeErrorDisplay setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -829,7 +841,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetModeErrorDisplayLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -852,7 +864,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetModel_DimensionLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Model_Dimension setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -860,7 +872,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetModel_DimensionLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -883,7 +895,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetModel_FactorLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Model_Factor setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -891,7 +903,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetModel_FactorLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -914,7 +926,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetModel_File_NameLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Model_File_Name setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -922,7 +934,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetModel_File_NameLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -945,7 +957,7 @@ class V4WritingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetModel_UnitLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the Model_Unit setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -953,7 +965,7 @@ class V4WritingSettingAtt(SettingController):
         :rtype: None
         """
         return self.v4_writing_setting_att.SetModel_UnitLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,21 +14,21 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PSPResource(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PspResource
-                | 
-                | Represents the PspResource.
-                | Role: It is used to get application resources.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PspResource
+            |
+            | Represents the PspResource.
+            | Role: It is used to get application resources.
+
     """
 
     def __init__(self, com_object):
@@ -42,14 +42,14 @@ class PSPResource(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetResourcePath(CATBSTR iResourceName) As CATBSTR
-                | 
+                |
                 |     Returns the path value defined for a resource.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iResourceName
-                |             Resource Name 
-                | 
+                |             Resource Name
+                |
                 |     Returns:
                 |         Resource Path
                 |
@@ -57,7 +57,7 @@ class PSPResource(AnyObject):
                 |
                 |          Dim objThisIntf As PspResource
                 |          Dim strResourcePath As String
-                |          Dim iResourceName As String 
+                |          Dim iResourceName As String
                 |           ...
                 |          strResourcePath = objThisIntf.GetResourcePath (iResourceName)
 
@@ -73,14 +73,14 @@ class PSPResource(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetResourceValue(CATBSTR iResourceName) As CATBSTR
-                | 
+                |
                 |     Returns the value defined for a resource.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iResourceName
-                |             Resource Name 
-                | 
+                |             Resource Name
+                |
                 |     Returns:
                 |         Resource Value
                 |

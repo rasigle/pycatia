@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 from typing import Iterator
 
 from pycatia.mec_mod_interfaces.axis_system import AxisSystem
@@ -17,21 +18,21 @@ from pycatia.types.general import CATVariant
 
 class AxisSystems(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     AxisSystems
-                | 
-                | A collection of all the AxisSystem objects contained in the
-                | part.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     AxisSystems
+            |
+            | A collection of all the AxisSystem objects contained in the
+            | part.
+
     """
 
     def __init__(self, com_object):
@@ -45,17 +46,17 @@ class AxisSystems(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func Add() As AxisSystem
-                | 
+                |
                 |     Creates a new AxisSystem and adds it to the AxisSystems
                 |     collection.
-                | 
+                |
                 |     Returns:
-                |         The created AxisSystem 
+                |         The created AxisSystem
                 |     Example:
                 |         The following example creates a AxisSystem names NewAxisSystem in the
                 |         AxisSystem collection of the rootPart part in the partDoc part
                 |         document.
-                | 
+                |
                 |          Set rootPart = partDoc.Part
                 |          Set NewAxisSystem = rootPart.AxisSystems.Add()
 
@@ -70,28 +71,28 @@ class AxisSystems(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func Item(CATVariant iIndex) As AxisSystem
-                | 
+                |
                 |     Returns an Axis System using its index or its name from the AxisSystems
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the AxisSystem to retrieve from the
                 |             collection of AxisSystems. As a numerics, this index is the rank of the
                 |             AxisSystem in the collection. The index of the first AxisSystem in the
                 |             collection is 1, and the index of the last AxisSystem is Count. As a string, it
                 |             is the name you assigned to the AxisSystem using the
-                |             
-                | 
-                |         AnyObject.Name property. 
+                |
+                |
+                |         AnyObject.Name property.
                 |     Returns:
-                |         The retrieved AxisSystem 
+                |         The retrieved AxisSystem
                 |     Example:
                 |         This example retrieves in ThisAxisSystem the fifth AxisSystem in the
                 |         collection and in ThatAxisSystem the AxisSystem named MyAxisSystem in the
                 |         AxisSystem collection of the partDoc part document.
-                | 
+                |
                 |          Set AxisSystemColl = partDoc.Part.AxisSystems
                 |          Set ThisAxisSystem = AxisSystemColl.Item(5)
                 |          Set ThatAxisSystem = AxisSystemColl.Item("MyAxisSystem")

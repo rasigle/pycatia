@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.drafting_interfaces.drawing_dimension import DrawingDimension
@@ -31,9 +32,9 @@ class NonSemanticDimension(AnyObject):
                 |             System.CATBaseDispatch
                 |                 System.AnyObject
                 |                     NonSemanticDimension
-                | 
+                |
                 | Interface Managing Non Semantic Dimension.
-    
+
     """
 
     def __init__(self, com_object):
@@ -47,11 +48,11 @@ class NonSemanticDimension(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DimensionLimit() As DimensionLimit
-                | 
+                |
                 |     Gets the Dimension on the DimensionLimit interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDimLim
                 |             The Dimension Limits.
 
@@ -60,7 +61,7 @@ class NonSemanticDimension(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return DimensionLimit(self.non_semantic_dimension.DimensionLimit())
 
@@ -71,11 +72,11 @@ class NonSemanticDimension(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Get2dAnnot() As DrawingDimension
-                | 
+                |
                 |     Retrieves Drafting Dimension.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDim
                 |             The Drafting Dimension.
 
@@ -84,7 +85,7 @@ class NonSemanticDimension(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return DrawingDimension(self.non_semantic_dimension.Get2dAnnot())
 
@@ -95,13 +96,13 @@ class NonSemanticDimension(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasDimensionLimit() As boolean
-                | 
+                |
                 |     Checks if the Dimension has a Dimension Limit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHasDimLim
-                | 
+                |
                 |                 TRUE: Dimension Limit exists
                 |                 FALSE: Dimension Limit does not exist
 
@@ -110,7 +111,7 @@ class NonSemanticDimension(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return self.non_semantic_dimension.HasDimensionLimit()
 

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,21 +14,21 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class DMUDataFlow(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMUDataFlow
-                | 
-                | Allows the DMU Data Flow Management within the DMU Navigator
-                | environment.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMUDataFlow
+            |
+            | Allows the DMU Data Flow Management within the DMU Navigator
+            | environment.
+
     """
 
     def __init__(self, com_object):
@@ -44,19 +44,19 @@ class DMUDataFlow(AnyObject):
                 | o Sub CacheExport(CATBSTR iDirectory,
                 | CATBSTR iPrefix,
                 | long iData)
-                | 
+                |
                 |     Exports all documents related to the product in a
                 |     directory.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDirectory
-                |             The directory that will contain documents. 
+                |             The directory that will contain documents.
                 |         iPrefix
-                |             The prefix used to save product documents. 
+                |             The prefix used to save product documents.
                 |         iData
                 |             To save geometries.
-                | 
+                |
                 |                 0: no save.
                 |                 1: save.
 
@@ -74,11 +74,11 @@ class DMUDataFlow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub CacheImport(CATBSTR iDirectory)
-                | 
+                |
                 |     Imports in the cache of marked documents in a directory.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDirectory
                 |             The directory that contains marked documents.
 
@@ -94,7 +94,7 @@ class DMUDataFlow(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Collapse()
-                | 
+                |
                 |     Collapse the product by replacing all sub-product by corresponding
                 |     components.
 
@@ -110,14 +110,14 @@ class DMUDataFlow(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub ReplaceByCGR(CATBSTR iDirectory,
                 | CATBSTR iPrefix)
-                | 
+                |
                 |     Replaces all components of the product by the corresponding CGR located in
                 |     a directory.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDirectory
-                |             The directory that will contain documents. 
+                |             The directory that will contain documents.
                 |         iPrefix
                 |             The prefix used to save product documents.
 
@@ -127,7 +127,9 @@ class DMUDataFlow(AnyObject):
         """
         return self.dmu_data_flow.ReplaceByCGR(i_directory, i_prefix)
 
-    def save_as_frozen(self, i_directory: str, i_prefix: str, i_data: int, i_cache: int) -> None:
+    def save_as_frozen(
+        self, i_directory: str, i_prefix: str, i_data: int, i_cache: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -137,24 +139,24 @@ class DMUDataFlow(AnyObject):
                 | CATBSTR iPrefix,
                 | long iData,
                 | long iCache)
-                | 
+                |
                 |     Saves all documents related to the product in a directory.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDirectory
-                |             The directory that will contain documents. 
+                |             The directory that will contain documents.
                 |         iPrefix
-                |             The prefix used to save product documents. 
+                |             The prefix used to save product documents.
                 |         iData
                 |             To save geometries.
-                | 
+                |
                 |                 0: no save.
-                |                 1: save. 
-                | 
+                |                 1: save.
+                |
                 |         iCache
                 |             To cache data.
-                | 
+                |
                 |                 0: no save.
                 |                 1: save.
 

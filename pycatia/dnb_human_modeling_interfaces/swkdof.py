@@ -1,34 +1,35 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_human_modeling_interfaces.swk_manikin_part import SWKManikinPart
 
 
 class SWKDOF(SWKManikinPart):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DNBHumanModelingInterfaces.SWKManikinPart
-                |                         SWKDOF
-                | 
-                | This interface deals with a degree of freedom (DOF) of a
-                | manikin.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DNBHumanModelingInterfaces.SWKManikinPart
+            |                         SWKDOF
+            |
+            | This interface deals with a degree of freedom (DOF) of a
+            | manikin.
+
     """
 
     def __init__(self, com_object):
@@ -43,7 +44,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DefaultValue() As double (Read Only)
-                | 
+                |
                 |     Returns the default value of a DOF. The value read is always in radians.
 
         :rtype: float
@@ -59,7 +60,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FullName() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the full name of the degree of freedom (e.g.
                 |     "flexion/extension").
                 |     This property is different from the property Name of
@@ -79,7 +80,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LimitsLocked() As boolean
-                | 
+                |
                 |     Sets a lock on the limits.
                 |     When the value of this property is TRUE, the DOF travel limits are locked,
                 |     therefore the min and max values cannot be changed.
@@ -108,7 +109,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxMean() As double (Read Only)
-                | 
+                |
                 |     Returns the mean value of the upper limit of the DOF (in
                 |     radians).
 
@@ -139,7 +140,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxScore() As double (Read Only)
-                | 
+                |
                 |     Returns the highest score that this DOF can take.
 
         :rtype: float
@@ -155,7 +156,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxStdDev() As double (Read Only)
-                | 
+                |
                 |     Returns the standard deviation value of the upper limit of the DOF (in
                 |     radians).
 
@@ -172,7 +173,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxValue() As double
-                | 
+                |
                 |     Returns or sets the highest value that a DOF can take.
                 |     When setting the value, the new value given
                 |     cannot be higher than the statistical value found
@@ -201,12 +202,12 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaxValueAsPercentile() As double
-                | 
+                |
                 |     Returns or sets the highest value that a DOF can take.
                 |     When reading the value, the number returned
                 |     will take a percentile format, that is, will
                 |     be between 0.0 and 100.0 inclusive.
-                | 
+                |
                 |     When setting the value, the new value given
                 |     must also lie in the range [ 0.0 ; 100.0 ].
 
@@ -231,7 +232,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MinMean() As double (Read Only)
-                | 
+                |
                 |     Returns the mean value of the lower limit of the DOF (in
                 |     radians).
 
@@ -262,7 +263,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MinStdDev() As double (Read Only)
-                | 
+                |
                 |     Returns the standard deviation value of the lower limit of
                 |     the DOF (in radians).
 
@@ -279,7 +280,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MinValue() As double
-                | 
+                |
                 |     Returns or sets the lowest value that a DOF can take.
                 |     When setting the value, the new value given
                 |     cannot be lower than the statistical value found
@@ -308,12 +309,12 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MinValueAsPercentile() As double
-                | 
+                |
                 |     Returns or sets the lowest value that a DOF can take.
                 |     When reading the value, the number returned
                 |     will take a percentile format, that is, will
                 |     be between 0.0 and 100.0 exclusive.
-                | 
+                |
                 |     When setting the value, the new value given
                 |     must also lie in the range [ 0.0 ; 100.0 ].
 
@@ -352,10 +353,10 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Number() As long (Read Only)
-                | 
+                |
                 |     Returns the number of the DOF. This number is an integer between 0 and
                 |     2.
-                | 
+                |
                 |     See also:
                 |         SWKSegment
 
@@ -372,7 +373,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Score() As double (Read Only)
-                | 
+                |
                 |     Returns the score corresponding to the DOF's current value.
 
         :rtype: float
@@ -388,7 +389,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Value() As double
-                | 
+                |
                 |     Returns or sets the value of a DOF.
                 |     The value read or set is always in radians.
 
@@ -413,11 +414,11 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ValueAsString() As CATBSTR
-                | 
+                |
                 |     Returns or sets the value of a DOF, as a string.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           myManikin.Body.GetSegment("LSLeTh").
                 |          ValueAsString = "10deg"
 
@@ -442,7 +443,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ValueLocked() As boolean
-                | 
+                |
                 |     Sets a lock on the value.
                 |     When the value of this property is TRUE, the DOF's current value is locked
                 |     and cannot be changed.
@@ -471,7 +472,7 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetValue()
-                | 
+                |
                 |     Sets the value of the DOF to its default value.
 
         :rtype: None
@@ -485,17 +486,17 @@ class SWKDOF(SWKManikinPart):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetLimitsToMatchBestPrefAngle()
-                | 
+                |
                 |     Set the angular limitations to match with the best pref angle. The purpose
                 |     of this method is to set the angular limitations of this DOF so that these
                 |     limitations correspond to the best range of motion, that is, the range of
                 |     motion where the postural score is the highest.
-                | 
+                |
                 |     This method travels the different preferred angles on the DOF, then chooses
                 |     the one with the highest score. If several preferred angles are found with the
                 |     highest score, then the last one with the highest score is
                 |     taken.
-                | 
+                |
                 |     If no preferred angles have been defined on this DOF, then the angular
                 |     limitations are not modified.
 

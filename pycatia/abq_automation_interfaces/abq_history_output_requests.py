@@ -1,37 +1,40 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.abq_automation_interfaces.abq_history_output_request import ABQHistoryOutputRequest
+
+from pycatia.abq_automation_interfaces.abq_history_output_request import (
+    ABQHistoryOutputRequest,
+)
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
 
 
 class ABQHistoryOutputRequests(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     ABQHistoryOutputRequests
-                | 
-                | The collection of Abaqus history output request (ABQHistoryOutputRequest)
-                | objects attached to an
-                | ABQGeneralStaticStep, an ABQHeatTransferStep, or an ABQExplicitDynamicsStep
-                | object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     ABQHistoryOutputRequests
+            |
+            | The collection of Abaqus history output request (ABQHistoryOutputRequest)
+            | objects attached to an
+            | ABQGeneralStaticStep, an ABQHeatTransferStep, or an ABQExplicitDynamicsStep
+            | object.
+
     """
 
     def __init__(self, com_object):
@@ -45,17 +48,17 @@ class ABQHistoryOutputRequests(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Add() As ABQHistoryOutputRequest
-                | 
+                |
                 |     Creates a new Abaqus history output request and adds it to the collection
                 |     of Abaqus history output requests.
-                | 
+                |
                 |     Returns:
                 |         oHistoryOutputRequest The Abaqus history output request object that was
-                |         created. 
+                |         created.
                 |     Example:
                 |         The following example creates a history output request in the
                 |         ABQHistoryOutputRequests collection:
-                | 
+                |
                 |          Dim abqHistoryOutputRequests As
                 |          ABQHistoryOutputRequests
                 |          Set abqHistoryOutputRequests = generalstaticstep.HistoryOutputRequests
@@ -74,12 +77,12 @@ class ABQHistoryOutputRequests(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As ABQHistoryOutputRequest
-                | 
+                |
                 |     Returns an Abaqus history output request using its index or its name from
                 |     the ABQHistoryOutputRequests collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the Abaqus history output request to
                 |             retrieve from the collection of Abaqus history output requests. If the index is
@@ -87,8 +90,8 @@ class ABQHistoryOutputRequests(Collection):
                 |             collection. The index of the first Abaqus history output request in the
                 |             collection is 1, and the index of the last history output request is Count. If
                 |             the index is a string, it specifies the name you assigned to the history output
-                |             request using the CATIACollection::Name property. 
-                | 
+                |             request using the CATIACollection::Name property.
+                |
                 |     Returns:
                 |         The specified ABQHistoryOutputRequest.
 
@@ -104,12 +107,12 @@ class ABQHistoryOutputRequests(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes an Abaqus history output request using its index or its name from
                 |     the history output requests collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the history output request to retrieve
                 |             from the collection of history output requests. As a numeric, this index is the
@@ -123,7 +126,7 @@ class ABQHistoryOutputRequests(Collection):
         :rtype: None
         """
         return self.abq_history_output_requests.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

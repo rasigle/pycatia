@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import Iterator
 
 from pycatia.space_analyses_interfaces.conflict import Conflict
@@ -17,21 +18,21 @@ from pycatia.types.general import CATVariant
 
 class Conflicts(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Conflicts
-                | 
-                | A collection of all Conflict objects currently detected by a Clash
-                | object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Conflicts
+            |
+            | A collection of all Conflict objects currently detected by a Clash
+            | object.
+
     """
 
     def __init__(self, com_object):
@@ -45,23 +46,23 @@ class Conflicts(Collection):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func Item(CATVariant iIndex) As Conflict
-                | 
+                |
                 |     Returns a Conflict object using its index from the Conflicts
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of the Conflict object to retrieve from the collection of
                 |             Conflicts. As a numerics, this index is the rank of the Conflict in the
                 |             collection. The index of the first Conflict in the collection is 1, and the
-                |             index of the last Conflict is Count. 
-                | 
+                |             index of the last Conflict is Count.
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves in ThisConflict the ninth
                 |              Conflict
-                |             from the TheConflicts collection. 
+                |             from the TheConflicts collection.
                 |
                 |             Dim ThisConflict As Conflict
                 |             Set ThisConflict = TheConflicts.Item(9)

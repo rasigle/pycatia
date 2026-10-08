@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.abq_automation_interfaces.abq_load import ABQLoad
 from pycatia.mec_mod_interfaces.axis_system import AxisSystem
 from pycatia.product_structure_interfaces.product import Product
@@ -16,23 +17,23 @@ from pycatia.product_structure_interfaces.publication import Publication
 
 class ABQGravity(ABQLoad):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQLoad
-                |                         ABQGravity
-                | 
-                | Represents an Abaqus gravity (ABQGravity) object.
-                | Role: Access an Abaqus gravity load object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQLoad
+            |                         ABQGravity
+            |
+            | Represents an Abaqus gravity (ABQGravity) object.
+            | Role: Access an Abaqus gravity load object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -47,10 +48,10 @@ class ABQGravity(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UselocalCsys() As boolean
-                | 
+                |
                 |     Sets or returns a boolean indicating whether local coordinate system is
                 |     used in Gravity load.
-                | 
+                |
                 |     Returns:
                 |         boolean specifying whether local csys is active.
 
@@ -75,9 +76,9 @@ class ABQGravity(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property comp1() As double
-                | 
+                |
                 |     Sets or returns the gravity component in the 1-direction.
-                | 
+                |
                 |     Returns:
                 |         The gravity component in the 1-direction.
 
@@ -102,9 +103,9 @@ class ABQGravity(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property comp2() As double
-                | 
+                |
                 |     Sets or returns the gravity component in the 2-direction.
-                | 
+                |
                 |     Returns:
                 |         The gravity component in the 2-direction.
 
@@ -129,9 +130,9 @@ class ABQGravity(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property comp3() As double
-                | 
+                |
                 |     Sets or returns the gravity component in the 3-direction.
-                | 
+                |
                 |     Returns:
                 |         The gravity component in the 3-direction.
 
@@ -156,10 +157,10 @@ class ABQGravity(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property localCsys() As AxisSystem
-                | 
+                |
                 |     Sets or returns the local coordinate system of the gravity
                 |     load.
-                | 
+                |
                 |     Returns:
                 |         The local coordinate system.
 
@@ -176,7 +177,9 @@ class ABQGravity(ABQLoad):
 
         self.abq_gravity.localCsys = value
 
-    def get_local_csys_from_publication(self, o_product: Product, o_pub_axis_system: AxisSystem) -> None:
+    def get_local_csys_from_publication(
+        self, o_product: Product, o_pub_axis_system: AxisSystem
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -184,26 +187,28 @@ class ABQGravity(ABQLoad):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetLocalCsysFromPublication(Product oProduct,
                 | AxisSystem oPubAxisSystem)
-                | 
+                |
                 |     Gets the published local coordinate system of the gravity
                 |     load.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oProduct
                 |             The CATIA Product specifying the local coordinate system
                 |             publication.
                 |         oPubAxisSystem
                 |             The CATIA Axis system.
-                | 
+                |
                 |             Refer: CATIAAxisSystem
 
         :param Product o_product:
         :param AxisSystem o_pub_axis_system:
         :rtype: None
         """
-        return self.abq_gravity.GetLocalCsysFromPublication(o_product.com_object, o_pub_axis_system.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_gravity.GetLocalCsysFromPublication(
+            o_product.com_object, o_pub_axis_system.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -219,7 +224,9 @@ class ABQGravity(ABQLoad):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_local_csys_from_publication(self, i_product: Product, i_pub_axis_system: Publication) -> None:
+    def set_local_csys_from_publication(
+        self, i_product: Product, i_pub_axis_system: Publication
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -227,28 +234,30 @@ class ABQGravity(ABQLoad):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetLocalCsysFromPublication(Product iProduct,
                 | Publication iPubAxisSystem)
-                | 
+                |
                 |     Sets the published local coordinate system of the gravity
                 |     load.
-                | 
+                |
                 |     Returns:
-                |         Fails if the publication is not an axis system. 
+                |         Fails if the publication is not an axis system.
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIA Product specifying the local coordinate system
                 |             publication.
                 |         iPublication
                 |             The CATIA Publication on the axis system.
-                | 
+                |
                 |             Refer: CATIAPublication
 
         :param Product i_product:
         :param Publication i_pub_axis_system:
         :rtype: None
         """
-        return self.abq_gravity.SetLocalCsysFromPublication(i_product.com_object, i_pub_axis_system.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_gravity.SetLocalCsysFromPublication(
+            i_product.com_object, i_pub_axis_system.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

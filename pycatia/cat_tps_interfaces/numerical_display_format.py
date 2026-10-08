@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
+Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 import inspect
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -60,7 +61,7 @@ class NumericalDisplayFormat(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.numerical_display_format.AvilableDisplayFactor
@@ -86,7 +87,7 @@ class NumericalDisplayFormat(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.numerical_display_format.DisplayFactor
@@ -123,7 +124,7 @@ class NumericalDisplayFormat(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.numerical_display_format.DisplayLeadingZero
@@ -160,7 +161,7 @@ class NumericalDisplayFormat(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.numerical_display_format.DisplayTrailingZero
@@ -194,7 +195,7 @@ class NumericalDisplayFormat(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.numerical_display_format.FormatName
@@ -228,7 +229,7 @@ class NumericalDisplayFormat(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.numerical_display_format.Precision
@@ -282,7 +283,7 @@ class NumericalDisplayFormat(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.numerical_display_format.Separator

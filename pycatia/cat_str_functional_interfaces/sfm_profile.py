@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import SFMConnectionParameters
+
+from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import (
+    SFMConnectionParameters,
+)
 from pycatia.cat_str_functional_interfaces.sfm_endcut import SFMEndcut
 from pycatia.cat_str_functional_interfaces.sfm_object import SFMObject
 from pycatia.cat_str_functional_interfaces.sfm_references import SFMReferences
@@ -19,25 +22,25 @@ from pycatia.in_interfaces.references import References
 
 class SFMProfile(SFMObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATStrFunctionalInterfaces.SfmObject
-                |                         SfmProfile
-                | 
-                | Interface to manage the structure frame modeling member object Role: Allows
-                | accessing and setting of member's data.
-                | 
-                | See also:
-                |     SfmFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATStrFunctionalInterfaces.SfmObject
+            |                         SfmProfile
+            |
+            | Interface to manage the structure frame modeling member object Role: Allows
+            | accessing and setting of member's data.
+            |
+            | See also:
+            |     SfmFactory
+
     """
 
     def __init__(self, com_object):
@@ -52,13 +55,13 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnchorPoint() As CATBSTR
-                | 
+                |
                 |     Returns or sets the member's anchor point.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in AnchorPointName the anchor point name of the
                 |         SfmProfile feature.
-                | 
+                |
                 |          Dim AnchorPointName As String
                 |          Set AnchorPointName = SfmProfile.AnchorPoint
 
@@ -83,13 +86,13 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SectionName() As CATBSTR
-                | 
+                |
                 |     Returns or sets the member's section name.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Name the name of section user by the
                 |         SfmProfile feature.
-                | 
+                |
                 |          Dim Name As String
                 |          Set Name = SfmProfile.SectionName
 
@@ -114,13 +117,13 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SplitProfiles() As References (Read Only)
-                | 
+                |
                 |     Returns the SplitProfiles.
-                | 
+                |
                 |     Example:
                 |         This example retrieves SplitProfiles list of the
                 |         Stiffener.
-                | 
+                |
                 |          Dim SplitStiffeners As References
                 |          Set SplitStiffeners = SuperStiffener.SplitProfiles
                 |          Dim SplitStiffener1 As Reference
@@ -143,13 +146,13 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Support() As Reference (Read Only)
-                | 
+                |
                 |     Returns the member's support.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Support the support of the SfmProfile
                 |         feature.
-                | 
+                |
                 |          Dim Support As Reference
                 |          Set Support = SfmProfile.Support
 
@@ -159,12 +162,12 @@ class SFMProfile(SFMObject):
         return Reference(self.sfm_profile.Support)
 
     def add_endcut(
-            self,
-            i_extremity_index: int,
-            i_endcut_type: str,
-            i_endcut_name: str,
-            i_list_context: SFMReferences,
-            i_list_parameters: SFMConnectionParameters
+        self,
+        i_extremity_index: int,
+        i_endcut_type: str,
+        i_endcut_name: str,
+        i_list_context: SFMReferences,
+        i_list_parameters: SFMConnectionParameters,
     ) -> SFMEndcut:
         """
         .. note::
@@ -176,34 +179,34 @@ class SFMProfile(SFMObject):
                 | CATBSTR iEndcutName,
                 | SfmReferences iListContext,
                 | SfmConnectionParameters iListParameters) As SfmEndcut
-                | 
+                |
                 |     Creates Endcut on a SuperProfile.Use the method to create as well as edit
                 |     the endcut.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExtremityIndex
                 |             [in] The extremity on which endcut is to be applied(1-Start,2-End).
-                |             
+                |
                 |         iEndcutType
-                |             [in] The type of Endcut(Snipe,Trim,Weld). 
+                |             [in] The type of Endcut(Snipe,Trim,Weld).
                 |         iEndcutName
-                |             [in] Name of the Endcut. 
+                |             [in] Name of the Endcut.
                 |         iListContext
                 |             [in] Context inputs for contextual endcuts or cutbacks.Not required
-                |             for Custom. 
+                |             for Custom.
                 |         iListParameters
-                |             [in] The list of Parameters. 
+                |             [in] The list of Parameters.
                 |         oSfmProfileEndCut
-                |             [out] The created Endcut. 
-                | 
+                |             [out] The created Endcut.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This Example creates a new contextual endcut on Stiifener Start
                 |             extremity.
-                | 
+                |
                 |              ' First read the specifications required for
                 |              endcut
                 |              Dim FactoryObj As SfmOperationFactory
@@ -221,14 +224,14 @@ class SFMProfile(SFMObject):
                 |              Dim SizeOfContextNames As Long
                 |              SizeOfContext = UBound(ListOfContextNames)
                 |              Dim ContextName As String
-                |              For i = 0 To SizeOfContext  
+                |              For i = 0 To SizeOfContext
                 |               ContextName = ListOfContextNames(i)
                 |              Next
                 |              ' Read and Set the Parameter Values
                 |              Dim SizeOfUDFParams As Long
                 |              SizeOfUDFParams = ListOfUDFParameters.Count
                 |              Dim UDFParam As Parameter
-                |              For i = 1 To SizeOfUDFParams  
+                |              For i = 1 To SizeOfUDFParams
                 |               Set UDFParam = ListOfUDFParameters.Item(i)
                 |               Dim UDFParamName,UDFParamValue As String
                 |               UDFParamName = ListOfUDFParamNames(j - 1)
@@ -266,7 +269,7 @@ class SFMProfile(SFMObject):
                 i_endcut_type,
                 i_endcut_name,
                 i_list_context.com_object,
-                i_list_parameters.com_object
+                i_list_parameters.com_object,
             )
         )
 
@@ -277,21 +280,21 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetEndCoord(CATSafeArrayVariant oCoord)
-                | 
+                |
                 |     Retrieves the coordinates of the member's end extremity.
-                | 
+                |
                 |     Example
                 |     :
                 |         This example retrieves in EndExtr the end extremity coordinates of the
                 |         SfmProfile feature.
-                | 
+                |
                 |          SfmProfile.GetEndCoord EndExtr
 
         :param tuple o_coord:
         :rtype: None
         """
         return self.sfm_profile.GetEndCoord(o_coord)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -314,22 +317,22 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetEndcut(long iExtremityIndex) As SfmEndcut
-                | 
+                |
                 |     Retrieves Existing Endcut on Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExtremityIndex
-                |             [in] Extremity of Profile(1-Start,2-End). 
+                |             [in] Extremity of Profile(1-Start,2-End).
                 |         oSfmEndcut
-                |             [out] Retrieved Endcut. 
-                | 
+                |             [out] Retrieved Endcut.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This example gets the Existing Endcut.
-                | 
+                |
                 |              Dim EndCutObj As SfmEndcut
                 |              Set EndCutObj = ProfileObj.GetEndcut(1)
 
@@ -345,23 +348,23 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetProfileLimit(long iExtremityIndex) As Reference
-                | 
+                |
                 |     Returns the limit at an Extremity of a Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExtremityIndex
-                |             [in] Extremity of Profile(1-Start,2-End). 
+                |             [in] Extremity of Profile(1-Start,2-End).
                 |         oLimit
-                |             [out] Existing Limit. 
-                | 
+                |             [out] Existing Limit.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok.
-                | 
+                |
                 |         Example:
                 |             This example retrieves the Start Limit of a
                 |             Stiffener.
-                | 
+                |
                 |              Dim ProfileLimit As Reference
                 |              Set ProfileLimit = SuperStiffenerObj.GetProfileLimit(1)
 
@@ -371,12 +374,12 @@ class SFMProfile(SFMObject):
         return Reference(self.sfm_profile.GetProfileLimit(i_extremity_index))
 
     def get_section_axis(
-            self,
-            i_abside: float,
-            i_origin: tuple,
-            io_vector1: tuple,
-            io_vector2: tuple,
-            io_vector3: tuple
+        self,
+        i_abside: float,
+        i_origin: tuple,
+        io_vector1: tuple,
+        io_vector2: tuple,
+        io_vector3: tuple,
     ) -> None:
         """
         .. note::
@@ -388,15 +391,15 @@ class SFMProfile(SFMObject):
                 | CATSafeArrayVariant ioVector1,
                 | CATSafeArrayVariant ioVector2,
                 | CATSafeArrayVariant ioVector3)
-                | 
+                |
                 |     Retrieves the axis system of the section at a given location on the
                 |     member's support.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Origin, Vector1, Vector2, Vector3 the section
                 |         axis at the start extremity of the SfmProfile feature.
-                | 
-                |          Dim Origin, Vector1, Vector2, Vector3 As 
+                |
+                |          Dim Origin, Vector1, Vector2, Vector3 As
                 |          SfmProfile.GetSectionAxis 0., Origin, Vector1, Vector2,
                 |          Vector3
 
@@ -408,13 +411,9 @@ class SFMProfile(SFMObject):
         :rtype: None
         """
         return self.sfm_profile.GetSectionAxis(
-            i_abside,
-            i_origin,
-            io_vector1,
-            io_vector2,
-            io_vector3
+            i_abside, i_origin, io_vector1, io_vector2, io_vector3
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -437,20 +436,20 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSlotsOnProfile() As SfmSlots
-                | 
+                |
                 |     Retrieves Slots on Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSfmSlots
-                |             [out] Slots. 
-                | 
+                |             [out] Slots.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This example gets the Slots.
-                | 
+                |
                 |              Dim SlotsonProfile As SfmSlots
                 |              Set SlotsonProfile = ProfileObj.GetSlotsOnProfile
 
@@ -465,21 +464,21 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetStartCoord(CATSafeArrayVariant oCoord)
-                | 
+                |
                 |     Retrieves the coordinates of the member's start extremity.
-                | 
+                |
                 |     Example
                 |     :
                 |         This example retrieves in StartExtr the start extremity coordinates of
                 |         the SfmProfile feature.
-                | 
+                |
                 |          SfmProfile.GetStartCoord StartExtr
 
         :param tuple o_coord:
         :rtype: None
         """
         return self.sfm_profile.GetStartCoord(o_coord)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -502,20 +501,20 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveEndcut(long iExtremityIndex)
-                | 
+                |
                 |     Removes Existing Endcut on Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExtremityIndex
-                |             [in] Extremity of Profile(1-Start,2-End). 
-                | 
+                |             [in] Extremity of Profile(1-Start,2-End).
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This example removes the Existing Endcut.
-                | 
+                |
                 |              Dim EndCutObj As SfmEndcut
                 |              Set EndCutObj = ProfileObj.RemoveEndcut(1)
 
@@ -531,13 +530,13 @@ class SFMProfile(SFMObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Run()
-                | 
+                |
                 |     Compute the member's result.
-                | 
+                |
                 |     Example:
                 |         This example builds the result of the SfmProfile
                 |         feature.
-                | 
+                |
                 |          SfmProfile.Run
 
         :rtype: None
@@ -552,22 +551,22 @@ class SFMProfile(SFMObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetProfileLimit(long iExtremityIndex,
                 | Reference iLimit)
-                | 
+                |
                 |     Sets the limit at an Extremity of a Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExtremityIndex
-                |             [in] Extremity of Profile(1-Start,2-End). 
+                |             [in] Extremity of Profile(1-Start,2-End).
                 |         iLimit
-                |             [in] New Limit to add. 
-                | 
+                |             [in] New Limit to add.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This example sets the limit at the Extremity.
-                | 
+                |
                 |              Set StiffenerLimit = ObjPart.FindObjectByName("CROSS.115")
                 |              Dim LimitRef As Reference
                 |              Set LimitRef = ObjPart.CreateReferenceFromObject(StiffenerLimit)
@@ -578,7 +577,7 @@ class SFMProfile(SFMObject):
         :rtype: None
         """
         return self.sfm_profile.SetProfileLimit(i_extremity_index, i_limit.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

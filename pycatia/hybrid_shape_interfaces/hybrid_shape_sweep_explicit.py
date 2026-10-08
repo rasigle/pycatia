@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
@@ -18,32 +18,32 @@ from pycatia.knowledge_interfaces.length import Length
 
 class HybridShapeSweepExplicit(HybridShapeSweep):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         CATGSMIDLItf.HybridShapeSweep
-                |                             HybridShapeSweepExplicit
-                | 
-                | Represents the hybrid shape Sweep explicit feature object.
-                | Role: To access the data of the hybrid shape sweep explicit feature
-                | object.
-                | 
-                | LICENSING INFORMATION: Creation of volume result requires GSO
-                | License
-                | if GSO License is not granted , setting of Volume context has not
-                | effect
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         CATGSMIDLItf.HybridShapeSweep
+            |                             HybridShapeSweepExplicit
+            |
+            | Represents the hybrid shape Sweep explicit feature object.
+            | Role: To access the data of the hybrid shape sweep explicit feature
+            | object.
+            |
+            | LICENSING INFORMATION: Creation of volume result requires GSO
+            | License
+            | if GSO License is not granted , setting of Volume context has not
+            | effect
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -58,18 +58,18 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AngleLaw() As Reference
-                | 
+                |
                 |     Returns or sets the angle law feature associated to the reference
                 |     surface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Angle law element. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     See also:
                 |         HybridShapeFactory
 
@@ -94,14 +94,14 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AngleLawInversion() As long
-                | 
+                |
                 |     Returns or sets the angle law inversion information.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
-                |             Angle law inversion information. 
-                | 
+                |             Angle law inversion information.
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -126,15 +126,15 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AngleLawType() As long
-                | 
+                |
                 |     Returns or sets the angle law type associated to the reference
                 |     surface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
-                |             Angle law type. 
-                | 
+                |             Angle law type.
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -159,7 +159,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CanonicalDetection() As long
-                | 
+                |
                 |     Returns or sets whether canonical surfaces of the swept surface are
                 |     detected.
                 |     Legal values:
@@ -187,19 +187,19 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Context() As long
-                | 
+                |
                 |     Returns or sets the context on Sweep feature.
-                | 
+                |
                 |         0 This option creates Swept surface.
                 |         1 This option creates Swept volume.
-                | 
-                | 
+                |
+                |
                 |     Note: Setting volume result requires GSO License.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in oContext the context for the Sweep hybrid
                 |         shape feature.
-                | 
+                |
                 |          Dim oContext
                 |          Set oContext = Sweep.Context
 
@@ -224,20 +224,20 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstGuideCrv() As Reference
-                | 
+                |
                 |     Gets the first guide curve.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Guide curve. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -262,7 +262,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property GuideDeviation() As Length (Read Only)
-                | 
+                |
                 |     Returns deviation value (length) from guide curves allowed during sweeping
                 |     operation in order to smooth it.
 
@@ -279,7 +279,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property GuideDeviationActivity() As boolean
-                | 
+                |
                 |     Returns or sets information whether a deviation from guide curves is
                 |     allowed or not.
                 |     Gives the information on performing smoothing during sweeping
@@ -307,19 +307,19 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property GuideProjection() As boolean
-                | 
+                |
                 |     Returns or sets the projection of the guide curve onto the reference plane
                 |     in order to use it as spine, in pulling direction case only. Removes Spine if
                 |     GuideProjection is set to TRUE.
                 |     Legal values: True projection is required and False if not
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets that the GuideProjection mode of
                 |          the Sweep hybrid shape sweep explicit feature to
                 |          True.
-                |          
-                | 
+                |
+                |
                 |          Sweep.GuideProjection = True
 
         :rtype: bool
@@ -343,21 +343,21 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Mode() As long
-                | 
+                |
                 |     Returns or sets positioning mode used for the profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
-                | 
+                |
                 |             Values :
                 |             = 1 - CATGSMPositionMode_NoneOrPositioned : no positioning,
-                | 
+                |
                 |             = 2 - CATGSMPositionMode_ExplicitSweep : the explicit profile is to be moved from its
                 |                   initial plane to the first sweep plane,
-                | 
-                |             = 3 - CATGSMPositionMode_Develop : === DO NOT USE IN THIS CASE === 
-                | 
+                |
+                |             = 3 - CATGSMPositionMode_Develop : === DO NOT USE IN THIS CASE ===
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -382,20 +382,20 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PositionMode() As long
-                | 
+                |
                 |     Returns or sets positioning mode.
                 |     Legal values:
-                | 
+                |
                 |     0
-                |         CATGSMPositionMode_NoneOrPositioned. 
+                |         CATGSMPositionMode_NoneOrPositioned.
                 |     1
                 |         CATGSMPositionMode_ExplicitSweep. if a positioning operation is
                 |         done.
-                | 
+                |
                 | Example:
                 |     This example retrieves in oPosMode the position mode for the Sweep hybrid
                 |     shape feature.
-                | 
+                |
                 |      oPosMode = Sweep.PositionMode
 
         :rtype: int
@@ -419,20 +419,20 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PositionedProfile() As Reference
-                | 
+                |
                 |     Returns or sets the positioning transformation associated to the explicit
                 |     swept surface and which result corresponds to the positioned
                 |     profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Positioning transformation / positioned profile. return value for
                 |             CATScript applications, with (IDLRETVAL) function type
-                |             
-                | 
+                |
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     See also:
                 |         HybridShapeFactory
 
@@ -447,7 +447,9 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :param Reference reference_profile:
         """
 
-        self.hybrid_shape_sweep_explicit.PositionedProfile = reference_profile.com_object
+        self.hybrid_shape_sweep_explicit.PositionedProfile = (
+            reference_profile.com_object
+        )
 
     @property
     def profile(self) -> Reference:
@@ -457,20 +459,20 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Profile() As Reference
-                | 
+                |
                 |     Gets the profile to be swept out.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Profile element. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -495,16 +497,16 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ProfileXAxisComputationMode() As long
-                | 
+                |
                 |     Returns or sets the computation mode of the X axis (or direction) of the
                 |     initial axis system (on the profile). Default value is
                 |     CATGSMPositionDirCompMode_None when PosDirection(OutputDirection) is not
                 |     specified and CATGSMPositionDirCompMode_User if OutputDirection is
                 |     specified.
                 |     Legal values:
-                | 
+                |
                 |     0
-                |         CATGSMPositionDirCompMode_None. No X axis specified. 
+                |         CATGSMPositionDirCompMode_None. No X axis specified.
                 |     1
                 |         CATGSMPositionDirCompMode_Tangent: the X axis is implicitly the tangent
                 |         of the profile at the origin (the origin then HAS to be on the
@@ -512,11 +514,11 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
                 |     2
                 |         CATGSMPositionDirCompMode_User: the X axis is specified by a direction
                 |         via SetPosDirection(UserInputDirection, 1)
-                | 
+                |
                 | Example:
                 |     This example retrieves in oDirCompMode the Profile X Axis ComputationMode
                 |     for the Sweep hybrid shape feature.
-                | 
+                |
                 |      oDirCompMode = Sweep.ProfileXAxisComputationMode
 
         :rtype: int
@@ -540,15 +542,15 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PullingDirection() As HybridShapeDirection
-                | 
+                |
                 |     Gets or sets the pulling direction
                 |     If the direction is specified, the plane normal to this direction is taken
                 |     as reference surface.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in ohDir the pulling direction feature for the
                 |         Sweep hybrid shape feature.
-                | 
+                |
                 |          Dim ohDir As CATIAHybridShapeDirection
                 |          Set ohDir = Sweep.PullingDirection
 
@@ -573,15 +575,15 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Reference() As Reference
-                | 
+                |
                 |     Returns or sets the reference surface (optional).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Reference surface. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
                 |         Reference
 
@@ -606,20 +608,20 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondGuideCrv() As Reference
-                | 
+                |
                 |     Gets the second guide curve (optional).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Guide curve. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -644,7 +646,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SmoothActivity() As boolean
-                | 
+                |
                 |     Returns or sets information whether sweeping operation is smoothed or
                 |     not.
                 |     TRUE or FALSE (FALSE if not specified).
@@ -670,7 +672,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SmoothAngleThreshold() As Angle (Read Only)
-                | 
+                |
                 |     Returns angular threshold.
 
         :rtype: Angle
@@ -686,7 +688,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SolutionNo() As long
-                | 
+                |
                 |     Returns or sets the choice number, which corresponds to each solution of a
                 |     given explicit sweep case.
                 |     For example: a explicit sweep with reference surface leads to four possible
@@ -713,17 +715,17 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Spine() As Reference
-                | 
+                |
                 |     Returns or sets the spine (optional) for sweep operation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Spine curve. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     See also:
                 |         HybridShapeFactory
 
@@ -748,7 +750,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SubType() As long
-                | 
+                |
                 |     Returns or sets the explicit sweep subtype.
                 |     Legal subtype values are:
                 |     1 Explicit profile swept surface defined with reference
@@ -778,19 +780,19 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetAngleRef(long ii) As Angle
-                | 
+                |
                 |     Gets the angle value associated to the reference surface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
-                |             Angle value index (1: start value, 2: end value). 
+                |             Angle value index (1: start value, 2: end value).
                 |         oElem
                 |             Angle value. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Angle 
+                |         Angle
                 |     See also:
                 |         HybridShapeFactory
 
@@ -799,7 +801,9 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         """
         return Angle(self.hybrid_shape_sweep_explicit.GetAngleRef(ii))
 
-    def get_fitting_points(self, op_ia_elem_a: Reference, op_ia_elem_b: Reference) -> None:
+    def get_fitting_points(
+        self, op_ia_elem_a: Reference, op_ia_elem_b: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -807,7 +811,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetFittingPoints(Reference opIAElemA,
                 | Reference opIAElemB)
-                | 
+                |
                 |     Gets the fitting points : located in the profile plane, these points are used for two-guide
                 |     swept surfaces to determine guide intersection locations.
                 |     param opIAElem1 Fitting point associated to the first
@@ -818,8 +822,10 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :param Reference op_ia_elem_b:
         :rtype: None
         """
-        return self.hybrid_shape_sweep_explicit.GetFittingPoints(op_ia_elem_a.com_object, op_ia_elem_b.com_object)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_sweep_explicit.GetFittingPoints(
+            op_ia_elem_a.com_object, op_ia_elem_b.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -835,7 +841,9 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_longitudinal_relimiters(self, op_ia_elem_a: Reference, op_ia_elem_b: Reference) -> None:
+    def get_longitudinal_relimiters(
+        self, op_ia_elem_a: Reference, op_ia_elem_b: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -843,7 +851,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetLongitudinalRelimiters(Reference opIAElemA,
                 | Reference opIAElemB)
-                | 
+                |
                 |     Deprecated:
                 |         V5R16 CATHybridShapeSweepExplicit#GetRelimiters Returns the elements
                 |         relimiting the spine (or the default spine).
@@ -854,9 +862,10 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :param Reference op_ia_elem_b:
         :rtype: None
         """
-        return self.hybrid_shape_sweep_explicit.GetLongitudinalRelimiters(op_ia_elem_a.com_object,
-                                                                          op_ia_elem_b.com_object)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_sweep_explicit.GetLongitudinalRelimiters(
+            op_ia_elem_a.com_object, op_ia_elem_b.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -879,7 +888,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetNbAngle(long oAng)
-                | 
+                |
                 |     Returns the number of Angles.
                 |     param : oAng Number of Angle.
 
@@ -895,7 +904,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetNbGuide(long oNum)
-                | 
+                |
                 |     Gets the number of guides curves.
                 |     param : oNum Number of guide curves.
 
@@ -911,7 +920,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetNbPosAngle(long oPosAng)
-                | 
+                |
                 |     Gets the number of numerical positioning parameters corresponding to angles
                 |     from the default positions of the X axes.
                 |     param : oPosAng Number of parameters
@@ -928,7 +937,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetNbPosCoord(long oPosCoord)
-                | 
+                |
                 |     Gets the number of numerical positioning parameters corresponding to
                 |     coordinates of the new axes systems origins.
                 |     param oPosCoord Number of parameters
@@ -945,21 +954,21 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosAngle(long ii) As Angle
-                | 
+                |
                 |     Gets angles if both profile and first sweep plane axis systems from default
                 |     positions.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             Index of numerical positioning coordinates in profile (value 1) or
-                |             first sweep plane (value 2) axis system. 
+                |             first sweep plane (value 2) axis system.
                 |         oElem
                 |             Angle value. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Angle 
+                |         Angle
                 |     See also:
                 |         HybridShapeFactory
 
@@ -975,22 +984,22 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosCoord(long ii) As Length
-                | 
+                |
                 |     Gets translations coordinates if both profile axis system and first sweep
                 |     plane axis system from default positions.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             Index of numerical positioning coordinates in profile (value 1 or
                 |             2) or first sweep plane (value 3 or 4) axis system.
-                |             
+                |
                 |         oElem
                 |             Coordinate value. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Length 
+                |         Length
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1006,19 +1015,19 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosDirection(long ii) As Reference
-                | 
+                |
                 |     Gets the positioning directions : profile plane or first sweep plane X-axis direction.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
-                |             Plane index : 1 for profile plane, 2 for first sweep plane. 
+                |             Plane index : 1 for profile plane, 2 for first sweep plane.
                 |         oElem
                 |             Direction element. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1034,20 +1043,20 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosPoint(long ii) As Reference
-                | 
+                |
                 |     Gets the points designated as the origins of the profile plane and first
                 |     sweep plane.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
-                |             Plane index : 1 for profile plane, 2 for first sweep plane. 
+                |             Plane index : 1 for profile plane, 2 for first sweep plane.
                 |         oElem
                 |             Origin point. return value for CATScript applications, with
-                |             (IDLRETVAL) function type 
-                | 
+                |             (IDLRETVAL) function type
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1063,23 +1072,23 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPosSwapAxes(long ii) As long
-                | 
+                |
                 |     Gets axes inversion from previous definition for both profile plane and
                 |     first sweep plane.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             Axis system index (1 for profile plane, 2 for first sweep plane).
-                |             
+                |
                 |         oElem
                 |             Inversion value:
                 |             Inversion values :
                 |             = 1 - CATGSMAxisInversionMode_None : no axis inverted.
                 |             = 2 - CATGSMAxisInversionMode_X : only X axis inverted.
                 |             = 3 - CATGSMAxisInversionMode_Y : only Y axis inverted.
-                |             = 4 - CATGSMAxisInversionMode_Both : both axes inverted. 
-                | 
+                |             = 4 - CATGSMAxisInversionMode_Both : both axes inverted.
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1088,7 +1097,13 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         """
         return self.hybrid_shape_sweep_explicit.GetPosSwapAxes(ii)
 
-    def get_relimiters(self, op_ia_elem1: Reference, op_orient1: int, op_ia_elem2: Reference, op_orient2: int) -> None:
+    def get_relimiters(
+        self,
+        op_ia_elem1: Reference,
+        op_orient1: int,
+        op_ia_elem2: Reference,
+        op_orient2: int,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1098,21 +1113,21 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
                 | long opOrient1,
                 | Reference opIAElem2,
                 | long opOrient2)
-                | 
+                |
                 |     Retrieves the elements relimiting the spine (or the default
                 |     spine).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         opIAElem1
-                |             The first relimiting feature (plane or point) 
+                |             The first relimiting feature (plane or point)
                 |         opOrient1
                 |             Split direction for the first relimitation
                 |             0 means that the beginning of the spine (considering its
                 |             orientation) is removed, 1 means that the end of the spine is removed
-                |             
+                |
                 |         opIAElem2
-                |             The second relimiting feature (plane or point) 
+                |             The second relimiting feature (plane or point)
                 |         opOrient2
                 |             Split direction for the second relimitation
 
@@ -1122,9 +1137,10 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :param int op_orient2:
         :rtype: None
         """
-        return self.hybrid_shape_sweep_explicit.GetRelimiters(op_ia_elem1.com_object, op_orient1,
-                                                              op_ia_elem2.com_object, op_orient2)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_sweep_explicit.GetRelimiters(
+            op_ia_elem1.com_object, op_orient1, op_ia_elem2.com_object, op_orient2
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1147,7 +1163,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub IsSketchAxisUsedAsDefault(boolean oBoolean)
-                | 
+                |
                 |     Queries status wherere Sketch axis used as default or not.
                 |     In case of a sketch profile, specify if the 2D sketch axis must be used as
                 |     default planar profile axis (for positioning purpose) or
@@ -1158,7 +1174,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :rtype: None
         """
         return self.hybrid_shape_sweep_explicit.IsSketchAxisUsedAsDefault(o_boolean)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1181,7 +1197,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveAngle()
-                | 
+                |
                 |     Removes an Angle.
 
         :rtype: None
@@ -1195,7 +1211,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveFittingPoints()
-                | 
+                |
                 |     Removes the fitting points.
 
         :rtype: None
@@ -1209,7 +1225,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveGuide()
-                | 
+                |
                 |     Removes a guide curve.
 
         :rtype: None
@@ -1224,16 +1240,16 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetAngleRef(long ii,
                 | double Elem)
-                | 
+                |
                 |     Sets the angle value associated to the reference surface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
-                |             Angle value index (1: start value, 2: end value). 
+                |             Angle value index (1: start value, 2: end value).
                 |         iElem
-                |             Angle value. 
-                | 
+                |             Angle value.
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1243,7 +1259,9 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         """
         return self.hybrid_shape_sweep_explicit.SetAngleRef(ii, elem)
 
-    def set_fitting_points(self, ip_ia_elem_a: Reference, ip_ia_elem_b: Reference) -> None:
+    def set_fitting_points(
+        self, ip_ia_elem_a: Reference, ip_ia_elem_b: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1251,7 +1269,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetFittingPoints(Reference ipIAElemA,
                 | Reference ipIAElemB)
-                | 
+                |
                 |     Sets the fitting points.
                 |     Does not work with NULL_var values, Use RemoveFittingPoints() method
                 |     instead.
@@ -1264,8 +1282,10 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :param Reference ip_ia_elem_b:
         :rtype: None
         """
-        return self.hybrid_shape_sweep_explicit.SetFittingPoints(ip_ia_elem_a.com_object, ip_ia_elem_b.com_object)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_sweep_explicit.SetFittingPoints(
+            ip_ia_elem_a.com_object, ip_ia_elem_b.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1288,7 +1308,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetGuideDeviation(double iLength)
-                | 
+                |
                 |     Sets deviation value (length) from guide curves allowed during sweeping.
                 |     operation in order to smooth it.
                 |     param : iLength Numerical value.
@@ -1298,7 +1318,9 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         """
         return self.hybrid_shape_sweep_explicit.SetGuideDeviation(i_length)
 
-    def set_longitudinal_relimiters(self, ip_ia_elem_a: Reference, ip_ia_elem_b: Reference) -> None:
+    def set_longitudinal_relimiters(
+        self, ip_ia_elem_a: Reference, ip_ia_elem_b: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1306,7 +1328,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetLongitudinalRelimiters(Reference ipIAElemA,
                 | Reference ipIAElemB)
-                | 
+                |
                 |     Deprecated:
                 |         V5R16 CATHybridShapeSweepExplicit#SetRelimiters Sets the elements
                 |         relimiting the spine (or the default spine).
@@ -1317,9 +1339,10 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :param Reference ip_ia_elem_b:
         :rtype: None
         """
-        return self.hybrid_shape_sweep_explicit.SetLongitudinalRelimiters(ip_ia_elem_a.com_object,
-                                                                          ip_ia_elem_b.com_object)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_sweep_explicit.SetLongitudinalRelimiters(
+            ip_ia_elem_a.com_object, ip_ia_elem_b.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1343,18 +1366,18 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosAngle(long ii,
                 | double Elem)
-                | 
+                |
                 |     Sets angles if both profile and first sweep plane axis systems from default
                 |     positions.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             Index of numerical positioning coordinates in profile (value 1) or
-                |             first sweep plane (value 2) axis system. 
+                |             first sweep plane (value 2) axis system.
                 |         iElem
-                |             Angle value. 
-                | 
+                |             Angle value.
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1372,19 +1395,19 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosCoord(long ii,
                 | double Elem)
-                | 
+                |
                 |     Sets translations coordinates if both profile axis system and first sweep
                 |     plane axis system from default positions.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             Index of numerical positioning coordinates in profile (value 1 or
                 |             2) or first sweep plane (value 3 or 4) axis system.
-                |             
+                |
                 |         iElem
-                |             Coordinate value. 
-                | 
+                |             Coordinate value.
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1402,18 +1425,18 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosDirection(long ii,
                 | Reference Elem)
-                | 
+                |
                 |     Sets the positioning directions : profile plane or first sweep plane X-axis direction.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
-                |             Plane index : 1 for profile plane, 2 for first sweep plane. 
+                |             Plane index : 1 for profile plane, 2 for first sweep plane.
                 |         iElem
-                |             Direction element. 
-                | 
+                |             Direction element.
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1422,7 +1445,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :rtype: None
         """
         return self.hybrid_shape_sweep_explicit.SetPosDirection(ii, elem.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1446,19 +1469,19 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosPoint(long ii,
                 | Reference Elem)
-                | 
+                |
                 |     Sets the points designated as the origins of the profile plane and first
                 |     sweep plane.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
-                |             Plane index : 1 for profile plane, 2 for first sweep plane. 
+                |             Plane index : 1 for profile plane, 2 for first sweep plane.
                 |         iElem
-                |             Origin point. 
-                | 
+                |             Origin point.
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1467,7 +1490,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :rtype: None
         """
         return self.hybrid_shape_sweep_explicit.SetPosPoint(ii, elem.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1491,24 +1514,24 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPosSwapAxes(long ii,
                 | long Elem)
-                | 
+                |
                 |     Sets axes inversion from previous definition for both profile plane and
                 |     first sweep plane.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iI
                 |             Axis system index (1 for profile plane, 2 for first sweep plane).
-                |             
+                |
                 |         iElem
                 |             Inversion value:
-                | 
+                |
                 |             Inversion values :
                 |             = 1 - CATGSMAxisInversionMode_None : no axis inverted.
                 |             = 2 - CATGSMAxisInversionMode_X : only X axis inverted.
                 |             = 3 - CATGSMAxisInversionMode_Y : only Y axis inverted.
-                |             = 4 - CATGSMAxisInversionMode_Both : both axes inverted. 
-                | 
+                |             = 4 - CATGSMAxisInversionMode_Both : both axes inverted.
+                |
                 |     See also:
                 |         HybridShapeFactory
 
@@ -1518,7 +1541,13 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         """
         return self.hybrid_shape_sweep_explicit.SetPosSwapAxes(ii, elem)
 
-    def set_relimiters(self, ip_ia_elem1: Reference, ip_orient1: int, ip_ia_elem2: Reference, ip_orient2: int) -> None:
+    def set_relimiters(
+        self,
+        ip_ia_elem1: Reference,
+        ip_orient1: int,
+        ip_ia_elem2: Reference,
+        ip_orient2: int,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1528,21 +1557,21 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
                 | long ipOrient1,
                 | Reference ipIAElem2,
                 | long ipOrient2)
-                | 
+                |
                 |     Sets the elements relimiting the spine (or the default
                 |     spine).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ipIAElem1
-                |             The first relimiting feature (plane or point) 
+                |             The first relimiting feature (plane or point)
                 |         ipOrient1
                 |             Split direction for the first relimitation
                 |             0 means that the beginning of the spine (considering its
                 |             orientation) is removed, 1 means that the end of the spine is removed
-                |             
+                |
                 |         ipIAElem2
-                |             The second relimiting feature (plane or point) 
+                |             The second relimiting feature (plane or point)
                 |         ipOrient2
                 |             Split direction for the second relimitation
 
@@ -1552,9 +1581,10 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :param int ip_orient2:
         :rtype: None
         """
-        return self.hybrid_shape_sweep_explicit.SetRelimiters(ip_ia_elem1.com_object, ip_orient1,
-                                                              ip_ia_elem2.com_object, ip_orient2)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_sweep_explicit.SetRelimiters(
+            ip_ia_elem1.com_object, ip_orient1, ip_ia_elem2.com_object, ip_orient2
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1577,7 +1607,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetSmoothAngleThreshold(double iAngle)
-                | 
+                |
                 |     Sets angular threshold.
                 |     param : iAngle Numerical value.
 
@@ -1593,7 +1623,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub UseSketchAxisAsDefault(boolean iBoolean)
-                | 
+                |
                 |     Uses Sketch Axis As Default.
                 |     In case of a sketch profile, specify if the 2D sketch axis must be used as
                 |     default planar profile axis (for positioning purpose) or
@@ -1604,7 +1634,7 @@ class HybridShapeSweepExplicit(HybridShapeSweep):
         :rtype: None
         """
         return self.hybrid_shape_sweep_explicit.UseSketchAxisAsDefault(i_boolean)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

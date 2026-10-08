@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import SFMConnectionParameters
+
+from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import (
+    SFMConnectionParameters,
+)
 from pycatia.cat_str_functional_interfaces.sfm_slot import SFMSlot
 from pycatia.in_interfaces.reference import Reference
 from pycatia.system_interfaces.collection import Collection
@@ -17,24 +20,24 @@ from pycatia.types.general import CATVariant
 
 class SFMSlots(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     SfmSlots
-                | 
-                | Interface to create, remove and access existing slot.
-                | Role: Allows creating,removing and accessing slot object.
-                | 
-                | See also:
-                |     SfmSlots, SfmSuperPlate, SfmProfile, SfmConnectionParameters
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     SfmSlots
+            |
+            | Interface to create, remove and access existing slot.
+            | Role: Allows creating,removing and accessing slot object.
+            |
+            | See also:
+            |     SfmSlots, SfmSuperPlate, SfmProfile, SfmConnectionParameters
+
     """
 
     def __init__(self, com_object):
@@ -42,11 +45,11 @@ class SFMSlots(Collection):
         self.sfm_slots = com_object
 
     def add_slot(
-            self,
-            i_penetrated_element: Reference,
-            i_penetrating_object: Reference,
-            i_slot_name: str,
-            i_list_parameters: SFMConnectionParameters
+        self,
+        i_penetrated_element: Reference,
+        i_penetrating_object: Reference,
+        i_slot_name: str,
+        i_list_parameters: SFMConnectionParameters,
     ) -> SFMSlot:
         """
         .. note::
@@ -57,30 +60,30 @@ class SFMSlots(Collection):
                 | Reference iPenetratingObject,
                 | CATBSTR iSlotName,
                 | SfmConnectionParameters iListParameters) As SfmSlot
-                | 
+                |
                 |     Creates a New Slot.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPenetratedElement
                 |             [in] Object on which slot will be created(Plate/Profile).
-                |             
+                |
                 |         iPenetratingObject
                 |             [in] Object using which slot will be created(Profile).
-                |             
+                |
                 |         iSlotName
-                |             [in] Slot Name. 
+                |             [in] Slot Name.
                 |         iListParameters
-                |             [in] List of UDF parameters. 
+                |             [in] List of UDF parameters.
                 |         oSfmSlot
-                |             [out] Created Slot. 
-                | 
+                |             [out] Created Slot.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This example creates a new Slot on Plate.
-                | 
+                |
                 |              Dim PenetratedRef, PenetratingRef As Reference
                 |              Set PenetratedRef = PartObj.CreateReferenceFromObject(SfmSuperPlateObj)
                 |              Set PenetratingRef = PartObj.CreateReferenceFromObject(SfmSuperStiffenerObj)
@@ -107,7 +110,7 @@ class SFMSlots(Collection):
                 i_penetrated_element.com_object,
                 i_penetrating_object.com_object,
                 i_slot_name,
-                i_list_parameters.com_object
+                i_list_parameters.com_object,
             )
         )
 
@@ -118,22 +121,22 @@ class SFMSlots(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As SfmSlot
-                | 
+                |
                 |     Gets existing Slot.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             [in] Index of the Slot to be retrieved. 
+                |             [in] Index of the Slot to be retrieved.
                 |         oSfmSlot
-                |             [out] The retrieved slot. 
-                | 
+                |             [out] The retrieved slot.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This example gets existing slot on a Plate.
-                | 
+                |
                 |              Dim SlotsonPlate As SfmSlots
                 |              Set SlotsonPlate = SfmSuperPlateObj.GetSlotsOnPlate
                 |              Dim CntSlotsOnPlate As Long
@@ -155,20 +158,20 @@ class SFMSlots(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveSlot(SfmSlot iSfmSlot)
-                | 
+                |
                 |     Removes Existing Slot.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSfmSlot
-                |             [in] Slot to be removed. 
-                | 
+                |             [in] Slot to be removed.
+                |
                 |     Returns:
                 |         S_OK if everything ran ok
-                | 
+                |
                 |         Example:
                 |             This example removes existing slot on a Plate.
-                | 
+                |
                 |              Dim SlotsonPlate As SfmSlots
                 |              Set SlotsonPlate = SfmSuperPlateObj.GetSlotsOnPlate
                 |              Dim SlotObj As SfmSlot
@@ -179,7 +182,7 @@ class SFMSlots(Collection):
         :rtype: None
         """
         return self.sfm_slots.RemoveSlot(i_sfm_slot.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

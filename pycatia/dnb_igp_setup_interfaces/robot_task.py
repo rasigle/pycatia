@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.dnb_igp_setup_interfaces.operation import Operation
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,50 +16,52 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class RobotTask(Activity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                         RobotTask
-                | 
-                | Represents the Robot Task.
-                | 
-                | Role: The interface is used manage activities under a Robot
-                | Task.
-                | The following code snippet can be used to obtain the Robot Task from a Robot
-                | Task Factory.
-                | 
-                |    Dim objRobotTaskFactory As RobotTaskFactory
-                |    Dim objRobot As Product
-                |    ...
-                |    Set objRobotTaskFactory = objRobot.GetTechnologicalObject("RobotTaskFactory" )
-                |    Dim objRobotTaskList(3) as RobotTask
-                |    Dim objRobotTask as RobotTask
-                |    objRobotTaskFactory.GetAllRobotTasks objRobotTaskList
-                |    objRobotTask=objRobotTaskList[0]
-                |
-                | The Robot Task can also be obtained from an activity of the type
-                | RobotTask.
-                | 
-                |    Dim objActivity as Activity
-                |    ...
-                |    Dim objRobotTask as RobotTask
-                |    Set objRobotTask = objActivity.GetTechnologicalObject("RobotTask" )
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                         RobotTask
+            |
+            | Represents the Robot Task.
+            |
+            | Role: The interface is used manage activities under a Robot
+            | Task.
+            | The following code snippet can be used to obtain the Robot Task from a Robot
+            | Task Factory.
+            |
+            |    Dim objRobotTaskFactory As RobotTaskFactory
+            |    Dim objRobot As Product
+            |    ...
+            |    Set objRobotTaskFactory = objRobot.GetTechnologicalObject("RobotTaskFactory" )
+            |    Dim objRobotTaskList(3) as RobotTask
+            |    Dim objRobotTask as RobotTask
+            |    objRobotTaskFactory.GetAllRobotTasks objRobotTaskList
+            |    objRobotTask=objRobotTaskList[0]
+            |
+            | The Robot Task can also be obtained from an activity of the type
+            | RobotTask.
+            |
+            |    Dim objActivity as Activity
+            |    ...
+            |    Dim objRobotTask as RobotTask
+            |    Set objRobotTask = objActivity.GetTechnologicalObject("RobotTask" )
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.robot_task = com_object
 
-    def create_after_operation(self, i_after_operation: Operation, o_created_operation: Operation) -> None:
+    def create_after_operation(
+        self, i_after_operation: Operation, o_created_operation: Operation
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -66,29 +69,29 @@ class RobotTask(Activity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CreateAfterOperation(Operation iAfterOperation,
                 | Operation oCreatedOperation)
-                | 
+                |
                 |     Creates Operation as a child of Robot Task.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAfterOperation
                 |             The Operation after which the required operation is to be created.
-                |             
+                |
                 |         oCreatedOperation
-                |             The Created Operation. 
-                | 
+                |             The Created Operation.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The operation was successfully created.
                 |         E_FAIL
                 |             The operation could not be created.
-                | 
+                |
                 |         Example:
                 |             The following example creates an Operation
-                | 
+                |
                 |                Dim objRobotTask as RobotTask
                 |                Dim objAfterOperation As Operation
                 |                ...
@@ -100,8 +103,10 @@ class RobotTask(Activity):
         :param Operation o_created_operation:
         :rtype: None
         """
-        return self.robot_task.CreateAfterOperation(i_after_operation.com_object, o_created_operation.com_object)
-        # # # # Autogenerated comment: 
+        return self.robot_task.CreateAfterOperation(
+            i_after_operation.com_object, o_created_operation.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -118,11 +123,11 @@ class RobotTask(Activity):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def create_call_task(
-            self,
-            i_robot_task: 'RobotTask',
-            i_after_operation: Operation,
-            i_where: bool,
-            o_created_call_task: AnyObject
+        self,
+        i_robot_task: "RobotTask",
+        i_after_operation: Operation,
+        i_where: bool,
+        o_created_call_task: AnyObject,
     ) -> None:
         """
         .. note::
@@ -133,34 +138,34 @@ class RobotTask(Activity):
                 | Operation iAfterOperation,
                 | boolean iWhere,
                 | AnyObject oCreatedCallTask)
-                | 
+                |
                 |     Creates a calltask inside a Robot Task
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRobotTask
-                |             The task to be called in the current robot task 
+                |             The task to be called in the current robot task
                 |         iAfterOperation
                 |             The Operation after which the required operation is to be created..
-                |             
+                |
                 |         iWhere
                 |             The postion of where the task needs to be inserted Before(0)
-                |             After(1) 
+                |             After(1)
                 |         oCreatedCallTask
-                |             The created call task 
-                | 
+                |             The created call task
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The call task was successfully created.
                 |         E_FAIL
                 |             The call task could not be created.
-                | 
+                |
                 |         Example:
                 |             The following example creates An Operation
-                | 
+                |
                 |                Dim objRobotTask as RobotTask
                 |                Dim objCalledTask as RobotTask
                 |                Dim objAfterOperation as Operation
@@ -178,9 +183,9 @@ class RobotTask(Activity):
             i_robot_task.com_object,
             i_after_operation.com_object,
             i_where,
-            o_created_call_task.com_object
+            o_created_call_task.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -197,10 +202,10 @@ class RobotTask(Activity):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def create_operation(
-            self,
-            i_reference_operation: Operation,
-            i_after_operation: Operation,
-            o_created_operation: Operation
+        self,
+        i_reference_operation: Operation,
+        i_after_operation: Operation,
+        o_created_operation: Operation,
     ) -> None:
         """
         .. note::
@@ -210,34 +215,34 @@ class RobotTask(Activity):
                 | o Sub CreateOperation(Operation iReferenceOperation,
                 | Operation iAfterOperation,
                 | Operation oCreatedOperation)
-                | 
+                |
                 |     Creates Operation as a child of Robot Task.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iReferenceOperation
                 |             The Reference Operation after which the Operation has to be created
                 |             and whose properties will be copied to the created operation.
-                |             
+                |
                 |         iAfterOperation
                 |             The Operation after which the required operation is to be created.
                 |             (Pass NOTHING if Reference Operation is specified)
-                |             
+                |
                 |         oCreatedOperation
-                |             The Created Operation. 
-                | 
+                |             The Created Operation.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The operation was successfully created.
                 |         E_FAIL
                 |             The operation could not be created.
-                | 
+                |
                 |         Example:
                 |             The following example creates an Operation
-                | 
+                |
                 |                Dim objRobotTask as RobotTask
                 |                Dim objRefOperation as Operation
                 |                ...
@@ -255,9 +260,9 @@ class RobotTask(Activity):
         return self.robot_task.CreateOperation(
             i_reference_operation.com_object,
             i_after_operation.com_object,
-            o_created_operation.com_object
+            o_created_operation.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -280,26 +285,26 @@ class RobotTask(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub DeleteOperations(CATSafeArrayVariant iOperationList)
-                | 
+                |
                 |     Deletes the required list of Operations.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iOperationList
-                |             The list of Operations to be deleted. 
-                | 
+                |             The list of Operations to be deleted.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The operation list was successfully deleted.
                 |         E_FAIL
                 |             The operation list could not be created.
-                | 
+                |
                 |         Example:
                 |             The following example creates an Operation
-                | 
+                |
                 |                Dim objRobotTask as RobotTask
                 |                Dim objOperationList as Operation
                 |                ...
@@ -309,7 +314,7 @@ class RobotTask(Activity):
         :rtype: None
         """
         return self.robot_task.DeleteOperations(i_operation_list)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -332,26 +337,26 @@ class RobotTask(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetAllOperations(CATSafeArrayVariant oOperationList)
-                | 
+                |
                 |     Retrieves the List of Operations of Robot Task.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOperationList
-                |             The list of Operations 
-                | 
+                |             The list of Operations
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The operation list was successfully queried.
                 |         E_FAIL
                 |             The operation list could not be queried.
-                | 
+                |
                 |         Example:
                 |             The following example creates An Operation
-                | 
+                |
                 |                Dim objRobotTask as RobotTask
                 |                Dim objOperationList As Operation
                 |                ...
@@ -361,7 +366,7 @@ class RobotTask(Activity):
         :rtype: None
         """
         return self.robot_task.GetAllOperations(o_operation_list)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

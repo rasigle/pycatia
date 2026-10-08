@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.analysis_interfaces.analysis_mesh_part import AnalysisMeshPart
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
@@ -15,20 +16,20 @@ from pycatia.types.general import CATVariant
 
 class AnalysisMeshParts(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     AnalysisMeshParts
-                | 
-                | The collection of analysis meshparts.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     AnalysisMeshParts
+            |
+            | The collection of analysis meshparts.
+
     """
 
     def __init__(self, com_object):
@@ -42,17 +43,17 @@ class AnalysisMeshParts(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Add(CATBSTR iType) As AnalysisMeshPart
-                | 
+                |
                 |     Creates a new meshpart and adds it to the meshpart
                 |     collection.
                 |     The meshpart will be created linked to the AnalysisMeshManager
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iType
-                |             The type of mesh part to create. 
-                | 
+                |             The type of mesh part to create.
+                |
                 |     Returns:
                 |         The created meshpart
 
@@ -68,20 +69,20 @@ class AnalysisMeshParts(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As AnalysisMeshPart
-                | 
+                |
                 |     Returns a meshpart using its index or its name from the meshpart
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the meshpart to retrieve from the
                 |             collection of meshparts. As a numeric, this index is the rank of the meshpart
                 |             in the collection. The index of the first meshpart in the collection is 1, and
                 |             the index of the last meshpart is Count. As a string, it is the name you
-                |             assigned to the meshpart using the 
-                | 
-                |         AnyObject.Name property. 
+                |             assigned to the meshpart using the
+                |
+                |         AnyObject.Name property.
                 |     Returns:
                 |         The retrieved meshpart.
 
@@ -97,26 +98,26 @@ class AnalysisMeshParts(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes a meshpart using its index or its name from the meshpart
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the meshpart to retrieve from the
                 |             collection of meshpart. As a numeric, this index is the rank of the meshpart in
                 |             the collection. The index of the first meshpart in the collection is 1, and the
                 |             index of the last meshpart is Count. As a string, it is the name you assigned
-                |             to the meshpart using the 
-                | 
+                |             to the meshpart using the
+                |
                 |         AnyObject.Name property.
 
         :param CATVariant i_index:
         :rtype: None
         """
         return self.analysis_mesh_parts.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

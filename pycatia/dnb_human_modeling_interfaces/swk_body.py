@@ -1,37 +1,40 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import SWKPostureSpec
 from pycatia.dnb_human_modeling_interfaces.swk_body_element import SWKBodyElement
-from pycatia.dnb_human_modeling_interfaces.swk_center_of_gravity import SWKCenterOfGravity
+from pycatia.dnb_human_modeling_interfaces.swk_center_of_gravity import (
+    SWKCenterOfGravity,
+)
 from pycatia.dnb_human_modeling_interfaces.swk_segment import SWKSegment
 
 
 class SWKBody(SWKBodyElement):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DNBHumanModelingInterfaces.SWKBodyElement
-                |                         SWKBody
-                | 
-                | This interface represents the body of the manikin.
-                | It provides access to the manikin structure.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DNBHumanModelingInterfaces.SWKBodyElement
+            |                         SWKBody
+            |
+            | This interface represents the body of the manikin.
+            | It provides access to the manikin structure.
+
     """
 
     def __init__(self, com_object):
@@ -47,7 +50,7 @@ class SWKBody(SWKBodyElement):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CenterOfGravity() As SWKCenterOfGravity (Read
                 | Only)
-                | 
+                |
                 |     Returns the center of gravity of the current manikin.
 
         :rtype: SWKCenterOfGravity
@@ -63,7 +66,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CenterOfGravityDisplayed() As boolean
-                | 
+                |
                 |     Returns or sets the display of the center of gravity.
 
         :rtype: bool
@@ -87,7 +90,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CentralConeDisplayed() As boolean
-                | 
+                |
                 |     Returns or sets the central cone display of the active line of sight.
 
         :rtype: bool
@@ -111,7 +114,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConeTypeBoundedCone() As boolean (Read Only)
-                | 
+                |
                 |     Returns or sets the cone type display to bounded cone for the peripheral
                 |     and central cone.
 
@@ -128,7 +131,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConeTypeBoundings() As boolean (Read Only)
-                | 
+                |
                 |     Returns or sets the cone type display to boundings for the peripheral and
                 |     central cone.
 
@@ -145,7 +148,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConeTypeFlat() As boolean (Read Only)
-                | 
+                |
                 |     Returns or sets the cone type display to flat for the peripheral and
                 |     central cone.
 
@@ -162,7 +165,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConeTypeSpherical() As boolean (Read Only)
-                | 
+                |
                 |     Returns or sets the cone type display to spherical for the peripheral and
                 |     central cone.
 
@@ -179,7 +182,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EllipsesDisplayed() As boolean
-                | 
+                |
                 |     Returns or sets the display of the manikin ellipses.
 
         :rtype: bool
@@ -203,7 +206,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LineOfSightDisplayed() As boolean
-                | 
+                |
                 |     Returns or sets the display of the active line of sight.
 
         :rtype: bool
@@ -227,7 +230,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Memo() As CATBSTR
-                | 
+                |
                 |     Returns or records miscellaneous user-added comments about the posture.
 
         :rtype: str
@@ -251,7 +254,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfSegments() As long (Read Only)
-                | 
+                |
                 |     Returns the number of segments of the body.
 
         :rtype: int
@@ -267,7 +270,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PeripheralConeDisplayed() As boolean
-                | 
+                |
                 |     Returns or sets the peripheral cone display of the active line of sight.
 
         :rtype: bool
@@ -291,14 +294,14 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Referential() As CATBSTR
-                | 
+                |
                 |     Returns or sets the referential of the manikin. Possible values are
                 |     "HPoint", "EyePoint", "LeftFoot", "RightFoot", "LowestFoot", "BetweenFeet" and
                 |     "Crotch". If this manikin is a forearm model, than the possible values are
                 |     either "LeftHand" or "RightHand".
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           myManikin.Body.Referential = "LowestFoot"
 
         :rtype: str
@@ -322,7 +325,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ReferentialDisplayed() As boolean
-                | 
+                |
                 |     Returns or sets the display of the referential.
 
         :rtype: bool
@@ -346,7 +349,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SegmentsDisplayed() As boolean
-                | 
+                |
                 |     Returns or sets the display of the segments.
 
         :rtype: bool
@@ -370,7 +373,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SkinDisplayed() As boolean
-                | 
+                |
                 |     Returns or sets the display of the manikin surfaces (skin).
 
         :rtype: bool
@@ -394,7 +397,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SkinResolution() As long
-                | 
+                |
                 |     Returns or sets the manikin skin resolution.
                 |     The valid values range from 4 to 128.
 
@@ -418,11 +421,11 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ApplyPosition(CATSafeArrayVariant piPositionIncrement)
-                | 
+                |
                 |     Sets a new relative manikin position.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piPositionIncrement
                 |             The new position to combine with the manikin's current
                 |             position.
@@ -431,9 +434,9 @@ class SWKBody(SWKBodyElement):
                 |             represent the rotation matrix.
                 |             The last three components represent the translation
                 |             vector.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the manikin to a 45-degree rotation
                 |           around
                 |          the x axis and at a (10, 20, 30) translation from the
@@ -460,7 +463,7 @@ class SWKBody(SWKBodyElement):
         :rtype: None
         """
         return self.swk_body.ApplyPosition(pi_position_increment)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -483,11 +486,11 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSegment(long piIndex) As SWKSegment
-                | 
+                |
                 |     Returns a specific segment of the body, based on an index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piIndex
                 |             The index of the segment to retrieve.
                 |             The first segment is at index 0.
@@ -506,7 +509,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsBalanced() As boolean
-                | 
+                |
                 |     Returns:
                 |         True if the manikin is well-balaned, False otherwise.
                 |         Being well balanced means that the center of gravity of the
@@ -524,7 +527,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LockPosture(long piDOFId)
-                | 
+                |
                 |     Lock the body in the given dof
 
         :param int pi_dof_id:
@@ -540,7 +543,7 @@ class SWKBody(SWKBodyElement):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetAngularLimitations(long piDOFId,
                 | long piReset)
-                | 
+                |
                 |     Resets the angular limitations depending on the param piReset: 0 -> 2 OR 3
                 |     OR 4 depending of the first encountered. 1 -> 2 AND 3 AND 4 2 -> Unlock the
                 |     value 3 -> Restore the angular limitations if it is "No Limits" 4 -> Set back
@@ -559,7 +562,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetAttaches()
-                | 
+                |
                 |     Reset the attaches of the body.
 
         :rtype: None
@@ -573,7 +576,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetIKOffsets()
-                | 
+                |
                 |     Reset the offsets of the body.
 
         :rtype: None
@@ -587,7 +590,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetPosture()
-                | 
+                |
                 |     Set the manikin to the default (standing) posture.
 
         :rtype: None
@@ -601,7 +604,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetPrefAngles(long piDOFId)
-                | 
+                |
                 |     Reset the pref angles of the body.
 
         :param int pi_dof_id:
@@ -664,11 +667,11 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPosition(CATSafeArrayVariant piNewPosition)
-                | 
+                |
                 |     Sets a new absolute manikin position.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piNewPosition
                 |             The new position to place the manikin.
                 |             This array must contain 12 numbers, and msut be initialized using
@@ -676,9 +679,9 @@ class SWKBody(SWKBodyElement):
                 |             represent the rotation matrix.
                 |             The last three components represent the translation
                 |             vector.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the manikin to a 45-degree rotation
                 |           around
                 |          the x axis and at a (10, 20, 30) translation from the
@@ -705,7 +708,7 @@ class SWKBody(SWKBodyElement):
         :rtype: None
         """
         return self.swk_body.SetPosition(pi_new_position)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -721,7 +724,9 @@ class SWKBody(SWKBodyElement):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_posture(self, pi_posture_spec: SWKPostureSpec, pi_keep_referential: bool) -> None:
+    def set_posture(
+        self, pi_posture_spec: SWKPostureSpec, pi_keep_referential: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -729,15 +734,15 @@ class SWKBody(SWKBodyElement):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPosture(SWKPostureSpec piPostureSpec,
                 | boolean piKeepReferential)
-                | 
+                |
                 |     Set the manikin to a specific predefined posture.
                 |     Predefined postures include "Stand", "Sit", "Reach"
                 |     and "Kneel".
-                | 
+                |
                 |     See also:
-                |         SWKPostureSpec 
+                |         SWKPostureSpec
                 |     Parameters:
-                | 
+                |
                 |         piKeepReferential
                 |             keeps the referential after the change of the
                 |             posture
@@ -747,7 +752,7 @@ class SWKBody(SWKBodyElement):
         :rtype: None
         """
         return self.swk_body.SetPosture(pi_posture_spec, pi_keep_referential)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -770,7 +775,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetToBestPosture()
-                | 
+                |
                 |     Set the manikin to the posture that will provide it its maximum score.
                 |     When the manikin is in that posture, then the output of property
                 |     PosturalScore will be the same as that of property MaxPosturalScore.
@@ -786,7 +791,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SwapAngularLimitations(long piDOFId)
-                | 
+                |
                 |     Swap the angular limitations of the body.
 
         :param int pi_dof_id:
@@ -801,7 +806,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SwapPosture()
-                | 
+                |
                 |     Swap the posture with the equivalent segment, on the other side of the
                 |     manikin. For instance, the right leg takes the posture of the left leg, and
                 |     vice versa.
@@ -817,7 +822,7 @@ class SWKBody(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SwapPrefAngles(long piDOFId)
-                | 
+                |
                 |     Swap the preferred angles of the body.
 
         :param int pi_dof_id:

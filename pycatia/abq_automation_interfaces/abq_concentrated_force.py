@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.abq_automation_interfaces.abq_load import ABQLoad
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.axis_system import AxisSystem
@@ -17,24 +18,24 @@ from pycatia.product_structure_interfaces.publication import Publication
 
 class ABQConcentratedForce(ABQLoad):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQLoad
-                |                         ABQConcentratedForce
-                | 
-                | Represents an Abaqus concentrated force object
-                | (ABQConcentratedForce).
-                | Role: Access an Abaqus concentrated force object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQLoad
+            |                         ABQConcentratedForce
+            |
+            | Represents an Abaqus concentrated force object
+            | (ABQConcentratedForce).
+            | Role: Access an Abaqus concentrated force object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -49,9 +50,9 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ApplyUserSubroutine() As boolean
-                | 
+                |
                 |     Sets or returns the user subroutine flag.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether a user subroutine will be
                 |         applied.
@@ -77,7 +78,7 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FollowNodalRotation() As boolean
-                | 
+                |
                 |     Sets or returns the follow nodal rotation flag.
 
         :rtype: bool
@@ -101,15 +102,15 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LoadType() As ABQConcForceLoad_Type
-                | 
+                |
                 |     Sets or returns the load type whether Point Load, Distributed Load or Load
                 |     Density.
-                | 
+                |
                 |     Returns:
                 |         The load type.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         POINTLOAD
                 |         DISTRIBUTEDLOAD
                 |         LOADDENSITY
@@ -136,10 +137,10 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UselocalCsys() As boolean
-                | 
+                |
                 |     Sets or returns a boolean indicating whether local coordinate system is
                 |     used in Conc force
-                | 
+                |
                 |     Returns:
                 |         boolean specifying whether local csys is active.
 
@@ -164,10 +165,10 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property cf1() As double
-                | 
+                |
                 |     Sets or returns the concentrated force component in the
                 |     1-direction.
-                | 
+                |
                 |     Returns:
                 |         The concentrated force component in the 1-direction.
 
@@ -192,10 +193,10 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property cf2() As double
-                | 
+                |
                 |     Sets or returns the concentrated force component in the
                 |     2-direction.
-                | 
+                |
                 |     Returns:
                 |         The concentrated force component in the 2-direction.
 
@@ -220,10 +221,10 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property cf3() As double
-                | 
+                |
                 |     Sets or returns the concentrated force component in the
                 |     3-direction.
-                | 
+                |
                 |     Returns:
                 |         The concentrated force component in the 3-direction.
 
@@ -248,10 +249,10 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property cm1() As double
-                | 
+                |
                 |     Sets or returns the concentrated moment component in the
                 |     1-direction.
-                | 
+                |
                 |     Returns:
                 |         The concentrated moment component in the 1-direction.
 
@@ -276,10 +277,10 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property cm2() As double
-                | 
+                |
                 |     Sets or returns the concentrated moment component in the
                 |     2-direction.
-                | 
+                |
                 |     Returns:
                 |         The concentrated moment component in the 2-direction.
 
@@ -304,10 +305,10 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property cm3() As double
-                | 
+                |
                 |     Sets or returns the concentrated moment component in the
                 |     3-direction.
-                | 
+                |
                 |     Returns:
                 |         The concentrated moment component in the 3-direction.
 
@@ -332,10 +333,10 @@ class ABQConcentratedForce(ABQLoad):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property localCsys() As AxisSystem
-                | 
+                |
                 |     Sets or returns the local coordinate system of the concentrated
                 |     force.
-                | 
+                |
                 |     Returns:
                 |         The local coordinate system.
 
@@ -360,13 +361,13 @@ class ABQConcentratedForce(ABQLoad):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetHandler(Reference oProduct,
                 | Reference oRef)
-                | 
+                |
                 |     Returns the handler for the distributed load.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oProduct
-                |             The product for the handler. 
+                |             The product for the handler.
                 |         oRef
                 |             The reference to the handler.
 
@@ -374,8 +375,10 @@ class ABQConcentratedForce(ABQLoad):
         :param Reference o_ref:
         :rtype: None
         """
-        return self.abq_concentrated_force.GetHandler(o_product.com_object, o_ref.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_concentrated_force.GetHandler(
+            o_product.com_object, o_ref.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -391,7 +394,9 @@ class ABQConcentratedForce(ABQLoad):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_local_csys_from_publication(self, o_product: Product, o_pub_axis_system: AxisSystem) -> None:
+    def get_local_csys_from_publication(
+        self, o_product: Product, o_pub_axis_system: AxisSystem
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -399,27 +404,28 @@ class ABQConcentratedForce(ABQLoad):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetLocalCsysFromPublication(Product oProduct,
                 | AxisSystem oPubAxisSystem)
-                | 
+                |
                 |     Gets the published local coordinate system of the concentrated
                 |     force.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oProduct
                 |             The CATIA Product specifying the local coordinate system
                 |             publication.
                 |         oPubAxisSystem
                 |             The CATIA Axis system.
-                | 
+                |
                 |             Refer: CATIAAxisSystem
 
         :param Product o_product:
         :param AxisSystem o_pub_axis_system:
         :rtype: None
         """
-        return self.abq_concentrated_force.GetLocalCsysFromPublication(o_product.com_object,
-                                                                       o_pub_axis_system.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_concentrated_force.GetLocalCsysFromPublication(
+            o_product.com_object, o_pub_axis_system.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -479,7 +485,9 @@ class ABQConcentratedForce(ABQLoad):
         :param Reference i_ref:
         :rtype: None
         """
-        return self.abq_concentrated_force.SetHandler(i_product.com_object, i_ref.com_object)
+        return self.abq_concentrated_force.SetHandler(
+            i_product.com_object, i_ref.com_object
+        )
         # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
@@ -496,7 +504,9 @@ class ABQConcentratedForce(ABQLoad):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_local_csys_from_publication(self, i_product: Product, i_pub_axis_system: Publication) -> None:
+    def set_local_csys_from_publication(
+        self, i_product: Product, i_pub_axis_system: Publication
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -524,8 +534,9 @@ class ABQConcentratedForce(ABQLoad):
         :param Publication i_pub_axis_system:
         :rtype: None
         """
-        return self.abq_concentrated_force.SetLocalCsysFromPublication(i_product.com_object,
-                                                                       i_pub_axis_system.com_object)
+        return self.abq_concentrated_force.SetLocalCsysFromPublication(
+            i_product.com_object, i_pub_axis_system.com_object
+        )
         # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code

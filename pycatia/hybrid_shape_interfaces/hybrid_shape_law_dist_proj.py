@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -15,26 +15,26 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeLawDistProj(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeLawDistProj
-                | 
-                | Interface to law feature.
-                | Role: Allows you to access data of a law feature created by using a reference
-                | line and a definition curve.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeLawDistProj
+            |
+            | Interface to law feature.
+            | Role: Allows you to access data of a law feature created by using a reference
+            | line and a definition curve.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -49,7 +49,7 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AppliedUnitSymbol(CATBSTR iSymbol) (Write Only)
-                | 
+                |
                 |     Returns or sets the applied unit symbol for heterogeneous law.
 
         :rtype: str
@@ -73,7 +73,7 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Definition() As Reference
-                | 
+                |
                 |     Returns or sets the definition curve of the law.
                 |     Sub-element(s) supported (see Boundary object): see TriDimFeatEdge or
                 |     BiDimFeatEdge.
@@ -99,7 +99,7 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MeasureUnitSymbol(CATBSTR iSymbol) (Write Only)
-                | 
+                |
                 |     Returns or sets the measure unit symbol for heterogeneous law.
 
         :rtype: str
@@ -123,16 +123,16 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ParameterOnDefinition() As boolean
-                | 
+                |
                 |     Queries whether evolution parameter is on reference curve (default) or on definition curve,or
                 |     sets evolution parameter on reference curve or on definition curve.
                 |     Possible values of ParameterOnDefinition = TRUE : Parameter on definition curve. =
                 |     FALSE : Parameter on reference curve.
-                | 
+                |
                 | Example:
                 |     This example retrieves in ParOnDef the ParameterOnDefinition status of the
                 |     hybridShapeLawDist hybrid shape law feature.
-                | 
+                |
                 |      Dim ParOnDef As boolean
                 |      ParOnDef = hybridShapeLawDist.ParameterOnDefinition
 
@@ -157,7 +157,7 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PositiveDirectionOrientation() As long
-                | 
+                |
                 |     Returns or sets the positive value direction.
 
         :rtype: int
@@ -181,7 +181,7 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Reference() As Reference
-                | 
+                |
                 |     Returns or sets the reference line of the law.
                 |     Sub-element(s) supported (see Boundary object): see
                 |     RectilinearTriDimFeatEdge or RectilinearBiDimFeatEdge.
@@ -207,7 +207,7 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Scaling() As double
-                | 
+                |
                 |     Returns or sets the scaling ratio of the law.
 
         :rtype: float
@@ -230,18 +230,18 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetAppliedUnitSymbol(CATBSTR oSymbol)
-                | 
+                |
                 |     Returns the applied unit symbol.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSymbol
-                |             The symbol of applied unit 
-                | 
+                |             The symbol of applied unit
+                |
                 |     Example:
                 |         This example retrieves in oSymbol the applied unit symbol of the
                 |         hybridShapeLawDist hybrid shape law feature.
-                | 
+                |
                 |          Dim oSymbol
                 |          hybridShapeLawDist.GetAppliedUnitSymboloSymbol
 
@@ -257,18 +257,18 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetMeasureUnitSymbol(CATBSTR oSymbol)
-                | 
+                |
                 |     Returns the measure unit symbol.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSymbol
-                |             The symbol of measure unit 
-                | 
+                |             The symbol of measure unit
+                |
                 |     Example:
                 |         This example retrieves in oSymbol the measure unit symbol of the
                 |         hybridShapeLawDist hybrid shape law feature.
-                | 
+                |
                 |          Dim oSymbol
                 |          hybridShapeLawDist.GetMeasureUnitSymboloSymbol
 
@@ -284,11 +284,11 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetPlaneNormal(CATSafeArrayVariant oNormal)
-                | 
+                |
                 |     Retrieves the support plane normal.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNormal
                 |             The support plane normal
 
@@ -296,7 +296,7 @@ class HybridShapeLawDistProj(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_law_dist_proj.GetPlaneNormal(o_normal)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -319,11 +319,11 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func IsHeterogeneousLaw() As boolean
-                | 
+                |
                 |     Queries whether Heterogeneous Law mode is active or not.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHeterogeneousLaw
                 |             heterogeneous law mode = TRUE : Heterogeneous Law mode is active. =
                 |             FALSE : Heterogeneous Law mode is inactive.
@@ -339,11 +339,11 @@ class HybridShapeLawDistProj(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub PutPlaneNormal(CATSafeArrayVariant iNormal)
-                | 
+                |
                 |     Sets the support plane normal.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNormal
                 |             The support plane normal
 
@@ -351,7 +351,7 @@ class HybridShapeLawDistProj(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_law_dist_proj.PutPlaneNormal(i_normal)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

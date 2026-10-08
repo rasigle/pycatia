@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import PositionTolerance_Type, FormulationOption_Type
 from pycatia.abq_automation_interfaces.abq_interaction import ABQInteraction
 from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
@@ -17,21 +18,21 @@ from pycatia.product_structure_interfaces.product import Product
 
 class ABQFastenedPair(ABQInteraction):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQInteraction
-                |                         ABQFastenedPair
-                | 
-                | Represents an Abaqus Fastened Pair (ABQFastenedPair) object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQInteraction
+            |                         ABQFastenedPair
+            |
+            | Represents an Abaqus Fastened Pair (ABQFastenedPair) object.
+
     """
 
     def __init__(self, com_object):
@@ -46,7 +47,7 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AdjustSlaveNode() As boolean
-                | 
+                |
                 |     Sets or returns the adjust slave node flag.
 
         :rtype: bool
@@ -70,7 +71,7 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConnectionProperty() As AnalysisEntity
-                | 
+                |
                 |     This property has been deprecated. Use the AddSupportFromAnalysisEntity
                 |     instead.
 
@@ -95,14 +96,14 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FormulationOption() As FormulationOption_Type
-                | 
+                |
                 |     Sets or returns the formulation option.
-                | 
+                |
                 |     Returns:
                 |         The formulation option.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         SOLVERDEFAULT
                 |         SURFACETOSURFACE
                 |         NODETOSURFACE
@@ -128,7 +129,7 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IncludeShellThickness() As boolean
-                | 
+                |
                 |     Sets or returns the include shell element thickness flag.
 
         :rtype: bool
@@ -152,7 +153,7 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InvertMasterSurface() As boolean
-                | 
+                |
                 |     Sets or returns the invert master surface flag.
 
         :rtype: bool
@@ -176,7 +177,7 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InvertSlaveSurface() As boolean
-                | 
+                |
                 |     Sets or returns the invert slave surface flag.
 
         :rtype: bool
@@ -200,14 +201,14 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PositionTolerance() As PositionTolerance_Type
-                | 
+                |
                 |     Sets or returns the position tolerance.
-                | 
+                |
                 |     Returns:
                 |         The position tolerance
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         COMPUTED
                 |         SPECIFIED
 
@@ -232,7 +233,7 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PositionToleranceVal() As double
-                | 
+                |
                 |     Sets or returns the position tolerance value.
 
         :rtype: float
@@ -256,7 +257,7 @@ class ABQFastenedPair(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SwapMasterSlave() As boolean
-                | 
+                |
                 |     Sets or returns the swap master/slave surface flag.
 
         :rtype: bool
@@ -272,7 +273,9 @@ class ABQFastenedPair(ABQInteraction):
 
         self.abq_fastened_pair.SwapMasterSlave = value
 
-    def add_support_from_analysis_entity(self, i_product: Product, i_entity: AnalysisEntity) -> None:
+    def add_support_from_analysis_entity(
+        self, i_product: Product, i_entity: AnalysisEntity
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -280,12 +283,12 @@ class ABQFastenedPair(ABQInteraction):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromAnalysisEntity(Product iProduct,
                 | AnalysisEntity iEntity)
-                | 
+                |
                 |     Creates a new support and adds it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIA Product specifying the object to which the contact is
                 |             applied.
@@ -297,8 +300,10 @@ class ABQFastenedPair(ABQInteraction):
         :param AnalysisEntity i_entity:
         :rtype: None
         """
-        return self.abq_fastened_pair.AddSupportFromAnalysisEntity(i_product.com_object, i_entity.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_fastened_pair.AddSupportFromAnalysisEntity(
+            i_product.com_object, i_entity.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -314,7 +319,9 @@ class ABQFastenedPair(ABQInteraction):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_constraint(self, i_product: Product, i_constraint: Constraint) -> None:
+    def add_support_from_constraint(
+        self, i_product: Product, i_constraint: Constraint
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -322,12 +329,12 @@ class ABQFastenedPair(ABQInteraction):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromConstraint(Product iProduct,
                 | Constraint iConstraint)
-                | 
+                |
                 |     Creates a new support and adds it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIA Product specifying the object to which the contact is
                 |             applied.
@@ -339,8 +346,10 @@ class ABQFastenedPair(ABQInteraction):
         :param Constraint i_constraint:
         :rtype: None
         """
-        return self.abq_fastened_pair.AddSupportFromConstraint(i_product.com_object, i_constraint.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_fastened_pair.AddSupportFromConstraint(
+            i_product.com_object, i_constraint.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

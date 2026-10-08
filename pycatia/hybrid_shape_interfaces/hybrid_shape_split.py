@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -15,37 +15,37 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeSplit(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeSplit
-                | 
-                | Represents the hybrid shape split feature object.
-                | Role: To access data of the hybrid shape split feature. This data
-                | includes:
-                | 
-                |     The element to be cut (surface or curve)
-                |     The cutting element ( surface, curve or point)
-                |     An orientation to specify which side has to be kept
-                | 
-                | LICENSING INFORMATION: Creation of volume result requires GSO
-                | License
-                | if GSO License is not granted , setting of Volume context has not
-                | effect
-                | Use the CATIAHybridShapeFactory to create HybridShapeFeature
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeSplit
+            |
+            | Represents the hybrid shape split feature object.
+            | Role: To access data of the hybrid shape split feature. This data
+            | includes:
+            |
+            |     The element to be cut (surface or curve)
+            |     The cutting element ( surface, curve or point)
+            |     An orientation to specify which side has to be kept
+            |
+            | LICENSING INFORMATION: Creation of volume result requires GSO
+            | License
+            | if GSO License is not granted , setting of Volume context has not
+            | effect
+            | Use the CATIAHybridShapeFactory to create HybridShapeFeature
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -60,14 +60,14 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AutomaticExtrapolationMode() As boolean
-                | 
+                |
                 |     Gets or sets the automatic extrapolation mode status. AutomaticExtrapolationMode =
                 |     TRUE : Automatic extrapolation mode is on. =
                 |     FALSE : Automatic extrapolation mode is off.
                 |
                 |     This example retrieves in AutoExtrapolMode the automatic extrapolation mode status for the Split
                 |     hybrid shape feature.
-                | 
+                |
                 |      Dim AutoExtrapolMode As boolean
                 |      AutoExtrapolMode = Split.AutomaticExtrapolationMode
 
@@ -92,7 +92,7 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BothSidesMode() As boolean
-                | 
+                |
                 |     Gets or sets both sides computation mode.
                 |     BothSidesMode
                 |     TRUE : Both sides are computed.
@@ -100,7 +100,7 @@ class HybridShapeSplit(HybridShape):
                 |
                 |     This example retrieves in BothSides the both sides computation mode for the Split hybrid shape
                 |     feature.
-                | 
+                |
                 |      Dim BothSides As boolean
                 |      BothSides = Split.BothSidesMode
 
@@ -125,15 +125,15 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CuttingElem() As Reference
-                | 
+                |
                 |     Returns or sets the cutting element.
                 |     Sub-element(s) supported (see Boundary object): Face, TriDimFeatEdge,
                 |     BiDimFeatEdge or Vertex.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in CuttingElement the cutting element for the
                 |         Split hybrid shape feature.
-                | 
+                |
                 |          Dim CuttingElement As Reference
                 |          Set CuttingElement = Split.CuttingElem
 
@@ -158,13 +158,13 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ElemToCut() As Reference
-                | 
+                |
                 |     Returns or sets the element to cut.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Element the element to cut for the Split
                 |         hybrid shape feature.
-                | 
+                |
                 |          Dim Element As Reference
                 |          Set Element = Split.ElemToCut
 
@@ -189,7 +189,7 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ExtrapolationType() As long
-                | 
+                |
                 |     Gets or sets the extrapolation type.
                 |     ExtrapolationType = CATGSMExtrapolationType_None(0). =
                 |     CATGSMExtrapolationType_Tangent(1). =
@@ -219,7 +219,7 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property IntersectionComputation() As boolean
-                | 
+                |
                 |     Gets or sets Intersection computation mode.
                 |     IntersectionComputation =
                 |     TRUE : Intersection is computed. =
@@ -227,7 +227,7 @@ class HybridShapeSplit(HybridShape):
                 |
                 |     This example retrieves in Intersection the Intersection computation mode for the Split hybrid
                 |     shape feature.
-                | 
+                |
                 |      Dim Intersection As boolean
                 |      Intersection = Split.IntersectionComputation
 
@@ -252,24 +252,24 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Orientation() As long
-                | 
+                |
                 |     Returns or sets the orientation used to compute the split.
                 |     Role:
                 |     Orientation specifies kept parts of cut feature.
-                | 
+                |
                 |     When splitting a surface by a surface :
                 |     - If orientation value is 1: kept parts are specified by the "natural"
                 |     normal to the cutting feature
                 |     - If orientation value -1: kept parts are specified by the inverse of the
                 |     "natural" normal to the cutting feature
-                | 
+                |
                 |     When splitting a surface by a curve :
                 |     - If orientation value is 1:
                 |       kept parts are specified by the result of the cross product : normal(surface)^tangent(curve)
                 |     - If orientation value is -1:
                 |       Kept parts are specified by the inverse of the result of the cross product :
                 |       normal(surface)^tangent(curve)
-                | 
+                |
                 |     When splitting a curve by a point or a curve (without support specified)
                 |     :
                 |     - If orientation value is 1: Kept parts are from beginning of the curve to
@@ -280,7 +280,7 @@ class HybridShapeSplit(HybridShape):
                 |     the second (if there is one),
                 |     and, if there is one, from the third to the fourth and so on until the end
                 |     of the curve.
-                | 
+                |
                 |     When splitting a curve on support:
                 |     - If orientation value is 1:
                 |       Kept parts are specified by the result of the cross product :
@@ -288,17 +288,17 @@ class HybridShapeSplit(HybridShape):
                 |     - If orientation value is -1:
                 |       Kept parts are specified by the inverse of the result of the cross product :
                 |       normal(support surface)^tangent(cutting curve)
-                | 
+                |
                 |     When splitting a curve by a surface:
                 |     - If orientation value is 1: Kept parts are specified by the inverse of the
                 |     normal to the surface
                 |     - If orientation value is -1: Kept parts are specified by the normal to the
                 |     surface
-                | 
+                |
                 |     Example
                 |         This example retrieves in OrientValue the orientation value for the
                 |         Split hybrid shape feature.
-                | 
+                |
                 |          Dim OrientValue As long
                 |          Set OrientValue = Split.Orientation
 
@@ -323,15 +323,15 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns or sets the support element.
                 |     This support element may not exist.
                 |     Sub-element(s) supported (see Boundary object): Face.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Element the support element for the Split
                 |         hybrid shape feature.
-                | 
+                |
                 |          Dim Element As Reference
                 |          Set Element = Split.Support
 
@@ -356,21 +356,21 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property VolumeResult() As long
-                | 
+                |
                 |     Returns or sets the Result Type.
                 |     Result type:
-                | 
+                |
                 |         : 0 -> Surface
                 |         : 1 -> Volume
                 |         , The resultant split will be volume. If input is element to cut is
-                |         volume. 
-                | 
-                | 
+                |         volume.
+                |
+                |
                 |     Note: Setting volume result requires GSO License.
-                | 
+                |
                 |     Example: This example retrieves in ResultType the result type for the Split
                 |     hybrid shape feature.
-                | 
+                |
                 |      Dim RType As long
                 |      Set RType = Split.ResultType
 
@@ -395,13 +395,13 @@ class HybridShapeSplit(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddCuttingElem(Reference iElem,
                 | long iOrientation)
-                | 
+                |
                 |     Adds a cutting feature.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iElem
-                |             cutting feature 
+                |             cutting feature
                 |         iOrientation
                 |             Orientation iOrientation
                 |             1 : SameOrientation
@@ -413,7 +413,7 @@ class HybridShapeSplit(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_split.AddCuttingElem(i_elem.com_object, i_orientation)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -436,12 +436,12 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddElementToKeep(Reference iElement)
-                | 
+                |
                 |     Adds an element to specifications. This element will be
                 |     kept.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iElement
                 |             Element to keep.
 
@@ -449,7 +449,7 @@ class HybridShapeSplit(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_split.AddElementToKeep(i_element.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -472,12 +472,12 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddElementToRemove(Reference iElement)
-                | 
+                |
                 |     Adds an element to specifications. This element will be
                 |     removed.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iElement
                 |             Element to remove.
 
@@ -485,7 +485,7 @@ class HybridShapeSplit(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_split.AddElementToRemove(i_element.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -508,14 +508,14 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetCuttingElem(long iRank) As Reference
-                | 
+                |
                 |     Gets the cutting feature at a given index (a point, a curve or a
                 |     surface).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
-                |             cutting feature 
+                |             cutting feature
                 |         iRank
                 |             Index of one of the cutting features
 
@@ -531,13 +531,13 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetIntersection(long iRank) As Reference
-                | 
+                |
                 |     Gets the intersection at a given index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
-                |             Intersection 
+                |             Intersection
                 |         iRank
                 |             Index of one of the intersection features
 
@@ -553,13 +553,13 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetKeptElem(long iRank) As Reference
-                | 
+                |
                 |     Gets the kept feature at a given index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
-                |             Kept feature 
+                |             Kept feature
                 |         iRank
                 |             Index of one of the kept features
 
@@ -575,11 +575,11 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetNbCuttingElem() As long
-                | 
+                |
                 |     Gets the number of cutting features.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNbCuttingElem
                 |             Number of cutting features
 
@@ -594,11 +594,11 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetNbElementsToKeep() As long
-                | 
+                |
                 |     Gets the number of elements to keep.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNbElementsToKeep
                 |             Number of elements to keep
 
@@ -613,11 +613,11 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetNbElementsToRemove() As long
-                | 
+                |
                 |     Gets the number of elements to remove.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNbElementsToRemove
                 |             Number of elements to remove
 
@@ -632,13 +632,13 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetOrientation(long iRank) As long
-                | 
+                |
                 |     Gets Orientation used to compute the split.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOrientation
-                |             Orientation 
+                |             Orientation
                 |         iRank
                 |             index of the cutting feature
                 |             oOrientation
@@ -658,11 +658,11 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetOtherSide() As Reference
-                | 
+                |
                 |     Gets the other side.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             Other side
 
@@ -677,13 +677,13 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetRemovedElem(long iRank) As Reference
-                | 
+                |
                 |     Gets the removed feature at a given index.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
-                |             Removed feature 
+                |             Removed feature
                 |         iRank
                 |             Index of one of the removed features
 
@@ -699,7 +699,7 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InvertOrientation()
-                | 
+                |
                 |     Inverts the orientation used to compute the split.
 
         :rtype: None
@@ -713,11 +713,11 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveCuttingElem(Reference iElem)
-                | 
+                |
                 |     Removes a cutting feature.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iElem
                 |             cutting feature
 
@@ -725,7 +725,7 @@ class HybridShapeSplit(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_split.RemoveCuttingElem(i_elem.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -748,11 +748,11 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveElementToKeep(long iRank)
-                | 
+                |
                 |     Removes an element from specifications.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRank
                 |             Index of the kept element.
 
@@ -768,11 +768,11 @@ class HybridShapeSplit(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveElementToRemove(long iRank)
-                | 
+                |
                 |     Removes an element from specifications.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRank
                 |             Index of the removed element.
 
@@ -789,13 +789,13 @@ class HybridShapeSplit(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetOrientation(long iRank,
                 | long iOrientation)
-                | 
+                |
                 |     Sets the orientation used to compute the split.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iOrientation
-                |             Orientation 
+                |             Orientation
                 |         iRank
                 |             index of the cutting feature
                 |             iOrientation

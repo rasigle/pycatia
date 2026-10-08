@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.mec_mod_interfaces.hybrid_bodies import HybridBodies
@@ -20,25 +20,25 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class Body(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Body
-                | 
-                | The object that manages a sequence of shapes, a set of sketches, a set of
-                | hybrid bodies, a set of ordered geometrical sets and a set of hybrid
-                | shapes.
-                | 
-                | It belongs to the Bodies collection of a Part or HybridBody
-                | object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Body
+            |
+            | The object that manages a sequence of shapes, a set of sketches, a set of
+            | hybrid bodies, a set of ordered geometrical sets and a set of hybrid
+            | shapes.
+            |
+            | It belongs to the Bodies collection of a Part or HybridBody
+            | object.
+
     """
 
     def __init__(self, com_object):
@@ -53,14 +53,14 @@ class Body(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property HybridBodies() As HybridBodies (Read Only)
-                | 
+                |
                 |     Returns the body's HybridBodies collection.
-                | 
+                |
                 |     Example:
                 |         The following example returns in hybridBodyColl the collection of
                 |         hybrid bodies of the main body of partDoc part
                 |         document:
-                | 
+                |
                 |          Dim body As Body
                 |          Set body = partDoc.Part.Bodies.MainBody
                 |          Set hybridBodyColl = body.HybridBodies
@@ -78,19 +78,19 @@ class Body(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property HybridShapes() As HybridShapes (Read Only)
-                | 
+                |
                 |     Returns the list of hybrid shapes included in the body.
-                | 
+                |
                 |     Returns:
                 |         oHybridShapes The list of hybrid shapes in the body (@see
                 |         CATIAHybridShapes
                 |         for more information).
-                | 
+                |
                 |         Example:
                 |             The following example returns in HybridShapes1 the list
                 |             of
                 |             hybrid shapes in the body Body1:
-                | 
+                |
                 |              Dim HybridShapes1 As HybridShapes
                 |              Set HybridShapes1 = Body1.HybridShapes
 
@@ -107,14 +107,14 @@ class Body(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property InBooleanOperation() As boolean (Read Only)
-                | 
+                |
                 |     Returns True if the body is involved in a boolean operation, else returns
                 |     False.
-                | 
+                |
                 |     Example:
                 |         The following example returns in operated True if the body body1belongs
                 |         to a boolean operation.
-                | 
+                |
                 |          operated = body1.InBooleanOperation
 
         :rtype: bool
@@ -131,14 +131,14 @@ class Body(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property OrderedGeometricalSets() As OrderedGeometricalSets (Read
                 | Only)
-                | 
+                |
                 |     Returns the body's OrderedGeometricalSets collection.
-                | 
+                |
                 |     ometricalSetColl = Body1.OrderedGeometricalSets Example:
                 |         The following example returns in OrderedGeometricalSetColl the
                 |         collection of ordered geometrical set of the body Body1
                 |         :
-                | 
+                |
                 |          Set OrderedGe
 
         :rtype: OrderedGeometricalSets
@@ -154,15 +154,15 @@ class Body(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Shapes() As Shapes (Read Only)
-                | 
+                |
                 |     Returns the body's Shapes collection. These shapes make up the sequence of
                 |     shapes that will produce an intermediate result for the part, or the final
                 |     result in the case of the main body.
-                | 
+                |
                 |     Example:
                 |         The following example returns in shapColl the collection of shapes
                 |         managed by the main body of the partDoc part document:
-                | 
+                |
                 |          Dim body As Body
                 |          Set body = partDoc.Part.Bodies.MainBody
                 |          Set shapColl = body.Shapes
@@ -180,14 +180,14 @@ class Body(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Sketches() As Sketches (Read Only)
-                | 
+                |
                 |     Returns the body's Sketches collection. These sketches are those inside the
                 |     body at all levels.
-                | 
+                |
                 |     Example:
                 |         The following example returns in skColl the collection of sketches of
                 |         the main body of partDoc part document:
-                | 
+                |
                 |          Dim body As Body
                 |          Set body = partDoc.Part.Bodies.MainBody
                 |          Set skColl = body.Sketches
@@ -204,25 +204,25 @@ class Body(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InsertHybridShape(HybridShape iHybridShape)
-                | 
+                |
                 |     Insert a hybrid shape to the body.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iHybriShape
-                |             The hybrid shape to insert. 
-                | 
+                |             The hybrid shape to insert.
+                |
                 |     Example:
                 |         This example inserts the hybrid shape HybridShape1 to the body
                 |         Body1:
-                | 
+                |
                 |          Body1.InsertHybridShape (HybridShape1)
 
         :param HybridShape i_hybrid_shape:
         :rtype: None
         """
         return self.body.InsertHybridShape(i_hybrid_shape.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

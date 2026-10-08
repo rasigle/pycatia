@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import TYPE_CHECKING
 
 from pycatia.knowledge_interfaces.parameters import Parameters
@@ -19,20 +20,20 @@ if TYPE_CHECKING:
 
 class FunctionalElement(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     FunctionalElement
-                | 
-                | Represents a Functional Element.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     FunctionalElement
+            |
+            | Represents a Functional Element.
+
     """
 
     def __init__(self, com_object):
@@ -40,14 +41,14 @@ class FunctionalElement(AnyObject):
         self.functional_element = com_object
 
     @property
-    def document(self) -> 'FunctionalDocument':
+    def document(self) -> "FunctionalDocument":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Document() As FunctionalDocument (Read Only)
-                | 
+                |
                 |     Returns the Document.
 
         :rtype: FunctionalDocument
@@ -63,7 +64,7 @@ class FunctionalElement(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Parameters() As Parameters (Read Only)
-                | 
+                |
                 |     Returns the parameters collection.
 
         :rtype: Parameters

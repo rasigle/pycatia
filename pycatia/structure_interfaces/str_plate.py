@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -17,24 +17,24 @@ from pycatia.structure_interfaces.str_object import StrObject
 
 class StrPlate(StrObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ProductStructureInterfaces.Product
-                |                         StructureInterfaces.StrObject
-                |                             StrPlate
-                | 
-                | Represents a structure plate object.
-                | A plate is defined by a thickness and aggregates a support object and a sketch
-                | defining its contour.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ProductStructureInterfaces.Product
+            |                         StructureInterfaces.StrObject
+            |                             StrPlate
+            |
+            | Represents a structure plate object.
+            | A plate is defined by a thickness and aggregates a support object and a sketch
+            | defining its contour.
+
     """
 
     def __init__(self, com_object):
@@ -49,7 +49,7 @@ class StrPlate(StrObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Offset() As Parameter (Read Only)
-                | 
+                |
                 |     Returns the offset between the given support and the support of the plate.
 
         :rtype: Parameter
@@ -65,7 +65,7 @@ class StrPlate(StrObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Sketch() As Sketch (Read Only)
-                | 
+                |
                 |     Returns the sketch object of the plate.
 
         :rtype: Sketch
@@ -81,7 +81,7 @@ class StrPlate(StrObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StandardThickness() As double
-                | 
+                |
                 |     Returns the standard thickness following the support orientation.
 
         :rtype: float
@@ -105,7 +105,7 @@ class StrPlate(StrObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns or sets the support of the plate.
 
         :rtype: Reference
@@ -128,9 +128,9 @@ class StrPlate(StrObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ReverseDirection()
-                | 
+                |
                 |     Reverses the material orientation of the plate.
-                | 
+                |
                 |      Plate_1.ReverseDirection
 
         :rtype: None

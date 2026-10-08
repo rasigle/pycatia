@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
@@ -17,33 +17,33 @@ from pycatia.knowledge_interfaces.length import Length
 
 class HybridShapePointOnSurface(Point):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         CATGSMIDLItf.Point
-                |                             HybridShapePointOnSurface
-                | 
-                | Represents the Point on Surface feature objects.
-                | Role: Allows to access data of the point feature created with a geodesic
-                | distance in a direction to a reference point on a surface
-                | 
-                | See also:
-                |     Length 
-                | See also:
-                |     Reference 
-                | See also:
-                |     HybridShapeDirection 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         CATGSMIDLItf.Point
+            |                             HybridShapePointOnSurface
+            |
+            | Represents the Point on Surface feature objects.
+            | Role: Allows to access data of the point feature created with a geodesic
+            | distance in a direction to a reference point on a surface
+            |
+            | See also:
+            |     Length
+            | See also:
+            |     Reference
+            | See also:
+            |     HybridShapeDirection
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -58,15 +58,15 @@ class HybridShapePointOnSurface(Point):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Direction() As HybridShapeDirection
-                | 
+                |
                 |     Returns or Sets the direction from the reference point in which the point
                 |     is computed.
-                | 
+                |
                 |     Example
                 |     :
                 |         This example retrieves in oDirection the direction from the reference
                 |         point for PointOnSurface feature.
-                | 
+                |
                 |          Dim oDirection As CATIAHybridShapeDirection
                 |          Set oDirection  = PointOnSurface.Direction
 
@@ -91,14 +91,14 @@ class HybridShapePointOnSurface(Point):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Offset() As Length (Read Only)
-                | 
+                |
                 |     Returns the geodesic length.
-                | 
+                |
                 |     Example
                 |     :
                 |         This example retrieves in oGeodesicOffset the offset (Geodesic Length)
                 |         from the reference point for PointOnSurface feature.
-                | 
+                |
                 |          Dim oGeodesicOffset As CATIAReference
                 |          Set oGeodesicOffset  = PointOnSurface.GeodesicOffset
 
@@ -115,18 +115,18 @@ class HybridShapePointOnSurface(Point):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Point() As Reference
-                | 
+                |
                 |     Returns or Sets the reference point.
                 |     This data is not mandatory.
                 |     If no point is given, the middle point on the surface is
                 |     taken.
                 |     Sub-element(s) supported (see Boundary object): Vertex.
-                | 
+                |
                 |     Example
                 |     :
                 |         This example retrieves in oPointRef the reference point for
                 |         PointOnSurface feature.
-                | 
+                |
                 |          Dim oPointRef As CATIAReference
                 |          Set oPointRef  = PointOnSurface.PointRef
 
@@ -151,15 +151,15 @@ class HybridShapePointOnSurface(Point):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Surface() As Reference
-                | 
+                |
                 |     Returns or Sets the surface.
                 |     Sub-element(s) supported (see Boundary object): Face.
-                | 
+                |
                 |     Example
                 |     :
                 |         This example retrieves in oSurface the supporting surface for
                 |         PointOnSurface feature.
-                | 
+                |
                 |          Dim oSurface As CATIAReference
                 |          Set oSurface  = PointOnSurface.Surface
 

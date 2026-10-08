@@ -1,14 +1,17 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.abq_automation_interfaces.abq_boundary_condition import ABQBoundaryCondition
+
+from pycatia.abq_automation_interfaces.abq_boundary_condition import (
+    ABQBoundaryCondition,
+)
 from pycatia.mec_mod_interfaces.axis_system import AxisSystem
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.product_structure_interfaces.publication import Publication
@@ -16,24 +19,24 @@ from pycatia.product_structure_interfaces.publication import Publication
 
 class ABQDisplacementBC(ABQBoundaryCondition):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQBoundaryCondition
-                |                         ABQDisplacementBC
-                | 
-                | Represents an Abaqus displacement boundary condition (ABQDisplacementBC)
-                | object.
-                | Role: Access an Abaqus displacement boundary condition object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQBoundaryCondition
+            |                         ABQDisplacementBC
+            |
+            | Represents an Abaqus displacement boundary condition (ABQDisplacementBC)
+            | object.
+            | Role: Access an Abaqus displacement boundary condition object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -48,10 +51,10 @@ class ABQDisplacementBC(ABQBoundaryCondition):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UselocalCsys() As boolean
-                | 
+                |
                 |     Sets or returns a boolean indicating whether local coordinate system is
                 |     used in Displacement BC
-                | 
+                |
                 |     Returns:
                 |         boolean specifying whether local csys is active.
 
@@ -76,10 +79,10 @@ class ABQDisplacementBC(ABQBoundaryCondition):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property localCsys() As AxisSystem
-                | 
+                |
                 |     Sets or returns the local coordinate system of the boundary condition's
                 |     degrees of freedom.
-                | 
+                |
                 |     Returns:
                 |         The local coordinate system.
 
@@ -104,9 +107,9 @@ class ABQDisplacementBC(ABQBoundaryCondition):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property u1() As double
-                | 
+                |
                 |     Sets or returns the first translational component.
-                | 
+                |
                 |     Returns:
                 |         The first translational component.
 
@@ -131,9 +134,9 @@ class ABQDisplacementBC(ABQBoundaryCondition):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property u2() As double
-                | 
+                |
                 |     Sets or returns the second translational component.
-                | 
+                |
                 |     Returns:
                 |         The second translational component.
 
@@ -158,9 +161,9 @@ class ABQDisplacementBC(ABQBoundaryCondition):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property u3() As double
-                | 
+                |
                 |     Sets or returns the third translational component.
-                | 
+                |
                 |     Returns:
                 |         The third translational component.
 
@@ -185,9 +188,9 @@ class ABQDisplacementBC(ABQBoundaryCondition):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ur1() As double
-                | 
+                |
                 |     Sets or returns the first rotational component.
-                | 
+                |
                 |     Returns:
                 |         The second rotational component.
 
@@ -212,9 +215,9 @@ class ABQDisplacementBC(ABQBoundaryCondition):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ur2() As double
-                | 
+                |
                 |     Sets or returns the second rotational component.
-                | 
+                |
                 |     Returns:
                 |         The second rotational component.
 
@@ -239,9 +242,9 @@ class ABQDisplacementBC(ABQBoundaryCondition):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ur3() As double
-                | 
+                |
                 |     Sets or returns the third rotational component.
-                | 
+                |
                 |     Returns:
                 |         The third rotational component.
 
@@ -266,11 +269,11 @@ class ABQDisplacementBC(ABQBoundaryCondition):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetDOFActivation(long iDOF,
                 | boolean oFlag)
-                | 
+                |
                 |     Gets the activation of a DOF for Displacement BC
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDOF
                 |             The DOF number from 1 to 6, in order U1 = 1,...., UR3 = 6.
                 |         oFlag
@@ -281,7 +284,7 @@ class ABQDisplacementBC(ABQBoundaryCondition):
         :rtype: None
         """
         return self.abq_displacement_bc.GetDOFActivation(i_dof, o_flag)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -297,7 +300,9 @@ class ABQDisplacementBC(ABQBoundaryCondition):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_local_csys_from_publication(self, o_product: Product, o_pub_axis_system: AxisSystem) -> None:
+    def get_local_csys_from_publication(
+        self, o_product: Product, o_pub_axis_system: AxisSystem
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -305,26 +310,28 @@ class ABQDisplacementBC(ABQBoundaryCondition):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetLocalCsysFromPublication(Product oProduct,
                 | AxisSystem oPubAxisSystem)
-                | 
+                |
                 |     Gets the published local coordinate system of the Displacement
                 |     BC.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oProduct
                 |             The CATIA Product specifying the local coordinate system
                 |             publication.
                 |         oPubAxisSystem
                 |             The CATIA Axis system.
-                | 
+                |
                 |             Refer: CATIAAxisSystem
 
         :param Product o_product:
         :param AxisSystem o_pub_axis_system:
         :rtype: None
         """
-        return self.abq_displacement_bc.GetLocalCsysFromPublication(o_product.com_object, o_pub_axis_system.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_displacement_bc.GetLocalCsysFromPublication(
+            o_product.com_object, o_pub_axis_system.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -344,7 +351,7 @@ class ABQDisplacementBC(ABQBoundaryCondition):
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUseCoordinateSystemType() As ABQLocalCsysType
                 |
@@ -356,7 +363,7 @@ class ABQDisplacementBC(ABQBoundaryCondition):
                 |             e.g. ABQ_CARTESIAN (for Cartesian coordinate system),
                 |             ABQ_CYLINDRICAL (for Cylindrical coordinate system), ABQ_SPHERICAL (for
                 |             Spherical coordinate system),
-    
+
         :return: enum abq_local_csys_type
         :rtype: int
         """
@@ -366,7 +373,7 @@ class ABQDisplacementBC(ABQBoundaryCondition):
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDOFActivation(long iDOF,
                 | boolean iFlag)
@@ -379,7 +386,7 @@ class ABQDisplacementBC(ABQBoundaryCondition):
                 |             The DOF number from 1 to 6, in order U1 = 1,...., UR3 = 6.
                 |         iFlag
                 |             DOF activation status true or false.
-    
+
         :param int i_dof:
         :param bool i_flag:
         :rtype: None
@@ -401,11 +408,13 @@ class ABQDisplacementBC(ABQBoundaryCondition):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_local_csys_from_publication(self, i_product: Product, i_pub_axis_system: Publication) -> None:
+    def set_local_csys_from_publication(
+        self, i_product: Product, i_pub_axis_system: Publication
+    ) -> None:
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetLocalCsysFromPublication(Product iProduct,
                 | Publication iPubAxisSystem)
@@ -424,12 +433,14 @@ class ABQDisplacementBC(ABQBoundaryCondition):
                 |             The CATIA Publication on the axis system.
                 |
                 |             Refer: CATIAPublication
-    
+
         :param Product i_product:
         :param Publication i_pub_axis_system:
         :rtype: None
         """
-        return self.abq_displacement_bc.SetLocalCsysFromPublication(i_product.com_object, i_pub_axis_system.com_object)
+        return self.abq_displacement_bc.SetLocalCsysFromPublication(
+            i_product.com_object, i_pub_axis_system.com_object
+        )
         # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
@@ -450,7 +461,7 @@ class ABQDisplacementBC(ABQBoundaryCondition):
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUseCoordinateSystemType(ABQLocalCsysType
                 | iCsystemType)
@@ -463,7 +474,7 @@ class ABQDisplacementBC(ABQBoundaryCondition):
                 |             e.g. ABQ_CARTESIAN (for Cartesian coordinate system),
                 |             ABQ_CYLINDRICAL (for Cylindrical coordinate system), ABQ_SPHERICAL (for
                 |             Spherical coordinate system),
-    
+
         :param int i_csystem_type: enum abq_local_csys_type
         :rtype: None
         """

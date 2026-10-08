@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
@@ -17,33 +17,33 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeCorner(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeCorner
-                | 
-                | Represents the hybrid shape corner feature.
-                | Role: To access the data of the hybrid shape corner object. This data
-                | includes:
-                | 
-                |     Two elements
-                |     Their orientations (same or inverse than the underlying
-                |     curve)
-                |     A support for the hybrid shape corner on support feature
-                |     A direction for the hybrid shape 3D corner feature
-                |     A radius.
-                | 
-                | Use the HybridShapeFactory to create a HybridShapeCorner
-                | object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeCorner
+            |
+            | Represents the hybrid shape corner feature.
+            | Role: To access the data of the hybrid shape corner object. This data
+            | includes:
+            |
+            |     Two elements
+            |     Their orientations (same or inverse than the underlying
+            |     curve)
+            |     A support for the hybrid shape corner on support feature
+            |     A direction for the hybrid shape 3D corner feature
+            |     A radius.
+            |
+            | Use the HybridShapeFactory to create a HybridShapeCorner
+            | object.
+
     """
 
     def __init__(self, com_object):
@@ -58,16 +58,16 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BeginOfCorner() As long
-                | 
+                |
                 |     Return or Set the number of the beginning curve of the corner. This
                 |     parameter is used to stabilize the resulting corner
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example set the beginning wire index of
-                |          the hybShpCorner hybrid shape corner 
-                |          
-                | 
+                |          the hybShpCorner hybrid shape corner
+                |
+                |
                 |          hybShpCorner.BeginOfCorner = 1
 
         :rtype: int
@@ -91,15 +91,15 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CornerType() As long
-                | 
+                |
                 |     Returns or sets the Corner Type.
-                | 
+                |
                 |     Example:
-                | 
-                |           This example retrieves the Corner Type 
+                |
+                |           This example retrieves the Corner Type
                 |          the hybShpCorner hybrid shape corner in CornerType.
-                |          
-                | 
+                |
+                |
                 |          Dim lCornerType As long
                 |          lCornerType = hybShpCorner.CornerType
 
@@ -124,19 +124,19 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Direction() As HybridShapeDirection
-                | 
+                |
                 |     Returns or sets the 3D corner direction.
                 |     Legal values: This can be a CATIAHybridShapeDirection.
-                | 
+                |
                 |     See also:
-                |         HybridShapeDirection 
+                |         HybridShapeDirection
                 |     Example:
-                | 
+                |
                 |           This example sets the direction of
                 |          the hybShpCorner hybrid shape 3D corner as
                 |          the existing direction hybShpDirection.
-                |          
-                | 
+                |
+                |
                 |          hybShpCorner.Direction = hybShpDirection
 
         :rtype: HybridShapeDirection
@@ -160,19 +160,19 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DiscriminationIndex() As long
-                | 
+                |
                 |     Returns or set the discrimination index of the current corner. Several
                 |     resulting solutions produced by the operator can be same oriented regarding to
                 |     the input wire bodies. In such a case, they are sorted in order to distinguish
                 |     them. The Sequence FirstOrientation - SecondOrientation - DiscriminationIndex
                 |     allows you to identify a unique one-domain solution.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example set the discrimination index of
-                |          the hybShpCorner hybrid shape corner 
-                |          
-                | 
+                |          the hybShpCorner hybrid shape corner
+                |
+                |
                 |          hybShpCorner.DiscriminationIndex = 2
 
         :rtype: int
@@ -196,19 +196,19 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstElem() As Reference
-                | 
+                |
                 |     Returns or sets the corner first reference element.
                 |     Legal values: This can be a curve or a point.
                 |     Sub-element(s) supported (see Boundary object): TriDimFeatEdge,
                 |     BiDimFeatEdge or Vertex.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves the first reference element
                 |           of
                 |          the hybShpCorner hybrid shape corner in firstElt.
-                |          
-                | 
+                |
+                |
                 |          Dim fisrtElt As CATIAReference
                 |          fisrtElt = hybShpCorner.FirstElem
 
@@ -233,7 +233,7 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstOrientation() As long
-                | 
+                |
                 |     Returns or sets the orientation of the corner first reference element. The
                 |     orientation specifies the corner center position. It is either the same of the
                 |     inverse orientation than those of the cross product: Normal(Support) ^
@@ -241,14 +241,14 @@ class HybridShapeCorner(HybridShape):
                 |     Legal values: 1 if the orientation of the corner first reference element is
                 |     the same than the cross product: Normal(Support) ^ Tangent(FirstElem), and -1
                 |     if it is the inverse.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves the orientation of first reference element
                 |           of
                 |          the hybShpCorner hybrid shape corner in firstOrient.
-                |          
-                | 
+                |
+                |
                 |          Dim firstOrient As long
                 |          firstOrient = hybShpCorner.FirstOrientation
 
@@ -273,17 +273,17 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstTangentOrientation() As long
-                | 
+                |
                 |     Returns or sets the tangent orientation of the corner first reference
                 |     element. compared to the corner itself
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves the tangent orientation of first reference
                 |           element of
                 |          the hybShpCorner hybrid shape corner in firstOrient.
-                |          
-                | 
+                |
+                |
                 |          Dim firstOrient As long
                 |          firstOrient = hybShpCorner.FirstTangentOrientation
 
@@ -308,15 +308,15 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property OnVertex() As boolean
-                | 
+                |
                 |     Returns or sets the On Vertex mode off/on.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves the OnVertex
                 |          the hybShpCorner hybrid shape corner in OnVertex.
-                |          
-                | 
+                |
+                |
                 |          Dim bOnVertex As boolean
                 |          bOnVertex = hybShpCorner.OnVertex
 
@@ -341,15 +341,15 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Radius() As Length (Read Only)
-                | 
+                |
                 |     Returns the corner radius.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves the radius of
                 |          the hybShpCorner hybrid shape corner in radius.
-                |          
-                | 
+                |
+                |
                 |          Dim radius As CATIALength
                 |          radius = hybShpCorner.Radius
 
@@ -366,19 +366,19 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondElem() As Reference
-                | 
+                |
                 |     Returns or sets the corner second reference element.
                 |     Legal values: This is always a curve.
                 |     Sub-element(s) supported (see Boundary object): TriDimFeatEdge,
                 |     BiDimFeatEdge or Vertex.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves the second reference element
                 |           of
                 |          the hybShpCorner hybrid shape corner in secondElt.
-                |          
-                | 
+                |
+                |
                 |          Dim secondElt As CATIAReference
                 |          secondElt = hybShpCorner.SecondElem
 
@@ -403,7 +403,7 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondOrientation() As long
-                | 
+                |
                 |     Returns or sets the orientation of the corner second reference element. The
                 |     orientation specifies the corner center position. It is either the same of the
                 |     inverse orientation than those of the cross product: Normal(Support) ^
@@ -411,16 +411,16 @@ class HybridShapeCorner(HybridShape):
                 |     Legal values: 1 if the orientation of the corner second reference element
                 |     is the same than the cross product: Normal(Support) ^ Tangent(SecondElem), and
                 |     -1 if it is the inverse.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the orientation of second reference element
                 |           of
                 |          the hybShpCorner hybrid shape corner to the inverse of the cross
                 |          porduct
                 |          Normal(Support) ^ Tangent(SecondElem).
-                |          
-                | 
+                |
+                |
                 |          hybShpCorner.SecondOrientation = -1
 
         :rtype: int
@@ -444,17 +444,17 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondTangentOrientation() As long
-                | 
+                |
                 |     Returns or sets the tangent orientation of the corner second reference
                 |     element. compared to the corner itself
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example retrieves the tangent orientation of second reference
                 |           element of
                 |          the hybShpCorner hybrid shape corner in secondOrient.
-                |          
-                | 
+                |
+                |
                 |          Dim secondOrient As long
                 |          firstOrient = hybShpCorner.SecondTangentOrientation
 
@@ -479,18 +479,18 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns or sets the corner support.
                 |     Legal values: This can be a plane or a surface.
                 |     Sub-element(s) supported (see Boundary object): Face.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the support of
                 |          the hybShpCorner hybrid shape corner as
                 |          the existing surface supportSurf.
-                |          
-                | 
+                |
+                |
                 |          hybShpCorner.Support = supportSurf
 
         :rtype: Reference
@@ -514,20 +514,20 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Trim() As boolean
-                | 
+                |
                 |     Returns or sets whether the corner reference curves are or should be
                 |     trimmed.
                 |     Legal values: True if the corner reference curves are or should be trimmed,
                 |     and False otherwise.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets that the corner reference curves
                 |           of
                 |          the hybShpCorner hybrid shape corner should be
                 |          trimmed.
-                |          
-                | 
+                |
+                |
                 |          hybShpCorner.Trim = True
 
         :rtype: bool
@@ -551,22 +551,22 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property TrimMode() As long
-                | 
+                |
                 |     Returns or sets whether the corner reference curves are or should be
                 |     trimmed.
                 |     Legal values: 1 if the corner reference curves are or should be trimmed, 0
                 |     if the corner reference curves are not or should not be trimmed, 2 if only the
                 |     first corner reference curve is or should be trimmed, 3 if only the second
                 |     corner reference curve is or should be trimmed,
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets that the corner reference curves
                 |           of
                 |          the hybShpCorner hybrid shape corner should be
                 |          trimmed.
-                |          
-                | 
+                |
+                |
                 |          hybShpCorner.TrimMode = 1
 
         :rtype: int
@@ -589,17 +589,17 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InvertFirstOrientation()
-                | 
+                |
                 |     Inverts the first reference element orientation used to compute the
                 |     corner.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example inverts the first corner reference element orientation
                 |           of
                 |          the hybShpCorner.
-                |          
-                | 
+                |
+                |
                 |          hybShpCorner.InvertFirstOrientation
 
         :rtype: None
@@ -613,17 +613,17 @@ class HybridShapeCorner(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub InvertSecondOrientation()
-                | 
+                |
                 |     Inverts the second reference element orientation used to compute the
                 |     corner.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example inverts the second corner reference element orientation
                 |           of
                 |          the hybShpCorner.
-                |          
-                | 
+                |
+                |
                 |          hybShpCorner.InvertSecondOrientation
 
         :rtype: None

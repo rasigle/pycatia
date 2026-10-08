@@ -1,41 +1,42 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
-from pycatia.system_interfaces.general_statistics_setting_att import GeneralStatisticsSettingAtt
+from pycatia.system_interfaces.general_statistics_setting_att import (
+    GeneralStatisticsSettingAtt,
+)
 
 
 class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
+        CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         System.GeneralStatisticsSettingAtt
-                |                             ErrorlogStatisticsSettingAtt
-                | 
-                | Interface for Errorlog statistic Controller.
-                | 
-                | Role: the errorlog statistics controller manages the values of all or only a
-                | part of the attributes available for the thematic.
-                | For the definitions of methods and variables common to every thematic, see the
-                | GeneralStatisticsSettingAtt
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         System.GeneralStatisticsSettingAtt
+            |                             ErrorlogStatisticsSettingAtt
+            |
+            | Interface for Errorlog statistic Controller.
+            |
+            | Role: the errorlog statistics controller manages the values of all or only a
+            | part of the attributes available for the thematic.
+            | For the definitions of methods and variables common to every thematic, see the
+            | GeneralStatisticsSettingAtt
+
     """
 
     def __init__(self, com_object):
@@ -50,14 +51,14 @@ class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property ABND() As boolean
-                | 
+                |
                 |     Returns or sets the state ot the abend severity level
                 |     field.
                 |     Role: Returns or sets the state ot the abend severity level
                 |     field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             Legal values:
                 |             TRUE : the field is activated
@@ -84,14 +85,14 @@ class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property CERR() As boolean
-                | 
+                |
                 |     Returns or sets the state ot the critical error severity level
                 |     field.
                 |     Role: Returns or sets the state ot the critical error severity level
                 |     field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             Legal values:
                 |             TRUE : the field is activated
@@ -118,12 +119,12 @@ class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property CMND() As boolean
-                | 
+                |
                 |     Returns or sets the state ot the command name field.
                 |     Role: Returns or sets the state ot the command name field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             Legal values:
                 |             TRUE : the field is activated
@@ -150,14 +151,14 @@ class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property COMT() As boolean
-                | 
+                |
                 |     Returns or sets the state ot the abend comment level
                 |     field.
                 |     Role: Returns or sets the state ot the comment severity level
                 |     field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             Legal values:
                 |             TRUE : the field is activated
@@ -184,12 +185,12 @@ class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property MSGE() As boolean
-                | 
+                |
                 |     Returns or sets the state ot the message field.
                 |     Role: Returns or sets the state ot the message field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             Legal values:
                 |             TRUE : the field is activated
@@ -216,14 +217,14 @@ class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property UREP() As boolean
-                | 
+                |
                 |     Returns or sets the state ot the user report severity level
                 |     field.
                 |     Role: Returns or sets the state ot the user report severity level
                 |     field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             Legal values:
                 |             TRUE : the field is activated
@@ -250,14 +251,14 @@ class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property WARN() As boolean
-                | 
+                |
                 |     Returns or sets the state ot the warning severity level
                 |     field.
                 |     Role: Returns or sets the state ot the warning severity level
                 |     field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             Legal values:
                 |             TRUE : the field is activated
@@ -284,13 +285,13 @@ class ErrorlogStatisticsSettingAtt(GeneralStatisticsSettingAtt):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property WKBN() As boolean
-                | 
+                |
                 |     Returns or sets the state ot the workbench name field.
                 |     Role: Returns or sets the state ot the workbench name
                 |     field.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             Legal values:
                 |             TRUE : the field is activated

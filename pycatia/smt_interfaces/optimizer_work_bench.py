@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.workbench import Workbench
@@ -21,21 +21,21 @@ from pycatia.smt_interfaces.wrappings import Wrappings
 
 class OptimizerWorkBench(Workbench):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     InfInterfaces.Workbench
-                |                         OptimizerWorkBench
-                | 
-                | Interface to access a CATIAOptimizerWorkBench
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     InfInterfaces.Workbench
+            |                         OptimizerWorkBench
+            |
+            | Interface to access a CATIAOptimizerWorkBench
+
     """
 
     def __init__(self, com_object):
@@ -50,7 +50,7 @@ class OptimizerWorkBench(Workbench):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FreeSpaces() As FreeSpaces (Read Only)
-                | 
+                |
                 |     Returns FreeSpaces.
 
         :rtype: FreeSpaces
@@ -66,7 +66,7 @@ class OptimizerWorkBench(Workbench):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Offsets() As DMOOffsets (Read Only)
-                | 
+                |
                 |     Returns Offsets.
 
         :rtype: DMOOffsets
@@ -82,7 +82,7 @@ class OptimizerWorkBench(Workbench):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PartComps() As PartComps (Read Only)
-                | 
+                |
                 |     Returns PartComps.
 
         :rtype: PartComps
@@ -98,16 +98,16 @@ class OptimizerWorkBench(Workbench):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Silhouettes() As Silhouettes (Read Only)
-                | 
+                |
                 |     Returns or sets the constraint driving mode. For constraint types
                 |     supporting the concept of value, such as distance constraints, the driving mode
                 |     tells whether the constraint value actually drives the geometry position, or,
                 |     conversely, is driven by it.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in currentSilhouettes the driving mode
                 |         for the distCst distance constraint:
-                | 
+                |
                 |          currentSilhouettes = distCst.Silhouettes
 
         :rtype: Silhouettes
@@ -123,7 +123,7 @@ class OptimizerWorkBench(Workbench):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SweptVolumes() As SweptVolumes (Read Only)
-                | 
+                |
                 |     Returns SweptVolumes.
 
         :rtype: SweptVolumes
@@ -139,7 +139,7 @@ class OptimizerWorkBench(Workbench):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Thicknesses() As DMOThicknesses (Read Only)
-                | 
+                |
                 |     Returns Thicknesses.
 
         :rtype: DMOThicknesses
@@ -155,7 +155,7 @@ class OptimizerWorkBench(Workbench):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Wrappings() As Wrappings (Read Only)
-                | 
+                |
                 |     Returns Wrappings.
 
         :rtype: Wrappings
@@ -172,7 +172,7 @@ class OptimizerWorkBench(Workbench):
                 | o Func Check(CATBSTR iContext,
                 | CATBSTR iInstanceID,
                 | CATBSTR iLatestShape) As long
-                | 
+                |
                 |     Check 1 component
 
         :param str i_context:
@@ -183,11 +183,11 @@ class OptimizerWorkBench(Workbench):
         return self.optimizer_work_bench.Check(i_context, i_instance_id, i_latest_shape)
 
     def query_neighbours(
-            self,
-            i_accuracy: float,
-            i_clearance: float,
-            i_reference_selection: tuple,
-            i_type_query: int
+        self,
+        i_accuracy: float,
+        i_clearance: float,
+        i_reference_selection: tuple,
+        i_type_query: int,
     ) -> int:
         """
         .. note::
@@ -198,7 +198,7 @@ class OptimizerWorkBench(Workbench):
                 | double iClearance,
                 | CATSafeArrayVariant iReferenceSelection,
                 | long iTypeQuery) As long
-                | 
+                |
                 |     Compute the Neighbours
 
         :param float i_accuracy:
@@ -207,7 +207,9 @@ class OptimizerWorkBench(Workbench):
         :param int i_type_query:
         :rtype: int
         """
-        return self.optimizer_work_bench.QueryNeighbours(i_accuracy, i_clearance, i_reference_selection, i_type_query)
+        return self.optimizer_work_bench.QueryNeighbours(
+            i_accuracy, i_clearance, i_reference_selection, i_type_query
+        )
 
     def __repr__(self):
         return f'OptimizerWorkBench(name="{self.name}")'

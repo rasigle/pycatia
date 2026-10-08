@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import TYPE_CHECKING
 
 from pycatia.analysis_interfaces.analysis_images import AnalysisImages
@@ -25,22 +26,22 @@ if TYPE_CHECKING:
 
 class AnalysisLocalEntity(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     AnalysisLocalEntity
-                | 
-                | Represent the analysis local entity object.
-                | This class provides services to describe a analysis entity. It represents some
-                | local preprocessing activities.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     AnalysisLocalEntity
+            |
+            | Represent the analysis local entity object.
+            | This class provides services to describe a analysis entity. It represents some
+            | local preprocessing activities.
+
     """
 
     def __init__(self, com_object):
@@ -55,18 +56,18 @@ class AnalysisLocalEntity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnalysisImages() As AnalysisImages (Read Only)
-                | 
+                |
                 |     Returns the analysis images collection associated with an analysis
                 |     entity.
-                | 
+                |
                 |     Returns:
-                |         a collection of CATIAAnalysisImages. 
+                |         a collection of CATIAAnalysisImages.
                 |     Example:
-                | 
-                |           This example retrieves analysis images collection 
-                | 
-                |          
-                | 
+                |
+                |           This example retrieves analysis images collection
+                |
+                |
+                |
                 |          Dim MyEntity As AnalysisEntity
                 |          Dim myAnalysisImages As AnalysisImages
                 |          Set myAnalysisImages = MyEntity.AnalysisImages
@@ -84,7 +85,7 @@ class AnalysisLocalEntity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AnalysisSupports() As AnalysisSupports (Read Only)
-                | 
+                |
                 |     Returns the list of Analysis Supports (Selection of geometrical or mesh
                 |     entities) which define the area on which the analysis is applied on.
 
@@ -94,25 +95,25 @@ class AnalysisLocalEntity(AnyObject):
         return AnalysisSupports(self.analysis_local_entity.AnalysisSupports)
 
     @property
-    def basic_components(self) -> 'BasicComponents':
+    def basic_components(self) -> "BasicComponents":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BasicComponents() As BasicComponents (Read Only)
-                | 
+                |
                 |     Returns the basic components collection associated with an analysis
                 |     entity.
-                | 
+                |
                 |     Returns:
-                |         a collection of CATIABasicComponents. 
+                |         a collection of CATIABasicComponents.
                 |     Example:
-                | 
-                |           This example retrieves Basic components collection 
-                | 
-                |          
-                | 
+                |
+                |           This example retrieves Basic components collection
+                |
+                |
+                |
                 |          Dim MyEntity As AnalysisEntity
                 |          Dim myBasicComponents As BasicComponents
                 |          Set myBasicComponents = MyEntity.BasicComponents
@@ -120,6 +121,7 @@ class AnalysisLocalEntity(AnyObject):
         :rtype: BasicComponents
         """
         from pycatia.analysis_interfaces.basic_components import BasicComponents
+
         return BasicComponents(self.analysis_local_entity.BasicComponents)
 
     @property
@@ -130,9 +132,9 @@ class AnalysisLocalEntity(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Type() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the type of the analysis Entity.
-                | 
+                |
                 |     Returns:
                 |         The string that represent the analysis entity type.
 
@@ -141,7 +143,9 @@ class AnalysisLocalEntity(AnyObject):
 
         return self.analysis_local_entity.Type
 
-    def add_support_from_constraint(self, i_constraint_product: Product, i_constraint: Constraint) -> None:
+    def add_support_from_constraint(
+        self, i_constraint_product: Product, i_constraint: Constraint
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -149,18 +153,18 @@ class AnalysisLocalEntity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromConstraint(Product iConstraintProduct,
                 | Constraint iConstraint)
-                | 
+                |
                 |     Creates a new support and add it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iConstraintProduct
                 |             the CATIA Product of the Constraint.
                 |         iConstraint
                 |             the CATIA Constraint that represent the object to
                 |             linked.
-                | 
+                |
                 |     See also:
                 |         Reference, Part
 
@@ -169,10 +173,9 @@ class AnalysisLocalEntity(AnyObject):
         :rtype: None
         """
         return self.analysis_local_entity.AddSupportFromConstraint(
-            i_constraint_product.com_object,
-            i_constraint.com_object
+            i_constraint_product.com_object, i_constraint.com_object
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -188,7 +191,9 @@ class AnalysisLocalEntity(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_product(self, i_product: Product, i_support: Reference) -> None:
+    def add_support_from_product(
+        self, i_product: Product, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -196,19 +201,19 @@ class AnalysisLocalEntity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromProduct(Product iProduct,
                 | Reference iSupport)
-                | 
+                |
                 |     Creates a new support and add it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             the CATIA Product that represent the object to
                 |             linked.
                 |         iSupport
                 |             the CATIA Reference that represent the object to
                 |             linked.
-                | 
+                |
                 |     See also:
                 |         Reference, Product
 
@@ -216,8 +221,10 @@ class AnalysisLocalEntity(AnyObject):
         :param Reference i_support:
         :rtype: None
         """
-        return self.analysis_local_entity.AddSupportFromProduct(i_product.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.analysis_local_entity.AddSupportFromProduct(
+            i_product.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -233,7 +240,9 @@ class AnalysisLocalEntity(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_publication(self, i_product: Product, i_publication: Publication) -> None:
+    def add_support_from_publication(
+        self, i_product: Product, i_publication: Publication
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -241,19 +250,19 @@ class AnalysisLocalEntity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromPublication(Product iProduct,
                 | Publication iPublication)
-                | 
+                |
                 |     Creates a new support and add it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             the CATIA Product that represent the object to
                 |             linked.
                 |         iPublication
                 |             the CATIA Publication that represent the object to
                 |             linked.
-                | 
+                |
                 |     See also:
                 |         Publication, Product
 
@@ -261,8 +270,10 @@ class AnalysisLocalEntity(AnyObject):
         :param Publication i_publication:
         :rtype: None
         """
-        return self.analysis_local_entity.AddSupportFromPublication(i_product.com_object, i_publication.com_object)
-        # # # # Autogenerated comment: 
+        return self.analysis_local_entity.AddSupportFromPublication(
+            i_product.com_object, i_publication.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -278,7 +289,9 @@ class AnalysisLocalEntity(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_reference(self, i_reference: Reference, i_support: Reference) -> None:
+    def add_support_from_reference(
+        self, i_reference: Reference, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -286,12 +299,12 @@ class AnalysisLocalEntity(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromReference(Reference iReference,
                 | Reference iSupport)
-                | 
+                |
                 |     Creates a new support and add it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iReference
                 |             the CATIA Reference that represent the object to linked. This
                 |             identification, may locate the instance of the
@@ -299,7 +312,7 @@ class AnalysisLocalEntity(AnyObject):
                 |         iSupport
                 |             the CATIA Reference that represent the object to
                 |             linked.
-                | 
+                |
                 |     See also:
                 |         Reference
 
@@ -307,8 +320,10 @@ class AnalysisLocalEntity(AnyObject):
         :param Reference i_support:
         :rtype: None
         """
-        return self.analysis_local_entity.AddSupportFromReference(i_reference.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.analysis_local_entity.AddSupportFromReference(
+            i_reference.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -325,12 +340,13 @@ class AnalysisLocalEntity(AnyObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def get_reference(
-            self,
-            i_component: str,
-            i_label: str,
-            i_line_index: int,
-            i_column_index: int,
-            i_layer_index: int) -> Reference:
+        self,
+        i_component: str,
+        i_label: str,
+        i_line_index: int,
+        i_column_index: int,
+        i_layer_index: int,
+    ) -> Reference:
         """
         .. note::
             :class: toggle
@@ -341,12 +357,12 @@ class AnalysisLocalEntity(AnyObject):
                 | long iLineIndex,
                 | long iColumnIndex,
                 | long iLayerIndex) As Reference
-                | 
+                |
                 |     Returns the reference corresponding to the given
                 |     component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iComponent
                 |             The identifier if the basic component.
                 |         iLabel
@@ -367,21 +383,18 @@ class AnalysisLocalEntity(AnyObject):
         """
         return Reference(
             self.analysis_local_entity.GetReference(
-                i_component,
-                i_label,
-                i_line_index,
-                i_column_index,
-                i_layer_index
+                i_component, i_label, i_line_index, i_column_index, i_layer_index
             )
         )
 
     def get_value(
-            self,
-            i_component: str,
-            i_label: str,
-            i_line_index: int,
-            i_column_index: int,
-            i_layer_index: int) -> CATVariant:
+        self,
+        i_component: str,
+        i_label: str,
+        i_line_index: int,
+        i_column_index: int,
+        i_layer_index: int,
+    ) -> CATVariant:
         """
         .. note::
             :class: toggle
@@ -392,11 +405,11 @@ class AnalysisLocalEntity(AnyObject):
                 | long iLineIndex,
                 | long iColumnIndex,
                 | long iLayerIndex) As CATVariant
-                | 
+                |
                 |     Returns the value corresponding to the given component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iComponent
                 |             The identifier if the basic component.
                 |         iLabel
@@ -415,16 +428,19 @@ class AnalysisLocalEntity(AnyObject):
         :param int i_layer_index:
         :rtype: CATVariant
         """
-        return self.analysis_local_entity.GetValue(i_component, i_label, i_line_index, i_column_index, i_layer_index)
+        return self.analysis_local_entity.GetValue(
+            i_component, i_label, i_line_index, i_column_index, i_layer_index
+        )
 
     def set_reference(
-            self,
-            i_component: str,
-            i_label: str,
-            i_line_index: int,
-            i_column_index: int,
-            i_layer_index: int,
-            i_value: Reference) -> None:
+        self,
+        i_component: str,
+        i_label: str,
+        i_line_index: int,
+        i_column_index: int,
+        i_layer_index: int,
+        i_value: Reference,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -436,11 +452,11 @@ class AnalysisLocalEntity(AnyObject):
                 | long iColumnIndex,
                 | long iLayerIndex,
                 | Reference iValue)
-                | 
+                |
                 |     Sets the reference corresponding to the given component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iComponent
                 |             The identifier if the basic component.
                 |         iLabel
@@ -468,9 +484,9 @@ class AnalysisLocalEntity(AnyObject):
             i_line_index,
             i_column_index,
             i_layer_index,
-            i_value.com_object
+            i_value.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -487,13 +503,14 @@ class AnalysisLocalEntity(AnyObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def set_value(
-            self,
-            i_component: str,
-            i_label: str,
-            i_line_index: int,
-            i_column_index: int,
-            i_layer_index: int,
-            i_value: CATVariant) -> None:
+        self,
+        i_component: str,
+        i_label: str,
+        i_line_index: int,
+        i_column_index: int,
+        i_layer_index: int,
+        i_value: CATVariant,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -505,11 +522,11 @@ class AnalysisLocalEntity(AnyObject):
                 | long iColumnIndex,
                 | long iLayerIndex,
                 | CATVariant iValue)
-                | 
+                |
                 |     Sets the value corresponding to the given component.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iComponent
                 |             The identifier if the basic component.
                 |         iLabel
@@ -521,20 +538,20 @@ class AnalysisLocalEntity(AnyObject):
                 |         iLayerIndex
                 |             The layer index of the value.
                 |             If the the component has a single value, assign 0 to the 3
-                |             parameters. 
-                | 
+                |             parameters.
+                |
                 |     Example:
-                | 
+                |
                 |           This example create ThisAnalysisEntity in the analysisEntities
-                |           collection 
-                | 
+                |           collection
+                |
                 |          The entity to create is supposed to be a pressure defined in a load
                 |          set. We
-                | 
+                |
                 |          will valuate the basic component that contain the pressure data
                 |          "SAMPressureMag".
-                |          
-                | 
+                |
+                |
                 |          Dim analysisEntities As CATIAAnalysisEntities
                 |          Dim ThisAnalysisEntity As AnalysisEntity
                 |          Set ThisAnalysisEntity = analysisEntities.Add("SAMPressure")
@@ -550,13 +567,9 @@ class AnalysisLocalEntity(AnyObject):
         :rtype: None
         """
         return self.analysis_local_entity.SetValue(
-            i_component,
-            i_label,
-            i_line_index,
-            i_column_index,
-            i_layer_index,
-            i_value)
-        # # # # Autogenerated comment: 
+            i_component, i_label, i_line_index, i_column_index, i_layer_index, i_value
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

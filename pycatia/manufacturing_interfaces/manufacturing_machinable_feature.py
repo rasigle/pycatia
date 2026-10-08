@@ -1,38 +1,39 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.manufacturing_interfaces.manufacturing_feature import ManufacturingFeature
 
 
 class ManufacturingMachinableFeature(ManufacturingFeature):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                    ManufacturingInterfaces.ManufacturingFeature
-                |                         ManufacturingMachinableFeature
-                | 
-                | Machinable Feature in Manufacturing.
-                | It is the base object for machinable geometry and machinable
-                | area
-                | 
-                | See also:
-                |     ManufacturingMachinableArea, ManufacturingMachinableGeometry
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                    ManufacturingInterfaces.ManufacturingFeature
+            |                         ManufacturingMachinableFeature
+            |
+            | Machinable Feature in Manufacturing.
+            | It is the base object for machinable geometry and machinable
+            | area
+            |
+            | See also:
+            |     ManufacturingMachinableArea, ManufacturingMachinableGeometry
+
     """
 
     def __init__(self, com_object):
@@ -47,16 +48,16 @@ class ManufacturingMachinableFeature(ManufacturingFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FeatRemark() As CATBSTR
-                | 
+                |
                 |     Returns the manufacturing machinable feature remark.
-                | 
+                |
                 |     Returns:
                 |         oFeatRemark The manufacturing machinable feature remark
-                |         
+                |
                 |     Example:
                 |         The following example returns in tFeatRemark the remark of
                 |         manufacturing machinable feature firstMachFeat:
-                | 
+                |
                 |          Dim firstMachFeat As ManufacturingMachinableFeature
                 |          Set firstMachFeat = ...
                 |          Dim tFeatRemark As CATBSTR
@@ -83,15 +84,15 @@ class ManufacturingMachinableFeature(ManufacturingFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FeatType() As CATBSTR
-                | 
+                |
                 |     Returns the manufacturing machinable feature type.
-                | 
+                |
                 |     Returns:
-                |         oFeatType The manufacturing machinable feature type 
+                |         oFeatType The manufacturing machinable feature type
                 |     Example:
                 |         The following example returns in tFeatType the type of manufacturing
                 |         machinable feature firstMachFeat:
-                | 
+                |
                 |          Dim firstMachFeat As ManufacturingMachinableFeature
                 |          Set firstMachFeat = ...
                 |          Dim tFeatType As CATBSTR

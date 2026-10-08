@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class ManufacturingToolCorrector(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ManufacturingToolCorrector
-                | 
-                | Manufacturing tool corrector.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ManufacturingToolCorrector
+            |
+            | Manufacturing tool corrector.
+
     """
 
     def __init__(self, com_object):
@@ -42,7 +42,7 @@ class ManufacturingToolCorrector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Diameter() As double (Read Only)
-                | 
+                |
                 |     Gives the corrector diameter tool diameter.
                 |     Returns HRESULT.
 
@@ -59,7 +59,7 @@ class ManufacturingToolCorrector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LengthNumber() As short (Read Only)
-                | 
+                |
                 |     Gives the corrector length number.
                 |     Returns HRESULT.
 
@@ -76,7 +76,7 @@ class ManufacturingToolCorrector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Number() As short (Read Only)
-                | 
+                |
                 |     Gives the corrector number.
                 |     Returns HRESULT.
 
@@ -93,7 +93,7 @@ class ManufacturingToolCorrector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Point() As CATBSTR (Read Only)
-                | 
+                |
                 |     Gives the corrector type point.
                 |     oPoint : Type point (Ex: P1, ..., P9)
                 |     Returns HRESULT.
@@ -111,7 +111,7 @@ class ManufacturingToolCorrector(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RadiusNumber() As short (Read Only)
-                | 
+                |
                 |     Gives the corrector radius number.
                 |     Returns HRESULT.
 
@@ -131,7 +131,7 @@ class ManufacturingToolCorrector(AnyObject):
                 | short oLengthNumber,
                 | short oRadiusNumber,
                 | double oDiameter)
-                | 
+                |
                 |     Gives the corrector values.
                 |     oPoint : Type point (Ex: P1, ..., P9)
                 |     oNumber : Corrector Number
@@ -145,12 +145,12 @@ class ManufacturingToolCorrector(AnyObject):
         return self.manufacturing_tool_corrector.GetValues()
 
     def set_values(
-            self,
-            o_point: str,
-            o_number: int,
-            o_length_number: int,
-            o_radius_number: int,
-            o_diameter: float
+        self,
+        o_point: str,
+        o_number: int,
+        o_length_number: int,
+        o_radius_number: int,
+        o_diameter: float,
     ) -> None:
         """
         .. note::
@@ -162,7 +162,7 @@ class ManufacturingToolCorrector(AnyObject):
                 | short oLengthNumber,
                 | short oRadiusNumber,
                 | double oDiameter)
-                | 
+                |
                 |     Defines the corrector values.
                 |     iPoint : Type point (Ex: P1, ..., P9)
                 |     iNumber : Corrector Number
@@ -179,11 +179,7 @@ class ManufacturingToolCorrector(AnyObject):
         :rtype: None
         """
         return self.manufacturing_tool_corrector.SetValues(
-            o_point,
-            o_number,
-            o_length_number,
-            o_radius_number,
-            o_diameter
+            o_point, o_number, o_length_number, o_radius_number, o_diameter
         )
 
     def __repr__(self):

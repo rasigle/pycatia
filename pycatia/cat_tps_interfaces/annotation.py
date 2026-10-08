@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 from typing import TYPE_CHECKING
 
@@ -34,8 +35,12 @@ from pycatia.cat_tps_interfaces.roughness import Roughness
 from pycatia.cat_tps_interfaces.shifted_profile_tolerance import ShiftedProfileTolerance
 from pycatia.cat_tps_interfaces.tangent_plane import TangentPlane
 from pycatia.cat_tps_interfaces.text import Text
-from pycatia.cat_tps_interfaces.tolerance_per_unit_basis_restrictive_value import TolerancePerUnitBasisRestrictiveValue
-from pycatia.cat_tps_interfaces.tolerance_unit_basis_value import ToleranceUnitBasisValue
+from pycatia.cat_tps_interfaces.tolerance_per_unit_basis_restrictive_value import (
+    TolerancePerUnitBasisRestrictiveValue,
+)
+from pycatia.cat_tps_interfaces.tolerance_unit_basis_value import (
+    ToleranceUnitBasisValue,
+)
 from pycatia.cat_tps_interfaces.tolerance_zone import ToleranceZone
 
 if TYPE_CHECKING:
@@ -44,23 +49,23 @@ if TYPE_CHECKING:
 
 class Annotation(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Annotation
-                | 
-                | Interface for the Technological Product Specification (TPS)
-                | objects.
-                | Leaf entity in the Design Pattern Composite. TPS modeler enables definition of
-                | specification related to surfaces.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Annotation
+            |
+            | Interface for the Technological Product Specification (TPS)
+            | objects.
+            | Leaf entity in the Design Pattern Composite. TPS modeler enables definition of
+            | specification related to surfaces.
+
     """
 
     def __init__(self, com_object):
@@ -75,11 +80,11 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SuperType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Get the Super Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSuperType
                 |             The Super Type. The list of SuperType available: "FTA_NonSemantic"
                 |             "FTA_Form" "FTA_Dimension" "FTA_Position" "FTA_Datum" "FTA_Orientation"
@@ -98,11 +103,11 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TPSStatus() As CATBSTR (Read Only)
-                | 
+                |
                 |     Get the TPS Status.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStatus
                 |             The Status.
 
@@ -119,11 +124,11 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Type() As CATBSTR (Read Only)
-                | 
+                |
                 |     Get the Type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oType
                 |             The Type. List of types available ordered by SuperType:
                 |             SuperType = "FTA_NonSemantic"
@@ -181,12 +186,12 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Z(double iZ) (Write Only)
-                | 
+                |
                 |     method get_Z will never be exposed Set the offset of the
                 |     annotation
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iZ
                 |             The offset.
 
@@ -210,14 +215,16 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddLeader()
-                | 
+                |
                 |     Add a leader.
 
         :rtype: None
         """
         return self.annotation.AddLeader()
 
-    def apply_referenced_geom_colour(self, i_releated_r: int, i_releated_g: int, i_releated_b: int) -> None:
+    def apply_referenced_geom_colour(
+        self, i_releated_r: int, i_releated_g: int, i_releated_b: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -226,7 +233,7 @@ class Annotation(AnyObject):
                 | o Sub ApplyReferencedGeomColor(long iReleatedR,
                 | long iReleatedG,
                 | long iReleatedB)
-                | 
+                |
                 |     Apply a color to referenced geometry.
 
         :param int i_releated_r:
@@ -234,7 +241,9 @@ class Annotation(AnyObject):
         :param int i_releated_b:
         :rtype: None
         """
-        return self.annotation.ApplyReferencedGeomColor(i_releated_r, i_releated_g, i_releated_b)
+        return self.annotation.ApplyReferencedGeomColor(
+            i_releated_r, i_releated_g, i_releated_b
+        )
 
     def apply_referenced_init_colour(self) -> None:
         """
@@ -243,7 +252,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ApplyReferencedInitColor()
-                | 
+                |
                 |     Apply the initial color to referenced geometry.
 
         :rtype: None
@@ -257,7 +266,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AssociatedRefFrame() As AssociatedRefFrame
-                | 
+                |
                 |     Get the annotation on the AssociatedRefFrame interface.
 
         :rtype: AssociatedRefFrame
@@ -272,7 +281,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CompositeTolerance() As CompositeTolerance
-                | 
+                |
                 |     Get the annotation on the CompositeTolerance interface.
 
         :rtype: CompositeTolerance
@@ -287,7 +296,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ControledRadius() As ControledRadius
-                | 
+                |
                 |     Get the annotation on the ControledRadius interface.
 
         :rtype: ControledRadius
@@ -302,7 +311,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DatumSimple() As DatumSimple
-                | 
+                |
                 |     Get the annotation on the DatumSimple interface.
 
         :rtype: DatumSimple
@@ -317,7 +326,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DatumTarget() As DatumTarget
-                | 
+                |
                 |     Get the annotation on the DatumTarget interface.
 
         :rtype: DatumTarget
@@ -332,7 +341,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DefaultAnnotation() As DefaultAnnotation
-                | 
+                |
                 |     Get the annotation on the DefaultAnnotation interface.
 
         :rtype: DefaultAnnotation
@@ -347,11 +356,11 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Dimension3D() As Dimension3D
-                | 
+                |
                 |     Get the 3D Dimension on the 3D Dimension interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDim
                 |             The 3D Dimension.
 
@@ -367,7 +376,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DimensionLimit() As DimensionLimit
-                | 
+                |
                 |     Get the annotation on the DimensionLimit interface.
 
         :rtype: DimensionLimit
@@ -382,7 +391,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DimensionPattern() As DimensionPattern
-                | 
+                |
                 |     Get the annotation on the DimensionPattern interface.
 
         :rtype: DimensionPattern
@@ -397,7 +406,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func EnvelopCondition() As EnvelopCondition
-                | 
+                |
                 |     Get the annotation on the EnvelopCondition interface.
 
         :rtype: EnvelopCondition
@@ -412,11 +421,11 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func FlagNote() As FlagNote
-                | 
+                |
                 |     Get the annotation on the FlagNote interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oFlagNote
                 |             The annotation Flag Note.
 
@@ -432,7 +441,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func FreeState() As FreeState
-                | 
+                |
                 |     Get the annotation on the FreeState interface.
 
         :rtype: FreeState
@@ -468,7 +477,7 @@ class Annotation(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.annotation.GetGeometricalComponentName(i_index)
@@ -505,7 +514,7 @@ class Annotation(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.annotation.GetNbrOfGeometricalComponent()
@@ -517,14 +526,14 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetSurfaces(CATSafeArrayVariant oSafeArray)
-                | 
+                |
                 |     Get the geometry on which the Annotation is applied to.
 
         :param tuple o_safe_array:
         :rtype: tuple
         """
         return self.annotation.GetSurfaces(o_safe_array)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -547,7 +556,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetSurfacesCount() As double
-                | 
+                |
                 |     Count the geometry on which the Annotation is applied to.
 
         :rtype: float
@@ -561,7 +570,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAControledRadius() As boolean
-                | 
+                |
                 |     To know if the Annotation has a Controled Radius.
 
         :rtype: bool
@@ -575,7 +584,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAFreeState() As boolean
-                | 
+                |
                 |     To know if the Annotation has a Free State.
 
         :rtype: bool
@@ -589,7 +598,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAMaterialCondition() As boolean
-                | 
+                |
                 |     To know if the Annotation has a Material Condition.
 
         :rtype: bool
@@ -614,7 +623,7 @@ class Annotation(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.annotation.HasANumericalDisplayFormat()
@@ -626,7 +635,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAParticularTolElem() As boolean
-                | 
+                |
                 |     To know if the Annotation has a Particuler Element.
 
         :rtype: bool
@@ -640,7 +649,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasATolerancePerUnitBasisRestrictiveValue() As boolean
-                | 
+                |
                 |     To know if the Annotation has a Tolerance Per Unit Basis Restricted Value.
 
         :rtype: bool
@@ -654,7 +663,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasAnEnvelopCondition() As boolean
-                | 
+                |
                 |     To know if the Annotation has an Envelop Condition.
 
         :rtype: bool
@@ -668,7 +677,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func HasDimensionLimit() As boolean
-                | 
+                |
                 |     To know if the Annotation has a Dimension Limit.
 
         :rtype: bool
@@ -682,7 +691,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsACompositeTolerance() As boolean
-                | 
+                |
                 |     To know if the Annotation is a composite Tolerance.
 
         :rtype: bool
@@ -696,7 +705,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsADefaultAnnotation() As boolean
-                | 
+                |
                 |     To know if the Annotation is a Default Annotation.
 
         :rtype: bool
@@ -710,7 +719,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsADimensionPattern() As boolean
-                | 
+                |
                 |     To know if the Annotation is a Dimension Pattern.
 
         :rtype: bool
@@ -724,7 +733,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAProjectedToleranceZone() As boolean
-                | 
+                |
                 |     To know if the Annotation is a Projected Zone.
 
         :rtype: bool
@@ -738,7 +747,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAShiftedProfileTolerance() As boolean
-                | 
+                |
                 |     To know if the Annotation is a Shifted Profile Tolerance.
 
         :rtype: bool
@@ -752,7 +761,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsATangentPlane() As boolean
-                | 
+                |
                 |     To know if the Annotation is a Tangent Plane.
 
         :rtype: bool
@@ -766,7 +775,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAToleranceUnitBasisValue() As boolean
-                | 
+                |
                 |     To know if the Annotation is a Tolerance Unit Basis Value.
 
         :rtype: bool
@@ -780,7 +789,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAToleranceZone() As boolean
-                | 
+                |
                 |     Is the a Tolerance Zone.
 
         :rtype: bool
@@ -794,7 +803,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAnAssociatedRefFrame() As boolean
-                | 
+                |
                 |     To know if the Annotation is an Associated Reference Frame.
 
         :rtype: bool
@@ -808,7 +817,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func MaterialCondition() As MaterialCondition
-                | 
+                |
                 |     Get the annotation on the MaterialCondition interface.
 
         :rtype: MaterialCondition
@@ -823,7 +832,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ModifyVisu()
-                | 
+                |
                 |     To refresh the 3D visualization.
 
         :rtype: None
@@ -837,7 +846,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Noa() As Noa
-                | 
+                |
                 |     Get the annotation on the Noa interface.
 
         :rtype: Noa
@@ -863,7 +872,7 @@ class Annotation(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return NumericalDisplayFormat(self.annotation.NumericalDisplayFormat())
@@ -875,7 +884,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ParticularTolElem() As ParticularTolElem
-                | 
+                |
                 |     Get the annotation on the ParticularTolElem interface.
 
         :rtype: ParticularTolElem
@@ -890,13 +899,12 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ProjectedToleranceZone() As ProjectedToleranceZone
-                | 
+                |
                 |     Get the annotation on the ProjectedToleranceZone interface.
 
         :rtype: ProjectedToleranceZone
         """
-        return ProjectedToleranceZone(
-            self.annotation.ProjectedToleranceZone())
+        return ProjectedToleranceZone(self.annotation.ProjectedToleranceZone())
 
     def reference_frame(self) -> ReferenceFrame:
         """
@@ -905,7 +913,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ReferenceFrame() As ReferenceFrame
-                | 
+                |
                 |     Get the annotation on the ReferenceFrame interface.
 
         :rtype: ReferenceFrame
@@ -920,7 +928,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Roughness() As Roughness
-                | 
+                |
                 |     Get the annotation on the Roughness interface.
 
         :rtype: Roughness
@@ -928,7 +936,9 @@ class Annotation(AnyObject):
 
         return Roughness(self.annotation.Roughness())
 
-    def set_geometrical_component_name(self, i_index: int, i_new_name: str, i_check_name_unicity_option: bool) -> None:
+    def set_geometrical_component_name(
+        self, i_index: int, i_new_name: str, i_check_name_unicity_option: bool
+    ) -> None:
         """
 
         Introduced in V5-6R2022.
@@ -976,10 +986,12 @@ class Annotation(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.annotation.SetGeometricalComponentName(i_index, i_new_name, i_check_name_unicity_option)
+        return self.annotation.SetGeometricalComponentName(
+            i_index, i_new_name, i_check_name_unicity_option
+        )
 
     def set_xy(self, i_x: float, i_y: float) -> None:
         """
@@ -989,14 +1001,14 @@ class Annotation(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetXY(double iX,
                 | double iY)
-                | 
+                |
                 |     method GetXY will never be exposed Set TPS coordinates in the
                 |     view
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oX
-                |             The X coordinate. 
+                |             The X coordinate.
                 |         oY
                 |             The Y coordinate.
 
@@ -1013,7 +1025,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ShiftedProfileTolerance() As ShiftedProfileTolerance
-                | 
+                |
                 |     Get the annotation on the ShiftedProfileTolerance interface.
 
         :rtype: ShiftedProfileTolerance
@@ -1028,7 +1040,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TangentPlane() As TangentPlane
-                | 
+                |
                 |     Get the annotation on the TangentPlane interface.
 
         :rtype: TangentPlane
@@ -1043,11 +1055,11 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Text() As Text
-                | 
+                |
                 |     Get the annotation on the Text interface.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oText
                 |             The annotation Text.
 
@@ -1055,7 +1067,9 @@ class Annotation(AnyObject):
         """
         return Text(self.annotation.Text())
 
-    def tolerance_per_unit_basis_restrictive_value(self) -> TolerancePerUnitBasisRestrictiveValue:
+    def tolerance_per_unit_basis_restrictive_value(
+        self,
+    ) -> TolerancePerUnitBasisRestrictiveValue:
         """
         .. note::
             :class: toggle
@@ -1063,12 +1077,14 @@ class Annotation(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func TolerancePerUnitBasisRestrictiveValue() As
                 | TolerancePerUnitBasisRestrictiveValue
-                | 
+                |
                 |     Get the annotation on the TolerancePerUnitBasisRestrictiveValue interface.
 
         :rtype: TolerancePerUnitBasisRestrictiveValue
         """
-        return TolerancePerUnitBasisRestrictiveValue(self.annotation.TolerancePerUnitBasisRestrictiveValue())
+        return TolerancePerUnitBasisRestrictiveValue(
+            self.annotation.TolerancePerUnitBasisRestrictiveValue()
+        )
 
     def tolerance_unit_basis_value(self) -> ToleranceUnitBasisValue:
         """
@@ -1077,7 +1093,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ToleranceUnitBasisValue() As ToleranceUnitBasisValue
-                | 
+                |
                 |     Get the annotation on the ToleranceUnitBasisValue interface.
 
         :rtype: ToleranceUnitBasisValue
@@ -1091,7 +1107,7 @@ class Annotation(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ToleranceZone() As ToleranceZone
-                | 
+                |
                 |     Get the annotation on the ToleranceZone interface.
 
         :rtype: ToleranceZone
@@ -1099,18 +1115,18 @@ class Annotation(AnyObject):
 
         return ToleranceZone(self.annotation.ToleranceZone())
 
-    def transfert_to_view(self, i_view: 'TPSView') -> None:
+    def transfert_to_view(self, i_view: "TPSView") -> None:
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub TransfertToView(TPSView iView)
-                | 
+                |
                 |     Move the annotation in another view.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iView
                 |             The destination view.
 
@@ -1118,7 +1134,7 @@ class Annotation(AnyObject):
         :rtype: None
         """
         return self.annotation.TransfertToView(i_view.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_human_modeling_interfaces.swk_body_element import SWKBodyElement
 from pycatia.dnb_human_modeling_interfaces.swkdof import SWKDOF
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,21 +16,21 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SWKSegment(SWKBodyElement):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DNBHumanModelingInterfaces.SWKBodyElement
-                |                         SWKSegment
-                | 
-                | This interface deals with a segment of a manikin.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DNBHumanModelingInterfaces.SWKBodyElement
+            |                         SWKSegment
+            |
+            | This interface deals with a segment of a manikin.
+
     """
 
     def __init__(self, com_object):
@@ -44,7 +45,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AttachSize() As long (Read Only)
-                | 
+                |
                 |     Returns the number of objects currently attached to the
                 |     segment.
 
@@ -61,7 +62,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EndPositionX() As double (Read Only)
-                | 
+                |
                 |     Returns the global x coordinate of the endpoint of the
                 |     segment.
 
@@ -78,7 +79,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EndPositionY() As double (Read Only)
-                | 
+                |
                 |     Returns the global y coordinate of the endpoint of the
                 |     segment.
 
@@ -95,7 +96,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property EndPositionZ() As double (Read Only)
-                | 
+                |
                 |     Returns the global z coordinate of the endpoint of the
                 |     segment.
 
@@ -112,7 +113,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IsDOFAt0() As boolean (Read Only)
-                | 
+                |
                 |     Returns True if there is a DOF at index 0, False otherwise.
 
         :rtype: bool
@@ -128,7 +129,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IsDOFAt1() As boolean (Read Only)
-                | 
+                |
                 |     Returns True if there is a DOF at index 1, False otherwise.
 
         :rtype: bool
@@ -144,7 +145,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IsDOFAt2() As boolean (Read Only)
-                | 
+                |
                 |     Returns True if there is a DOF at index 2, False otherwise.
 
         :rtype: bool
@@ -160,7 +161,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IsOnHand() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if this segment belongs to the manikin's hand.
 
         :rtype: bool
@@ -176,7 +177,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IsOnLeftSide() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if this segment is on the left side of the manikin.
 
         :rtype: bool
@@ -192,7 +193,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IsOnRightSide() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if this segment is on the right side of the manikin.
 
         :rtype: bool
@@ -208,7 +209,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property IsOnSpine() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if this segment belongs to the manikin's spine.
 
         :rtype: bool
@@ -224,7 +225,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Length() As double (Read Only)
-                | 
+                |
                 |     Returns the length of the segment, in centimeters.
 
         :rtype: float
@@ -240,7 +241,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MirrorSegment() As CATBaseDispatch (Read Only)
-                | 
+                |
                 |     This property returns the equivalent segment, but on the opposite side
                 |     (ex.: right leg <-> left leg).
 
@@ -257,7 +258,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NbDOFs() As long (Read Only)
-                | 
+                |
                 |     Returns the number of degrees of freedom on the current segment.
                 |     Each segment can have up to three degrees of freedom.
                 |     Therefore the value of this property will never be higher than 3.
@@ -267,7 +268,9 @@ class SWKSegment(SWKBodyElement):
 
         return self.swk_segment.NbDOFs
 
-    def apply_position(self, pi_position_increment: tuple, pi_start_segment: str) -> None:
+    def apply_position(
+        self, pi_position_increment: tuple, pi_start_segment: str
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -275,11 +278,11 @@ class SWKSegment(SWKBodyElement):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ApplyPosition(CATSafeArrayVariant piPositionIncrement,
                 | CATBSTR piStartSegment)
-                | 
+                |
                 |     Applies a new relative position for the segment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piPositionIncrement
                 |             The new position to combine with the segment's current
                 |             position.
@@ -294,10 +297,10 @@ class SWKSegment(SWKBodyElement):
                 |             the current one. For instance, is the segment to position is the right hand,
                 |             then that start segment might be "RSArCl" (right clavicular). If the string
                 |             "Default" is specified, then the start segment will be automatically chosen.
-                |             
-                | 
+                |
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the segment to a 45-degree rotation
                 |           around
                 |          the x axis and at a (10, 20, 30) translation from the
@@ -326,7 +329,7 @@ class SWKSegment(SWKBodyElement):
         :rtype: None
         """
         return self.swk_segment.ApplyPosition(pi_position_increment, pi_start_segment)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -349,11 +352,11 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Attach(AnyObject piObjectToAttach)
-                | 
+                |
                 |     Attach a geometry to the segment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piObjectToAttach
                 |             The object to attach. This object must be a movable object. Once
                 |             the attach relationship is made, the object's postition will be updated every
@@ -371,7 +374,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CreateReachEnvelope()
-                | 
+                |
                 |     This method creates and displayed the reach envelope on the current
                 |     segment. This segment must be part of the hand, otherwise an error code is
                 |     returned.
@@ -389,7 +392,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub DestroyReachEnvelope()
-                | 
+                |
                 |     This method destroys the reach envelope previously created for this
                 |     segment.
 
@@ -404,11 +407,11 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Detach(AnyObject piObjectToDetach)
-                | 
+                |
                 |     Detach a geometry previously attached to the segment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piObjectToDetach
                 |             The object to detach. This object's will no longer be driven by the
                 |             segment's position.
@@ -425,7 +428,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub DetachAll()
-                | 
+                |
                 |     Detach all objects attached so far to the segment.
 
         :rtype: None
@@ -439,11 +442,11 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAttachedObject(long piIndex) As AnyObject
-                | 
+                |
                 |     Retrieve one object currently attached to the segment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piIndex
                 |             The index of the object to retrieve. First attached object is at
                 |             index 0.
@@ -460,7 +463,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDOF(long piDOFNumber) As SWKDOF
-                | 
+                |
                 |     Returns a specific degree of freedom of the segment.
                 |     A segment may have up to three degrees of freedom,
                 |     and these are numbered from 0 to 2.
@@ -475,9 +478,9 @@ class SWKSegment(SWKBodyElement):
                 |     DOF only if the value of one of the corresponding property
                 |     is
                 |     True.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piDOFNumber
                 |             The index of the DOF to retrieve.
                 |             This parameter must be either 0, 1 or 2.
@@ -494,7 +497,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetIKOffset(CATSafeArrayVariant poOffset)
-                | 
+                |
                 |     Returns:
                 |         The IK offset for this segment.
 
@@ -502,7 +505,7 @@ class SWKSegment(SWKBodyElement):
         :rtype: None
         """
         return self.swk_segment.GetIKOffset(po_offset)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -525,7 +528,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetIKPosition(CATSafeArrayVariant poIKPosition)
-                | 
+                |
                 |     Returns:
                 |         The position used for IK on this segment.
 
@@ -533,7 +536,7 @@ class SWKSegment(SWKBodyElement):
         :rtype: None
         """
         return self.swk_segment.GetIKPosition(po_ik_position)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -556,7 +559,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsAttached(AnyObject piObject) As boolean
-                | 
+                |
                 |     Returns:
                 |         true if the object passed in the parameter is attached to the segment,
                 |         false otherwise.
@@ -573,9 +576,9 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsObjectReachable(AnyObject piObject) As boolean
-                | 
+                |
                 |     Reachability check.
-                | 
+                |
                 |     Returns:
                 |         true if the object passed is reachable by the segment, false otherwise.
                 |         The position taken is that of the center of the object.
@@ -594,9 +597,9 @@ class SWKSegment(SWKBodyElement):
                 | o Func IsReachable(double piX,
                 | double piY,
                 | double piZ) As boolean
-                | 
+                |
                 |     Reachability check.
-                | 
+                |
                 |     Returns:
                 |         true if the location expressed in the coordinates is reachable by the
                 |         segment, false otherwise.
@@ -615,7 +618,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LockPosture(long piDOFId)
-                | 
+                |
                 |     Lock the posture of the segment.
 
         :param int pi_dof_id:
@@ -630,7 +633,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub MirrorCopyAngularLimitations(long piDOFId)
-                | 
+                |
                 |     Mirror copy the angular limitations of the segment.
 
         :param int pi_dof_id:
@@ -645,7 +648,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub MirrorCopyPosture()
-                | 
+                |
                 |     Copy the posture on the equivalent segment, on the other side of the
                 |     manikin. For instance, it copies the posture from the right leg to the left
                 |     leg.
@@ -661,7 +664,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub MirrorCopyPrefAngles(long piDOFId)
-                | 
+                |
                 |     Mirror copy the preferred angles of the segment.
 
         :param int pi_dof_id:
@@ -676,7 +679,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Optimize(long piDOFId)
-                | 
+                |
                 |     Sets the limits to match the best PrefAngle for the DOF piDOFId
 
         :param int pi_dof_id:
@@ -691,7 +694,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveLimits(long piDOFId)
-                | 
+                |
                 |     Removes the angular limitations of the segment.
 
         :param int pi_dof_id:
@@ -707,7 +710,7 @@ class SWKSegment(SWKBodyElement):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetAngularLimitations(long piDOFId,
                 | long piReset)
-                | 
+                |
                 |     Reset the angular limitations of the segment depending on piReset: 0 -> 2
                 |     OR 3 OR 4 depending of the first encountered. 1 -> 2 AND 3 AND 4 2 -> Unlock
                 |     the value 3 -> Restore the angular limitations if it is "No Limits" 4 -> Set
@@ -726,7 +729,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetPosture()
-                | 
+                |
                 |     Set the segment's posture back to its default position.
 
         :rtype: None
@@ -740,7 +743,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetPrefAngles(long piDOFId)
-                | 
+                |
                 |     Reset the preferred angles of the segment.
 
         :param int pi_dof_id:
@@ -756,7 +759,7 @@ class SWKSegment(SWKBodyElement):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPercentage(double piPercentage,
                 | long piDOFId)
-                | 
+                |
                 |     Sets the angular limitations to a percentage for the DOF piDOFId
 
         :param float pi_percentage:
@@ -773,11 +776,11 @@ class SWKSegment(SWKBodyElement):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetPosition(CATSafeArrayVariant piNewPosition,
                 | CATBSTR piStartSegment)
-                | 
+                |
                 |     Sets a new absolute position for the segment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         piNewPosition
                 |             The new position to place the segment.
                 |             This array must contain 12 numbers, and msut be initialized using
@@ -793,7 +796,7 @@ class SWKSegment(SWKBodyElement):
                 |             "Default" is specified, then the start segment will be automatically chosen.
                 |
                 |     Example:
-                | 
+                |
                 |           This example sets the segment to a 45-degree rotation
                 |           around
                 |          the x axis and at a (10, 20, 30) translation from the
@@ -822,7 +825,7 @@ class SWKSegment(SWKBodyElement):
         :rtype: None
         """
         return self.swk_segment.SetPosition(pi_new_position, pi_start_segment)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -845,7 +848,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SwapAngularLimitations(long piDOFId)
-                | 
+                |
                 |     Swap the angular limitations of the segment.
 
         :param int pi_dof_id:
@@ -860,7 +863,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SwapPosture()
-                | 
+                |
                 |     Swap the posture with the equivalent segment, on the other side of the
                 |     manikin. For instance, the right leg takes the posture of the left leg, and
                 |     vice versa.
@@ -876,7 +879,7 @@ class SWKSegment(SWKBodyElement):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SwapPrefAngles(long piDOFId)
-                | 
+                |
                 |     Swap the preferred angles of the segment.
 
         :param int pi_dof_id:

@@ -1,33 +1,36 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.manufacturing_interfaces.manufacturing_activity import ManufacturingActivity
+
+from pycatia.manufacturing_interfaces.manufacturing_activity import (
+    ManufacturingActivity,
+)
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class ManufacturingPrecedence(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ManufacturingPrecedence
-                | 
-                | Defines a precedence relation between objects.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ManufacturingPrecedence
+            |
+            | Defines a precedence relation between objects.
+
     """
 
     def __init__(self, com_object):
@@ -43,7 +46,7 @@ class ManufacturingPrecedence(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PrecedenceType() As CatManufacturingPrecedenceType (Read
                 | Only)
-                | 
+                |
                 |     Returns the type of the precedence.
 
         :return: enum cat_manufacturing_precedence_type
@@ -61,7 +64,7 @@ class ManufacturingPrecedence(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TargetOperation() As ManufacturingActivity (Read
                 | Only)
-                | 
+                |
                 |     Returns the target object of the precedence, but with the Operation
                 |     interface if it is.
 

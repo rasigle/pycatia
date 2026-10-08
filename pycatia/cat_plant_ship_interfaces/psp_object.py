@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,21 +14,21 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PSPObject(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PspObject
-                | 
-                | Represents PspObject.
-                | Role: To access Plant Ship object information.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PspObject
+            |
+            | Represents PspObject.
+            | Role: To access Plant Ship object information.
+
     """
 
     def __init__(self, com_object):
@@ -44,9 +44,9 @@ class PSPObject(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ApplicationID() As CatPspIDLApplicationID (Read
                 | Only)
-                | 
+                |
                 |     Returns the ApplicationID of the object.
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspObject
@@ -68,9 +68,9 @@ class PSPObject(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DomainID() As CatPspIDLDomainID (Read Only)
-                | 
+                |
                 |     Returns the DomainID of the object.
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspObject
@@ -92,9 +92,9 @@ class PSPObject(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StartupType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the Startup type of the object.
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspObject

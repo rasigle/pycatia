@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
+Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 import inspect
 
 from pycatia.cat_tps_interfaces.semantic_gdt_common_zone import SemanticGDTCommonZone
@@ -59,7 +60,7 @@ class SemanticGDTNxDisplay(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.semantic_gdt_nx_display.InstanceCount
@@ -89,7 +90,7 @@ class SemanticGDTNxDisplay(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return SemanticGDTCommonZone(self.semantic_gdt_nx_display.CommonZone())
@@ -122,7 +123,7 @@ class SemanticGDTNxDisplay(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.semantic_gdt_nx_display.IsACollection()
@@ -155,7 +156,7 @@ class SemanticGDTNxDisplay(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.semantic_gdt_nx_display.IsASeparate()

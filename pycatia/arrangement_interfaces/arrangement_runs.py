@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.arrangement_interfaces.arrangement_run import ArrangementRun
 from pycatia.in_interfaces.move import Move
 from pycatia.system_interfaces.collection import Collection
@@ -16,22 +17,22 @@ from pycatia.types.general import CATVariant
 
 class ArrangementRuns(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     ArrangementRuns
-                | 
-                | A collection object of ArrangementRun objects.
-                | Role: Use this collection object to manage ArrangementRun
-                | objects.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     ArrangementRuns
+            |
+            | A collection object of ArrangementRun objects.
+            | Role: Use this collection object to manage ArrangementRun
+            | objects.
+
     """
 
     def __init__(self, com_object):
@@ -39,10 +40,7 @@ class ArrangementRuns(Collection):
         self.arrangement_runs = com_object
 
     def add_run(
-            self,
-            i_rel_axis: Move,
-            i_listof_math_points: tuple,
-            i_math_direction: tuple
+        self, i_rel_axis: Move, i_listof_math_points: tuple, i_math_direction: tuple
     ) -> ArrangementRun:
         """
         .. note::
@@ -52,18 +50,18 @@ class ArrangementRuns(Collection):
                 | o Func AddRun(Move iRelAxis,
                 | CATSafeArrayVariant iListofMathPoints,
                 | CATSafeArrayVariant iMathDirection) As ArrangementRun
-                | 
+                |
                 |     Creates an ArrangementRun and adds it to the collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRelAxis
-                |             Relative Axis to be considered. 
+                |             Relative Axis to be considered.
                 |         iListofMathPoints
-                |             List of points through which to route. 
+                |             List of points through which to route.
                 |         iMathDirection
-                |             Starting routing direction. 
-                | 
+                |             Starting routing direction.
+                |
                 |     Returns:
                 |         Returns the newly created ArrangementRun object and adds it to the
                 |         collection.
@@ -75,9 +73,7 @@ class ArrangementRuns(Collection):
         """
         return ArrangementRun(
             self.arrangement_runs.AddRun(
-                i_rel_axis.com_object,
-                i_listof_math_points,
-                i_math_direction
+                i_rel_axis.com_object, i_listof_math_points, i_math_direction
             )
         )
 
@@ -88,24 +84,24 @@ class ArrangementRuns(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As ArrangementRun
-                | 
+                |
                 |     Returns the specified ArrangementRun item of the collection
                 |     object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the ArrangementRun to retrieve from this
                 |             collection.
-                | 
+                |
                 |             To retrieve a specific object by number, use the rank of the
                 |             ArrangementRun in that collection.
                 |                 Note that the index of the first element in the collection is
                 |                 1, and the index of the last element is Count. To retrieve a specific
                 |                 ArrangementRun by name, use name that you assigned using the
-                |                 
-                | 
-                |         AnyObject.Name property. 
+                |
+                |
+                |         AnyObject.Name property.
                 |     Returns:
                 |         The retrieved ArrangementRun object.
 
@@ -121,30 +117,30 @@ class ArrangementRuns(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub Remove(CATVariant iIndex)
-                | 
+                |
                 |     Removes the specified ArrangementRun object from the
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the ArrangementRun to remove from this
                 |             collection.
-                | 
+                |
                 |             To remove a specific object by number, use the rank of the
                 |             ArrangementRun in that collection.
                 |                 Note that the index of the first element in the collection is
                 |                 1, and the index of the last element is Count. To remove a specific
                 |                 ArrangementRun by name, use name that you assigned using the
-                |                 
-                | 
+                |
+                |
                 |         AnyObject.Name property.
 
         :param CATVariant i_index:
         :rtype: None
         """
         return self.arrangement_runs.Remove(i_index)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,34 +15,36 @@ from pycatia.types.general import CATVariant
 
 class ARCTagGroup(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ARCTagGroup
-                | 
-                | Interface representing a Tag.
-                | 
-                | Role: This interface is used to work with ARCTagGroup.
-                | The following code snippet can be used to obtain a Tag from a selected
-                | Product
-                | 
-                |   Set ParentObject = CATIA.ActiveDocument.Selection.FindObject("CATIAProduct")	
-                |   Set objTag = ParentObject.GetTechnologicalObject("Tag")
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ARCTagGroup
+            |
+            | Interface representing a Tag.
+            |
+            | Role: This interface is used to work with ARCTagGroup.
+            | The following code snippet can be used to obtain a Tag from a selected
+            | Product
+            |
+            |   Set ParentObject = CATIA.ActiveDocument.Selection.FindObject("CATIAProduct")
+            |   Set objTag = ParentObject.GetTechnologicalObject("Tag")
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.arc_tag_group = com_object
 
-    def compute_distance_along_seam(self, i_first_tag_idx: int, i_second_tag_idx: int, o_distance: float) -> None:
+    def compute_distance_along_seam(
+        self, i_first_tag_idx: int, i_second_tag_idx: int, o_distance: float
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -51,23 +53,23 @@ class ARCTagGroup(AnyObject):
                 | o Sub ComputeDistanceAlongSeam(short iFirstTagIdx,
                 | short iSecondTagIdx,
                 | double oDistance)
-                | 
+                |
                 |     Function to compute the distance along the seam between two ARC tags of the
                 |     ARCTagGroup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFirstTagIdx
-                |             the index of the first tag. 
+                |             the index of the first tag.
                 |         iSecondTagIdx
-                |             the index of the second tag. 
+                |             the index of the second tag.
                 |         oDistance
-                |             the computed distance along the seam. 
-                | 
+                |             the computed distance along the seam.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -76,7 +78,9 @@ class ARCTagGroup(AnyObject):
         :param float o_distance:
         :rtype: None
         """
-        return self.arc_tag_group.ComputeDistanceAlongSeam(i_first_tag_idx, i_second_tag_idx, o_distance)
+        return self.arc_tag_group.ComputeDistanceAlongSeam(
+            i_first_tag_idx, i_second_tag_idx, o_distance
+        )
 
     def get_arc_tags_list(self, o_arc_tag_list: tuple) -> None:
         """
@@ -85,19 +89,19 @@ class ARCTagGroup(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetARCTagsList(CATSafeArrayVariant oARCTagList)
-                | 
+                |
                 |     Function to get all the ARC tags grouped by the
                 |     ARCTagGroup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oARCTagList
-                |             the ARC tags list. 
-                | 
+                |             the ARC tags list.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -105,7 +109,7 @@ class ARCTagGroup(AnyObject):
         :rtype: None
         """
         return self.arc_tag_group.GetARCTagsList(o_arc_tag_list)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -128,19 +132,19 @@ class ARCTagGroup(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetNumARCTags(short oSize)
-                | 
+                |
                 |     Function to get the total number of ARC tags grouped by the
                 |     ARCTagGroup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSize
                 |             the total number of ARC tags grouped by the ARCTagGroup.
                 |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -156,18 +160,18 @@ class ARCTagGroup(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetTagGroup(CATVariant oTagGroup)
-                | 
+                |
                 |     Function to get the underlying basic TagGroup.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTagGroup
-                |             the underlying basic TagGroup. 
-                | 
+                |             the underlying basic TagGroup.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -175,7 +179,7 @@ class ARCTagGroup(AnyObject):
         :rtype: None
         """
         return self.arc_tag_group.GetTagGroup(o_tag_group)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -200,26 +204,26 @@ class ARCTagGroup(AnyObject):
                 | o Sub GetTagParam(short iIdx,
                 | CATBSTR iParamName,
                 | double oVal)
-                | 
+                |
                 |     Function to get the value of a given ARC tag parameter. The concerned ARC
                 |     tag's index should be given.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIdx
-                |             the index of the ARC tag in the ARCTagGroup. 
+                |             the index of the ARC tag in the ARCTagGroup.
                 |         iParamName
                 |             the name of the ARC tag parameter. Following ARC tag parameters can
                 |             be set: "WireAngle", "FlareAngle", "RakeAngle", "WireRollAngle",
                 |             "BaseTangentOffset", "WallTangentOffset", "ShiftDistance", "FlareLength",
-                |             "StickOut", "TCPStickOut", "NearDistance" 
+                |             "StickOut", "TCPStickOut", "NearDistance"
                 |         oVal
-                |             the value of the ARC tag parameter. 
-                | 
+                |             the value of the ARC tag parameter.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -239,24 +243,24 @@ class ARCTagGroup(AnyObject):
                 | o Sub RotateTag(short iIdx,
                 | double iAngle,
                 | CATSafeArrayVariant iDirVector)
-                | 
+                |
                 |     Function to rotate the ARC tag with the given index about the given
                 |     direction vector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIdx
-                |             the index of the ARC tag in the ARCTagGroup. 
+                |             the index of the ARC tag in the ARCTagGroup.
                 |         iAngle
                 |             the angle by which the ARC tag should be rotated about the given
-                |             direction vector. 
+                |             direction vector.
                 |         iDirVector
-                |             the direction vector( array of 3 real values ). 
-                | 
+                |             the direction vector( array of 3 real values ).
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -266,7 +270,7 @@ class ARCTagGroup(AnyObject):
         :rtype: None
         """
         return self.arc_tag_group.RotateTag(i_idx, i_angle, i_dir_vector)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -290,22 +294,22 @@ class ARCTagGroup(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RotateXTag(short iIdx,
                 | double iAngle)
-                | 
+                |
                 |     Function to rotate the ARC tag with the given index about it's
                 |     x-axis.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIdx
-                |             the index of the ARC tag in the ARCTagGroup. 
+                |             the index of the ARC tag in the ARCTagGroup.
                 |         iAngle
                 |             the angle by which the ARC tag should be rotated about it's x-axis.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -323,22 +327,22 @@ class ARCTagGroup(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RotateYTag(short iIdx,
                 | double iAngle)
-                | 
+                |
                 |     Function to rotate the ARC tag with the given index about it's
                 |     y-axis.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIdx
-                |             the index of the ARC tag in the ARCTagGroup. 
+                |             the index of the ARC tag in the ARCTagGroup.
                 |         iAngle
                 |             the angle by which the ARC tag should be rotated about it's y-axis.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -356,22 +360,22 @@ class ARCTagGroup(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RotateZTag(short iIdx,
                 | double iAngle)
-                | 
+                |
                 |     Function to rotate the ARC tag with the given index about it's
                 |     z-axis.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIdx
-                |             the index of the ARC tag in the ARCTagGroup. 
+                |             the index of the ARC tag in the ARCTagGroup.
                 |         iAngle
                 |             the angle by which the ARC tag should be rotated about it's z-axis.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -390,26 +394,26 @@ class ARCTagGroup(AnyObject):
                 | o Sub SetTagParam(short iIdx,
                 | CATBSTR iParamName,
                 | double iVal)
-                | 
+                |
                 |     Function to set the value of a given ARC tag parameter. The concerned ARC
                 |     tag's index should be given.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIdx
-                |             the index of the ARC tag in the ARCTagGroup. 
+                |             the index of the ARC tag in the ARCTagGroup.
                 |         iParamName
                 |             the name of the ARC tag parameter. Following ARC tag parameters can
                 |             be set: "WireAngle", "FlareAngle", "RakeAngle", "WireRollAngle",
                 |             "BaseTangentOffset", "WallTangentOffset", "ShiftDistance", "FlareLength",
-                |             "StickOut", "TCPStickOut", "NearDistance" 
+                |             "StickOut", "TCPStickOut", "NearDistance"
                 |         iVal
-                |             the value of the ARC tag parameter. 
-                | 
+                |             the value of the ARC tag parameter.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -429,24 +433,24 @@ class ARCTagGroup(AnyObject):
                 | o Sub TranslateTag(short iIdx,
                 | double iDistance,
                 | CATSafeArrayVariant iDirVector)
-                | 
+                |
                 |     Function to translate the ARC tag with the given index along the given
                 |     direction vector.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIdx
-                |             the index of the ARC tag in the ARCTagGroup. 
+                |             the index of the ARC tag in the ARCTagGroup.
                 |         iDistance
                 |             the distance by which the ARC tag should be translated along the
-                |             given direction vector. 
+                |             given direction vector.
                 |         iDirVector
-                |             the direction vector( array of 3 real values ). 
-                | 
+                |             the direction vector( array of 3 real values ).
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -456,7 +460,7 @@ class ARCTagGroup(AnyObject):
         :rtype: None
         """
         return self.arc_tag_group.TranslateTag(i_idx, i_distance, i_dir_vector)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -480,22 +484,22 @@ class ARCTagGroup(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub TranslateTagAlongSeam(short iIdx,
                 | double iDistance)
-                | 
+                |
                 |     Function to translate the ARC tag with the given index along the
                 |     seam.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIdx
-                |             the index of the ARC tag in the ARCTagGroup. 
+                |             the index of the ARC tag in the ARCTagGroup.
                 |         iDistance
                 |             the distance by which the ARC tag should be translated along the
-                |             seam. 
-                | 
+                |             seam.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 

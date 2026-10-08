@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -16,29 +16,29 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeIntegratedLaw(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeIntegratedLaw
-                | 
-                | Represents the hybrid shape "integrated" law feature object.
-                | Role: To access the data of the hybrid shape "integrated" law feature
-                | object.
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeIntegratedLaw
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory.AddNewIntegratedLaw
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeIntegratedLaw
+            |
+            | Represents the hybrid shape "integrated" law feature object.
+            | Role: To access the data of the hybrid shape "integrated" law feature
+            | object.
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeIntegratedLaw
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory.AddNewIntegratedLaw
+
     """
 
     def __init__(self, com_object):
@@ -53,16 +53,16 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property AdvancedLaw() As Reference
-                | 
+                |
                 |     Gets or sets the external law.
                 |     Note: Used for law type = 4(Advanced)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         AdvancedLaw
                 |             External Law This example retrieves in ALaw the external law for
                 |             the IntegratedLaw hybrid shape feature.
-                | 
+                |
                 |              Dim ALaw
                 |              Set ALaw = IntegratedLaw.AdvancedLaw
 
@@ -87,16 +87,16 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property EndParam() As Length (Read Only)
-                | 
+                |
                 |     Gets end parameter.
                 |     Note: Used for law type = 2(Linear) and 3(SType).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         EndParam
                 |             Parameter This example retrieves in EParam the end parameter for
                 |             the IntegratedLaw hybrid shape feature.
-                | 
+                |
                 |              Dim EParam
                 |              Set EParam = IntegratedLaw.EndParam
 
@@ -113,19 +113,19 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ImplicitLawInterpolationMode() As long
-                | 
+                |
                 |     Gets or sets Interpolation mode for implicit law.
                 |     Note: Used for law type = 5(Implicit)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ImplicitLawInterpolationMode
                 |             Implicit law interpolation mode ImplicitLawInterpolationMode =
                 |             0 : CATGSMImplicitLawInterpo_None =
                 |             1 : CATGSMImplicitLawInterpo_Linear =
                 |             2 : CATGSMImplicitLawInterpo_Cubic This example retrieves in InterpolLawMode the
                 |                 Interpolation mode for the IntegratedLaw hybrid shape feature.
-                | 
+                |
                 |              Dim InterpolLawMode
                 |              Set InterpolLawMode = IntegratedLaw.ImplicitLawInterpolationMode
 
@@ -150,18 +150,18 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property InvertMappingLaw() As boolean
-                | 
+                |
                 |     Gets or sets the mapping orientation of the law.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         InvertMappingLaw
                 |             False : Law is applied from the beginning to the end of the curve
                 |                     (mapping is not inverted).
                 |             True : Law is applied from the end to the beginning of the curve (mapping is inverted).
                 |                    This example retrieves in IMappingLaw the mapping orientation of the law for the
                 |                    IntegratedLaw hybrid shape feature.
-                | 
+                |
                 |              Dim IMappingLaw
                 |              Set IMappingLaw = IntegratedLaw.InvertMappingLaw
 
@@ -186,17 +186,17 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PitchLawType() As long
-                | 
+                |
                 |     Gets or sets pitch law type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         PitchLawType
                 |             Type of law PitchLawType = 0 : None = 1 : Constant = 2 : Linear = 3 : SType =
                 |             4 : Advanced = 5 : Implicit
                 |
                 |     This example retrieves in PLawType the pitch law type for the IntegratedLaw hybrid shape feature.
-                | 
+                |
                 |     Dim PLawType
                 |     Set PLawType = IntegratedLaw.PitchLawType
 
@@ -221,17 +221,17 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Spine() As Reference
-                | 
+                |
                 |     Gets or sets Spine for implicit law.
                 |     Note: Used for law type = 5 (Implicit)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Spine
                 |             Spine on which implicit law inputs points are defined This example
                 |             retrieves in Spine1 the spine for the IntegratedLaw hybrid shape
                 |             feature.
-                | 
+                |
                 |              Dim Spine1
                 |              Set Spine1 = IntegratedLaw.Spine
 
@@ -256,16 +256,16 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property StartParam() As Length (Read Only)
-                | 
+                |
                 |     Gets start parameter.
                 |     Note: Used for law type = 1(Constant) ,2(Linear) and 3(SType)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         StartParam
                 |             Parameter This example retrieves in SParam the start parameter for
                 |             the IntegratedLaw hybrid shape feature.
-                | 
+                |
                 |              Dim SParam
                 |              Set SParam = IntegratedLaw.StartParam
 
@@ -282,14 +282,14 @@ class HybridShapeIntegratedLaw(HybridShape):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AppendNewPointAndParam(Reference iPoint,
                 | long iParam)
-                | 
+                |
                 |     Sets 'Point on spine' and associated parameter.
                 |     Note: Used for law type = 5(Implicit)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPoint
-                |             Point on spine 
+                |             Point on spine
                 |         iParam
                 |             Corresponding parameter
 
@@ -297,8 +297,10 @@ class HybridShapeIntegratedLaw(HybridShape):
         :param int i_param:
         :rtype: None
         """
-        return self.hybrid_shape_integrated_law.AppendNewPointAndParam(i_point.com_object, i_param)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_integrated_law.AppendNewPointAndParam(
+            i_point.com_object, i_param
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -314,7 +316,9 @@ class HybridShapeIntegratedLaw(HybridShape):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_point_and_param(self, i_pos: int, o_point: Reference, o_param: Reference) -> None:
+    def get_point_and_param(
+        self, i_pos: int, o_point: Reference, o_param: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -323,17 +327,17 @@ class HybridShapeIntegratedLaw(HybridShape):
                 | o Sub GetPointAndParam(long iPos,
                 | Reference oPoint,
                 | Reference oParam)
-                | 
+                |
                 |     Gets the point on spine and associated parameter at a given
                 |     position.
                 |     Note: Used for law type = 5(Implicit)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPos
-                |             given position 
+                |             given position
                 |         oPoint
-                |             point on spine 
+                |             point on spine
                 |         oParam
                 |             corresponding parameter
 
@@ -342,8 +346,10 @@ class HybridShapeIntegratedLaw(HybridShape):
         :param Reference o_param:
         :rtype: None
         """
-        return self.hybrid_shape_integrated_law.GetPointAndParam(i_pos, o_point.com_object, o_param.com_object)
-        # # # # Autogenerated comment: 
+        return self.hybrid_shape_integrated_law.GetPointAndParam(
+            i_pos, o_point.com_object, o_param.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -366,12 +372,12 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSize() As long
-                | 
+                |
                 |     Gets the size of the list in the law i.e. number of points in the list of
                 |     the law.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSize
                 |             size of the list.
 
@@ -386,7 +392,7 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveAllPointsAndParams()
-                | 
+                |
                 |     Removes all the points and associated parameters.
                 |     Note: Used for law type = 5(Implicit)
 
@@ -401,11 +407,11 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemovePointAndParam(Reference iPoint)
-                | 
+                |
                 |     Removes a point and its parameter. for law type = 5(Implicit)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSpecPoint
                 |             Point to remove
 
@@ -413,7 +419,7 @@ class HybridShapeIntegratedLaw(HybridShape):
         :rtype: None
         """
         return self.hybrid_shape_integrated_law.RemovePointAndParam(i_point.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -436,12 +442,12 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetEndParam(long iEndParam)
-                | 
+                |
                 |     Sets end parameter.
                 |     Note: Used for law type = 2(Linear) and 3(SType).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEndParam
                 |             Parameter
 
@@ -457,12 +463,12 @@ class HybridShapeIntegratedLaw(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetStartParam(long iStartParam)
-                | 
+                |
                 |     Sets start parameter.
                 |     Note: Used for law type = 1(Constant) ,2(Linear) and 3(SType).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iStartParam
                 |             Parameter
 

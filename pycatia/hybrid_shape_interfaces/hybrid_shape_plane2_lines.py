@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.plane import Plane
@@ -15,24 +15,24 @@ from pycatia.in_interfaces.reference import Reference
 
 class HybridShapePlane2Lines(Plane):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         CATGSMIDLItf.Plane
-                |                             HybridShapePlane2Lines
-                | 
-                | plane defined by two lines.
-                | Role: Allows to access data of the plane feature passing though two
-                | lines.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         CATGSMIDLItf.Plane
+            |                             HybridShapePlane2Lines
+            |
+            | plane defined by two lines.
+            | Role: Allows to access data of the plane feature passing though two
+            | lines.
+
     """
 
     def __init__(self, com_object):
@@ -47,19 +47,19 @@ class HybridShapePlane2Lines(Plane):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property First() As Reference
-                | 
+                |
                 |     Role: Get the first line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLine1
-                |             first line. 
-                | 
+                |             first line.
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -84,7 +84,7 @@ class HybridShapePlane2Lines(Plane):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ForbidNonCoplanarLines(boolean iCoplanarLines)
-                | 
+                |
                 |     if ForbidNonCoplanarLines = TRUE, both lines have to be on the same plane.
                 |     if ForbidNonCoplanarLines = FALSE, both lines can be non coplanar.
 
@@ -109,19 +109,19 @@ class HybridShapePlane2Lines(Plane):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Second() As Reference
-                | 
+                |
                 |     Role: Get the second line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oLine2
-                |             second line. 
-                | 
+                |             second line.
+                |
                 |     See also:
-                |         Reference 
+                |         Reference
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 

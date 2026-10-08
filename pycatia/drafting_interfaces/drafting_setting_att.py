@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,21 +14,21 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class DraftingSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         DraftingSettingAtt
-                | 
-                | Manages drafting settings.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         DraftingSettingAtt
+            |
+            | Manages drafting settings.
+
     """
 
     def __init__(self, com_object):
@@ -43,7 +43,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property CreateNewSheetFrom() As CatDrwNewSheetFrom
-                | 
+                |
                 |     Returns the CreateNewSheetFrom parameter.
 
         :return: enum cat_drw_new_sheet_from
@@ -68,7 +68,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property DisplayResetButton() As boolean
-                | 
+                |
                 |     Returns the DisplayResetButton parameter.
 
         :rtype: bool
@@ -92,7 +92,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property LockUserDefault() As boolean
-                | 
+                |
                 |     Returns the LockUserDefault parameter.
 
         :rtype: bool
@@ -116,7 +116,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventBackgroundAccess() As boolean
-                | 
+                |
                 |     Returns the PreventBackgroundAccess parameter.
 
         :rtype: bool
@@ -140,7 +140,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventDimDriving3DCstr() As boolean
-                | 
+                |
                 |     Returns the PreventDimDriving3DCstr parameter.
 
         :rtype: bool
@@ -164,7 +164,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventFileNew() As boolean
-                | 
+                |
                 |     Returns the PreventFileNew parameter.
 
         :return: bool
@@ -188,7 +188,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventGenViewStyle() As boolean
-                | 
+                |
                 |     Returns the PreventGenViewStyle parameter.
 
         :rtype: bool
@@ -212,7 +212,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventSetAsDefault() As boolean
-                | 
+                |
                 |     Returns the PreventSetAsDefault parameter.
 
         :rtype: bool
@@ -236,7 +236,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventSwitchStandard() As boolean
-                | 
+                |
                 |     Returns the PreventSwitchStandard parameter.
 
         :rtype: bool
@@ -260,7 +260,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventTrueDimensionCreation() As boolean
-                | 
+                |
                 |     Returns the PreventTrueDimensionCreation parameter.
 
         :rtype: bool
@@ -284,7 +284,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventUpdateStandard() As boolean
-                | 
+                |
                 |     Returns the PreventUpdateStandard parameter.
 
         :rtype: bool
@@ -308,7 +308,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property PreventViewGeomUpgrade() As boolean
-                | 
+                |
                 |     Returns the PreventViewGeomUpgrade parameter.
 
         :return: bool
@@ -332,7 +332,7 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property UseStyleCreateObjects() As boolean
-                | 
+                |
                 |     Returns the UseStyleCreateObjects parameter.
 
         :rtype: bool
@@ -348,7 +348,9 @@ class DraftingSettingAtt(SettingController):
 
         self.drafting_setting_att.UseStyleCreateObjects = value
 
-    def get_create_new_sheet_from_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_create_new_sheet_from_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -356,24 +358,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetCreateNewSheetFromInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the CreateNewSheetFrom
                 |     parameter.
                 |     Role:Retrieves the state of the CreateNewSheetFrom parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -382,9 +384,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetCreateNewSheetFromInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetCreateNewSheetFromInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_display_reset_button_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_display_reset_button_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -392,24 +398,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetDisplayResetButtonInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DisplayResetButton
                 |     parameter.
                 |     Role:Retrieves the state of the DisplayResetButton parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -418,7 +424,9 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetDisplayResetButtonInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetDisplayResetButtonInfo(
+            io_admin_level, io_locked
+        )
 
     def get_lock_user_default_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -428,24 +436,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetLockUserDefaultInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the LockUserDefault
                 |     parameter.
                 |     Role:Retrieves the state of the LockUserDefault parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -454,9 +462,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetLockUserDefaultInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetLockUserDefaultInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_prevent_background_access_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_prevent_background_access_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -464,24 +476,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPreventBackgroundAccessInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PreventBackgroundAccess
                 |     parameter.
                 |     Role:Retrieves the state of the PreventBackgroundAccess parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -490,9 +502,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetPreventBackgroundAccessInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetPreventBackgroundAccessInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_prevent_dim_driving_3d_cstr_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_prevent_dim_driving_3d_cstr_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -500,24 +516,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPreventDimDriving3DCstrInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PreventDimDriving3DCstr
                 |     parameter.
                 |     Role:Retrieves the state of the PreventDimDriving3DCstr parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -526,9 +542,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetPreventDimDriving3DCstrInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetPreventDimDriving3DCstrInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_prevent_file_new_info(self, io_admin_level: str, io_locked: str, o_modified: bool) -> None:
+    def get_prevent_file_new_info(
+        self, io_admin_level: str, io_locked: str, o_modified: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -537,24 +557,24 @@ class DraftingSettingAtt(SettingController):
                 | o Sub GetPreventFileNewInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked,
                 | boolean oModified)
-                | 
+                |
                 |     Retrieves environment informations for the PreventFileNew
                 |     parameter.
                 |     Role:Retrieves the state of the PreventFileNew parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -564,8 +584,10 @@ class DraftingSettingAtt(SettingController):
         :param bool o_modified:
         :rtype: None
         """
-        return self.drafting_setting_att.GetPreventFileNewInfo(io_admin_level, io_locked, o_modified)
-        # # # # Autogenerated comment: 
+        return self.drafting_setting_att.GetPreventFileNewInfo(
+            io_admin_level, io_locked, o_modified
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -581,7 +603,9 @@ class DraftingSettingAtt(SettingController):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_prevent_gen_view_style_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_prevent_gen_view_style_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -589,24 +613,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPreventGenViewStyleInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PreventGenViewStyle
                 |     parameter.
                 |     Role:Retrieves the state of the PreventGenViewStyle parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -615,9 +639,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetPreventGenViewStyleInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetPreventGenViewStyleInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_prevent_set_as_default_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_prevent_set_as_default_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -625,24 +653,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPreventSetAsDefaultInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PreventSetAsDefault
                 |     parameter.
                 |     Role:Retrieves the state of the PreventSetAsDefault parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -651,9 +679,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetPreventSetAsDefaultInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetPreventSetAsDefaultInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_prevent_switch_standard_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_prevent_switch_standard_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -661,24 +693,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPreventSwitchStandardInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PreventSwitchStandard
                 |     parameter.
                 |     Role:Retrieves the state of the PreventSwitchStandard parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -687,9 +719,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetPreventSwitchStandardInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetPreventSwitchStandardInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_prevent_true_dimension_creation_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_prevent_true_dimension_creation_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -698,24 +734,24 @@ class DraftingSettingAtt(SettingController):
                 | o Func GetPreventTrueDimensionCreationInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PreventTrueDimensionCreation
                 |     parameter.
                 |     Role:Retrieves the state of the PreventTrueDimensionCreation parameter in
                 |     the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -724,9 +760,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetPreventTrueDimensionCreationInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetPreventTrueDimensionCreationInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_prevent_update_standard_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_prevent_update_standard_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -734,24 +774,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPreventUpdateStandardInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PreventUpdateStandard
                 |     parameter.
                 |     Role:Retrieves the state of the PreventUpdateStandard parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -760,9 +800,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetPreventUpdateStandardInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetPreventUpdateStandardInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_prevent_view_geom_upgrade_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_prevent_view_geom_upgrade_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -770,24 +814,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPreventViewGeomUpgradeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PreventViewGeomUpgrade
                 |     parameter.
                 |     Role:Retrieves the state of the PreventViewGeomUpgrade parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -796,9 +840,13 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetPreventViewGeomUpgradeInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetPreventViewGeomUpgradeInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_use_style_create_objects_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_use_style_create_objects_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -806,24 +854,24 @@ class DraftingSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetUseStyleCreateObjectsInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the UseStyleCreateObjects
                 |     parameter.
                 |     Role:Retrieves the state of the UseStyleCreateObjects parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -832,7 +880,9 @@ class DraftingSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.drafting_setting_att.GetUseStyleCreateObjectsInfo(io_admin_level, io_locked)
+        return self.drafting_setting_att.GetUseStyleCreateObjectsInfo(
+            io_admin_level, io_locked
+        )
 
     def set_create_new_sheet_from_lock(self, i_locked: bool) -> None:
         """
@@ -841,14 +891,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetCreateNewSheetFromLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the CreateNewSheetFrom parameter.
                 |     Role:Locks or unlocks the CreateNewSheetFrom parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -859,7 +909,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetCreateNewSheetFromLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -882,14 +932,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetDisplayResetButtonLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DisplayResetButton parameter.
                 |     Role:Locks or unlocks the DisplayResetButton parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -900,7 +950,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetDisplayResetButtonLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -923,14 +973,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetLockUserDefaultLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the LockUserDefault parameter.
                 |     Role:Locks or unlocks the LockUserDefault parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -941,7 +991,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetLockUserDefaultLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -964,14 +1014,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventBackgroundAccessLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventBackgroundAccess parameter.
                 |     Role:Locks or unlocks the PreventBackgroundAccess parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -982,7 +1032,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetPreventBackgroundAccessLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1005,14 +1055,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventDimDriving3DCstrLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventDimDriving3DCstr parameter.
                 |     Role:Locks or unlocks the PreventDimDriving3DCstr parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1023,7 +1073,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetPreventDimDriving3DCstrLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1046,14 +1096,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventFileNewLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventFileNew parameter.
                 |     Role:Locks or unlocks the PreventFileNew parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1064,7 +1114,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetPreventFileNewLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1087,14 +1137,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventGenViewStyleLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventGenViewStyle parameter.
                 |     Role:Locks or unlocks the PreventGenViewStyle parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1105,7 +1155,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetPreventGenViewStyleLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1128,14 +1178,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventSetAsDefaultLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventSetAsDefault parameter.
                 |     Role:Locks or unlocks the PreventSetAsDefault parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1146,7 +1196,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetPreventSetAsDefaultLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1169,14 +1219,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventSwitchStandardLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventSwitchStandard parameter.
                 |     Role:Locks or unlocks the PreventSwitchStandard parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1187,7 +1237,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetPreventSwitchStandardLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1210,15 +1260,15 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventTrueDimensionCreationLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventTrueDimensionCreation
                 |     parameter.
                 |     Role:Locks or unlocks the PreventTrueDimensionCreation parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1229,7 +1279,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetPreventTrueDimensionCreationLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1252,14 +1302,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventUpdateStandardLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventUpdateStandard parameter.
                 |     Role:Locks or unlocks the PreventUpdateStandard parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1270,7 +1320,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetPreventUpdateStandardLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1293,14 +1343,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPreventViewGeomUpgradeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PreventViewGeomUpgrade parameter.
                 |     Role:Locks or unlocks the PreventViewGeomUpgrade parameter if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1311,7 +1361,7 @@ class DraftingSettingAtt(SettingController):
         :return: None
         """
         return self.drafting_setting_att.SetPreventViewGeomUpgradeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1334,14 +1384,14 @@ class DraftingSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetUseStyleCreateObjectsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the UseStyleCreateObjects parameter.
                 |     Role:Locks or unlocks the UseStyleCreateObjects parameter if it is possible
                 |     in the current administrative context. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -1352,7 +1402,7 @@ class DraftingSettingAtt(SettingController):
         :rtype: None
         """
         return self.drafting_setting_att.SetUseStyleCreateObjectsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

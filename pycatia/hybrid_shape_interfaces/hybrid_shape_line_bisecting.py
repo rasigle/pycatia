@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.line import Line
@@ -16,37 +16,37 @@ from pycatia.knowledge_interfaces.length import Length
 
 class HybridShapeLineBisecting(Line):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         CATGSMIDLItf.Line
-                |                             HybridShapeLineBisecting
-                | 
-                | Represents the hybrid shape bisecting line feature object.
-                | Role: To access the data of the hybrid shape bisecting line feature object.
-                | This data includes:
-                | 
-                |     The two lines used to create the bisecting line
-                |     The reference point
-                |     The support
-                |     The start and end offsets
-                |     The orientation
-                |     The solution type
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeAffinity
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         CATGSMIDLItf.Line
+            |                             HybridShapeLineBisecting
+            |
+            | Represents the hybrid shape bisecting line feature object.
+            | Role: To access the data of the hybrid shape bisecting line feature object.
+            | This data includes:
+            |
+            |     The two lines used to create the bisecting line
+            |     The reference point
+            |     The support
+            |     The start and end offsets
+            |     The orientation
+            |     The solution type
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeAffinity
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -61,7 +61,7 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BeginOffset() As Length (Read Only)
-                | 
+                |
                 |     Returns the start offset of the line.
 
         :rtype: Length
@@ -77,10 +77,10 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Elem1() As Reference
-                | 
+                |
                 |     Returns or sets the first line used to create the bisecting
                 |     line.
-                | 
+                |
                 |     Sub-element(s) supported (see Boundary object): see
                 |     RectilinearTriDimFeatEdge or RectilinearBiDimFeatEdge.
 
@@ -105,7 +105,7 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Elem2() As Reference
-                | 
+                |
                 |     Returns or sets the second line used to create the bisecting
                 |     line.
                 |     Sub-element(s) supported (see Boundary object): see
@@ -132,7 +132,7 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property EndOffset() As Length (Read Only)
-                | 
+                |
                 |     Returns the end offset of the line.
 
         :rtype: Length
@@ -148,7 +148,7 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Orientation() As long
-                | 
+                |
                 |     Returns or sets the orientation used to compute the bisecting
                 |     line.
                 |     Role: the orientation specifies bisecting line position
@@ -175,7 +175,7 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RefPoint() As Reference
-                | 
+                |
                 |     Returns or sets the reference point used to create the bisecting
                 |     line.
                 |     Sub-element(s) supported (see Boundary object): see Vertex.
@@ -201,7 +201,7 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SolutionType() As boolean
-                | 
+                |
                 |     Returns or sets the solution type.
                 |     Role: The solution type allows you to know where is the bisecting line.
 
@@ -226,16 +226,16 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns or sets the support used to create the bisecting
                 |     line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oElem
                 |             retrieve the support of the bisecting line.
-                |             Sub-element(s) supported (see 
-                | 
+                |             Sub-element(s) supported (see
+                |
                 |         Boundary object): see Face.
 
         :rtype: Reference
@@ -258,11 +258,11 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetLengthType() As long
-                | 
+                |
                 |     Gets the length type Default is 0.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oType
                 |             The length type = 0 : length - the line is limited by its extremities =
                 |             1 : infinite - the line is infinite = 2 : infinite start point - the line is infinite on
@@ -280,12 +280,12 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetSymmetricalExtension() As boolean
-                | 
+                |
                 |     Gets whether the symmetrical extension of the line is
                 |     active.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSym
                 |             Symetry flag
 
@@ -300,11 +300,11 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetLengthType(long iType)
-                | 
+                |
                 |     Sets the length type Default is 0.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iType
                 |             The length type = 0 : length - the line is limited by its extremities =
                 |             1 : infinite - the line is infinite = 2 : infinite start point - the line is infinite on
@@ -323,11 +323,11 @@ class HybridShapeLineBisecting(Line):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetSymmetricalExtension(boolean iSym)
-                | 
+                |
                 |     Sets the symmetrical extension of the line (start = -end).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSym
                 |             Symetry flag
 
@@ -335,7 +335,7 @@ class HybridShapeLineBisecting(Line):
         :rtype: None
         """
         return self.hybrid_shape_line_bisecting.SetSymmetricalExtension(i_sym)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

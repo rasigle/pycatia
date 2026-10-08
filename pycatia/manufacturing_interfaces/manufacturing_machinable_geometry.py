@@ -1,40 +1,43 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
-from pycatia.manufacturing_interfaces.manufacturing_machinable_feature import ManufacturingMachinableFeature
+
+from pycatia.manufacturing_interfaces.manufacturing_machinable_feature import (
+    ManufacturingMachinableFeature,
+)
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                    ManufacturingInterfaces.ManufacturingFeature
-                |                        ManufacturingInterfaces.ManufacturingMachinableFeature
-                |                             ManufacturingMachinableGeometry
-                | 
-                | Represents the machinable geometry object.
-                | It is the low-level component of a machinable area.
-                | 
-                | See also:
-                |     ManufacturingMachinableArea
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                    ManufacturingInterfaces.ManufacturingFeature
+            |                        ManufacturingInterfaces.ManufacturingMachinableFeature
+            |                             ManufacturingMachinableGeometry
+            |
+            | Represents the machinable geometry object.
+            | It is the low-level component of a machinable area.
+            |
+            | See also:
+            |     ManufacturingMachinableArea
+
     """
 
     def __init__(self, com_object):
@@ -49,14 +52,14 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Shared() As boolean
-                | 
+                |
                 |     Returns or sets the shared state of a ManufacturingMachinableGeometry
-                |     object. 
+                |     object.
                 | Example:
                 |     The following example returns in bState the shared state of manufacturing
                 |     machinable geometry firstMachGeom and then sets it to
                 |     TRUE:
-                | 
+                |
                 |      Dim firstMachGeom As ManufacturingMachinableGeometry
                 |      Set firstMachGeom = ...
                 |      Dim bState As boolean
@@ -77,7 +80,9 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
 
         self.manufacturing_machinable_geometry.Shared = value
 
-    def add_pointed_geometry(self, i_geometry: AnyObject, i_product: Product, i_shapes: tuple) -> None:
+    def add_pointed_geometry(
+        self, i_geometry: AnyObject, i_product: Product, i_shapes: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -86,24 +91,24 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
                 | o Sub AddPointedGeometry(AnyObject iGeometry,
                 | Product iProduct,
                 | CATSafeArrayVariant iShapes)
-                | 
+                |
                 |     Adds a geometry to the pointed geometry list.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iGeometry
-                |             The geometry to add 
+                |             The geometry to add
                 |         iProduct
-                |             The product where the geometry to add is located 
+                |             The product where the geometry to add is located
                 |         iShapes
                 |             The list of shapes (body copied and pasted with links) where the
-                |             geometry is to be added 
-                | 
+                |             geometry is to be added
+                |
                 |     Example:
                 |         The following example adds the geometry GeomToAdd of the product
                 |         ProdOfGeomToAdd to the pointed geometry list of the manufacturing machinable
                 |         geometry firstMachGeom.
-                | 
+                |
                 |          Dim firstMachGeom As ManufacturingMachinableGeometry
                 |          Set firstMachGeom = ...
                 |          Dim GeomToAdd As Shape
@@ -121,10 +126,9 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :rtype: None
         """
         return self.manufacturing_machinable_geometry.AddPointedGeometry(
-            i_geometry.com_object,
-            i_product.com_object,
-            i_shapes)
-        # # # # Autogenerated comment: 
+            i_geometry.com_object, i_product.com_object, i_shapes
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -141,11 +145,7 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def add_pointed_geometry_notify(
-            self,
-            i_geometry: AnyObject,
-            i_product: Product,
-            i_shapes: tuple,
-            i_notify: int
+        self, i_geometry: AnyObject, i_product: Product, i_shapes: tuple, i_notify: int
     ) -> None:
         """
         .. note::
@@ -156,19 +156,19 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
                 | Product iProduct,
                 | CATSafeArrayVariant iShapes,
                 | short iNotify)
-                | 
+                |
                 |     Adds a geometry to the pointed geometry list (manage
                 |     notification).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iGeometry
-                |             The geometry to add 
+                |             The geometry to add
                 |         iProduct
-                |             The product where the geometry to add is located 
+                |             The product where the geometry to add is located
                 |         iShapes
                 |             The list of shapes (body copied and pasted with links) where the
-                |             geometry is to be added 
+                |             geometry is to be added
                 |         iNotify
                 |             A flag to request whether to send a notification to update the
                 |             model
@@ -176,12 +176,12 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
                 |             0 No notification is sent and the model is not
                 |             updated
                 |             1 A notification is sent and the model is updated
-                | 
+                |
                 |     Example:
                 |         The following example adds the geometry GeomToAdd of the product
                 |         ProdOfGeomToAdd to the pointed geometry list of the manufacturing machinable
                 |         geometry firstMachGeom.
-                | 
+                |
                 |          Dim firstMachGeom As ManufacturingMachinableGeometry
                 |          Set firstMachGeom = ...
                 |          Dim GeomToAdd As Shape
@@ -200,12 +200,9 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :rtype: None
         """
         return self.manufacturing_machinable_geometry.AddPointedGeometryNotify(
-            i_geometry.com_object,
-            i_product.com_object,
-            i_shapes,
-            i_notify
+            i_geometry.com_object, i_product.com_object, i_shapes, i_notify
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -222,10 +219,7 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def add_pointed_geometry_with_no_duplicated_check(
-            self,
-            i_geometry: AnyObject,
-            i_product: Product,
-            i_shapes: tuple
+        self, i_geometry: AnyObject, i_product: Product, i_shapes: tuple
     ) -> None:
         """
         .. note::
@@ -236,25 +230,25 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
                 | iGeometry,
                 | Product iProduct,
                 | CATSafeArrayVariant iShapes)
-                | 
+                |
                 |     Adds a geometry to the pointed geometry list with no check on already
                 |     referenced geometry.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iGeometry
-                |             The geometry to add 
+                |             The geometry to add
                 |         iProduct
-                |             The product where the geometry to add is located 
+                |             The product where the geometry to add is located
                 |         iShapes
                 |             The list of shapes (body copied and pasted with links) where the
-                |             geometry is to be added 
-                | 
+                |             geometry is to be added
+                |
                 |     Example:
                 |         The following example adds the geometry GeomToAdd of the product
                 |         ProdOfGeomToAdd to the pointed geometry list of the manufacturing machinable
                 |         geometry firstMachGeom.
-                | 
+                |
                 |          Dim firstMachGeom As ManufacturingMachinableGeometry
                 |          Set firstMachGeom = ...
                 |          Dim GeomToAdd As Shape
@@ -271,10 +265,10 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :param tuple i_shapes:
         :rtype: None
         """
-        return self.manufacturing_machinable_geometry.AddPointedGeometryWithNoDuplicatedCheck(i_geometry.com_object,
-                                                                                              i_product.com_object,
-                                                                                              i_shapes)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machinable_geometry.AddPointedGeometryWithNoDuplicatedCheck(
+            i_geometry.com_object, i_product.com_object, i_shapes
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -291,11 +285,7 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def add_pointed_geometry_with_no_duplicated_check_notify(
-            self,
-            i_geometry: AnyObject,
-            i_product: Product,
-            i_shapes: tuple,
-            i_notify: int
+        self, i_geometry: AnyObject, i_product: Product, i_shapes: tuple, i_notify: int
     ) -> None:
         """
         .. note::
@@ -307,19 +297,19 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
                 | Product iProduct,
                 | CATSafeArrayVariant iShapes,
                 | short iNotify)
-                | 
+                |
                 |     Adds a geometry to the pointed geometry list with no check on an already
                 |     referenced geometry.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iGeometry
-                |             The geometry to add 
+                |             The geometry to add
                 |         iProduct
-                |             The product where the geometry to add is located 
+                |             The product where the geometry to add is located
                 |         iShapes
                 |             The list of shapes (body copied and pasted with links) where the
-                |             geometry is to be added 
+                |             geometry is to be added
                 |         iNotify
                 |             A flag to request whether to send a notification to update the
                 |             model
@@ -327,12 +317,12 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
                 |             0 No notification is sent and the model is not
                 |             updated
                 |             1 A notification is sent and the model is updated
-                | 
+                |
                 |     Example:
                 |         The following example adds the geometry GeomToAdd of the product
                 |         ProdOfGeomToAdd to the pointed geometry list of the manufacturing machinable
                 |         geometry firstMachGeom:
-                | 
+                |
                 |          Dim firstMachGeom As ManufacturingMachinableGeometry
                 |          Set firstMachGeom = ...
                 |          Dim GeomToAdd As Shape
@@ -351,12 +341,9 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :rtype: None
         """
         return self.manufacturing_machinable_geometry.AddPointedGeometryWithNoDuplicatedCheckNotify(
-            i_geometry.com_object,
-            i_product.com_object,
-            i_shapes,
-            i_notify
+            i_geometry.com_object, i_product.com_object, i_shapes, i_notify
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -372,7 +359,9 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_associated_tps(self, index_of_pointed_geom: int, o_annotations_list: tuple) -> tuple:
+    def get_associated_tps(
+        self, index_of_pointed_geom: int, o_annotations_list: tuple
+    ) -> tuple:
         """
         .. note::
             :class: toggle
@@ -419,8 +408,7 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :rtype: tuple
         """
         return self.manufacturing_machinable_geometry.GetAssociatedTPS(
-            index_of_pointed_geom,
-            o_annotations_list
+            index_of_pointed_geom, o_annotations_list
         )
         # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
@@ -474,9 +462,13 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :param int index_of_pointed_geom:
         :rtype: int
         """
-        return self.manufacturing_machinable_geometry.GetAssociatedTPSCount(index_of_pointed_geom)
+        return self.manufacturing_machinable_geometry.GetAssociatedTPSCount(
+            index_of_pointed_geom
+        )
 
-    def get_direction(self, o_x: float, o_y: float, o_z: float, index_of_pointed_geom: int) -> None:
+    def get_direction(
+        self, o_x: float, o_y: float, o_z: float, index_of_pointed_geom: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -521,7 +513,9 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :param int index_of_pointed_geom:
         :rtype: None
         """
-        return self.manufacturing_machinable_geometry.GetDirection(o_x, o_y, o_z, index_of_pointed_geom)
+        return self.manufacturing_machinable_geometry.GetDirection(
+            o_x, o_y, o_z, index_of_pointed_geom
+        )
 
     def get_origin(self) -> tuple:
         """
@@ -567,11 +561,7 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         return self.manufacturing_machinable_geometry.GetOrigin()
 
     def list_pointed_geometry(
-            self,
-            i_index: int,
-            o_geometry: AnyObject,
-            o_product: Product,
-            o_nb_shapes: int
+        self, i_index: int, o_geometry: AnyObject, o_product: Product, o_nb_shapes: int
     ) -> tuple:
         """
         .. note::
@@ -626,10 +616,7 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :rtype: tuple
         """
         return self.manufacturing_machinable_geometry.ListPointedGeometry(
-            i_index,
-            o_geometry.com_object,
-            o_product.com_object,
-            o_nb_shapes
+            i_index, o_geometry.com_object, o_product.com_object, o_nb_shapes
         )
         # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
@@ -700,7 +687,9 @@ class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):
         :param tuple o_shapes:
         :rtype: tuple
         """
-        return self.manufacturing_machinable_geometry.ListShapesOfPointedGeometry(i_index, o_shapes)
+        return self.manufacturing_machinable_geometry.ListShapesOfPointedGeometry(
+            i_index, o_shapes
+        )
         # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code

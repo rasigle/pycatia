@@ -1,36 +1,37 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.sketcher_interfaces.curve_2D import Curve2D
 
 
 class Hyperbola2D(Curve2D):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SketcherInterfaces.GeometricElement
-                |                         SketcherInterfaces.Geometry2D
-                |                             SketcherInterfaces.Curve2D
-                |                                 Hyperbola2D
-                | 
-                | Class defining an hyperbola in 2D Space.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SketcherInterfaces.GeometricElement
+            |                         SketcherInterfaces.Geometry2D
+            |                             SketcherInterfaces.Curve2D
+            |                                 Hyperbola2D
+            |
+            | Class defining an hyperbola in 2D Space.
+
     """
 
     def __init__(self, com_object):
@@ -45,11 +46,11 @@ class Hyperbola2D(Curve2D):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ImaginaryRadius() As double (Read Only)
-                | 
+                |
                 |     Returns the minor radius of the hyperbola in 2D space
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMinorRadius
                 |             The minor radius of the hyperbola
 
@@ -66,11 +67,11 @@ class Hyperbola2D(Curve2D):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Radius() As double (Read Only)
-                | 
+                |
                 |     Returns the major radius of the hyperbola in 2D space
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMajorRadius
                 |             The major radius of the hyperbola
 
@@ -86,21 +87,21 @@ class Hyperbola2D(Curve2D):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetAxis(CATSafeArrayVariant oAxis)
-                | 
+                |
                 |     Returns the axis vector direction of the hyperbola in 2D
                 |     space
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAxis[0]
-                |             The X coordinate of the axis vector direction 
+                |             The X coordinate of the axis vector direction
                 |         oAxis[1]
                 |             The Y coordinate of the axis vector direction
 
         :rtype: tuple
         """
 
-        vba_function_name = 'get_axis'
+        vba_function_name = "get_axis"
         vba_code = """
         Public Function get_axis(hyperbola_2d)
             Dim oAxis (1)
@@ -114,7 +115,7 @@ class Hyperbola2D(Curve2D):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def get_center(self) -> tuple:
@@ -124,14 +125,14 @@ class Hyperbola2D(Curve2D):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetCenter(CATSafeArrayVariant oCenter)
-                | 
+                |
                 |     Returns the center point of the hyperbola in 2D space
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oCenter[0]
                 |             The X Coordinate of the center point of the hyperbola
-                |             
+                |
                 |         oCenter[1]
                 |             The Y Coordinate of the center point of the
                 |             hyperbola
@@ -139,7 +140,7 @@ class Hyperbola2D(Curve2D):
         :rtype: tuple
         """
 
-        vba_function_name = 'get_center'
+        vba_function_name = "get_center"
         vba_code = """
         Public Function get_center(hyperbola_2d)
             Dim oCenter (1)
@@ -153,11 +154,18 @@ class Hyperbola2D(Curve2D):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
-    def set_data(self, i_center_x: float, i_center_y: float, i_axis_x: float, i_axis_y: float, i_major_radius: float,
-                 i_minor_radius: float) -> None:
+    def set_data(
+        self,
+        i_center_x: float,
+        i_center_y: float,
+        i_axis_x: float,
+        i_axis_y: float,
+        i_major_radius: float,
+        i_minor_radius: float,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -169,21 +177,21 @@ class Hyperbola2D(Curve2D):
                 | double iAxisY,
                 | double iMajorRadius,
                 | double iMinorRadius)
-                | 
+                |
                 |     Modifies the caracteristics of the hyperbola
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iCenterX
-                |             The X Coordinate of the hyperbola center 
+                |             The X Coordinate of the hyperbola center
                 |         iCenterY
-                |             The Y Coordinate of the hyperbola center 
+                |             The Y Coordinate of the hyperbola center
                 |         iAxisX
-                |             The X coordinate of the axis vector direction 
+                |             The X coordinate of the axis vector direction
                 |         iAxisY
-                |             The Y coordinate of the axis vector direction 
+                |             The Y coordinate of the axis vector direction
                 |         iMajorRadius
-                |             The length of the major radius 
+                |             The length of the major radius
                 |         iMinorRadius
                 |             The length of the minor radius
 
@@ -195,7 +203,9 @@ class Hyperbola2D(Curve2D):
         :param float i_minor_radius:
         :rtype: None
         """
-        return self.hyperbola_2d.SetData(i_center_x, i_center_y, i_axis_x, i_axis_y, i_major_radius, i_minor_radius)
+        return self.hyperbola_2d.SetData(
+            i_center_x, i_center_y, i_axis_x, i_axis_y, i_major_radius, i_minor_radius
+        )
 
     def __repr__(self):
         return f'Hyperbola2D(name="{self.name}")'

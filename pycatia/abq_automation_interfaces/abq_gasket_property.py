@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import StabilizationStiffness_Type, InitialThickness_Type
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
 from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
@@ -15,20 +16,20 @@ from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
 
 class ABQGasketProperty(ABQProperty):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQProperty
-                |                         ABQGasketProperty
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQProperty
+            |                         ABQGasketProperty
 
-    
+
     """
 
     def __init__(self, com_object):
@@ -43,7 +44,7 @@ class ABQGasketProperty(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InitialGap() As double
-                | 
+                |
                 |     Sets or returns the Initial gap value
 
         :rtype: float
@@ -67,7 +68,7 @@ class ABQGasketProperty(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InitialThickness() As double
-                | 
+                |
                 |     Sets or returns the Initial thickness value
 
         :rtype: float
@@ -91,7 +92,7 @@ class ABQGasketProperty(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InitialThicknessType() As InitialThickness_Type
-                | 
+                |
                 |     Sets or returns the Initial thickness type
 
         :return: InitialThickness_Type
@@ -115,7 +116,7 @@ class ABQGasketProperty(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InitialVoid() As double
-                | 
+                |
                 |     Sets or returns the Initial void value
 
         :rtype: float
@@ -139,7 +140,7 @@ class ABQGasketProperty(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StabilizationStiffness() As double
-                | 
+                |
                 |     Sets or returns the Stabilization stiffness value
 
         :rtype: float
@@ -164,7 +165,7 @@ class ABQGasketProperty(ABQProperty):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property StabilizationStiffnessType() As
                 | StabilizationStiffness_Type
-                | 
+                |
                 |     Sets or returns the Stabilization stiffness type
 
         :return: StabilizationStiffness_Type
@@ -188,7 +189,7 @@ class ABQGasketProperty(ABQProperty):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SupportProperty() As AnalysisEntity
-                | 
+                |
                 |     Sets or returns the 3D structrel property.
 
         :rtype: AnalysisEntity

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -17,23 +17,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class DraftDomain(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DraftDomain
-                | 
-                | Represents the draft domain.
-                | A draft domain is a basic object used by a draft shape. It contains objects
-                | such as an angle, a pulling direction, and a collection of faces to be
-                | drafted.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DraftDomain
+            |
+            | Represents the draft domain.
+            | A draft domain is a basic object used by a draft shape. It contains objects
+            | such as an angle, a pulling direction, and a collection of faces to be
+            | drafted.
+
     """
 
     def __init__(self, com_object):
@@ -48,13 +48,13 @@ class DraftDomain(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DraftAngle() As Angle (Read Only)
-                | 
+                |
                 |     Returns the draft angle.
-                | 
+                |
                 |     Example:
                 |         The following example returns in angle the draft angle of the draft
                 |         domain firstDraftDomain:
-                | 
+                |
                 |          Set angle = firstDraftDomain.DraftAngle
 
         :rtype: Angle
@@ -70,14 +70,14 @@ class DraftDomain(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FacesToDraft() As References (Read Only)
-                | 
+                |
                 |     Returns the faces to be drafted. They are returned as a collection of
                 |     reference geometric elements.
-                | 
+                |
                 |     Example:
                 |         The following example returns the collection of faces to be drafted of
                 |         the draft domain firstDraftDomain in list:
-                | 
+                |
                 |          Set list = firstDraftDomain.FacesToDraft
 
         :rtype: References
@@ -93,21 +93,21 @@ class DraftDomain(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property MultiselectionMode() As CatDraftMultiselectionMode
-                | 
+                |
                 |     Changes the multiselection mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMultiselectionMode.
                 |             The elements to be drafted can be selected explicitly
                 |             (CATNoneDraftMultiselectionMode) or can implicitly selected as neighbors of the
                 |             neutral face (CATMultiselectionByNeutralMode)
-                | 
+                |
                 |             Example:
                 |                 The following example returns in MultiselMode the
                 |                 multiselection mode of the draft domain firstDraftDomain, and then sets it to
                 |                 CATMultiselectionByNeutralMode
-                | 
+                |
                 |                  Set MultiselMode = firstDraftDomain.MultiselectionMode
                 |                  firstDraftDomain.MultiselectionMode = CATMultiselectionByNeutralMode
 
@@ -133,16 +133,16 @@ class DraftDomain(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property NeutralElement() As Reference
-                | 
+                |
                 |     Returns or sets the draft neutral element.
                 |     To set the property, you can use the following Boundary object:
                 |     PlanarFace.
-                | 
+                |
                 |     Example:
                 |         The following example returns in neutral the neutral element of the
                 |         draft domain firstDraftDomain, and then sets it to
                 |         newNeutral:
-                | 
+                |
                 |          Set neutral = firstDraftDomain.NeutralElement
                 |          firstDraftDomain.NeutralElement = newNeutral
 
@@ -168,16 +168,16 @@ class DraftDomain(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property NeutralPropagationMode() As
                 | CatDraftNeutralPropagationMode
-                | 
+                |
                 |     Returns or sets the neutral element propagation mode. This mode is used
                 |     when computing the needed neutral elements.
-                | 
+                |
                 |     Example:
                 |         The following example returns in propMode the neutral propagation mode
                 |         of the draft domain firstDraftDomain, and then sets it to
                 |         CATSmoothDraftNeutralPropagationMode so that the neutral propagation will now
                 |         be smooth:
-                | 
+                |
                 |          Set propMode = firstDraftDomain.NeutralPropagationMode
                 |          firstDraftDomain.NeutralPropagationMode = CATSmoothDraftNeutralPropagationMode
 
@@ -203,16 +203,16 @@ class DraftDomain(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PullingDirectionElement() As Reference
-                | 
+                |
                 |     Returns or sets the draft pulling direction element.
                 |     To set the property, you can use one of the following Boundary objects:
                 |     PlanarFace or RectilinearTriDimFeatEdge.
-                | 
+                |
                 |     Example:
                 |         The following example returns in pullingdirection the pulling direction
                 |         element of the draft domain firstDraftDomain, and then sets it to
                 |         newPullingDirection:
-                | 
+                |
                 |          Set pullingdirection = firstDraftDomain.NeutralElement
                 |          firstDraftDomain.PullingDirectionElement = newPullingDirection
 
@@ -236,28 +236,28 @@ class DraftDomain(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddFaceToDraft(Reference iFace)
-                | 
+                |
                 |     Adds a face to those to be drafted.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFace
                 |             The face to add to those to be drafted
-                |             The following 
-                | 
-                |         Boundary object is supported: ScFace. 
-                | 
+                |             The following
+                |
+                |         Boundary object is supported: ScFace.
+                |
                 | Example:
                 |     The following example adds the face NewFaceToDraft to the draft domain
                 |     CurrentDraftDomain:
-                | 
+                |
                 |      CurrentDraftDomain.AddFaceToDraft(NewFaceToDraft)
 
         :param Reference i_face:
         :rtype: None
         """
         return self.draft_domain.AddFaceToDraft(i_face.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -281,18 +281,18 @@ class DraftDomain(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetPullingDirection(CATSafeArrayVariant
                 | ioPullingDirection)
-                | 
+                |
                 |     Returns the draft pulling direction. The pulling direction is returned as
                 |     an array containing the pulling direction vector components. Assume this array
                 |     is PullDir. It contains:
-                | 
+                |
                 |     PullDir[0],PullDir[1],PullDir[2]
-                |         The X, Y, and Z pulling direction vector components 
-                | 
+                |         The X, Y, and Z pulling direction vector components
+                |
                 |     Example:
                 |         The following example returns in PullDir the pulling direction vector
                 |         components of the draft domain firstDraftDomain:
-                | 
+                |
                 |          Set PullDir = firstDraftDomain.PullingDirection
                 |          Set x = PullDir[0]
                 |          Set y = PullDir[1]
@@ -302,7 +302,7 @@ class DraftDomain(AnyObject):
         :rtype: None
         """
         return self.draft_domain.GetPullingDirection(io_pulling_direction)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -325,28 +325,28 @@ class DraftDomain(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveFaceToDraft(Reference iFace)
-                | 
+                |
                 |     Removes a face from those to be drafted.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFace
                 |             The face to be removed from those to be drafted
-                |             The following 
-                | 
-                |         Boundary object is supported: Face. 
-                | 
+                |             The following
+                |
+                |         Boundary object is supported: Face.
+                |
                 | Example:
                 |     The following example removes the face FaceToRemove from the draft domain
                 |     CurrentDraftDomain:
-                | 
+                |
                 |      CurrentDraftDomain.RemoveFaceToDraft(FaceToRemove)
 
         :param Reference i_face:
         :rtype: None
         """
         return self.draft_domain.RemoveFaceToDraft(i_face.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -371,20 +371,20 @@ class DraftDomain(AnyObject):
                 | o Sub SetPullingDirection(double iX,
                 | double iY,
                 | double iZ)
-                | 
+                |
                 |     Sets the draft pulling direction.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iX,iY,iZ
                 |             The X, Y, and Z pulling direction vector components
-                |             
-                | 
+                |
+                |
                 |     Example:
                 |         The following example sets the draft pulling direction of the draft
                 |         domain firstDraftDomain to the direction with the vector components 10, -5,
                 |         10:
-                | 
+                |
                 |          firstDraftDomain.PullingDirection 10, -5, 10
 
         :param float i_x:
@@ -401,18 +401,18 @@ class DraftDomain(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetVolumeSupport(Reference iVolumeSupport)
-                | 
+                |
                 |     Value the support of draft.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iVolumeSupport
 
         :param Reference i_volume_support:
         :rtype: None
         """
         return self.draft_domain.SetVolumeSupport(i_volume_support.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,39 +14,39 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class IgpOlpSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         IgpOlpSettingAtt
-                | 
-                | Represents the Offline Programming setting controller object.
-                | Role: The Offline Programming setting controller object deals with the setting
-                | attributes displayed in the IGRIP/Offline Programming property page. To access
-                | this property page:
-                | 
-                |     Click the Options command in the Tools menu
-                |     Click IGRIP
-                |     Right scroll to display the property pages titles until you get Offline
-                |     Programming
-                |     Click Offline Programming
-                | 
-                | The Offline Programming setting controller object can be retrieved as an item
-                | of the setting controller collection using its name "DNBIgpOlpAutoSettingCtrl"
-                | as follows:
-                | 
-                |  Dim settingControllers1 As SettingControllers
-                |  Set settingControllers1 = CATIA.SettingControllers
-                |  Dim DNBIAIgpOlpSettingAtt1 As SettingController
-                |  Set DNBIAIgpOlpSettingAtt1 = settingControllers1.Item("DNBIgpOlpAutoSettingCtrl")
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         IgpOlpSettingAtt
+            |
+            | Represents the Offline Programming setting controller object.
+            | Role: The Offline Programming setting controller object deals with the setting
+            | attributes displayed in the IGRIP/Offline Programming property page. To access
+            | this property page:
+            |
+            |     Click the Options command in the Tools menu
+            |     Click IGRIP
+            |     Right scroll to display the property pages titles until you get Offline
+            |     Programming
+            |     Click Offline Programming
+            |
+            | The Offline Programming setting controller object can be retrieved as an item
+            | of the setting controller collection using its name "DNBIgpOlpAutoSettingCtrl"
+            | as follows:
+            |
+            |  Dim settingControllers1 As SettingControllers
+            |  Set settingControllers1 = CATIA.SettingControllers
+            |  Dim DNBIAIgpOlpSettingAtt1 As SettingController
+            |  Set DNBIAIgpOlpSettingAtt1 = settingControllers1.Item("DNBIgpOlpAutoSettingCtrl")
+
     """
 
     def __init__(self, com_object):
@@ -61,7 +61,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Downloader() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP Translator parameter.
                 |     Role: The OLP Translator setting parameter stores the name of currently
                 |     selected downloader, also known as the XSLT translator.
@@ -87,7 +87,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DownloaderDir() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP Translator Directory
                 |     parameter.
                 |     Role: The OLP Translator Directory setting parameter stores the full file
@@ -115,7 +115,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExistingTaskTreatment() As long
-                | 
+                |
                 |     Returns or sets value of OLP Existing Task Treatment On Upload
                 |     parameter.
                 |     Role: The OLP Existing Task Treatment On Upload setting parameter
@@ -147,7 +147,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property JavaClassPath() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP Java Class Path parameter.
                 |     Role: The OLP Java Class Path setting parameter stores the full file path
                 |     to Java JAR files required to proper functioning of OLP download.
@@ -173,7 +173,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property JavaExe() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP Java Executable parameter.
                 |     Role: The OLP Java Executable setting parameter stores the full file path
                 |     to java.exe file of Java JRE 1_4_1, or later.
@@ -199,7 +199,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NRLDir() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of NRL configuration file directory
                 |     parameter.
                 |     Role: The NRL configuration file directory parameter stores the full file
@@ -226,7 +226,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NRLTeachDialogDisplayMode() As long
-                | 
+                |
                 |     Returns or sets value of OLPNRLTeachDialogDisplay
                 |     parameter.
                 |     Role: The OLPNRLTeachDialogDisplay setting parameter determines whether NRL
@@ -257,7 +257,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RobotProgramDir() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP Directory parameter.
                 |     Role: The OLP Directory setting parameter stores the full file path to
                 |     directory where native robot language programs on upload should be stored.
@@ -283,7 +283,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Uploader() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP Parser parameter.
                 |     Role: The OLP Parser setting parameter stores the name of currently
                 |     selected uploader, also known as the Java Parser.
@@ -309,7 +309,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UploaderDir() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP Parser Directory parameter.
                 |     Role: The OLP Parser Directory setting parameter stores the full file path
                 |     to directory where OLP uploaders, also known as Java Parsers, are stored.
@@ -335,7 +335,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property XMLDir() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP XML Directory parameter.
                 |     Role: The OLP XML Directory setting parameter stores the full file path to
                 |     directory where XML file created during download, named simResult.xml, is
@@ -362,7 +362,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property XMLSchema() As CATBSTR
-                | 
+                |
                 |     Returns or sets value of OLP XML Schema parameter.
                 |     Role: The OLP XML Schema setting parameter stores the full file path to an
                 |     W3C XML Schema file, used for XML file validation on upload, is stored.
@@ -388,7 +388,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDownloaderDirInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP Translator Directory setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -407,7 +407,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetDownloaderInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP Translator setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -418,7 +418,9 @@ class IgpOlpSettingAtt(SettingController):
         """
         return self.igp_olp_setting_att.GetDownloaderInfo(io_admin_level, io_locked)
 
-    def get_existing_task_treatment_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_existing_task_treatment_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -426,7 +428,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExistingTaskTreatmentInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP Existing Task Treatment On Upload
                 |     setting parameter.
                 |     Refer to SettingController for a detailed description.
@@ -435,7 +437,9 @@ class IgpOlpSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.igp_olp_setting_att.GetExistingTaskTreatmentInfo(io_admin_level, io_locked)
+        return self.igp_olp_setting_att.GetExistingTaskTreatmentInfo(
+            io_admin_level, io_locked
+        )
 
     def get_java_class_path_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -445,7 +449,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetJavaClassPathInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP Java Class Path setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -464,7 +468,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetJavaExeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP Java Executable setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -483,7 +487,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetNRLDirInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the NRL configuration file directory setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -494,7 +498,9 @@ class IgpOlpSettingAtt(SettingController):
         """
         return self.igp_olp_setting_att.GetNRLDirInfo(io_admin_level, io_locked)
 
-    def get_nrl_teach_dialog_display_mode_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_nrl_teach_dialog_display_mode_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -503,7 +509,7 @@ class IgpOlpSettingAtt(SettingController):
                 | o Func GetNRLTeachDialogDisplayModeInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLPNRLTeachDialogDisplay setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -512,7 +518,9 @@ class IgpOlpSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.igp_olp_setting_att.GetNRLTeachDialogDisplayModeInfo(io_admin_level, io_locked)
+        return self.igp_olp_setting_att.GetNRLTeachDialogDisplayModeInfo(
+            io_admin_level, io_locked
+        )
 
     def get_robot_program_dir_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -522,7 +530,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetRobotProgramDirInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP Directory setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -531,7 +539,9 @@ class IgpOlpSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.igp_olp_setting_att.GetRobotProgramDirInfo(io_admin_level, io_locked)
+        return self.igp_olp_setting_att.GetRobotProgramDirInfo(
+            io_admin_level, io_locked
+        )
 
     def get_uploader_dir_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -541,7 +551,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUploaderDirInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP Parser Directory setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -560,7 +570,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetUploaderInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP Parser setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -579,7 +589,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetXMLDirInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP XML Directory setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -598,7 +608,7 @@ class IgpOlpSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetXMLSchemaInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the OLP XML Schema setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -616,7 +626,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDownloaderDirLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP Translator Directory setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -625,7 +635,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetDownloaderDirLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -648,7 +658,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetDownloaderLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP Translator setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -656,7 +666,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetDownloaderLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -679,7 +689,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExistingTaskTreatmentLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP Existing Task Treatment On Upload
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -688,7 +698,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetExistingTaskTreatmentLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -711,7 +721,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetJavaClassPathLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP Java Class Path parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -719,7 +729,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetJavaClassPathLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -742,7 +752,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetJavaExeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP Java Executable parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -750,7 +760,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetJavaExeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -773,7 +783,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetNRLDirLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the NRL configuration file directory setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -782,7 +792,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetNRLDirLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -805,7 +815,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetNRLTeachDialogDisplayModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLPNRLTeachDialogDisplay parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -813,7 +823,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetNRLTeachDialogDisplayModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -836,7 +846,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetRobotProgramDirLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP Directory setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -844,7 +854,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetRobotProgramDirLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -867,7 +877,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUploaderDirLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP Parser Directory setting
                 |     parameter.
                 |     Refer to SettingController for a detailed description.
@@ -876,7 +886,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetUploaderDirLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -899,7 +909,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetUploaderLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP Parser setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -907,7 +917,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetUploaderLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -930,7 +940,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetXMLDirLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP XML Directory setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -938,7 +948,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetXMLDirLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -961,7 +971,7 @@ class IgpOlpSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetXMLSchemaLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the OLP XML Schema setting parameter.
                 |     Refer to SettingController for a detailed description.
 
@@ -969,7 +979,7 @@ class IgpOlpSettingAtt(SettingController):
         :rtype: None
         """
         return self.igp_olp_setting_att.SetXMLSchemaLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -15,25 +16,25 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class DxfSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         DxfSettingAtt
-                | 
-                | Interface dedicated to modify or read the current settings corresponding to the
-                | DXF Data Exchange (used for DXF or DWG files)
-                | 
-                | Ensure consistency with the C++ interface to which the work is
-                | delegated.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         DxfSettingAtt
+            |
+            | Interface dedicated to modify or read the current settings corresponding to the
+            | DXF Data Exchange (used for DXF or DWG files)
+            |
+            | Ensure consistency with the C++ interface to which the work is
+            | delegated.
+
     """
 
     def __init__(self, com_object):
@@ -49,16 +50,16 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportBlocks() As CatDxfExportBlocksEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the value of the Export Blocks option. That value is only taken into
                 |     account when the export mode is set to Semantic.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oExportBlocks
                 |             Legal values: An available value of the enum
-                |             CatDxfExportBlocksEnum. 
-                | 
+                |             CatDxfExportBlocksEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -79,18 +80,18 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportDimensionsAsDimensions() As boolean (Read
                 | Only)
-                | 
+                |
                 |     Get the value of the Export Dimensions As Dimensions option. That value is
                 |     only taken into account when the export mode is set to
                 |     Semantic.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oExportDimension
                 |             Legal values:
                 |             TRUE : Export dimensions as dimensions.
-                |             FALSE : Export dimensions as graphical block. 
-                | 
+                |             FALSE : Export dimensions as graphical block.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -109,17 +110,17 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportLayerName() As boolean (Read Only)
-                | 
+                |
                 |     Get the value of the Export Layer Name option. That value is only taken
                 |     into account when the export mode is set to Semantic.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oExportLayerName
                 |             Legal values:
                 |             TRUE : Export Layer Name.
-                |             FALSE : Export Layer Number. 
-                | 
+                |             FALSE : Export Layer Number.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -138,15 +139,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportMode() As CatDxfExportModeEnum (Read Only)
-                | 
+                |
                 |     Get the Export Mode option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMode
                 |             Legal values: An available value of the enum CatDxfExportModeEnum.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -167,15 +168,15 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportSheets() As CatDxfExportSheetsEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the Exported Sheets option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSheets
                 |             Legal values: An available value of the enum
-                |             CatDxfExportSheetsEnum. 
-                | 
+                |             CatDxfExportSheetsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -196,15 +197,15 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportVersion() As CatDxfExportVersionEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the Export Version option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oVersion
                 |             Legal values: An available value of the enum
-                |             CatDxfExportVersionEnum. 
-                | 
+                |             CatDxfExportVersionEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -249,7 +250,7 @@ class DxfSettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.dxf_setting_att.ExportViewAsViewport
@@ -262,18 +263,18 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ExportViewsAsViewports() As boolean (Read Only)
-                | 
+                |
                 |     Get the value of the Export Views as Viewports option. That value is only
                 |     taken into account when the export mode is set to
                 |     Semantic.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oViewsAsViewports
                 |             Legal values:
                 |             TRUE : Export Views as Viewports enable.
-                |             FALSE : Export Views as Viewports disable. 
-                | 
+                |             FALSE : Export Views as Viewports disable.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -292,16 +293,16 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportDftStandard() As CATBSTR (Read Only)
-                | 
+                |
                 |     Get the name of the Drafting standard, which define the standard of the
                 |     resulting CATDrawing file.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDftStandard
                 |             the CATBSTR corresponding to the Drafting standard.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -321,15 +322,15 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportDimensions() As CatDxfImportDimensionsEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the Import dimensions option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDimensions
                 |             Legal values: An available value of the enum
-                |             CatDxfImportDimensionsEnum. 
-                | 
+                |             CatDxfImportDimensionsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -349,15 +350,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportDxfStandard() As CATBSTR (Read Only)
-                | 
+                |
                 |     Get the name of the Dxf standard, which define the different mapping used
                 |     at import.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDxfStandard
-                |             the CATBSTR corresponding to the Dxf standard. 
-                | 
+                |             the CATBSTR corresponding to the Dxf standard.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -377,15 +378,15 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportEndPoints() As CatDxfImportCreateEndPointsEnum (Read
                 | Only)
-                | 
+                |
                 |     Get the Create End Points option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oEndPoints
                 |             Legal values: An available value of the enum
-                |             CatDxfImportCreateEndPointsEnum. 
-                | 
+                |             CatDxfImportCreateEndPointsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -405,16 +406,16 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportKeepModelSpace() As boolean (Read Only)
-                | 
+                |
                 |     Get the value of the Keep Model Space option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oKeepModelSpace
                 |             Legal values:
                 |             TRUE : always keep the entire Model Space in its own sheet.
-                |             FALSE : keep the entire Model Space in its own sheet but only if the automatic management detects that it's required. 
-                | 
+                |             FALSE : keep the entire Model Space in its own sheet but only if the automatic management detects that it's required.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -433,16 +434,16 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportMapLayerOn2DL() As boolean (Read Only)
-                | 
+                |
                 |     Get the value of Map Layer On 2DL sheet option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMapLayerOn2DL
                 |             Legal values:
                 |             TRUE : always Map Layer On 2DL sheets.
-                |             FALSE : No specific treatment on layer 
-                | 
+                |             FALSE : No specific treatment on layer
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -462,16 +463,16 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportPaperSpacesInBackground() As boolean (Read
                 | Only)
-                | 
+                |
                 |     Get the value of the Paper Spaces in Background option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPaperSpacesInBackground
                 |             Legal values:
                 |             TRUE : All Paper Spaces entities are put into the corresponding Sheet's Background
-                |             FALSE : All Paper Spaces entities are put into a view inside the corresponding Sheet's Working Views 
-                | 
+                |             FALSE : All Paper Spaces entities are put into a view inside the corresponding Sheet's Working Views
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -490,15 +491,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportScaleDenominator() As double (Read Only)
-                | 
+                |
                 |     Get the denominator value of the scale factor. That value is only taken
                 |     into account when the import unit is set to Scale Factor.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oScaleDen
-                |             the denominator value of the scale factor. 
-                | 
+                |             the denominator value of the scale factor.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -517,15 +518,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportScaleNumerator() As double (Read Only)
-                | 
+                |
                 |     Get the numerator value of the scale factor. That value is only taken into
                 |     account when the import unit is set to Scale Factor.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oScaleNum
-                |             the numerator value of the scale factor. 
-                | 
+                |             the numerator value of the scale factor.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -544,15 +545,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ImportUnit() As CatDxfImportUnitEnum (Read Only)
-                | 
+                |
                 |     Get the import unit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oUnit
                 |             Legal values: An available value of the enum CatDxfImportUnitEnum.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -572,25 +573,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportBlocksInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Export Blocks
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -602,7 +603,9 @@ class DxfSettingAtt(SettingController):
         """
         return self.dxf_setting_att.GetExportBlocksInfo(io_admin_level, io_locked)
 
-    def get_export_dimensions_as_dimensions_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_export_dimensions_as_dimensions_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -611,25 +614,25 @@ class DxfSettingAtt(SettingController):
                 | o Func GetExportDimensionsAsDimensionsInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Export Dimensions As Dimensions
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -639,7 +642,9 @@ class DxfSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.dxf_setting_att.GetExportDimensionsAsDimensionsInfo(io_admin_level, io_locked)
+        return self.dxf_setting_att.GetExportDimensionsAsDimensionsInfo(
+            io_admin_level, io_locked
+        )
 
     def get_export_layer_name_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -649,25 +654,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportLayerNameInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Export Layer Name
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -687,25 +692,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportModeInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Export Mode
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -725,25 +730,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportSheetsInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Exported Sheets
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -763,25 +768,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportVersionInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Export Version
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -793,7 +798,9 @@ class DxfSettingAtt(SettingController):
         """
         return self.dxf_setting_att.GetExportVersionInfo(io_admin_level, io_locked)
 
-    def get_export_view_as_viewport_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_export_view_as_viewport_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2019.
@@ -835,12 +842,16 @@ class DxfSettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.dxf_setting_att.GetExportViewAsViewportInfo(io_admin_level, io_locked)
+        return self.dxf_setting_att.GetExportViewAsViewportInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_export_views_as_viewports_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_export_views_as_viewports_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -848,25 +859,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetExportViewsAsViewportsInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Export Views as Viewports
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -876,7 +887,9 @@ class DxfSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.dxf_setting_att.GetExportViewsAsViewportsInfo(io_admin_level, io_locked)
+        return self.dxf_setting_att.GetExportViewsAsViewportsInfo(
+            io_admin_level, io_locked
+        )
 
     def get_import_dft_standard_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -886,25 +899,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportDftStandardInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Drafting standard
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -924,25 +937,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportDimensionsInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Import dimensions
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -962,25 +975,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportDxfStandardInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the DXF standard
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1000,25 +1013,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportEndPointsInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Create End Points
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1030,7 +1043,9 @@ class DxfSettingAtt(SettingController):
         """
         return self.dxf_setting_att.GetImportEndPointsInfo(io_admin_level, io_locked)
 
-    def get_import_keep_model_space_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_import_keep_model_space_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1038,25 +1053,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportKeepModelSpaceInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Keep Model Space
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1066,9 +1081,13 @@ class DxfSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.dxf_setting_att.GetImportKeepModelSpaceInfo(io_admin_level, io_locked)
+        return self.dxf_setting_att.GetImportKeepModelSpaceInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_import_map_layer_on2_dl_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_import_map_layer_on2_dl_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1076,25 +1095,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportMapLayerOn2DLInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for Map Layer On 2DL
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1104,9 +1123,13 @@ class DxfSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.dxf_setting_att.GetImportMapLayerOn2DLInfo(io_admin_level, io_locked)
+        return self.dxf_setting_att.GetImportMapLayerOn2DLInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_import_paper_spaces_in_background_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_import_paper_spaces_in_background_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1115,25 +1138,25 @@ class DxfSettingAtt(SettingController):
                 | o Func GetImportPaperSpacesInBackgroundInfo(CATBSTR
                 | ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the Paper Spaces in Background
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1143,9 +1166,13 @@ class DxfSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.dxf_setting_att.GetImportPaperSpacesInBackgroundInfo(io_admin_level, io_locked)
+        return self.dxf_setting_att.GetImportPaperSpacesInBackgroundInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_import_scale_denominator_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_import_scale_denominator_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1153,25 +1180,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportScaleDenominatorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the scale factor's denominator value
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1181,9 +1208,13 @@ class DxfSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.dxf_setting_att.GetImportScaleDenominatorInfo(io_admin_level, io_locked)
+        return self.dxf_setting_att.GetImportScaleDenominatorInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_import_scale_numerator_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_import_scale_numerator_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -1191,25 +1222,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportScaleNumeratorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the scale factor's numerator value
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1219,7 +1250,9 @@ class DxfSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.dxf_setting_att.GetImportScaleNumeratorInfo(io_admin_level, io_locked)
+        return self.dxf_setting_att.GetImportScaleNumeratorInfo(
+            io_admin_level, io_locked
+        )
 
     def get_import_unit_info(self, io_admin_level: str, io_locked: str) -> bool:
         """
@@ -1229,25 +1262,25 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetImportUnitInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the import unit
                 |     option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the option is locked, AdminLevel gives the administration level
                 |             that imposes the value of the option.
                 |             If the option is not locked, AdminLevel gives the administration
                 |             level that will give the value of the option after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the option has been locked. 
+                |             Indicates if the option has been locked.
                 |         oModified
                 |             Indicates if the option has been explicitly modified or remain to
-                |             the administrated value. 
-                | 
+                |             the administrated value.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1266,19 +1299,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportBlocksLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Blocks option if the operation is allowed in
                 |     the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1288,7 +1321,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetExportBlocksLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1311,19 +1344,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportDimensionsAsDimensionsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Dimensions As Dimensions option if the
                 |     operation is allowed in the current administrated environment. In user mode
                 |     this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1333,7 +1366,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetExportDimensionsAsDimensionsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1356,19 +1389,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportLayerNameLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Layer Name option if the operation is allowed
                 |     in the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1378,7 +1411,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetExportLayerNameLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1401,19 +1434,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportModeLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Mode option if the operation is allowed in the
                 |     current administrated environment. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1423,7 +1456,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetExportModeLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1446,19 +1479,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportSheetsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Exported Sheets option if the operation is allowed in
                 |     the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1468,7 +1501,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetExportSheetsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1491,19 +1524,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportVersionLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Version option if the operation is allowed in
                 |     the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1513,7 +1546,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetExportVersionLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1563,7 +1596,7 @@ class DxfSettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.dxf_setting_att.SetExportViewAsViewportLock(i_locked)
@@ -1575,19 +1608,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetExportViewsAsViewportsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Export Views as Viewports option if the operation is
                 |     allowed in the current administrated environment. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1597,7 +1630,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetExportViewsAsViewportsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1620,19 +1653,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportDftStandardLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Drafting standard option if the operation is allowed
                 |     in the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1642,7 +1675,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportDftStandardLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1665,19 +1698,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportDimensionsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Import dimensions option if the operation is allowed
                 |     in the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1687,7 +1720,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportDimensionsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1710,19 +1743,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportDxfStandardLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DXF standard option if the operation is allowed in the
                 |     current administrated environment. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1732,7 +1765,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportDxfStandardLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1755,19 +1788,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportEndPointsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Create End Points option if the operation is allowed
                 |     in the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1777,7 +1810,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportEndPointsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1800,19 +1833,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportKeepModelSpaceLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Keep Model Space option if the operation is allowed in
                 |     the current administrated environment. In user mode this method will always
                 |     return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1822,7 +1855,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportKeepModelSpaceLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1845,19 +1878,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportMapLayerOn2DLLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks Map on Layer2DL option if the operation is allowed in the
                 |     current administrated environment. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1867,7 +1900,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportMapLayerOn2DLLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1890,19 +1923,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportPaperSpacesInBackgroundLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Paper Spaces in Background option if the operation is
                 |     allowed in the current administrated environment. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1912,7 +1945,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportPaperSpacesInBackgroundLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1935,19 +1968,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportScaleDenominatorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the scale factor's denominator value option if the
                 |     operation is allowed in the current administrated environment. In user mode
                 |     this method will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -1957,7 +1990,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportScaleDenominatorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -1980,19 +2013,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportScaleNumeratorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the scale factor's numerator value option if the operation
                 |     is allowed in the current administrated environment. In user mode this method
                 |     will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2002,7 +2035,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportScaleNumeratorLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2025,19 +2058,19 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetImportUnitLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the import unit option if the operation is allowed in the
                 |     current administrated environment. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE: to lock the option.
-                |             FALSE: to unlock the option. 
-                | 
+                |             FALSE: to unlock the option.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2047,7 +2080,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.SetImportUnitLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2070,16 +2103,16 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportBlocks(CatDxfExportBlocksEnum iExportBlocks)
-                | 
+                |
                 |     Set the value of the Export Layer Name option. That value is only taken
                 |     into account when the export mode is set to Semantic.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExportBlocks
                 |             Legal values: An available value of the enum
-                |             CatDxfExportBlocksEnum. 
-                | 
+                |             CatDxfExportBlocksEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2098,18 +2131,18 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportDimensionsAsDimensions(boolean
                 | iExportDimension)
-                | 
+                |
                 |     Set the value of the Export Dimensions As Dimensions option. That value is
                 |     only taken into account when the export mode is set to
                 |     Semantic.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExportDimension
                 |             Legal values:
                 |             TRUE : Export dimensions as dimensions.
-                |             FALSE : Export dimensions as graphical block. 
-                | 
+                |             FALSE : Export dimensions as graphical block.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2119,7 +2152,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.set_ExportDimensionsAsDimensions(i_export_dimension)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2142,17 +2175,17 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportLayerName(boolean iExportLayerName)
-                | 
+                |
                 |     Set the value of the Export Layer Name option. That value is only taken
                 |     into account when the export mode is set to Semantic.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iExportLayerName
                 |             Legal values:
                 |             TRUE : Export Layer Name.
-                |             FALSE : Export Layer Number. 
-                | 
+                |             FALSE : Export Layer Number.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2162,7 +2195,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.set_ExportLayerName(i_export_layer_name)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2185,15 +2218,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportMode(CatDxfExportModeEnum iMode)
-                | 
+                |
                 |     Set the Export Mode option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMode
                 |             Legal values: An available value of the enum CatDxfExportModeEnum.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2211,15 +2244,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportSheets(CatDxfExportSheetsEnum iSheets)
-                | 
+                |
                 |     set the Exported Sheets option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSheets
                 |             Legal values: An available value of the enum
-                |             CatDxfExportSheetsEnum. 
-                | 
+                |             CatDxfExportSheetsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2237,15 +2270,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportVersion(CatDxfExportVersionEnum iVersion)
-                | 
+                |
                 |     Set the Export Version option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iVersion
                 |             Legal values: An available value of the enum
-                |             CatDxfExportVersionEnum. 
-                | 
+                |             CatDxfExportVersionEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2289,7 +2322,7 @@ class DxfSettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             29,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.dxf_setting_att.set_ExportViewAsViewport(i_views_as_viewports)
@@ -2301,18 +2334,18 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ExportViewsAsViewports(boolean iViewsAsViewports)
-                | 
+                |
                 |     Set the value of the Export Views as Viewports option. That value is only
                 |     taken into account when the export mode is set to
                 |     Semantic.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iViewsAsViewports
                 |             Legal values:
                 |             TRUE : Enable the export of views as Viewports.
-                |             FALSE : Disable the export of views as Viewports. 
-                | 
+                |             FALSE : Disable the export of views as Viewports.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2322,7 +2355,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.set_ExportViewsAsViewports(i_views_as_viewports)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2345,16 +2378,16 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportDftStandard(CATBSTR iDftStandard)
-                | 
+                |
                 |     Set the name of the Drafting standard, which define the standard of the
                 |     resulting CATDrawing file.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDftStandard
                 |             the CATBSTR corresponding to the Drafting standard.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2373,15 +2406,15 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportDimensions(CatDxfImportDimensionsEnum
                 | iDimensions)
-                | 
+                |
                 |     Set the Import dimensions option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDimensions
                 |             Legal values: An available value of the enum
-                |             CatDxfImportDimensionsEnum. 
-                | 
+                |             CatDxfImportDimensionsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2399,15 +2432,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportDxfStandard(CATBSTR iDxfStandard)
-                | 
+                |
                 |     Set the name of the Dxf standard, which define the different mapping used
                 |     at import.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDxfStandard
-                |             the CATBSTR corresponding to the Dxf standard. 
-                | 
+                |             the CATBSTR corresponding to the Dxf standard.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2426,15 +2459,15 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportEndPoints(CatDxfImportCreateEndPointsEnum
                 | iEndPoints)
-                | 
+                |
                 |     Set the Create End Points option value.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEndPoints
                 |             Legal values: An available value of the enum
-                |             CatDxfImportCreateEndPointsEnum. 
-                | 
+                |             CatDxfImportCreateEndPointsEnum.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2452,16 +2485,16 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportKeepModelSpace(boolean iKeepModelSpace)
-                | 
+                |
                 |     Set the value of the Keep Model Space option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iKeepModelSpace
                 |             Legal values:
                 |             TRUE : always keep the entire Model Space in its own sheet.
-                |             FALSE : keep the entire Model Space in its own sheet but only if the automatic management detects that it's required. 
-                | 
+                |             FALSE : keep the entire Model Space in its own sheet but only if the automatic management detects that it's required.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2471,7 +2504,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.set_ImportKeepModelSpace(i_keep_model_space)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2494,16 +2527,16 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportMapLayerOn2DL(boolean iMapLayerOn2DL)
-                | 
+                |
                 |     Set the value of Map Layer On 2DL sheet option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMapLayerOn2DL
                 |             Legal values:
                 |             TRUE : always Map Layer On 2DL sheets.
-                |             FALSE : No specific treatment on layer 
-                | 
+                |             FALSE : No specific treatment on layer
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2513,7 +2546,7 @@ class DxfSettingAtt(SettingController):
         :rtype: None
         """
         return self.dxf_setting_att.set_ImportMapLayerOn2DL(i_map_layer_on2_dl)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2529,7 +2562,9 @@ class DxfSettingAtt(SettingController):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_import_paper_spaces_in_background(self, i_paper_spaces_in_background: bool) -> None:
+    def set_import_paper_spaces_in_background(
+        self, i_paper_spaces_in_background: bool
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -2537,16 +2572,16 @@ class DxfSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportPaperSpacesInBackground(boolean
                 | iPaperSpacesInBackground)
-                | 
+                |
                 |     Set the value of the Paper Spaces in Background option.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPaperSpacesInBackground
                 |             Legal values:
                 |             TRUE : All Paper Spaces entities are put into the corresponding Sheet's Background
-                |             FALSE : All Paper Spaces entities are put into a view inside the corresponding Sheet's Working Views 
-                | 
+                |             FALSE : All Paper Spaces entities are put into a view inside the corresponding Sheet's Working Views
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2555,8 +2590,10 @@ class DxfSettingAtt(SettingController):
         :param bool i_paper_spaces_in_background:
         :rtype: None
         """
-        return self.dxf_setting_att.set_ImportPaperSpacesInBackground(i_paper_spaces_in_background)
-        # # # # Autogenerated comment: 
+        return self.dxf_setting_att.set_ImportPaperSpacesInBackground(
+            i_paper_spaces_in_background
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -2579,16 +2616,16 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportScaleDenominator(double iScaleDen)
-                | 
+                |
                 |     Get the denominator value of the scale factor. That value is only taken
                 |     into account when the import unit is set to Scale Factor.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iScaleDen
                 |             the denominator value of the scale factor, which is supposed to be
-                |             not null. 
-                | 
+                |             not null.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2606,15 +2643,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportScaleNumerator(double iScaleNum)
-                | 
+                |
                 |     Set the numerator value of the scale factor. That value is only taken into
                 |     account when the import unit is set to Scale Factor.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iScaleNum
-                |             the numerator value of the scale factor. 
-                | 
+                |             the numerator value of the scale factor.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -2632,15 +2669,15 @@ class DxfSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_ImportUnit(CatDxfImportUnitEnum iUnit)
-                | 
+                |
                 |     Set the import unit.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iUnit
                 |             Legal values: An available value of the enum CatDxfImportUnitEnum
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success

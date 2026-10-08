@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_str_functional_interfaces.sfm_member import SFMMember
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.length import Length
@@ -15,26 +16,26 @@ from pycatia.knowledge_interfaces.length import Length
 
 class SFMMemberPointLength(SFMMember):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATStrFunctionalInterfaces.SfmObject
-                |                         CATStrFunctionalInterfaces.SfmProfile
-                |                            CATStrFunctionalInterfaces.SfmMember
-                |                                 SfmMemberPointLength
-                | 
-                | Interface to manage Member created with one point, one direction and a
-                | length.
-                | Role: To manage member created with one point, one direction and a
-                | length.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATStrFunctionalInterfaces.SfmObject
+            |                         CATStrFunctionalInterfaces.SfmProfile
+            |                            CATStrFunctionalInterfaces.SfmMember
+            |                                 SfmMemberPointLength
+            |
+            | Interface to manage Member created with one point, one direction and a
+            | length.
+            | Role: To manage member created with one point, one direction and a
+            | length.
+
     """
 
     def __init__(self, com_object):
@@ -49,13 +50,13 @@ class SFMMemberPointLength(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Direction() As Reference
-                | 
+                |
                 |     Returns or sets the direction.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Direction the direction for the
                 |         SfmMemberPointLength feature.
-                | 
+                |
                 |          Dim Direction As Reference
                 |          Set Direction = SfmMemberPointLength.Direction
 
@@ -80,13 +81,13 @@ class SFMMemberPointLength(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property DirectionOrientation() As long
-                | 
+                |
                 |     Returns or sets the direction orientation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in DirectionOrientation the direction
                 |         orientation for the SfmMemberPointLength feature.
-                | 
+                |
                 |          Dim DirectionOrientation As Integer
                 |          Set DirectionOrientation = SfmMemberPointLength.DirectionOrientation
 
@@ -111,13 +112,13 @@ class SFMMemberPointLength(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Length() As double
-                | 
+                |
                 |     Returns or sets the member's length.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Length the length of the SfmMemberPointLength
                 |         feature.
-                | 
+                |
                 |          Dim Length As Double
                 |          Set Length = SfmMember.Length
 
@@ -156,14 +157,14 @@ class SFMMemberPointLength(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Point() As Reference
-                | 
+                |
                 |     Returns or sets the point.
                 |     Sub-element(s) supported (see Boundary object): Vertex.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Point the point for the SfmMemberPointLength
                 |         feature.
-                | 
+                |
                 |          Dim Point As Reference
                 |          Set Point = SfmMemberPointLength.Point
 
@@ -187,13 +188,13 @@ class SFMMemberPointLength(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub InvertDirection()
-                | 
+                |
                 |     Inverts the direction orientation.
-                | 
+                |
                 |     Example:
                 |         This example inverts the orientation of the direction for the
                 |         SfmMemberPointLength feature.
-                | 
+                |
                 |          SfmMemberPointLength.InvertDirection
 
         :rtype: None

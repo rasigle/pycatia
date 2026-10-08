@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from typing import Iterator
@@ -19,20 +19,20 @@ from pycatia.types.general import CATVariant
 
 class AnnotationSets(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     AnnotationSets
-                | 
-                | Interface for collection of Annotations' Set
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     AnnotationSets
+            |
+            | Interface for collection of Annotations' Set
+
     """
 
     def __init__(self, com_object):
@@ -48,14 +48,16 @@ class AnnotationSets(Collection):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func AddInAProduct(Product iProduct,
                 | CATBSTR iStandard) As AnnotationSet
-                | 
+                |
                 |     Add a set in the product.
 
         :param Product i_product:
         :param str i_standard:
         :rtype: AnnotationSet
         """
-        return AnnotationSet(self.annotation_sets.AddInAProduct(i_product.com_object, i_standard))
+        return AnnotationSet(
+            self.annotation_sets.AddInAProduct(i_product.com_object, i_standard)
+        )
 
     def item(self, i_index: CATVariant) -> AnnotationSet:
         """
@@ -64,7 +66,7 @@ class AnnotationSets(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As AnyObject
-                | 
+                |
                 |     Retrieve a set.
 
         :param CATVariant i_index:
@@ -79,7 +81,7 @@ class AnnotationSets(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub LoadAnnotationSetsList()
-                | 
+                |
                 |     Loads the Annotation Sets list. This method is very useful when a cgr
                 |     document containing Annotation Set is inserted in the product, because the
                 |     Annotation Set is not automatically loaded If the Annotation Set is already

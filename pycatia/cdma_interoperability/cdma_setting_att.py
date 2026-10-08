@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
+Module initially auto generated using V5Automation files from CATIA V5 R31 on 2024-08-20 16:04:57.203445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 import inspect
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -63,7 +64,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.AllowReplaceStructExposedDuringExtractSave
@@ -97,7 +98,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.AskBeforeOverwriteExistingParts
@@ -130,7 +131,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.AutoHigh
@@ -164,7 +165,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.CheckExistInVPMBeforeFBDI
@@ -199,7 +200,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.DisableAppObjMgt
@@ -213,7 +214,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         self.cdma_setting_att.DisableAppObjMgt = value
@@ -239,7 +240,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.DisableOverwriteReloadWarnMsg
@@ -272,7 +273,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.DisableVPMSaveCommitPanel
@@ -305,7 +306,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.DisableVPMSaveReportPanel
@@ -339,7 +340,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.EnableDirectV5VaultSave
@@ -373,7 +374,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.ForbidInconsistentSave
@@ -406,7 +407,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GFBDI
@@ -439,7 +440,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.LoadAllVPMProperties
@@ -472,7 +473,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.ManualCacheCleaning
@@ -505,7 +506,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.MappingFile
@@ -540,7 +541,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.MaxPercentCacheSize
@@ -575,7 +576,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.NbFilesForDeletion
@@ -610,7 +611,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.NbFilesMax
@@ -644,7 +645,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.NeverOverwriteExistingParts
@@ -677,7 +678,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.NoDBConnection
@@ -710,7 +711,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.VPMCachePath
@@ -743,7 +744,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.WorkWithVPMCache
@@ -756,7 +757,9 @@ class CDMASettingAtt(SettingController):
 
         self.cdma_setting_att.WorkWithVPMCache = value
 
-    def get_allow_replace_struct_exposed_during_extract_save_info(self, admin_level: str, locked: str) -> bool:
+    def get_allow_replace_struct_exposed_during_extract_save_info(
+        self, admin_level: str, locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -779,12 +782,16 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.cdma_setting_att.GetAllowReplaceStructExposedDuringExtractSaveInfo(admin_level, locked)
+        return self.cdma_setting_att.GetAllowReplaceStructExposedDuringExtractSaveInfo(
+            admin_level, locked
+        )
 
-    def get_ask_before_overwrite_existing_parts_info(self, admin_level: str, locked: str) -> bool:
+    def get_ask_before_overwrite_existing_parts_info(
+        self, admin_level: str, locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -807,10 +814,12 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.cdma_setting_att.GetAskBeforeOverwriteExistingPartsInfo(admin_level, locked)
+        return self.cdma_setting_att.GetAskBeforeOverwriteExistingPartsInfo(
+            admin_level, locked
+        )
 
     def get_auto_high_info(self, admin_level: str, locked: str) -> bool:
         """
@@ -835,12 +844,14 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetAutoHighInfo(admin_level, locked)
 
-    def get_check_exist_in_vpm_before_fbdi_info(self, admin_level: str, locked: str) -> bool:
+    def get_check_exist_in_vpm_before_fbdi_info(
+        self, admin_level: str, locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -863,10 +874,12 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.cdma_setting_att.GetCheckExistInVPMBeforeFBDIInfo(admin_level, locked)
+        return self.cdma_setting_att.GetCheckExistInVPMBeforeFBDIInfo(
+            admin_level, locked
+        )
 
     def get_disable_app_obj_mgt_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -891,12 +904,14 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetDisableAppObjMgtInfo(admin_level, o_locked)
 
-    def get_disable_overwrite_reload_warn_msg_info(self, admin_level: str, locked: str) -> bool:
+    def get_disable_overwrite_reload_warn_msg_info(
+        self, admin_level: str, locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -919,12 +934,16 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.cdma_setting_att.GetDisableOverwriteReloadWarnMsgInfo(admin_level, locked)
+        return self.cdma_setting_att.GetDisableOverwriteReloadWarnMsgInfo(
+            admin_level, locked
+        )
 
-    def get_disable_vpm_save_commit_panel_info(self, admin_level: str, locked: str) -> bool:
+    def get_disable_vpm_save_commit_panel_info(
+        self, admin_level: str, locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -947,12 +966,16 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.cdma_setting_att.GetDisableVPMSaveCommitPanelInfo(admin_level, locked)
+        return self.cdma_setting_att.GetDisableVPMSaveCommitPanelInfo(
+            admin_level, locked
+        )
 
-    def get_disable_vpm_save_report_panel_info(self, admin_level: str, locked: str) -> bool:
+    def get_disable_vpm_save_report_panel_info(
+        self, admin_level: str, locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -975,12 +998,16 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.cdma_setting_att.GetDisableVPMSaveReportPanelInfo(admin_level, locked)
+        return self.cdma_setting_att.GetDisableVPMSaveReportPanelInfo(
+            admin_level, locked
+        )
 
-    def get_enable_direct_v5_vault_save_info(self, admin_level: str, locked: str) -> bool:
+    def get_enable_direct_v5_vault_save_info(
+        self, admin_level: str, locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -1003,7 +1030,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetEnableDirectV5VaultSaveInfo(admin_level, locked)
@@ -1031,7 +1058,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetForbidInconsistentSaveInfo(admin_level, locked)
@@ -1059,7 +1086,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetGFBDIInfo(admin_level, locked)
@@ -1087,7 +1114,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetLoadAllVPMPropertiesInfo(admin_level, locked)
@@ -1115,7 +1142,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetManualCacheCleaningInfo(admin_level, locked)
@@ -1142,7 +1169,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetMappingFileInfo(admin_level, locked)
@@ -1170,7 +1197,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetMaxPercentCacheSizeInfo(admin_level, locked)
@@ -1198,7 +1225,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetNbFilesForDeletionInfo(admin_level, locked)
@@ -1226,12 +1253,14 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetNbFilesMaxInfo(admin_level, locked)
 
-    def get_never_overwrite_existing_parts_info(self, admin_level: str, locked: str) -> bool:
+    def get_never_overwrite_existing_parts_info(
+        self, admin_level: str, locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -1254,10 +1283,12 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.cdma_setting_att.GetNeverOverwriteExistingPartsInfo(admin_level, locked)
+        return self.cdma_setting_att.GetNeverOverwriteExistingPartsInfo(
+            admin_level, locked
+        )
 
     def get_no_db_connection_info(self, admin_level: str, locked: str) -> bool:
         """
@@ -1282,7 +1313,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetNoDBConnectionInfo(admin_level, locked)
@@ -1309,12 +1340,14 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetVPMCachePathInfo(admin_level, locked)
 
-    def get_work_with_vpm_cache_mode_info(self, admin_level: str, o_locked: str) -> bool:
+    def get_work_with_vpm_cache_mode_info(
+        self, admin_level: str, o_locked: str
+    ) -> bool:
         """
 
         Introduced in V5-6R2020.
@@ -1337,12 +1370,14 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.GetWorkWithVPMCacheModeInfo(admin_level, o_locked)
 
-    def set_allow_replace_struct_exposed_during_extract_save_lock(self, i_locked: bool) -> None:
+    def set_allow_replace_struct_exposed_during_extract_save_lock(
+        self, i_locked: bool
+    ) -> None:
         """
 
         Introduced in V5-6R2020.
@@ -1364,10 +1399,12 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
-        return self.cdma_setting_att.SetAllowReplaceStructExposedDuringExtractSaveLock(i_locked)
+        return self.cdma_setting_att.SetAllowReplaceStructExposedDuringExtractSaveLock(
+            i_locked
+        )
 
     def set_ask_before_overwrite_existing_parts_lock(self, i_locked: bool) -> None:
         """
@@ -1390,7 +1427,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetAskBeforeOverwriteExistingPartsLock(i_locked)
@@ -1415,7 +1452,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetAutoHighLock(i_locked)
@@ -1441,7 +1478,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetCheckExistInVPMBeforeFBDILock(i_locked)
@@ -1467,7 +1504,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetDisableAppObjMgtLock(i_locked)
@@ -1493,7 +1530,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetDisableOverwriteReloadWarnMsgLock(i_locked)
@@ -1518,7 +1555,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetDisableVPMSaveCommitPanelLock(i_locked)
@@ -1543,7 +1580,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetDisableVPMSaveReportPanelPanelLock(i_locked)
@@ -1568,7 +1605,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetEnableDirectV5VaultSaveLock(i_locked)
@@ -1594,7 +1631,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetForbidInconsistentSaveLock(i_locked)
@@ -1637,7 +1674,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetLoadAllVPMPropertiesLock(i_locked)
@@ -1662,7 +1699,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetManualCacheCleaningLock(i_locked)
@@ -1687,7 +1724,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetMappingFileLock(i_locked)
@@ -1713,7 +1750,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetMaxPercentCacheSizeLock(i_locked)
@@ -1739,7 +1776,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetNbFilesForDeletionLock(i_locked)
@@ -1765,7 +1802,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetNbFilesMaxLock(i_locked)
@@ -1791,7 +1828,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetNeverOverwriteExistingPartsLock(i_locked)
@@ -1816,7 +1853,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetNoDBConnectionLock(i_locked)
@@ -1841,7 +1878,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetVPMCachePathLock(i_locked)
@@ -1866,7 +1903,7 @@ class CDMASettingAtt(SettingController):
         self.release_check(
             self.application.system_configuration.release,
             30,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.cdma_setting_att.SetWorkWithVPMCacheLock(i_locked)

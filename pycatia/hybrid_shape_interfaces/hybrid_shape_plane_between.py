@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R31 on 2026-02-21 14:49:57.443389
+Module initially auto generated using V5Automation files from CATIA V5 R31 on 2026-02-21 14:49:57.443389
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 import inspect
 
 from pycatia.hybrid_shape_interfaces.plane import Plane
@@ -43,7 +44,7 @@ class HybridShapePlaneBetween(Plane):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         self.com_object = com_object
@@ -75,7 +76,7 @@ class HybridShapePlaneBetween(Plane):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return Reference(self.com_object.FirstElement)
@@ -89,7 +90,7 @@ class HybridShapePlaneBetween(Plane):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         self.com_object.FirstElement = value
@@ -120,7 +121,7 @@ class HybridShapePlaneBetween(Plane):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return self.com_object.Orientation
@@ -134,7 +135,7 @@ class HybridShapePlaneBetween(Plane):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         self.com_object.Orientation = value
@@ -165,7 +166,7 @@ class HybridShapePlaneBetween(Plane):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return RealParam(self.com_object.Ratio)
@@ -197,7 +198,7 @@ class HybridShapePlaneBetween(Plane):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return Reference(self.com_object.SecondElement)
@@ -211,7 +212,7 @@ class HybridShapePlaneBetween(Plane):
         self.release_check(
             self.application.system_configuration.release,
             32,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         self.com_object.SecondElement = value

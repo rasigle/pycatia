@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,30 +14,32 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class PrintersSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         PrintersSettingAtt
-                | 
-                | Represents a setting controller for the printer settings.
-                | Role: This interface is implemented by a component which represents the
-                | controller of the printer settings.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         PrintersSettingAtt
+            |
+            | Represents a setting controller for the printer settings.
+            | Role: This interface is implemented by a component which represents the
+            | controller of the printer settings.
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.printers_setting_att = com_object
 
-    def add_printer_directory(self, i_printer_dir: str, i_printer_dir_state: int) -> None:
+    def add_printer_directory(
+        self, i_printer_dir: str, i_printer_dir_state: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -45,16 +47,16 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddPrinterDirectory(CATBSTR iPrinterDir,
                 | CatPrinterDirState iPrinterDirState)
-                | 
+                |
                 |     Add a printer file directory to printer directories list and define its
                 |     state.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrinterDir
                 |             directory where some 3DPLM printers are defined.
                 |             The printers defined in this directory will be available for each
-                |             user. 
+                |             user.
                 |         iPrinterDirState
                 |             printer directory state.
                 |             Each directory can be protected to prevent user access to the
@@ -74,9 +76,13 @@ class PrintersSettingAtt(SettingController):
         :param int i_printer_dir_state: enum cat_printer_dir_state
         :rtype: None
         """
-        return self.printers_setting_att.AddPrinterDirectory(i_printer_dir, i_printer_dir_state)
+        return self.printers_setting_att.AddPrinterDirectory(
+            i_printer_dir, i_printer_dir_state
+        )
 
-    def add_printer_group(self, i_printer_group_name: str, i_printer_names: tuple) -> None:
+    def add_printer_group(
+        self, i_printer_group_name: str, i_printer_names: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -84,14 +90,14 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub AddPrinterGroup(CATBSTR iPrinterGroupName,
                 | CATSafeArrayVariant iPrinterNames)
-                | 
+                |
                 |     Add a printer group and define the printers included in this
                 |     group.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrinterGroupName
-                |             printer group name 
+                |             printer group name
                 |         iPrinterNames
                 |             array of printers included in the group.
 
@@ -99,8 +105,10 @@ class PrintersSettingAtt(SettingController):
         :param tuple i_printer_names:
         :rtype: None
         """
-        return self.printers_setting_att.AddPrinterGroup(i_printer_group_name, i_printer_names)
-        # # # # Autogenerated comment: 
+        return self.printers_setting_att.AddPrinterGroup(
+            i_printer_group_name, i_printer_names
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -123,11 +131,11 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetDriverConfigurationPath(CATBSTR oDriverCfgPath)
-                | 
+                |
                 |     Returns the driver configuration file.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDriverCfgPath
                 |             path of the driver configuration file
 
@@ -136,7 +144,9 @@ class PrintersSettingAtt(SettingController):
         """
         return self.printers_setting_att.GetDriverConfigurationPath(o_driver_cfg_path)
 
-    def get_driver_configuration_path_info(self, o_admin_level: str, o_locked: str) -> bool:
+    def get_driver_configuration_path_info(
+        self, o_admin_level: str, o_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -144,23 +154,23 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetDriverConfigurationPathInfo(CATBSTR oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the driver configuration
                 |     file.
                 |     Role: Retrieves the state of the driver configuration file in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAdminLevel
                 |             If the parameter is locked, oAdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, oAdminLevel gives the
                 |             administration level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         oLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -169,7 +179,9 @@ class PrintersSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.printers_setting_att.GetDriverConfigurationPathInfo(o_admin_level, o_locked)
+        return self.printers_setting_att.GetDriverConfigurationPathInfo(
+            o_admin_level, o_locked
+        )
 
     def get_new_printer_directory(self, o_new_printer_dir: str) -> None:
         """
@@ -178,11 +190,11 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetNewPrinterDirectory(CATBSTR oNewPrinterDir)
-                | 
+                |
                 |     Returns the directory where new printers will be added.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNewPrinterDir
                 |             directory to add new printers
                 |             Role: Each new printer created by an user is added in this
@@ -201,23 +213,23 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetNewPrinterDirectoryInfo(CATBSTR oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the directory where printers will be
                 |     added.
                 |     Role: Retrieves the state of the directory where printers will be added in
                 |     the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAdminLevel
                 |             If the parameter is locked, oAdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, oAdminLevel gives the
                 |             administration level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         oLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -226,7 +238,9 @@ class PrintersSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.printers_setting_att.GetNewPrinterDirectoryInfo(o_admin_level, o_locked)
+        return self.printers_setting_att.GetNewPrinterDirectoryInfo(
+            o_admin_level, o_locked
+        )
 
     def get_printer_array_for_group(self, i_printer_group_name: str) -> tuple:
         """
@@ -236,14 +250,14 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPrinterArrayForGroup(CATBSTR iPrinterGroupName) As
                 | CATSafeArrayVariant
-                | 
+                |
                 |     Returns the definition of the printer group.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrinterGroupName
-                |             printer group name 
-                | 
+                |             printer group name
+                |
                 |     Returns:
                 |         array of printers included in the group.
 
@@ -259,9 +273,9 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPrinterDirectories() As CATSafeArrayVariant
-                | 
+                |
                 |     Returns the directories of printer files.
-                | 
+                |
                 |     Returns:
                 |         array of directories where 3DPLM printers are defined.
 
@@ -277,23 +291,23 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPrinterDirectoriesInfo(CATBSTR oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the directories of printer files and
                 |     their states.
                 |     Role: Retrieves the state of the directories of printer files and their
                 |     states in the current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAdminLevel
                 |             If the parameter is locked, oAdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, oAdminLevel gives the
                 |             administration level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         oLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -302,7 +316,9 @@ class PrintersSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.printers_setting_att.GetPrinterDirectoriesInfo(o_admin_level, o_locked)
+        return self.printers_setting_att.GetPrinterDirectoriesInfo(
+            o_admin_level, o_locked
+        )
 
     def get_printer_directory_state(self, i_printer_dir: str) -> int:
         """
@@ -312,14 +328,14 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPrinterDirectoryState(CATBSTR iPrinterDir) As
                 | CatPrinterDirState
-                | 
+                |
                 |     Returns the state of the directory of printer files.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrinterDir
-                |             directory where some 3DPLM printers are defined. 
-                | 
+                |             directory where some 3DPLM printers are defined.
+                |
                 |     Returns:
                 |         printer directory state.
                 |         Each directory can be protected to prevent user access to the printers
@@ -347,9 +363,9 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPrinterGroups() As CATSafeArrayVariant
-                | 
+                |
                 |     Returns the printer groups.
-                | 
+                |
                 |     Returns:
                 |         array of printer group names
 
@@ -365,23 +381,23 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPrinterGroupsInfo(CATBSTR oAdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the definition of each printer
                 |     group.
                 |     Role: Retrieves the state of the definition of each printer group in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oAdminLevel
                 |             If the parameter is locked, oAdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, oAdminLevel gives the
                 |             administration level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         oLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -392,7 +408,9 @@ class PrintersSettingAtt(SettingController):
         """
         return self.printers_setting_att.GetPrinterGroupsInfo(o_admin_level, o_locked)
 
-    def modify_printer_array_for_group(self, i_printer_group_name: str, i_printer_names: tuple) -> None:
+    def modify_printer_array_for_group(
+        self, i_printer_group_name: str, i_printer_names: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -400,14 +418,14 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub ModifyPrinterArrayForGroup(CATBSTR iPrinterGroupName,
                 | CATSafeArrayVariant iPrinterNames)
-                | 
+                |
                 |     Modify a printer group: redefine the array of printers included in this
                 |     group.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrinterGroupName
-                |             printer group name 
+                |             printer group name
                 |         iPrinterNames
                 |             array of printers included in the group.
 
@@ -415,8 +433,10 @@ class PrintersSettingAtt(SettingController):
         :param tuple i_printer_names:
         :rtype: None
         """
-        return self.printers_setting_att.ModifyPrinterArrayForGroup(i_printer_group_name, i_printer_names)
-        # # # # Autogenerated comment: 
+        return self.printers_setting_att.ModifyPrinterArrayForGroup(
+            i_printer_group_name, i_printer_names
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -432,7 +452,9 @@ class PrintersSettingAtt(SettingController):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def modify_printer_directory_state(self, i_printer_dir: str, i_printer_dir_state: int) -> None:
+    def modify_printer_directory_state(
+        self, i_printer_dir: str, i_printer_dir_state: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -440,13 +462,13 @@ class PrintersSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub ModifyPrinterDirectoryState(CATBSTR iPrinterDir,
                 | CatPrinterDirState iPrinterDirState)
-                | 
+                |
                 |     Modify a printer file directory state.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrinterDir
-                |             directory where some 3DPLM printers are defined. 
+                |             directory where some 3DPLM printers are defined.
                 |         iPrinterDirState
                 |             printer directory state.
                 |             Each directory can be protected to prevent user access to the
@@ -466,7 +488,9 @@ class PrintersSettingAtt(SettingController):
         :param int i_printer_dir_state: enum cat_printer_dir_state
         :rtype: None
         """
-        return self.printers_setting_att.ModifyPrinterDirectoryState(i_printer_dir, i_printer_dir_state)
+        return self.printers_setting_att.ModifyPrinterDirectoryState(
+            i_printer_dir, i_printer_dir_state
+        )
 
     def remove_all_printer_directories(self) -> None:
         """
@@ -475,7 +499,7 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveAllPrinterDirectories()
-                | 
+                |
                 |     Remove all the directories including printer files.
 
         :rtype: None
@@ -489,7 +513,7 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemoveAllPrinterGroups()
-                | 
+                |
                 |     Remove all the groups of printers.
 
         :rtype: None
@@ -503,12 +527,12 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemovePrinterDirectory(CATBSTR iPrinterDir)
-                | 
+                |
                 |     Remove a directory of printer files from the directories
                 |     list.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrinterDir
                 |             directory where some 3DPLM printers are defined.
 
@@ -524,11 +548,11 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub RemovePrinterGroup(CATBSTR iPrinterGroupName)
-                | 
+                |
                 |     Remove a group of printers.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrinterGroupName
                 |             name of the group to remove.
 
@@ -544,11 +568,11 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDriverConfigurationPath(CATBSTR iDriverCfgPath)
-                | 
+                |
                 |     Sets the driver configuration file.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDriverCfgPath
                 |             path of the driver configuration file
 
@@ -564,14 +588,14 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetDriverConfigurationPathLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the driver configuration file.
                 |     Role: Locks or unlocks the driver configuration file if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed
                 |             Legal values:
@@ -582,7 +606,7 @@ class PrintersSettingAtt(SettingController):
         :rtype: None
         """
         return self.printers_setting_att.SetDriverConfigurationPathLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -605,11 +629,11 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetNewPrinterDirectory(CATBSTR iNewPrinterDir)
-                | 
+                |
                 |     Sets the directory where new printers will be added.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iNewPrinterDir
                 |             directory to add new printers
                 |             Role: Each new printer created by an user is added in this
@@ -627,15 +651,15 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetNewPrinterDirectoryLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the directory where printers will be
                 |     added.
                 |     Role: Locks or unlocks the directory where printers will be added if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed
                 |             Legal values:
@@ -646,7 +670,7 @@ class PrintersSettingAtt(SettingController):
         :rtype: None
         """
         return self.printers_setting_att.SetNewPrinterDirectoryLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -669,15 +693,15 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPrinterDirectoriesLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the directories of printer files and their
                 |     states.
                 |     Role: Locks or unlocks the directories of printer files and their states if
                 |     it is possible in the current administrative context. In user mode this method
                 |     will always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed
                 |             Legal values:
@@ -688,7 +712,7 @@ class PrintersSettingAtt(SettingController):
         :rtype: None
         """
         return self.printers_setting_att.SetPrinterDirectoriesLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -711,14 +735,14 @@ class PrintersSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPrinterGroupsLock(boolean iLock)
-                | 
+                |
                 |     Locks or unlocks the definition of each printer group.
                 |     Role: Locks or unlocks the definition of each printer group if it is
                 |     possible in the current administrative context. In user mode this method will
                 |     always return E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed
                 |             Legal values:
@@ -729,7 +753,7 @@ class PrintersSettingAtt(SettingController):
         :rtype: None
         """
         return self.printers_setting_att.SetPrinterGroupsLock(i_lock)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

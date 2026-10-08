@@ -1,18 +1,21 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import HTSSearchIntensity, HTSPickType
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.dnb_human_sim_interfaces.auto_walk_activity import AutoWalkActivity
 from pycatia.dnb_human_sim_interfaces.collision_free_walk import CollisionFreeWalk
-from pycatia.dnb_human_sim_interfaces.move_to_posture_activity import MoveToPostureActivity
+from pycatia.dnb_human_sim_interfaces.move_to_posture_activity import (
+    MoveToPostureActivity,
+)
 from pycatia.dnb_human_sim_interfaces.pick_activity import PickActivity
 from pycatia.dnb_human_sim_interfaces.place_activity import PlaceActivity
 from pycatia.dnb_human_sim_interfaces.walk_activity import WalkActivity
@@ -22,29 +25,29 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class HumanActivityGroupFactory(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     HumanActivityGroupFactory
-                | 
-                | The object that represents the Human Activity Group Factory.
-                | 
-                | Following activity types could be created using the HumanActivityGroup
-                | Factory.
-                | MoveToPostureActivity
-                | WalkActivity (Forward/Backward/SideStep)
-                | AutoWalkActivity
-                | PickActivity
-                | PlaceActivity
-                | CollisionFreeWalkActivity(Forward and Backward)
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     HumanActivityGroupFactory
+            |
+            | The object that represents the Human Activity Group Factory.
+            |
+            | Following activity types could be created using the HumanActivityGroup
+            | Factory.
+            | MoveToPostureActivity
+            | WalkActivity (Forward/Backward/SideStep)
+            | AutoWalkActivity
+            | PickActivity
+            | PlaceActivity
+            | CollisionFreeWalkActivity(Forward and Backward)
+
     """
 
     def __init__(self, com_object):
@@ -58,19 +61,19 @@ class HumanActivityGroupFactory(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateAutoWalk(Activity iPrevAct) As AutoWalkActivity
-                | 
+                |
                 |     Returns newly created AutoWalkActivity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
-                | 
+                |             previous activity
+                |
                 |     Returns:
                 |         oCreatedAutoWalk newly created AutoWalkActivity
                 |
                 |     Example:
-                | 
+                |
                 |         This example creates AutoWalk Activity on Plane
                 |
                 |        ' Get the Human Acts factory and Human Task List
@@ -88,23 +91,25 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create AutoWalk Activity
                 |            Set oCreatedAutoWalk = oHumActsFactory.CreateAutoWalk(iPrevAct)
 
         :param Activity i_prev_act:
         :rtype: AutoWalkActivity
         """
-        return AutoWalkActivity(self.human_activity_group_factory.CreateAutoWalk(i_prev_act.com_object))
+        return AutoWalkActivity(
+            self.human_activity_group_factory.CreateAutoWalk(i_prev_act.com_object)
+        )
 
     def create_collision_free_walk_bwd_on_arr_area(
-            self,
-            i_prev_act: Activity,
-            i_arr_area: Product,
-            i_num_points: int,
-            i_search_int: HTSSearchIntensity,
-            i_clearence: float,
-            i_points: tuple
+        self,
+        i_prev_act: Activity,
+        i_arr_area: Product,
+        i_num_points: int,
+        i_search_int: HTSSearchIntensity,
+        i_clearence: float,
+        i_points: tuple,
     ) -> CollisionFreeWalk:
         """
         .. note::
@@ -118,32 +123,32 @@ class HumanActivityGroupFactory(AnyObject):
                 | HTSSearchIntensity iSearchInt,
                 | double iClearence,
                 | CATSafeArrayVariant iPoints) As CollisionFreeWalk
-                | 
+                |
                 |     Returns newly created Collision free Walk Backward Activity on Arrangement
                 |     Area.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iArrArea
-                |             Arrangment Area - Plane of Walk 
+                |             Arrangment Area - Plane of Walk
                 |         iNumPoints
-                |             Number of Coplanar-Points defining the Walk Path 
+                |             Number of Coplanar-Points defining the Walk Path
                 |         iSearchInt
-                |             (see 
-                | 
-                |         HTSSearchIntensity for list of possible values) 
+                |             (see
+                |
+                |         HTSSearchIntensity for list of possible values)
                 |     iClearance
                 |         The clearance value to be used for detecting collision between objects
-                |         
+                |
                 |     iPoints
                 |         Point values x1,y1,z1 , x2,y2,z2, .... in iArrArea coordinates
-                |         
+                |
                 |     Returns:
-                |         oCreatedWalk newly created WalkActivity 
+                |         oCreatedWalk newly created WalkActivity
                 |     Example:
-                | 
+                |
                 |              This example creates WalkBackward Activity on Arrangement
                 |              Area
                 |
@@ -152,20 +157,20 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Dim pprprodsProdList As PPRProducts
                 |         Dim prodAreasFather As Product
                 |         Dim prodAreaFathersChildren As Products
-                | 
+                |
                 |         Set oPPRDoc = DELMIA.ActiveDocument.PPRDocument
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Set prodAreasFather = pprprodsProdList.Item(1)
                 |         Set prodAreaFathersChildren = prodAreasFather.Products
-                | 
+                |
                 |         Dim iArrArea As Product
                 |         Set iArrArea = prodAreaFathersChildren.GetItem("Area1.1")
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim iPoints(6) as Double
@@ -175,7 +180,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPoints(3) = 2000.0      ' Point2 - X
                 |         iPoints(4) = 0.0         ' Point2 - Y
                 |         iPoints(5) = 0.0         ' Point2 - Z
-                | 
+                |
                 |        ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -184,12 +189,12 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create Collision free WalkBackward Activity on Arrangement
                 |            area
-                |            Set oCreatedWalk = oHumActsFactory.CreateCollisionFreeWalkBwdOnArrArea(iPrevAct, iArrArea, iNumPoints, iSearchInt, iClearance, iPoints) 
+                |            Set oCreatedWalk = oHumActsFactory.CreateCollisionFreeWalkBwdOnArrArea(iPrevAct, iArrArea, iNumPoints, iSearchInt, iClearance, iPoints)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -208,19 +213,19 @@ class HumanActivityGroupFactory(AnyObject):
                 i_num_points,
                 i_search_int,
                 i_clearence,
-                i_points
+                i_points,
             )
         )
 
     def create_collision_free_walk_bwd_on_plane(
-            self,
-            i_prev_act: Activity,
-            i_plane_prod: Product,
-            i_plane_def: tuple,
-            i_num_points: int,
-            i_search_int: HTSSearchIntensity,
-            i_clearence: float,
-            i_points: tuple
+        self,
+        i_prev_act: Activity,
+        i_plane_prod: Product,
+        i_plane_def: tuple,
+        i_num_points: int,
+        i_search_int: HTSSearchIntensity,
+        i_clearence: float,
+        i_points: tuple,
     ) -> CollisionFreeWalk:
         """
         .. note::
@@ -234,34 +239,34 @@ class HumanActivityGroupFactory(AnyObject):
                 | HTSSearchIntensity iSearchInt,
                 | double iClearence,
                 | CATSafeArrayVariant iPoints) As CollisionFreeWalk
-                | 
+                |
                 |     Returns newly created Collision free Walk Backward
                 |     Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iPlaneProd
-                |             Handle to Product 
+                |             Handle to Product
                 |         iPlaneDef
                 |             Walk Plane definition - 9 doubles FirstAxis(i,j,k),
                 |             SecondAxis(i,j,k), OriginOfPlane(x,y,z) in iPlaneProd Coordinates
-                |             
+                |
                 |         iNumPoints
                 |         iSearchInt
                 |             (see HTSSearchIntensity for list of possible values)
                 |     iClearance
                 |         The clearance value to be used for detecting collision between objects
                 |         Number of Coplanar-Points defining the Walk Path in Plane
-                |         
+                |
                 |     iPoints
                 |         Point values x1,y1,z1 , x2,y2,z2, .... iPlaneDef coordinates
-                |         
+                |
                 |     Returns:
-                |         oCreatedWalk newly created WalkActivity 
+                |         oCreatedWalk newly created WalkActivity
                 |     Example:
-                | 
+                |
                 |         This example creates WalkBackward Activity on Plane
                 |
                 |         ' From the ProductList get the Walk Plane product
@@ -271,9 +276,9 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Dim oPlaneProd As Product
                 |         Set oPlaneProd = pprprodsProdList.Item(2)
-                | 
+                |
                 |         ' Plane Definition.. w.r.to Product
-                | 
+                |
                 |         Dim iPlaneDef(9) as Double
                 |         iPlaneDef(0) = 1.0         ' First Axis  - i vec
                 |         iPlaneDef(1) = 0.0         ' First Axis  - j vec
@@ -284,12 +289,12 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPlaneDef(6) = 0.0         ' Origin      - X
                 |         iPlaneDef(7) = 0.0         ' Origin      - Y
                 |         iPlaneDef(8) = 0.0         ' Origin      - Z
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim iPoints(6) as Double
@@ -299,7 +304,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPoints(3) = 2000.0      ' Point2 - X
                 |         iPoints(4) = 0.0         ' Point2 - Y
                 |         iPoints(5) = 0.0         ' Point2 - Z
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -308,7 +313,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create Collision free WalkBackward Activity on
                 |            Plane
                 |            Set oCreatedWalk = oHumActsFactory.CreateCollisionFreeWalkBwdOnPlane(iPrevAct,
@@ -319,7 +324,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |                                                                                 iClearance,
                 |                                                                                 iPoints)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -340,18 +345,18 @@ class HumanActivityGroupFactory(AnyObject):
                 i_num_points,
                 i_search_int,
                 i_clearence,
-                i_points
+                i_points,
             )
         )
 
     def create_collision_free_walk_fwd_on_arr_area(
-            self,
-            i_prev_act: Activity,
-            i_arr_area: Product,
-            i_num_points: int,
-            i_search_int: HTSSearchIntensity,
-            i_clearence: float,
-            i_points: tuple
+        self,
+        i_prev_act: Activity,
+        i_arr_area: Product,
+        i_num_points: int,
+        i_search_int: HTSSearchIntensity,
+        i_clearence: float,
+        i_points: tuple,
     ) -> CollisionFreeWalk:
         """
         .. note::
@@ -365,32 +370,32 @@ class HumanActivityGroupFactory(AnyObject):
                 | HTSSearchIntensity iSearchInt,
                 | double iClearence,
                 | CATSafeArrayVariant iPoints) As CollisionFreeWalk
-                | 
+                |
                 |     Returns newly created Collision free Walk Forward
                 |     Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             Previous Activity 
+                |             Previous Activity
                 |         iArrArea
-                |             Arrangment Area - Plane of Walk 
+                |             Arrangment Area - Plane of Walk
                 |         iNumPoints
-                |             Number of Coplanar-Points defining the Walk Path 
+                |             Number of Coplanar-Points defining the Walk Path
                 |         iSearchInt
-                |             (see 
-                | 
-                |         HTSSearchIntensity for list of possible values) 
+                |             (see
+                |
+                |         HTSSearchIntensity for list of possible values)
                 |     iClearance
                 |         The clearance value to be used for detecting collision between objects
-                |         
+                |
                 |     iPoints
                 |         Point values x1,y1,z1 , x2,y2,z2, .... in iArrArea coordinates
-                |         
+                |
                 |     Returns:
-                |         oCreatedWalk Newly created WalkActivity 
+                |         oCreatedWalk Newly created WalkActivity
                 |     Example:
-                | 
+                |
                 |              This example creates Collision free WalkForward Activity on
                 |              Arrangement Area
                 |
@@ -399,20 +404,20 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Dim pprprodsProdList As PPRProducts
                 |         Dim prodAreasFather As Product
                 |         Dim prodAreaFathersChildren As Products
-                | 
+                |
                 |         Set oPPRDoc = DELMIA.ActiveDocument.PPRDocument
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Set prodAreasFather = pprprodsProdList.Item(1)
                 |         Set prodAreaFathersChildren = prodAreasFather.Products
-                | 
+                |
                 |         Dim iArrArea As Product
                 |         Set iArrArea = prodAreaFathersChildren.GetItem("Area1.1")
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim iPoints(6) as Double
@@ -422,7 +427,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPoints(3) = 2000.0      ' Point2 - X
                 |         iPoints(4) = 0.0         ' Point2 - Y
                 |         iPoints(5) = 0.0         ' Point2 - Z
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -435,12 +440,12 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iClearance = 170
                 |         Dim iSearchInt as Long
                 |         iSearchInt = 1
-                | 
+                |
                 |            ' Create Collision free WalkForward Activity on Arrangement
                 |            area
-                |            Set oCreatedWalk = oHumActsFactory.CreateCollisionFreeWalkFwdOnArrArea(iPrevAct, iArrArea, iNumPoints, iSearchInt, iClearance, iPoints) 
+                |            Set oCreatedWalk = oHumActsFactory.CreateCollisionFreeWalkFwdOnArrArea(iPrevAct, iArrArea, iNumPoints, iSearchInt, iClearance, iPoints)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -459,19 +464,19 @@ class HumanActivityGroupFactory(AnyObject):
                 i_num_points,
                 i_search_int,
                 i_clearence,
-                i_points
+                i_points,
             )
         )
 
     def create_collision_free_walk_fwd_on_plane(
-            self,
-            i_prev_act: Activity,
-            i_plane_prod: Product,
-            i_plane_def: tuple,
-            i_num_points: int,
-            i_search_int: HTSSearchIntensity,
-            i_clearence: float,
-            i_points: tuple
+        self,
+        i_prev_act: Activity,
+        i_plane_prod: Product,
+        i_plane_def: tuple,
+        i_num_points: int,
+        i_search_int: HTSSearchIntensity,
+        i_clearence: float,
+        i_points: tuple,
     ) -> CollisionFreeWalk:
         """
         .. note::
@@ -485,36 +490,36 @@ class HumanActivityGroupFactory(AnyObject):
                 | HTSSearchIntensity iSearchInt,
                 | double iClearence,
                 | CATSafeArrayVariant iPoints) As CollisionFreeWalk
-                | 
+                |
                 |     Returns newly created Collision free Walk Forward Activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iPlaneProd
-                |             Handle to Walk plane product 
+                |             Handle to Walk plane product
                 |         iPlaneDef
                 |             Walk Plane definition - 9 doubles FirstAxis(i,j,k),
                 |             SecondAxis(i,j,k), OriginOfPlane(x,y,z) in iPlaneProd Coordinates
-                |             
+                |
                 |         iNumPoints
                 |             Number of Coplanar-Points defining the Walk Path in Plane
-                |             
+                |
                 |         iSearchInt
-                |             (see 
-                | 
-                |         HTSSearchIntensity for list of possible values) 
+                |             (see
+                |
+                |         HTSSearchIntensity for list of possible values)
                 |     iClearance
                 |         The clearance value to be used for detecting collision between objects
-                |         
+                |
                 |     iPoints
                 |         Point values x1,y1,z1 , x2,y2,z2, .... iPlaneDef coordinates
-                |         
+                |
                 |     Returns:
-                |         oCreatedWalk newly created WalkActivity 
+                |         oCreatedWalk newly created WalkActivity
                 |     Example:
-                | 
+                |
                 |              This example creates WalkForward Activity on Plane
                 |
                 |         ' From the ProductList get the Walk Plane product
@@ -524,9 +529,9 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Dim oPlaneProd As Product
                 |         Set oPlaneProd = pprprodsProdList.Item(2)
-                | 
+                |
                 |         ' Plane Definition.. w.r.to Product
-                | 
+                |
                 |         Dim iPlaneDef(9) as Double
                 |         iPlaneDef(0) = 1.0         ' First Axis  - i vec
                 |         iPlaneDef(1) = 0.0         ' First Axis  - j vec
@@ -537,12 +542,12 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPlaneDef(6) = 0.0         ' Origin      - X
                 |         iPlaneDef(7) = 0.0         ' Origin      - Y
                 |         iPlaneDef(8) = 0.0         ' Origin      - Z
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim iPoints(6) as Double
@@ -552,7 +557,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPoints(3) = 2000.0      ' Point2 - X
                 |         iPoints(4) = 0.0         ' Point2 - Y
                 |         iPoints(5) = 0.0         ' Point2 - Z
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -561,12 +566,12 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create Collision free WalkForward Activity on
                 |            Plane
-                |            Set oCreatedWalk = oHumActsFactory.CreateCollisionFreeWalkFwdOnPlane(iPrevAct, iPlaneProd, iPlaneDef, iNumPoints, iPoints) 
+                |            Set oCreatedWalk = oHumActsFactory.CreateCollisionFreeWalkFwdOnPlane(iPrevAct, iPlaneProd, iPlaneDef, iNumPoints, iPoints)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -587,7 +592,7 @@ class HumanActivityGroupFactory(AnyObject):
                 i_num_points,
                 i_search_int,
                 i_clearence,
-                i_points
+                i_points,
             )
         )
 
@@ -599,23 +604,23 @@ class HumanActivityGroupFactory(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateMoveToPosture(Activity iPrevAct) As
                 | MoveToPostureActivity
-                | 
+                |
                 |     Returns newly created MoveToPostureActivity.
                 |     Current posture of Manikin is set as joint-values for created
                 |     MoveToPostureActivity. Use MoveToPostureActivity APIs to change
                 |     joint-values.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
-                | 
+                |             previous activity
+                |
                 |     Returns:
                 |         oCreatedMTP newly created MoveToPostureActivity
                 |
                 |     Example:
-                | 
-                |              This example creates MoveToPosture Activity 
+                |
+                |              This example creates MoveToPosture Activity
                 |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
@@ -625,24 +630,26 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create MoveToPosture Activity
-                |            Set oCreatedMTP = oHumActsFactory.CreateMoveToPosture(iPrevAct) 
+                |            Set oCreatedMTP = oHumActsFactory.CreateMoveToPosture(iPrevAct)
                 |            ....
                 |            ....
 
         :param Activity i_prev_act:
         :rtype: MoveToPostureActivity
         """
-        return MoveToPostureActivity(self.human_activity_group_factory.CreateMoveToPosture(i_prev_act.com_object))
+        return MoveToPostureActivity(
+            self.human_activity_group_factory.CreateMoveToPosture(i_prev_act.com_object)
+        )
 
     def create_pick(
-            self,
-            i_prev_act: Activity,
-            i_pick_type: HTSPickType,
-            b_create_cst_with_picking_hand: bool,
-            i_picking_hand: int,
-            i_picked_products: tuple
+        self,
+        i_prev_act: Activity,
+        i_pick_type: HTSPickType,
+        b_create_cst_with_picking_hand: bool,
+        i_picking_hand: int,
+        i_picked_products: tuple,
     ) -> PickActivity:
         """
         .. note::
@@ -654,27 +661,27 @@ class HumanActivityGroupFactory(AnyObject):
                 | boolean bCreateCstWithPickingHand,
                 | HTSHand iPickingHand,
                 | CATSafeArrayVariant iPickedProducts) As PickActivity
-                | 
+                |
                 |     Returns newly created Pick Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iPickType
-                |             Pick Type: SINGLE_HAND or BOTH_HANDS 
+                |             Pick Type: SINGLE_HAND or BOTH_HANDS
                 |         bCreateCstWithPickingHand
                 |             Boolean flag to indicate whether constraint has to be created
-                |             between the picked object and picking hand 
+                |             between the picked object and picking hand
                 |         iPickingHand
-                |             picking hand: HAND_RIGHT or HAND_LEFT 
+                |             picking hand: HAND_RIGHT or HAND_LEFT
                 |         iPickedProducts
-                |             List of picked products 
-                | 
+                |             List of picked products
+                |
                 |     Returns:
-                |         oCreatedPick newly created PickActivity 
+                |         oCreatedPick newly created PickActivity
                 |     Example:
-                | 
+                |
                 |              This example creates Pick Activity
                 |
                 |         ' Get the Human Acts factory and Human Task List
@@ -697,7 +704,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Set iPickedProducts = pprprodsProdList.Item(2)
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create Pick Activity
                 |            Set oCreatePick = oHumActsFactory.CreatePick(iPrevAct,SINGLE_HAND, TRUE, HAND_RIGHT, iPickedProducts)
 
@@ -714,11 +721,13 @@ class HumanActivityGroupFactory(AnyObject):
                 i_pick_type,
                 b_create_cst_with_picking_hand,
                 i_picking_hand,
-                i_picked_products
+                i_picked_products,
             )
         )
 
-    def create_place(self, i_prev_act: Activity, i_picked_products: tuple, i_offset: tuple) -> PlaceActivity:
+    def create_place(
+        self, i_prev_act: Activity, i_picked_products: tuple, i_offset: tuple
+    ) -> PlaceActivity:
         """
         .. note::
             :class: toggle
@@ -727,15 +736,15 @@ class HumanActivityGroupFactory(AnyObject):
                 | o Func CreatePlace(Activity iPrevAct,
                 | CATSafeArrayVariant iPickedProducts,
                 | CATSafeArrayVariant iOffset) As PlaceActivity
-                | 
+                |
                 |     Returns newly created Place Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iPlacedProducts
-                |             List of products to be placed 
+                |             List of products to be placed
                 |         iPlaceOffset
                 |             Offset to be maintainted between the placing hand and the object.
                 |             The offset has to be specified as the relative trnsformation between the
@@ -755,11 +764,11 @@ class HumanActivityGroupFactory(AnyObject):
                 |             R1z:x-component of z axis
                 |             R2z:y-component of z axis
                 |             R3z:z-component of z axis
-                | 
+                |
                 |     Returns:
-                |         oCreatedPlace Newly created PlaceActivity 
+                |         oCreatedPlace Newly created PlaceActivity
                 |     Example:
-                | 
+                |
                 |              This example creates Place Activity
                 |
                 |         ' Get the Human Acts factory and Human Task List
@@ -780,7 +789,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |          'Example of 45 degree rotation around the x-axis of placing
                 |          hand
                 |         Dim iPlaceOffset(12) As Double ' 12 doubles - 0 to 11; relative
-                |         transformation between hand and object 
+                |         transformation between hand and object
                 |         ' X axis rotation component
                 |         iPlaceOffset( 0 )  = 1
                 |         iPlaceOffset( 3 )  = 0
@@ -799,7 +808,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPlaceOffset( 10 )  = 0
                 |         iPlaceOffset( 11 )  = 0
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create Place Activity
                 |            Set oCreatedPlace = oHumActsFactory.CreatePlace(iPrevAct,iPickedProducts, iPlaceOffset);
 
@@ -810,18 +819,16 @@ class HumanActivityGroupFactory(AnyObject):
         """
         return PlaceActivity(
             self.human_activity_group_factory.CreatePlace(
-                i_prev_act.com_object,
-                i_picked_products,
-                i_offset
+                i_prev_act.com_object, i_picked_products, i_offset
             )
         )
 
     def create_side_step_on_arr_area(
-            self,
-            i_prev_act: Activity,
-            i_arr_area: Product,
-            i_start_pt: tuple,
-            i_end_pt: tuple
+        self,
+        i_prev_act: Activity,
+        i_arr_area: Product,
+        i_start_pt: tuple,
+        i_end_pt: tuple,
     ) -> WalkActivity:
         """
         .. note::
@@ -832,37 +839,37 @@ class HumanActivityGroupFactory(AnyObject):
                 | Product iArrArea,
                 | CATSafeArrayVariant iStartPt,
                 | CATSafeArrayVariant iEndPt) As WalkActivity
-                | 
+                |
                 |     Returns newly created Side-Step Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iArrArea
-                |             Arrangment Area - Plane of Walk 
+                |             Arrangment Area - Plane of Walk
                 |         iStartPt
-                |             Start Point - x,y,z in iArrArea coordinates 
+                |             Start Point - x,y,z in iArrArea coordinates
                 |         iEndPt
-                |             End Point - x,y,z in iArrArea coordinates 
-                | 
+                |             End Point - x,y,z in iArrArea coordinates
+                |
                 |     Returns:
                 |         oCreatedWalk newly created WalkActivity
-                | 
+                |
                 |         ' From the ProductList get the Arrangement Area
                 |         Dim oPPRDoc As PPRDocument
                 |         Dim pprprodsProdList As PPRProducts
                 |         Dim prodAreasFather As Product
                 |         Dim prodAreaFathersChildren As Products
-                | 
+                |
                 |         Set oPPRDoc = DELMIA.ActiveDocument.PPRDocument
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Set prodAreasFather = pprprodsProdList.Item(1)
                 |         Set prodAreaFathersChildren = prodAreasFather.Products
-                | 
+                |
                 |         Dim iArrArea As Product
                 |         Set iArrArea = prodAreaFathersChildren.GetItem("Area1.1")
-                | 
+                |
                 |         ' Specify the Start and End  points for the side step walk
                 |         activity
                 |         Dim iStart(3) as Double
@@ -873,7 +880,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iEnd(0) = 2000
                 |         iEnd(1) = 0
                 |         iEnd(2) = 0.0
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -882,9 +889,9 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create SideStep Activity on Arrangement area
-                |            oCreatedWalk = oHumActsFactory.CreateSideStepOnArrArea(iPrevAct, iArrArea, iStartPt, iEndPt) 
+                |            oCreatedWalk = oHumActsFactory.CreateSideStepOnArrArea(iPrevAct, iArrArea, iStartPt, iEndPt)
                 |         ' Generate constituting MTPs
                 |         oCreatedWalk.Update
 
@@ -896,20 +903,17 @@ class HumanActivityGroupFactory(AnyObject):
         """
         return WalkActivity(
             self.human_activity_group_factory.CreateSideStepOnArrArea(
-                i_prev_act.com_object,
-                i_arr_area.com_object,
-                i_start_pt,
-                i_end_pt
+                i_prev_act.com_object, i_arr_area.com_object, i_start_pt, i_end_pt
             )
         )
 
     def create_side_step_on_plane(
-            self,
-            i_prev_act: Activity,
-            i_plane_prod: Product,
-            i_plane_def: tuple,
-            i_start_pt: tuple,
-            i_end_pt: tuple
+        self,
+        i_prev_act: Activity,
+        i_plane_prod: Product,
+        i_plane_def: tuple,
+        i_start_pt: tuple,
+        i_end_pt: tuple,
     ) -> WalkActivity:
         """
         .. note::
@@ -921,29 +925,29 @@ class HumanActivityGroupFactory(AnyObject):
                 | CATSafeArrayVariant iPlaneDef,
                 | CATSafeArrayVariant iStartPt,
                 | CATSafeArrayVariant iEndPt) As WalkActivity
-                | 
+                |
                 |     Returns newly created Side-Step Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iPlaneProd
-                |             Handle to Product 
+                |             Handle to Product
                 |         iPlaneDef
                 |             Walk Plane definition - 9 doubles FirstAxis(i,j,k),
                 |             SecondAxis(i,j,k), OriginOfPlane(x,y,z) in oCGRProd Coordinates
-                |             
+                |
                 |         iStartPt
-                |             Start Point - x,y,z in iPlaneDef coordinates 
+                |             Start Point - x,y,z in iPlaneDef coordinates
                 |         iEndPt
-                |             End Point - x,y,z in iPlaneDef coordinates 
-                | 
+                |             End Point - x,y,z in iPlaneDef coordinates
+                |
                 |     Returns:
-                |         oCreatedWalk newly created WalkActivity 
+                |         oCreatedWalk newly created WalkActivity
                 |     Example:
-                | 
-                |              This example creates SideStep Activity on Plane 
+                |
+                |              This example creates SideStep Activity on Plane
                 |
                 |         ' From the ProductList get the Walk Plane product
                 |         Dim oPPRDoc As PPRDocument
@@ -952,9 +956,9 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Dim oPlaneProd As Product
                 |         Set oPlaneProd = pprprodsProdList.Item(2)
-                | 
+                |
                 |         ' Plane Definition.. w.r.to Product
-                | 
+                |
                 |         Dim adPlaneDef(9) as Double
                 |         adPlaneDef(0) = 1.0         ' First Axis  - i vec
                 |         adPlaneDef(1) = 0.0         ' First Axis  - j vec
@@ -965,12 +969,12 @@ class HumanActivityGroupFactory(AnyObject):
                 |         adPlaneDef(6) = 0.0         ' Origin      - X
                 |         adPlaneDef(7) = 0.0         ' Origin      - Y
                 |         adPlaneDef(8) = 0.0         ' Origin      - Z
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim adStart(3) as Double
@@ -981,7 +985,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         adEnd(0) = 2000
                 |         adEnd(1) = 0
                 |         adEnd(2) = 0.0
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -990,11 +994,11 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create SideStep Activity on Plane
-                |            oCreatedWalk = oHumActsFactory.CreateSideStepOnPlane(iPrevAct, iPlaneProd, iPlaneDef, iStartPt, iEndPt) 
+                |            oCreatedWalk = oHumActsFactory.CreateSideStepOnPlane(iPrevAct, iPlaneProd, iPlaneDef, iStartPt, iEndPt)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -1011,16 +1015,16 @@ class HumanActivityGroupFactory(AnyObject):
                 i_plane_prod.com_object,
                 i_plane_def,
                 i_start_pt,
-                i_end_pt
+                i_end_pt,
             )
         )
 
     def create_walk_bwd_on_arr_area(
-            self,
-            i_prev_act: Activity,
-            i_arr_area: Product,
-            i_num_points: int,
-            i_points: tuple
+        self,
+        i_prev_act: Activity,
+        i_arr_area: Product,
+        i_num_points: int,
+        i_points: tuple,
     ) -> WalkActivity:
         """
         .. note::
@@ -1031,25 +1035,25 @@ class HumanActivityGroupFactory(AnyObject):
                 | Product iArrArea,
                 | long iNumPoints,
                 | CATSafeArrayVariant iPoints) As WalkActivity
-                | 
+                |
                 |     Returns newly created Walk Backward Activity on Arrangement
                 |     Area.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iArrArea
-                |             Arrangment Area - Plane of Walk 
+                |             Arrangment Area - Plane of Walk
                 |         iNumPoints
-                |             Number of Coplanar-Points defining the Walk Path 
+                |             Number of Coplanar-Points defining the Walk Path
                 |         iPoints
                 |             Point values x1,y1,z1 , x2,y2,z2, .... in iArrArea coordinates
                 |
                 |     Returns:
-                |         oCreatedWalk newly created WalkActivity 
+                |         oCreatedWalk newly created WalkActivity
                 |     Example:
-                | 
+                |
                 |              This example creates WalkBackward Activity on Arrangement
                 |              Area
                 |
@@ -1058,20 +1062,20 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Dim pprprodsProdList As PPRProducts
                 |         Dim prodAreasFather As Product
                 |         Dim prodAreaFathersChildren As Products
-                | 
+                |
                 |         Set oPPRDoc = DELMIA.ActiveDocument.PPRDocument
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Set prodAreasFather = pprprodsProdList.Item(1)
                 |         Set prodAreaFathersChildren = prodAreasFather.Products
-                | 
+                |
                 |         Dim iArrArea As Product
                 |         Set iArrArea = prodAreaFathersChildren.GetItem("Area1.1")
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim iPoints(6) as Double
@@ -1081,7 +1085,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPoints(3) = 2000.0      ' Point2 - X
                 |         iPoints(4) = 0.0         ' Point2 - Y
                 |         iPoints(5) = 0.0         ' Point2 - Z
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -1090,11 +1094,11 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create WalkBackward Activity on Arrangement area
-                |            Set oCreatedWalk = oHumActsFactory.CreateWalkBwdOnArrArea(iPrevAct, iArrArea, iNumPoints, iPoints) 
+                |            Set oCreatedWalk = oHumActsFactory.CreateWalkBwdOnArrArea(iPrevAct, iArrArea, iNumPoints, iPoints)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -1106,20 +1110,17 @@ class HumanActivityGroupFactory(AnyObject):
         """
         return WalkActivity(
             self.human_activity_group_factory.CreateWalkBwdOnArrArea(
-                i_prev_act.com_object,
-                i_arr_area.com_object,
-                i_num_points,
-                i_points
+                i_prev_act.com_object, i_arr_area.com_object, i_num_points, i_points
             )
         )
 
     def create_walk_bwd_on_plane(
-            self,
-            i_prev_act: Activity,
-            i_plane_prod: Product,
-            i_plane_def: tuple,
-            i_num_points: int,
-            i_points: tuple
+        self,
+        i_prev_act: Activity,
+        i_plane_prod: Product,
+        i_plane_def: tuple,
+        i_num_points: int,
+        i_points: tuple,
     ) -> WalkActivity:
         """
         .. note::
@@ -1131,30 +1132,30 @@ class HumanActivityGroupFactory(AnyObject):
                 | CATSafeArrayVariant iPlaneDef,
                 | long iNumPoints,
                 | CATSafeArrayVariant iPoints) As WalkActivity
-                | 
+                |
                 |     Returns newly created Walk Backward Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iPlaneProd
-                |             Handle to Product 
+                |             Handle to Product
                 |         iPlaneDef
                 |             Walk Plane definition - 9 doubles FirstAxis(i,j,k),
                 |             SecondAxis(i,j,k), OriginOfPlane(x,y,z) in iPlaneProd Coordinates
-                |             
+                |
                 |         iNumPoints
                 |             Number of Coplanar-Points defining the Walk Path in Plane
-                |             
+                |
                 |         iPoints
                 |             Point values x1,y1,z1 , x2,y2,z2, .... iPlaneDef coordinates
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         oCreatedWalk newly created WalkActivity 
+                |         oCreatedWalk newly created WalkActivity
                 |     Example:
-                | 
+                |
                 |         This example creates WalkBackward Activity on Plane
                 |
                 |         ' From the ProductList get the Walk Plane product
@@ -1164,9 +1165,9 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Dim oPlaneProd As Product
                 |         Set oPlaneProd = pprprodsProdList.Item(2)
-                | 
+                |
                 |         ' Plane Definition.. w.r.to Product
-                | 
+                |
                 |         Dim iPlaneDef(9) as Double
                 |         iPlaneDef(0) = 1.0         ' First Axis  - i vec
                 |         iPlaneDef(1) = 0.0         ' First Axis  - j vec
@@ -1177,12 +1178,12 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPlaneDef(6) = 0.0         ' Origin      - X
                 |         iPlaneDef(7) = 0.0         ' Origin      - Y
                 |         iPlaneDef(8) = 0.0         ' Origin      - Z
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim iPoints(6) as Double
@@ -1192,7 +1193,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPoints(3) = 2000.0      ' Point2 - X
                 |         iPoints(4) = 0.0         ' Point2 - Y
                 |         iPoints(5) = 0.0         ' Point2 - Z
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -1201,11 +1202,11 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create WalkBackward Activity on Plane
-                |            Set oCreatedWalk = oHumActsFactory.CreateWalkBwdOnPlane(iPrevAct, iPlaneProd, iPlaneDef, iNumPoints, iPoints) 
+                |            Set oCreatedWalk = oHumActsFactory.CreateWalkBwdOnPlane(iPrevAct, iPlaneProd, iPlaneDef, iNumPoints, iPoints)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -1222,16 +1223,16 @@ class HumanActivityGroupFactory(AnyObject):
                 i_plane_prod.com_object,
                 i_plane_def,
                 i_num_points,
-                i_points
+                i_points,
             )
         )
 
     def create_walk_fwd_on_arr_area(
-            self,
-            i_prev_act: Activity,
-            i_arr_area: Product,
-            i_num_points: int,
-            i_points: tuple
+        self,
+        i_prev_act: Activity,
+        i_arr_area: Product,
+        i_num_points: int,
+        i_points: tuple,
     ) -> WalkActivity:
         """
         .. note::
@@ -1242,17 +1243,17 @@ class HumanActivityGroupFactory(AnyObject):
                 | Product iArrArea,
                 | long iNumPoints,
                 | CATSafeArrayVariant iPoints) As WalkActivity
-                | 
+                |
                 |     Returns newly created Walk Forward Activity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iArrArea
-                |             Arrangment Area - Plane of Walk 
+                |             Arrangment Area - Plane of Walk
                 |         iNumPoints
-                |             Number of Coplanar-Points defining the Walk Path 
+                |             Number of Coplanar-Points defining the Walk Path
                 |         iPoints
                 |             Point values x1,y1,z1 , x2,y2,z2, .... in iArrArea coordinates
                 |
@@ -1260,7 +1261,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         oCreatedWalk newly created WalkActivity
                 |
                 |     Example:
-                | 
+                |
                 |              This example creates WalkForward Activity on Arrangement
                 |              Area
                 |
@@ -1269,20 +1270,20 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Dim pprprodsProdList As PPRProducts
                 |         Dim prodAreasFather As Product
                 |         Dim prodAreaFathersChildren As Products
-                | 
+                |
                 |         Set oPPRDoc = DELMIA.ActiveDocument.PPRDocument
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Set prodAreasFather = pprprodsProdList.Item(1)
                 |         Set prodAreaFathersChildren = prodAreasFather.Products
-                | 
+                |
                 |         Dim iArrArea As Product
                 |         Set iArrArea = prodAreaFathersChildren.GetItem("Area1.1")
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim iPoints(6) as Double
@@ -1292,7 +1293,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPoints(3) = 2000.0      ' Point2 - X
                 |         iPoints(4) = 0.0         ' Point2 - Y
                 |         iPoints(5) = 0.0         ' Point2 - Z
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -1301,11 +1302,11 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create WalkForward Activity on Arrangement area
-                |            Set oCreatedWalk = oHumActsFactory.CreateWalkFwdOnArrArea(iPrevAct, iArrArea, iNumPoints, iPoints) 
+                |            Set oCreatedWalk = oHumActsFactory.CreateWalkFwdOnArrArea(iPrevAct, iArrArea, iNumPoints, iPoints)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -1317,20 +1318,17 @@ class HumanActivityGroupFactory(AnyObject):
         """
         return WalkActivity(
             self.human_activity_group_factory.CreateWalkFwdOnArrArea(
-                i_prev_act.com_object,
-                i_arr_area.com_object,
-                i_num_points,
-                i_points
+                i_prev_act.com_object, i_arr_area.com_object, i_num_points, i_points
             )
         )
 
     def create_walk_fwd_on_plane(
-            self,
-            i_prev_act: Activity,
-            i_plane_prod: Product,
-            i_plane_def: tuple,
-            i_num_points: int,
-            i_points: tuple
+        self,
+        i_prev_act: Activity,
+        i_plane_prod: Product,
+        i_plane_def: tuple,
+        i_num_points: int,
+        i_points: tuple,
     ) -> WalkActivity:
         """
         .. note::
@@ -1342,29 +1340,29 @@ class HumanActivityGroupFactory(AnyObject):
                 | CATSafeArrayVariant iPlaneDef,
                 | long iNumPoints,
                 | CATSafeArrayVariant iPoints) As WalkActivity
-                | 
+                |
                 |     Returns newly created Walk Forward Activity
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPrevAct
-                |             previous activity 
+                |             previous activity
                 |         iPlaneProd
-                |             Handle to Walk plane product 
+                |             Handle to Walk plane product
                 |         iPlaneDef
                 |             Walk Plane definition - 9 doubles FirstAxis(i,j,k),
                 |             SecondAxis(i,j,k), OriginOfPlane(x,y,z) in iPlaneProd Coordinates
-                |             
+                |
                 |         iNumPoints
                 |             Number of Coplanar-Points defining the Walk Path in Plane
-                |             
+                |
                 |         iPoints
                 |             Point values x1,y1,z1 , x2,y2,z2, .... iPlaneDef coordinates
                 |
                 |     Returns:
-                |         oCreatedWalk newly created WalkActivity 
+                |         oCreatedWalk newly created WalkActivity
                 |     Example:
-                | 
+                |
                 |              This example creates WalkForward Activity on Plane
                 |
                 |         ' From the ProductList get the Walk Plane product
@@ -1374,9 +1372,9 @@ class HumanActivityGroupFactory(AnyObject):
                 |         Set pprprodsProdList = oPPRDoc.Products
                 |         Dim oPlaneProd As Product
                 |         Set oPlaneProd = pprprodsProdList.Item(2)
-                | 
+                |
                 |         ' Plane Definition.. w.r.to Product
-                | 
+                |
                 |         Dim iPlaneDef(9) as Double
                 |         iPlaneDef(0) = 1.0         ' First Axis  - i vec
                 |         iPlaneDef(1) = 0.0         ' First Axis  - j vec
@@ -1387,12 +1385,12 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPlaneDef(6) = 0.0         ' Origin      - X
                 |         iPlaneDef(7) = 0.0         ' Origin      - Y
                 |         iPlaneDef(8) = 0.0         ' Origin      - Z
-                | 
+                |
                 |         ' Specify the number of coplanar points defining the walk
                 |         path
                 |         Dim iNumPoints as Long
                 |         iNumPoints = 2
-                | 
+                |
                 |         ' Specify the point values for the walk path in oArrArea
                 |         co-ordinates
                 |         Dim iPoints(6) as Double
@@ -1402,7 +1400,7 @@ class HumanActivityGroupFactory(AnyObject):
                 |         iPoints(3) = 2000.0      ' Point2 - X
                 |         iPoints(4) = 0.0         ' Point2 - Y
                 |         iPoints(5) = 0.0         ' Point2 - Z
-                | 
+                |
                 |            ' Get the Human Acts factory
                 |         Dim oHumActsFactory As HumanActsFactory
                 |            Dim oHumanTask As HumanTask
@@ -1411,11 +1409,11 @@ class HumanActivityGroupFactory(AnyObject):
                 |            ....
                 |            ....
                 |            Set oHumActsFactory = oHumanTask.GetTechnologicalObject("HumanActsFactory")
-                | 
+                |
                 |            ' Create WalkForward Activity on Plane
-                |            Set oCreatedWalk = oHumActsFactory.CreateWalkFwdOnPlane(iPrevAct, iPlaneProd, iPlaneDef, iNumPoints, iPoints) 
+                |            Set oCreatedWalk = oHumActsFactory.CreateWalkFwdOnPlane(iPrevAct, iPlaneProd, iPlaneDef, iNumPoints, iPoints)
                 |         ' Generate constituting MTPs
-                |         oCreatedWalk.Update 
+                |         oCreatedWalk.Update
                 |            ....
                 |            ....
 
@@ -1432,7 +1430,7 @@ class HumanActivityGroupFactory(AnyObject):
                 i_plane_prod.com_object,
                 i_plane_def,
                 i_num_points,
-                i_points
+                i_points,
             )
         )
 

@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_str_functional_interfaces.sfm_member import SFMMember
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.length import Length
@@ -15,26 +16,26 @@ from pycatia.knowledge_interfaces.length import Length
 
 class SFMMemberSurfSurf(SFMMember):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATStrFunctionalInterfaces.SfmObject
-                |                         CATStrFunctionalInterfaces.SfmProfile
-                |                            CATStrFunctionalInterfaces.SfmMember
-                |                                 SfmMemberSurfSurf
-                | 
-                | Interface to manage Member created by the intersection of two
-                | surfaces.
-                | Role: To manage member created by the intersection of two
-                | surfaces.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATStrFunctionalInterfaces.SfmObject
+            |                         CATStrFunctionalInterfaces.SfmProfile
+            |                            CATStrFunctionalInterfaces.SfmMember
+            |                                 SfmMemberSurfSurf
+            |
+            | Interface to manage Member created by the intersection of two
+            | surfaces.
+            | Role: To manage member created by the intersection of two
+            | surfaces.
+
     """
 
     def __init__(self, com_object):
@@ -49,13 +50,13 @@ class SFMMemberSurfSurf(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FirstSurface() As Reference
-                | 
+                |
                 |     Returns or sets the SuperMember's first surface.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in FirstSurface the first surface of the
                 |         SuperMember feature.
-                | 
+                |
                 |          Dim Surface As Reference
                 |          Set Surface = SuperMember.FirstSurface
 
@@ -80,13 +81,13 @@ class SFMMemberSurfSurf(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FirstSurfaceOffset() As double
-                | 
+                |
                 |     Returns or sets the SuperMember's first surface offset.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Offset the first surface offset of the
                 |         SuperMember feature.
-                | 
+                |
                 |          Dim Offset As Double
                 |          Set Offset = SuperMember.FirstSurfaceOffset
 
@@ -125,14 +126,14 @@ class SFMMemberSurfSurf(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FirstSurfaceOrientation() As long
-                | 
+                |
                 |     Returns or sets the SuperMember's first surface
                 |     orientation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Orient the first surface orientation for
                 |         SuperMember feature.
-                | 
+                |
                 |          Dim Orient As Integer
                 |          Set Orient = SuperMember.FirstSurfaceOrientation
 
@@ -157,13 +158,13 @@ class SFMMemberSurfSurf(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SecondSurface() As Reference
-                | 
+                |
                 |     Returns the SuperMember's second surface.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Surface the second surface of the SuperMember
                 |         feature.
-                | 
+                |
                 |          Dim Surface As Reference
                 |          Set Surface = SuperMember.SecondSurface
 
@@ -188,13 +189,13 @@ class SFMMemberSurfSurf(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SecondSurfaceOffset() As double
-                | 
+                |
                 |     Returns or sets the SuperMember's second surface offset.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Offset the second surface offset of the
                 |         SuperMember feature.
-                | 
+                |
                 |          Dim Offset As Double
                 |          Set Offset = SuperMember.SecondSurfaceOffset
 
@@ -233,14 +234,14 @@ class SFMMemberSurfSurf(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SecondSurfaceOrientation() As long
-                | 
+                |
                 |     Returns or sets the SuperMember's second surface
                 |     orientation.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Orient the second surface orientation for
                 |         SuperMember feature.
-                | 
+                |
                 |          Dim Orient As Integer
                 |          Set Orient = SuperMember.SecondSurfaceOrientation
 

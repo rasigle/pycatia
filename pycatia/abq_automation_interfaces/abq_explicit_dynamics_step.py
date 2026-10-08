@@ -1,15 +1,18 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import Incrementation_Type, FixedTimeIncrementMethod
-from pycatia.abq_automation_interfaces.abq_boundary_conditions import ABQBoundaryConditions
+from pycatia.abq_automation_interfaces.abq_boundary_conditions import (
+    ABQBoundaryConditions,
+)
 from pycatia.abq_automation_interfaces.abq_fields import ABQFields
 from pycatia.abq_automation_interfaces.abq_loads import ABQLoads
 from pycatia.abq_automation_interfaces.abq_step import ABQStep
@@ -17,24 +20,24 @@ from pycatia.abq_automation_interfaces.abq_step import ABQStep
 
 class ABQExplicitDynamicsStep(ABQStep):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQStep
-                |                         ABQExplicitDynamicsStep
-                | 
-                | Represents an Abaqus explicit dynamics step (ABQExplicitDynamicsStep)
-                | object.
-                | Role: Access an Abaqus explicit dynamics step object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQStep
+            |                         ABQExplicitDynamicsStep
+            |
+            | Represents an Abaqus explicit dynamics step (ABQExplicitDynamicsStep)
+            | object.
+            | Role: Access an Abaqus explicit dynamics step object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -50,11 +53,11 @@ class ABQExplicitDynamicsStep(ABQStep):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AutoTimeIncrementMethod() As
                 | AutoTimeIncrementMethod
-                | 
+                |
                 |     Sets or returns the automatic time increment estimator method. Applies only
                 |     when TimeIncrementationMethod is AUTO_INCREMENT.
-                | 
-                |       
+                |
+                |
                 |     Legal values:
                 |         ABQ_ATI_GLOBAL
                 |         ABQ_ATI_ELEMENT_BY_ELEMENT
@@ -82,15 +85,15 @@ class ABQExplicitDynamicsStep(ABQStep):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property BoundaryConditions() As ABQBoundaryConditions (Read
                 | Only)
-                | 
+                |
                 |     Returns the ABQBoundaryConditions container associated with the
                 |     step.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the ABQBoundaryConditions container
                 |         abqBCs.
-                | 
-                |          Dim abqStep As ABQExplicitDynamicsStep 
+                |
+                |          Dim abqStep As ABQExplicitDynamicsStep
                 |          Dim abqBCs As ABQBoundaryConditions
                 |          Set abqBCs = abqStep.BoundaryConditions
 
@@ -107,10 +110,10 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Description() As CATBSTR
-                | 
+                |
                 |     Sets or returns the description of the Abaqus explicit dynamics
                 |     step.
-                | 
+                |
                 |     Returns:
                 |         The description of the Abaqus explicit dynamics step.
 
@@ -135,14 +138,14 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Fields() As ABQFields (Read Only)
-                | 
+                |
                 |     Returns the ABQFields container associated with the step.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the ABQFields container
                 |         abqFields.
-                | 
-                |          Dim abqStep As ABQExplicitDynamicsStep 
+                |
+                |          Dim abqStep As ABQExplicitDynamicsStep
                 |          Dim abqFields As ABQFields
                 |          Set abqFields = abqStep.Fields
 
@@ -160,7 +163,7 @@ class ABQExplicitDynamicsStep(ABQStep):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FixedTimeIncrementMethod() As
                 | FixedTimeIncrementMethod
-                | 
+                |
                 |     Sets or returns the fixed time increment method. Applies only when
                 |     TimeIncrementationMethod is FIXED_INCREMENT. If the method is set to
                 |     ABQ_FTI_USER_DEFINED, the UserDefinedTimeIncrementValue property must be set to
@@ -187,14 +190,14 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Loads() As ABQLoads (Read Only)
-                | 
+                |
                 |     Returns the ABQLoads container associated with the step.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves the ABQLoads container
                 |         abqLoads:
-                | 
-                |          Dim abqStep As ABQExplicitDynamicsStep 
+                |
+                |          Dim abqStep As ABQExplicitDynamicsStep
                 |          Dim abqLoads As ABQLoads
                 |          Set abqLoads = abqStep.Loads
 
@@ -211,11 +214,11 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MaximumTimeIncrementLimit() As double
-                | 
+                |
                 |     Sets or returns the maximum time increment limit. Applies only when
                 |     TimeIncrementationMethod is AUTO_INCREMENT. Zero specifies that the maximum
                 |     time increment is unlimited.
-                | 
+                |
                 |     Returns:
                 |         The maximum time increment limit.
 
@@ -240,10 +243,10 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NLGeom() As boolean
-                | 
+                |
                 |     Sets or returns whether the geometry remains linear during the analysis. A
                 |     value of true indicates that the geometry remains linear.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether the geometry remains linear during the
                 |         analysis.
@@ -269,14 +272,14 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TimeIncrementationMethod() As Incrementation_Type
-                | 
+                |
                 |     Sets or returns the type of the incrementation during the
                 |     step.
-                | 
+                |
                 |     Returns:
                 |         The type of the incrementation
-                | 
-                |           
+                |
+                |
                 |         Legal values:
                 |           AUTO_INCREMENT
                 |           FIXED_INCREMENT
@@ -302,10 +305,10 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TimePeriod() As double
-                | 
+                |
                 |     Sets or returns the total time period of the Abaqus explicit dynamics
                 |     step.
-                | 
+                |
                 |     Returns:
                 |         The total time period of the Abaqus explicit dynamics step.
 
@@ -330,7 +333,7 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TimeScalingFactor() As double
-                | 
+                |
                 |     Sets or returns the time scaling factor.
 
         :rtype: float
@@ -354,7 +357,7 @@ class ABQExplicitDynamicsStep(ABQStep):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UserDefinedTimeIncrementValue() As double
-                | 
+                |
                 |     Sets or returns the user-defined time increment value. Applies only when
                 |     FixedTimeIncrementMethod is set to ABQ_FTI_USER_DEFINED.
 

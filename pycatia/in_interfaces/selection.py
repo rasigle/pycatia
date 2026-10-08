@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-03 17:02:05.216737
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-03 17:02:05.216737
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
 
 """
+
 from typing import Iterator
 
 from pywintypes import com_error
@@ -23,125 +24,125 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class Selection(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-03 17:02:05.216737)
+        CAA V5 Visual Basic Help (2020-07-03 17:02:05.216737)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     Selection
-                |
-                | Represents the selection.
-                | The Selection object contains the features the end user selected, usually with
-                | the mouse, and which are candidates as subjects for the next
-                | action.
-                |
-                | A feature possess parent objects in the specification tree (hierarchy). For
-                | example, the Pad below possess parent objects in the specification
-                | tree:
-                |
-                |    +--------+
-                |    !Product3!
-                |    +--------+
-                |        !
-                |        +- Product2 (Product2.1)
-                |        !     !
-                |        !     +- Product1 (Product1.1)
-                |        !           !
-                |        !           +- Part1 (Part1.1)
-                |        !                !
-                |        !                +- Part1
-                |        !                     !
-                |        !                     +- PartBody
-                |        !                           !
-                |        +------------------+
-                |        !                           +- Pad.1               ! Selected feature
-                |        !
-                |        !                                !
-                |        +------------------+
-                |        !                                +- Sketch.1
-                |        +- Part2 (Part2.1)
-                |
-                |
-                | For a given selected feature, its parent objects which are exposed to
-                | automation can be accessed through a recursive call to the AnyObject.Parent
-                | property. When a given feature is selected, there are three
-                | possibilities:
-                |
-                |     The feature is exposed to automation (a Pad for example, this is the common
-                |     case): the feature can be accessed by all Selection object
-                |     methods
-                |     The feature is not exposed to automation, but at least one of its parent
-                |     objects is exposed to automation (a DMU Navigator URL for example: the
-                |     Hyperlink is not exposed to automation, but the root Product, which contains
-                |     the Hyperlink, is exposed to automation):
-                |         no access is given to the feature through the Count2 and Item2 methods
-                |         of the Selection object
-                |         nevertheless, the first parent object of the feature, which is exposed
-                |         to automation (the root Product in our example) can be accessed through the
-                |         Item2 and Count2 methods
-                |         The Search, Delete, VisProperties, Copy, Cut, Paste and PasteSpecial
-                |         methods of the Selection object, take into account the
-                |         feature.
-                |         For example, if the user:
-                |             Puts a DMU Navigator URL in the clipboard
-                |             Runs a script calling the PasteSpecial method
-                |         then, during the paste, the DMU Navigator URL will be
-                |         pasted
-                |     The feature is not exposed to automation, and he has no parent object which
-                |     is exposed to automation (a ResourcesList object of a .CATProcess for
-                |     example):
-                |         no access is given to the feature through the Count2 and Item2 methods
-                |         of the Selection object
-                |         no access is given neither to any parent object of the feature through
-                |         the Item2 and Count2 methods
-                |         The Search, Delete, VisProperties, Copy, Cut, Paste and PasteSpecial
-                |         methods of the Selection object take into account the
-                |         feature.
-                |         For example, if the user:
-                |             Go to the "DPM - Process and Resource Definition"
-                |             workshop
-                |             Puts a ResourcesList object in the clipboard
-                |             Runs a script calling the Selection.PasteSpecial
-                |             method
-                |         then, during the paste, the ResourcesList object will be
-                |         pasted.
-                |
-                | Note: The Selection object can be accessed through the Document.Selection
-                | property . However, when the active window contains the tree described above,
-                | the Selection object to use is the one associated to the Product3 Document ,
-                | which can be accessed through the application of the Document.Selection to this
-                | document. You will, for example, determine the Selection object the following
-                | way:
-                |
-                |  Set ActiveProductDocument = CATIA.ActiveDocument
-                |  Set Product3 = ActiveProductDocument.Product
-                |  Set Product3Products = Product3.Products
-                |  Set Product2Dot1 = Product3Products.Item("Product2.1") : Set Product2 = Product2Dot1.ReferenceProduct
-                |  Set ProductDocument2 = Product2.Parent
-                |  Set Product2Products = Product2.Products
-                |  Set Product1Dot1 = Product2Products.Item("Product1.1") : Set Product1 = Product1Dot1.ReferenceProduct
-                |  Set ProductDocument1 = Product1.Parent
-                |  Set Product1Products = Product1.Products
-                |  Set Part1Dot1 = Product1Products.Item("Part1.1") : Set Part1 = Part1Dot1.ReferenceProduct
-                |  Set PartDocument1 = Part1.Parent
-                |  Set Selection = ActiveProductDocument.Selection
-                |
-                |
-                | Another Selection object, such as:
-                |
-                |  Set ProductDocument2Selection = ProductDocument2.Selection
-                |  Set ProductDocument1Selection = ProductDocument1.Selection
-                |  Set PartDocument1Selection = PartDocument1.Selection
-                |
-                |
-                | (lets take ProductDocument2Selection for example) can only be used if, among
-                | the different Window , there is at least one whose root Document is
-                | ProductDocument2 . Otherwise, results are unpredictable.
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     Selection
+            |
+            | Represents the selection.
+            | The Selection object contains the features the end user selected, usually with
+            | the mouse, and which are candidates as subjects for the next
+            | action.
+            |
+            | A feature possess parent objects in the specification tree (hierarchy). For
+            | example, the Pad below possess parent objects in the specification
+            | tree:
+            |
+            |    +--------+
+            |    !Product3!
+            |    +--------+
+            |        !
+            |        +- Product2 (Product2.1)
+            |        !     !
+            |        !     +- Product1 (Product1.1)
+            |        !           !
+            |        !           +- Part1 (Part1.1)
+            |        !                !
+            |        !                +- Part1
+            |        !                     !
+            |        !                     +- PartBody
+            |        !                           !
+            |        +------------------+
+            |        !                           +- Pad.1               ! Selected feature
+            |        !
+            |        !                                !
+            |        +------------------+
+            |        !                                +- Sketch.1
+            |        +- Part2 (Part2.1)
+            |
+            |
+            | For a given selected feature, its parent objects which are exposed to
+            | automation can be accessed through a recursive call to the AnyObject.Parent
+            | property. When a given feature is selected, there are three
+            | possibilities:
+            |
+            |     The feature is exposed to automation (a Pad for example, this is the common
+            |     case): the feature can be accessed by all Selection object
+            |     methods
+            |     The feature is not exposed to automation, but at least one of its parent
+            |     objects is exposed to automation (a DMU Navigator URL for example: the
+            |     Hyperlink is not exposed to automation, but the root Product, which contains
+            |     the Hyperlink, is exposed to automation):
+            |         no access is given to the feature through the Count2 and Item2 methods
+            |         of the Selection object
+            |         nevertheless, the first parent object of the feature, which is exposed
+            |         to automation (the root Product in our example) can be accessed through the
+            |         Item2 and Count2 methods
+            |         The Search, Delete, VisProperties, Copy, Cut, Paste and PasteSpecial
+            |         methods of the Selection object, take into account the
+            |         feature.
+            |         For example, if the user:
+            |             Puts a DMU Navigator URL in the clipboard
+            |             Runs a script calling the PasteSpecial method
+            |         then, during the paste, the DMU Navigator URL will be
+            |         pasted
+            |     The feature is not exposed to automation, and he has no parent object which
+            |     is exposed to automation (a ResourcesList object of a .CATProcess for
+            |     example):
+            |         no access is given to the feature through the Count2 and Item2 methods
+            |         of the Selection object
+            |         no access is given neither to any parent object of the feature through
+            |         the Item2 and Count2 methods
+            |         The Search, Delete, VisProperties, Copy, Cut, Paste and PasteSpecial
+            |         methods of the Selection object take into account the
+            |         feature.
+            |         For example, if the user:
+            |             Go to the "DPM - Process and Resource Definition"
+            |             workshop
+            |             Puts a ResourcesList object in the clipboard
+            |             Runs a script calling the Selection.PasteSpecial
+            |             method
+            |         then, during the paste, the ResourcesList object will be
+            |         pasted.
+            |
+            | Note: The Selection object can be accessed through the Document.Selection
+            | property . However, when the active window contains the tree described above,
+            | the Selection object to use is the one associated to the Product3 Document ,
+            | which can be accessed through the application of the Document.Selection to this
+            | document. You will, for example, determine the Selection object the following
+            | way:
+            |
+            |  Set ActiveProductDocument = CATIA.ActiveDocument
+            |  Set Product3 = ActiveProductDocument.Product
+            |  Set Product3Products = Product3.Products
+            |  Set Product2Dot1 = Product3Products.Item("Product2.1") : Set Product2 = Product2Dot1.ReferenceProduct
+            |  Set ProductDocument2 = Product2.Parent
+            |  Set Product2Products = Product2.Products
+            |  Set Product1Dot1 = Product2Products.Item("Product1.1") : Set Product1 = Product1Dot1.ReferenceProduct
+            |  Set ProductDocument1 = Product1.Parent
+            |  Set Product1Products = Product1.Products
+            |  Set Part1Dot1 = Product1Products.Item("Part1.1") : Set Part1 = Part1Dot1.ReferenceProduct
+            |  Set PartDocument1 = Part1.Parent
+            |  Set Selection = ActiveProductDocument.Selection
+            |
+            |
+            | Another Selection object, such as:
+            |
+            |  Set ProductDocument2Selection = ProductDocument2.Selection
+            |  Set ProductDocument1Selection = ProductDocument1.Selection
+            |  Set PartDocument1Selection = PartDocument1.Selection
+            |
+            |
+            | (lets take ProductDocument2Selection for example) can only be used if, among
+            | the different Window , there is at least one whose root Document is
+            | ProductDocument2 . Otherwise, results are unpredictable.
 
     """
 
@@ -158,7 +159,7 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Count() As long (Read Only)
-                | 
+                |
                 |     Deprecated:
                 |         V5R16 #Count2 . The Count and Item Methods have been replaced by the
                 |         Count2 and Item2 methods because they did not process correctly features which
@@ -178,7 +179,7 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Count2() As long (Read Only)
-                | 
+                |
                 |     Returns the number of SelectedElement objects contained by the current
                 |     selection.
                 |     Role: This method returns the number of SelectedElement objects contained
@@ -198,7 +199,7 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property VisProperties() As VisPropertySet (Read Only)
-                | 
+                |
                 |     Manages graphic properties on current selection.
                 |     Role: Gives a VisPropertySet automation object so that graphic properties
                 |     of the selected objects can be read or modified.
@@ -207,11 +208,11 @@ class Selection(AnyObject):
                 |     automation will be updated. After the execution of the VisProperties methods
                 |     which consult the selection to give the graphic properties, selected features
                 |     which are not exposed to automation will be consulted.
-                | 
+                |
                 |     Example:
                 |         This example sets in no show all elements of the current
                 |         selection:
-                | 
+                |
                 |          Dim Selection,VisPropertySet
                 |          Set Selection = CATIA.ActiveDocument.Selection
                 |          Set VisPropertySet = Selection.VisProperties
@@ -229,15 +230,15 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Add(AnyObject iObject)
-                | 
+                |
                 |     Creates a SelectedElement object which Value property is the given
                 |     automation object, and adds it to the selection.
                 |     Note: In a product structure aggregating a "Part1 (Part1.1)" Part document,
                 |     if you double-clic Part1 in the spectification tree:
-                | 
+                |
                 |         the "Part Design" workbench becomes active
                 |         the Part1 node is inside a blue button
-                | 
+                |
                 |     Here, Part1 is the UI Active Object.
                 |     Some editors, such as CatalogDocument editors, do not possess any UI Active
                 |     Object.
@@ -266,12 +267,12 @@ class Selection(AnyObject):
                 |             Otherwise: the method will create a SelectedElement object
                 |             corresponding to the first path, in the specification tree, whose leaf node is
                 |             iLeafNode
-                | 
+                |
                 |     Example:
                 |         This example creates a SelectedElement object, which Value property is
                 |         the ObjectToAdd automation object, the SelectedElement being added to the
                 |         current selection.
-                | 
+                |
                 |          CATIA.ActiveDocument.Selection.Add(ObjectToAdd)
 
         :param AnyObject i_object:
@@ -286,13 +287,13 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Clear()
-                | 
+                |
                 |     Clears the selection.
-                | 
+                |
                 |     Example:
                 |         This example clears the selection. The selection is then
                 |         empty.
-                | 
+                |
                 |          CATIA.ActiveDocument.Selection.Clear()
 
         :rtype: None
@@ -306,7 +307,7 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Copy()
-                | 
+                |
                 |     Copies, in a copy and paste operation.
                 |     Role: Puts the contents of the selection in the clipboard, but leaves the
                 |     selected elements in the document, and clears the selection. This is the
@@ -314,20 +315,20 @@ class Selection(AnyObject):
                 |     menu.
                 |     Note: The method (and the script execution) fails if one of the following
                 |     errors occurs:
-                | 
+                |
                 |         The CSO is empty. The Copy operation could not be
                 |         performed.
                 |         No CSO element remains after the filtering through the UI active
                 |         object. The Copy operation could not be performed.
-                | 
+                |
                 |     Note: If a selected feature is not exposed to automation, it will be copied
                 |     into the clipboard all the way.
-                | 
+                |
                 |     Example:
                 |         This example copies, in a copy and paste operation. A selected DMU
                 |         Navigator URL will be put into the clipboard although it is not exposed to
                 |         automation.
-                | 
+                |
                 |          CATIA.ActiveDocument.Selection.Copy()
 
         :rtype: None
@@ -341,7 +342,7 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Cut()
-                | 
+                |
                 |     Cuts, in a cut and paste operation.
                 |     Role: Puts the contents of the selection in the clipboard, and removes the
                 |     selected elements from the document, and clears the selection. This is the
@@ -349,21 +350,21 @@ class Selection(AnyObject):
                 |     menu.
                 |     Note: The method (and the script execution) fails if one of the following
                 |     errors occurs:
-                | 
+                |
                 |         The CSO is empty. The Cut operation could not be
                 |         performed.
                 |         No CSO element remains after the filtering through the UI active
                 |         object. The Cut operation could not be performed.
-                | 
+                |
                 |     Note: If a selected feature is not exposed to automation, it will be copied
                 |     into the clipboard and removed from the document all the
                 |     way.
-                | 
+                |
                 |     Example:
                 |         This example cuts, in a cut and paste opertation. A selected DMU
                 |         Navigator URL will be put into the clipboard and removed from the document,
                 |         although it is not exposed to automation.
-                | 
+                |
                 |          CATIA.ActiveDocument.Selection.Cut()
 
         :rtype: None
@@ -377,19 +378,19 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Delete()
-                | 
+                |
                 |     Deletes all selected objects.
                 |     Role: For all the SelectedElement objects contained by the selection, the
                 |     SelectedElement.Value automation object is deleted from the
                 |     document.
                 |     Note: If a selected feature is not exposed to automation, it will deleted
                 |     all the way.
-                | 
+                |
                 |     Example:
                 |         This example deletes all the selected objects. A selected DMU Navigator
                 |         URL will be removed from the document, although it is not exposed to
                 |         automation.
-                | 
+                |
                 |          CATIA.ActiveDocument.Selection.Delete()
 
         :rtype: None
@@ -404,7 +405,7 @@ class Selection(AnyObject):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func FilterCorrespondence(CATSafeArrayVariant iFilterType) As
                 | boolean
-                | 
+                |
                 |     Specifies if the automation objects appearing as Value property of
                 |     SelectedElement objects fit a given filter.
                 |     Role: FilterCorrespondence filters the selection with respect to provided
@@ -569,7 +570,7 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func FindObject(CATBSTR iObjectType) As AnyObject
-                | 
+                |
                 |     Finds an object in the current selection and deletes it from the
                 |     selection.
                 |     Role: Determines the first automation object specified in
@@ -582,11 +583,11 @@ class Selection(AnyObject):
                 |     Note: If the string specified in input is he "CATIAProduct" string, the
                 |     possible automation object specified in SelectedElement.LeafProduct is also
                 |     looked at.
-                | 
+                |
                 |     Example:
                 |         This example searches a Pad object in the current selection and puts it
                 |         into FoundObject.
-                | 
+                |
                 |          Dim FoundObject As AnyObject
                 |          Set FoundObject = CATIA.ActiveDocument.Selection.FindObject("CATIAPad")
 
@@ -595,12 +596,14 @@ class Selection(AnyObject):
         """
         return AnyObject(self.selection.FindObject(i_object_type))
 
-    def indicate_or_select_element_2d(self,
-                                      i_message: str,
-                                      i_filter_type: tuple,
-                                      i_object_selection_before_command_use_possibility: bool,
-                                      i_tooltip: bool,
-                                      i_triggering_on_mouse_move: bool) -> str:
+    def indicate_or_select_element_2d(
+        self,
+        i_message: str,
+        i_filter_type: tuple,
+        i_object_selection_before_command_use_possibility: bool,
+        i_tooltip: bool,
+        i_triggering_on_mouse_move: bool,
+    ) -> str:
         """
         .. note::
             :class: toggle
@@ -738,8 +741,8 @@ class Selection(AnyObject):
         :param tuple o_document_window_location:
         :rtype: str
         """
-        vba_function_name = 'indicate_or_select_element_2d_2'
-        vba_code = f'''   
+        vba_function_name = "indicate_or_select_element_2d_2"
+        vba_code = f"""   
                     Public Function {vba_function_name}(selection, i_message, i_filterType, i_object_selection_before_command_use_possibility, i_tooltip, i_triggering_on_mouse_move)
                     Dim o_object_selected
                     Dim o_document_window_location (1)
@@ -750,31 +753,34 @@ class Selection(AnyObject):
                     o_output_state (2) = o_document_window_location
                     {vba_function_name} = o_output_state
                     End Function
-                    '''
+                    """
 
         system_service = self.application.system_service
-        result = system_service.evaluate(vba_code,
-                                         CatScriptLanguage.CATVBScriptLanguage,
-                                         vba_function_name,
-                                         [
-                                             self.selection,
-                                             i_message,
-                                             i_filter_type,
-                                             i_object_selection_before_command_use_possibility,
-                                             i_tooltip,
-                                             i_triggering_on_mouse_move
-                                         ]
-                                         )
+        result = system_service.evaluate(
+            vba_code,
+            CatScriptLanguage.CATVBScriptLanguage,
+            vba_function_name,
+            [
+                self.selection,
+                i_message,
+                i_filter_type,
+                i_object_selection_before_command_use_possibility,
+                i_tooltip,
+                i_triggering_on_mouse_move,
+            ],
+        )
 
         return result
 
-    def indicate_or_select_element_3d(self,
-                                      i_planar_geometric_object: AnyObject,
-                                      i_message: str,
-                                      i_filter_type: tuple,
-                                      i_object_selection_before_command_use_possibility: bool,
-                                      i_tooltip: bool,
-                                      i_triggering_on_mouse_move: bool) -> tuple:
+    def indicate_or_select_element_3d(
+        self,
+        i_planar_geometric_object: AnyObject,
+        i_message: str,
+        i_filter_type: tuple,
+        i_object_selection_before_command_use_possibility: bool,
+        i_tooltip: bool,
+        i_triggering_on_mouse_move: bool,
+    ) -> tuple:
         """
         .. note::
             :class: toggle
@@ -919,8 +925,8 @@ class Selection(AnyObject):
         :param bool i_triggering_on_mouse_move:
         :rtype: str
         """
-        vba_function_name = 'indicate_or_select_element_3d'
-        vba_code = f'''   
+        vba_function_name = "indicate_or_select_element_3d"
+        vba_code = f"""   
         Public Function {vba_function_name}(selection, i_planar_geometric_object, i_message, i_filterType, i_object_selection_before_command_use_possibility, i_tooltip, i_triggering_on_mouse_move)
         Dim o_object_selected
         Dim o_window_location_2d (1)
@@ -932,7 +938,7 @@ class Selection(AnyObject):
         o_output_state (3) = o_window_location_3d
         {vba_function_name} = o_output_state
         End Function
-        '''
+        """
 
         system_service = self.application.system_service
         result = system_service.evaluate(
@@ -942,12 +948,12 @@ class Selection(AnyObject):
             [
                 self.selection,
                 i_planar_geometric_object.com_object,
-                i_message, i_filter_type,
+                i_message,
+                i_filter_type,
                 i_object_selection_before_command_use_possibility,
                 i_tooltip,
-                i_triggering_on_mouse_move
-
-            ]
+                i_triggering_on_mouse_move,
+            ],
         )
 
         return result
@@ -959,7 +965,7 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func Item(long iIndex) As SelectedElement
-                | 
+                |
                 |     Deprecated:
                 |         V5R16 #Item2 . The Count and Item Methods have been replaced by the
                 |         Count2 and Item2 methods because they did not process correctly features which
@@ -978,26 +984,26 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func Item2(long iIndex) As SelectedElement
-                | 
+                |
                 |     Returns the iIndex-th SelectedElement object contained by the current
                 |     selection.
                 |     Role: Returns the iIndex-th SelectedElement object contained by the current
                 |     Selection. The Value property of the SelectedElement object is an automation
                 |     object associated to a selected feature.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
-                |             The index of the 
-                | 
+                |             The index of the
+                |
                 |         SelectedElement object to return, 1≤iIndex≤Selection.Count2 .
-                |         
+                |
                 |     oSelectedElement
                 |         The SelectedElement object
                 |     Example:
-                | 
-                |           See the 
-                | 
+                |
+                |           See the
+                |
                 |     SelectElement3 method first example.
 
         :param int i_index:
@@ -1024,7 +1030,7 @@ class Selection(AnyObject):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub Paste()
-                | 
+                |
                 |     Puts the contents of the clipboard in the document at the indicated
                 |     location.
                 |     Role: After the execution of the Paste method, there may be, among the
@@ -1245,12 +1251,15 @@ class Selection(AnyObject):
             return self.selection.Search(i_string_bstr)
         except com_error:
             raise CATIAApplicationException(
-                f'The method Search failed with search string "{i_string_bstr}". Try changing your search string.')
+                f'The method Search failed with search string "{i_string_bstr}". Try changing your search string.'
+            )
 
-    def select_element2(self,
-                        i_filter_type: tuple,
-                        i_message: str,
-                        i_object_selection_before_command_use_possibility: bool) -> str:
+    def select_element2(
+        self,
+        i_filter_type: tuple,
+        i_message: str,
+        i_object_selection_before_command_use_possibility: bool,
+    ) -> str:
         """
         .. note::
             :class: toggle
@@ -1722,16 +1731,18 @@ class Selection(AnyObject):
 
         check_type(i_filter_type, tuple)
 
-        return self.selection.SelectElement2(i_filter_type,
-                                             i_message,
-                                             i_object_selection_before_command_use_possibility)
+        return self.selection.SelectElement2(
+            i_filter_type, i_message, i_object_selection_before_command_use_possibility
+        )
 
-    def select_element3(self,
-                        i_filter_type: tuple,
-                        i_message: str,
-                        i_object_selection_before_command_use_possibility: bool,
-                        i_multi_selection_mode: int,
-                        i_tooltip: bool) -> str:
+    def select_element3(
+        self,
+        i_filter_type: tuple,
+        i_message: str,
+        i_object_selection_before_command_use_possibility: bool,
+        i_multi_selection_mode: int,
+        i_tooltip: bool,
+    ) -> str:
         """
         .. note::
             :class: toggle
@@ -1908,17 +1919,21 @@ class Selection(AnyObject):
 
         check_type(i_filter_type, tuple)
 
-        return self.selection.SelectElement3(i_filter_type,
-                                             i_message,
-                                             i_object_selection_before_command_use_possibility,
-                                             i_multi_selection_mode,
-                                             i_tooltip)
+        return self.selection.SelectElement3(
+            i_filter_type,
+            i_message,
+            i_object_selection_before_command_use_possibility,
+            i_multi_selection_mode,
+            i_tooltip,
+        )
 
-    def select_element4(self,
-                        i_filter_type: tuple,
-                        i_active_document_message: str,
-                        i_non_active_document_message: str,
-                        i_tooltip: bool) -> tuple[str, Document]:
+    def select_element4(
+        self,
+        i_filter_type: tuple,
+        i_active_document_message: str,
+        i_non_active_document_message: str,
+        i_tooltip: bool,
+    ) -> tuple[str, Document]:
         """
         .. note::
             :class: toggle
@@ -2048,11 +2063,12 @@ class Selection(AnyObject):
 
         check_type(i_filter_type, tuple)
 
-        return self.selection.SelectElement4(i_filter_type,
-                                             i_active_document_message,
-                                             i_non_active_document_message,
-                                             i_tooltip,
-                                             )
+        return self.selection.SelectElement4(
+            i_filter_type,
+            i_active_document_message,
+            i_non_active_document_message,
+            i_tooltip,
+        )
 
     def __len__(self):
 

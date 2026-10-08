@@ -1,46 +1,47 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import DNBSimInitStateAttr
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class SimulationInitState(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SimulationInitState
-                | 
-                | Interface used to save/restore the simulation initial state.
-                | 
-                | Role: This interface is used to save/restore the initial state for objects in
-                | the current document.
-                | The following code snippet can be used to save the simulation initial state for
-                | all the objects in the current document (all attributes). The rootProduct can
-                | be any product from the current document.
-                | 
-                |   Dim iMask
-                |   iMask = DNBAllInitStateAttr
-                | 
-                |   Dim iSimInitState As SimulationInitState
-                |   Set iSimInitState = rootProduct.GetTechnologicalObject("SimulationInitState")
-                |   iSimInitState.SaveInitialState iMask
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SimulationInitState
+            |
+            | Interface used to save/restore the simulation initial state.
+            |
+            | Role: This interface is used to save/restore the initial state for objects in
+            | the current document.
+            | The following code snippet can be used to save the simulation initial state for
+            | all the objects in the current document (all attributes). The rootProduct can
+            | be any product from the current document.
+            |
+            |   Dim iMask
+            |   iMask = DNBAllInitStateAttr
+            |
+            |   Dim iSimInitState As SimulationInitState
+            |   Set iSimInitState = rootProduct.GetTechnologicalObject("SimulationInitState")
+            |   iSimInitState.SaveInitialState iMask
+
     """
 
     def __init__(self, com_object):
@@ -54,19 +55,19 @@ class SimulationInitState(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RestoreInitialState(DNBSimInitStateAttr iAttrMask)
-                | 
+                |
                 |     Restores initial state attributes for all objects in the current document
                 |     that have a saved initial state.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrMask
                 |             Indicates which initial state attributes will be restored
                 |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The restore operation succeeded
                 |         E_FAIL
@@ -77,7 +78,9 @@ class SimulationInitState(AnyObject):
         """
         return self.simulation_init_state.RestoreInitialState(i_attr_mask)
 
-    def restore_initial_state_list(self, i_product_lists: tuple, i_attr_mask: int) -> None:
+    def restore_initial_state_list(
+        self, i_product_lists: tuple, i_attr_mask: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -86,22 +89,22 @@ class SimulationInitState(AnyObject):
                 | o Sub RestoreInitialStateList(CATSafeArrayVariant
                 | iProductLists,
                 | DNBSimInitStateAttr iAttrMask)
-                | 
+                |
                 |     Restores initial state attributes for the objects in the given
                 |     list.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProductLists
                 |             Indicates which objects will be used for the restore initial state
-                |             operation 
+                |             operation
                 |         iAttrMask
                 |             Indicates which initial state attributes will be restored
                 |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The restore operation succeeded
                 |         E_FAIL
@@ -111,8 +114,10 @@ class SimulationInitState(AnyObject):
         :param int i_attr_mask: enum dnb_sim_init_state_attr
         :rtype: None
         """
-        return self.simulation_init_state.RestoreInitialStateList(i_product_lists, i_attr_mask)
-        # # # # Autogenerated comment: 
+        return self.simulation_init_state.RestoreInitialStateList(
+            i_product_lists, i_attr_mask
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -135,19 +140,19 @@ class SimulationInitState(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SaveInitialState(DNBSimInitStateAttr iAttrMask)
-                | 
+                |
                 |     Saves initial state attributes for all objects in the current
                 |     document.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttrMask
                 |             Indicates which initial state attributes will be saved
                 |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The save operation succeeded
                 |         E_FAIL
@@ -167,22 +172,22 @@ class SimulationInitState(AnyObject):
                 | o Sub SaveInitialStateList(CATSafeArrayVariant
                 | iProductLists,
                 | DNBSimInitStateAttr iAttrMask)
-                | 
+                |
                 |     Saves initial state attributes for the objects in the given
                 |     list.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProductLists
                 |             Indicates which objects will be used for the save initial state
-                |             operation 
+                |             operation
                 |         iAttrMask
                 |             Indicates which initial state attributes will be saved
                 |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The save operation succeeded
                 |         E_FAIL
@@ -192,8 +197,10 @@ class SimulationInitState(AnyObject):
         :param int i_attr_mask: enum dnb_sim_init_state_attr
         :rtype: None
         """
-        return self.simulation_init_state.SaveInitialStateList(i_product_lists, i_attr_mask)
-        # # # # Autogenerated comment: 
+        return self.simulation_init_state.SaveInitialStateList(
+            i_product_lists, i_attr_mask
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

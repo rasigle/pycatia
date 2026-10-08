@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.move import Move
@@ -16,23 +16,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SceneProductData(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SceneProductData
-                | 
-                | The interface to access a CATIASceneProduct
-                | 
-                | Using this prefered syntax will enable mkdoc to document your
-                | class.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SceneProductData
+            |
+            | The interface to access a CATIASceneProduct
+            |
+            | Using this prefered syntax will enable mkdoc to document your
+            | class.
+
     """
 
     def __init__(self, com_object):
@@ -47,11 +47,11 @@ class SceneProductData(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Activation() As boolean
-                | 
+                |
                 |     Returns / Set the scene product's activation state.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the activation state of the scenePrd
                 |              SceneProductData.
                 |
@@ -78,11 +78,11 @@ class SceneProductData(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Hidden() As boolean
-                | 
+                |
                 |     Returns / Set the scene product's hide/show mode.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the hide/show mode of the scenePrd
                 |              SceneProductData.
                 |
@@ -109,14 +109,14 @@ class SceneProductData(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Move() As Move (Read Only)
-                | 
+                |
                 |     Returns the scene product's move object. It aggregates a movable object to
                 |     which you can apply a move transformation by means of an isometry matrix. It
                 |     moves your product shape representation according to this
                 |     isometry.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the EngineMove move
                 |             in the scenePrd SceneProductData.
                 |
@@ -136,13 +136,13 @@ class SceneProductData(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Position() As Position (Read Only)
-                | 
+                |
                 |     Returns the scene product's position object. The position object is the
                 |     object aggregated by the SceneProductData object that holds the position of the
                 |     master shape representation in the space in scene.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the EnginePosition
                 |              position
                 |             in the scenePrd SceneProductData.
@@ -155,7 +155,9 @@ class SceneProductData(AnyObject):
 
         return Position(self.scene_product_data.Position)
 
-    def get_real_colour(self, o_red: int, o_green: int, o_blue: int, o_inheritance: int) -> None:
+    def get_real_colour(
+        self, o_red: int, o_green: int, o_blue: int, o_inheritance: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -165,27 +167,27 @@ class SceneProductData(AnyObject):
                 | long oGreen,
                 | long oBlue,
                 | long oInheritance)
-                | 
+                |
                 |     Returns / Set the scene product's color and inheritance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRed
-                |             A value between 0 and 255 
+                |             A value between 0 and 255
                 |         iGreen
-                |             A value between 0 and 255 
+                |             A value between 0 and 255
                 |         iBlue
-                |             A value between 0 and 255 
+                |             A value between 0 and 255
                 |         iInheritance
                 |             Legal value:
-                | 
+                |
                 |             0
-                |                 No heritance 
+                |                 No heritance
                 |             1
-                |                 Heritance 
-                | 
+                |                 Heritance
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the activation state of the scenePrd
                 |              SceneProductData.
                 |
@@ -198,7 +200,9 @@ class SceneProductData(AnyObject):
         :param int o_inheritance:
         :rtype: None
         """
-        return self.scene_product_data.GetRealColor(o_red, o_green, o_blue, o_inheritance)
+        return self.scene_product_data.GetRealColor(
+            o_red, o_green, o_blue, o_inheritance
+        )
 
     def get_real_transparency(self, o_transparency: int, o_inheritance: int) -> None:
         """
@@ -208,23 +212,23 @@ class SceneProductData(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetRealTransparency(long oTransparency,
                 | long oInheritance)
-                | 
+                |
                 |     Returns the scene product's Transparency and inheritance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTransparency
-                |             A value between 0 and 255 
+                |             A value between 0 and 255
                 |         iInheritance
                 |             Legal value:
-                | 
+                |
                 |             0
-                |                 No heritance 
+                |                 No heritance
                 |             1
-                |                 Heritance 
-                | 
+                |                 Heritance
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the transparency of the scenePrd
                 |              SceneProductData.
                 |
@@ -235,9 +239,13 @@ class SceneProductData(AnyObject):
         :param int o_inheritance:
         :rtype: None
         """
-        return self.scene_product_data.GetRealTransparency(o_transparency, o_inheritance)
+        return self.scene_product_data.GetRealTransparency(
+            o_transparency, o_inheritance
+        )
 
-    def set_real_colour(self, i_red: int, i_green: int, i_blue: int, i_inheritance: int) -> None:
+    def set_real_colour(
+        self, i_red: int, i_green: int, i_blue: int, i_inheritance: int
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -247,27 +255,27 @@ class SceneProductData(AnyObject):
                 | long iGreen,
                 | long iBlue,
                 | long iInheritance)
-                | 
+                |
                 |     Returns / Set the scene product's color and inheritance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRed
-                |             A value between 0 and 255 
+                |             A value between 0 and 255
                 |         iGreen
-                |             A value between 0 and 255 
+                |             A value between 0 and 255
                 |         iBlue
-                |             A value between 0 and 255 
+                |             A value between 0 and 255
                 |         iInheritance
                 |             Legal value:
-                | 
+                |
                 |             0
-                |                 No heritance 
+                |                 No heritance
                 |             1
-                |                 Heritance 
-                | 
+                |                 Heritance
+                |
                 |     Example:
-                | 
+                |
                 |              This example retrieves the activation state of the scenePrd
                 |              SceneProductData.
                 |
@@ -279,7 +287,9 @@ class SceneProductData(AnyObject):
         :param int i_inheritance:
         :rtype: None
         """
-        return self.scene_product_data.SetRealColor(i_red, i_green, i_blue, i_inheritance)
+        return self.scene_product_data.SetRealColor(
+            i_red, i_green, i_blue, i_inheritance
+        )
 
     def set_real_transparency(self, i_transparency: int, i_inheritance: int) -> None:
         """
@@ -289,23 +299,23 @@ class SceneProductData(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetRealTransparency(long iTransparency,
                 | long iInheritance)
-                | 
+                |
                 |     Set the scene product's Transparency and inheritance.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iTransparency
-                |             A value between 0 and 255 
+                |             A value between 0 and 255
                 |         iInheritance
                 |             Legal value:
-                | 
+                |
                 |             0
-                |                 No heritance 
+                |                 No heritance
                 |             1
-                |                 Heritance 
-                | 
+                |                 Heritance
+                |
                 |     Example:
-                | 
+                |
                 |              This example applies the transparency of the scenePrd
                 |              SceneProductData.
                 |
@@ -315,7 +325,9 @@ class SceneProductData(AnyObject):
         :param int i_inheritance:
         :rtype: None
         """
-        return self.scene_product_data.SetRealTransparency(i_transparency, i_inheritance)
+        return self.scene_product_data.SetRealTransparency(
+            i_transparency, i_inheritance
+        )
 
     def __repr__(self):
         return f'SceneProductData(name="{self.name}")'

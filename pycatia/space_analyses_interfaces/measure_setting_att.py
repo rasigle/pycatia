@@ -1,34 +1,35 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.system_interfaces.setting_controller import SettingController
 
 
 class MeasureSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         MeasureSettingAtt
-                | 
-                | The interface to access a CATIAMeasureSettingAtt.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         MeasureSettingAtt
+            |
+            | The interface to access a CATIAMeasureSettingAtt.
+
     """
 
     def __init__(self, com_object):
@@ -43,12 +44,12 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property BoxDisplay() As boolean
-                | 
+                |
                 |     Returns or sets the BoxDisplay parameter .
-                | 
+                |
                 |     Measure label background is filled if BoxDisplay is True ; there are only
                 |     borders if BoxDisplay is False.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -72,11 +73,11 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property LineWidth() As short
-                | 
+                |
                 |     Returns or sets the LineWidth parameter.
-                | 
+                |
                 |     The line width index, which ranges from 1 to 63.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: int
@@ -100,11 +101,11 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PartUpdateStatus() As boolean
-                | 
+                |
                 |     Returns or sets the PartUpdateStatus parameter .
-                | 
+                |
                 |     Part is automatically updated if PartUpdateStatus is true.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -128,12 +129,12 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ProductUpdateStatus() As boolean
-                | 
+                |
                 |     Returns or sets the ProductUpdateStatus parameter .
-                | 
+                |
                 |     Product is automatically updated if PartUpdateStatus is
                 |     true.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -157,12 +158,12 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property TildeDisplay() As boolean
-                | 
+                |
                 |     Returns or sets the TildeDisplay parameter.
-                | 
+                |
                 |     If TildeDisplay is TRUE, a tilde displayed for approximate
                 |     measurement.
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: bool
@@ -186,24 +187,24 @@ class MeasureSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetBoxDisplayInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the BoxDisplay
                 |     parameter.
                 |     Role:Retrieves the state of the BoxDisplay parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -223,18 +224,18 @@ class MeasureSettingAtt(SettingController):
                 | o Sub GetLabelColor(long oR,
                 | long oG,
                 | long oB)
-                | 
+                |
                 |     Returns the LabelColor parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oR
-                |             the red component of the color. 
+                |             the red component of the color.
                 |         oG
-                |             the green component of the color. 
+                |             the green component of the color.
                 |         oB
                 |             the blue component of the color.
-                | 
+                |
                 |             Ensure consistency with the C++ interface to which the work is
                 |             delegated.
 
@@ -250,24 +251,24 @@ class MeasureSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetLabelColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the LabelColor
                 |     parameter.
                 |     Role:Retrieves the state of the LabelColor parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -286,24 +287,24 @@ class MeasureSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetLineWidthInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the LineWidth
                 |     parameter.
                 |     Role:Retrieves the state of the LineWidth parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -322,24 +323,24 @@ class MeasureSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetPartUpdateStatusInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the PartUpdateStatus
                 |     parameter.
                 |     Role:Retrieves the state of the PartUpdateStatus parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -348,9 +349,13 @@ class MeasureSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.measure_setting_att.GetPartUpdateStatusInfo(io_admin_level, io_locked)
+        return self.measure_setting_att.GetPartUpdateStatusInfo(
+            io_admin_level, io_locked
+        )
 
-    def get_product_update_status_info(self, io_admin_level: str, io_locked: str) -> bool:
+    def get_product_update_status_info(
+        self, io_admin_level: str, io_locked: str
+    ) -> bool:
         """
         .. note::
             :class: toggle
@@ -358,24 +363,24 @@ class MeasureSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetProductUpdateStatusInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the ProductUpdateStatus
                 |     parameter.
                 |     Role:Retrieves the state of the ProductUpdateStatus parameter in the
                 |     current environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -384,7 +389,9 @@ class MeasureSettingAtt(SettingController):
         :param str io_locked:
         :rtype: bool
         """
-        return self.measure_setting_att.GetProductUpdateStatusInfo(io_admin_level, io_locked)
+        return self.measure_setting_att.GetProductUpdateStatusInfo(
+            io_admin_level, io_locked
+        )
 
     def get_text_color(self) -> tuple:
         """
@@ -395,15 +402,15 @@ class MeasureSettingAtt(SettingController):
                 | o Sub GetTextColor(long oR,
                 | long oG,
                 | long oB)
-                | 
+                |
                 |     Returns the TextColor parameter .
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :rtype: tuple
         """
 
-        vba_function_name = 'get_text_color'
+        vba_function_name = "get_text_color"
         vba_code = """
         Public Function get_text_color(measurable)
             Dim oR long
@@ -419,7 +426,7 @@ class MeasureSettingAtt(SettingController):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def get_text_color_info(self, io_admin_level: str, io_locked: str) -> bool:
@@ -430,24 +437,24 @@ class MeasureSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetTextColorInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the TextColor
                 |     parameter.
                 |     Role:Retrieves the state of the TextColor parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -466,24 +473,24 @@ class MeasureSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetTildeDisplayInfo(CATBSTR ioAdminLevel,
                 | CATBSTR ioLocked) As boolean
-                | 
+                |
                 |     Retrieves environment informations for the TildeDisplay
                 |     parameter.
                 |     Role:Retrieves the state of the TildeDisplay parameter in the current
                 |     environment.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioAdminLevel
-                | 
+                |
                 |             If the parameter is locked, AdminLevel gives the administration
                 |             level that imposes the value of the parameter.
                 |             If the parameter is not locked, AdminLevel gives the administration
                 |             level that will give the value of the parameter after a reset.
-                |             
+                |
                 |         ioLocked
-                |             Indicates if the parameter has been locked. 
-                | 
+                |             Indicates if the parameter has been locked.
+                |
                 |     Returns:
                 |         Indicates if the parameter has been explicitly modified or remain to
                 |         the administrated value.
@@ -501,14 +508,14 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetBoxDisplayLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the BoxDisplay parameter.
                 |     Role:Locks or unlocks the BoxDisplay parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -529,18 +536,18 @@ class MeasureSettingAtt(SettingController):
                 | o Sub SetLabelColor(long iR,
                 | long iG,
                 | long iB)
-                | 
+                |
                 |     Sets the LabelColor parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oR
-                |             the red component of the color. 
+                |             the red component of the color.
                 |         oG
-                |             the green component of the color. 
+                |             the green component of the color.
                 |         oB
                 |             the blue component of the color.
-                | 
+                |
                 |             Ensure consistency with the C++ interface to which the work is
                 |             delegated.
 
@@ -558,14 +565,14 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetLabelColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the LabelColor parameter.
                 |     Role:Locks or unlocks the LabelColor parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -584,14 +591,14 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetLineWidthLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the LineWidth parameter.
                 |     Role:Locks or unlocks the LineWidth parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -610,14 +617,14 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPartUpdateStatusLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the PartUpdateStatus parameter.
                 |     Role:Locks or unlocks the PartUpdateStatus parameter if it is possible in
                 |     the current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -636,14 +643,14 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetProductUpdateStatusLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the ProductUpdateStatus parameter.
                 |     Role:Locks or unlocks the Xxx parameter if it is possible in the current
                 |     administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -664,9 +671,9 @@ class MeasureSettingAtt(SettingController):
                 | o Sub SetTextColor(long iR,
                 | long iG,
                 | long iB)
-                | 
+                |
                 |     Sets the TextColor parameter .
-                | 
+                |
                 |     Ensure consistency with the C++ interface to which the work is delegated.
 
         :param int i_r:
@@ -683,14 +690,14 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetTextColorLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the TextColor parameter.
                 |     Role:Locks or unlocks the TextColor parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
@@ -709,14 +716,14 @@ class MeasureSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetTildeDisplayLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the TildeDisplay parameter.
                 |     Role:Locks or unlocks the TildeDisplay parameter if it is possible in the
                 |     current administrative context. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:

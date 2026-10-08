@@ -1,37 +1,38 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_robot_interfaces.rob_generic_controller import RobGenericController
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class GenericAccuracyProfile(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     GenericAccuracyProfile
-                | 
-                | Interface to manage Generic Accuracy Profile of Robot
-                | controller.
-                | 
-                | Role: This interface provides methods to get/set data related to Accuracy
-                | Profile.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     GenericAccuracyProfile
+            |
+            | Interface to manage Generic Accuracy Profile of Robot
+            | controller.
+            |
+            | Role: This interface provides methods to get/set data related to Accuracy
+            | Profile.
+
     """
 
     def __init__(self, com_object):
@@ -45,19 +46,19 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetAccuracyType(AccuracyType accuracy)
-                | 
+                |
                 |     Get the accuracy type for the profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         accurancy
                 |             accurancy type to get, could be ACCURACY_TYPE_DISTANCE /
-                |             ACCURACY_TYPE_SPEED 
-                | 
+                |             ACCURACY_TYPE_SPEED
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -73,18 +74,18 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetAccuracyValue(double value)
-                | 
+                |
                 |     Retrieves accuracy value of the profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
-                |             This parameter contains accuracy value. 
-                | 
+                |             This parameter contains accuracy value.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -99,25 +100,25 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetController(RobGenericController oController)
-                | 
+                |
                 |     Retrieves controller owning the profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oController
-                |             This parameter contains pointer to controller. 
-                | 
+                |             This parameter contains pointer to controller.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
         :rtype: RobGenericController
         """
         return self.generic_accuracy_profile.GetController()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -140,25 +141,25 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetFlyByMode(boolean oMode)
-                | 
+                |
                 |     Gets On/Off status of Flyby mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oMode
-                |             mode indicating On/Off status. 
-                | 
+                |             mode indicating On/Off status.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
         :rtype: bool
         """
         return self.generic_accuracy_profile.GetFlyByMode()
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -181,18 +182,18 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetName(CATBSTR oName)
-                | 
+                |
                 |     Gets name of the Accuracy Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oName
-                |             Name of the required Accuracy Profile. 
-                | 
+                |             Name of the required Accuracy Profile.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -207,19 +208,19 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAccuracyType(AccuracyType accuracy)
-                | 
+                |
                 |     Set the accuracy type for the profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         accurancy
                 |             accurancy type to set, could be ACCURACY_TYPE_DISTANCE /
-                |             ACCURACY_TYPE_SPEED 
-                | 
+                |             ACCURACY_TYPE_SPEED
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -235,19 +236,19 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetAccuracyValue(double value)
-                | 
+                |
                 |     Set accuracy value of the profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         value
                 |             This parameter is percentage or absolute value, depending on
-                |             accurancy type. 
-                | 
+                |             accurancy type.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -263,18 +264,18 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetFlyByMode(boolean iMode)
-                | 
+                |
                 |     Switch On/Off Flyby mode.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iMode
-                |             mode indicating On/Off status. 
-                | 
+                |             mode indicating On/Off status.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 
@@ -282,7 +283,7 @@ class GenericAccuracyProfile(AnyObject):
         :rtype: None
         """
         return self.generic_accuracy_profile.SetFlyByMode(i_mode)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -305,18 +306,18 @@ class GenericAccuracyProfile(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetName(CATBSTR iName)
-                | 
+                |
                 |     Set name of the Accuracy Profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iName
-                |             Name of the Accuracy Profile to be set. 
-                | 
+                |             Name of the Accuracy Profile to be set.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
 

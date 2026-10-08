@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_plant_ship_interfaces.psp_list_of_bstrs import PSPListOfBSTRs
 from pycatia.cat_plant_ship_interfaces.psp_list_of_doubles import PSPListOfDoubles
 from pycatia.cat_plant_ship_interfaces.psp_list_of_longs import PSPListOfLongs
@@ -17,29 +18,31 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PSPAttribute(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PspAttribute
-                | 
-                | Represents Attribute Interface to query Plant Ship objects'
-                | attributes.
-                | Role: To query and reset attributes.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PspAttribute
+            |
+            | Represents Attribute Interface to query Plant Ship objects'
+            | attributes.
+            | Role: To query and reset attributes.
+
     """
 
     def __init__(self, com_object):
         super().__init__(com_object)
         self.psp_attribute = com_object
 
-    def get_multi_string_attribute_values(self, i_attribute_name: str) -> PSPListOfBSTRs:
+    def get_multi_string_attribute_values(
+        self, i_attribute_name: str
+    ) -> PSPListOfBSTRs:
         """
         .. note::
             :class: toggle
@@ -47,19 +50,19 @@ class PSPAttribute(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetMultiStringAttributeValues(CATBSTR iAttributeName) As
                 | PspListOfBSTRs
-                | 
+                |
                 |     Retrieves String values for the input attribute the type
                 |     catPspIDLMultiString.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttributeName
-                |             Attribute Name 
-                | 
+                |             Attribute Name
+                |
                 |     Returns:
-                |         List of string values 
+                |         List of string values
                 |     Example:
-                | 
+                |
                 |          Dim objThisIntf As PspAttribute
                 |          Dim strVar1 As CATBSTR
                 |          Dim objArg2 As PspListOfBSTRs
@@ -69,7 +72,9 @@ class PSPAttribute(AnyObject):
         :param str i_attribute_name:
         :rtype: PSPListOfBSTRs
         """
-        return PSPListOfBSTRs(self.psp_attribute.GetMultiStringAttributeValues(i_attribute_name))
+        return PSPListOfBSTRs(
+            self.psp_attribute.GetMultiStringAttributeValues(i_attribute_name)
+        )
 
     def get_parameter(self, i_attribute_name: str) -> Parameter:
         """
@@ -78,16 +83,16 @@ class PSPAttribute(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetParameter(CATBSTR iAttributeName) As Parameter
-                | 
+                |
                 |     Retrieve parameter for the input attribute name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iAttributeName
-                |             Attribute Name 
-                | 
+                |             Attribute Name
+                |
                 |     Returns:
-                |         Parameter of the attribute 
+                |         Parameter of the attribute
                 |     Example:
                 |
                 |          Dim objThisIntf As PspAttribute
@@ -105,7 +110,7 @@ class PSPAttribute(AnyObject):
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetType(CATBSTR iAttributeName) As
                 | CatPspIDLAttrDataType
@@ -129,18 +134,18 @@ class PSPAttribute(AnyObject):
                 |
                 |           ...
                 |          eType = objThisIntf.GetType (strVar1)
-        
+
             :param str i_attribute_name:
             :rtype: enum cat_psp_idl_attr_data_type
             :return: int
-            """
+        """
         return self.psp_attribute.GetType(i_attribute_name)
 
     def is_derived(self, i_attribute_name: str) -> bool:
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsDerived(CATBSTR iAttributeName) As boolean
                 |
@@ -161,7 +166,7 @@ class PSPAttribute(AnyObject):
                 |          Dim bIsDerived As boolean
                 |           ...
                 |          bIsDerived = objThisIntf.IsDerived (strVar1)
-    
+
         :param str i_attribute_name:
         :rtype: bool
         """
@@ -171,7 +176,7 @@ class PSPAttribute(AnyObject):
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func IsDiscrete(CATBSTR iAttributeName,
                 | boolean obStatus) As short
@@ -196,7 +201,7 @@ class PSPAttribute(AnyObject):
                 |          Dim shortVar3  As Short
                 |           ...
                 |          shortVar3 = objThisIntf.IsDiscrete (strVar1,boolVar2)
-    
+
         :param str i_attribute_name:
         :param bool ob_status:
         :rtype: int
@@ -207,7 +212,7 @@ class PSPAttribute(AnyObject):
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ListAttributes(CatPspIDLDomainID iDomainID) As
                 | PspListOfBSTRs
@@ -231,7 +236,7 @@ class PSPAttribute(AnyObject):
                 |          Dim objArg2 As PspListOfBSTRs
                 |           ...
                 |          Set objArg2 = objThisIntf.ListAttributes (objArg1)
-    
+
         :param int i_domain_id: enum cat_psp_idl_domain_id
         :rtype: PSPListOfBSTRs
         """
@@ -241,7 +246,7 @@ class PSPAttribute(AnyObject):
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ListDoubleDiscreteValues(CATBSTR iAttributeName) As
                 | PspListOfDoubles
@@ -263,22 +268,24 @@ class PSPAttribute(AnyObject):
                 |          Dim objArg2 As PspListOfDoubles
                 |           ...
                 |          Set objArg2 = objThisIntf.ListDoubleDiscreteValues (strVar1 )
-    
+
         :param str i_attribute_name:
         :rtype: PSPListOfDoubles
         """
-        return PSPListOfDoubles(self.psp_attribute.ListDoubleDiscreteValues(i_attribute_name))
+        return PSPListOfDoubles(
+            self.psp_attribute.ListDoubleDiscreteValues(i_attribute_name)
+        )
 
     def list_encoded_decoded_discrete_values(
-            self,
-            i_attribute_name: str,
-            o_l_discrete_encoded_values: PSPListOfBSTRs,
-            o_l_discrete_decoded_value: PSPListOfBSTRs
+        self,
+        i_attribute_name: str,
+        o_l_discrete_encoded_values: PSPListOfBSTRs,
+        o_l_discrete_decoded_value: PSPListOfBSTRs,
     ) -> None:
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ListEncodedDecodedDiscreteValues(CATBSTR
                 | iAttributeName,
@@ -306,7 +313,7 @@ class PSPAttribute(AnyObject):
                 |           ...
                 |          objThisIntf.ListEncodedDecodedDiscreteValues strVar1, objArg2,
                 |          objArg3
-    
+
         :param str i_attribute_name:
         :param PSPListOfBSTRs o_l_discrete_encoded_values:
         :param PSPListOfBSTRs o_l_discrete_decoded_value:
@@ -315,7 +322,7 @@ class PSPAttribute(AnyObject):
         return self.psp_attribute.ListEncodedDecodedDiscreteValues(
             i_attribute_name,
             o_l_discrete_encoded_values.com_object,
-            o_l_discrete_decoded_value.com_object
+            o_l_discrete_decoded_value.com_object,
         )
         # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
@@ -337,7 +344,7 @@ class PSPAttribute(AnyObject):
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ListIntegerDiscreteValues(CATBSTR iAttributeName) As
                 | PspListOfLongs
@@ -360,17 +367,19 @@ class PSPAttribute(AnyObject):
                 |          Dim objArg2 As PspListOfLongs
                 |           ...
                 |          Set objArg2 = objThisIntf.ListIntegerDiscreteValues (strVar1)
-    
+
         :param str i_attribute_name:
         :rtype: PSPListOfLongs
         """
-        return PSPListOfLongs(self.psp_attribute.ListIntegerDiscreteValues(i_attribute_name))
+        return PSPListOfLongs(
+            self.psp_attribute.ListIntegerDiscreteValues(i_attribute_name)
+        )
 
     def list_string_discrete_values(self, i_attribute_name: str) -> PSPListOfBSTRs:
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func ListStringDiscreteValues(CATBSTR iAttributeName) As
                 | PspListOfBSTRs
@@ -392,17 +401,19 @@ class PSPAttribute(AnyObject):
                 |          Dim objArg2 As PspListOfBSTRs
                 |           ...
                 |          Set objArg2 = objThisIntf.ListStringDiscreteValues (strVar1)
-    
+
         :param str i_attribute_name:
         :rtype: PSPListOfBSTRs
         """
-        return PSPListOfBSTRs(self.psp_attribute.ListStringDiscreteValues(i_attribute_name))
+        return PSPListOfBSTRs(
+            self.psp_attribute.ListStringDiscreteValues(i_attribute_name)
+        )
 
     def reset_derived_attr(self, i_attribute_name: str) -> None:
         """
         .. note::
             :class: toggle
-    
+
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ResetDerivedAttr(CATBSTR iAttributeName)
                 |
@@ -419,7 +430,7 @@ class PSPAttribute(AnyObject):
                 |          Dim strVar1 As CATBSTR
                 |           ...
                 |          objThisIntf.ResetDerivedAttr strVar1
-    
+
         :param str i_attribute_name:
         :rtype: None
         """

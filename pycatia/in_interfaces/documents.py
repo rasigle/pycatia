@@ -12,14 +12,16 @@ from pycatia.types.general import CATVariant, list_str
 
 
 def get_document_object(doc_com) -> AnyDocument:
-    """
-
-    """
+    """ """
     full_name = Path(doc_com.FullName)
     extension = full_name.suffix[1:]
-    types = [document_types[k]['type'] for k in document_types if document_types[k]['extension'] == extension]
+    types = [
+        document_types[k]["type"]
+        for k in document_types
+        if document_types[k]["extension"] == extension
+    ]
     if not types:
-        document_type = document_types['Default']['type']
+        document_type = document_types["Default"]["type"]
     else:
         document_type = types[0]
 
@@ -104,9 +106,10 @@ class Documents(Collection):
 
         if document_type.lower() not in [t.lower() for t in document_types]:
             raise CATIAApplicationException(
-                f'Document type {document_type} not supported. Allowed types are {[t for t in document_types]}.')
+                f"Document type {document_type} not supported. Allowed types are {[t for t in document_types]}."
+            )
 
-        document = document_types[document_type]['type']
+        document = document_types[document_type]["type"]
 
         return document(self.documents.Add(document_type))
 
@@ -127,9 +130,13 @@ class Documents(Collection):
         elif isinstance(file_type_list, list):
             type_list = [elem.lower() for elem in file_type_list]
         else:
-            raise CATIAApplicationException(f'File type list {file_type_list} not valid type.')
+            raise CATIAApplicationException(
+                f"File type list {file_type_list} not valid type."
+            )
 
-        return len([True for name in items for typ in type_list if name.lower().find(typ) > 0])
+        return len(
+            [True for name in items for typ in type_list if name.lower().find(typ) > 0]
+        )
 
     def new_from(self, file_name: Path) -> Document:
         """
@@ -169,7 +176,7 @@ class Documents(Collection):
             file_name = Path(file_name)
 
         if not file_name.is_file():
-            raise FileNotFoundError(f'Could not find file {file_name}.')
+            raise FileNotFoundError(f"Could not find file {file_name}.")
 
         return Document(self.documents.NewFrom(file_name))
 
@@ -212,7 +219,7 @@ class Documents(Collection):
             item_doc_com = self.documents.Item(index)
             return get_document_object(item_doc_com)
         except com_error:
-            raise IndexError('list index out of range')
+            raise IndexError("list index out of range")
 
     def num_open(self) -> int:
         """
@@ -229,7 +236,9 @@ class Documents(Collection):
         # for i in range(0, self.documents.Count):
         #     print(self.documents.Item(i + 1).Name)
 
-        self.logger.warning('The Documents.num_open method is unreliable and will be deprecated in future versions.')
+        self.logger.warning(
+            "The Documents.num_open method is unreliable and will be deprecated in future versions."
+        )
         return self.documents.Count
 
     def open(self, file_name: Path) -> AnyDocument:
@@ -269,7 +278,7 @@ class Documents(Collection):
             file_name = Path(file_name)
 
         if not file_name.is_file():
-            raise FileNotFoundError(f'Could not find file {file_name}.')
+            raise FileNotFoundError(f"Could not find file {file_name}.")
 
         self.logger.info(f'Opening document "{file_name}".')
         try:
@@ -278,7 +287,8 @@ class Documents(Collection):
         except com_error:
             raise CATIAApplicationException(
                 f'Could not OPEN document "{file_name}". '
-                'Check file type and ensure the version of CATIA it was created with is compatible.')
+                "Check file type and ensure the version of CATIA it was created with is compatible."
+            )
 
     def read(self, file_name: Path) -> Document:
         """
@@ -322,7 +332,7 @@ class Documents(Collection):
             file_name = Path(file_name)
 
         if not file_name.is_file():
-            raise FileNotFoundError(f'Could not find file {file_name}.')
+            raise FileNotFoundError(f"Could not find file {file_name}.")
 
         self.logger.info(f'Reading document "{file_name}".')
         try:
@@ -331,7 +341,8 @@ class Documents(Collection):
         except com_error:
             raise CATIAApplicationException(
                 f'Could not READ document "{file_name}". '
-                'Check file type and ensure the version of CATIA it was created with is compatible.')
+                "Check file type and ensure the version of CATIA it was created with is compatible."
+            )
 
     def __getitem__(self, n: int) -> Document:
         if (n + 1) > self.count:

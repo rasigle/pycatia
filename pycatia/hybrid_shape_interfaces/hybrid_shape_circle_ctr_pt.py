@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_circle import HybridShapeCircle
@@ -15,36 +15,36 @@ from pycatia.in_interfaces.reference import Reference
 
 class HybridShapeCircleCtrPt(HybridShapeCircle):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         CATGSMIDLItf.HybridShapeCircle
-                |                             HybridShapeCircleCtrPt
-                | 
-                | Represents the hybrid shape circle object defined using a center and a point on
-                | the circle.
-                | Role: To access the data of the hybrid shape circle object.
-                | 
-                | This data includes:
-                | 
-                |     The circle center
-                |     The point on the circle
-                |     The surface that supports the circle
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeCircleCtrPt
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         CATGSMIDLItf.HybridShapeCircle
+            |                             HybridShapeCircleCtrPt
+            |
+            | Represents the hybrid shape circle object defined using a center and a point on
+            | the circle.
+            | Role: To access the data of the hybrid shape circle object.
+            |
+            | This data includes:
+            |
+            |     The circle center
+            |     The point on the circle
+            |     The surface that supports the circle
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeCircleCtrPt
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -59,14 +59,14 @@ class HybridShapeCircleCtrPt(HybridShapeCircle):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Center() As Reference
-                | 
+                |
                 |     Returns or sets the circle center.
                 |     Sub-element(s) supported (see Boundary object): Vertex.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in HybShpCircleCenter the center of the
                 |         HybShpCircle hybrid shape circle.
-                | 
+                |
                 |          Dim HybShpCircleCenter As Reference
                 |          HybShpCircleCenter = HybShpCircle.Center
 
@@ -91,14 +91,14 @@ class HybridShapeCircleCtrPt(HybridShapeCircle):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CrossingPoint() As Reference
-                | 
+                |
                 |     Returns or sets the circle passing point.
                 |     Sub-element(s) supported (see Boundary object): Vertex.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the passing point of the HybShpCircle hybrid
                 |         shape circle in HybShpCirclePassingPoint point.
-                | 
+                |
                 |          Dim HybShpCirclePassingPoint As Reference
                 |          Set HybShpCirclePassingPoint = HybShpCircle.CrossingPoint
 
@@ -123,15 +123,15 @@ class HybridShapeCircleCtrPt(HybridShapeCircle):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Support() As Reference
-                | 
+                |
                 |     Returns or sets the circle support surface.
                 |     Sub-element(s) supported (see Boundary object): Face.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in HybShpCircleSupportSurf the support surface
                 |         of the HybShpCircle hybrid shape circle.
-                | 
-                |          Dim HybShpCircleSupportSurf As Reference 
+                |
+                |          Dim HybShpCircleSupportSurf As Reference
                 |          HybShpCircleSupportSurf = HybShpCircle.Support
 
         :rtype: Reference
@@ -154,11 +154,11 @@ class HybridShapeCircleCtrPt(HybridShapeCircle):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func IsGeodesic() As boolean
-                | 
+                |
                 |     Queries whether the circle is geodesic or not.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oGeod
                 |             geodesic type : when TRUE, the circle is geodesic.
 
@@ -173,7 +173,7 @@ class HybridShapeCircleCtrPt(HybridShapeCircle):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetGeometryOnSupport()
-                | 
+                |
                 |     Sets GeometryOnSupport of circle.
                 |     It puts the circle on the surface.
 
@@ -188,7 +188,7 @@ class HybridShapeCircleCtrPt(HybridShapeCircle):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub UnsetGeometryOnSupport()
-                | 
+                |
                 |     Inactivates GeometryOnSupport of circle.
                 |     Note: The circle becomes euclidean.
 

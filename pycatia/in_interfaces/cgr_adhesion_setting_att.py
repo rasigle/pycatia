@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,22 +14,22 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class CgrAdhesionSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         CGRAdhesionSettingAtt
-                | 
-                | Represents the base object to handle the parameters of the
-                | cache.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         CGRAdhesionSettingAtt
+            |
+            | Represents the base object to handle the parameters of the
+            | cache.
+
     """
 
     def __init__(self, com_object):
@@ -44,7 +44,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property V4V5_FDT() As boolean
-                | 
+                |
                 |     Retrieves the V4V5_FDT container activation state.
 
         :rtype: bool
@@ -68,7 +68,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property V4_Model_CommentPage() As boolean
-                | 
+                |
                 |     Retrieves the V4_Model_CommentPage container activation state.
 
         :rtype: bool
@@ -92,7 +92,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property V4_Model_LnF() As boolean
-                | 
+                |
                 |     Retrieves the V4_Model_LnF container activation state.
 
         :rtype: bool
@@ -116,7 +116,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property V5_SPA() As boolean
-                | 
+                |
                 |     Retrieves the V5_SPA container activation state.
 
         :rtype: bool
@@ -140,7 +140,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Voxels() As boolean
-                | 
+                |
                 |     Retrieves the Voxels container activation state.
 
         :rtype: bool
@@ -164,7 +164,7 @@ class CgrAdhesionSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetV4V5_FDTInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the V4V5_FDT container activation
                 |     state.
                 |     Refer to CATSysSettingController for a detailed description.
@@ -183,7 +183,7 @@ class CgrAdhesionSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetV4_Model_CommentPageInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Locks or unlocks the V4_Model_CommentPage container activation
                 |     state.
                 |     Refer to CATSysSettingController for a detailed description.
@@ -192,7 +192,9 @@ class CgrAdhesionSettingAtt(SettingController):
         :param str o_locked:
         :rtype: bool
         """
-        return self.cgr_adhesion_setting_att.GetV4_Model_CommentPageInfo(admin_level, o_locked)
+        return self.cgr_adhesion_setting_att.GetV4_Model_CommentPageInfo(
+            admin_level, o_locked
+        )
 
     def get_v4_model_ln_f_info(self, admin_level: str, o_locked: str) -> bool:
         """
@@ -202,7 +204,7 @@ class CgrAdhesionSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetV4_Model_LnFInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the V4_Model_LnF container activation
                 |     state.
                 |     Refer to CATSysSettingController for a detailed description.
@@ -221,7 +223,7 @@ class CgrAdhesionSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetV5_SPAInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the V5_SPA container activation
                 |     state.
                 |     Refer to CATSysSettingController for a detailed description.
@@ -240,7 +242,7 @@ class CgrAdhesionSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetVoxelsInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves information about the Voxels container activation
                 |     state.
                 |     Refer to CATSysSettingController for a detailed description.
@@ -258,7 +260,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetV4V5_FDTLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the V4V5_FDT container activation state.
                 |     Refer to CATSysSettingController for a detailed description.
 
@@ -266,7 +268,7 @@ class CgrAdhesionSettingAtt(SettingController):
         :rtype: None
         """
         return self.cgr_adhesion_setting_att.SetV4V5_FDTLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -289,7 +291,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetV4_Model_CommentPageLock(boolean iLocked)
-                | 
+                |
                 |     Retrieves information about the V4_Model_CommentPage container activation
                 |     state.
                 |     Refer to CATSysSettingController for a detailed description.
@@ -298,7 +300,7 @@ class CgrAdhesionSettingAtt(SettingController):
         :rtype: None
         """
         return self.cgr_adhesion_setting_att.SetV4_Model_CommentPageLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -321,7 +323,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetV4_Model_LnFLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the V4_Model_LnF container activation
                 |     state.
                 |     Refer to CATSysSettingController for a detailed description.
@@ -330,7 +332,7 @@ class CgrAdhesionSettingAtt(SettingController):
         :rtype: None
         """
         return self.cgr_adhesion_setting_att.SetV4_Model_LnFLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -353,7 +355,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetV5_SPALock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the V5_SPA container activation state.
                 |     Refer to CATSysSettingController for a detailed description.
 
@@ -361,7 +363,7 @@ class CgrAdhesionSettingAtt(SettingController):
         :rtype: None
         """
         return self.cgr_adhesion_setting_att.SetV5_SPALock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -384,7 +386,7 @@ class CgrAdhesionSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetVoxelsLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the Voxels container activation state.
                 |     Refer to CATSysSettingController for a detailed description.
 
@@ -392,7 +394,7 @@ class CgrAdhesionSettingAtt(SettingController):
         :rtype: None
         """
         return self.cgr_adhesion_setting_att.SetVoxelsLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

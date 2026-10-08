@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.knowledge_interfaces.parameter import Parameter
@@ -15,20 +15,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class ManufacturingMachine(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ManufacturingMachine
-                | 
-                | Machine in machining domain.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ManufacturingMachine
+            |
+            | Machine in machining domain.
+
     """
 
     def __init__(self, com_object):
@@ -43,13 +43,13 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Comment() As CATBSTR (Read Only)
-                | 
+                |
                 |     Return the Comment of a Machine.
-                | 
+                |
                 |     Example:
                 |         The following example return the comment MachineComment of to the
                 |         manufacturing Machine CurrentMachine
-                | 
+                |
                 |          MachineComment = CurrentMachine.Comment
 
         :rtype: str
@@ -65,13 +65,13 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property MachineType() As CATBSTR (Read Only)
-                | 
+                |
                 |     Return the Type of a Machine.
-                | 
+                |
                 |     Example:
                 |         The following example return the type MachineType of to the
                 |         manufacturing Machine CurrentMachine
-                | 
+                |
                 |          MachineType = CurrentMachine.Type
 
         :rtype: str
@@ -87,13 +87,13 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfAttributes() As short (Read Only)
-                | 
+                |
                 |     Gives the number of attributes of a ManufacturingMachine.
-                | 
+                |
                 |     Example:
                 |         The following example returns the Number of attributes of the
                 |         ManufacturingMachine CurrentMachine
-                | 
+                |
                 |          Number = CurrentMachine.NumberOfAttributes
 
         :rtype: int
@@ -110,7 +110,7 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfNumericalControlAttributes() As short (Read
                 | Only)
-                | 
+                |
                 |     This property returns the number of Numerical Control attributes of a
                 |     Manufacturing Machine.
 
@@ -128,7 +128,7 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfRotaryTableAttributes() As short (Read
                 | Only)
-                | 
+                |
                 |     This property returns the number of rotary table attributes of a
                 |     Manufacturing Machine. The machine is upposed to accept Rotary table (type is
                 |     Mfg3AxisWithTableRotationMachine).
@@ -146,7 +146,7 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfSpindleAttributes() As short (Read Only)
-                | 
+                |
                 |     This property returns the number of Spindle attributes of a Manufacturing
                 |     Machine.
 
@@ -164,7 +164,7 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumberOfToolChangeAttributes() As short (Read
                 | Only)
-                | 
+                |
                 |     This property returns the number of Tool change attributes of a
                 |     Manufacturing Machine.
 
@@ -181,13 +181,13 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PPTableName() As CATBSTR
-                | 
+                |
                 |     Give the PPTableName linked to a Manufacturing Machine.
-                | 
+                |
                 |     Example:
                 |         The following example returns the PPTableName ThisPPTable linked to the
                 |         Manufacturing Machine CurrentMachine
-                | 
+                |
                 |          Set ThisPPTable = CurrentMachine.PPTableName
 
         :rtype: str
@@ -211,7 +211,7 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PostProcessorFile() As CATBSTR
-                | 
+                |
                 |     This property returns the post processor file of a Manufacturing Machine
                 |     Machine.PostProcessorFile
 
@@ -236,14 +236,14 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property PreferedToolCatalogName() As CATBSTR
-                | 
+                |
                 |     Give the PreferedToolCatalogName linked to a Manufacturing
                 |     Machine.
-                | 
+                |
                 |     Example:
                 |         The following example returns the PreferedToolCatalogName ThisCatalog
                 |         linked to the Manufacturing Machine CurrentMachine
-                | 
+                |
                 |          Set ThisCatalog = CurrentMachine.PreferedToolCatalogName
 
         :rtype: str
@@ -267,13 +267,13 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property RotaryAxis() As CATBSTR
-                | 
+                |
                 |     Give the MfgRotaryAxis linked to a Manufacturing Machine.
-                | 
+                |
                 |     Example:
                 |         The following example returns the MfgRotaryAxis ThisAxis linked to the
                 |         Manufacturing Machine CurrentMachine
-                | 
+                |
                 |          Set ThisAxis = CurrentMachine.RotaryAxis
 
         :rtype: str
@@ -296,13 +296,13 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func DefaultName() As CATBSTR
-                | 
+                |
                 |     Return the string the Type of a Machine.
-                | 
+                |
                 |     Example:
                 |         The following example return the type MachineType of to the
                 |         manufacturing Machine CurrentMachine
-                | 
+                |
                 |          MachineType = CurrentMachine.Type
 
         :rtype: str
@@ -316,13 +316,13 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAttribute(CATBSTR iAttribut) As Parameter
-                | 
+                |
                 |     Retrieve the Attribute of a Manufacturing Machine.
-                | 
+                |
                 |     Example:
                 |         The following example retreives in HomePosX the attribute
                 |         MFG_HOME_POS_X of Manufacturing Machine MyMachine
-                | 
+                |
                 |           Set HomePosX = MyMachine.GetAttribute(MFG_HOME_POS_X)
 
         :param str i_attribute:
@@ -337,7 +337,7 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetAttributeNLSName(CATBSTR iAttributName) As CATBSTR
-                | 
+                |
                 |     Retrieve the NLS name from the attribute name of a Manufacturing
                 |     Machine.
 
@@ -354,26 +354,28 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetListOfAttributeUnits(CATSafeArrayVariant
                 | oListOfAttributeUnits)
-                | 
+                |
                 |     Retrieve the list of attribute units of a
                 |     ManufacturingMachine.
                 |     The number of items in the output array is equal to the number of
                 |     attributes of the machine.
                 |     When an attribute has no unit definition, the corresponding unit item in
                 |     the output array is a blank string.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in TabAttributeUnits the list of
                 |         attribute units of the ManufacturingMachine
                 |         CurrentMachine
-                | 
+                |
                 |          call CurrentMachine.GetListOfAttributeUnits(TabAttributeUnits)
 
         :param tuple o_list_of_attribute_units:
         :rtype: None
         """
-        return self.manufacturing_machine.GetListOfAttributeUnits(o_list_of_attribute_units)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machine.GetListOfAttributeUnits(
+            o_list_of_attribute_units
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -397,15 +399,15 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetListOfAttributes(CATSafeArrayVariant
                 | oListOfAttributes)
-                | 
+                |
                 |     Retrieve the list of all attributes of a
                 |     ManufacturingMachine.
                 |     Each attribute is returned as the name of a CKE object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in TabAttributes the list of attributes
                 |         of the ManufacturingMachine CurrentMachine
-                | 
+                |
                 |          call
                 |          CurrentMachine.GetListOfAttributes(TabAttributes)
 
@@ -413,7 +415,7 @@ class ManufacturingMachine(AnyObject):
         :rtype: None
         """
         return self.manufacturing_machine.GetListOfAttributes(o_list_of_attributes)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -429,7 +431,9 @@ class ManufacturingMachine(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def get_list_of_numerical_control_attributes(self, o_list_of_attributes: tuple) -> None:
+    def get_list_of_numerical_control_attributes(
+        self, o_list_of_attributes: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -437,23 +441,25 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetListOfNumericalControlAttributes(CATSafeArrayVariant
                 | oListOfAttributes)
-                | 
+                |
                 |     Retrieve the list of Numerical Control attributes of a Manufacturing
                 |     Machine.
                 |     Each attribute is returned as the name of a CKE object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in oListOfAttributes the list of
                 |         Numerical Control attributes of the Manufacturing Machine
                 |         myMachine
-                | 
+                |
                 |          call myMachine.GetListOfNumericalControlAttributes(oListOfAttributes)
 
         :param tuple o_list_of_attributes:
         :rtype: None
         """
-        return self.manufacturing_machine.GetListOfNumericalControlAttributes(o_list_of_attributes)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machine.GetListOfNumericalControlAttributes(
+            o_list_of_attributes
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -477,23 +483,25 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetListOfRotaryTableAttributes(CATSafeArrayVariant
                 | oListOfAttributes)
-                | 
+                |
                 |     Retrieve the list of Rotary table attributes of a Manufacturing
                 |     Machine.
                 |     Each attribute is returned as the name of a CKE object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in oListOfAttributes the list of Tool
                 |         Change attributes of the Manufacturing Machine
                 |         myMachine
-                | 
+                |
                 |          call myMachine.GetListOfRotaryTableAttributes(oListOfAttributes)
 
         :param tuple o_list_of_attributes:
         :rtype: None
         """
-        return self.manufacturing_machine.GetListOfRotaryTableAttributes(o_list_of_attributes)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machine.GetListOfRotaryTableAttributes(
+            o_list_of_attributes
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -517,23 +525,25 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetListOfSpindleAttributes(CATSafeArrayVariant
                 | oListOfAttributes)
-                | 
+                |
                 |     Retrieve the list of Spindle attributes of a Manufacturing
                 |     Machine.
                 |     Each attribute is returned as the name of a CKE object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in oListOfAttributes the list of
                 |         Spindle attributes of the Manufacturing Machine
                 |         myMachine
-                | 
+                |
                 |          call myMachine.GetListOfSpindleAttributes(oListOfAttributes)
 
         :param tuple o_list_of_attributes:
         :rtype: None
         """
-        return self.manufacturing_machine.GetListOfSpindleAttributes(o_list_of_attributes)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machine.GetListOfSpindleAttributes(
+            o_list_of_attributes
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -557,23 +567,25 @@ class ManufacturingMachine(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetListOfToolChangeAttributes(CATSafeArrayVariant
                 | oListOfAttributes)
-                | 
+                |
                 |     Retrieve the list of Tool Change attributes of a Manufacturing
                 |     Machine.
                 |     Each attribute is returned as the name of a CKE object.
-                | 
+                |
                 |     Example:
                 |         The following example retrieves in oListOfAttributes the list of Tool
                 |         Change attributes of the Manufacturing Machine
                 |         myMachine
-                | 
+                |
                 |          call myMachine.GetListOfToolChangeAttributes(oListOfAttributes)
 
         :param tuple o_list_of_attributes:
         :rtype: None
         """
-        return self.manufacturing_machine.GetListOfToolChangeAttributes(o_list_of_attributes)
-        # # # # Autogenerated comment: 
+        return self.manufacturing_machine.GetListOfToolChangeAttributes(
+            o_list_of_attributes
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -596,13 +608,13 @@ class ManufacturingMachine(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub set_DefaultValues()
-                | 
+                |
                 |     Initialise the Manufacturing Machine parameters.
-                | 
+                |
                 |     Example:
                 |         The following example make the init of the parameter of the Machine
                 |         ThisMachine .
-                | 
+                |
                 |          call ThisMachine.set_DefaultValues
 
         :rtype: None

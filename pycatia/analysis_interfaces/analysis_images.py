@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.analysis_interfaces.analysis_image import AnalysisImage
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
@@ -15,20 +16,20 @@ from pycatia.types.general import CATVariant
 
 class AnalysisImages(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     AnalysisImages
-                | 
-                | The collection of analysis images.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     AnalysisImages
+            |
+            | The collection of analysis images.
+
     """
 
     def __init__(self, com_object):
@@ -36,11 +37,12 @@ class AnalysisImages(Collection):
         self.analysis_images = com_object
 
     def add(
-            self,
-            i_image_name: str,
-            i_hide_existing_images: CATVariant,
-            i_show_mesh: CATVariant,
-            i_duplicate: CATVariant) -> AnalysisImage:
+        self,
+        i_image_name: str,
+        i_hide_existing_images: CATVariant,
+        i_show_mesh: CATVariant,
+        i_duplicate: CATVariant,
+    ) -> AnalysisImage:
         """
         .. note::
             :class: toggle
@@ -50,35 +52,35 @@ class AnalysisImages(Collection):
                 | CATVariant iHideExistingImages,
                 | CATVariant iShowMesh,
                 | CATVariant iDuplicate) As AnalysisImage
-                | 
+                |
                 |     Creates a new image and adds it to the analysis image
                 |     collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iImageName
-                |             The name of the image to create. 
+                |             The name of the image to create.
                 |         iHideExistingImages
                 |             To deactivate or not all the activated images before create the new
-                |             image. 
+                |             image.
                 |         iShowMesh
-                |             To show or not the mesh image. 
+                |             To show or not the mesh image.
                 |         iDuplicate
                 |             To duplicate or not the new image, if same image already exists in
-                |             collection of images. 
-                | 
+                |             collection of images.
+                |
                 |     Returns:
-                |         The created Analysis Image 
+                |         The created Analysis Image
                 |     Example:
-                | 
+                |
                 |           This example create ThisAnalysisImage in the analysisImagesanalysis
-                |           
-                | 
+                |
+                |
                 |          images collection. The image to create is supposed to be a mesh
-                |          deformed image. 
-                | 
-                |          
-                | 
+                |          deformed image.
+                |
+                |
+                |
                 |          Dim ThisAnalysisImage As AnalysisImage
                 |          Set ThisAnalysisImage = analysisImages.Add("Mesh_Deformed", True, False, False)
 
@@ -90,10 +92,7 @@ class AnalysisImages(Collection):
         """
         return AnalysisImage(
             self.analysis_images.Add(
-                i_image_name,
-                i_hide_existing_images,
-                i_show_mesh,
-                i_duplicate
+                i_image_name, i_hide_existing_images, i_show_mesh, i_duplicate
             )
         )
 
@@ -104,27 +103,27 @@ class AnalysisImages(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func Item(CATVariant iIndex) As AnalysisImage
-                | 
+                |
                 |     Returns an analysis image using its index or its name from the analysis
                 |     images collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the analysis image to retrieve from the
                 |             collection of analysis images. This index is the rank of the analysis image in
                 |             the collection. The index of the first analysis image in the collection is 1,
                 |             and the index of the last analysis image is Count.
-                |             
-                | 
+                |
+                |
                 |     Returns:
-                |         The retrieved analysis image 
+                |         The retrieved analysis image
                 |     Example:
-                | 
+                |
                 |           This example retrieves in ThisAnalysisImage the third analysis
                 |           image.
-                |          
-                | 
+                |
+                |
                 |          Dim ThisAnalysisImage As AnalysisImage
                 |          Set ThisAnalysisImage = analysisImages.Item(3)
 
@@ -140,28 +139,28 @@ class AnalysisImages(Collection):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveImage(CATVariant iImageIdentifier)
-                | 
+                |
                 |     Deletes the Analysis Image from the analysis images collection of the
                 |     Analysis Set.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iImageIdentifier
                 |             The index or the name of the analysis image to delete from the
                 |             Analysis Set. Note: The index given is the position of the image in the
                 |             Analysis Set. Note: The name given is the string got from analysisImage.Name If
                 |             the index or the name specified is not present in the Analysis Set, this method
                 |             FAILS. The index of the first analysis image in the collection is 1, and the
-                |             index of the last analysis image is Count. 
-                | 
+                |             index of the last analysis image is Count.
+                |
                 |     Example:
-                | 
+                |
                 |           Example 1
                 |          In this example analysisImages1 is the Analysis Set and analysisImage1
                 |          is the image present in it.
                 |          imageName = analysisImage1.Name
                 |          analysisImages1.RemoveImage(imageName)
-                |          
+                |
                 |          Example 2
                 |          analysisImages1.RemoveImage(4)
                 |          In this example 4 is the index of the Image to be deleted in Analysis
@@ -171,7 +170,7 @@ class AnalysisImages(Collection):
         :rtype: None
         """
         return self.analysis_images.RemoveImage(i_image_identifier)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

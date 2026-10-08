@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from typing import TYPE_CHECKING
@@ -16,25 +16,26 @@ from pycatia.knowledge_interfaces.relation import Relation
 if TYPE_CHECKING:
     from pycatia.knowledge_interfaces.parameter import Parameter
 
+
 class SetOfEquation(Relation):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     KnowledgeInterfaces.KnowledgeObject
-                |                        KnowledgeInterfaces.KnowledgeActivateObject
-                |                             KnowledgeInterfaces.Relation
-                |                                 SetOfEquation
-                | 
-                | Represents the set of equations object.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     KnowledgeInterfaces.KnowledgeObject
+            |                        KnowledgeInterfaces.KnowledgeActivateObject
+            |                             KnowledgeInterfaces.Relation
+            |                                 SetOfEquation
+            |
+            | Represents the set of equations object.
+
     """
 
     def __init__(self, com_object):
@@ -48,7 +49,7 @@ class SetOfEquation(Relation):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetMaxCalculationTime() As long
-                | 
+                |
                 |     Returns the maximum time of the model calculations.
 
         :rtype: int
@@ -62,7 +63,7 @@ class SetOfEquation(Relation):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetPrecision() As double
-                | 
+                |
                 |     Returns the calculation precision.
 
         :rtype: float
@@ -76,7 +77,7 @@ class SetOfEquation(Relation):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetSymbolcTransformations() As boolean
-                | 
+                |
                 |     Returns whether the Gauss method is used during the symbolic
                 |     transformation.
                 |     TRUE if the Gauss method is used during the symbolic transformation.
@@ -92,7 +93,7 @@ class SetOfEquation(Relation):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func IsStopDialog() As boolean
-                | 
+                |
                 |     Returns whether the "Stop Dialog" will be shown during
                 |     calculations.
                 |     TRUE if the 'Stop Dialog' will be shown during calculations.
@@ -108,7 +109,7 @@ class SetOfEquation(Relation):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetMaxCalculationTime(long iMaxTime)
-                | 
+                |
                 |     Sets a maximum time to the model calculations.
 
         :param int i_max_time:
@@ -116,19 +117,19 @@ class SetOfEquation(Relation):
         """
         return self.set_of_equation.SetMaxCalculationTime(i_max_time)
 
-    def set_parameter_as_input(self, i_parameter: 'Parameter') -> None:
+    def set_parameter_as_input(self, i_parameter: "Parameter") -> None:
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetParameterAsInput(Parameter iParameter)
-                | 
+                |
                 |     Specifies that the parameter must be considered as input
                 |     parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iParameter
                 |             The parameter to set up as input of the
                 |             SetOfEquationObject
@@ -137,7 +138,7 @@ class SetOfEquation(Relation):
         :rtype: None
         """
         return self.set_of_equation.SetParameterAsInput(i_parameter.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -153,19 +154,19 @@ class SetOfEquation(Relation):
         # # system_service = self.application.system_service
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_parameter_as_output(self, i_parameter: 'Parameter') -> None:
+    def set_parameter_as_output(self, i_parameter: "Parameter") -> None:
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetParameterAsOutput(Parameter iParameter)
-                | 
+                |
                 |     Specifies that the parameter must be considered as an output
                 |     parameter.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iParameter
                 |             The parameter to set up as output of the
                 |             SetOfEquationObject
@@ -174,7 +175,7 @@ class SetOfEquation(Relation):
         :rtype: None
         """
         return self.set_of_equation.SetParameterAsOutput(i_parameter.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -197,11 +198,11 @@ class SetOfEquation(Relation):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetPrecision(double iEps)
-                | 
+                |
                 |     Sets the calculation precision.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iEps
                 |             a precision
                 |             Legal values: 1e-10 ≤ iEps ≤ 0.1
@@ -218,7 +219,7 @@ class SetOfEquation(Relation):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub UseStopDialog(boolean iUsed)
-                | 
+                |
                 |     Specifies whether the 'Stop Dialog' should be shown during
                 |     calculations.
                 |     TRUE to show the 'Stop Dialog' during calculations.
@@ -227,7 +228,7 @@ class SetOfEquation(Relation):
         :rtype: None
         """
         return self.set_of_equation.UseStopDialog(i_used)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -250,7 +251,7 @@ class SetOfEquation(Relation):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub UseSymbolcTransformations(boolean iGauss)
-                | 
+                |
                 |     Specifies whether the Gauss method should be used during the symbolic
                 |     transformation.
                 |     TRUE to use the Gauss method during the symbolic transformation.
@@ -259,7 +260,7 @@ class SetOfEquation(Relation):
         :rtype: None
         """
         return self.set_of_equation.UseSymbolcTransformations(i_gauss)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

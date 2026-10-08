@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -29,9 +30,9 @@ class NonSemanticDatumTarget(AnyObject):
                 |             System.CATBaseDispatch
                 |                 System.AnyObject
                 |                     NonSemanticDatumTarget
-                | 
+                |
                 | Interface Managing Non Semantic Datum Target.
-    
+
     """
 
     def __init__(self, com_object):
@@ -46,7 +47,7 @@ class NonSemanticDatumTarget(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property LowLabel() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets Lower Label.
 
         :rtype: str
@@ -54,7 +55,7 @@ class NonSemanticDatumTarget(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return self.non_semantic_datum_target.LowLabel
 
@@ -74,10 +75,10 @@ class NonSemanticDatumTarget(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TypeSpecifier() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets the type of specifier.
                 |     Legal values:
-                | 
+                |
                 |         None
                 |         Square
                 |         Diameter
@@ -87,7 +88,7 @@ class NonSemanticDatumTarget(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return self.non_semantic_datum_target.TypeSpecifier
 
@@ -107,7 +108,7 @@ class NonSemanticDatumTarget(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UpLabel() As CATBSTR
-                | 
+                |
                 |     Retrieves or sets Upper Label.
 
         :rtype: str
@@ -115,7 +116,7 @@ class NonSemanticDatumTarget(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             27,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
         return self.non_semantic_datum_target.UpLabel
 

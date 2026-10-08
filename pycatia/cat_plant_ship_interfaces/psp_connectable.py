@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_plant_ship_interfaces.psp_connector import PSPConnector
 from pycatia.cat_plant_ship_interfaces.psp_list_of_bstrs import PSPListOfBSTRs
 from pycatia.cat_plant_ship_interfaces.psp_list_of_objects import PSPListOfObjects
@@ -16,23 +17,23 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PSPConnectable(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PspConnectable
-                | 
-                | Represents an Interface to manage object behaviors in making
-                | connections.
-                | Role: To specify object behaviors such as adding a connector and removing a
-                | connector.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PspConnectable
+            |
+            | Represents an Interface to manage object behaviors in making
+            | connections.
+            | Role: To specify object behaviors such as adding a connector and removing a
+            | connector.
+
     """
 
     def __init__(self, com_object):
@@ -47,9 +48,9 @@ class PSPConnectable(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Connectors() As PspListOfObjects (Read Only)
-                | 
+                |
                 |     Returns a list of connectors of the object.
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspConnectable
@@ -72,13 +73,13 @@ class PSPConnectable(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ValidConnectorTypes() As PspListOfBSTRs (Read
                 | Only)
-                | 
+                |
                 |     Returns a list of Valid connector types on this object.
-                | 
+                |
                 |     Example:
                 |
                 |          Dim objThisIntf As PspConnectable
-                |          Dim objArg1 As PspListOfBSTRs  
+                |          Dim objArg1 As PspListOfBSTRs
                 |           ...
                 |          Set objArg1 = objThisIntf.ValidConnectorTypes
 
@@ -95,14 +96,14 @@ class PSPConnectable(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func GetConnectorByName(CATBSTR iuConnectorName) As
                 | PspConnector
-                | 
+                |
                 |     Retrieves a connector with the given name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iConnectorName
-                |             Connector name to look for. 
-                | 
+                |             Connector name to look for.
+                |
                 |     Returns:
                 |         Connector with given name.
                 |
@@ -120,11 +121,11 @@ class PSPConnectable(AnyObject):
         return PSPConnector(self.psp_connectable.GetConnectorByName(iu_connector_name))
 
     def list_connectables(
-            self,
-            iu_class_filter: PSPListOfBSTRs,
-            o_l_cntbles: PSPListOfObjects,
-            o_l_cntrs_on_this_obj: PSPListOfObjects,
-            o_l_cntrs_on_connected: PSPListOfObjects
+        self,
+        iu_class_filter: PSPListOfBSTRs,
+        o_l_cntbles: PSPListOfObjects,
+        o_l_cntrs_on_this_obj: PSPListOfObjects,
+        o_l_cntrs_on_connected: PSPListOfObjects,
     ) -> None:
         """
         .. note::
@@ -135,21 +136,21 @@ class PSPConnectable(AnyObject):
                 | PspListOfObjects oLCntbles,
                 | PspListOfObjects oLCntrsOnThisObj,
                 | PspListOfObjects oLCntrsOnConnected)
-                | 
+                |
                 |     Retrieve a list of connectors of the object.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iuClassFilter
                 |             Class filter list. If iuClassFilter is an empty list then it will
                 |             get connectors for all the application connector types.
-                |             
+                |
                 |         oLCntbles
                 |             a list of CATIAPspConnectable objects that connect this object
-                |             
+                |
                 |         oLCntrsOnThisObj
                 |             a list of connectors on "this" object in the connections ( A list
-                |             of CATIAPspConnector) 
+                |             of CATIAPspConnector)
                 |         oLCntrsOnConnected
                 |             a list of connectors on the other objects that the member of the
                 |             former list is connected to (positions in oLCntrsOnThisObj and
@@ -176,9 +177,9 @@ class PSPConnectable(AnyObject):
             iu_class_filter.com_object,
             o_l_cntbles.com_object,
             o_l_cntrs_on_this_obj.com_object,
-            o_l_cntrs_on_connected.com_object
+            o_l_cntrs_on_connected.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

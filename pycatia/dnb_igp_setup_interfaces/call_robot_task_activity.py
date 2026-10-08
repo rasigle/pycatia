@@ -1,43 +1,44 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dmaps_interfaces.activity import Activity
 
 
 class CallRobotTaskActivity(Activity):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DMAPSInterfaces.Activity
-                |                         CallRobotTaskActivity
-                | 
-                | Interface representing a CallRobotTaskActivity.
-                | 
-                | Role: This interface is used to analyze the CallRobotTask
-                | activity
-                | The following code snippet can be used to obtain a CallRobotTaskActivity from a
-                | selected Activity
-                | 
-                |    Dim oSelectAct As Activity
-                |    Set oSelectAct = CATIA.ActiveDocument.Selection.FindObject("CATIAActivity")
-                |    Dim objCallRobotTaskAct As CallRobotTaskActivity
-                |    Set objCallRobotTaskAct = oSelectAct.GetTechnologicalObject("CallRobotTaskActivity")
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DMAPSInterfaces.Activity
+            |                         CallRobotTaskActivity
+            |
+            | Interface representing a CallRobotTaskActivity.
+            |
+            | Role: This interface is used to analyze the CallRobotTask
+            | activity
+            | The following code snippet can be used to obtain a CallRobotTaskActivity from a
+            | selected Activity
+            |
+            |    Dim oSelectAct As Activity
+            |    Set oSelectAct = CATIA.ActiveDocument.Selection.FindObject("CATIAActivity")
+            |    Dim objCallRobotTaskAct As CallRobotTaskActivity
+            |    Set objCallRobotTaskAct = oSelectAct.GetTechnologicalObject("CallRobotTaskActivity")
+
     """
 
     def __init__(self, com_object):
@@ -51,28 +52,28 @@ class CallRobotTaskActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetPointedTaskName(CATBSTR oRobotTaskName)
-                | 
+                |
                 |     Gets the name of the Pointed RobotTask.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRobotTaskName
-                |             The name of the RobotTask being pointed. 
-                | 
+                |             The name of the RobotTask being pointed.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The pointed RobotTask name is retrieve
                 |             successfully.
                 |         E_FAIL
                 |             Unable to retrieve the pointed RobotTask name.
-                | 
+                |
                 |         Example:
                 |             The following example shows how to retrieve the pointed
                 |             RobotTask
-                | 
+                |
                 |                Dim objCallRobotTaskActy as
                 |                CallRobotTaskActivity
                 |                ...
@@ -92,27 +93,27 @@ class CallRobotTaskActivity(Activity):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetTask(Activity oRobotTask)
-                | 
+                |
                 |     Gets the Pointed RobotTask.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oRobotTask
-                |             The RobotTask pointed by this Activity. 
-                | 
+                |             The RobotTask pointed by this Activity.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The RobotTask is retrieve successfully.
                 |         E_FAIL
                 |             Unable to retrieve the RobotTask.
-                | 
+                |
                 |         Example:
                 |             The following example shows how to retrieve the pointed
                 |             RobotTask
-                | 
+                |
                 |                Dim objCallRobotTaskActy as
                 |                CallRobotTaskActivity
                 |                ...
@@ -123,7 +124,7 @@ class CallRobotTaskActivity(Activity):
         :rtype: None
         """
         return self.call_robot_task_activity.GetTask(o_robot_task.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -139,7 +140,9 @@ class CallRobotTaskActivity(Activity):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def set_task(self, i_target_robot_task: Activity, o_list_of_pointing_tasks: tuple) -> None:
+    def set_task(
+        self, i_target_robot_task: Activity, o_list_of_pointing_tasks: tuple
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -147,36 +150,36 @@ class CallRobotTaskActivity(Activity):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetTask(Activity iTargetRobotTask,
                 | CATSafeArrayVariant oListOfPointingTasks)
-                | 
+                |
                 |     Sets the Pointed RobotTask.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iTargetRobotTask
-                |             The Desired Pointed Task. 
+                |             The Desired Pointed Task.
                 |         oListOfPointingTasks
                 |             The List of RobotTasks which have the cyclic dependancy.
-                |             
-                | 
+                |
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The RobotTask is set successfully.
                 |         E_FAIL
                 |             Unable to set the RobotTask (either the RobotTask belongs to a
                 |             different robot or existing cyclic dependancy).
-                | 
+                |
                 |         Example:
                 |             The following example shows how to set the desired
                 |             RobotTask
-                | 
+                |
                 |                Dim objCallRobotTaskActy as
                 |                CallRobotTaskActivity
                 |                Dim objTask as RobotTask
                 |                ...
-                |                Dim objCyclicTasks(5) 
+                |                Dim objCyclicTasks(5)
                 |                objCallRobotTaskActy.SetTask
                 |                objTask,objCyclicTasks
 
@@ -184,8 +187,10 @@ class CallRobotTaskActivity(Activity):
         :param tuple o_list_of_pointing_tasks:
         :rtype: None
         """
-        return self.call_robot_task_activity.SetTask(i_target_robot_task.com_object, o_list_of_pointing_tasks)
-        # # # # Autogenerated comment: 
+        return self.call_robot_task_activity.SetTask(
+            i_target_robot_task.com_object, o_list_of_pointing_tasks
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

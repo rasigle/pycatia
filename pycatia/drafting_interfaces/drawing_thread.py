@@ -1,33 +1,34 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatThreadType, CatThreadLinkedTo
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class DrawingThread(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DrawingThread
-                | 
-                | Represents a drawing thread in a drawing view.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DrawingThread
+            |
+            | Represents a drawing thread in a drawing view.
+
     """
 
     def __init__(self, com_object):
@@ -42,32 +43,32 @@ class DrawingThread(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Type() As CatThreadType
-                | 
+                |
                 |     Returns or sets a CatThreadType (threaded or taped) on a thread. Be
                 |     careful, this method is only available on threads which are linked to 2D circle
-                |     geometry 
-                | 
+                |     geometry
+                |
                 | Example:
                 |     The following example sets the type Taped in MyThread
-                | 
+                |
                 |       If MyThread.IsLinkedTo()=cat2DCircle Then
                 |          MyThread.Type = catTaped
                 |        End If
                 |
                 |     Methods
-                | 
+                |
                 | o Func IsLinkedTo() As CatThreadLinkedTo
-                | 
+                |
                 |     Specifies which kind of objects the thread is linked to.
-                | 
+                |
                 |     Returns:
-                |         oLinkedType The type of thread link 
-                | 
+                |         oLinkedType The type of thread link
+                |
                 | Example:
                 |     The following example retrieves the CatThreadLinkedTo in MyThread This view
                 |     belongs to the drawing view collection of the drawing
                 |     sheet
-                | 
+                |
                 |      ThreadLinkType = MyThread.IsLinkedTo
 
         :return: CatThreadType

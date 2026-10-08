@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
@@ -15,29 +16,29 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class Line(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         Line
-                | 
-                | Represents the hybrid shape Line feature object.
-                | Role: Declare hybrid shape Line root feature object. All interfaces for
-                | different type of Line derives HybridShapeLine.
-                | 
-                | Use the CATIAHybridShapeFactory to create a HybridShapeLine
-                | objects.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         Line
+            |
+            | Represents the hybrid shape Line feature object.
+            | Role: Declare hybrid shape Line root feature object. All interfaces for
+            | different type of Line derives HybridShapeLine.
+            |
+            | Use the CATIAHybridShapeFactory to create a HybridShapeLine
+            | objects.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -52,13 +53,13 @@ class Line(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstUptoElem() As Reference
-                | 
+                |
                 |     Role: Gets the First upto element of the line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oFirstUpto
-                | 
+                |
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else
 
@@ -83,13 +84,13 @@ class Line(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondUptoElem() As Reference
-                | 
+                |
                 |     Role: Gets the Second upto element of the line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oSecondUpto
-                | 
+                |
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else
 
@@ -113,26 +114,26 @@ class Line(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetDirection(CATSafeArrayVariant oDirection)
-                | 
+                |
                 |     Role: Returns the unit-vector pointing in the direction of the
                 |     line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDirection
                 |         oDirection[0]
                 |             The X Coordinate of the unit vector pointing in the direction of
-                |             the line 
+                |             the line
                 |         oDirection[1]
                 |             The Y Coordinate of the unit vector pointing in the direction of
-                |             the line 
+                |             the line
                 |         oDirection[2]
                 |             The Z Coordinate of the unit vector pointing in the direction of
-                |             the line 
-                | 
+                |             the line
+                |
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -152,7 +153,7 @@ class Line(HybridShape):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
     def get_origin(self, o_origin: tuple) -> None:
@@ -162,23 +163,23 @@ class Line(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub GetOrigin(CATSafeArrayVariant oOrigin)
-                | 
+                |
                 |     Role: Returns the origin of the line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oOrigin
                 |         oOrigin[0]
-                |             The X Coordinate of a point lying on the line 
+                |             The X Coordinate of a point lying on the line
                 |         oOrigin[1]
-                |             The Y Coordinate of a point lying on the line 
+                |             The Y Coordinate of a point lying on the line
                 |         oOrigin[2]
                 |             The Z Coordinate of a point lying on the line The Origin is
-                |             evaluated from the geometry of the line. 
-                | 
+                |             evaluated from the geometry of the line.
+                |
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -186,7 +187,7 @@ class Line(HybridShape):
         :rtype: None
         """
         return self.line.GetOrigin(o_origin)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -209,26 +210,26 @@ class Line(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub PutDirection(CATSafeArrayVariant iDirection)
-                | 
+                |
                 |     Role: Sets the unit-vector pointing in the direction of the
                 |     line.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDirection
                 |         iDirection[0]
                 |             The X Coordinate of the unit vector pointing in the direction of
-                |             the line 
+                |             the line
                 |         iDirection[1]
                 |             The Y Coordinate of the unit vector pointing in the direction of
-                |             the line 
+                |             the line
                 |         iDirection[2]
                 |             The Z Coordinate of the unit vector pointing in the direction of
-                |             the line 
-                | 
+                |             the line
+                |
                 |     Returns:
                 |         HRESULT S_OK if Ok E_FAIL else return error code for C++
-                |         Implementations 
+                |         Implementations
                 |     See also:
                 |         HybridShapeFactory
 
@@ -236,7 +237,7 @@ class Line(HybridShape):
         :rtype: None
         """
         return self.line.PutDirection(i_direction)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

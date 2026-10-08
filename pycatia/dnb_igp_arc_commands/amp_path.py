@@ -1,50 +1,51 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_igp_arc_commands.amp_tag import AMPTag
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class AMPPath(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     AMPPath
-                | 
-                | This interface provides the methods to handle the feature AMPPath which is a
-                | list of AMPTags.
-                | 
-                | USAGE :
-                | This interface can be used only during AMP primitive file execution and not in
-                | a stand alone VB script file. In the AMP primitive file, use the AMP "Execute"
-                | keyword to execute a VB script file. For example:
-                | 
-                | Execute FREE path_name_of_the_VB_script_file
-                | ( Example tutorial file:
-                | /intel_a/startup/ARW/PRIMITIVES/AMPPath_AMPTag_Interfaces_Usage
-                | )
-                | 
-                | The entry point in the VB script file is the CATMain method which takes a
-                | single argument of type "AMPPath".
-                | ( For more details, please refer to the following sample VB script file:
-                | /intel_a/startup/ARW/PRIMITIVES/AMPPath_AMPTag_Interfaces_Usage.CATScript
-                | )
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     AMPPath
+            |
+            | This interface provides the methods to handle the feature AMPPath which is a
+            | list of AMPTags.
+            |
+            | USAGE :
+            | This interface can be used only during AMP primitive file execution and not in
+            | a stand alone VB script file. In the AMP primitive file, use the AMP "Execute"
+            | keyword to execute a VB script file. For example:
+            |
+            | Execute FREE path_name_of_the_VB_script_file
+            | ( Example tutorial file:
+            | /intel_a/startup/ARW/PRIMITIVES/AMPPath_AMPTag_Interfaces_Usage
+            | )
+            |
+            | The entry point in the VB script file is the CATMain method which takes a
+            | single argument of type "AMPPath".
+            | ( For more details, please refer to the following sample VB script file:
+            | /intel_a/startup/ARW/PRIMITIVES/AMPPath_AMPTag_Interfaces_Usage.CATScript
+            | )
+
     """
 
     def __init__(self, com_object):
@@ -59,21 +60,21 @@ class AMPPath(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub CreateTag(CATSafeArrayVariant iLocation,
                 | AMPTag oTag)
-                | 
+                |
                 |     Function to create an AMPTag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iLocation
                 |             The location (with respect to world reference frame) at which the
-                |             AMPTag has to be created. 
+                |             AMPTag has to be created.
                 |         oTag
-                |             The newly created AMPTag. 
-                | 
+                |             The newly created AMPTag.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
                 |             .
@@ -83,7 +84,7 @@ class AMPPath(AnyObject):
         :rtype: None
         """
         return self.amp_path.CreateTag(i_location, o_tag.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -99,7 +100,9 @@ class AMPPath(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def create_tag_with_reference(self, i_ref_tag: AMPTag, i_location: tuple, o_tag: AMPTag) -> None:
+    def create_tag_with_reference(
+        self, i_ref_tag: AMPTag, i_location: tuple, o_tag: AMPTag
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -108,24 +111,24 @@ class AMPPath(AnyObject):
                 | o Sub CreateTagWithReference(AMPTag iRefTag,
                 | CATSafeArrayVariant iLocation,
                 | AMPTag oTag)
-                | 
+                |
                 |     Function to create an AMPTag with reference to an already existing
                 |     AMPTag.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iRefTag
-                |             The AMPTag which is taken as the reference. 
+                |             The AMPTag which is taken as the reference.
                 |         iLocation
                 |             The location (with respect to iRefTag as the reference frame) at
-                |             which the AMPTag has to be created. 
+                |             which the AMPTag has to be created.
                 |         oTag
-                |             The newly created AMPTag. 
-                | 
+                |             The newly created AMPTag.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
                 |             .
@@ -135,8 +138,10 @@ class AMPPath(AnyObject):
         :param AMPTag o_tag:
         :rtype: None
         """
-        return self.amp_path.CreateTagWithReference(i_ref_tag.com_object, i_location, o_tag.com_object)
-        # # # # Autogenerated comment: 
+        return self.amp_path.CreateTagWithReference(
+            i_ref_tag.com_object, i_location, o_tag.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -159,18 +164,18 @@ class AMPPath(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetAllTags(CATSafeArrayVariant ioTagList)
-                | 
+                |
                 |     Function to get the list of AMPTags by name.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         ioTagList
-                |             Underlying list of AMPTag names. 
-                | 
+                |             Underlying list of AMPTag names.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
                 |             .
@@ -179,7 +184,7 @@ class AMPPath(AnyObject):
         :rtype: None
         """
         return self.amp_path.GetAllTags(io_tag_list)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -202,29 +207,29 @@ class AMPPath(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetNumTags(short otagListSize)
-                | 
+                |
                 |     Function to get the number of AMPTags in the given
                 |     AMPPath.
                 |     Usage:
                 |     'Array of AMPTags; No size specified as size is not known
                 |     Dim objAMPTags() As AMPTag
-                | 
+                |
                 |     'Size of the array objAMPTags is determined
                 |     Dim count As Integer
                 |     iAMPPath.GetNumTags count
-                | 
+                |
                 |     'Set the size of array objAMPTags
                 |     ReDim objAMPTags(count)
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         otagListSize
-                |             Number of AMPTags. 
-                | 
+                |             Number of AMPTags.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
                 |             .
@@ -241,21 +246,21 @@ class AMPPath(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetScriptVarValue(CATBSTR oValue)
-                | 
+                |
                 |     Function to get the value of system variable, "ScriptVar".
                 |     Usage:
                 |     Dim myScriptVar As String
                 |     iAMPPath.GetScriptVarValue myScriptVar
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oValue
-                |             Value of the system variable, "ScriptVar". 
-                | 
+                |             Value of the system variable, "ScriptVar".
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -271,18 +276,18 @@ class AMPPath(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetTargetDevice(AnyObject oDevice)
-                | 
+                |
                 |     Function to get the target device of the AMPPath.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oDevice
-                |             The target device of the AMPPath. 
-                | 
+                |             The target device of the AMPPath.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
                 |             .
@@ -300,22 +305,22 @@ class AMPPath(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub InsertAt(short iIndex,
                 | AMPTag iTag)
-                | 
+                |
                 |     Function to insert an AMPTag at a given index of the
                 |     AMPPath.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of AMPPath at which the AMPTag has to be inserted.
-                |             
+                |
                 |         iTag
-                |             The AMPTag that has to be inserted. 
-                | 
+                |             The AMPTag that has to be inserted.
+                |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise.
 
@@ -324,7 +329,7 @@ class AMPPath(AnyObject):
         :rtype: None
         """
         return self.amp_path.InsertAt(i_index, i_tag.com_object)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -347,19 +352,19 @@ class AMPPath(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveFrom(short iIndex)
-                | 
+                |
                 |     Function to remove an AMPTag at a given index of the
                 |     AMPPath.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index of AMPPath at which the AMPTag has to be removed.
                 |
                 |     Returns:
                 |         an HRESULT value.
                 |         Legal values:
-                | 
+                |
                 |             S_OK if the operation succeeds
                 |             E_FAIL otherwise
                 |             .

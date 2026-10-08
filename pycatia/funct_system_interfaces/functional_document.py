@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.in_interfaces.document import Document
 from pycatia.funct_system_interfaces.funct_facet_managers import FunctFacetManagers
 from pycatia.funct_system_interfaces.functional_description import FunctionalDescription
@@ -15,21 +16,21 @@ from pycatia.funct_system_interfaces.functional_description import FunctionalDes
 
 class FunctionalDocument(Document):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     InfInterfaces.Document
-                |                         FunctionalDocument
-                | 
-                | Represents a Functional Document.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     InfInterfaces.Document
+            |                         FunctionalDocument
+            |
+            | Represents a Functional Document.
+
     """
 
     def __init__(self, com_object):
@@ -45,7 +46,7 @@ class FunctionalDocument(Document):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property CurrentDescription() As FunctionalDescription (Read
                 | Only)
-                | 
+                |
                 |     Returns the Current Description.
 
         :rtype: FunctionalDescription
@@ -61,7 +62,7 @@ class FunctionalDocument(Document):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FacetManagers() As FunctFacetManagers (Read Only)
-                | 
+                |
                 |     Returns the Facet Managers.
 
         :rtype: FunctFacetManagers
@@ -78,7 +79,7 @@ class FunctionalDocument(Document):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OriginalDescription() As FunctionalDescription (Read
                 | Only)
-                | 
+                |
                 |     Returns the Original Description.
 
         :rtype: FunctionalDescription

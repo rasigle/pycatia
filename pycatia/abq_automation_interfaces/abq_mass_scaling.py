@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.body import Body
 from pycatia.product_structure_interfaces.product import Product
@@ -17,22 +18,22 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class ABQMassScaling(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQMassScaling
-                | 
-                | Represents an Abaqus Mass Scaling entity.
-                | 
-                | Role: Used to access the properties of a Mass Scaling entity.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQMassScaling
+            |
+            | Represents an Abaqus Mass Scaling entity.
+            |
+            | Role: Used to access the properties of a Mass Scaling entity.
+
     """
 
     def __init__(self, com_object):
@@ -47,7 +48,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FrequencyIncrement() As long
-                | 
+                |
                 |     Sets or returns the scaling frequency increment. Applies only when
                 |     FrequencyType is ABQ_INCREMENT.
 
@@ -72,7 +73,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FrequencyInterval() As long
-                | 
+                |
                 |     Sets or returns the scaling frequency interval. Applies only when
                 |     FrequencyType is ABQ_INTERVAL.
 
@@ -97,7 +98,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FrequencyType() As AbqMsFrequencyType
-                | 
+                |
                 |     Sets or returns the scaling frequency type.
 
         :return: enum abq_ms_frequency_type
@@ -122,7 +123,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Global() As boolean
-                | 
+                |
                 |     Sets or returns whether the mass scaling is global.
 
         :rtype: bool
@@ -146,7 +147,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NumSupports() As long (Read Only)
-                | 
+                |
                 |     Retrieves the number of supports.
 
         :rtype: int
@@ -162,7 +163,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ScaleFactor() As double
-                | 
+                |
                 |     Sets or returns the scale factor.
 
         :rtype: float
@@ -186,7 +187,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ScaleFactorOn() As boolean
-                | 
+                |
                 |     Sets or returns whether the scale factor is active.
 
         :rtype: bool
@@ -210,7 +211,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TargetMethod() As AbqMsTargetMethod
-                | 
+                |
                 |     Sets or returns the target time scaling method. Applies only when target
                 |     time is active.
 
@@ -236,7 +237,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TargetTime() As double
-                | 
+                |
                 |     Sets or returns the scaling target time.
 
         :rtype: float
@@ -260,7 +261,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TargetTimeOn() As boolean
-                | 
+                |
                 |     Sets or returns whether the target time scaling is active.
 
         :rtype: bool
@@ -284,7 +285,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Variable() As boolean
-                | 
+                |
                 |     Sets or returns whether the mass scaling is variable.
 
         :rtype: bool
@@ -308,14 +309,14 @@ class ABQMassScaling(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportForBody(Product iProduct,
                 | Body iBody)
-                | 
+                |
                 |     Adds the specified body as a support.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIAProduct specifying the positioning object.
-                |             
+                |
                 |         iBody
                 |             The CATIABody to serve as the support.
                 |             Refer: CATIABody , CATIAProduct
@@ -324,8 +325,10 @@ class ABQMassScaling(AnyObject):
         :param Body i_body:
         :rtype: None
         """
-        return self.abq_mass_scaling.AddSupportForBody(i_product.com_object, i_body.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_mass_scaling.AddSupportForBody(
+            i_product.com_object, i_body.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -341,7 +344,9 @@ class ABQMassScaling(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_product(self, i_product: Product, i_support: Reference) -> None:
+    def add_support_from_product(
+        self, i_product: Product, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -349,15 +354,15 @@ class ABQMassScaling(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromProduct(Product iProduct,
                 | Reference iSupport)
-                | 
+                |
                 |     Adds the specified product reference as a support. If the support already
                 |     exists then it is removed.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIAProduct specifying the positioning object.
-                |             
+                |
                 |         iSupport
                 |             The CATIAReference to serve as the support.
 
@@ -365,8 +370,10 @@ class ABQMassScaling(AnyObject):
         :param Reference i_support:
         :rtype: None
         """
-        return self.abq_mass_scaling.AddSupportFromProduct(i_product.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_mass_scaling.AddSupportFromProduct(
+            i_product.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -382,7 +389,9 @@ class ABQMassScaling(AnyObject):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_publication(self, i_product: Product, i_publication: Publication) -> None:
+    def add_support_from_publication(
+        self, i_product: Product, i_publication: Publication
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -390,27 +399,29 @@ class ABQMassScaling(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromPublication(Product iProduct,
                 | Publication iPublication)
-                | 
+                |
                 |     Adds a support from the publication. If the support already exists, it is
                 |     removed.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIA Product specifying the object to which the mass scaling
                 |             is applied.
                 |         iPublication
                 |             The CATIA Publication specifying the region to which the mass
                 |             scaling is applied.
-                | 
+                |
                 |             Refer: CATIAPublication
 
         :param Product i_product:
         :param Publication i_publication:
         :rtype: None
         """
-        return self.abq_mass_scaling.AddSupportFromPublication(i_product.com_object, i_publication.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_mass_scaling.AddSupportFromPublication(
+            i_product.com_object, i_publication.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -433,7 +444,7 @@ class ABQMassScaling(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub ClearSupports()
-                | 
+                |
                 |     Clear the list of supports.
 
         :rtype: None
@@ -448,15 +459,15 @@ class ABQMassScaling(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub GetSupports(CATSafeArrayVariant oProducts,
                 | CATSafeArrayVariant oSupports)
-                | 
+                |
                 |     Gets the supports that define the mass scaling region(s).
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oProducts
                 |             Returned safe array of products for the supports, as
                 |             CATIAReferences. This array has a one-to-one mapping with the supports array.
-                |             
+                |
                 |         oSupports
                 |             Returned safe array of supports, as CATIAReferences. This array has
                 |             a one-to-one mapping with the products array.
@@ -466,7 +477,7 @@ class ABQMassScaling(AnyObject):
         :rtype: None
         """
         return self.abq_mass_scaling.GetSupports(o_products, o_supports)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -490,17 +501,17 @@ class ABQMassScaling(AnyObject):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub SetSupports(CATSafeArrayVariant iProducts,
                 | CATSafeArrayVariant iSupports)
-                | 
+                |
                 |     Sets the supports that define the mass scaling region(s). Any previously
                 |     set support regions will be replaced with this new list. The list must contain
                 |     at least one item.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProducts
                 |             Safe array of products for the supports as CATIAReferences. This
                 |             array has a one-to-one mapping with the supports array.
-                |             
+                |
                 |         iSupports
                 |             Safe array of supports as CATIAReferences. This array has a
                 |             one-to-one mapping with the products array.
@@ -510,7 +521,7 @@ class ABQMassScaling(AnyObject):
         :rtype: None
         """
         return self.abq_mass_scaling.SetSupports(i_products, i_supports)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

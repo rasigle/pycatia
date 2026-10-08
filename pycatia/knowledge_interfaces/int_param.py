@@ -1,43 +1,42 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.knowledge_interfaces.parameter import Parameter
 
 
 class IntParam(Parameter):
-
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     KnowledgeInterfaces.Parameter
-                |                         IntParam
-                | 
-                | Represents the integer parameter.
-                | The following example shows how to create it:
-                | 
-                |  Dim CATDocs As Documents
-                |  Set CATDocs = CATIA.Documents
-                |  Dim part1 As Dccument
-                |  Set part1   = CATDocs.Add("CATPart") 
-                |  Dim  year As IntParam
-                |  Set year    = part1.Part.Parameters.CreateInteger("year", 1998)
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     KnowledgeInterfaces.Parameter
+            |                         IntParam
+            |
+            | Represents the integer parameter.
+            | The following example shows how to create it:
+            |
+            |  Dim CATDocs As Documents
+            |  Set CATDocs = CATIA.Documents
+            |  Dim part1 As Dccument
+            |  Set part1   = CATDocs.Add("CATPart")
+            |  Dim  year As IntParam
+            |  Set year    = part1.Part.Parameters.CreateInteger("year", 1998)
+
     """
 
     def __init__(self, com_object):
@@ -52,15 +51,15 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property RangeMax() As long
-                | 
+                |
                 |     Returns or sets the value of the upper bound that the parameter object
                 |     value can take.
-                | 
+                |
                 |     Example:
                 |         This example sets the RangeMax value to 0 if its value is smaller than
                 |         0:
-                | 
-                |          If (Length.RangeMax < 0.0 and Length.RangeMaxValidity <> 0) 
+                |
+                |          If (Length.RangeMax < 0.0 and Length.RangeMaxValidity <> 0)
                 |          Then
                 |              Length.RangeMax = 0.0
                 |          End If
@@ -86,14 +85,14 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property RangeMaxValidity() As long
-                | 
+                |
                 |     Returns or sets the type of the upper bound of the
                 |     parameter.
-                | 
+                |
                 |     0
-                |         the upper bound is meaningless 
+                |         the upper bound is meaningless
                 |     1
-                |         the upper bound can be reached 
+                |         the upper bound can be reached
                 |     2
                 |         the upper bound cannot be reached
 
@@ -118,15 +117,15 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property RangeMin() As long
-                | 
+                |
                 |     Returns or sets the value of the lower bound that the parameter object
                 |     value can take.
-                | 
+                |
                 |     Example:
                 |         This example sets the RangeMin value to 0 if its value is bigger than
                 |         0:
-                | 
-                |          If (Length.RangeMin > 0.0 and Length.RangeMinValidity <> 0) 
+                |
+                |          If (Length.RangeMin > 0.0 and Length.RangeMinValidity <> 0)
                 |          Then
                 |              Length.RangeMin = 0.0
                 |          End If
@@ -152,14 +151,14 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property RangeMinValidity() As long
-                | 
+                |
                 |     Returns or sets the type of the lower bound of the
                 |     parameter.
-                | 
+                |
                 |     0
-                |         the lower bound is meaningless 
+                |         the lower bound is meaningless
                 |     1
-                |         the lower bound can be reached 
+                |         the lower bound can be reached
                 |     2
                 |         the lower bound cannot be reached
 
@@ -184,14 +183,14 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Value() As long
-                | 
+                |
                 |     Returns or sets the value of the integer parameter. Units are expressed in
                 |     the IS unit system.
-                | 
+                |
                 |     Example:
                 |         This example sets the year value to 0 if its value is equal to
                 |         2000:
-                | 
+                |
                 |          If (year.Value = 2000)  Then
                 |              year.Value = 0
                 |          End If
@@ -216,12 +215,12 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub GetEnumerateValues(CATSafeArrayVariant oSafeArray)
-                | 
+                |
                 |     Returns an array containing the different values that the int param can
                 |     take in the case of multiple values.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |          Dim enumValues () as Variant
                 |          ReDim enumValues (anIntegerParameter.GetEnumerateValuesSize() -
                 |          1)
@@ -234,7 +233,7 @@ class IntParam(Parameter):
         :rtype: None
         """
         return self.int_param.GetEnumerateValues(o_safe_array)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -257,7 +256,7 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func GetEnumerateValuesSize() As long
-                | 
+                |
                 |     Returns the number of enumerate values.
 
         :rtype: int
@@ -271,7 +270,7 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SetEnumerateValues(CATSafeArrayVariant iSafeArray)
-                | 
+                |
                 |     Sets an array containing the different values that the real param can take
                 |     in the case of multiple values.
 
@@ -279,7 +278,7 @@ class IntParam(Parameter):
         :rtype: None
         """
         return self.int_param.SetEnumerateValues(i_safe_array)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -302,7 +301,7 @@ class IntParam(Parameter):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SuppressEnumerateValues()
-                | 
+                |
                 |     Resets the status of the object to a single value object.
 
         :rtype: None

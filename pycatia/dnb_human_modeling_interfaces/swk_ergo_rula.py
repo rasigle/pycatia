@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
@@ -14,20 +14,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class SWKErgoRULA(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     SWKErgoRULA
-                | 
-                | This interface deals the RULA ergonomic analysis.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     SWKErgoRULA
+            |
+            | This interface deals the RULA ergonomic analysis.
+
     """
 
     def __init__(self, com_object):
@@ -42,7 +42,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ArmAbducted() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the arm of the manikin is abducted, given the
                 |     manikin's current posture.
 
@@ -59,7 +59,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ArmOutToSide() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the arm of the manikin is out to the side, given
                 |     the manikin's current posture.
 
@@ -76,7 +76,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NeckSideBending() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the neck of the manikin is bent, given the
                 |     manikin's current posture.
 
@@ -93,7 +93,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property NeckTwisted() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the neck of the manikin is twisted, given the
                 |     manikin's current posture.
 
@@ -110,7 +110,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ObjectWeight() As CATBSTR
-                | 
+                |
                 |     Returns or sets the weight of the object being carried.
 
         :rtype: str
@@ -134,7 +134,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property OverallScore() As long (Read Only)
-                | 
+                |
                 |     This field is the overall RULA score, given the manikin's current posture.
 
         :rtype: int
@@ -150,7 +150,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ShoulderRaised() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the shoulder of the manikin is raised, given the
                 |     manikin's current posture.
 
@@ -167,7 +167,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TrunkSideBending() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the trunk of the manikin is bent, given the
                 |     manikin's current posture.
 
@@ -184,7 +184,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TrunkTwisted() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the trunk of the manikin is twisted, given the
                 |     manikin's current posture.
 
@@ -201,7 +201,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Verdict() As CATBSTR (Read Only)
-                | 
+                |
                 |     This field gives a text string which represents the interpretaton of the
                 |     overall RULA score.
 
@@ -218,7 +218,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WristBent() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the wrist of the manikin is bent, given the
                 |     manikin's current posture.
 
@@ -235,7 +235,7 @@ class SWKErgoRULA(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property WristTwisted() As boolean (Read Only)
-                | 
+                |
                 |     This property is True if the wrist of the manikin is twisted, given the
                 |     manikin's current posture.
 

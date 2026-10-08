@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.in_interfaces.reference import Reference
@@ -18,32 +18,32 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeHelix(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeHelix
-                | 
-                | Represents the hybrid shape helix feature object.
-                | Role: Allows to access data of the Helix feature. This data
-                | includes:
-                | 
-                |     axis
-                |     a starting point
-                |     a pitch
-                |     a height
-                |     2 angle values
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeHelix
+            |
+            | Represents the hybrid shape helix feature object.
+            | Role: Allows to access data of the Helix feature. This data
+            | includes:
+            |
+            |     axis
+            |     a starting point
+            |     a pitch
+            |     a height
+            |     2 angle values
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -58,15 +58,15 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Axis() As Reference
-                | 
+                |
                 |     Reads / Changes the Helix axis.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Axis
                 |             Helix axis.
-                |             Sub-element(s) supported (see 
-                | 
+                |             Sub-element(s) supported (see
+                |
                 |         Boundary object): CATIARectlinearTriDimFeatEdge or
                 |         RectilinearBiDimFeatEdge.
 
@@ -91,11 +91,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ClockwiseRevolution() As boolean
-                | 
+                |
                 |     Reads / Modifies the sense of revolutions .
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Clockwise
                 |             FALSE means that revolutions are counter-clockwise. TRUE means that
                 |             revolutions are clockwise.
@@ -121,11 +121,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Height() As Length (Read Only)
-                | 
+                |
                 |     Reads the height of the Helix.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oHeight
                 |             Height.
 
@@ -142,11 +142,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property InvertAxis() As boolean
-                | 
+                |
                 |     Reads / Modifies the orientation .
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Invert
                 |             FALSE means that there is no invertion (natural orientation). TRUE
                 |             to invert this orientation.
@@ -172,11 +172,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Pitch() As Length (Read Only)
-                | 
+                |
                 |     Reads the pitch of the Helix.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oPitch
                 |             Pitch.
 
@@ -193,11 +193,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Pitch2() As Length (Read Only)
-                | 
+                |
                 |     Reads the Helix pitch2.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Pitch2
                 |             Pitch2 for Helix.
 
@@ -214,11 +214,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property PitchLawType() As long
-                | 
+                |
                 |     Reads / Changes the Helix pitch law type.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         LawType
                 |             LawType for Helix.
 
@@ -243,11 +243,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Profile() As Reference
-                | 
+                |
                 |     Reads / Changes the Helix profile.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Profile
                 |             Profile for Helix.
 
@@ -272,11 +272,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RevolNumber() As RealParam (Read Only)
-                | 
+                |
                 |     Reads the revolution number of the Helix.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oNbRevol
                 |             Revolutions.
 
@@ -293,11 +293,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property StartingAngle() As Angle (Read Only)
-                | 
+                |
                 |     Reads the helix starting angle.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oStartingAngle
                 |             Starting angle.
 
@@ -314,16 +314,16 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property StartingPoint() As Reference
-                | 
+                |
                 |     Reads / Changes the starting point of the Helix. The starting point must
                 |     not be on the Helix axis.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         StartingPoint
                 |             Starting point.
-                |             Sub-element(s) supported (see 
-                | 
+                |             Sub-element(s) supported (see
+                |
                 |         Boundary object): Vertex.
 
         :rtype: Reference
@@ -347,11 +347,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property TaperAngle() As Angle (Read Only)
-                | 
+                |
                 |     Reads the helix taper angle.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTaperAngle
                 |             Taper angle.
 
@@ -368,11 +368,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property TaperOutward() As boolean
-                | 
+                |
                 |     Reads / Modifies the taper angle sense of variation.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         TaperOutward
                 |             FALSE means that helix radius decreases. TRUE means that helix
                 |             radius increases.
@@ -397,11 +397,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetHeight(double iHeight)
-                | 
+                |
                 |     Sets the helix height.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iHeight
                 |             Height.
 
@@ -417,11 +417,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPitch(double iPitch)
-                | 
+                |
                 |     Sets the helix pitch.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iPitch
                 |             Pitch.
 
@@ -437,11 +437,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetPitch2(double iPitch2)
-                | 
+                |
                 |     Changes the Helix pitch2 .
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         Pitch2
                 |             Pitch2 for Helix.
 
@@ -457,11 +457,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetRevolutionNumber(double iNbRevol)
-                | 
+                |
                 |     Changes the Revolution Numbers.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         NbRevol
                 |             Number of revolutions for Helix.
 
@@ -477,11 +477,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetStartingAngle(double iStartingAngle)
-                | 
+                |
                 |     Sets the helix starting angle.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTaperAngle
                 |             Starting angle.
 
@@ -497,11 +497,11 @@ class HybridShapeHelix(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetTaperAngle(double iTaperAngle)
-                | 
+                |
                 |     Sets the helix taper angle.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iTaperAngle
                 |             Taper angle.
 

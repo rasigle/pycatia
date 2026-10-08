@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
@@ -17,38 +17,38 @@ from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
 
 class HybridShapeTranslate(HybridShape):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
+        CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     MecModInterfaces.HybridShape
-                |                         HybridShapeTranslate
-                | 
-                | Represents the hybrid shape translate feature object.
-                | Role: To access the data of the hybrid shape translate feature object. This
-                | data includes:
-                | 
-                |     The element to translate
-                |     The translation direction
-                |     The translation distance and its value
-                | 
-                | LICENSING INFORMATION: Creation of volume result requires GSO
-                | License
-                | if GSO License is not granted , setting of Volume context has not
-                | effect
-                | 
-                | Use the CATIAHybridShapeFactory to create HybridShapeFeature
-                | object.
-                | 
-                | See also:
-                |     HybridShapeFactory
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     MecModInterfaces.HybridShape
+            |                         HybridShapeTranslate
+            |
+            | Represents the hybrid shape translate feature object.
+            | Role: To access the data of the hybrid shape translate feature object. This
+            | data includes:
+            |
+            |     The element to translate
+            |     The translation direction
+            |     The translation distance and its value
+            |
+            | LICENSING INFORMATION: Creation of volume result requires GSO
+            | License
+            | if GSO License is not granted , setting of Volume context has not
+            | effect
+            |
+            | Use the CATIAHybridShapeFactory to create HybridShapeFeature
+            | object.
+            |
+            | See also:
+            |     HybridShapeFactory
+
     """
 
     def __init__(self, com_object):
@@ -63,7 +63,7 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CoordXValue() As double
-                | 
+                |
                 |     Returns or sets the translate X coordinate value.
 
         :rtype: float
@@ -87,7 +87,7 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CoordYValue() As double
-                | 
+                |
                 |     Returns or sets the translate Y coordinate value.
 
         :rtype: float
@@ -111,7 +111,7 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property CoordZValue() As double
-                | 
+                |
                 |     Returns or sets the translate Z coordinate value.
 
         :rtype: float
@@ -135,13 +135,13 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Direction() As HybridShapeDirection
-                | 
+                |
                 |     Returns or sets the translate direction.
-                | 
+                |
                 |     Example
                 |         This example retrieves in Dir the translation direction for the
                 |         Translate hybrid shape feature.
-                | 
+                |
                 |          Dim Dir As CATIAHybridShapeDirection
                 |          Set Dir=Translate.Direction
 
@@ -166,7 +166,7 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property Distance() As Length (Read Only)
-                | 
+                |
                 |     Returns the translate distance.
 
         :rtype: Length
@@ -182,13 +182,13 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property DistanceValue() As double
-                | 
+                |
                 |     Returns or sets the translate distance value.
-                | 
+                |
                 |     Example
                 |         This example retrieves in DistVal the translation distance value for
                 |         the Translate hybrid shape feature.
-                | 
+                |
                 |          Dim DistVal As double
                 |          Set DistVal =Translate.DistanceValue
 
@@ -213,13 +213,13 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property ElemToTranslate() As Reference
-                | 
+                |
                 |     Returns or sets the element to translate.
-                | 
+                |
                 |     Example
                 |         This example retrieves in Element the element to be translated for the
                 |         Translate hybrid shape feature.
-                | 
+                |
                 |          Dim Element As Reference
                 |          Set Element=Translate.ElemToTranslate
 
@@ -244,7 +244,7 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property FirstPoint() As Reference
-                | 
+                |
                 |     Returns or sets the first point defining the translation.
 
         :rtype: Reference
@@ -268,18 +268,18 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property RefAxisSystem() As Reference
-                | 
+                |
                 |     Returns or Sets the reference Axis System for Translate
                 |     feature.
                 |     This data is not mandatory, if element is null, the absolute axis system is
                 |     taken.
                 |     When an element is given, X, Y and Z are considered in this Axis system.
-                |     
+                |
                 | Example
                 | :
                 |     This example retrieves in oRefAxis the reference Axis System for Translate
                 |     feature.
-                | 
+                |
                 |      Dim oRefAxis As CATIAReference
                 |      Set oRefAxis  = Translate.RefAxisSystem
 
@@ -304,7 +304,7 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property SecondPoint() As Reference
-                | 
+                |
                 |     Returns or sets the second point defining the translation.
 
         :rtype: Reference
@@ -328,9 +328,9 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property VectorType() As long
-                | 
+                |
                 |     Returns or sets the way the translation vector is defined.
-                | 
+                |
                 |         0= Direction + distance
                 |         1= point + points
                 |         2= coordinates
@@ -357,18 +357,18 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Property VolumeResult() As boolean
-                | 
+                |
                 |     Returns or sets the volume result.
                 |     Legal values: True if the result of translation is required as volume
                 |     (option is effective only in case of volumes,requires GSO License) and False if
                 |     it is needed as surface .
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets that the result of
                 |          the hybShpTranslate hybrid shape translate is volume.
-                |          
-                | 
+                |
+                |
                 |          hybShpTranslate.VolumeResult = True
 
         :rtype: bool
@@ -391,22 +391,22 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Func GetCreationMode() As long
-                | 
+                |
                 |     Gets the creation mode.
                 |     Legal values:
-                | 
+                |
                 |     0
                 |         CATGSMTransfoModeUnset. Default behavior: creation mode by default for
                 |         all features, modification mode for axis system
                 |     1
-                |         CATGSMTransfoModeCreation. Creation mode. 
+                |         CATGSMTransfoModeCreation. Creation mode.
                 |     2
-                |         CATGSMTransfoModeModification. Modification mode. 
-                | 
+                |         CATGSMTransfoModeModification. Modification mode.
+                |
                 | Example:
                 |     This example retrieves in oCreation the creation mode for the
                 |     hybShpTranslate hybrid shape feature.
-                | 
+                |
                 |      oCreation = hybShpTranslate.GetCreationMode
 
         :rtype: int
@@ -420,25 +420,25 @@ class HybridShapeTranslate(HybridShape):
 
             CAA V5 Visual Basic Help (2020-07-06 14:02:20.222384)
                 | o Sub SetCreationMode(boolean iCreation)
-                | 
+                |
                 |     Sets the creation mode(creation or modification).
                 |     Legal values: True if the result is a creation feature and False if the
                 |     result is a modification feature.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets that the mode of
                 |          the hybShpTranslate hybrid shape translate to
                 |          creation
-                |          
-                | 
+                |
+                |
                 |          hybShpTranslate.SetCreationMode True
 
         :param bool i_creation:
         :rtype: None
         """
         return self.hybrid_shape_translate.SetCreationMode(i_creation)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

@@ -1,12 +1,12 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-09 09:53:18.676780
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
 
 from pycatia.system_interfaces.setting_controller import SettingController
@@ -14,30 +14,30 @@ from pycatia.system_interfaces.setting_controller import SettingController
 
 class DlNameSettingAtt(SettingController):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
+        CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     System.SettingController
-                |                         DLNameSettingAtt
-                | 
-                | Interface to handle the DLNames.
-                | Role: This interface is implemented by a component which represents the
-                | controller of the DLNames.
-                | This interface defines:
-                | 
-                |     A method to set each DLName
-                |     A method to get the value of each DLName
-                |     A method to lock/unlock each parameter
-                |     A method to retrieve the informations concerning each
-                |     parameter
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     System.SettingController
+            |                         DLNameSettingAtt
+            |
+            | Interface to handle the DLNames.
+            | Role: This interface is implemented by a component which represents the
+            | controller of the DLNames.
+            | This interface defines:
+            |
+            |     A method to set each DLName
+            |     A method to get the value of each DLName
+            |     A method to lock/unlock each parameter
+            |     A method to retrieve the informations concerning each
+            |     parameter
+
     """
 
     def __init__(self, com_object):
@@ -52,7 +52,7 @@ class DlNameSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property DLNameCreationRight() As boolean
-                | 
+                |
                 |     Returns or set the right to create new DLNames.
                 |     Role: Retrieves or set the right to create new DLNames.
 
@@ -77,7 +77,7 @@ class DlNameSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780)
                 | o Property RootDLNameCreationRight() As boolean
-                | 
+                |
                 |     Returns or set the right to create new Root DLNames.
                 |     Role: Retrieves or set the right to create new Root DLNames.
 
@@ -104,25 +104,25 @@ class DlNameSettingAtt(SettingController):
                 | CATBSTR oRealNameUnix,
                 | CATBSTR oRealNameNT,
                 | CATBSTR oFather)
-                | 
+                |
                 |     Retrieves the mapping between a logical name and the physical
                 |     path.
                 |     Role: Retrieves the mapping between a logical name and the physical
                 |     path.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDLName
-                |             the logical name. 
+                |             the logical name.
                 |         oRealNameUnix
                 |             the real physical path corresponding to the logical name on Unix.
-                |             
+                |
                 |         oRealNameNT
                 |             the real physical path corresponding to the logical name on
-                |             Windows. 
+                |             Windows.
                 |         iFather
-                |             if applicable the Name of the parent DLName 
-                | 
+                |             if applicable the Name of the parent DLName
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -134,7 +134,9 @@ class DlNameSettingAtt(SettingController):
         :param str o_father:
         :return: None
         """
-        return self.dl_name_setting_att.GetDLName(i_dl_name, o_real_name_unix, o_real_name_nt, o_father)
+        return self.dl_name_setting_att.GetDLName(
+            i_dl_name, o_real_name_unix, o_real_name_nt, o_father
+        )
 
     def get_dl_name_creation_right_info(self, admin_level, o_locked):
         """
@@ -144,7 +146,7 @@ class DlNameSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetDLNameCreationRightInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves the state of the parameter DLNameCreationRight.
                 |     Refer to SettingController for a detailed description.
 
@@ -152,7 +154,9 @@ class DlNameSettingAtt(SettingController):
         :param str o_locked:
         :return: None
         """
-        return self.dl_name_setting_att.GetDLNameCreationRightInfo(admin_level, o_locked)
+        return self.dl_name_setting_att.GetDLNameCreationRightInfo(
+            admin_level, o_locked
+        )
 
     def get_dl_name_exp(self, i_dl_name, o_real_name_unix, o_real_name_nt, o_father):
         """
@@ -164,25 +168,25 @@ class DlNameSettingAtt(SettingController):
                 | CATBSTR oRealNameUnix,
                 | CATBSTR oRealNameNT,
                 | CATBSTR oFather)
-                | 
+                |
                 |     Retrieves the mapping between a logical name and the physical
                 |     path.
                 |     Role: Retrieves the mapping between a logical name and the physical path in
                 |     a literal form.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDLName
-                |             the logical name. 
+                |             the logical name.
                 |         oRealNameUnix
                 |             the real physical path corresponding to the logical name on Unix.
-                |             
+                |
                 |         oRealNameNT
                 |             the real physical path corresponding to the logical name on
-                |             Windows. 
+                |             Windows.
                 |         iFather
-                |             if applicable the Name of the parent DLName 
-                | 
+                |             if applicable the Name of the parent DLName
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -194,7 +198,9 @@ class DlNameSettingAtt(SettingController):
         :param str o_father:
         :return: None
         """
-        return self.dl_name_setting_att.GetDLNameExp(i_dl_name, o_real_name_unix, o_real_name_nt, o_father)
+        return self.dl_name_setting_att.GetDLNameExp(
+            i_dl_name, o_real_name_unix, o_real_name_nt, o_father
+        )
 
     def get_dl_name_info(self, i_dl_name, admin_level, o_locked):
         """
@@ -205,41 +211,41 @@ class DlNameSettingAtt(SettingController):
                 | o Func GetDLNameInfo(CATBSTR iDLName,
                 | CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves the state of the for a given DLName.
                 |     Role: This information defines the state of the setting parameter and is
                 |     made up of:
-                | 
+                |
                 |         The administration level that sets the current value or the value used
                 |         to reset it
                 |         The administration level that has locked the setting
                 |         parameter.
                 |         A flag to indicate whether the setting parameter was
                 |         modified.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDLName
-                |             a DLname. 
+                |             a DLname.
                 |         ioAdminLevel
                 |             [inout] The administration leve that defines the value used when
                 |             resetting the setting parameter.
-                | 
+                |
                 |             Legal values:
-                | 
+                |
                 |                 Default value if the DLName has never been defined in the
                 |                 administration concatenation.
                 |                 Admin Level n if the setting parameter has been
                 |                 administered,
                 |                 where n is an integer starting from 0 representing the rank of
                 |                 the administration level.
-                | 
+                |
                 |         ioLocked
                 |             [inout] A character string to indicate whether the parameter is
                 |             locked and the level of administration where the locking has been
                 |             proceeded.
                 |             Legal values:
-                | 
+                |
                 |                 Locked at Admin Level n if the setting parameter is locked by
                 |                 then administration level n,
                 |                 where n is an integer starting from 0.
@@ -247,7 +253,7 @@ class DlNameSettingAtt(SettingController):
                 |                 administration level
                 |                 Unlocked if the setting parameter is not
                 |                 locked
-                | 
+                |
                 |     Returns:
                 |         True to indicate that the DLName value has been defined at the current
                 |         administrator or user level. This is only possible with unlocked DLNames. False
@@ -268,15 +274,15 @@ class DlNameSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetDLNameList() As CATSafeArrayVariant
-                | 
+                |
                 |     Retrieves the list of the DLNames.
                 |     Role: Retrieves the list of the defined DLNames.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         oTabDLName
-                |             a CATSafeArrayVariant of CATBSTR of nb elements. 
-                | 
+                |             a CATSafeArrayVariant of CATBSTR of nb elements.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -294,21 +300,21 @@ class DlNameSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetDLNameSubList(CATBSTR iDLName) As
                 | CATSafeArrayVariant
-                | 
+                |
                 |     Retrieves the list of the Sub-DLNames.
                 |     Role: Retrieves the list of the DLNames created in a given
                 |     DLName.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDLName
                 |             The Father DLName. if iDLName=NULL all DLNames created at the root
-                |             level are return. 
+                |             level are return.
                 |         oNbDLname
-                |             The number of defined DLNames. 
+                |             The number of defined DLNames.
                 |         oTabDLName
-                |             The array of DLNames 
-                | 
+                |             The array of DLNames
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -328,7 +334,7 @@ class DlNameSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Func GetRootDLNameCreationRightInfo(CATBSTR AdminLevel,
                 | CATBSTR oLocked) As boolean
-                | 
+                |
                 |     Retrieves the state of the parameter
                 |     RootDLNameCreationRight.
                 |     Refer to SettingController for a detailed description.
@@ -337,7 +343,9 @@ class DlNameSettingAtt(SettingController):
         :param str o_locked:
         :return: None
         """
-        return self.dl_name_setting_att.GetRootDLNameCreationRightInfo(admin_level, o_locked)
+        return self.dl_name_setting_att.GetRootDLNameCreationRightInfo(
+            admin_level, o_locked
+        )
 
     def remove_dl_name(self, i_dl_name):
         """
@@ -346,16 +354,16 @@ class DlNameSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub RemoveDLName(CATBSTR iDLName)
-                | 
+                |
                 |     Remove a logical name.
                 |     Role: Remove a DLName in the current set if it is
                 |     possible.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDLName
-                |             the logical name. 
-                | 
+                |             the logical name.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -374,18 +382,18 @@ class DlNameSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub RenameDLName(CATBSTR iDLName,
                 | CATBSTR iNewName)
-                | 
+                |
                 |     Rename an existing DLName.
                 |     Role: Rename a DLName in the current set if it is
                 |     possible.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDLName
-                |             the logical name to rename. 
+                |             the logical name to rename.
                 |         iNewName
-                |             the new logical name. 
-                | 
+                |             the new logical name.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -397,7 +405,9 @@ class DlNameSettingAtt(SettingController):
         """
         return self.dl_name_setting_att.RenameDLName(i_dl_name, i_new_name)
 
-    def set_dl_name(self, i_dl_name, i_real_name_unix, i_real_name_nt, i_father, i_verif_directory):
+    def set_dl_name(
+        self, i_dl_name, i_real_name_unix, i_real_name_nt, i_father, i_verif_directory
+    ):
         """
         .. note::
             :class: toggle
@@ -408,27 +418,27 @@ class DlNameSettingAtt(SettingController):
                 | CATBSTR iRealNameNT,
                 | CATBSTR iFather,
                 | boolean iVerifDirectory)
-                | 
+                |
                 |     Sets the mapping between a logical name and the physical
                 |     path.
                 |     Role: Sets the value of the cache maximum size in Mo
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDLName
-                |             the logical name. 
+                |             the logical name.
                 |         oRealNameUnix
                 |             the real physical path corresponding to the logical name on Unix.
-                |             
+                |
                 |         oRealNameNT
                 |             the real physical path corresponding to the logical name on
-                |             Windows. 
+                |             Windows.
                 |         iFather
-                |             if applicable the Name of the parent DLName 
+                |             if applicable the Name of the parent DLName
                 |         iVerifDirectory
                 |             if VerifDirectory is set the existence of the directory on the
-                |             current platform will be check. 
-                | 
+                |             current platform will be check.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -442,13 +452,9 @@ class DlNameSettingAtt(SettingController):
         :return: None
         """
         return self.dl_name_setting_att.SetDLName(
-            i_dl_name,
-            i_real_name_unix,
-            i_real_name_nt,
-            i_father,
-            i_verif_directory
+            i_dl_name, i_real_name_unix, i_real_name_nt, i_father, i_verif_directory
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -471,7 +477,7 @@ class DlNameSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetDLNameCreationRightLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the parameter DLNameCreationRight.
                 |     Refer to SettingController for a detailed description.
 
@@ -479,7 +485,7 @@ class DlNameSettingAtt(SettingController):
         :return: None
         """
         return self.dl_name_setting_att.SetDLNameCreationRightLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -503,22 +509,22 @@ class DlNameSettingAtt(SettingController):
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetDLNameLock(CATBSTR iDLName,
                 | boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the DLName.
                 |     Role: Locks or unlocks the given DLName if the operation is allowed in the
                 |     current administrated environment. In user mode this method will always return
                 |     E_FAIL.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iDLname
-                |             the DLname to be locked. 
+                |             the DLname to be locked.
                 |         iLocked
                 |             the locking operation to be performed Legal
                 |             values:
                 |             TRUE : to lock the parameter.
-                |             FALSE: to unlock the parameter. 
-                | 
+                |             FALSE: to unlock the parameter.
+                |
                 |     Returns:
                 |         Legal values:
                 |         S_OK : on Success
@@ -529,7 +535,7 @@ class DlNameSettingAtt(SettingController):
         :return: None
         """
         return self.dl_name_setting_att.SetDLNameLock(i_dl_name, i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -552,7 +558,7 @@ class DlNameSettingAtt(SettingController):
 
             CAA V5 Visual Basic Help (2020-06-09 09:53:18.676780))
                 | o Sub SetRootDLNameCreationRightLock(boolean iLocked)
-                | 
+                |
                 |     Locks or unlocks the parameter RootDLNameCreationRight.
                 |     Refer to SettingController for a detailed description.
 
@@ -560,7 +566,7 @@ class DlNameSettingAtt(SettingController):
         :return: None
         """
         return self.dl_name_setting_att.SetRootDLNameCreationRightLock(i_locked)
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

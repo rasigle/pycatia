@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_plant_ship_interfaces.psp_list_of_doubles import PSPListOfDoubles
 from pycatia.cat_plant_ship_interfaces.psp_list_of_objects import PSPListOfObjects
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,21 +16,21 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class PSPPlacePart(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     PspPlacePart
-                | 
-                | Represents the Place physical parts object.
-                | Role: To place physical parts.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     PspPlacePart
+            |
+            | Represents the Place physical parts object.
+            | Role: To place physical parts.
+
     """
 
     def __init__(self, com_object):
@@ -44,11 +45,11 @@ class PSPPlacePart(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ErrorMessage() As CATBSTR (Read Only)
-                | 
+                |
                 |     Returns the message associated with the last error.
                 |     Role: If an error occurs when placing or routing a part, a message is
                 |     associated with the error.
-                | 
+                |
                 |     Returns:
                 |         The error message associated with the last error. Null if no error.
 
@@ -58,16 +59,16 @@ class PSPPlacePart(AnyObject):
         return self.psp_place_part.ErrorMessage
 
     def place_part_in_space(
-            self,
-            iu_standard: str,
-            iu_function_type: str,
-            ipi_reference_part: AnyObject,
-            ipi_parent_product: AnyObject,
-            ipi_logical_line: AnyObject,
-            iu_placed_part_id: str,
-            i_up_direction: PSPListOfDoubles,
-            i_horizontal_orientation: PSPListOfDoubles,
-            i_position: PSPListOfDoubles
+        self,
+        iu_standard: str,
+        iu_function_type: str,
+        ipi_reference_part: AnyObject,
+        ipi_parent_product: AnyObject,
+        ipi_logical_line: AnyObject,
+        iu_placed_part_id: str,
+        i_up_direction: PSPListOfDoubles,
+        i_horizontal_orientation: PSPListOfDoubles,
+        i_position: PSPListOfDoubles,
     ) -> AnyObject:
         """
         .. note::
@@ -83,48 +84,48 @@ class PSPPlacePart(AnyObject):
                 | PspListOfDoubles iUpDirection,
                 | PspListOfDoubles iHorizontalOrientation,
                 | PspListOfDoubles iPosition) As AnyObject
-                | 
+                |
                 |     Places a part in space.
                 |     Role: The part instance is placed given its reference with respect to its
                 |     parent product. The Part Placement engine will not perform any of it's normal
                 |     checks for interactions with nearby parts. Part is placed
                 |     non-spec.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iuStandard
-                |             The standard for application attribute values. 
+                |             The standard for application attribute values.
                 |         iuFunctionType
                 |             The type of function (e.g. block valve, branch). Used when no
                 |             function is specified but functional part placement is required.
-                |             
+                |
                 |         ipiReferencePart
                 |             The reference part from which to derive the instance part.
-                |             
+                |
                 |         ipiParentProduct
                 |             The parent product (in the design model) for the new instance part.
-                |             
+                |
                 |         ipiLogicalLine
                 |             The logical line (e.g. piping line) which contains the instance
-                |             part. 
+                |             part.
                 |         iuPlacedPartID
                 |             The name of the placed part in the design model. Null uses the
                 |             standard ID generated by the part placement engine.
-                |             
+                |
                 |         iUpDirection
                 |             The up direction for the placed part. The list has three values
                 |             which represent the x, y and z values of a unit direction vector. Value is
-                |             relative to ipiParentProduct. 
+                |             relative to ipiParentProduct.
                 |         iHorizontalOrientation
                 |             The orientation of the part in "horizontal" plane (plane
                 |             perpendicular to up direction). Must be perpendicular to iUpDirection. The list
                 |             has three values which represent the x, y and z values of a unit direction
-                |             vector. Value is relative to ipiParentProduct. 
+                |             vector. Value is relative to ipiParentProduct.
                 |         iPosition
                 |             The position of the part. The list has three values which represent
                 |             the x, y and z values of a position in space. Value is relative to
-                |             ipiParentProduct and expressed in millimeters. 
-                | 
+                |             ipiParentProduct and expressed in millimeters.
+                |
                 |     Returns:
                 |         The placed instance part.
 
@@ -149,21 +150,21 @@ class PSPPlacePart(AnyObject):
                 iu_placed_part_id,
                 i_up_direction.com_object,
                 i_horizontal_orientation.com_object,
-                i_position.com_object
+                i_position.com_object,
             )
         )
 
     def route_string_part_in_space(
-            self,
-            iu_standard: str,
-            iu_function_type: str,
-            ipi_reference_part: AnyObject,
-            ipi_parent_product: AnyObject,
-            ipi_logical_line: AnyObject,
-            iu_placed_part_id: str,
-            i_first_point_up_direction: PSPListOfDoubles,
-            ipi_list_points: PSPListOfObjects,
-            i_list_bend_radii: PSPListOfDoubles
+        self,
+        iu_standard: str,
+        iu_function_type: str,
+        ipi_reference_part: AnyObject,
+        ipi_parent_product: AnyObject,
+        ipi_logical_line: AnyObject,
+        iu_placed_part_id: str,
+        i_first_point_up_direction: PSPListOfDoubles,
+        ipi_list_points: PSPListOfObjects,
+        i_list_bend_radii: PSPListOfDoubles,
     ) -> AnyObject:
         """
         .. note::
@@ -179,49 +180,49 @@ class PSPPlacePart(AnyObject):
                 | PspListOfDoubles iFirstPointUpDirection,
                 | PspListOfObjects ipiListPoints,
                 | PspListOfDoubles iListBendRadii) As AnyObject
-                | 
+                |
                 |     Routes a string part.
                 |     Role: The string part instance, such as a pipe, a tube, or a duct, is
                 |     placed given its reference with respect to its parent product. The Part
                 |     Placement engine will not perform any of it's normal checks for interactions
                 |     with nearby parts. Part is placed non-spec.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iuStandard
-                |             The standard for application attribute values. 
+                |             The standard for application attribute values.
                 |         iuFunctionType
                 |             The type of function (e.g. Block valve, branch). Used when no
                 |             function is specified but functional part placement is required.
-                |             
+                |
                 |         ipiReferencePart
                 |             The reference part from which to derive the instance part.
-                |             
+                |
                 |         ipiParentProduct
                 |             The parent product (in the design model) for the new instance part.
-                |             
+                |
                 |         ipiLogicalLine
                 |             The logical line (e.g. piping line) which contains the instance
-                |             part. 
+                |             part.
                 |         iuPlacedPartID
                 |             The name of the placed part in the design model. Null uses the
                 |             standard ID generated by the part placement engine.
-                |             
+                |
                 |         iFirstPointUpDirection
                 |             The up direction of the first point of the string part. The list
                 |             has three values which represent the x, y and z values of a unit direction
-                |             vector. Value is relative to ipiParentProduct. 
+                |             vector. Value is relative to ipiParentProduct.
                 |         ipiListPoints
                 |             The list of points that describe the path of the string. If the
                 |             string part is stretchable, the list should contain two points.
-                |             
+                |
                 |         iListBendRadii
                 |             The list of bend radii at each corner of the string part. This list
                 |             is ignored if the string part is stretchable. This list is only for interior
                 |             points and so should have two less elements than ipiListPoints. (for example,
                 |             if ipiListPoints has six points, iListBendRadii should have four radii values).
-                |             Values are in milimeters. 
-                | 
+                |             Values are in milimeters.
+                |
                 |     Returns:
                 |         The routed string part.
 
@@ -246,7 +247,7 @@ class PSPPlacePart(AnyObject):
                 iu_placed_part_id,
                 i_first_point_up_direction.com_object,
                 ipi_list_points.com_object,
-                i_list_bend_radii.com_object
+                i_list_bend_radii.com_object,
             )
         )
 

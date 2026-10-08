@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.enumeration.enums import Sliding_Type
 from pycatia.abq_automation_interfaces.abq_interaction import ABQInteraction
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
@@ -19,24 +20,24 @@ from pycatia.product_structure_interfaces.product import Product
 
 class ABQSurfaceToSurfaceContact(ABQInteraction):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     ABQAutomationItf.ABQInteraction
-                |                         ABQSurfaceToSurfaceContact
-                | 
-                | Represents an Abaqus contact pair (ABQSurfaceToSurfaceContact)
-                | object.
-                | Role: Access an Abaqus contact pair object or determine its
-                | properties.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     ABQAutomationItf.ABQInteraction
+            |                         ABQSurfaceToSurfaceContact
+            |
+            | Represents an Abaqus contact pair (ABQSurfaceToSurfaceContact)
+            | object.
+            | Role: Access an Abaqus contact pair object or determine its
+            | properties.
+
     """
 
     def __init__(self, com_object):
@@ -51,14 +52,14 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AdjustMethod() As AdjustMethod_Type
-                | 
+                |
                 |     Sets or returns the method type in a contact pair.
-                | 
+                |
                 |     Returns:
                 |         The method type.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         OVERCLOSED
                 |         TOLERANCE
 
@@ -84,9 +85,9 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property AdjustToleranceVal() As double
-                | 
+                |
                 |     Sets or returns the tolerance value of the contact pair.
-                | 
+                |
                 |     Returns:
                 |         The tolerance value of the contact pair.
 
@@ -111,9 +112,9 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property ConnectionProperty() As AnalysisEntity
-                | 
+                |
                 |     Sets or returns the connection property in a contact pair.
-                | 
+                |
                 |     Returns:
                 |         The connection property.
 
@@ -138,14 +139,14 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FormulationOption() As FormulationOption_Type
-                | 
+                |
                 |     Sets or returns the formulation option in a contact pair.
-                | 
+                |
                 |     Returns:
                 |         Formulation option type.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         SURFACETOSURFACE
                 |         NODETOSURFACE
 
@@ -171,10 +172,10 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InteractionProperty() As ABQProperty
-                | 
+                |
                 |     Sets or returns the interaction property in a contact
                 |     pair.
-                | 
+                |
                 |     Returns:
                 |         The specified ABQMechConnBehavior.
 
@@ -199,11 +200,11 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InterferenceFit() As double
-                | 
+                |
                 |     Assigns / gets interference fit of a contact pair. This can be assigned to
                 |     contact pairs created in structual case except initialization
                 |     step.
-                | 
+                |
                 |     Returns:
                 |         The interference magnitude for gradual interference with uniform
                 |         overclosure.
@@ -230,10 +231,10 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property InterferenceFitAmplitude() As ABQProperty
-                | 
+                |
                 |     Assigns / gets interference fit amplitude of a contact
                 |     pair.
-                | 
+                |
                 |     Returns:
                 |         The interference fit amplitude for gradual interference with uniform
                 |         overclosure.
@@ -261,14 +262,14 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Sliding() As Sliding_Type
-                | 
+                |
                 |     Sets or returns the sliding type in a contact pair.
-                | 
+                |
                 |     Returns:
                 |         The sliding type.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         FINITE
                 |         SMALL
 
@@ -293,10 +294,10 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SwapMasterSlave() As boolean
-                | 
+                |
                 |     Returns the activation status if the master surface is swapped as slave
                 |     surface.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether the master surface surface is swapped as
                 |         slave.
@@ -322,16 +323,16 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UseAutomaticGeometrySmoothing() As boolean
-                | 
+                |
                 |     Returns a boolean indicating whether automatic geometry smoothing is used
                 |     for the contact pair
-                | 
+                |
                 |     Returns:
                 |         boolean specifying whether automatic geometry smoothing is
                 |         active.
-                | 
+                |
                 |         Legal values:
-                | 
+                |
                 |         TRUE
                 |         FALSE
 
@@ -357,10 +358,10 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UseInterferenceFitAmplitude() As boolean (Read
                 | Only)
-                | 
+                |
                 |     Returns a boolean indicating whether amplitude is used in the interference
                 |     fit for a contact pair
-                | 
+                |
                 |     Returns:
                 |         boolean specifying whether user defined amplitude is active.
 
@@ -377,10 +378,10 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UseMasterNegativeSide() As boolean
-                | 
+                |
                 |     Returns the activation status if the master surface is specified as the
                 |     negative side.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether the master surface is specified as the
                 |         negative side.
@@ -406,10 +407,10 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property UseSlaveNegativeSide() As boolean
-                | 
+                |
                 |     Returns the activation status if the slave surface is specified as the
                 |     negative side.
-                | 
+                |
                 |     Returns:
                 |         A boolean specifying whether the slave surface is specified as the
                 |         negative side.
@@ -427,7 +428,9 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
         self.abq_surface_to_surface_contact.UseSlaveNegativeSide = value
 
-    def add_support_from_constraint(self, i_reference: Product, i_support: Constraint) -> None:
+    def add_support_from_constraint(
+        self, i_reference: Product, i_support: Constraint
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -435,19 +438,19 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromConstraint(Product iReference,
                 | Constraint iSupport)
-                | 
+                |
                 |     Creates a new support and adds it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iProduct
                 |             The CATIA Product specifying the object to which the contact is
                 |             applied.
                 |         iSupport
                 |             The CATIA Constraint specifying the region to which the contact is
                 |             applied.
-                | 
+                |
                 |             Refer: CATIAReference, CATIAProduct
 
         :param Product i_reference:
@@ -455,10 +458,9 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
         :rtype: None
         """
         return self.abq_surface_to_surface_contact.AddSupportFromConstraint(
-            i_reference.com_object,
-            i_support.com_object
+            i_reference.com_object, i_support.com_object
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -474,7 +476,9 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
         # # system_service = SystemService(self.application.SystemService)
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
-    def add_support_from_reference(self, i_reference: Reference, i_support: Reference) -> None:
+    def add_support_from_reference(
+        self, i_reference: Reference, i_support: Reference
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -482,27 +486,29 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub AddSupportFromReference(Reference iReference,
                 | Reference iSupport)
-                | 
+                |
                 |     Creates a new support and adds it to the description of the Analysis
                 |     Entity.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iReference
                 |             The CATIA Reference specifying the object to which the contact is
                 |             applied.
                 |         iSupport
                 |             The CATIA Reference specifying the region to which the contact is
                 |             applied.
-                | 
+                |
                 |             Refer: CATIAReference
 
         :param Reference i_reference:
         :param Reference i_support:
         :rtype: None
         """
-        return self.abq_surface_to_surface_contact.AddSupportFromReference(i_reference.com_object, i_support.com_object)
-        # # # # Autogenerated comment: 
+        return self.abq_surface_to_surface_contact.AddSupportFromReference(
+            i_reference.com_object, i_support.com_object
+        )
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -525,7 +531,7 @@ class ABQSurfaceToSurfaceContact(ABQInteraction):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Sub RemoveInterferenceFit()
-                | 
+                |
                 |     Removes interference fit from a contact pair feature.
 
         :rtype: None

@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 import inspect
 from typing import TYPE_CHECKING, Tuple
 
@@ -21,8 +22,12 @@ from pycatia.drafting_interfaces.drawing_pictures import DrawingPictures
 from pycatia.drafting_interfaces.drawing_tables import DrawingTables
 from pycatia.drafting_interfaces.drawing_texts import DrawingTexts
 from pycatia.drafting_interfaces.drawing_threads import DrawingThreads
-from pycatia.drafting_interfaces.drawing_view_generative_behavior import DrawingViewGenerativeBehavior
-from pycatia.drafting_interfaces.drawing_view_generative_links import DrawingViewGenerativeLinks
+from pycatia.drafting_interfaces.drawing_view_generative_behavior import (
+    DrawingViewGenerativeBehavior,
+)
+from pycatia.drafting_interfaces.drawing_view_generative_links import (
+    DrawingViewGenerativeLinks,
+)
 from pycatia.drafting_interfaces.drawing_weldings import DrawingWeldings
 from pycatia.mec_mod_interfaces.geometric_elements import GeometricElements
 from pycatia.sketcher_interfaces.factory_2D import Factory2D
@@ -34,26 +39,26 @@ if TYPE_CHECKING:
 
 class DrawingView(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     DrawingView
-                | 
-                | Represents a drawing view in a drawing sheet.
-                | 
-                | The drawing view is included in a drawing sheet and contains texts,leaders,
-                | dimensions, arrows, pictures, tables, 2D Geometry and 2D
-                | component.
-                | Warning: This interface is not available with 2D Layout for 3D
-                | Design.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     DrawingView
+            |
+            | Represents a drawing view in a drawing sheet.
+            |
+            | The drawing view is included in a drawing sheet and contains texts,leaders,
+            | dimensions, arrows, pictures, tables, 2D Geometry and 2D
+            | component.
+            | Warning: This interface is not available with 2D Layout for 3D
+            | Design.
+
     """
 
     def __init__(self, com_object):
@@ -68,19 +73,19 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Angle() As double
-                | 
+                |
                 |     Returns or sets the angle of the drawing view. The angle is measured
                 |     between the axis system of the drawing view and the axis system of the drawing
                 |     sheet where the drawing view lies. The angle is measured in radians and is
                 |     counted counterclockwise.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example sets the angle of the MyView drawing view to 90 degrees
                 |         clockwise. You first need to compute the angle in radians and set the minus
                 |         sign to indicate the rotation is clockwise.
-                | 
+                |
                 |          PI = 3.1415926535
                 |          Angle90Clockwise = -PI/2
                 |          MyView.Angle = Angle90Clockwise
@@ -106,15 +111,15 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Arrows() As DrawingArrows (Read Only)
-                | 
+                |
                 |     Returns the drawing arrow collection of the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in ArrowCollection the collection of arrows of
                 |         the MyView drawing view.
-                | 
+                |
                 |          Dim ArrowCollection As DrawingArrows
                 |          Set ArrowCollection = MyView.Arrows
 
@@ -131,16 +136,16 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Components() As DrawingComponents (Read Only)
-                | 
+                |
                 |     Returns the drawing component instances collection (i.e. ditto collection)
                 |     of the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in ComponentCollection the collection of
                 |         component instances of the MyView drawing view.
-                | 
+                |
                 |          Dim ComponentCollection As DrawingComponents
                 |          Set ComponentCollection = MyView.Components
 
@@ -178,7 +183,7 @@ class DrawingView(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return DrawingCoordDims(self.drawing_view.CoordDims)
@@ -191,16 +196,16 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Dimensions() As DrawingDimensions (Read Only)
-                | 
+                |
                 |     Returns the drawing dimension collection of the drawing
                 |     view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in DimensionCollection the collection of
                 |         dimensions of the MyView drawing view.
-                | 
+                |
                 |          Dim DimensionCollection As DrawingDimensions
                 |          Set DimensionCollection = MyView.Dimensions
 
@@ -217,22 +222,22 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Factory2D() As Factory2D (Read Only)
-                | 
+                |
                 |     Returns the 2D factory of the drawing view. Take care that you must open
                 |     edition on a sketch before adding or modifying elements in it. Take care that
                 |     you must close edition on a sketch to keep all modifications before saving
                 |     document.
                 |     Warning: This method is not available with 2D Layout for 3D Design. To get
                 |     Sketch from factory2D:
-                | 
+                |
                 |       Set mySketch = my2DFactory.GetParent
-                |      
-                | 
+                |
+                |
                 |     Example:
                 |         The following example returns in my2DFactory the 2D
                 |         factory
                 |         of the view myView:
-                | 
+                |
                 |          Set my2DFactory = myView.Factory2D
 
         :rtype: Factory2D
@@ -248,17 +253,17 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property FrameVisualization() As boolean
-                | 
+                |
                 |     Returns or sets the drawing view frame visualization
                 |     state.
                 |     True if the drawing view frame is visible.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example shows the frame of the MyView drawing
                 |         view.
-                | 
+                |
                 |          MyView.FrameVisualization = True
 
         :rtype: bool
@@ -302,7 +307,7 @@ class DrawingView(AnyObject):
         self.release_check(
             self.application.system_configuration.release,
             28,
-            f'{self.__class__.__name__}.{inspect.stack()[0][3]}',
+            f"{self.__class__.__name__}.{inspect.stack()[0][3]}",
         )
 
         return DrawingGDTs(self.drawing_view.GDTs)
@@ -316,15 +321,15 @@ class DrawingView(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property GenerativeBehavior() As DrawingViewGenerativeBehavior (Read
                 | Only)
-                | 
+                |
                 |     Returns the generative behavior of the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in MyViewGenBehavior the generative behavior of
                 |         the MyView drawing view.
-                | 
+                |
                 |          Dim MyViewGenBehavior As
                 |          DrawingViewGenerativeBehavior
                 |          Set MyViewGenBehavior = MyView.GenerativeBehavior
@@ -343,15 +348,15 @@ class DrawingView(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property GenerativeLinks() As DrawingViewGenerativeLinks (Read
                 | Only)
-                | 
+                |
                 |     Returns the generative links of the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in MyViewGenLinks the generative links of the
                 |         MyView drawing view.
-                | 
+                |
                 |          Dim MyViewGenLinks As DrawingViewGenerativeLinks
                 |          Set MyViewGenLinks = MyView.GenerativeLinks
 
@@ -369,16 +374,16 @@ class DrawingView(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property GeometricElements() As GeometricElements (Read
                 | Only)
-                | 
+                |
                 |     Returns the collection of geometric elements included in the drawing view
                 |     sketch.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         The following example returns in colGeometry the list of geometric
                 |         elements in the view myView:
-                | 
+                |
                 |          Dim colGeometry As GeometricElements
                 |          Set colGeometry = myView.GeometricElements
 
@@ -395,16 +400,16 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property LockStatus() As boolean
-                | 
+                |
                 |     Returns or sets the lock status of a drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
                 |     precondition: This property does not exist for the detail view. In this
                 |     case, the method returns failed.
-                | 
+                |
                 |     Example:
                 |         This example locks the ViewToWorkOn drawing view.
-                | 
+                |
                 |          ViewToWorkOn.LockStatus = True
 
         :rtype: bool
@@ -428,16 +433,16 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Pictures() As DrawingPictures (Read Only)
-                | 
+                |
                 |     Returns the drawing picture collection of the drawing
                 |     view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in PictureCollection the collection of pictures
                 |         of the MyView drawing view.
-                | 
+                |
                 |          Dim PictureCollection As DrawingPictures
                 |          Set PictureCollection = MyView.Pictures
 
@@ -447,35 +452,35 @@ class DrawingView(AnyObject):
         return DrawingPictures(self.drawing_view.Pictures)
 
     @property
-    def reference_view(self) -> 'DrawingView':
+    def reference_view(self) -> "DrawingView":
         """
         .. note::
             :class: toggle
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property ReferenceView() As DrawingView
-                | 
+                |
                 |     Returns or sets the reference view. The reference view is also the parent
                 |     view to which the current drawing view is linked and which is used as reference
                 |     for alignment. Generally, the reference view is the front view, and the other
                 |     views, such as the top, bottom, left, and right views, are linked to it. This
                 |     reference drawing view is used:
-                | 
+                |
                 |         When moving the current drawing view. Its location remains constrained
                 |         to the reference view, depending on its type. For example, a left view can move
                 |         horizontally and a top view can move vertically.
                 |         To update the scale of the current drawing view according to the
                 |         modification performed to the one of the reference drawing
                 |         view.
-                | 
-                | 
+                |
+                |
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in ReferenceView the view used as reference by
                 |         the MyView drawing view.
-                | 
+                |
                 |          Dim ReferenceView As DrawingView
                 |          Set ReferenceView = MyView.RefView
 
@@ -485,7 +490,7 @@ class DrawingView(AnyObject):
         return DrawingView(self.drawing_view.ReferenceView)
 
     @reference_view.setter
-    def reference_view(self, value: 'DrawingView'):
+    def reference_view(self, value: "DrawingView"):
         """
         :param DrawingView value:
         """
@@ -500,15 +505,15 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Scale() As double
-                | 
+                |
                 |     Returns or sets the scale of the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example sets the scale of the MyView drawing view to
                 |         0.5.
-                | 
+                |
                 |          MyView.Scale = 0.5
 
         :rtype: float
@@ -532,16 +537,16 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Scale2() As double
-                | 
+                |
                 |     Returns or sets the scale of the drawing view (Workaround for VBA
                 |     keyword).
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example sets the scale of the MyView drawing view to
                 |         0.5.
-                | 
+                |
                 |          MyView.Scale2 = 0.5
 
         :rtype: float
@@ -565,15 +570,15 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Tables() As DrawingTables (Read Only)
-                | 
+                |
                 |     Returns the drawing table collection of the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in TextCollection the collection of texts of the
                 |         MyView drawing view.
-                | 
+                |
                 |          Dim TableCollection As DrawingTables
                 |          Set TableCollection = MyView.Tables
 
@@ -590,15 +595,15 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Texts() As DrawingTexts (Read Only)
-                | 
+                |
                 |     Returns the drawing text collection of the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in TextCollection the collection of texts of the
                 |         MyView drawing view.
-                | 
+                |
                 |          Dim TextCollection As DrawingTexts
                 |          Set TextCollection = MyView.Texts
 
@@ -615,15 +620,15 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Threads() As DrawingThreads (Read Only)
-                | 
+                |
                 |     Returns the drawing thread collection of the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in ThreadCollection the collection of threads of
                 |         the MyView drawing view.
-                | 
+                |
                 |          Dim ThreadCollection As DrawingThreads
                 |          Set ThreadCollection = MyView.Threads
 
@@ -640,7 +645,7 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property ViewType() As CatDrawingViewType (Read Only)
-                | 
+                |
                 |     Returns the drawing view type.
                 |     Warning: This method is not available with 2D Layout for 3D Design.
 
@@ -658,16 +663,16 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property Weldings() As DrawingWeldings (Read Only)
-                | 
+                |
                 |     Returns the drawing welding collection of the drawing
                 |     view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in weldingCollection the collection of weldings
                 |         of the MyView drawing view.
-                | 
+                |
                 |          Dim weldingCollection As DrawingWeldings
                 |          Set weldingCollection = MyView.Weldings
 
@@ -684,7 +689,7 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property x() As double
-                | 
+                |
                 |     For an interactive view, get_x and put_x methods are equivalents to
                 |     get_xAxisData, put_xAxisData In a generative case, get_x. put_x returns or sets
                 |     the x coordinate of the projection of the 3D centre of gravity. It is expressed
@@ -692,11 +697,11 @@ class DrawingView(AnyObject):
                 |     is measured in millimeters.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the x coordinate of the view relative position
                 |         MyView.
-                | 
+                |
                 |          X = MyView.x
 
         :rtype: float
@@ -720,17 +725,17 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property xAxisData() As double
-                | 
+                |
                 |     Returns or sets the x coordinate of the drawing view coordinate system
                 |     origin. It is expressed with respect to the sheet coordinate system. This
                 |     coordinate, like any length, is measured in millimeters.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example retrieves the x coordinate of the coordinate system origin
                 |         of the MyView drawing view.
-                | 
+                |
                 |          X = MyView.xAxisData
 
         :rtype: float
@@ -754,7 +759,7 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property y() As double
-                | 
+                |
                 |     For an interactive view, get_y and put_y methods are equivalents to
                 |     get_yAxisData, put_yAxisData In a generative case, get_y. put_y returns or sets
                 |     the y coordinate of the projection of the 3D centre of gravity. It is expressed
@@ -762,12 +767,12 @@ class DrawingView(AnyObject):
                 |     is measured in millimeters.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example sets the y coordinate of the view relative position MyView
                 |         to 5 inches. You need first to convert the 5 inches into
                 |         millimeters.
-                | 
+                |
                 |          NewYCoordinate = 5*25.4
                 |          MyView.y = NewYCoordinate
 
@@ -792,18 +797,18 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
                 | o Property yAxisData() As double
-                | 
+                |
                 |     Returns or sets the y coordinate of the drawing view coordinate system
                 |     origin. It is expressed with respect to the sheet coordinate system. This
                 |     coordinate, like any length, is measured in millimeters.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example sets the y coordinate of the coordinate system origin of
                 |         the MyView drawing view to 5 inches. You need first to convert the 5 inches
                 |         into millimeters.
-                | 
+                |
                 |          NewYCoordinate = 5*25.4
                 |          MyView.yAxisData = NewYCoordinate
 
@@ -827,16 +832,16 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub Activate()
-                | 
+                |
                 |     Activates the drawing view. Activating a drawing view means that this
                 |     drawing view is the one on which the end-user is now
                 |     working.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example activates the ViewToWorkOn drawing view.
-                | 
+                |
                 |          ViewToWorkOn.Activate()
 
         :rtype: None
@@ -850,24 +855,26 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub AlignedWithReferenceView()
-                | 
+                |
                 |     Activates the alignment with the reference view. Activating the alignment
                 |     with the reference view restores the constraints that the reference view
                 |     imposes to the current drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example activates the alignment from the MyView drawing view to
                 |         its reference view.
-                | 
+                |
                 |          MyView.AlignedWithReferenceView()
 
         :rtype: None
         """
         return self.drawing_view.AlignedWithReferenceView()
 
-    def get_view_name(self, i_view_name_prefix: str, i_view_name_ident: str, i_view_name_suffix: str) -> None:
+    def get_view_name(
+        self, i_view_name_prefix: str, i_view_name_ident: str, i_view_name_suffix: str
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -876,7 +883,7 @@ class DrawingView(AnyObject):
                 | o Sub GetViewName(CATBSTR iViewNamePrefix,
                 | CATBSTR iViewNameIdent,
                 | CATBSTR iViewNameSuffix)
-                | 
+                |
                 |     Returns the prefix, the ident and the suffix of the name of the drawing
                 |     view. The method returns an error in case of 2D component
                 |     reference.
@@ -884,14 +891,14 @@ class DrawingView(AnyObject):
                 |     defined in CATIABase
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example gets the prefix, the ident, and the suffix of the name
-                |           
+                |
                 |          of the MyView drawing view
-                |          
-                | 
+                |
+                |
                 |          Dim MyPrefix, MyIdent, MySuffix As CATBSTR
                 |          MyView.GetViewName (MyPrefix, MyIdent, MySuffix)
 
@@ -900,9 +907,11 @@ class DrawingView(AnyObject):
         :param str i_view_name_suffix:
         :rtype: None
         """
-        return self.drawing_view.GetViewName(i_view_name_prefix, i_view_name_ident, i_view_name_suffix)
+        return self.drawing_view.GetViewName(
+            i_view_name_prefix, i_view_name_ident, i_view_name_suffix
+        )
 
-    def insert_view_angle(self, i_first: int, io_text: 'DrawingText') -> None:
+    def insert_view_angle(self, i_first: int, io_text: "DrawingText") -> None:
         """
         .. note::
             :class: toggle
@@ -910,25 +919,25 @@ class DrawingView(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub InsertViewAngle(long iFirst,
                 | DrawingText ioText)
-                | 
+                |
                 |     Insert the Angle parameter in the text of the drawing
                 |     text.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFirst
                 |             The first character from which the parameter is inserted
-                |             
+                |
                 |         ioText
                 |             The text on wich the scale parameter will be inserted
-                |             
+                |
                 |         Example:
                 |             This example insert the Angle parameter of MyView drawing view at
                 |             the end of MyText drawing text.
-                | 
-                | 
+                |
+                |
                 |              index = Len(MyText.Text)+1
                 |              MyView.InsertViewScale index, MyText
 
@@ -938,7 +947,7 @@ class DrawingView(AnyObject):
         """
         return self.drawing_view.InsertViewAngle(i_first, io_text.com_object)
 
-    def insert_view_scale(self, i_first: int, io_text: 'DrawingText') -> None:
+    def insert_view_scale(self, i_first: int, io_text: "DrawingText") -> None:
         """
         .. note::
             :class: toggle
@@ -946,25 +955,25 @@ class DrawingView(AnyObject):
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub InsertViewScale(long iFirst,
                 | DrawingText ioText)
-                | 
+                |
                 |     Insert the scale parameter in the text of the drawing
                 |     text.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iFirst
                 |             The first character from which the parameter is inserted
-                |             
+                |
                 |         ioText
                 |             The text on wich the scale parameter will be inserted
-                |             
+                |
                 |         Example:
                 |             This example insert the Scale parameter of MyView drawing view at
                 |             the first character of MyText drawing text.
-                | 
-                | 
+                |
+                |
                 |              MyView.InsertViewScale 1, MyText
 
         :param int i_first:
@@ -980,17 +989,17 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func IsGenerative() As boolean
-                | 
+                |
                 |     Returns whether the drawing view has a generative
                 |     behavior.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
                 |     True if the drawing view has a generative behavior.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in GenView if the MyView drawing view has a
                 |         generative behavior property set.
-                | 
+                |
                 |          GenView = MyView.IsGenerative()
 
         :rtype: bool
@@ -1004,14 +1013,14 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub Isolate()
-                | 
+                |
                 |     Isolates the drawing view.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example isolates the MyView drawing view.
-                | 
+                |
                 |          MyView.Isolate
 
         :rtype: None
@@ -1025,7 +1034,7 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub SaveEdition()
-                | 
+                |
                 |     Saves the Sketch Edition. Once you have finished working with the drawing
                 |     view, you must save its edition in order to register modification for
                 |     UNDO/REDO. Indeed when activating a view, this view is open in edition while
@@ -1034,18 +1043,20 @@ class DrawingView(AnyObject):
                 |     behavior.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         The following example saves the edition of the drawing view
                 |         MyView:
-                | 
+                |
                 |          MyView.SaveEdition
 
         :rtype: None
         """
         return self.drawing_view.SaveEdition()
 
-    def set_view_name(self, i_view_name_prefix: str, i_view_name_ident: str, i_view_name_suffix: str) -> None:
+    def set_view_name(
+        self, i_view_name_prefix: str, i_view_name_ident: str, i_view_name_suffix: str
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -1054,7 +1065,7 @@ class DrawingView(AnyObject):
                 | o Sub SetViewName(CATBSTR iViewNamePrefix,
                 | CATBSTR iViewNameIdent,
                 | CATBSTR iViewNameSuffix)
-                | 
+                |
                 |     Sets the prefix, the ident and the suffix of the name of the drawing view.
                 |     The method returns an error in case of 2D component
                 |     reference.
@@ -1062,16 +1073,16 @@ class DrawingView(AnyObject):
                 |     defined in CATIABase
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
-                | 
+                |
                 |           This example sets the prefix, the ident, and the suffix of the name
-                |           
+                |
                 |          of the MyView drawing view respectively to "MyPrefix",
                 |          "MyIdent",
                 |          and "MySuffix".
-                |          
-                | 
+                |
+                |
                 |          MyView.SetViewName ("MyPrefix", "MyIdent",
                 |          "MySuffix")
 
@@ -1080,7 +1091,9 @@ class DrawingView(AnyObject):
         :param str i_view_name_suffix:
         :rtype: None
         """
-        return self.drawing_view.SetViewName(i_view_name_prefix, i_view_name_ident, i_view_name_suffix)
+        return self.drawing_view.SetViewName(
+            i_view_name_prefix, i_view_name_ident, i_view_name_suffix
+        )
 
     def size(self) -> Tuple[float, float, float, float]:
         """
@@ -1132,7 +1145,7 @@ class DrawingView(AnyObject):
             vba_code,
             CatScriptLanguage.CATVBScriptLanguage,
             vba_function_name,
-            [self.com_object]
+            [self.com_object],
         )
 
         # we don't return value directly as CATIA returns for example
@@ -1147,18 +1160,18 @@ class DrawingView(AnyObject):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Sub UnAlignedWithReferenceView()
-                | 
+                |
                 |     Deactivates the alignment with the reference view. Deactivating the
                 |     alignment to the reference view removes the constraints that the reference view
                 |     imposes to the current drawing view. You can then, for example, move and
                 |     position it freely.
                 |     Warning: This method is not available with 2D Layout for 3D
                 |     Design.
-                | 
+                |
                 |     Example:
                 |         This example deactivates the alignment from the MyView drawing view to
                 |         its reference view.
-                | 
+                |
                 |          MyView.UnAlignedWithReferenceView()
 
         :rtype: None

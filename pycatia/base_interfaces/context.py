@@ -48,7 +48,11 @@ class CATIADocHandler:
     :param str new_document: (optional) 'Part', 'Product' or 'Drawing'.
     """
 
-    def __init__(self, file_name: Union[Path, None] = None, new_document: Union[str, bool] = False):
+    def __init__(
+        self,
+        file_name: Union[Path, None] = None,
+        new_document: Union[str, bool] = False,
+    ):
         """
         :param Path file_name: (optional) path filename to file
         :param new_document: (optional) for example 'Part', 'Product' or 'Drawing'.
@@ -60,7 +64,7 @@ class CATIADocHandler:
         self.new_document = new_document
 
         if self.file_name and not os.path.isfile(self.file_name):
-            raise CATIAApplicationException(f'Could not find file: {file_name}')
+            raise CATIAApplicationException(f"Could not find file: {file_name}")
         else:
             if self.file_name:
                 self.file_name = Path(self.file_name)
@@ -79,14 +83,16 @@ class CATIADocHandler:
 
             self.document = self.application.active_document
 
-            self.application.logger.info(f'Document {_file_name} already exists')
+            self.application.logger.info(f"Document {_file_name} already exists")
 
             return self
 
         self.document = None
 
         if self.file_name and self.new_document:
-            raise CATIAApplicationException('Only new_document or file_name arguments should be used. Not both.')
+            raise CATIAApplicationException(
+                "Only new_document or file_name arguments should be used. Not both."
+            )
 
         if self.file_name:
             self.document = self.documents.open(self.file_name)

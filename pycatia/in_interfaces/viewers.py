@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from typing import Iterator
 
 from pycatia.in_interfaces.viewer import Viewer
@@ -16,24 +17,24 @@ from pycatia.system_interfaces.collection import Collection
 
 class Viewers(Collection):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
+        CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.Collection
-                |                     Viewers
-                | 
-                | A collection of all the Viewer objects currently attached to a
-                | window.
-                | For a SpecsAndGeomWindow object, the viewer containing the geometry is the
-                | first viewer, and the viewer containing the specification tree is the second
-                | viewer.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.Collection
+            |                     Viewers
+            |
+            | A collection of all the Viewer objects currently attached to a
+            | window.
+            | For a SpecsAndGeomWindow object, the viewer containing the geometry is the
+            | first viewer, and the viewer containing the specification tree is the second
+            | viewer.
+
     """
 
     def __init__(self, com_object):
@@ -47,27 +48,27 @@ class Viewers(Collection):
 
             CAA V5 Visual Basic Help (2020-06-11 12:40:47.360445))
                 | o Func Item(long iIndex) As Viewer
-                | 
+                |
                 |     Returns a viewer using its index from the Viewers collection. The first
                 |     item has the rank 1 in the collection.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iIndex
                 |             The index or the name of the viewer to retrieve from the collection
                 |             of viewers. As a numerics, this index is the rank of the viewer in the
                 |             collection. The index of the first viewer in the collection is 1, and the index
                 |             of the last viewer is Count. As a string, it is the name you assigned to the
-                |             viewer using the 
-                | 
-                |         AnyObject.Name property. 
+                |             viewer using the
+                |
+                |         AnyObject.Name property.
                 |     Returns:
-                |         The retrieved viewer 
-                | 
+                |         The retrieved viewer
+                |
                 | Example:
                 |     This example returns in MyViewer the second viewer in the
                 |     collection.
-                | 
+                |
                 |      Dim MyViewer As Viewer
                 |      Set MyViewer = Viewer.Item(2)
 

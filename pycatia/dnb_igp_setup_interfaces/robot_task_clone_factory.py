@@ -1,43 +1,44 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_igp_setup_interfaces.robot_task import RobotTask
 from pycatia.system_interfaces.any_object import AnyObject
 
 
 class RobotTaskCloneFactory(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     RobotTaskCloneFactory
-                | 
-                | Represents the Clone Factory for Robot Tasks.
-                | 
-                | Role: Robot Clone Task Factory is the object used to clone robot
-                | tasks.
-                | The following code snippet can be used to obtain the Robot Task Factory from
-                | the robot product.
-                | 
-                |    Dim objRobotTaskFactory As RobotTaskCloneFactory
-                |    Dim objRobot As Product
-                |    ...
-                |    Set objRobotTaskCloneFactory = objRobot.GetTechnologicalObject("RobotTaskCloneFactory" )
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     RobotTaskCloneFactory
+            |
+            | Represents the Clone Factory for Robot Tasks.
+            |
+            | Role: Robot Clone Task Factory is the object used to clone robot
+            | tasks.
+            | The following code snippet can be used to obtain the Robot Task Factory from
+            | the robot product.
+            |
+            |    Dim objRobotTaskFactory As RobotTaskCloneFactory
+            |    Dim objRobot As Product
+            |    ...
+            |    Set objRobotTaskCloneFactory = objRobot.GetTechnologicalObject("RobotTaskCloneFactory" )
+
     """
 
     def __init__(self, com_object):
@@ -45,12 +46,13 @@ class RobotTaskCloneFactory(AnyObject):
         self.robot_task_clone_factory = com_object
 
     def clone_task_in_another_robot(
-            self,
-            i_src_robot_task: RobotTask,
-            i_dest_robot: AnyObject,
-            i_target_task_name: str,
-            i_trans_on_target: tuple,
-            o_cloned_robot_task: RobotTask) -> None:
+        self,
+        i_src_robot_task: RobotTask,
+        i_dest_robot: AnyObject,
+        i_target_task_name: str,
+        i_trans_on_target: tuple,
+        o_cloned_robot_task: RobotTask,
+    ) -> None:
         """
         .. note::
             :class: toggle
@@ -61,38 +63,38 @@ class RobotTaskCloneFactory(AnyObject):
                 | CATBSTR iTargetTaskName,
                 | CATSafeArrayVariant iTransOnTarget,
                 | RobotTask oClonedRobotTask)
-                | 
+                |
                 |     Clones a given Robot Task with in another robot.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSrcRobotTask
-                |             The Robot task that needs to be cloned. 
+                |             The Robot task that needs to be cloned.
                 |         iTargetTaskName
-                |             The name for the cloned robot task. 
+                |             The name for the cloned robot task.
                 |         iTargetTaskName
                 |             The transformation that needs to be applied on the targets (w.r.t
-                |             the robot). 
+                |             the robot).
                 |         oClonedRobotTask
-                |             The resultant cloned robot task. 
-                | 
+                |             The resultant cloned robot task.
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The Robot Task cloning was successful.
                 |         E_FAIL
                 |             The Robot Task cloning was unsuccessful.
-                | 
+                |
                 |         Example:
                 |             The following example show how to clone a task.
-                | 
+                |
                 |                Dim objRobotTaskCloneFactory As
                 |                RobotTaskCloneFactory
-                |                Dim iSrcTask, oClonedTask 
-                |                Dim iTargetRobot 
-                |                Dim iTrans(0 to 11) 
+                |                Dim iSrcTask, oClonedTask
+                |                Dim iTargetRobot
+                |                Dim iTrans(0 to 11)
                 |                ..
                 |                objRobotTaskCloneFactory.CloneTaskInAnotherRobot oSrcTask,
                 |                iTargetRobot, "Task.1", oTrans, oClonedTask
@@ -109,9 +111,9 @@ class RobotTaskCloneFactory(AnyObject):
             i_dest_robot.com_object,
             i_target_task_name,
             i_trans_on_target,
-            o_cloned_robot_task.com_object
+            o_cloned_robot_task.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.
@@ -128,11 +130,11 @@ class RobotTaskCloneFactory(AnyObject):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def clone_task_in_same_robot(
-            self,
-            i_src_robot_task: RobotTask,
-            i_target_task_name: str,
-            i_trans_on_target: tuple,
-            o_cloned_robot_task: RobotTask
+        self,
+        i_src_robot_task: RobotTask,
+        i_target_task_name: str,
+        i_trans_on_target: tuple,
+        o_cloned_robot_task: RobotTask,
     ) -> None:
         """
         .. note::
@@ -143,37 +145,37 @@ class RobotTaskCloneFactory(AnyObject):
                 | CATBSTR iTargetTaskName,
                 | CATSafeArrayVariant iTransOnTarget,
                 | RobotTask oClonedRobotTask)
-                | 
+                |
                 |     Clones a given Robot Task with in the same robot.
-                | 
+                |
                 |     Parameters:
-                | 
+                |
                 |         iSrcRobotTask
-                |             The Robot task that needs to be cloned. 
+                |             The Robot task that needs to be cloned.
                 |         iTargetTaskName
-                |             The name for the cloned robot task. 
+                |             The name for the cloned robot task.
                 |         oClonedRobotTask
-                |             The resultant cloned robot task. 
+                |             The resultant cloned robot task.
                 |         iTargetTaskName
                 |             The transformation that needs to be applied on the targets (w.r.t
-                |             the robot). 
-                | 
+                |             the robot).
+                |
                 |     Returns:
                 |         An HRESULT.
                 |         Legal values:
-                | 
+                |
                 |         S_OK
                 |             The Robot Task cloning was successful.
                 |         E_FAIL
                 |             The Robot Task cloning was unsuccessful.
-                | 
+                |
                 |         Example:
                 |             The following example show how to clone a task.
-                | 
+                |
                 |                Dim objRobotTaskCloneFactory As
                 |                RobotTaskCloneFactory
-                |                Dim iSrcTask, oClonedTask 
-                |                Dim iTrans(0 to 11) 
+                |                Dim iSrcTask, oClonedTask
+                |                Dim iTrans(0 to 11)
                 |                ..
                 |                objRobotTaskCloneFactory.CloneTaskInSameRobot iSrcTask,
                 |                "Task.1", iTrans, oClonedTask
@@ -188,9 +190,9 @@ class RobotTaskCloneFactory(AnyObject):
             i_src_robot_task.com_object,
             i_target_task_name,
             i_trans_on_target,
-            o_cloned_robot_task.com_object
+            o_cloned_robot_task.com_object,
         )
-        # # # # Autogenerated comment: 
+        # # # # Autogenerated comment:
         # # some methods require a system service call as the methods expects a vb array object
         # # passed to it and there is no way to do this directly with python. In those cases the following code
         # # should be uncommented and edited accordingly. Otherwise completely remove all this.

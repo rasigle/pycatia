@@ -1,38 +1,39 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.cat_str_functional_interfaces.sfm_member import SFMMember
 from pycatia.in_interfaces.reference import Reference
 
 
 class SFMMemberPlane2Curves(SFMMember):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     CATStrFunctionalInterfaces.SfmObject
-                |                         CATStrFunctionalInterfaces.SfmProfile
-                |                            CATStrFunctionalInterfaces.SfmMember
-                |                                 SfmMemberPlane2Curves
-                | 
-                | Interface to manage a Member created with two curves and a
-                | plane.
-                | Role: To manage member created with two curves and a plane.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     CATStrFunctionalInterfaces.SfmObject
+            |                         CATStrFunctionalInterfaces.SfmProfile
+            |                            CATStrFunctionalInterfaces.SfmMember
+            |                                 SfmMemberPlane2Curves
+            |
+            | Interface to manage a Member created with two curves and a
+            | plane.
+            | Role: To manage member created with two curves and a plane.
+
     """
 
     def __init__(self, com_object):
@@ -47,13 +48,13 @@ class SFMMemberPlane2Curves(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FirstCurve() As Reference
-                | 
+                |
                 |     Returns or sets the first and second curve.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Curve the first curve for the
                 |         SfmMemberPlane2Curves feature.
-                | 
+                |
                 |          Dim Curve As Reference
                 |          Set Curve = SfmMemberPlane2Curves.FirstCurve
 
@@ -78,13 +79,13 @@ class SFMMemberPlane2Curves(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property FirstMember(Reference iFirstMember)
-                | 
+                |
                 |     Returns or sets the first Member.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Member the first Member for the
                 |         SfmMemberPlane2Curves feature.
-                | 
+                |
                 |          Dim Member1 As Reference
                 |          Set Member1 = SfmMemberPlane2Curves.FirstMember
 
@@ -109,13 +110,13 @@ class SFMMemberPlane2Curves(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property Plane() As Reference
-                | 
+                |
                 |     Returns or sets the intersecting plane.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Plane the intersecting plane for the
                 |         SfmMemberPlane2Curves feature.
-                | 
+                |
                 |          Dim Plane As Reference
                 |          Set Plane = SfmMemberPlane2Curves.Plane
 
@@ -162,13 +163,13 @@ class SFMMemberPlane2Curves(SFMMember):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property SecondMember(Reference iSecondMember)
-                | 
+                |
                 |     Returns or sets the Second Member.
-                | 
+                |
                 |     Example:
                 |         This example retrieves in Member the Second Member for the
                 |         SfmMemberPlane2Curves feature.
-                | 
+                |
                 |          Dim Member2 As Reference
                 |          Set Member2 = SfmMemberPlane2Curves.SecondMember
 

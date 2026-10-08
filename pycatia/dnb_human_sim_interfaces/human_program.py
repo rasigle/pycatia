@@ -1,13 +1,14 @@
 #! usr/bin/python3.9
 """
-    Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
 
-    .. warning::
-        The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-        They are there as a guide as to how the visual basic / catscript functions work
-        and thus help debugging in pycatia.
-        
+.. warning::
+    The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
+    They are there as a guide as to how the visual basic / catscript functions work
+    and thus help debugging in pycatia.
+
 """
+
 from pycatia.dnb_human_sim_interfaces.human_task import HumanTask
 from pycatia.dnb_human_sim_interfaces.human_task_list import HumanTaskList
 from pycatia.system_interfaces.any_object import AnyObject
@@ -15,20 +16,20 @@ from pycatia.system_interfaces.any_object import AnyObject
 
 class HumanProgram(AnyObject):
     """
-        .. note::
-            :class: toggle
+    .. note::
+        :class: toggle
 
-            CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
+        CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
 
-                | System.IUnknown
-                |     System.IDispatch
-                |         System.CATBaseUnknown
-                |             System.CATBaseDispatch
-                |                 System.AnyObject
-                |                     HumanProgram
-                | 
-                | The object that represents program-node of Worker.
-    
+            | System.IUnknown
+            |     System.IDispatch
+            |         System.CATBaseUnknown
+            |             System.CATBaseDispatch
+            |                 System.AnyObject
+            |                     HumanProgram
+            |
+            | The object that represents program-node of Worker.
+
     """
 
     def __init__(self, com_object):
@@ -43,9 +44,9 @@ class HumanProgram(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Property TaskList() As HumanTaskList (Read Only)
-                | 
+                |
                 |     Returns the HumanTaskList from HumanProgram
-                | 
+                |
                 |     Returns:
                 |         oTaskList
 
@@ -61,9 +62,9 @@ class HumanProgram(AnyObject):
 
             CAA V5 Visual Basic Help (2020-09-25 14:34:21.593357)
                 | o Func CreateHumanTask() As HumanTask
-                | 
+                |
                 |     Returns newly created HumanTask.
-                | 
+                |
                 |     Returns:
                 |         oManikin
 

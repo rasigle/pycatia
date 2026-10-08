@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from pycatia import CATIADocHandler
+from pycatia.base_interfaces.context import CATIADocHandler
 from pycatia.cat_mat_interfaces.material_document import MaterialDocument
 from pycatia.cat_mat_interfaces.material_manager import MaterialManager
 from pycatia.mec_mod_interfaces.part import Part

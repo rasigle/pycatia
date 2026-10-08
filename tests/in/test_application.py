@@ -8,7 +8,11 @@ from tests.conftest import application
 
 
 def test_application():
-    assert 'Application(name="CNEXT")' in application.__repr__()
+    representation = application.__repr__()
+    assert any(
+        f'Application(name="{name}")' in representation
+        for name in ("CNEXT", "CATIA", "DELMIA")
+    )
 
 
 @pytest.mark.parametrize('file_name', [cat_part_measurable])

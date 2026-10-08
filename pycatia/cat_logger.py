@@ -13,11 +13,9 @@ def has_level_handler(logger: logging.Logger | None):
     :param logger: logging.Logger
     :return:
     """
-    """
-        Check if there is a handler in the logging chain that will handle the
-        given logger's :meth:`effective level <~logging.Logger.getEffectiveLevel>`.
-    
-    """
+    if not logger:
+        logger = create_logger()
+
     level = logger.getEffectiveLevel()
     current = logger
 

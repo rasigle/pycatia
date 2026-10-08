@@ -1,10 +1,10 @@
 #! /usr/bin/python3.9
 import pytest
 
-from pycatia import CatDrawingStandard
-from pycatia import CatPaperOrientation
-from pycatia import CatPaperSize
-from pycatia import CatSheetProjectionMethod
+from pycatia.enumeration.enums import CatDrawingStandard
+from pycatia.enumeration.enums import CatPaperOrientation
+from pycatia.enumeration.enums import CatPaperSize
+from pycatia.enumeration.enums import CatSheetProjectionMethod
 from pycatia.drafting_interfaces.drawing_document import DrawingDocument
 from tests.conftest import application
 from tests.source_files import cat_drawing

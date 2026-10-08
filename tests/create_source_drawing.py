@@ -1,13 +1,10 @@
-import os
-from pathlib import Path
-
-from pycatia import CatPaperSize
+from pycatia.enumeration.enums import CatPaperSize
 from pycatia.drafting_interfaces.drawing_document import DrawingDocument
 from tests.common_vars import test_files
 from tests.conftest import application
 from tests.create_source_parts import get_cat_part_measurable
 
-source_cat_drawing = Path(os.getcwd(), test_files, "drawing.CATDrawing")
+source_cat_drawing = test_files / "drawing.CATDrawing"
 
 
 def create_cat_drawing():

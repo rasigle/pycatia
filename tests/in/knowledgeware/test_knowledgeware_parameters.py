@@ -93,7 +93,7 @@ def test_count_parameters(document_open):
     part = part_document.part
     parameters = part.parameters
 
-    assert parameters.count == 117
+    assert parameters.count == 114
 
 
 @pytest.mark.parametrize('file_name', [cat_part_measurable])

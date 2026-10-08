@@ -1,14 +1,11 @@
-import os
-from pathlib import Path
-
-from pycatia import CatConstraintMode, CatConstraintType
+from pycatia.enumeration.enums import CatConstraintMode, CatConstraintType
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.part_document import PartDocument
 from pycatia.product_structure_interfaces.product_document import ProductDocument
 from tests.common_vars import test_files
 from tests.conftest import application
 
-source_cat_part_measurable = Path(os.getcwd(), test_files, "part_measurable.CATPart")
+source_cat_part_measurable = test_files / "part_measurable.CATPart"
 
 geom_set_arcs = "construction_arcs"
 geom_set_cylinders = "construction_cylinders"

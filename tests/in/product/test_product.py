@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from pycatia import CatWorkModeType
+from pycatia.enumeration.enums import CatWorkModeType
 from pycatia.mec_mod_interfaces.part_document import PartDocument
 from pycatia.product_structure_interfaces.product_document import ProductDocument
 from tests.conftest import application

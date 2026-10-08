@@ -1,6 +1,3 @@
-import os
-from pathlib import Path
-
 from pywintypes import com_error
 
 from pycatia.mec_mod_interfaces.part_document import PartDocument
@@ -9,9 +6,9 @@ from tests.common_vars import test_files
 from tests.conftest import application
 from tests.create_source_parts import get_cat_part_measurable
 
-source_cat_product = Path(os.getcwd(), test_files, "product_top.CATProduct")
-source_cat_sub_1 = Path(os.getcwd(), test_files, "product_sub_1.CATProduct")
-source_cat_sub_2 = Path(os.getcwd(), test_files, "product_sub_2.CATProduct")
+source_cat_product = test_files / "product_top.CATProduct"
+source_cat_sub_1 = test_files / "product_sub_1.CATProduct"
+source_cat_sub_2 = test_files / "product_sub_2.CATProduct"
 
 
 def create_cat_products(file_name_top, file_name_sub_1, file_name_sub_2):

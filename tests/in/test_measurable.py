@@ -6,7 +6,7 @@
 """
 import pytest
 
-from pycatia import CatMeasurableName
+from pycatia.enumeration.enums import CatMeasurableName
 from pycatia.mec_mod_interfaces.hybrid_body import HybridBody
 from pycatia.mec_mod_interfaces.part_document import PartDocument
 from tests.create_source_parts import geom_set_arcs

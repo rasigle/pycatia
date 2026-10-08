@@ -16,13 +16,18 @@ def test_activation(document_close_all_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
 
-    item = part.find_object_by_name("Point.1")
+    # Use the first shape on the main body so the test does not depend on
+    # English feature names (Point.1 vs Punkt.1, Pad.1 vs Block.1).
+    item = part.main_body.shapes.item(1)
 
     assert not part.is_inactive(item)
 
     part.deactivate(item)
 
     assert part.is_inactive(item)
+
+    part.activate(item)
+    assert not part.is_inactive(item)
 
 
 @pytest.mark.parametrize('file_name', [cat_part_measurable])

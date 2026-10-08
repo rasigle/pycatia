@@ -339,6 +339,9 @@ class Document(AnyObject):
         """
         Closes the current document.
 
+        File alerts are suppressed so an unsaved document does not pop a modal
+        save dialog and freeze automation.
+
         .. note::
             :class: toggle
 
@@ -355,7 +358,12 @@ class Document(AnyObject):
                 |          Doc.Close()
 
         """
-        self.document.Close()
+        current_dfa_setting = self.application.display_file_alerts
+        self.application.display_file_alerts = False
+        try:
+            self.document.Close()
+        finally:
+            self.application.display_file_alerts = current_dfa_setting
 
     def create_filter(self, i_filter_name: str, i_filter_definition: str) -> None:
         """
@@ -482,7 +490,7 @@ class Document(AnyObject):
                 f"Directory: {file_name.parent} is not a directory."
             )
 
-        if overwrite is False:
+        if not overwrite:
             if file_name.is_file():
                 raise FileExistsError(
                     f"File: {file_name} already exists. "

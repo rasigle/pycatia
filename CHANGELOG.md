@@ -5,6 +5,8 @@
 * Migrated packaging to ``pyproject.toml``. Removed ``setup.py`` and ``requirements/``.
 * ``catia()`` now connects to a running ``CATIA.Application``, ``DELMIA.Application`` or
   ``CNEXT.Application`` COM object, instead of only ``CATIA.Application``.
+* ``Document.close()`` suppresses file alerts so unsaved documents do not show a
+  modal save dialog during automation.
 
 
 ## 0.10.1

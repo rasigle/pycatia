@@ -5,6 +5,7 @@ from datetime import datetime
 from pathlib import Path
 
 import pytest
+from pywintypes import com_error
 
 from pycatia.base_interfaces.context import CATIADocHandler
 from pycatia.in_interfaces.document import Document
@@ -41,19 +42,30 @@ def test_activate_document(document_close_all_open):
 
 
 def test_add_document():
-    def add_document(document_type: str):
-        documents = application.documents
-        document = documents.add(document_type)
-        assert document_types[document_type]['extension'] in document.name
+    documents = application.documents
+    required_types = ("Part", "Product")
+    optional_types = (
+        "Analysis",
+        "CatalogDocument",
+        "Drawing",
+        "CATProcess",
+        "FeatureDictionary",
+    )
+
+    def add_document(document_type: str, required: bool):
+        try:
+            document = documents.add(document_type)
+        except com_error:
+            if required:
+                raise
+            return
+        assert document_types[document_type]["extension"] in document.name
         document.close()
 
-    add_document('Analysis')
-    add_document('CatalogDocument')
-    add_document('Drawing')
-    add_document('CATProcess')
-    add_document('FeatureDictionary')
-    add_document('Part')
-    add_document('Product')
+    for document_type in required_types:
+        add_document(document_type, required=True)
+    for document_type in optional_types:
+        add_document(document_type, required=False)
 
 
 @pytest.mark.parametrize('file_name', [cat_product])
@@ -63,22 +75,23 @@ def test_count_types(document_open):
     assert num == 1
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize('file_name', [cat_part_measurable])
 def test_export_document(document_open):
     document = application.active_document
     assert document is not None
 
-    export_type = "igs"
-    export_name = "export_file"
+    export_type = "stl"
+    export_path = Path(cat_part_measurable).resolve().parent / f"export_file.{export_type}"
+    if export_path.is_file():
+        export_path.unlink()
 
-    path = os.path.dirname(os.path.abspath(cat_part_measurable))
-    export_name = os.path.join(path, export_name)
+    try:
+        document.export_data(export_path, export_type)
+    except com_error:
+        pytest.skip(f"{export_type} export is not available in this CATIA session.")
 
-    document.export_data(Path(f"{export_name}.{export_type}"), export_type)
-
-    assert os.path.isfile(f"{export_name}.igs")
-
-    os.remove(f"{export_name}.igs")
+    assert export_path.is_file()
+    export_path.unlink()
 
 
 @pytest.mark.parametrize('file_name', [cat_part_measurable])

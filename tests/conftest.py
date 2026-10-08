@@ -1,10 +1,80 @@
+import contextlib
+import threading
 from pathlib import Path
 
 import pytest
+import win32api
+import win32con
+import win32gui
+import win32process
 from win32com.universal import com_error
 
 from pycatia import catia
 from pycatia.types.document import AnyDocument
+
+_CATIA_PROCESS_NAMES = {"cnext.exe", "delmia.exe", "catia.exe"}
+_OK_BUTTON_LABELS = {"OK", "Ok", "&OK"}
+
+
+def _pid_is_catia(pid: int) -> bool:
+    try:
+        handle = win32api.OpenProcess(
+            win32con.PROCESS_QUERY_INFORMATION | win32con.PROCESS_VM_READ,
+            False,
+            pid,
+        )
+    except Exception:
+        return False
+    try:
+        image = win32process.GetModuleFileNameEx(handle, 0)
+    except Exception:
+        return False
+    finally:
+        win32api.CloseHandle(handle)
+    return Path(image).name.lower() in _CATIA_PROCESS_NAMES
+
+
+def dismiss_catia_error_dialogs() -> None:
+    """Click OK on modal CATIA error boxes so COM calls can return."""
+
+    def _enum_window(hwnd, _):
+        try:
+            if win32gui.GetClassName(hwnd) != "#32770":
+                return True
+            _, pid = win32process.GetWindowThreadProcessId(hwnd)
+            if not _pid_is_catia(pid):
+                return True
+
+            def _enum_child(child, __):
+                if (
+                    win32gui.GetClassName(child) == "Button"
+                    and win32gui.GetWindowText(child) in _OK_BUTTON_LABELS
+                ):
+                    win32gui.PostMessage(child, win32con.BM_CLICK, 0, 0)
+                return True
+
+            win32gui.EnumChildWindows(hwnd, _enum_child, None)
+        except Exception:
+            pass
+        return True
+
+    with contextlib.suppress(Exception):
+        win32gui.EnumWindows(_enum_window, None)
+
+
+@pytest.fixture(scope="session", autouse=True)
+def _dismiss_catia_error_dialogs():
+    stop = threading.Event()
+
+    def _run():
+        while not stop.wait(0.2):
+            dismiss_catia_error_dialogs()
+
+    thread = threading.Thread(target=_run, name="dismiss-catia-dialogs", daemon=True)
+    thread.start()
+    yield
+    stop.set()
+    thread.join(timeout=1.0)
 
 
 class _LazyApplication:
@@ -16,6 +86,8 @@ class _LazyApplication:
     def _get(self):
         if self._application is None:
             self._application = catia()
+            # Modal save/open dialogs freeze pytest waiting for a click.
+            self._application.display_file_alerts = False
         return self._application
 
     def __getattr__(self, name):
@@ -34,7 +106,6 @@ def ensure_source_catia_files():
     from tests.source_files import ensure_source_catia_files as _ensure
 
     _ensure()
-
 
 
 def open_document(file_name: Path) -> AnyDocument:
@@ -57,6 +128,7 @@ def open_document(file_name: Path) -> AnyDocument:
 
 
 def close_all():
+    application.display_file_alerts = False
     documents = application.documents
     try:
         for document in documents:
@@ -88,12 +160,7 @@ def document_close_all_open(file_name: Path, ensure_source_catia_files):
 
 @pytest.fixture
 def document_close_all_open_test_close(file_name: Path, ensure_source_catia_files):
-    documents = application.documents
-    try:
-        for document in documents:
-            document.close()
-    except com_error:
-        application.logger.warning("Couuld not close document.")
+    close_all()
     document = open_document(file_name)
     yield
     document.close()

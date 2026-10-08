@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycatia"
+version = "0.10.1"
+description = "A python module to interface with the CATIA/DELMIA V5 COM object."
+readme = { file = "README.rst", content-type = "text/x-rst" }
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE.txt"]
+authors = [
+    { name = "Paul Bourne", email = "evereux@gmail.com" },
+]
+keywords = ["CATIA", "CATIA V5", "CAD", "COM", "automation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "pywin32>=224; sys_platform == 'win32'",
+]
+
+[project.urls]
+Homepage = "https://github.com/evereux/pycatia"
+Documentation = "https://pycatia.readthedocs.io"
+Repository = "https://github.com/evereux/pycatia"
+Changelog = "https://github.com/evereux/pycatia/blob/master/CHANGELOG.md"
+Issues = "https://github.com/evereux/pycatia/issues"
+
+[dependency-groups]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+docs = [
+    "Sphinx",
+    "sphinx-rtd-theme",
+    "sphinx-togglebutton",
+    "sphinxcontrib-jquery",
+]
+dev = [
+    {include-group = "docs"},
+    {include-group = "test"},
+    "build",
+    "mypy",
+    "nuitka",
+    "ordered-set",
+    "twine",
+]
+
+[tool.setuptools.packages.find]
+include = ["pycatia*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

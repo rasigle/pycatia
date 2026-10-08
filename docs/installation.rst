@@ -41,8 +41,12 @@ To get the latest master version from github::
     python -m virtualenv env
     # activate the virtual env
     env\Scripts\activate
-    # install the pycatia requirements
-    pip install -r requirements\requirements.txt
+    # install pycatia and its runtime dependencies
+    pip install .
+
+To work on pycatia itself, install in editable mode with the development extras::
+
+    pip install -e ".[dev]"
 
 
 The Long Version

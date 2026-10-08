@@ -25,7 +25,7 @@ Requirements
 
 * python >= 3.9
 * **CATIA V5** running on Windows.
-* see requirements.txt
+* pywin32 >= 224
 
 Installation
 ------------
@@ -125,7 +125,7 @@ A reminder for @evereux. I don't do this often and forget ...
 
 * Run mypy over module. `mypy pycatia`
 
-* Build source. ``python setup.py sdist bdist_wheel``
+* Build source. ``python -m build``
    * Check source contents.
 
 * Build pycatia exe ``python -m nuitka --standalone pycatia-exe.py``.

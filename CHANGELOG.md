@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.11.0 - Unreleased
+
+* Migrated packaging to ``pyproject.toml``. Removed ``setup.py`` and ``requirements/``.
+
+
 ## 0.10.1
 
 * Product.get_technological_object () return type docstring corrected. #312

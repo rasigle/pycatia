@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import Incrementation_Type, FixedTimeIncrementMethod
+from pycatia.enumeration.enums import Incrementation_Type, FixedTimeIncrementMethod
 from pycatia.abq_automation_interfaces.abq_boundary_conditions import ABQBoundaryConditions
 from pycatia.abq_automation_interfaces.abq_fields import ABQFields
 from pycatia.abq_automation_interfaces.abq_loads import ABQLoads

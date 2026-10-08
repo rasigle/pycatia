@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.in_interfaces.move import Move
 from pycatia.system_interfaces.system_service import SystemService
 

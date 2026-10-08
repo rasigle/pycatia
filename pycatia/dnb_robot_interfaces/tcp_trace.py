@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import DNBTCPTraceReps, DNBTCPTraceLegends
+from pycatia.enumeration.enums import DNBTCPTraceReps, DNBTCPTraceLegends
 from pycatia.system_interfaces.any_object import AnyObject
 
 

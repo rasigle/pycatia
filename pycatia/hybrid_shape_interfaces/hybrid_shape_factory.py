@@ -11,7 +11,7 @@
 import inspect
 from typing import Union
 
-from pycatia import GeometricalFeatureType, CatScriptLanguage
+from pycatia.enumeration.enums import GeometricalFeatureType, CatScriptLanguage
 from pycatia.hybrid_shape_interfaces.hybrid_shape_3d_curve_offset import HybridShape3DCurveOffset
 from pycatia.hybrid_shape_interfaces.hybrid_shape_affinity import HybridShapeAffinity
 from pycatia.hybrid_shape_interfaces.hybrid_shape_assemble import HybridShapeAssemble

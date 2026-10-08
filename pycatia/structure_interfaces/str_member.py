@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatStrCutbackType
+from pycatia.enumeration.enums import CatStrCutbackType
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.parameter import Parameter
 from pycatia.structure_interfaces.str_cutback import StrCutback

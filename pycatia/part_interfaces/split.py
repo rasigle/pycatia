@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatSplitSide
+from pycatia.enumeration.enums import CatSplitSide
 from pycatia.part_interfaces.surface_based_shape import SurfaceBasedShape
 
 

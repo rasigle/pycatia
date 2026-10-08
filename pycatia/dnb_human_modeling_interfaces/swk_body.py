@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import SWKPostureSpec
+from pycatia.enumeration.enums import SWKPostureSpec
 from pycatia.dnb_human_modeling_interfaces.swk_body_element import SWKBodyElement
 from pycatia.dnb_human_modeling_interfaces.swk_center_of_gravity import SWKCenterOfGravity
 from pycatia.dnb_human_modeling_interfaces.swk_segment import SWKSegment

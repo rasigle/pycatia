@@ -6,7 +6,7 @@ from pywintypes import com_error
 
 from pathlib import Path
 
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.in_interfaces.documents import Documents
 from pycatia.in_interfaces.documents import get_document_object

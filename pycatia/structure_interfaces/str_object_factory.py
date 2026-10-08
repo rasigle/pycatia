@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatStrMaterialOrientation, CatStrMemberExtremity, CatStrPlaneMode
+from pycatia.enumeration.enums import CatStrMaterialOrientation, CatStrMemberExtremity, CatStrPlaneMode
 from pycatia.in_interfaces.document import Document
 from pycatia.in_interfaces.reference import Reference
 from pycatia.structure_interfaces.str_foundation import StrFoundation

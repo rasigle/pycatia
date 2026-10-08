@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatTextFrameType, CatTextFlipMode, CatTextAnchorPosition
+from pycatia.enumeration.enums import CatTextFrameType, CatTextFlipMode, CatTextAnchorPosition
 from pycatia.system_interfaces.cat_base_dispatch import CATBaseDispatch
 
 

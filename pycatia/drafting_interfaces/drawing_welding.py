@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatWeldingSymbol, CatWeldingSide, CatWelding, CatWeldAdditionalSymbol, CatDftWeldFinishSymbol
+from pycatia.enumeration.enums import CatWeldingSymbol, CatWeldingSide, CatWelding, CatWeldAdditionalSymbol, CatDftWeldFinishSymbol
 from pycatia.drafting_interfaces.drawing_leaders import DrawingLeaders
 from pycatia.drafting_interfaces.drawing_text_properties import DrawingTextProperties
 from pycatia.drafting_interfaces.drawing_text_range import DrawingTextRange

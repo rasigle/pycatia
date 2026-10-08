@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.mec_mod_interfaces.constraints import Constraints
 from pycatia.mec_mod_interfaces.geometric_elements import GeometricElements
 from pycatia.sketcher_interfaces.axis_2D import Axis2D

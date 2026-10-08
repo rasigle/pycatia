@@ -10,7 +10,7 @@
 """
 from typing import Iterator
 
-from pycatia import CatClashImportType
+from pycatia.enumeration.enums import CatClashImportType
 from pycatia.space_analyses_interfaces.clash_result import ClashResult
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant

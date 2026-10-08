@@ -11,7 +11,7 @@
 import inspect
 from typing import TYPE_CHECKING, Tuple
 
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.drafting_interfaces.drawing_arrows import DrawingArrows
 from pycatia.drafting_interfaces.drawing_components import DrawingComponents
 from pycatia.drafting_interfaces.drawing_coord_dims import DrawingCoordDims

@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatTreeTypeEnum, CatTreeSizeTypeEnum, CatTreeOrientationEnum
+from pycatia.enumeration.enums import CatTreeTypeEnum, CatTreeSizeTypeEnum, CatTreeOrientationEnum
 from pycatia.system_interfaces.setting_controller import SettingController
 
 

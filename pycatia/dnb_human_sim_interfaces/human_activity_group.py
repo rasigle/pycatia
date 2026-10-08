@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import HTSActivityGroupMotionBasis
+from pycatia.enumeration.enums import HTSActivityGroupMotionBasis
 from pycatia.dnb_human_sim_interfaces.worker_activity import WorkerActivity
 
 

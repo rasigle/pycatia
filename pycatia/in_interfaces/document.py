@@ -13,7 +13,7 @@ from typing import TYPE_CHECKING
 
 from pathlib import Path
 
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.exception_handling import CATIAApplicationException
 from pycatia.in_interfaces.cameras import Cameras
 from pycatia.in_interfaces.reference import Reference

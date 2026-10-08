@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import DMUTrackMoveMode
+from pycatia.enumeration.enums import DMUTrackMoveMode
 from pycatia.fitting_interfaces.sampled import Sampled
 
 

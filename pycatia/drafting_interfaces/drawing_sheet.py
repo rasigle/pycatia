@@ -12,7 +12,7 @@
 import os
 from pathlib import Path
 
-from pycatia import CatSheetGenViewsPosMode, CatPaperOrientation, CatSheetProjectionMethod
+from pycatia.enumeration.enums import CatSheetGenViewsPosMode, CatPaperOrientation, CatSheetProjectionMethod
 from pycatia.drafting_interfaces.drawing_page_setup import DrawingPageSetup
 from pycatia.drafting_interfaces.drawing_views import DrawingViews
 from pycatia.drafting_interfaces.print_area import PrintArea

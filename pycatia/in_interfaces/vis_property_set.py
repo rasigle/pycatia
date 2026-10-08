@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatVisPropertyType, CatVisPropertyStatus, CatVisLayerType, CatVisPropertyPick, CatVisPropertyShow
+from pycatia.enumeration.enums import CatVisPropertyType, CatVisPropertyStatus, CatVisLayerType, CatVisPropertyPick, CatVisPropertyShow
 from pycatia.system_interfaces.any_object import AnyObject
 
 

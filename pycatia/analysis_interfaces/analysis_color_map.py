@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import SPMDistributionMode
+from pycatia.enumeration.enums import SPMDistributionMode
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.types.general import CATVariant
 

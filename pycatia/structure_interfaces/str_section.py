@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatStrSectionProperties
+from pycatia.enumeration.enums import CatStrSectionProperties
 from pycatia.knowledge_interfaces.parameter import Parameter
 from pycatia.structure_interfaces.str_anchor_points import StrAnchorPoints
 from pycatia.system_interfaces.any_object import AnyObject

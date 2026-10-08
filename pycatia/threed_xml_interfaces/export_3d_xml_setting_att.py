@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import Cat3DXmlGeomRepresentationType
+from pycatia.enumeration.enums import Cat3DXmlGeomRepresentationType
 from pycatia.system_interfaces.setting_controller import SettingController
 
 

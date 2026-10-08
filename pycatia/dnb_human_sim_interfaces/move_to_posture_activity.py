@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import HTSMotionBasis, HTSManikinReferential, HTSEndEffector
+from pycatia.enumeration.enums import HTSMotionBasis, HTSManikinReferential, HTSEndEffector
 from pycatia.dnb_human_modeling_interfaces.swkik_constraint import SWKIKConstraint
 from pycatia.dnb_human_sim_interfaces.worker_activity import WorkerActivity
 from pycatia.product_structure_interfaces.product import Product

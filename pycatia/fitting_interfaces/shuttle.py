@@ -10,7 +10,7 @@
 """
 from typing import TYPE_CHECKING
 
-from pycatia import CatShuttleMoveMode, CatShuttleVector
+from pycatia.enumeration.enums import CatShuttleMoveMode, CatShuttleVector
 from pycatia.in_interfaces.move import Move
 from pycatia.in_interfaces.position import Position
 from pycatia.navigator_interfaces.group import Group

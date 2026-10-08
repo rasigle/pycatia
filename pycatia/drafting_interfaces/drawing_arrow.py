@@ -10,7 +10,7 @@
 """
 import inspect
 
-from pycatia import CatSymbolType
+from pycatia.enumeration.enums import CatSymbolType
 from pycatia.system_interfaces.any_object import AnyObject
 
 

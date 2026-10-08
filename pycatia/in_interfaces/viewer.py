@@ -11,7 +11,7 @@
 
 from typing import TYPE_CHECKING
 
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.in_interfaces.camera import Camera
 from pycatia.system_interfaces.any_object import AnyObject
 

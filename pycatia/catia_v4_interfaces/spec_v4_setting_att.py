@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CATV4IV4V5SpecDraftMigrationEnum
+from pycatia.enumeration.enums import CATV4IV4V5SpecDraftMigrationEnum
 from pycatia.system_interfaces.setting_controller import SettingController
 
 

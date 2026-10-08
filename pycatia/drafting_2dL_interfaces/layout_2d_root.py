@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatVisuIn3DMode
+from pycatia.enumeration.enums import CatVisuIn3DMode
 from pycatia.knowledge_interfaces.parameters import Parameters
 from pycatia.knowledge_interfaces.relations import Relations
 from pycatia.drafting_2dL_interfaces.layout_2d_sheet import Layout2DSheet

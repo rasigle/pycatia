@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import PositionTolerance_Type, FormulationOption_Type
+from pycatia.enumeration.enums import PositionTolerance_Type, FormulationOption_Type
 from pycatia.abq_automation_interfaces.abq_interaction import ABQInteraction
 from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
 from pycatia.mec_mod_interfaces.constraint import Constraint

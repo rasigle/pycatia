@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CD5SaveOperation_Scope
+from pycatia.enumeration.enums import CD5SaveOperation_Scope
 from pycatia.eno_cd5_interfaces.cd5_engine import CD5Engine
 from pycatia.eno_cd5_interfaces.cd5_save_operation import CD5SaveOperation
 

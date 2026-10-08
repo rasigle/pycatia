@@ -15,7 +15,7 @@ import warnings
 
 from pywintypes import com_error
 
-from pycatia import CatRepType, CatFileType, CatWorkModeType, CatProductSource
+from pycatia.enumeration.enums import CatRepType, CatFileType, CatWorkModeType, CatProductSource
 from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.in_interfaces.move import Move
 from pycatia.in_interfaces.position import Position

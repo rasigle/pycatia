@@ -12,7 +12,7 @@ from typing import Iterator
 
 from pywintypes import com_error
 
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.exception_handling import CATIAApplicationException
 from pycatia.in_interfaces.document import Document
 from pycatia.in_interfaces.selected_element import SelectedElement

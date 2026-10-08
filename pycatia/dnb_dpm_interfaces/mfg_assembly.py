@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import DNBIAMfgAssemblyType
+from pycatia.enumeration.enums import DNBIAMfgAssemblyType
 from pycatia.dmaps_interfaces.item import Item
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.types.general import CATVariant

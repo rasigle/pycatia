@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import DNBAssignStatus
+from pycatia.enumeration.enums import DNBAssignStatus
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.dmaps_interfaces.resource import Resource
 from pycatia.dnb_fastener_interfaces.fastener import Fastener

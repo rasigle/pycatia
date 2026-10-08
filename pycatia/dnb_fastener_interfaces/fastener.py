@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import DNBPPRRemoveStatus
+from pycatia.enumeration.enums import DNBPPRRemoveStatus
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject

@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatViewFilterCreationMode, CatViewBackgroundMode
+from pycatia.enumeration.enums import CatViewFilterCreationMode, CatViewBackgroundMode
 from pycatia.system_interfaces.setting_controller import SettingController
 
 

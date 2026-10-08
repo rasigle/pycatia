@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import MotionBasis
+from pycatia.enumeration.enums import MotionBasis
 from pycatia.dnb_robot_interfaces.rob_generic_controller import RobGenericController
 from pycatia.system_interfaces.any_object import AnyObject
 

@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import Sliding_Type
+from pycatia.enumeration.enums import Sliding_Type
 from pycatia.abq_automation_interfaces.abq_interaction import ABQInteraction
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
 from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity

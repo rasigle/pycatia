@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatMergeMode
+from pycatia.enumeration.enums import CatMergeMode
 from pycatia.in_interfaces.reference import Reference
 from pycatia.part_interfaces.sketch_based_shape import SketchBasedShape
 from pycatia.sketcher_interfaces.sketch import Sketch

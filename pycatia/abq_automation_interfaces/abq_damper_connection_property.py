@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import SpringDef_Type
+from pycatia.enumeration.enums import SpringDef_Type
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.axis_system import AxisSystem

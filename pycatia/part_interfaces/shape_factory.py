@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatDraftMultiselectionMode, CatDraftMode, CatDraftNeutralPropagationMode, CatSplitSide, \
+from pycatia.enumeration.enums import CatDraftMultiselectionMode, CatDraftMode, CatDraftNeutralPropagationMode, CatSplitSide, \
     CatFilletEdgePropagation, CatFilletVariation, CatChamferPropagation, CatChamferMode, CatChamferOrientation
 from pycatia.hybrid_shape_interfaces.hybrid_shape_symmetry import HybridShapeSymmetry
 from pycatia.in_interfaces.reference import Reference

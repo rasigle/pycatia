@@ -10,7 +10,7 @@
 """
 import inspect
 
-from pycatia import CatTextProperty, CatTextFrameType, CatTextAnchorPosition
+from pycatia.enumeration.enums import CatTextProperty, CatTextFrameType, CatTextAnchorPosition
 from pycatia.drafting_interfaces.drawing_leaders import DrawingLeaders
 from pycatia.drafting_interfaces.drawing_text_properties import DrawingTextProperties
 from pycatia.system_interfaces.any_object import AnyObject

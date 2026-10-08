@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import HTSSearchIntensity
+from pycatia.enumeration.enums import HTSSearchIntensity
 from pycatia.dnb_human_sim_interfaces.walk_activity import WalkActivity
 
 

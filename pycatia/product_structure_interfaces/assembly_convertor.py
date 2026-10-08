@@ -10,7 +10,7 @@
 """
 from pathlib import Path
 
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.product_structure_interfaces.product import Product
 

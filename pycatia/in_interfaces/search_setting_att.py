@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatSearchContextScope
+from pycatia.enumeration.enums import CatSearchContextScope
 from pycatia.system_interfaces.setting_controller import SettingController
 
 

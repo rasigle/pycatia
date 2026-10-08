@@ -10,7 +10,7 @@
 """
 from typing import TYPE_CHECKING
 
-from pycatia import CatShowResultType, CatSolveType, CatVisualizationType
+from pycatia.enumeration.enums import CatShowResultType, CatSolveType, CatVisualizationType
 from pycatia.general_knowledge_interfaces.expert_rule_set import ExpertRuleSet
 from pycatia.knowledge_interfaces.relation import Relation
 from pycatia.system_interfaces.any_object import AnyObject

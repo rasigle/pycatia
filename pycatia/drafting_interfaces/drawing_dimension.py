@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.drafting_interfaces.drawing_dim_ext_line import DrawingDimExtLine
 from pycatia.drafting_interfaces.drawing_dim_line import DrawingDimLine
 from pycatia.drafting_interfaces.drawing_dim_value import DrawingDimValue

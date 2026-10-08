@@ -10,7 +10,7 @@
 """
 from typing import Iterator
 
-from pycatia import CatWeldingSymbol
+from pycatia.enumeration.enums import CatWeldingSymbol
 from pycatia.drafting_interfaces.drawing_welding import DrawingWelding
 from pycatia.system_interfaces.collection import Collection
 

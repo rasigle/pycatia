@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatWindowState
+from pycatia.enumeration.enums import CatWindowState
 from pycatia.in_interfaces.page_setup import PageSetup
 from pycatia.in_interfaces.viewer import Viewer
 from pycatia.in_interfaces.viewers import Viewers

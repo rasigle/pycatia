@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import ParallelMethodStd_Type, MemoryUnit_Type, Job_Type
+from pycatia.enumeration.enums import ParallelMethodStd_Type, MemoryUnit_Type, Job_Type
 from pycatia.abq_automation_interfaces.abq_step import ABQStep
 from pycatia.system_interfaces.any_object import AnyObject
 

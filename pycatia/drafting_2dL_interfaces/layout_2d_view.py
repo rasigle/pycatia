@@ -10,7 +10,7 @@
 """
 import inspect
 
-from pycatia import CatVisuIn3DMode, CatVisuBackgroundMode, CatView2DModeVisu
+from pycatia.enumeration.enums import CatVisuIn3DMode, CatVisuBackgroundMode, CatView2DModeVisu
 from pycatia.drafting_interfaces.drawing_arrows import DrawingArrows
 from pycatia.drafting_interfaces.drawing_components import DrawingComponents
 from pycatia.drafting_interfaces.drawing_coord_dims import DrawingCoordDims

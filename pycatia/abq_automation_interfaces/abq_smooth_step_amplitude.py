@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import TimeSpan_Type
+from pycatia.enumeration.enums import TimeSpan_Type
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
 
 

@@ -10,7 +10,7 @@
 """
 import inspect
 
-from pycatia import CatTablePosition, CatTableInvertMode, CatTableComputeMode, CatTableBorderType
+from pycatia.enumeration.enums import CatTablePosition, CatTableInvertMode, CatTableComputeMode, CatTableBorderType
 from pycatia.drafting_interfaces.drawing_leaders import DrawingLeaders
 from pycatia.drafting_interfaces.drawing_text import DrawingText
 from pycatia.drafting_interfaces.drawing_text_properties import DrawingTextProperties

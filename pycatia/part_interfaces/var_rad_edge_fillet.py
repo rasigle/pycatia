@@ -11,7 +11,7 @@
 import inspect
 from typing import TYPE_CHECKING
 
-from pycatia import CatFilletVariation, CatFilletBitangencyType
+from pycatia.enumeration.enums import CatFilletVariation, CatFilletBitangencyType
 from pycatia.in_interfaces.reference import Reference
 from pycatia.in_interfaces.references import References
 from pycatia.knowledge_interfaces.length import Length

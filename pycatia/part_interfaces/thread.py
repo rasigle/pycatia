@@ -10,7 +10,7 @@
 """
 import inspect
 
-from pycatia import CatThreadPolarity, CatThreadStandard, CatThreadSide
+from pycatia.enumeration.enums import CatThreadPolarity, CatThreadStandard, CatThreadSide
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.str_param import StrParam
 from pycatia.part_interfaces.dress_up_shape import DressUpShape

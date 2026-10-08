@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CATFTADimCreateOn, CATFTADimConfigureSnapping
+from pycatia.enumeration.enums import CATFTADimCreateOn, CATFTADimConfigureSnapping
 from pycatia.system_interfaces.setting_controller import SettingController
 
 

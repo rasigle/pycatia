@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from pycatia import CatClashExportType, CatClashInterferenceType, CatClashComputationType
+from pycatia.enumeration.enums import CatClashExportType, CatClashInterferenceType, CatClashComputationType
 from pycatia.navigator_interfaces.annotated_views import AnnotatedViews
 from pycatia.navigator_interfaces.group import Group
 from pycatia.navigator_interfaces.marker_3Ds import Marker3Ds

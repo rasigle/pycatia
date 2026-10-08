@@ -10,9 +10,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 """
 
 import inspect
-from typing import Union
 
-from pycatia.enumeration.enums import GeometricalFeatureType, CatScriptLanguage
+from pycatia.enumeration.enums import CatScriptLanguage, GeometricalFeatureType
 from pycatia.hybrid_shape_interfaces.hybrid_shape_3d_curve_offset import (
     HybridShape3DCurveOffset,
 )
@@ -229,7 +228,7 @@ from pycatia.hybrid_shape_interfaces.hybrid_shape_wrap_surface import (
 )
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.factory import Factory
-from pycatia.scripts.vba import vba_nothing, VBANothing
+from pycatia.scripts.vba import VBANothing, vba_nothing
 
 
 class HybridShapeFactory(Factory):
@@ -5662,7 +5661,7 @@ class HybridShapeFactory(Factory):
     def add_new_sphere(
         self,
         i_center: Reference,
-        i_axis: Union[Reference, VBANothing],
+        i_axis: Reference | VBANothing,
         i_radius: float,
         i_begin_parallel_angle: float,
         i_end_parallel_angle: float,

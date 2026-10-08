@@ -514,4 +514,4 @@ class HybridShapeCircleTritangent(HybridShapeCircle):
         self.hybrid_shape_circle_tritangent.TrimMode = value
 
     def __repr__(self):
-        return f'HybridShapeCircleTritangent(name="{ self.name }")'
+        return f'HybridShapeCircleTritangent(name="{self.name}")'

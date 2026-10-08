@@ -135,4 +135,4 @@ class FeatureGenerator(AnyObject):
         return self.feature_generator.LoadScriptFromFilePath(i_file_path)
 
     def __repr__(self):
-        return f'FeatureGenerator(name="{ self.name }")'
+        return f'FeatureGenerator(name="{self.name}")'

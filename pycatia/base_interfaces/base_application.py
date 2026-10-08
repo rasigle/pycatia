@@ -1,8 +1,8 @@
 #! /usr/bin/python3.9
 
-from win32com.client import Dispatch, GetActiveObject
-from pywintypes import com_error
 import pythoncom
+from pywintypes import com_error
+from win32com.client import Dispatch, GetActiveObject
 
 from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.in_interfaces.application import Application

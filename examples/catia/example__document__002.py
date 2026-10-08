@@ -1,13 +1,13 @@
 """
 
-    Example - Document - 002
+Example - Document - 002
 
-    Description:
-        Open all CATParts in source directory and save to IGS in target directory.
+Description:
+    Open all CATParts in source directory and save to IGS in target directory.
 
-    Requirements:
-        - CATIA running.
-        - Tests already setup.
+Requirements:
+    - CATIA running.
+    - Tests already setup.
 
 """
 
@@ -49,7 +49,9 @@ for root, dirs, files in os.walk(source_directory):
                 part_document: PartDocument = caa.document
 
                 # create the full name of the target file, minus extension.
-                target_file = Path(target_directory, os.path.splitext(file)[0] + "." + file_ext)
+                target_file = Path(
+                    target_directory, os.path.splitext(file)[0] + "." + file_ext
+                )
 
                 # create the igs file in the __junk__ directory.
                 part_document.export_data(target_file, file_ext, overwrite=True)

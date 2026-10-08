@@ -19,12 +19,12 @@ def read_dat_file(naca_dat_file: Path, chord_length: float) -> tuple[list, list]
     """
 
     if not naca_dat_file.is_file():
-        raise FileNotFoundError(f'Could find load {naca_dat_file}.')
+        raise FileNotFoundError(f"Could find load {naca_dat_file}.")
 
     upper_coordinates: list = []
     lower_coordinates: list = []
 
-    with open(naca_dat_file, 'r') as file:
+    with open(naca_dat_file) as file:
         lines = file.readlines()[3:]
         upper = True
         for line in lines:

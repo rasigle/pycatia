@@ -1,18 +1,18 @@
 """
 
-    Example - Hybrid Bodies - 001
+Example - Hybrid Bodies - 001
 
-    Description:
-        You have two bodies named Body.Cube.1 and Body.Cube.2.
-        Body.Cube.1 is made the in work object.
-        Body.Cube.2 is intersected with Body.Cube.1
+Description:
+    You have two bodies named Body.Cube.1 and Body.Cube.2.
+    Body.Cube.1 is made the in work object.
+    Body.Cube.2 is intersected with Body.Cube.1
 
-    Requirements:
-        - An open part document with two bodies:
-        
-            Part
-            |- Body.Cube.1
-            |- Body.Cube.2
+Requirements:
+    - An open part document with two bodies:
+
+        Part
+        |- Body.Cube.1
+        |- Body.Cube.2
 
 """
 

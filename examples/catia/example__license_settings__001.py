@@ -1,12 +1,12 @@
 """
 
-    Example - License Settings - 001
+Example - License Settings - 001
 
-    Description:
-        Determine if a license for DF1 has been requested.
+Description:
+    Determine if a license for DF1 has been requested.
 
-    Requirements:
-        - CATIA running.
+Requirements:
+    - CATIA running.
 
 """
 

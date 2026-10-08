@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import CatViewType, CatViewSide
 from pycatia.drafting_2dL_interfaces.layout_2d_view import Layout2DView
+from pycatia.enumeration.enums import CatViewSide, CatViewType
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
 

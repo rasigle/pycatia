@@ -37,4 +37,4 @@ class SweptVolume(AnyObject):
         self.swept_volume = com_object
 
     def __repr__(self):
-        return f'SweptVolume(name="{ self.name }")'
+        return f'SweptVolume(name="{self.name}")'

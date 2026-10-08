@@ -11,12 +11,12 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 import inspect
 
-from pycatia.drafting_interfaces.drawing_dimension import DrawingDimension
-from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.cat_tps_interfaces.controlled_radius import ControlledRadius
 from pycatia.cat_tps_interfaces.dimension_limit import DimensionLimit
 from pycatia.cat_tps_interfaces.dimension_pattern import DimensionPattern
 from pycatia.cat_tps_interfaces.envelope_condition import EnvelopeCondition
+from pycatia.drafting_interfaces.drawing_dimension import DrawingDimension
+from pycatia.system_interfaces.any_object import AnyObject
 
 
 class Dimension3D(AnyObject):

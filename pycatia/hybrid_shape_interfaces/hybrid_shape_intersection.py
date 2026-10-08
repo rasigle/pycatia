@@ -279,4 +279,4 @@ class HybridShapeIntersection(HybridShape):
         self.hybrid_shape_intersection.SolidMode = value
 
     def __repr__(self):
-        return f'HybridShapeIntersection(name="{ self.name }")'
+        return f'HybridShapeIntersection(name="{self.name}")'

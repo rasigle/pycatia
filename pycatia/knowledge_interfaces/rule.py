@@ -59,4 +59,4 @@ class Rule(Relation):
         self.rule = com_object
 
     def __repr__(self):
-        return f'Rule(name="{ self.name }")'
+        return f'Rule(name="{self.name}")'

@@ -9,7 +9,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 from pycatia.in_interfaces.viewpoint_3d import ViewPoint3D
 from pycatia.navigator_interfaces.annotated_view import AnnotatedView

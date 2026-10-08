@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import ParallelMethodStd_Type, MemoryUnit_Type, Job_Type
 from pycatia.abq_automation_interfaces.abq_step import ABQStep
+from pycatia.enumeration.enums import Job_Type, MemoryUnit_Type, ParallelMethodStd_Type
 from pycatia.system_interfaces.any_object import AnyObject
 
 

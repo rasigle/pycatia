@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import HTSSearchIntensity
 from pycatia.dnb_human_sim_interfaces.walk_activity import WalkActivity
+from pycatia.enumeration.enums import HTSSearchIntensity
 
 
 class CollisionFreeWalk(WalkActivity):

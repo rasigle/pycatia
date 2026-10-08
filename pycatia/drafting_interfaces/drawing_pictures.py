@@ -9,11 +9,11 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator
 
-from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.drafting_interfaces.drawing_picture import DrawingPicture
+from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
 

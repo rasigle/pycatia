@@ -9,9 +9,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import StabilizationStiffness_Type, InitialThickness_Type
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
 from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
+from pycatia.enumeration.enums import InitialThickness_Type, StabilizationStiffness_Type
 
 
 class ABQGasketProperty(ABQProperty):

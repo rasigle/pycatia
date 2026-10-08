@@ -1,13 +1,13 @@
 """
 
-    Example - Parameters - 001
+Example - Parameters - 001
 
-    Description:
-        Access the CATIA COM object with a .CATPart open and and display
-        each parameter along with its name, value and its associated parameter set.
+Description:
+    Access the CATIA COM object with a .CATPart open and and display
+    each parameter along with its name, value and its associated parameter set.
 
-    Requirements:
-        - CATIA running.
+Requirements:
+    - CATIA running.
 
 """
 
@@ -28,7 +28,9 @@ from pycatia.mec_mod_interfaces.part_document import PartDocument
 
 application = catia()
 documents = application.documents
-part_document: PartDocument = documents.open(Path(os.getcwd(), r"tests/cat_files/part_measurable.CATPart"))
+part_document: PartDocument = documents.open(
+    Path(os.getcwd(), r"tests/cat_files/part_measurable.CATPart")
+)
 part = part_document.part
 bodies = part.bodies
 
@@ -57,7 +59,7 @@ for parm_set in sub_parameter_set:
     sub_parms = parm_set.all_parameters
     for sub_item in sub_parms:
         print(sub_item)
-        print("Parameter name: {} - Value: {}".format(sub_item.name, sub_item.value))
+        print(f"Parameter name: {sub_item.name} - Value: {sub_item.value}")
     print()
 
 # ParameterSet name: Parameters_Pad

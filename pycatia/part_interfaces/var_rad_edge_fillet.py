@@ -12,7 +12,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 import inspect
 from typing import TYPE_CHECKING
 
-from pycatia.enumeration.enums import CatFilletVariation, CatFilletBitangencyType
+from pycatia.enumeration.enums import CatFilletBitangencyType, CatFilletVariation
 from pycatia.in_interfaces.reference import Reference
 from pycatia.in_interfaces.references import References
 from pycatia.knowledge_interfaces.length import Length

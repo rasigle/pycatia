@@ -1,14 +1,14 @@
 """
 
-    Example - Shape Factory - 001
+Example - Shape Factory - 001
 
-    Description:
-        Add new bodies to part.
-        Create a cylinder in an added body.
-        Do Intersection operations between two bodies.
+Description:
+    Add new bodies to part.
+    Create a cylinder in an added body.
+    Do Intersection operations between two bodies.
 
-    Requirements:
-        - CATIA running.
+Requirements:
+    - CATIA running.
 
 """
 

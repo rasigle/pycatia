@@ -11,13 +11,13 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 import inspect
 
-from pycatia.enumeration.enums import (
-    CatTextProperty,
-    CatTextFrameType,
-    CatTextAnchorPosition,
-)
 from pycatia.drafting_interfaces.drawing_leaders import DrawingLeaders
 from pycatia.drafting_interfaces.drawing_text_properties import DrawingTextProperties
+from pycatia.enumeration.enums import (
+    CatTextAnchorPosition,
+    CatTextFrameType,
+    CatTextProperty,
+)
 from pycatia.system_interfaces.any_object import AnyObject
 
 

@@ -11,11 +11,6 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 import inspect
 
-from pycatia.enumeration.enums import (
-    CatVisuIn3DMode,
-    CatVisuBackgroundMode,
-    CatView2DModeVisu,
-)
 from pycatia.drafting_interfaces.drawing_arrows import DrawingArrows
 from pycatia.drafting_interfaces.drawing_components import DrawingComponents
 from pycatia.drafting_interfaces.drawing_coord_dims import DrawingCoordDims
@@ -26,6 +21,11 @@ from pycatia.drafting_interfaces.drawing_tables import DrawingTables
 from pycatia.drafting_interfaces.drawing_texts import DrawingTexts
 from pycatia.drafting_interfaces.drawing_threads import DrawingThreads
 from pycatia.drafting_interfaces.drawing_weldings import DrawingWeldings
+from pycatia.enumeration.enums import (
+    CatView2DModeVisu,
+    CatVisuBackgroundMode,
+    CatVisuIn3DMode,
+)
 from pycatia.mec_mod_interfaces.geometric_elements import GeometricElements
 from pycatia.sketcher_interfaces.factory_2D import Factory2D
 from pycatia.system_interfaces.any_object import AnyObject

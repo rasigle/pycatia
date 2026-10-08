@@ -83,4 +83,4 @@ class KnowledgeObject(AnyObject):
         self.knowledge_object.IsConst = value
 
     def __repr__(self):
-        return f'KnowledgeObject(name="{ self.name }")'
+        return f'KnowledgeObject(name="{self.name}")'

@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import HTSActivityGroupMotionBasis
 from pycatia.dnb_human_sim_interfaces.worker_activity import WorkerActivity
+from pycatia.enumeration.enums import HTSActivityGroupMotionBasis
 
 
 class HumanActivityGroup(WorkerActivity):

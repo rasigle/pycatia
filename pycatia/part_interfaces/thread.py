@@ -13,8 +13,8 @@ import inspect
 
 from pycatia.enumeration.enums import (
     CatThreadPolarity,
-    CatThreadStandard,
     CatThreadSide,
+    CatThreadStandard,
 )
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.str_param import StrParam

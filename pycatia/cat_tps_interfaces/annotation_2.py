@@ -13,7 +13,6 @@ import inspect
 from typing import TYPE_CHECKING
 
 from pycatia.cat_tps_interfaces.coord_dim import CoordDim
-from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.cat_tps_interfaces.datum_simple import DatumSimple
 from pycatia.cat_tps_interfaces.datum_target import DatumTarget
 from pycatia.cat_tps_interfaces.default_annotation import DefaultAnnotation
@@ -29,6 +28,7 @@ from pycatia.cat_tps_interfaces.semantic_gdt import SemanticGDT
 from pycatia.cat_tps_interfaces.text import Text
 from pycatia.cat_tps_interfaces.tps_view import TPSView
 from pycatia.cat_tps_interfaces.weld import Weld
+from pycatia.system_interfaces.any_object import AnyObject
 
 if TYPE_CHECKING:
     from pycatia.cat_tps_interfaces.reference_frame import ReferenceFrame

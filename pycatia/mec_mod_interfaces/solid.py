@@ -126,4 +126,4 @@ class Solid(Shape):
         return AnyObject(self.solid.SourceProduct)
 
     def __repr__(self):
-        return f'Solid(name="{ self.name }")'
+        return f'Solid(name="{self.name}")'

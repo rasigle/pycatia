@@ -196,4 +196,4 @@ class DisconnectionSettingAtt(SettingController):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def __repr__(self):
-        return f'DisconnectionSettingAtt(name="{ self.name }")'
+        return f'DisconnectionSettingAtt(name="{self.name}")'

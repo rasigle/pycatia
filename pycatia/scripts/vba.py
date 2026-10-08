@@ -6,7 +6,6 @@ End Function
 
 
 class VBANothing(str):
-
     def __init__(self, vba_code):
         self.vba_code = vba_code
 

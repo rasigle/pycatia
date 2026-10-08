@@ -9,11 +9,11 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
+from pycatia.cat_tps_interfaces.annotation_set import AnnotationSet
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.system_interfaces.collection import Collection
-from pycatia.cat_tps_interfaces.annotation_set import AnnotationSet
 from pycatia.types.general import CATVariant
 
 

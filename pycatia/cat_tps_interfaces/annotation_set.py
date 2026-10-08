@@ -12,15 +12,15 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 import inspect
 from typing import TYPE_CHECKING
 
-from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.cat_tps_interfaces.annotation_factory import AnnotationFactory
 from pycatia.cat_tps_interfaces.annotation_factory_2 import AnnotationFactory2
+from pycatia.cat_tps_interfaces.annotations import Annotations
 from pycatia.cat_tps_interfaces.capture_factory import CaptureFactory
 from pycatia.cat_tps_interfaces.captures import Captures
 from pycatia.cat_tps_interfaces.tps_view import TPSView
 from pycatia.cat_tps_interfaces.tps_view_factory import TPSViewFactory
-from pycatia.cat_tps_interfaces.annotations import Annotations
 from pycatia.cat_tps_interfaces.tps_views import TPSViews
+from pycatia.system_interfaces.any_object import AnyObject
 
 if TYPE_CHECKING:
     from pycatia.mec_mod_interfaces.part import Part

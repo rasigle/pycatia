@@ -1,14 +1,14 @@
 """
 
-    Example - Product - 003
+Example - Product - 003
 
-    Description:
-        Loop through a CATProduct and analyse children if CATPart.
-        Only goes two levels deep.
+Description:
+    Loop through a CATProduct and analyse children if CATPart.
+    Only goes two levels deep.
 
-    Requirements:
-        - CATIA running.
-        - Tests already setup.
+Requirements:
+    - CATIA running.
+    - Tests already setup.
 
 """
 
@@ -22,14 +22,15 @@ sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 from pathlib import Path
 
-from pycatia import catia
-from pycatia import CatWorkModeType
+from pycatia import CatWorkModeType, catia
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()
 documents = application.documents
-product_document: ProductDocument = documents.open(Path(os.getcwd(), r"tests\cat_files\product_top.CATProduct"))
+product_document: ProductDocument = documents.open(
+    Path(os.getcwd(), r"tests\cat_files\product_top.CATProduct")
+)
 product = product_document.product
 
 # Change the work mode to Design Mode.

@@ -69,4 +69,4 @@ class ProductDocument(Document):
         return Product(self.product_document.Product)
 
     def __repr__(self):
-        return f'ProductDocument(name="{ self.name }")'
+        return f'ProductDocument(name="{self.name}")'

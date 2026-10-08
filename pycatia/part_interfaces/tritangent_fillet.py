@@ -148,4 +148,4 @@ class TritangentFillet(Fillet):
         self.tritangent_fillet.SecondFace = value.com_object
 
     def __repr__(self):
-        return f'TritangentFillet(name="{ self.name }")'
+        return f'TritangentFillet(name="{self.name}")'

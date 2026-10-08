@@ -2,19 +2,19 @@
 # contact: mikael@rslnd.se
 
 """
-    Measure point relative to axis system.
+Measure point relative to axis system.
 
-    Description
-    ===========
-    Measures point relative to axis system.
+Description
+===========
+Measures point relative to axis system.
 
-    Requirements
-    ============
-    python >= 3.9
-    pycatia
-    CATIA V5 is running with an open part that includes an axis system and a
-    geometrical set named "Inputs" containing a point named "Point.1". The first
-    axis in the axis collection will be selected.
+Requirements
+============
+python >= 3.9
+pycatia
+CATIA V5 is running with an open part that includes an axis system and a
+geometrical set named "Inputs" containing a point named "Point.1". The first
+axis in the axis collection will be selected.
 """
 
 ##########################################################
@@ -23,7 +23,7 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../../pycatia'))
+sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
 from pycatia import catia

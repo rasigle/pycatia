@@ -1,13 +1,13 @@
 """
 
-    Example - Space Analysis - 001
+Example - Space Analysis - 001
 
-    Description:
-        Get the center of gravity for the part body 'PartBody'.
+Description:
+    Get the center of gravity for the part body 'PartBody'.
 
-    Requirements:
-        - CATIA running.
-        - Tests already setup.
+Requirements:
+    - CATIA running.
+    - Tests already setup.
 
 """
 
@@ -28,7 +28,9 @@ from pycatia.mec_mod_interfaces.part_document import PartDocument
 application = catia()
 documents = application.documents
 # if the active document is a CATPart this will return a PartDocument
-part_document: PartDocument = documents.open(Path(os.getcwd(), r"tests/cat_files/part_measurable.CATPart"))
+part_document: PartDocument = documents.open(
+    Path(os.getcwd(), r"tests/cat_files/part_measurable.CATPart")
+)
 part = part_document.part
 
 # get the Bodies() collection

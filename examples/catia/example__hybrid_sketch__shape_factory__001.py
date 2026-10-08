@@ -1,12 +1,12 @@
 """
 
-    Example - Hybrid Sketch & Shape Factory - 001
+Example - Hybrid Sketch & Shape Factory - 001
 
-    Description:
-        Creates a square in a sketch and fully constrains it. Sketch then used to pad.
+Description:
+    Creates a square in a sketch and fully constrains it. Sketch then used to pad.
 
-    Requirements:
-        - CATIA running.        
+Requirements:
+    - CATIA running.
 
 """
 
@@ -19,8 +19,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
-from pycatia import catia
-from pycatia import CatConstraintType
+from pycatia import CatConstraintType, catia
 from pycatia.mec_mod_interfaces.part_document import PartDocument
 from pycatia.sketcher_interfaces.geometry_2D import Geometry2D
 
@@ -90,11 +89,13 @@ constraints = sketch.constraints
 
 # create the length constraint.
 # left vertical line.
-constraint_length_1 = constraints.add_mono_elt_cst(CatConstraintType.catCstTypeLength,
-                                                   part.create_reference_from_object(line_1))
+constraint_length_1 = constraints.add_mono_elt_cst(
+    CatConstraintType.catCstTypeLength, part.create_reference_from_object(line_1)
+)
 # horizontal line.
-constraint_length_4 = constraints.add_mono_elt_cst(CatConstraintType.catCstTypeLength,
-                                                   part.create_reference_from_object(line_4))
+constraint_length_4 = constraints.add_mono_elt_cst(
+    CatConstraintType.catCstTypeLength, part.create_reference_from_object(line_4)
+)
 
 # make the constraint reference.
 # constraint_length_1.mode = cat_constraint_mode.index("catCstModeDrivenDimension")
@@ -105,35 +106,44 @@ constraint_length_4 = constraints.add_mono_elt_cst(CatConstraintType.catCstTypeL
 
 # constrain the bottom line to h_direction
 constraint_horizontal = constraints.add_bi_elt_cst(
-    CatConstraintType.catCstTypeLength, part.create_reference_from_object(line_4),
-    part.create_reference_from_object(h_direction)
+    CatConstraintType.catCstTypeLength,
+    part.create_reference_from_object(line_4),
+    part.create_reference_from_object(h_direction),
 )
 
 # constrain left vertical as angle to bottom line.
 constraint_angle = constraints.add_bi_elt_cst(
-    CatConstraintType.catCstTypeLength, part.create_reference_from_object(line_1),
-    part.create_reference_from_object(line_4)
+    CatConstraintType.catCstTypeLength,
+    part.create_reference_from_object(line_1),
+    part.create_reference_from_object(line_4),
 )
 
 # make the two horizontal lines parallel.
 constraint_p_h = constraints.add_bi_elt_cst(
-    CatConstraintType.catCstTypeLength, part.create_reference_from_object(line_1),
-    part.create_reference_from_object(line_3)
+    CatConstraintType.catCstTypeLength,
+    part.create_reference_from_object(line_1),
+    part.create_reference_from_object(line_3),
 )
 # make the two vertical lines parallel.
 constraint_p_v = constraints.add_bi_elt_cst(
-    CatConstraintType.catCstTypeLength, part.create_reference_from_object(line_2),
-    part.create_reference_from_object(line_4)
+    CatConstraintType.catCstTypeLength,
+    part.create_reference_from_object(line_2),
+    part.create_reference_from_object(line_4),
 )
 
 # create projection of 3D point used and constrain to 2d point.
-geometric_elements1 = factory_2D.create_projections(part.create_reference_from_object(point_1_3D))
+geometric_elements1 = factory_2D.create_projections(
+    part.create_reference_from_object(point_1_3D)
+)
 projected_point = Geometry2D(geometric_elements1.item(1).com_object)
 projected_point.construction = True
 point_ref = part.create_reference_from_object(projected_point)
 
-constraint_mid = constraints.add_bi_elt_cst(CatConstraintType.catCstTypeLength,
-                                            part.create_reference_from_object(point_1), point_ref)
+constraint_mid = constraints.add_bi_elt_cst(
+    CatConstraintType.catCstTypeLength,
+    part.create_reference_from_object(point_1),
+    point_ref,
+)
 
 sketch.close_edition()
 

@@ -9,7 +9,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import DNBTCPTraceReps, DNBTCPTraceLegends
+from pycatia.enumeration.enums import DNBTCPTraceLegends, DNBTCPTraceReps
 from pycatia.system_interfaces.any_object import AnyObject
 
 

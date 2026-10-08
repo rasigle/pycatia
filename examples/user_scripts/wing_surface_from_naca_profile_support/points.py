@@ -4,10 +4,10 @@ from pycatia.mec_mod_interfaces.hybrid_body import HybridBody
 
 
 def add_points(
-        hsf: HybridShapeFactory,
-        reference_plane: Reference,
-        geometrical_set: HybridBody,
-        points: list[tuple[int, int]]
+    hsf: HybridShapeFactory,
+    reference_plane: Reference,
+    geometrical_set: HybridBody,
+    points: list[tuple[int, int]],
 ):
     """
 

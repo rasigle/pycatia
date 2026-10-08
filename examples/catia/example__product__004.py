@@ -1,14 +1,14 @@
 """
 
-    Example - Product - 004
+Example - Product - 004
 
-    Description:
-        Get the position matrix of products (CATPart or CATProduct) in product.
+Description:
+    Get the position matrix of products (CATPart or CATProduct) in product.
 
-    Requirements:
-        - CATIA running.
-        - Tests already setup.
-    
+Requirements:
+    - CATIA running.
+    - Tests already setup.
+
 """
 
 ##########################################################
@@ -26,7 +26,9 @@ from pycatia.product_structure_interfaces.product_document import ProductDocumen
 
 application = catia()
 documents = application.documents
-product_document: ProductDocument = documents.open(Path(os.getcwd(), r"tests\cat_files\product_top.CATProduct"))
+product_document: ProductDocument = documents.open(
+    Path(os.getcwd(), r"tests\cat_files\product_top.CATProduct")
+)
 product = product_document.product
 
 products = product.products

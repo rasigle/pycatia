@@ -9,7 +9,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 from pycatia.knowledge_interfaces.parameter_set import ParameterSet
 from pycatia.system_interfaces.collection import Collection

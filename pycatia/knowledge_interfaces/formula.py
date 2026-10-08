@@ -64,4 +64,4 @@ class Formula(Relation):
         self.formula = com_object
 
     def __repr__(self):
-        return f'Formula(name="{ self.name }")'
+        return f'Formula(name="{self.name}")'

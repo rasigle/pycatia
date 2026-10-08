@@ -66,4 +66,4 @@ class SurfaceBasedShape(Shape):
         self.surface_based_shape.Surface = value.com_object
 
     def __repr__(self):
-        return f'SurfaceBasedShape(name="{ self.name }")'
+        return f'SurfaceBasedShape(name="{self.name}")'

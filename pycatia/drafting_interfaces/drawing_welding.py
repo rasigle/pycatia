@@ -9,16 +9,16 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import (
-    CatWeldingSymbol,
-    CatWeldingSide,
-    CatWelding,
-    CatWeldAdditionalSymbol,
-    CatDftWeldFinishSymbol,
-)
 from pycatia.drafting_interfaces.drawing_leaders import DrawingLeaders
 from pycatia.drafting_interfaces.drawing_text_properties import DrawingTextProperties
 from pycatia.drafting_interfaces.drawing_text_range import DrawingTextRange
+from pycatia.enumeration.enums import (
+    CatDftWeldFinishSymbol,
+    CatWeldAdditionalSymbol,
+    CatWelding,
+    CatWeldingSide,
+    CatWeldingSymbol,
+)
 from pycatia.system_interfaces.any_object import AnyObject
 
 

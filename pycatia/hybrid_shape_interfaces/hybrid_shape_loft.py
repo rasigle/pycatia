@@ -9,8 +9,6 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Union
-
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.length import Length
@@ -586,7 +584,7 @@ class HybridShapeLoft(HybridShape):
         # # return system_service.evaluate(vba_code, 0, vba_function_name, [self.com_object])
 
     def add_section_to_loft(
-        self, i_crv: Reference, i_ori: int, i_point: Union[Reference, VBANothing]
+        self, i_crv: Reference, i_ori: int, i_point: Reference | VBANothing
     ) -> None:
         """
         .. note::

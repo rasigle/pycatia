@@ -9,13 +9,13 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
+from pycatia.dnb_human_sim_interfaces.worker_activity import WorkerActivity
 from pycatia.enumeration.enums import (
-    HTSWalkMotionBasis,
+    HTSBodyPoseOptions,
     HTSStrideOptions,
     HTSSwingOptions,
-    HTSBodyPoseOptions,
+    HTSWalkMotionBasis,
 )
-from pycatia.dnb_human_sim_interfaces.worker_activity import WorkerActivity
 
 
 class WalkActivity(WorkerActivity):

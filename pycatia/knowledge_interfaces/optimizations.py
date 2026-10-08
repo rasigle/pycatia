@@ -9,7 +9,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 from pycatia.knowledge_interfaces.optimization import Optimization
 from pycatia.knowledge_interfaces.set_of_equation import SetOfEquation

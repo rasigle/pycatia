@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import DNBPPRRemoveStatus
 from pycatia.dmaps_interfaces.activity import Activity
+from pycatia.enumeration.enums import DNBPPRRemoveStatus
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
 

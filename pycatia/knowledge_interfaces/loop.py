@@ -41,4 +41,4 @@ class Loop(KnowledgeActivateObject):
         self.loop = com_object
 
     def __repr__(self):
-        return f'Loop(name="{ self.name }")'
+        return f'Loop(name="{self.name}")'

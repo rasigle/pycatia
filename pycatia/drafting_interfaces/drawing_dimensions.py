@@ -9,15 +9,14 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Iterator, Union
+from collections.abc import Iterator
 
-from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.drafting_interfaces.drawing_dimension import DrawingDimension
+from pycatia.enumeration.enums import CatScriptLanguage
+from pycatia.scripts.vba import VBANothing, vba_nothing
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
-from pycatia.scripts.vba import VBANothing
-from pycatia.scripts.vba import vba_nothing
 
 
 class DrawingDimensions(Collection):
@@ -134,7 +133,7 @@ class DrawingDimensions(Collection):
         i_type_dim: int,
         i_geom_elem: tuple,
         i_pt_coord_elem: tuple,
-        i_ldc_ref_elem: Union[AnyObject, VBANothing],
+        i_ldc_ref_elem: AnyObject | VBANothing,
         i_ldc_ref_angle: int,
     ) -> DrawingDimension:
         """

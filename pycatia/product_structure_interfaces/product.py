@@ -15,10 +15,10 @@ from typing import TYPE_CHECKING
 from pywintypes import com_error
 
 from pycatia.enumeration.enums import (
-    CatRepType,
     CatFileType,
-    CatWorkModeType,
     CatProductSource,
+    CatRepType,
+    CatWorkModeType,
 )
 from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.in_interfaces.move import Move
@@ -32,8 +32,8 @@ from pycatia.product_structure_interfaces.publications import Publications
 from pycatia.system_interfaces.any_object import AnyObject
 
 if TYPE_CHECKING:
-    from pycatia.product_structure_interfaces.products import Products
     from pycatia.in_interfaces.document import Document
+    from pycatia.product_structure_interfaces.products import Products
 
 
 class Product(AnyObject):
@@ -1330,7 +1330,7 @@ class Product(AnyObject):
         :rtype: bool
         """
 
-        if "catproduct" == self.file_name.rsplit(".")[-1].lower():
+        if self.file_name.rsplit(".")[-1].lower() == "catproduct":
             return True
 
         return False
@@ -1340,7 +1340,7 @@ class Product(AnyObject):
         :rtype: bool
         """
 
-        if "catpart" == self.file_name.rsplit(".")[-1].lower():
+        if self.file_name.rsplit(".")[-1].lower() == "catpart":
             return True
 
         return False

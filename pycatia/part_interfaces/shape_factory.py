@@ -10,15 +10,15 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 """
 
 from pycatia.enumeration.enums import (
-    CatDraftMultiselectionMode,
-    CatDraftMode,
-    CatDraftNeutralPropagationMode,
-    CatSplitSide,
-    CatFilletEdgePropagation,
-    CatFilletVariation,
-    CatChamferPropagation,
     CatChamferMode,
     CatChamferOrientation,
+    CatChamferPropagation,
+    CatDraftMode,
+    CatDraftMultiselectionMode,
+    CatDraftNeutralPropagationMode,
+    CatFilletEdgePropagation,
+    CatFilletVariation,
+    CatSplitSide,
 )
 from pycatia.hybrid_shape_interfaces.hybrid_shape_symmetry import HybridShapeSymmetry
 from pycatia.in_interfaces.reference import Reference

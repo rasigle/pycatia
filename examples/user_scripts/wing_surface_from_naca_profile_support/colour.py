@@ -2,7 +2,9 @@ from pycatia.in_interfaces.selection import Selection
 from pycatia.system_interfaces.any_object import AnyObject
 
 
-def set_colour(selection: Selection, element: AnyObject, colour: tuple[int, int, int, int]) -> None:
+def set_colour(
+    selection: Selection, element: AnyObject, colour: tuple[int, int, int, int]
+) -> None:
     """
 
     :param Selection selection:

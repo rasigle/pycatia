@@ -1,13 +1,13 @@
 """
 
-    Example - Hybrid Shape Factory - 006
+Example - Hybrid Shape Factory - 006
 
-    Description:
-        How to add a new sphere when a reference axis system isn't required.
+Description:
+    How to add a new sphere when a reference axis system isn't required.
 
-    Requirements:
-        - A geometrical set named "ConstructionGeometry".
-        - A point within the ConstructionGeometry named "Point.1".
+Requirements:
+    - A geometrical set named "ConstructionGeometry".
+    - A point within the ConstructionGeometry named "Point.1".
 
 """
 
@@ -21,7 +21,6 @@ sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 from pycatia import catia
 from pycatia.mec_mod_interfaces.part_document import PartDocument
-
 from pycatia.scripts.vba import vba_nothing
 
 application = catia()
@@ -49,7 +48,7 @@ hybrid_shape_sphere = hybrid_shape_factory.add_new_sphere(
     begin_parallel_angle,
     end_parallel_angle,
     begin_meridian_angle,
-    end_meridian_angle
+    end_meridian_angle,
 )
 
 # set limitation to 0 for a partial sphere, 1 for a complete sphere.

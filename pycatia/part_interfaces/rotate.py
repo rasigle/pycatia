@@ -154,4 +154,4 @@ class Rotate(Shape):
         return HybridShape(self.rotate.HybridShape)
 
     def __repr__(self):
-        return f'Rotate(name="{ self.name }")'
+        return f'Rotate(name="{self.name}")'

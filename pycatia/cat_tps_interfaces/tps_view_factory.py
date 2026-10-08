@@ -9,9 +9,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
+from pycatia.cat_tps_interfaces.tps_view import TPSView
 from pycatia.in_interfaces.reference import Reference
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.cat_tps_interfaces.tps_view import TPSView
 from pycatia.types.general import CATVariant
 
 

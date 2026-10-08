@@ -46,4 +46,4 @@ class SessionStatisticsSettingAtt(GeneralStatisticsSettingAtt):
         self.session_statistics_setting_att = com_object
 
     def __repr__(self):
-        return f'SessionStatisticsSettingAtt(name="{ self.name }")'
+        return f'SessionStatisticsSettingAtt(name="{self.name}")'

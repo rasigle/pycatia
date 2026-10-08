@@ -93,4 +93,4 @@ class PartDocument(Document):
         return Product(self.part_document.Product)
 
     def __repr__(self):
-        return f'PartDocument(name="{ self.name }")'
+        return f'PartDocument(name="{self.name}")'

@@ -9,7 +9,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 from pycatia.sketcher_interfaces.geometric_element import GeometricElement
 from pycatia.system_interfaces.collection import Collection

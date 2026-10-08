@@ -73,4 +73,4 @@ class Symmetry(Shape):
         return HybridShape(self.symmetry.HybridShape)
 
     def __repr__(self):
-        return f'Symmetry(name="{ self.name }")'
+        return f'Symmetry(name="{self.name}")'

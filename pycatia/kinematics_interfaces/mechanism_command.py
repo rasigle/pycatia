@@ -113,4 +113,4 @@ class MechanismCommand(AnyObject):
         return self.mechanism_command.Type
 
     def __repr__(self):
-        return f'MechanismCommand(name="{ self.name }")'
+        return f'MechanismCommand(name="{self.name}")'

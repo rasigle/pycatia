@@ -83,4 +83,4 @@ class ToleranceZone(AnyObject):
         self.tolerance_zone.Value = value
 
     def __repr__(self):
-        return f'ToleranceZone(name="{ self.name }")'
+        return f'ToleranceZone(name="{self.name}")'

@@ -1,13 +1,13 @@
 """
 
-    Example - Constraints - 001
+Example - Constraints - 001
 
-    Description:
-        Fix the first Sub Product in Product using constraints.
-        The Sketch examples also show further usage of constraints.
+Description:
+    Fix the first Sub Product in Product using constraints.
+    The Sketch examples also show further usage of constraints.
 
-    Requirements:
-        - An open product document with at least two parts inside.
+Requirements:
+    - An open product document with at least two parts inside.
 
 """
 
@@ -20,8 +20,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
-from pycatia import catia
-from pycatia import CatConstraintType
+from pycatia import CatConstraintType, catia
 from pycatia.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()

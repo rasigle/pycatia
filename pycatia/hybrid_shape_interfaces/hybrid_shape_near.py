@@ -113,4 +113,4 @@ class HybridShapeNear(HybridShape):
         self.hybrid_shape_near.ReferenceElement = reference_element.com_object
 
     def __repr__(self):
-        return f'HybridShapeNear(name="{ self.name }")'
+        return f'HybridShapeNear(name="{self.name}")'

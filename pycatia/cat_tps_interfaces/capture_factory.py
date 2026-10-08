@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.mec_mod_interfaces.factory import Factory
 from pycatia.cat_tps_interfaces.capture import Capture
+from pycatia.mec_mod_interfaces.factory import Factory
 
 
 class CaptureFactory(Factory):

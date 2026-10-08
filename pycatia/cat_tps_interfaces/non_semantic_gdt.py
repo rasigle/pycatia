@@ -11,9 +11,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 import inspect
 
+from pycatia.cat_tps_interfaces.tps_parallel_on_screen import TPSParallelOnScreen
 from pycatia.drafting_interfaces.drawing_gdt import DrawingGDT
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.cat_tps_interfaces.tps_parallel_on_screen import TPSParallelOnScreen
 
 
 class NonSemanticGDT(AnyObject):

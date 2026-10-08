@@ -10,9 +10,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 """
 
 from pycatia.enumeration.enums import (
-    CatConflictType,
-    CatConflictStatus,
     CatConflictComparison,
+    CatConflictStatus,
+    CatConflictType,
     CatScriptLanguage,
 )
 from pycatia.product_structure_interfaces.product import Product

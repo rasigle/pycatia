@@ -2,7 +2,6 @@
 
 import os
 from pathlib import Path
-from typing import Union
 
 from pycatia.base_interfaces.base_application import catia_application as catia
 from pycatia.exception_handling.exceptions import CATIAApplicationException
@@ -50,8 +49,8 @@ class CATIADocHandler:
 
     def __init__(
         self,
-        file_name: Union[Path, None] = None,
-        new_document: Union[str, bool] = False,
+        file_name: Path | None = None,
+        new_document: str | bool = False,
     ):
         """
         :param Path file_name: (optional) path filename to file

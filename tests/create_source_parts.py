@@ -1,8 +1,7 @@
 import os
 from pathlib import Path
 
-from pycatia import CatConstraintMode
-from pycatia import CatConstraintType
+from pycatia import CatConstraintMode, CatConstraintType
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.part_document import PartDocument
 from pycatia.product_structure_interfaces.product_document import ProductDocument

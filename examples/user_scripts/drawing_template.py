@@ -1,26 +1,26 @@
 """
-    Description
-    ===========
-    A script that uses pycatia to generate a drawing format for all sheets
-    in the active drawing.
+Description
+===========
+A script that uses pycatia to generate a drawing format for all sheets
+in the active drawing.
 
-    Requirements
-    ============
-    python >= 3.9
-    pycatia
-    CATIA V5 running with a drawing open.
+Requirements
+============
+python >= 3.9
+pycatia
+CATIA V5 running with a drawing open.
 
-    Running The Script
-    ==================
-    > python ./user_scripts/drawing_template.py -draw-existing
+Running The Script
+==================
+> python ./user_scripts/drawing_template.py -draw-existing
 
-    Documentation
-    =============
-    https://pycatia.readthedocs.io
+Documentation
+=============
+https://pycatia.readthedocs.io
 
-    More examples and user scripts can be found at:
-    https://github.com/evereux/pycatia/tree/master/examples
-    https://github.com/evereux/pycatia/tree/master/user_scripts
+More examples and user scripts can be found at:
+https://github.com/evereux/pycatia/tree/master/examples
+https://github.com/evereux/pycatia/tree/master/user_scripts
 """
 
 import argparse
@@ -34,11 +34,8 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
-from pycatia.drafting_interfaces.drawing_view import DrawingView
-
-from drawing_template_support.caa import caa
-from drawing_template_support.caa import get_active_drawing
 from drawing_template_support.border import create_border
+from drawing_template_support.caa import caa, get_active_drawing
 from drawing_template_support.copyright_box import create_copyright_box
 from drawing_template_support.drawing import create_drawing
 from drawing_template_support.paper_size import get_sheet_size_info
@@ -48,29 +45,28 @@ from drawing_template_support.settings import sheet_sizes
 from drawing_template_support.template_name import create_template_name
 from drawing_template_support.title_block import create_title_block
 
-if __name__ == '__main__':
+from pycatia.drafting_interfaces.drawing_view import DrawingView
+
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        prog='pycatia-drawing-template',
-        usage='%(prog)s [options]',
-        description='Create drawing border templates using pycatia.'
+        prog="pycatia-drawing-template",
+        usage="%(prog)s [options]",
+        description="Create drawing border templates using pycatia.",
     )
 
     # optional argument
     parser.add_argument(
-        '-create-new',
-        nargs='?',
+        "-create-new",
+        nargs="?",
     )
 
-    parser.add_argument(
-        '-draw-existing',
-        action='store_true'
-    )
+    parser.add_argument("-draw-existing", action="store_true")
 
     args = parser.parse_args()
 
     if args.create_new:
         if args.create_new not in sheet_sizes:
-            raise ValueError('Please supply a valid sheet size.')
+            raise ValueError("Please supply a valid sheet size.")
         sheet_size = args.create_new
         print(f'Creating new "{sheet_size}" sheet.')
         create_drawing(sheet_size)
@@ -101,7 +97,9 @@ if __name__ == '__main__':
         # then this didn't work for sheet.2.
         for sheet in sheets:
             sheet.activate()
-            main_view = DrawingView(sheet.views.get_item_by_name('Main View').com_object)
+            main_view = DrawingView(
+                sheet.views.get_item_by_name("Main View").com_object
+            )
             main_view.activate()
             viewer = caa.active_window
             # fit all in.

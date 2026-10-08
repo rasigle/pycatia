@@ -12,14 +12,14 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 import os
 from pathlib import Path
 
-from pycatia.enumeration.enums import (
-    CatSheetGenViewsPosMode,
-    CatPaperOrientation,
-    CatSheetProjectionMethod,
-)
 from pycatia.drafting_interfaces.drawing_page_setup import DrawingPageSetup
 from pycatia.drafting_interfaces.drawing_views import DrawingViews
 from pycatia.drafting_interfaces.print_area import PrintArea
+from pycatia.enumeration.enums import (
+    CatPaperOrientation,
+    CatSheetGenViewsPosMode,
+    CatSheetProjectionMethod,
+)
 from pycatia.system_interfaces.any_object import AnyObject
 
 
@@ -540,8 +540,7 @@ class DrawingSheet(AnyObject):
 
         if overwrite is False and file_name.is_file():
             raise FileExistsError(
-                f"File: {file_name} already exists. "
-                f"Set overwrite=True if you want to overwrite."
+                f"File: {file_name} already exists. Set overwrite=True if you want to overwrite."
             )
 
         # pycatia prefers full path names :-)

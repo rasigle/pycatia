@@ -9,9 +9,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import PositionTolerance_Type, FormulationOption_Type
 from pycatia.abq_automation_interfaces.abq_interaction import ABQInteraction
 from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
+from pycatia.enumeration.enums import FormulationOption_Type, PositionTolerance_Type
 from pycatia.mec_mod_interfaces.constraint import Constraint
 from pycatia.product_structure_interfaces.product import Product
 

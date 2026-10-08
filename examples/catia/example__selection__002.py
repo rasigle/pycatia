@@ -1,13 +1,13 @@
 """
 
-    Example - Selection - 002
+Example - Selection - 002
 
-    Description:
-        Prompt the user to select 2 vertexes and create line in selected geometrical set
+Description:
+    Prompt the user to select 2 vertexes and create line in selected geometrical set
 
-    Requirements:
-        - CATIA must be running with part document open and active.
-        - Part document must contain 2 vertex (points) and a geometrical set.
+Requirements:
+    - CATIA must be running with part document open and active.
+    - Part document must contain 2 vertex (points) and a geometrical set.
 
 """
 
@@ -18,11 +18,11 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../../pycatia'))
+sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
-from pycatia.mec_mod_interfaces.part_document import PartDocument
 from pycatia import catia
+from pycatia.mec_mod_interfaces.part_document import PartDocument
 
 application = catia()
 # if the active document is a CATPart this will return a PartDocument

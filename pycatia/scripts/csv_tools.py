@@ -3,8 +3,7 @@
 import csv
 import os
 import time
-
-from typing import Generator
+from collections.abc import Generator
 
 from pycatia.mec_mod_interfaces.part import Part
 

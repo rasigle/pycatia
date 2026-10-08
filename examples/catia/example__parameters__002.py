@@ -1,12 +1,12 @@
 """
 
-    Example - Parameters - 002
+Example - Parameters - 002
 
-    Description:
-        Change the Length value of parameter named Thickness.
+Description:
+    Change the Length value of parameter named Thickness.
 
-    Requirements:
-        - A CATPart open that contains a length parameter named Thickness.
+Requirements:
+    - A CATPart open that contains a length parameter named Thickness.
 
 """
 

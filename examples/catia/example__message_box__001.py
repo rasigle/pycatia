@@ -1,13 +1,13 @@
 """
 
-    Example - Message Box - 001
+Example - Message Box - 001
 
-    Description:
-        Creating a message box.
-        This creates a message box with the buttons abort, retry ignore and displays the Warning Query icon.
+Description:
+    Creating a message box.
+    This creates a message box with the buttons abort, retry ignore and displays the Warning Query icon.
 
-    Requirements:
-        - CATIA running.
+Requirements:
+    - CATIA running.
 
 """
 
@@ -24,5 +24,7 @@ from pycatia import catia
 
 application = catia()
 buttons = 2 + 32
-result = application.message_box("Hello World!?", buttons=buttons, title="Asking a question.")
+result = application.message_box(
+    "Hello World!?", buttons=buttons, title="Asking a question."
+)
 # result = 3 if the user presses Abort.

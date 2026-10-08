@@ -43,4 +43,4 @@ class TransformationShape(Shape):
         self.transformation_shape = com_object
 
     def __repr__(self):
-        return f'TransformationShape(name="{ self.name }")'
+        return f'TransformationShape(name="{self.name}")'

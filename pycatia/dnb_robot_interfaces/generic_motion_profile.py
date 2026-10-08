@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import MotionBasis
 from pycatia.dnb_robot_interfaces.rob_generic_controller import RobGenericController
+from pycatia.enumeration.enums import MotionBasis
 from pycatia.system_interfaces.any_object import AnyObject
 
 

@@ -9,11 +9,11 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
+from pycatia.drafting_2dL_interfaces.layout_2d_sheet import Layout2DSheet
+from pycatia.drafting_2dL_interfaces.layout_2d_sheets import Layout2DSheets
 from pycatia.enumeration.enums import CatVisuIn3DMode
 from pycatia.knowledge_interfaces.parameters import Parameters
 from pycatia.knowledge_interfaces.relations import Relations
-from pycatia.drafting_2dL_interfaces.layout_2d_sheet import Layout2DSheet
-from pycatia.drafting_2dL_interfaces.layout_2d_sheets import Layout2DSheets
 from pycatia.system_interfaces.any_object import AnyObject
 
 

@@ -1,5 +1,5 @@
 #! /usr/bin/python3.9
-from typing import Iterator
+from collections.abc import Iterator
 from pathlib import Path
 
 from pywintypes import com_error
@@ -7,7 +7,7 @@ from pywintypes import com_error
 from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.in_interfaces.document import Document
 from pycatia.system_interfaces.collection import Collection
-from pycatia.types.document import document_types, AnyDocument
+from pycatia.types.document import AnyDocument, document_types
 from pycatia.types.general import CATVariant, list_str
 
 

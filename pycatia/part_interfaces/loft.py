@@ -67,4 +67,4 @@ class Loft(Shape):
         return HybridShape(self.loft.HybridShape)
 
     def __repr__(self):
-        return f'Loft(name="{ self.name }")'
+        return f'Loft(name="{self.name}")'

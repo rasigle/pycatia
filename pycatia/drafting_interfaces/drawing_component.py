@@ -15,8 +15,8 @@ from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.types.general import CATVariant
 
 if TYPE_CHECKING:
-    from pycatia.drafting_interfaces.drawing_view import DrawingView
     from pycatia.drafting_interfaces.drawing_sheet import DrawingSheet
+    from pycatia.drafting_interfaces.drawing_view import DrawingView
 
 
 class DrawingComponent(AnyObject):

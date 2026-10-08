@@ -1,13 +1,13 @@
 """
 
-    Example - Product - 006
+Example - Product - 006
 
-    Description:
-        Get the Inertia of a product using product.get_technical object and print it's mass.
-        See Inertia class for full list of properties and methods available.
+Description:
+    Get the Inertia of a product using product.get_technical object and print it's mass.
+    See Inertia class for full list of properties and methods available.
 
-    Requirements:
-        - An open part document.
+Requirements:
+    - An open part document.
 
 """
 

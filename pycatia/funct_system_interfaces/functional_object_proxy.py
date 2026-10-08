@@ -10,6 +10,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 """
 
 from typing import TYPE_CHECKING
+
 from pycatia.funct_system_interfaces.functional_object import FunctionalObject
 
 if TYPE_CHECKING:

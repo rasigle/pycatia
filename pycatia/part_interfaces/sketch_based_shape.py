@@ -10,7 +10,6 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 """
 
 from pycatia.in_interfaces.reference import Reference
-
 from pycatia.mec_mod_interfaces.shape import Shape
 from pycatia.sketcher_interfaces.sketch import Sketch
 

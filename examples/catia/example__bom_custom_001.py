@@ -1,12 +1,12 @@
 """
 
-    Example - BOM CUSTOM - 001
+Example - BOM CUSTOM - 001
 
-    Description:
-        Create a custom formatted html of the product tree.
+Description:
+    Create a custom formatted html of the product tree.
 
-    Requirements:
-        - An open product document with parts inside.
+Requirements:
+    - An open product document with parts inside.
 
 """
 
@@ -22,8 +22,7 @@ sys.path.insert(0, os.path.abspath("../../pycatia"))
 from collections import Counter
 from datetime import datetime
 
-from pycatia import catia
-from pycatia import CatWorkModeType
+from pycatia import CatWorkModeType, catia
 from pycatia.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()

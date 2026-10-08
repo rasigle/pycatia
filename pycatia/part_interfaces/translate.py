@@ -74,4 +74,4 @@ class Translate(Shape):
         return HybridShape(self.translate.HybridShape)
 
     def __repr__(self):
-        return f'Translate(name="{ self.name }")'
+        return f'Translate(name="{self.name}")'

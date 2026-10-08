@@ -9,10 +9,10 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import CatSheetProjectionMethod, CatVisuIn3DMode
 from pycatia.drafting_2dL_interfaces.layout_2d_views import Layout2DViews
 from pycatia.drafting_interfaces.drawing_page_setup import DrawingPageSetup
 from pycatia.drafting_interfaces.print_area import PrintArea
+from pycatia.enumeration.enums import CatSheetProjectionMethod, CatVisuIn3DMode
 from pycatia.system_interfaces.any_object import AnyObject
 
 

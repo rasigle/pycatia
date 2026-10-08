@@ -11,6 +11,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 from pathlib import Path
 
+from pycatia.cat_tps_interfaces.annotation_sets import AnnotationSets
 from pycatia.cat_tps_interfaces.user_surfaces import UserSurfaces
 from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.hybrid_shape_interfaces.hybrid_shape_factory import HybridShapeFactory
@@ -27,9 +28,8 @@ from pycatia.mec_mod_interfaces.hybrid_bodies import HybridBodies
 from pycatia.mec_mod_interfaces.ordered_geometrical_sets import OrderedGeometricalSets
 from pycatia.mec_mod_interfaces.origin_elements import OriginElements
 from pycatia.part_interfaces.shape_factory import ShapeFactory
-from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.product_structure_interfaces.analyze import Analyze
-from pycatia.cat_tps_interfaces.annotation_sets import AnnotationSets
+from pycatia.system_interfaces.any_object import AnyObject
 
 
 class Part(AnyObject):

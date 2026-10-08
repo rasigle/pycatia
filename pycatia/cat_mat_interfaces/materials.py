@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.system_interfaces.collection import Collection
 from pycatia.cat_mat_interfaces.material import Material
+from pycatia.system_interfaces.collection import Collection
 from pycatia.types.general import CATVariant
 
 

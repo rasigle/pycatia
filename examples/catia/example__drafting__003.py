@@ -1,12 +1,12 @@
 """
 
-    Example - Drafting - 003
+Example - Drafting - 003
 
-    Description:
-        Drafting: Create a dimension in the active view.
+Description:
+    Drafting: Create a dimension in the active view.
 
-    Requirements:
-        - An open CATDrawing with a view active.
+Requirements:
+    - An open CATDrawing with a view active.
 
 """
 
@@ -19,8 +19,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
-from pycatia import catia
-from pycatia import CatDimType
+from pycatia import CatDimType, catia
 from pycatia.drafting_interfaces.drawing_document import DrawingDocument
 
 application = catia()
@@ -40,4 +39,6 @@ catDimDistance = CatDimType.catDimDistance
 point_elements = (point_1, point_2)
 selection_points = (0, 0, 0, 0)
 
-dimension = active_view.dimensions.add2(catDimDistance, point_elements, selection_points, line_1, 0)
+dimension = active_view.dimensions.add2(
+    catDimDistance, point_elements, selection_points, line_1, 0
+)

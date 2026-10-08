@@ -415,4 +415,4 @@ class RealParam(Parameter):
         return self.real_param.SuppressEnumerateValues()
 
     def __repr__(self):
-        return f'RealParam(name="{ self.name }")'
+        return f'RealParam(name="{self.name}")'

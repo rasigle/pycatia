@@ -99,4 +99,4 @@ class Scaling(DressUpShape):
         self.scaling.ScalingReference = value.com_object
 
     def __repr__(self):
-        return f'Scaling(name="{ self.name }")'
+        return f'Scaling(name="{self.name}")'

@@ -137,4 +137,4 @@ class FreeParameter(AnyObject):
         self.free_parameter.SupRange = value
 
     def __repr__(self):
-        return f'FreeParameter(name="{ self.name }")'
+        return f'FreeParameter(name="{self.name}")'

@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.drafting_interfaces.drawing_sheet import DrawingSheet
 from pycatia.drafting_interfaces.drawing_document import DrawingDocument
+from pycatia.drafting_interfaces.drawing_sheet import DrawingSheet
 
 
 class DrawingRoot(DrawingDocument):

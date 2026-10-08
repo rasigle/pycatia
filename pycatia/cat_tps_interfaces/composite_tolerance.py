@@ -73,4 +73,4 @@ class CompositeTolerance(AnyObject):
         return self.composite_tolerance.Value
 
     def __repr__(self):
-        return f'CompositeTolerance(name="{ self.name }")'
+        return f'CompositeTolerance(name="{self.name}")'

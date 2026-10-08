@@ -51,4 +51,4 @@ class DimensionPattern(AnyObject):
         return self.dimension_pattern.InstanceCount
 
     def __repr__(self):
-        return f'DimensionPattern(name="{ self.name }")'
+        return f'DimensionPattern(name="{self.name}")'

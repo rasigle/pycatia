@@ -79,4 +79,4 @@ class AxisToAxis(Shape):
         return HybridShape(self.axis_to_axis.HybridShape)
 
     def __repr__(self):
-        return f'AxisToAxis(name="{ self.name }")'
+        return f'AxisToAxis(name="{self.name}")'

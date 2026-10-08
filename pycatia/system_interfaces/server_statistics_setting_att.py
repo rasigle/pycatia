@@ -46,4 +46,4 @@ class ServerStatisticsSettingAtt(GeneralStatisticsSettingAtt):
         self.server_statistics_setting_att = com_object
 
     def __repr__(self):
-        return f'ServerStatisticsSettingAtt(name="{ self.name }")'
+        return f'ServerStatisticsSettingAtt(name="{self.name}")'

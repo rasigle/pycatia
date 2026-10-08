@@ -36,4 +36,4 @@ class StrObjectExt(AnyObject):
         self.str_object_ext = com_object
 
     def __repr__(self):
-        return f'StrObjectExt(name="{ self.name }")'
+        return f'StrObjectExt(name="{self.name}")'

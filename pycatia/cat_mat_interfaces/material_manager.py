@@ -9,10 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Union
-
-from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.cat_mat_interfaces.material import Material
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.mec_mod_interfaces.body import Body
 from pycatia.mec_mod_interfaces.hybrid_body import HybridBody
 from pycatia.mec_mod_interfaces.part import Part
@@ -45,7 +43,7 @@ class MaterialManager(AnyObject):
         self.material_manager = com_object
 
     def apply_material_on_body(
-        self, i_body: Body, i_material: Union[Material, None], i_link_mode: int = 0
+        self, i_body: Body, i_material: Material | None, i_link_mode: int = 0
     ) -> None:
         """
         .. note::
@@ -73,7 +71,7 @@ class MaterialManager(AnyObject):
     def apply_material_on_hybrid_body(
         self,
         i_hybrid_body: HybridBody,
-        i_material: Union[Material, None],
+        i_material: Material | None,
         i_link_mode: int = 0,
     ) -> None:
         """
@@ -100,7 +98,7 @@ class MaterialManager(AnyObject):
         )
 
     def apply_material_on_part(
-        self, i_part: Part, i_material: Union[Material, None], i_link_mode: int = 0
+        self, i_part: Part, i_material: Material | None, i_link_mode: int = 0
     ) -> None:
         """
         .. note::
@@ -128,7 +126,7 @@ class MaterialManager(AnyObject):
     def apply_material_on_product(
         self,
         i_product: Product,
-        i_material: Union[Material, None],
+        i_material: Material | None,
         i_link_mode: int = 0,
     ) -> None:
         """
@@ -157,7 +155,7 @@ class MaterialManager(AnyObject):
     def apply_material_on_user_material(
         self,
         i_user_material: AnyObject,
-        i_material: Union[Material, None],
+        i_material: Material | None,
         i_link_mode: int = 0,
     ) -> None:
         """

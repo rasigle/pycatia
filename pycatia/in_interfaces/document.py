@@ -9,9 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import TYPE_CHECKING
-
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.exception_handling.exceptions import CATIAApplicationException
@@ -880,11 +879,11 @@ class Document(AnyObject):
 
         gsd_items = ["Point", "Line"]
 
-        query_string = str()
+        query_string = ""
         # build query string
 
         for counter, item in enumerate(selection_objects):
-            boolean = str()
+            boolean = ""
             if counter > 0 and not counter == len(selection_objects):
                 boolean = " + "
             if item in gsd_items:

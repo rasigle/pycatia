@@ -4,59 +4,60 @@
 
 """
 
-    Description
-    ===========
-    Reads the contents of a yaml file from which parameters and parameter sets
-    are created.
+Description
+===========
+Reads the contents of a yaml file from which parameters and parameter sets
+are created.
 
-    Not all parameter types are supported. Adding support for additional
-    parameter types is fairly straight forward. See the function
-    create_parameters().
+Not all parameter types are supported. Adding support for additional
+parameter types is fairly straight forward. See the function
+create_parameters().
 
-    Requirements
-    ============
-    python >= 3.9
-    pycatia
-    pyyaml (pip install pyyaml)
-    CATIA V5 running
-    A valid YAML file for this script.
+Requirements
+============
+python >= 3.9
+pycatia
+pyyaml (pip install pyyaml)
+CATIA V5 running
+A valid YAML file for this script.
 
-    YAML Structure
-    ==============
+YAML Structure
+==============
 
-    Your YAML file must be constructed thus:
+Your YAML file must be constructed thus:
 
-    parameters:
-      MaxDepth: # parameter name
-        type: Length # parameter type
-        value: 5 # value
-      MinDepth: # parameter name
-        type: Length # parameter type
-        value: 3 # value
-    sets:
-      HorizontalStiffeners: # set name
-        sets: # append new sets to parent HorizontalStiffeners
-          Other: # set name
-            parameters:
-              Temp:
-                type: Real
-                value: 55
+parameters:
+  MaxDepth: # parameter name
+    type: Length # parameter type
+    value: 5 # value
+  MinDepth: # parameter name
+    type: Length # parameter type
+    value: 3 # value
+sets:
+  HorizontalStiffeners: # set name
+    sets: # append new sets to parent HorizontalStiffeners
+      Other: # set name
         parameters:
-          UpperThickness:
-            type: Length
-            value: 5
-          UpperHeight:
-            type: Length
-            value: 5
+          Temp:
+            type: Real
+            value: 55
+    parameters:
+      UpperThickness:
+        type: Length
+        value: 5
+      UpperHeight:
+        type: Length
+        value: 5
 
-    Documentation
-    =============
-    https://pycatia.readthedocs.io
+Documentation
+=============
+https://pycatia.readthedocs.io
 
-    More examples and user scripts can be found at:
-    https://github.com/evereux/pycatia/tree/master/examples
-    https://github.com/evereux/pycatia/tree/master/user_scripts
+More examples and user scripts can be found at:
+https://github.com/evereux/pycatia/tree/master/examples
+https://github.com/evereux/pycatia/tree/master/user_scripts
 """
+
 ##########################################################
 # insert syspath to project folder so examples can be run.
 # for development purposes.
@@ -76,11 +77,16 @@ from pycatia.knowledge_interfaces.parameters import Parameters
 from pycatia.mec_mod_interfaces.part_document import PartDocument
 from pycatia.product_structure_interfaces.product_document import ProductDocument
 
-f = Path(os.getcwd(), 'user_scripts', 'create_parameters_from_yaml_support', 'parameters.yaml')
+f = Path(
+    os.getcwd(),
+    "user_scripts",
+    "create_parameters_from_yaml_support",
+    "parameters.yaml",
+)
 
 application = catia()
 documents = application.documents
-part_document: PartDocument = documents.add('Part')
+part_document: PartDocument = documents.add("Part")
 active_document = application.active_document
 
 product_document = ProductDocument(active_document.com_object)
@@ -109,16 +115,16 @@ def create_parameters(parameters: Parameters, items: dict):
     """
     for parameter in items:
         name = parameter
-        type_ = items[name]['type']
-        value = items[name]['value']
-        dimension_parameter_types = ['Length', 'Angle', 'Mass']
+        type_ = items[name]["type"]
+        value = items[name]["value"]
+        dimension_parameter_types = ["Length", "Angle", "Mass"]
         if type_ in dimension_parameter_types:
             parameters.create_dimension(name, type_, value)
-        if type_ == 'Real':
+        if type_ == "Real":
             parameters.create_real(name, value)
-        if type_ == 'Bool':
+        if type_ == "Bool":
             parameters.create_boolean(name, value)
-        if type_ == 'String':
+        if type_ == "String":
             parameters.create_string(name, value)
 
 
@@ -133,7 +139,7 @@ def do_the_loop(d: dict, parameter_parent: ParameterSet):
         if i == "parameters":
             parameters_ = parameter_parent.direct_parameters
             create_parameters(parameters_, d[i])
-        if i == 'sets':
+        if i == "sets":
             set_names = [k for k in d[i]]
             # create the set
             for name in set_names:

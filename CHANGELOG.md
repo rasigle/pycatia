@@ -529,7 +529,7 @@ from pathlib import Path
 from pycatia import catia
 from pycatia.mec_mod_interfaces.part_document import PartDocument
 
-source_document = Path(r'tests/cat_files/part_measurable.CATPart')
+source_document = Path(r"tests/cat_files/part_measurable.CATPart")
 
 caa = catia()
 documents = caa.documents

@@ -202,4 +202,4 @@ class HybridShapeExtremumPolar(HybridShape):
         self.hybrid_shape_extremum_polar.Support = reference_support.com_object
 
     def __repr__(self):
-        return f'HybridShapeExtremumPolar(name="{ self.name }")'
+        return f'HybridShapeExtremumPolar(name="{self.name}")'

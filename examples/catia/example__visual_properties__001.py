@@ -1,12 +1,12 @@
 """
 
-    Example - Visual Properties - 001
+Example - Visual Properties - 001
 
-    Description:
-        Searching and changing visual properties. Find all Red points and make them Pink.
+Description:
+    Searching and changing visual properties. Find all Red points and make them Pink.
 
-    Requirements:
-        - CATIA running with an open part document containing some points.
+Requirements:
+    - CATIA running with an open part document containing some points.
 
 """
 

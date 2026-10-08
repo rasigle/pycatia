@@ -9,7 +9,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 from pycatia.enumeration.enums import CatClashImportType
 from pycatia.space_analyses_interfaces.clash_result import ClashResult

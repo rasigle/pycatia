@@ -37,4 +37,4 @@ class Silhouette(AnyObject):
         self.silhouette = com_object
 
     def __repr__(self):
-        return f'Silhouette(name="{ self.name }")'
+        return f'Silhouette(name="{self.name}")'

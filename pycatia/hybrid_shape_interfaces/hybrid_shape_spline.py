@@ -9,15 +9,13 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Union
-
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.hybrid_shape_interfaces.hybrid_shape_direction import HybridShapeDirection
 from pycatia.in_interfaces.reference import Reference
 from pycatia.knowledge_interfaces.length import Length
 from pycatia.knowledge_interfaces.real_param import RealParam
 from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
-from pycatia.scripts.vba import vba_nothing, VBANothing
+from pycatia.scripts.vba import VBANothing, vba_nothing
 
 
 class HybridShapeSpline(HybridShape):
@@ -94,10 +92,10 @@ class HybridShapeSpline(HybridShape):
     def add_point_with_constraint_explicit(
         self,
         ip_ia_point: Reference,
-        ip_ia_dir_tangency: Union[HybridShapeDirection, VBANothing],
+        ip_ia_dir_tangency: HybridShapeDirection | VBANothing,
         i_tangency_norm: float,
         i_inverse_tangency: int,
-        ip_ia_dir_curvature: Union[HybridShapeDirection, VBANothing],
+        ip_ia_dir_curvature: HybridShapeDirection | VBANothing,
         i_curvature_radius: float,
     ) -> None:
         """

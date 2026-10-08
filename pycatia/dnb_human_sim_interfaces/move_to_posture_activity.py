@@ -9,13 +9,13 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import (
-    HTSMotionBasis,
-    HTSManikinReferential,
-    HTSEndEffector,
-)
 from pycatia.dnb_human_modeling_interfaces.swkik_constraint import SWKIKConstraint
 from pycatia.dnb_human_sim_interfaces.worker_activity import WorkerActivity
+from pycatia.enumeration.enums import (
+    HTSEndEffector,
+    HTSManikinReferential,
+    HTSMotionBasis,
+)
 from pycatia.product_structure_interfaces.product import Product
 
 

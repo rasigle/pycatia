@@ -132,4 +132,4 @@ class FaceFillet(Fillet):
         self.face_fillet.SecondFace = value.com_object
 
     def __repr__(self):
-        return f'FaceFillet(name="{ self.name }")'
+        return f'FaceFillet(name="{self.name}")'

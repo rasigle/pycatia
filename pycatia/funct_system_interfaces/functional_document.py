@@ -9,9 +9,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.in_interfaces.document import Document
 from pycatia.funct_system_interfaces.funct_facet_managers import FunctFacetManagers
 from pycatia.funct_system_interfaces.functional_description import FunctionalDescription
+from pycatia.in_interfaces.document import Document
 
 
 class FunctionalDocument(Document):

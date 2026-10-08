@@ -12,8 +12,6 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 import inspect
 from typing import TYPE_CHECKING
 
-from pycatia.cat_tps_interfaces.numerical_display_format import NumericalDisplayFormat
-from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.cat_tps_interfaces.associated_ref_frame import AssociatedRefFrame
 from pycatia.cat_tps_interfaces.composite_tolerance import CompositeTolerance
 from pycatia.cat_tps_interfaces.controlled_radius import ControlledRadius
@@ -28,6 +26,7 @@ from pycatia.cat_tps_interfaces.flag_note import FlagNote
 from pycatia.cat_tps_interfaces.free_state import FreeState
 from pycatia.cat_tps_interfaces.material_condition import MaterialCondition
 from pycatia.cat_tps_interfaces.noa import Noa
+from pycatia.cat_tps_interfaces.numerical_display_format import NumericalDisplayFormat
 from pycatia.cat_tps_interfaces.particular_tol_elem import ParticularTolElem
 from pycatia.cat_tps_interfaces.projected_tolerance_zone import ProjectedToleranceZone
 from pycatia.cat_tps_interfaces.reference_frame import ReferenceFrame
@@ -42,6 +41,7 @@ from pycatia.cat_tps_interfaces.tolerance_unit_basis_value import (
     ToleranceUnitBasisValue,
 )
 from pycatia.cat_tps_interfaces.tolerance_zone import ToleranceZone
+from pycatia.system_interfaces.any_object import AnyObject
 
 if TYPE_CHECKING:
     from pycatia.cat_tps_interfaces.tps_view import TPSView

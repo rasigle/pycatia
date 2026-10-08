@@ -53,4 +53,4 @@ class ConstraintSatisfaction(SetOfEquation):
         return self.constraint_satisfaction.Solve()
 
     def __repr__(self):
-        return f'ConstraintSatisfaction(name="{ self.name }")'
+        return f'ConstraintSatisfaction(name="{self.name}")'

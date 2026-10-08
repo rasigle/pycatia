@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import Distribution_Type
 from pycatia.abq_automation_interfaces.abq_job import ABQJob
+from pycatia.enumeration.enums import Distribution_Type
 from pycatia.in_interfaces.reference import Reference
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.product_structure_interfaces.publication import Publication

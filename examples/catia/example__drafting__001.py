@@ -1,12 +1,12 @@
 """
-    
-    Example - Drafting - 001
 
-    Description:
-        Drafting: Create a border template in the background view of the currently opened A0 landscape CATDrawing.
+Example - Drafting - 001
 
-    Requirements:
-        - An open empty drafting document (landscape, A0).
+Description:
+    Drafting: Create a border template in the background view of the currently opened A0 landscape CATDrawing.
+
+Requirements:
+    - An open empty drafting document (landscape, A0).
 
 """
 
@@ -19,10 +19,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
-from pycatia import catia
-from pycatia import CatPaperOrientation
-from pycatia import CatPaperSize
-from pycatia import CatTextAnchorPosition
+from pycatia import CatPaperOrientation, CatPaperSize, CatTextAnchorPosition, catia
 from pycatia.drafting_interfaces.drawing_document import DrawingDocument
 from pycatia.drafting_interfaces.drawing_root import DrawingRoot
 from pycatia.drafting_interfaces.drawing_view import DrawingView

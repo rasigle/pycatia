@@ -77,4 +77,4 @@ class PcsStatisticsSettingAtt(GeneralStatisticsSettingAtt):
         self.pcs_statistics_setting_att.MemUse = value
 
     def __repr__(self):
-        return f'PcsStatisticsSettingAtt(name="{ self.name }")'
+        return f'PcsStatisticsSettingAtt(name="{self.name}")'

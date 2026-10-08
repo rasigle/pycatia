@@ -4,35 +4,35 @@
 
 
 """
-    Description
-    ===========
-    Creates a simple Wing Surface From NACA profile defined in a dat file.
+Description
+===========
+Creates a simple Wing Surface From NACA profile defined in a dat file.
 
 
-    Requirements
-    ============
-    python >= 3.9
-    pycatia >= 0.6.2
-    CATIA V5 running with no existing documents open.
+Requirements
+============
+python >= 3.9
+pycatia >= 0.6.2
+CATIA V5 running with no existing documents open.
 
 
-    Methods
-    =======
-    The following is a brief description of some of the methods used in this script.
-    Points on a plane.
-    Splines
-    Translations (point to point, scaling and rotate)
-    Parameters and Relations: These are linked to geometry
-    Changes the colour of the final surface.
-    Publications
+Methods
+=======
+The following is a brief description of some of the methods used in this script.
+Points on a plane.
+Splines
+Translations (point to point, scaling and rotate)
+Parameters and Relations: These are linked to geometry
+Changes the colour of the final surface.
+Publications
 
-    Documentation
-    =============
-    https://pycatia.readthedocs.io
+Documentation
+=============
+https://pycatia.readthedocs.io
 
-    More examples and user scripts can be found at:
-    https://github.com/evereux/pycatia/tree/master/examples
-    https://github.com/evereux/pycatia/tree/master/user_scripts
+More examples and user scripts can be found at:
+https://github.com/evereux/pycatia/tree/master/examples
+https://github.com/evereux/pycatia/tree/master/user_scripts
 """
 
 ##########################################################
@@ -68,10 +68,13 @@ from pycatia.scripts.vba import vba_nothing
 # coordinates
 
 part_number = "Wing_Geometry"
-naca_dat_file = Path(os.getcwd(), "user_scripts",
-                     "wing_surface_from_naca_profile_support/sc20610.dat")
+naca_dat_file = Path(
+    os.getcwd(), "user_scripts", "wing_surface_from_naca_profile_support/sc20610.dat"
+)
 
-upper_coordinates, lower_coordinates = read_dat_file(naca_dat_file, constants.CHORD_LENGTH_ROOT)
+upper_coordinates, lower_coordinates = read_dat_file(
+    naca_dat_file, constants.CHORD_LENGTH_ROOT
+)
 
 application = catia()
 documents = application.documents
@@ -81,8 +84,12 @@ documents = application.documents
 # script.
 if documents.count > 0:
     print([document for document in documents])
-    print("There are already documents open." "Please close all documents and re-run the script.")
-    print("If you continue to see this error restart CATIA and close all open documents.")
+    print(
+        "There are already documents open.Please close all documents and re-run the script."
+    )
+    print(
+        "If you continue to see this error restart CATIA and close all open documents."
+    )
     exit()
 
 part_document: PartDocument = documents.add("Part")
@@ -148,22 +155,30 @@ points_hss.extend([p for p in points_hss_lower])
 
 for hs in points_hss:
     ref_point = part.create_reference_from_object(hs)
-    hs_spline.add_point_with_constraint_explicit(ref_point, vba_nothing, -1, 1, vba_nothing, 0)
+    hs_spline.add_point_with_constraint_explicit(
+        ref_point, vba_nothing, -1, 1, vba_nothing, 0
+    )
 hs_spline.name = "Spline.WingRoot"
 gs_splines.append_hybrid_shape(hs_spline)
 
 # add new plane to define wing surface limit
-hs_plane_offset = hybrid_shape_factory.add_new_plane_offset(ref_plane_xy, constants.OFFSET_WING_TIP, False)
+hs_plane_offset = hybrid_shape_factory.add_new_plane_offset(
+    ref_plane_xy, constants.OFFSET_WING_TIP, False
+)
 hs_plane_offset.name = "Plane.WingTip"
 # link to OFFSET_WING_TIP parameter
 length_offset = hs_plane_offset.offset
-relations.create_formula("Formula.OFFSET_WING_TIP", "", length_offset, "`OFFSET_WING_TIP`")
+relations.create_formula(
+    "Formula.OFFSET_WING_TIP", "", length_offset, "`OFFSET_WING_TIP`"
+)
 gs_planes.append_hybrid_shape(hs_plane_offset)
 ref_hs_plane_offset = part.create_reference_from_object(hs_plane_offset)
 
 # scale the spline which we'll copy to the offset plane, we need to do this in two directions.
 ref_hs_spline = part.create_reference_from_object(hs_spline)
-hs_spline_scale_yz = hybrid_shape_factory.add_new_hybrid_scaling(ref_hs_spline, ref_plane_yz, constants.RATIO)
+hs_spline_scale_yz = hybrid_shape_factory.add_new_hybrid_scaling(
+    ref_hs_spline, ref_plane_yz, constants.RATIO
+)
 ratio_value = hs_spline_scale_yz.ratio
 relations.create_formula("Formula.RATIO.1", "", ratio_value, "`RATIO`")
 # link ratio value to parameter
@@ -171,7 +186,9 @@ gs_splines.append_hybrid_shape(hs_spline_scale_yz)
 ref_hs_spline_yz = part.create_reference_from_object(hs_spline_scale_yz)
 
 # second scaling direction
-hs_spline_scale_final = hybrid_shape_factory.add_new_hybrid_scaling(ref_hs_spline_yz, ref_plane_zx, constants.RATIO)
+hs_spline_scale_final = hybrid_shape_factory.add_new_hybrid_scaling(
+    ref_hs_spline_yz, ref_plane_zx, constants.RATIO
+)
 # link ratio value to parameter
 ratio_value = hs_spline_scale_final.ratio
 relations.create_formula("Formula.RATIO.1", "", ratio_value, "`RATIO`")
@@ -180,14 +197,20 @@ gs_splines.append_hybrid_shape(hs_spline_scale_final)
 
 # create the translation geometry at the wing tip
 point_wingtip_origin = hybrid_shape_factory.add_new_point_on_plane(
-    ref_hs_plane_offset, constants.WING_TIP_TRANSLATION_X, constants.WING_TIP_TRANSLATION_Y
+    ref_hs_plane_offset,
+    constants.WING_TIP_TRANSLATION_X,
+    constants.WING_TIP_TRANSLATION_Y,
 )
 gs_point_other.append_hybrid_shape(point_wingtip_origin)
 ref_point_wingtip_origin = part.create_reference_from_object(point_wingtip_origin)
 point_x = point_wingtip_origin.x_offset
-relations.create_formula("Formula.WING_TIP_TRANSLATION_X", "", point_x, "`WING_TIP_TRANSLATION_X`")
+relations.create_formula(
+    "Formula.WING_TIP_TRANSLATION_X", "", point_x, "`WING_TIP_TRANSLATION_X`"
+)
 point_y = point_wingtip_origin.y_offset
-relations.create_formula("Formula.WING_TIP_TRANSLATION_Y", "", point_y, "`WING_TIP_TRANSLATION_Y`")
+relations.create_formula(
+    "Formula.WING_TIP_TRANSLATION_Y", "", point_y, "`WING_TIP_TRANSLATION_Y`"
+)
 
 # create CHORD line of length CHORD_LENGTH_WING_TIP
 hs_direction = hybrid_shape_factory.add_new_direction(ref_plane_yz)
@@ -195,7 +218,9 @@ line_wingtip_chord = hybrid_shape_factory.add_new_line_pt_dir(
     ref_point_wingtip_origin, hs_direction, 0, constants.CHORD_LENGTH_WING_TIP, False
 )
 length_line = line_wingtip_chord.end_offset
-relations.create_formula("Formula.CHORD_LENGTH_WING_TIP", "", length_line, "`CHORD_LENGTH_WING_TIP`")
+relations.create_formula(
+    "Formula.CHORD_LENGTH_WING_TIP", "", length_line, "`CHORD_LENGTH_WING_TIP`"
+)
 
 ref_line_wingtip_chord = part.create_reference_from_object(line_wingtip_chord)
 gs_lines.append_hybrid_shape(line_wingtip_chord)
@@ -211,9 +236,13 @@ line_wingtip_chord_angle = hybrid_shape_factory.add_new_line_angle(
     False,
 )
 length_line = line_wingtip_chord_angle.end_offset
-relations.create_formula("Formula.CHORD_LENGTH_WING_TIP", "", length_line, "`CHORD_LENGTH_WING_TIP`")
+relations.create_formula(
+    "Formula.CHORD_LENGTH_WING_TIP", "", length_line, "`CHORD_LENGTH_WING_TIP`"
+)
 angle_line = line_wingtip_chord_angle.angle
-relations.create_formula("Formula.WING_TIP_RELATIVE_ANGLE", "", angle_line, "`WING_TIP_RELATIVE_ANGLE`")
+relations.create_formula(
+    "Formula.WING_TIP_RELATIVE_ANGLE", "", angle_line, "`WING_TIP_RELATIVE_ANGLE`"
+)
 
 gs_lines.append_hybrid_shape(line_wingtip_chord_angle)
 # create line normal to the wing tip plane to be used for rotation.
@@ -228,7 +257,9 @@ point_0_0 = gs_point_other.hybrid_shapes.item(1)
 ref_point_0_0 = part.create_reference_from_object(point_0_0)
 
 # create line from point at wing root and point at wing tip
-line_root_tip = hybrid_shape_factory.add_new_line_pt_pt(ref_point_0_0, ref_point_wingtip_origin)
+line_root_tip = hybrid_shape_factory.add_new_line_pt_pt(
+    ref_point_0_0, ref_point_wingtip_origin
+)
 gs_lines.append_hybrid_shape(line_root_tip)
 ref_line_root_tip = part.create_reference_from_object(line_root_tip)
 
@@ -252,7 +283,9 @@ spline_final.angle_value = constants.WING_TIP_RELATIVE_ANGLE
 spline_final.name = "Spline.WingTip"
 # link the angle rotation to parameter WING_TIP_RELATIVE_ANGLE.
 spline_angle = spline_final.angle
-relations.create_formula("Formala.WING_TIP_RELATIVE_ANGLE", "", spline_angle, "`WING_TIP_RELATIVE_ANGLE`")
+relations.create_formula(
+    "Formala.WING_TIP_RELATIVE_ANGLE", "", spline_angle, "`WING_TIP_RELATIVE_ANGLE`"
+)
 gs_splines.append_hybrid_shape(spline_final)
 ref_spline_final = part.create_reference_from_object(spline_final)
 
@@ -269,7 +302,9 @@ gs_master_geometry.append_hybrid_shape(hs_loft)
 hs_loft.name = surface_name
 
 # publish the surface.
-ref_hs_loft = product.create_reference_from_name(f"{product.part_number}/!{hs_loft.name}")
+ref_hs_loft = product.create_reference_from_name(
+    f"{product.part_number}/!{hs_loft.name}"
+)
 # ref_hs_loft = part.create_reference_from_object(hs_loft)
 publications = product.publications
 publication = publications.add(hs_loft.name)

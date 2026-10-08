@@ -9,13 +9,13 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import (
-    PressureOverclosure_Type,
-    MaxStiffness_Type,
-    Formulation_Type,
-    ContactStiffness_Type,
-)
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
+from pycatia.enumeration.enums import (
+    ContactStiffness_Type,
+    Formulation_Type,
+    MaxStiffness_Type,
+    PressureOverclosure_Type,
+)
 
 
 class ABQMechConnBehavior(ABQProperty):

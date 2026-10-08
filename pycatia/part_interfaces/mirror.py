@@ -93,4 +93,4 @@ class Mirror(TransformationShape):
         self.mirror.MirroringPlane = value.com_object
 
     def __repr__(self):
-        return f'Mirror(name="{ self.name }")'
+        return f'Mirror(name="{self.name}")'

@@ -1,12 +1,10 @@
 import logging
 import sys
 
-from typing import Optional
-
 # the following code was shamefully pilfered from Flask's logging.
 
 
-def has_level_handler(logger: Optional[logging.Logger]):
+def has_level_handler(logger: logging.Logger | None):
     """
 
     Check if there is a handler in the logging chain that will handle the

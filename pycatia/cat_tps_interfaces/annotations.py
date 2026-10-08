@@ -9,13 +9,12 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from typing import Iterator
-
-from pycatia.system_interfaces.collection import Collection
-from pycatia.cat_tps_interfaces.annotation import Annotation
-from pycatia.types.general import CATVariant
-
+from collections.abc import Iterator
 from typing import TYPE_CHECKING
+
+from pycatia.cat_tps_interfaces.annotation import Annotation
+from pycatia.system_interfaces.collection import Collection
+from pycatia.types.general import CATVariant
 
 if TYPE_CHECKING:
     from pycatia.cat_tps_interfaces.annotation_2 import Annotation2

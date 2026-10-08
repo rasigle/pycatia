@@ -1,11 +1,11 @@
 """
-    Example - Human Modelling 001
+Example - Human Modelling 001
 
-    Description:
-        Add a female manikin to the product in the sitting position.
+Description:
+    Add a female manikin to the product in the sitting position.
 
-    Requirements:
-        - An open product document.
+Requirements:
+    - An open product document.
 """
 
 ##########################################################
@@ -17,11 +17,9 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 
-from pycatia import catia
-from pycatia import SWKAnthroSex
-from pycatia import SWKPostureSpec
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pycatia import SWKAnthroSex, SWKPostureSpec, catia
 from pycatia.dnb_human_modeling_interfaces.swk_hmi_workbench import SWKHmiWorkbench
+from pycatia.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()
 # if the active document is a CATProduct this will return a ProductDocument

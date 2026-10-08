@@ -10,9 +10,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 """
 
 import inspect
-from typing import TYPE_CHECKING, Tuple
+from typing import TYPE_CHECKING
 
-from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.drafting_interfaces.drawing_arrows import DrawingArrows
 from pycatia.drafting_interfaces.drawing_components import DrawingComponents
 from pycatia.drafting_interfaces.drawing_coord_dims import DrawingCoordDims
@@ -29,6 +28,7 @@ from pycatia.drafting_interfaces.drawing_view_generative_links import (
     DrawingViewGenerativeLinks,
 )
 from pycatia.drafting_interfaces.drawing_weldings import DrawingWeldings
+from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.mec_mod_interfaces.geometric_elements import GeometricElements
 from pycatia.sketcher_interfaces.factory_2D import Factory2D
 from pycatia.system_interfaces.any_object import AnyObject
@@ -1095,7 +1095,7 @@ class DrawingView(AnyObject):
             i_view_name_prefix, i_view_name_ident, i_view_name_suffix
         )
 
-    def size(self) -> Tuple[float, float, float, float]:
+    def size(self) -> tuple[float, float, float, float]:
         """
         .. note::
             :class: toggle

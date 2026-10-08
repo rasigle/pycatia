@@ -10,9 +10,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 """
 
 from pycatia.enumeration.enums import (
-    CatTextFrameType,
-    CatTextFlipMode,
     CatTextAnchorPosition,
+    CatTextFlipMode,
+    CatTextFrameType,
 )
 from pycatia.system_interfaces.cat_base_dispatch import CATBaseDispatch
 

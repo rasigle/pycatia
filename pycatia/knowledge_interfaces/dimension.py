@@ -94,4 +94,4 @@ class Dimension(RealParam):
         return self.dimension.ValueAsString2(i_nb_decimals, i_show_trailing_zeros)
 
     def __repr__(self):
-        return f'Dimension(name="{ self.name }")'
+        return f'Dimension(name="{self.name}")'

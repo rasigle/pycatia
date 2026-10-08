@@ -37,4 +37,4 @@ class AnalysisMeshNode(AnyObject):
         self.analysis_mesh_node = com_object
 
     def __repr__(self):
-        return f'AnalysisMeshNode(name="{ self.name }")'
+        return f'AnalysisMeshNode(name="{self.name}")'

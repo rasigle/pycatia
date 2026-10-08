@@ -160,4 +160,4 @@ class HybridShapeAxisLine(HybridShape):
         self.hybrid_shape_axis_line.Element = value.com_object
 
     def __repr__(self):
-        return f'HybridShapeAxisLine(name="{ self.name }")'
+        return f'HybridShapeAxisLine(name="{self.name}")'

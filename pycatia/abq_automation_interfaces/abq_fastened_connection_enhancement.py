@@ -9,9 +9,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import PositionTolerance_Type
 from pycatia.abq_automation_interfaces.abq_interaction import ABQInteraction
 from pycatia.analysis_interfaces.analysis_entity import AnalysisEntity
+from pycatia.enumeration.enums import PositionTolerance_Type
 
 
 class ABQFastenedConnectionEnhancement(ABQInteraction):

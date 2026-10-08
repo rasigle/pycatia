@@ -1,11 +1,9 @@
 from pathlib import Path
 
+import pytest
 from win32com.universal import com_error
 
 from pycatia import catia
-
-import pytest
-
 from pycatia.types.document import AnyDocument
 
 application = catia()

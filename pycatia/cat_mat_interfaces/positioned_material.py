@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.cat_mat_interfaces.material import Material
+from pycatia.system_interfaces.any_object import AnyObject
 
 
 class PositionedMaterial(AnyObject):

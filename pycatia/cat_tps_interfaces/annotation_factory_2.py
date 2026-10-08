@@ -11,10 +11,10 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 import inspect
 
-from pycatia.mec_mod_interfaces.factory import Factory
 from pycatia.cat_tps_interfaces.annotation_2 import Annotation2
-from pycatia.drafting_interfaces.drawing_component import DrawingComponent
 from pycatia.cat_tps_interfaces.user_surface import UserSurface
+from pycatia.drafting_interfaces.drawing_component import DrawingComponent
+from pycatia.mec_mod_interfaces.factory import Factory
 from pycatia.types.general import CATVariant
 
 

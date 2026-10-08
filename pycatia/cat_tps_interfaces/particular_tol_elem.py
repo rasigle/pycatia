@@ -57,4 +57,4 @@ class ParticularTolElem(AnyObject):
         return self.particular_tol_elem.ParticularGeometry
 
     def __repr__(self):
-        return f'ParticularTolElem(name="{ self.name }")'
+        return f'ParticularTolElem(name="{self.name}")'

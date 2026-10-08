@@ -82,4 +82,4 @@ class Law(Relation):
         return self.law.RemoveFormalParameter(i_name)
 
     def __repr__(self):
-        return f'Law(name="{ self.name }")'
+        return f'Law(name="{self.name}")'

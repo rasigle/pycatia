@@ -12,9 +12,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 from typing import TYPE_CHECKING
 
 from pycatia.enumeration.enums import (
-    CatSectionType,
-    CatSectionBehavior,
     CatScriptLanguage,
+    CatSectionBehavior,
+    CatSectionType,
 )
 from pycatia.navigator_interfaces.annotated_views import AnnotatedViews
 from pycatia.navigator_interfaces.group import Group

@@ -1,25 +1,23 @@
 #! /usr/bin/python3.9
 # module initially auto generated using V5Automation.chm from CATIA R25
 import inspect
+from pathlib import Path
 
 from pywintypes import com_error
 
-from pathlib import Path
-
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.exception_handling.exceptions import CATIAApplicationException
-from pycatia.in_interfaces.documents import Documents
-from pycatia.in_interfaces.documents import get_document_object
+from pycatia.in_interfaces.documents import Documents, get_document_object
 from pycatia.in_interfaces.file_system import FileSystem
 from pycatia.in_interfaces.printer import Printer
 from pycatia.in_interfaces.printers import Printers
 from pycatia.in_interfaces.send_to_service import SendToService
+from pycatia.in_interfaces.setting_controllers import SettingControllers
 from pycatia.in_interfaces.system_configuration import SystemConfiguration
 from pycatia.in_interfaces.window import Window
 from pycatia.in_interfaces.windows import Windows
 from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.system_interfaces.system_service import SystemService
-from pycatia.in_interfaces.setting_controllers import SettingControllers
 from pycatia.types.document import AnyDocument
 
 

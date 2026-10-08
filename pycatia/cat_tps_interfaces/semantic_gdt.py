@@ -11,20 +11,18 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 import inspect
 
-from pycatia.cat_tps_interfaces.median_feature import MedianFeature
-from pycatia.cat_tps_interfaces.semantic_gdt_frame_extension import (
-    SemanticGDTFrameExtension,
-)
-from pycatia.cat_tps_interfaces.semantic_gdt_nx_display import SemanticGDTNxDisplay
-from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.cat_tps_interfaces.associated_ref_frame import AssociatedRefFrame
 from pycatia.cat_tps_interfaces.composite_tolerance import CompositeTolerance
 from pycatia.cat_tps_interfaces.free_state import FreeState
 from pycatia.cat_tps_interfaces.material_condition import MaterialCondition
+from pycatia.cat_tps_interfaces.median_feature import MedianFeature
 from pycatia.cat_tps_interfaces.particular_tol_elem import ParticularTolElem
 from pycatia.cat_tps_interfaces.projected_tolerance_zone import ProjectedToleranceZone
+from pycatia.cat_tps_interfaces.semantic_gdt_frame_extension import (
+    SemanticGDTFrameExtension,
+)
+from pycatia.cat_tps_interfaces.semantic_gdt_nx_display import SemanticGDTNxDisplay
 from pycatia.cat_tps_interfaces.shifted_profile_tolerance import ShiftedProfileTolerance
-from pycatia.cat_tps_interfaces.tps_parallel_on_screen import TPSParallelOnScreen
 from pycatia.cat_tps_interfaces.tangent_plane import TangentPlane
 from pycatia.cat_tps_interfaces.tolerance_per_unit_basis_restrictive_value import (
     TolerancePerUnitBasisRestrictiveValue,
@@ -33,6 +31,8 @@ from pycatia.cat_tps_interfaces.tolerance_unit_basis_value import (
     ToleranceUnitBasisValue,
 )
 from pycatia.cat_tps_interfaces.tolerance_zone import ToleranceZone
+from pycatia.cat_tps_interfaces.tps_parallel_on_screen import TPSParallelOnScreen
+from pycatia.system_interfaces.any_object import AnyObject
 
 
 class SemanticGDT(AnyObject):

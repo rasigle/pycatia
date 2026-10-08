@@ -9,7 +9,6 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import HTSSearchIntensity, HTSPickType
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.dnb_human_sim_interfaces.auto_walk_activity import AutoWalkActivity
 from pycatia.dnb_human_sim_interfaces.collision_free_walk import CollisionFreeWalk
@@ -22,6 +21,7 @@ from pycatia.dnb_human_sim_interfaces.move_to_posture_activity import (
 from pycatia.dnb_human_sim_interfaces.pick_activity import PickActivity
 from pycatia.dnb_human_sim_interfaces.place_activity import PlaceActivity
 from pycatia.dnb_human_sim_interfaces.walk_activity import WalkActivity
+from pycatia.enumeration.enums import HTSPickType, HTSSearchIntensity
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
 

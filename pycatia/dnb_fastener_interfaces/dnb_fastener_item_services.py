@@ -9,11 +9,11 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import DNBAssignStatus
 from pycatia.dmaps_interfaces.activity import Activity
 from pycatia.dmaps_interfaces.resource import Resource
 from pycatia.dnb_fastener_interfaces.fastener import Fastener
 from pycatia.dnb_fastener_interfaces.fastener_set import FastenerSet
+from pycatia.enumeration.enums import DNBAssignStatus
 from pycatia.system_interfaces.any_object import AnyObject
 
 

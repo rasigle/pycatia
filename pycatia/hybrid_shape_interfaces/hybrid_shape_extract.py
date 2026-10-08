@@ -355,4 +355,4 @@ class HybridShapeExtract(HybridShape):
         self.hybrid_shape_extract.Support = reference_support.com_object
 
     def __repr__(self):
-        return f'HybridShapeExtract(name="{ self.name }")'
+        return f'HybridShapeExtract(name="{self.name}")'

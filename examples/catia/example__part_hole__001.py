@@ -1,14 +1,14 @@
 """
 
-    Example - Part Hole 001
+Example - Part Hole 001
 
-    Description:
-        Find all the Hole(s) in the active CATPart document and report it's origin
-        and direction (relative to origin).
+Description:
+    Find all the Hole(s) in the active CATPart document and report it's origin
+    and direction (relative to origin).
 
-    Requirements:
-        - CATIA running.
-        - A CATPart open that contains a PartBody with Hole(s).
+Requirements:
+    - CATIA running.
+    - A CATPart open that contains a PartBody with Hole(s).
 
 """
 
@@ -46,14 +46,8 @@ for feature in range(selection.count):
     origin = hole.get_origin()
     direction = hole.get_direction()
     print(f"Name: {selection.item2(n).value.name}")
-    print("Hole origin: \n"
-          f"x = {origin[0]}\n"
-          f"y = {origin[1]}\n"
-          f"z = {origin[2]}")
-    print("Direction: \n"
-          f"x = {direction[0]}\n"
-          f"y = {direction[1]}\n"
-          f"z = {direction[2]}\n")
+    print(f"Hole origin: \nx = {origin[0]}\ny = {origin[1]}\nz = {origin[2]}")
+    print(f"Direction: \nx = {direction[0]}\ny = {direction[1]}\nz = {direction[2]}\n")
 
     points.append((origin, direction))
 
@@ -76,10 +70,7 @@ for p in points:
     hb_points.append_hybrid_shape(point_origin)
 
     point_direction = hsf.add_new_point_coord_with_reference(
-        direction[0],
-        direction[1],
-        direction[2],
-        point_origin_reference
+        direction[0], direction[1], direction[2], point_origin_reference
     )
 
     hb_points.append_hybrid_shape(point_direction)

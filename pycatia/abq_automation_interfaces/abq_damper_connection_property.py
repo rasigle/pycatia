@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import SpringDef_Type
 from pycatia.abq_automation_interfaces.abq_property import ABQProperty
+from pycatia.enumeration.enums import SpringDef_Type
 from pycatia.in_interfaces.reference import Reference
 from pycatia.mec_mod_interfaces.axis_system import AxisSystem
 

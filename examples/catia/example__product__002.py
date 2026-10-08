@@ -1,13 +1,13 @@
 """
 
-    Example - Product - 002
+Example - Product - 002
 
-    Description:
-        Move the first child in product.
+Description:
+    Move the first child in product.
 
-    Requirements:
-        - CATIA running.
-        - Tests already setup.
+Requirements:
+    - CATIA running.
+    - Tests already setup.
 
 """
 
@@ -21,14 +21,15 @@ sys.path.insert(0, os.path.abspath("../../pycatia"))
 ##########################################################
 from pathlib import Path
 
-from pycatia import catia
-from pycatia import CatWorkModeType
+from pycatia import CatWorkModeType, catia
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()
 documents = application.documents
-product_document: ProductDocument = documents.open(Path(os.getcwd(), r"tests\cat_files\product_top.CATProduct"))
+product_document: ProductDocument = documents.open(
+    Path(os.getcwd(), r"tests\cat_files\product_top.CATProduct")
+)
 product = product_document.product
 
 # Change the work mode to Design Mode.
@@ -37,7 +38,20 @@ product = product_document.product
 product.apply_work_mode(CatWorkModeType.DESIGN_MODE)
 
 # Transformation matrix (45 degrees-rotation around the x axis and a translation).
-transformation = (1.000, 0, 0, 0, 0.707, 0.707, 0, -0.707, 0.707, 10.000, 20.000, 30.000)
+transformation = (
+    1.000,
+    0,
+    0,
+    0,
+    0.707,
+    0.707,
+    0,
+    -0.707,
+    0.707,
+    10.000,
+    20.000,
+    30.000,
+)
 
 # activates default shape on all children.
 Product.activate_terminal_node(product.products)

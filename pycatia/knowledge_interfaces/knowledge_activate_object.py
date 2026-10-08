@@ -103,4 +103,4 @@ class KnowledgeActivateObject(KnowledgeObject):
         return self.knowledge_activate_object.Deactivate()
 
     def __repr__(self):
-        return f'KnowledgeActivateObject(name="{ self.name }")'
+        return f'KnowledgeActivateObject(name="{self.name}")'

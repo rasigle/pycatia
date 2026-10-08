@@ -9,7 +9,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pycatia.enumeration.enums import CatViewFilterCreationMode, CatViewBackgroundMode
+from pycatia.enumeration.enums import CatViewBackgroundMode, CatViewFilterCreationMode
 from pycatia.system_interfaces.setting_controller import SettingController
 
 

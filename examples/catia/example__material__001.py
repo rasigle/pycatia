@@ -1,15 +1,15 @@
 """
 
-    Example - Material - 001
+Example - Material - 001
 
-    Description:
-        Opens the material catalog and retrieves the first few materials.
-        Creates a new part and applies the material to the part, the main
-        body and a hybrid body.
-        Creates a new product and applies the material to it.
+Description:
+    Opens the material catalog and retrieves the first few materials.
+    Creates a new part and applies the material to the part, the main
+    body and a hybrid body.
+    Creates a new product and applies the material to it.
 
-    Requirements:
-        - CATIA running.
+Requirements:
+    - CATIA running.
 
 """
 
@@ -36,7 +36,8 @@ application = catia()
 # MATERIAL MANAGER ON MATERIAL CATALOGS
 ##########################################################
 material_document: MaterialDocument = application.documents.open(
-    Path(os.getcwd(), r"tests/cat_files/Catalog.CATMaterial"))
+    Path(os.getcwd(), r"tests/cat_files/Catalog.CATMaterial")
+)
 material_families = material_document.families
 materials = material_families.item(1).materials
 
@@ -53,8 +54,14 @@ for i in range(len(materials)):
     material = materials.item(index)
     material_list.append(material)
 
-print(f"Found {material_families.count} material families: " f"{', '.join([n.name for n in material_families_list])}.")
-print(f"Found {materials.count} materials in the first family: " f"{', '.join([n.name for n in material_list])}.")
+print(
+    f"Found {material_families.count} material families: "
+    f"{', '.join([n.name for n in material_families_list])}."
+)
+print(
+    f"Found {materials.count} materials in the first family: "
+    f"{', '.join([n.name for n in material_list])}."
+)
 
 ##########################################################
 # MATERIAL MANAGER ON PARTS
@@ -72,12 +79,20 @@ material_manager = MaterialManager(material_item.com_object)
 print("Removing all materials ...")
 material_manager.apply_material_on_body(i_body=main_body, i_material=None)
 material_manager.apply_material_on_part(i_part=part, i_material=None)
-material_manager.apply_material_on_hybrid_body(i_hybrid_body=hybrid_body, i_material=None)
+material_manager.apply_material_on_hybrid_body(
+    i_hybrid_body=hybrid_body, i_material=None
+)
 
 print("Adding materials with link ...")
-material_manager.apply_material_on_part(i_part=part, i_material=material_list[0], i_link_mode=True)
-material_manager.apply_material_on_body(i_body=main_body, i_material=material_list[1], i_link_mode=True)
-material_manager.apply_material_on_hybrid_body(i_hybrid_body=hybrid_body, i_material=material_list[2], i_link_mode=True)
+material_manager.apply_material_on_part(
+    i_part=part, i_material=material_list[0], i_link_mode=True
+)
+material_manager.apply_material_on_body(
+    i_body=main_body, i_material=material_list[1], i_link_mode=True
+)
+material_manager.apply_material_on_hybrid_body(
+    i_hybrid_body=hybrid_body, i_material=material_list[2], i_link_mode=True
+)
 
 material_1 = material_manager.get_material_on_part(i_part=part)
 print(
@@ -111,7 +126,9 @@ print("Removing material ...")
 material_manager.apply_material_on_product(i_product=product, i_material=None)
 
 print("Adding material with link ...")
-material_manager.apply_material_on_product(i_product=product, i_material=material_list[3], i_link_mode=True)
+material_manager.apply_material_on_product(
+    i_product=product, i_material=material_list[3], i_link_mode=True
+)
 
 material_4 = material_manager.get_material_on_product(i_product=product)
 print(

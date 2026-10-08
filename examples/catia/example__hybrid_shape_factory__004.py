@@ -1,18 +1,18 @@
 """
 
-    Example - Hybrid Shape Factory - 004
+Example - Hybrid Shape Factory - 004
 
-    Description:
-        Loops through the items in hybrid body "ConstructionGeometry" and determine the object type using selection.
-        Once determined create an object from it and find it's parent(s).
+Description:
+    Loops through the items in hybrid body "ConstructionGeometry" and determine the object type using selection.
+    Once determined create an object from it and find it's parent(s).
 
-    Requirements:
-        - An active part document open with a geometrical set called "ConstructionGeometry" containing points
-          generated using HybridShapePtCoord and line generated using HybridShapeLinePtPt:
+Requirements:
+    - An active part document open with a geometrical set called "ConstructionGeometry" containing points
+      generated using HybridShapePtCoord and line generated using HybridShapeLinePtPt:
 
-            Part
-            |- MasterGeometry
-                |- Points
+        Part
+        |- MasterGeometry
+            |- Points
 
 """
 
@@ -42,7 +42,6 @@ hb_construction_lines = hbs.item("ConstructionGeometry")
 gs_construction_geometry = hb_construction_lines.hybrid_shapes
 
 for i in range(len(gs_construction_geometry)):
-
     shape_index = i + 1
 
     hs = gs_construction_geometry.item(shape_index)
@@ -62,9 +61,13 @@ for i in range(len(gs_construction_geometry)):
         ref_start_point = hs_line_pt_pt.pt_origin
         ref_end_point = hs_line_pt_pt.pt_extremity
 
-        start_point = HybridShapePointCoord(gs_construction_geometry.item(ref_start_point.display_name).com_object)
-        end_point = HybridShapePointCoord(gs_construction_geometry.item(ref_end_point.display_name).com_object)
+        start_point = HybridShapePointCoord(
+            gs_construction_geometry.item(ref_start_point.display_name).com_object
+        )
+        end_point = HybridShapePointCoord(
+            gs_construction_geometry.item(ref_end_point.display_name).com_object
+        )
 
-        print(f'Line: {hs_line_pt_pt.name}')
-        print(f'\tStart point: {start_point.name, start_point.get_coordinates()}')
-        print('\tEnd point: end_point.name, end_point.get_coordinates()')
+        print(f"Line: {hs_line_pt_pt.name}")
+        print(f"\tStart point: {start_point.name, start_point.get_coordinates()}")
+        print("\tEnd point: end_point.name, end_point.get_coordinates()")

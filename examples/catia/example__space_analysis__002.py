@@ -1,14 +1,14 @@
 """
 
-    Example - Space Analysis - 002
+Example - Space Analysis - 002
 
-    Description:
-        Get all the points in the geometrical set 'Points' and output co-ordinate to console.
-        Create your own CATPart with a Geometrical Set called construction_points.
-        Add some points to the Geometrical Set.
+Description:
+    Get all the points in the geometrical set 'Points' and output co-ordinate to console.
+    Create your own CATPart with a Geometrical Set called construction_points.
+    Add some points to the Geometrical Set.
 
-    Requirements:
-        - A part document with the above described setup.
+Requirements:
+    - A part document with the above described setup.
 
 """
 
@@ -30,7 +30,9 @@ application = catia()
 documents = application.documents
 # this should be the path to your file.
 # if the active document is a CATPart this will return a PartDocument
-part_document: PartDocument = documents.open(Path(os.getcwd(), r"tests\cat_files\part_measurable.CATPart"))
+part_document: PartDocument = documents.open(
+    Path(os.getcwd(), r"tests\cat_files\part_measurable.CATPart")
+)
 part = part_document.part
 spa_workbench = part_document.spa_workbench()
 

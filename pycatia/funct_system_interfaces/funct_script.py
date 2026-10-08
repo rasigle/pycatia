@@ -62,4 +62,4 @@ class FunctScript(AnyObject):
         self.funct_script.ScriptText = value
 
     def __repr__(self):
-        return f'FunctScript(name="{ self.name }")'
+        return f'FunctScript(name="{self.name}")'

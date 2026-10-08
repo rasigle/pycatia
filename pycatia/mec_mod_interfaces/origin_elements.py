@@ -107,4 +107,4 @@ class OriginElements(AnyObject):
         return AnyObject(self.origin_elements.PlaneZX)
 
     def __repr__(self):
-        return f'OriginElements(name="{ self.name }")'
+        return f'OriginElements(name="{self.name}")'

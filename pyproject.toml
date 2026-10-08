@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pycatia"
-version = "0.10.1"
 description = "A python module to interface with the CATIA/DELMIA V5 COM object."
 readme = { file = "README.rst", content-type = "text/x-rst" }
 requires-python = ">=3.9"
@@ -26,6 +25,7 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering",
 ]
+dynamic = ["version"]
 dependencies = [
     "pywin32>=224; sys_platform == 'win32'",
 ]
@@ -36,6 +36,9 @@ Documentation = "https://pycatia.readthedocs.io"
 Repository = "https://github.com/evereux/pycatia"
 Changelog = "https://github.com/evereux/pycatia/blob/master/CHANGELOG.md"
 Issues = "https://github.com/evereux/pycatia/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "pycatia.version.__version__"}
 
 [dependency-groups]
 test = [

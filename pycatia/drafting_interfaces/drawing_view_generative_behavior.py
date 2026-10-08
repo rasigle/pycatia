@@ -1785,4 +1785,4 @@ class DrawingViewGenerativeBehavior(CATBaseDispatch):
         return self.drawing_view_generative_behavior.Update()
 
     def __repr__(self):
-        return f'DrawingViewGenerativeBehavior()'
+        return 'DrawingViewGenerativeBehavior()'

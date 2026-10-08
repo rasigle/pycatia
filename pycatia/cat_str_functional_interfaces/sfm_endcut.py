@@ -11,7 +11,6 @@
 from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import SFMConnectionParameters
 from pycatia.cat_str_functional_interfaces.sfm_references import SFMReferences
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.types.general import CATVariant
 
 
 class SFMEndcut(AnyObject):

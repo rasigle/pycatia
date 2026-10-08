@@ -6,7 +6,6 @@ from pycatia import catia
 
 import pytest
 
-from pycatia.in_interfaces.application import Application
 from pycatia.types.document import AnyDocument
 
 application = catia()

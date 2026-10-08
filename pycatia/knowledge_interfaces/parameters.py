@@ -8,7 +8,7 @@
         and thus help debugging in pycatia.
         
 """
-from typing import Iterator, Union
+from typing import Iterator
 from typing import TYPE_CHECKING
 
 from pywintypes import com_error

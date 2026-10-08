@@ -11,7 +11,6 @@
 from pycatia.manufacturing_interfaces.manufacturing_machinable_feature import ManufacturingMachinableFeature
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.types.general import CATVariant
 
 
 class ManufacturingMachinableGeometry(ManufacturingMachinableFeature):

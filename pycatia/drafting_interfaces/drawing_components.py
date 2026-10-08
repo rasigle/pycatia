@@ -187,4 +187,4 @@ class DrawingComponents(Collection):
             yield self.child_object(self.com_object.Item(i + 1))
 
     def __repr__(self):
-        return f'DrawingComponents()'
+        return 'DrawingComponents()'

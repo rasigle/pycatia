@@ -39,4 +39,4 @@ class CATBaseUnknown(IDispatch):
         super().__init__()
 
     def __repr__(self):
-        return f'CatBaseUnknown()'
+        return 'CatBaseUnknown()'

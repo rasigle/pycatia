@@ -53,7 +53,7 @@ def create_cat_part_measurable(file_name):
     part_parameters.create_boolean("Activate", True)
     dim_pad_width = part_parameters.create_dimension("pad_width", "LENGTH", pad_width)
     dim_pad_height = part_parameters.create_dimension("pad_height", "LENGTH", pad_height)
-    dim_pad_depth = part_parameters.create_dimension("pad_depth", "LENGTH", pad_depth)
+    part_parameters.create_dimension("pad_depth", "LENGTH", pad_depth)
 
     main_body = part.main_body
 
@@ -111,10 +111,10 @@ def create_cat_part_measurable(file_name):
     # the dim name here would typically be 'Part1\dim_width'. the com interfaces does not expect the 'Part1' part.
     p_w_name = "\\".join(dim_pad_width.name.split("\\")[1:])
     p_h_name = "\\".join(dim_pad_height.name.split("\\")[1:])
-    formula_1 = relations.create_formula("formula_1", "", point_2.x, p_w_name)
-    formula_2 = relations.create_formula("formula_2", "", point_3.x, p_w_name)
-    formula_3 = relations.create_formula("formula_3", "", point_3.y, p_h_name)
-    formula_5 = relations.create_formula("formula_5", "", point_4.y, p_h_name)
+    relations.create_formula("formula_1", "", point_2.x, p_w_name)
+    relations.create_formula("formula_2", "", point_3.x, p_w_name)
+    relations.create_formula("formula_3", "", point_3.y, p_h_name)
+    relations.create_formula("formula_5", "", point_4.y, p_h_name)
 
     # #############################
     # create the sketch for the pad
@@ -207,7 +207,7 @@ def create_cat_part_measurable(file_name):
     # ##############
 
     part.in_work_object = main_body
-    pad = part_shape_factory.add_new_pad(sketch, pad_depth)
+    part_shape_factory.add_new_pad(sketch, pad_depth)
 
     part.update()
 

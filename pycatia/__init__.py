@@ -10,6 +10,5 @@
 """
 
 from pycatia.base_interfaces.base_application import catia_application as catia
-from pycatia.base_interfaces.context import CATIADocHandler
-from pycatia.enumeration.enums import *
 
+__all__ = ["catia"]

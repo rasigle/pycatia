@@ -467,7 +467,6 @@ class AnnotationSet(AnyObject):
         :param Part i_destination_part:
         :rtype: str
         """
-        from pycatia.mec_mod_interfaces.part import Part
         return self.annotation_set.GlobalCopySetTo(i_destination_part.com_object)
 
     def global_copy_set_to_with_transformation(self, i_destination_part: 'Part', i_transfo: tuple) -> str:

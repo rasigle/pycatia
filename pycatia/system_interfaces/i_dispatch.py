@@ -35,4 +35,4 @@ class IDispatch(IUnknown):
         super().__init__()
 
     def __repr__(self):
-        return f'IDispatch()'
+        return 'IDispatch()'

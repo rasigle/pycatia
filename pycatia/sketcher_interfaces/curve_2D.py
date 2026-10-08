@@ -11,7 +11,6 @@
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.sketcher_interfaces.geometry_2D import Geometry2D
 from pycatia.sketcher_interfaces.point_2D import Point2D
-from pycatia.system_interfaces.system_service import SystemService
 
 
 class Curve2D(Geometry2D):

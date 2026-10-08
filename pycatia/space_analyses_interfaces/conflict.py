@@ -11,7 +11,6 @@
 from pycatia.enumeration.enums import CatConflictType, CatConflictStatus, CatConflictComparison, CatScriptLanguage
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.system_interfaces.system_service import SystemService
 
 
 class Conflict(AnyObject):

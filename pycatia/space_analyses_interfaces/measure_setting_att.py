@@ -10,7 +10,6 @@
 """
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.system_interfaces.setting_controller import SettingController
-from pycatia.system_interfaces.system_service import SystemService
 
 
 class MeasureSettingAtt(SettingController):

@@ -15,7 +15,6 @@ from pycatia.manufacturing_interfaces.manufacturing_machining_axis import Manufa
 from pycatia.manufacturing_interfaces.manufacturing_view import ManufacturingView
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.types.general import CATVariant
 
 
 class ManufacturingSetup(ManufacturingActivity):

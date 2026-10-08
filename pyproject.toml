@@ -56,6 +56,8 @@ dev = [
     {include-group = "test"},
     "build",
     "mypy",
+    "black>=25.11.0",
+    "ruff>=0.16.10",
     "nuitka",
     "ordered-set",
     "twine",

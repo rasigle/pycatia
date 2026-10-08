@@ -12,7 +12,6 @@ from pycatia.cat_str_functional_interfaces.sfm_connection_parameters import SFMC
 from pycatia.cat_str_functional_interfaces.sfm_endcut_manager import SFMEndcutManager
 from pycatia.cat_str_functional_interfaces.sfm_profile import SFMProfile
 from pycatia.mec_mod_interfaces.factory import Factory
-from pycatia.types.general import CATVariant
 
 
 class SFMOperationFactory(Factory):

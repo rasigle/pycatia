@@ -104,7 +104,7 @@ class HybridBodies(Collection):
         try:
             return HybridBody(self.hybrid_bodies.Item(i_index))
         except com_error:
-            raise CATIAApplicationException(f'Could not find hybrid_body "i_index"')
+            raise CATIAApplicationException('Could not find hybrid_body "i_index"')
 
     def __getitem__(self, n: int) -> HybridBody:
         if (n + 1) > self.count:

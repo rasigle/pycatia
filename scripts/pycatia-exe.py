@@ -5,7 +5,6 @@ This script is strictly for the use of generating the pycatia.exe executable.
 """
 
 import argparse
-import sys
 import textwrap
 from pathlib import Path
 from pycatia.version import version
@@ -36,7 +35,6 @@ if __name__ == "__main__":
 
     if filename.exists():
 
-        import pycatia
 
         exec(open(filename).read())
     else:

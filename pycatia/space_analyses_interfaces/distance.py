@@ -14,7 +14,6 @@ from pycatia.navigator_interfaces.group import Group
 from pycatia.navigator_interfaces.marker_3Ds import Marker3Ds
 from pycatia.product_structure_interfaces.product import Product
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.system_interfaces.system_service import SystemService
 
 
 class Distance(AnyObject):

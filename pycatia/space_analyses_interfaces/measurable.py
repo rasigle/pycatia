@@ -4,7 +4,6 @@ import inspect
 from pycatia.enumeration.enums import CatMeasurableName
 from pycatia.in_interfaces.reference import Reference
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.system_interfaces.system_service import SystemService
 
 
 class Measurable(AnyObject):

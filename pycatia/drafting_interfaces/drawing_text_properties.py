@@ -607,4 +607,4 @@ class DrawingTextProperties(CATBaseDispatch):
         return self.drawing_text_properties.Update()
 
     def __repr__(self):
-        return f'DrawingTextProperties()'
+        return 'DrawingTextProperties()'

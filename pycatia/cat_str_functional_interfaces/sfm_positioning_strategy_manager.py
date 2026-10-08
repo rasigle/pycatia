@@ -10,7 +10,6 @@
 """
 from pycatia.cat_str_functional_interfaces.sfm_standard_pos_strategy_parameters import SFMStandardPosStrategyParameters
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.types.general import CATVariant
 
 
 class SFMPositioningStrategyManager(AnyObject):

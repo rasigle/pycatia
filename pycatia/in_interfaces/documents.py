@@ -1,12 +1,10 @@
 #! /usr/bin/python3.9
 from typing import Iterator
-import os
 from pathlib import Path
-import warnings
 
 from pywintypes import com_error
 
-from pycatia.exception_handling import CATIAApplicationException
+from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.in_interfaces.document import Document
 from pycatia.system_interfaces.collection import Collection
 from pycatia.types.document import document_types, AnyDocument

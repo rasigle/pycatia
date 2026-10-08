@@ -15,7 +15,6 @@ from pycatia.sketcher_interfaces.axis_2D import Axis2D
 from pycatia.sketcher_interfaces.factory_2D import Factory2D
 from pycatia.sketcher_interfaces.line_2D import Line2D
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.system_interfaces.system_service import SystemService
 
 
 class Sketch(AnyObject):

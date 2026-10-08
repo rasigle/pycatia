@@ -260,4 +260,4 @@ class DrawingTextRange(CATBaseDispatch):
         return self.drawing_text_range.InsertBefore(i_string)
 
     def __repr__(self):
-        return f'DrawingTextRange()'
+        return 'DrawingTextRange()'

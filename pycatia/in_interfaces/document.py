@@ -14,7 +14,7 @@ from typing import TYPE_CHECKING
 from pathlib import Path
 
 from pycatia.enumeration.enums import CatScriptLanguage
-from pycatia.exception_handling import CATIAApplicationException
+from pycatia.exception_handling.exceptions import CATIAApplicationException
 from pycatia.in_interfaces.cameras import Cameras
 from pycatia.in_interfaces.reference import Reference
 from pycatia.in_interfaces.window import Window
@@ -803,7 +803,7 @@ class Document(AnyObject):
 
         :rtype: None
         """
-        self.logger.info(f'Saving the current document.')
+        self.logger.info('Saving the current document.')
         self.document.Save()
 
     def save_as(self, file_name: Path, overwrite: bool = False) -> None:

@@ -10,7 +10,6 @@
 """
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.sketcher_interfaces.geometry_2D import Geometry2D
-from pycatia.system_interfaces.system_service import SystemService
 
 
 class Point2D(Geometry2D):

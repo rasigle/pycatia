@@ -9,7 +9,6 @@
         
 """
 from pycatia.dnb_fastener_interfaces.fastener import Fastener
-from pycatia.system_interfaces.any_object import AnyObject
 from pycatia.system_interfaces.cat_base_dispatch import CATBaseDispatch
 
 

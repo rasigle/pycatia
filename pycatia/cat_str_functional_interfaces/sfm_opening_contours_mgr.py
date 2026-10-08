@@ -10,7 +10,6 @@
 """
 from pycatia.cat_str_functional_interfaces.sfm_standard_contour_parameters import SFMStandardContourParameters
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.types.general import CATVariant
 
 
 class SFMOpeningContoursMgr(AnyObject):

@@ -10,7 +10,6 @@
 """
 
 from pycatia.system_interfaces.any_object import AnyObject
-from pycatia.types.general import CATVariant
 
 
 class AnalysisMaterial(AnyObject):

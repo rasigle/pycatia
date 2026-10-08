@@ -1,4 +1,4 @@
-from typing import TypeVar, Type, Union
+from typing import TypeVar, Union
 
 """
 This is a doc comment.

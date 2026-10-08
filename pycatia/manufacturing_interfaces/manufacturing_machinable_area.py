@@ -9,7 +9,6 @@
         
 """
 from pycatia.manufacturing_interfaces.manufacturing_machinable_feature import ManufacturingMachinableFeature
-from pycatia.types.general import CATVariant
 
 
 class ManufacturingMachinableArea(ManufacturingMachinableFeature):

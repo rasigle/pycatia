@@ -10,7 +10,6 @@
 """
 from pycatia.enumeration.enums import CatScriptLanguage
 from pycatia.sketcher_interfaces.curve_2D import Curve2D
-from pycatia.system_interfaces.system_service import SystemService
 
 
 class Hyperbola2D(Curve2D):

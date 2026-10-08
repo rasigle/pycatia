@@ -60,7 +60,7 @@ if __name__ == "__main__":
     application = catia()
     product_document: ProductDocument = application.active_document
 
-    if not type(product_document) == ProductDocument:
+    if not isinstance(product_document, ProductDocument):
         print("A CATProduct document must be the active document.")
         sys.exit()
 

@@ -1,7 +1,7 @@
-from pycatia.enumeration.enums import CatConstraintMode, CatConstraintType
-from pycatia.in_interfaces.reference import Reference
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5.enumeration.enums import CatConstraintMode, CatConstraintType
+from pyv5.in_interfaces.reference import Reference
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 from tests.common_vars import test_files
 from tests.conftest import application
 
@@ -26,8 +26,8 @@ def create_cat_part_measurable(file_name):
     product = ProductDocument(document.com_object).product
     product.part_number = "cat_part_measurable"
     product.revision = "A.1"
-    product.nomenclature = "pycatia part for testing"
-    product.definition = "pycatia part for testing"
+    product.nomenclature = "pyv5 part for testing"
+    product.definition = "pyv5 part for testing"
     part = PartDocument(document.com_object).part
 
     pad_width = 100

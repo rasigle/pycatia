@@ -11,7 +11,7 @@ Requirements:
     - MS EXCEL must be installed.
 
 Further information:
-    See github issue https://github.com/evereux/pycatia/issues/110 with regards
+    See github issue https://github.com/evereux/pyv5/issues/110 with regards
     to file paths and saying "No" to overwriting existing files and file paths
     when using excel. These issues are mitigated using the code below by
     checking for an existing excel file and removing it and also using pythons
@@ -25,13 +25,13 @@ Further information:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 from pathlib import Path
 
-from pycatia import catia
-from pycatia.product_structure_interfaces.assembly_convertor import AssemblyConvertor
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import catia
+from pyv5.product_structure_interfaces.assembly_convertor import AssemblyConvertor
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 
 # file_type can be "TXT", "HTML" or "XLS".
 file_type = "XLS"

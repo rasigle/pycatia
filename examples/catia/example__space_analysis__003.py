@@ -11,7 +11,7 @@ Requirements:
 
 Warnings:
     - This will only work if you have language set to English. Further reading:
-      https://github.com/evereux/pycatia/issues/93
+      https://github.com/evereux/pyv5/issues/93
 
 """
 
@@ -21,13 +21,13 @@ Warnings:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 import csv
 from pathlib import Path
 
-from pycatia import catia
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import catia
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 
 application = catia()
 documents = application.documents

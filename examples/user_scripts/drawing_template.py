@@ -1,13 +1,13 @@
 """
 Description
 ===========
-A script that uses pycatia to generate a drawing format for all sheets
+A script that uses pyv5 to generate a drawing format for all sheets
 in the active drawing.
 
 Requirements
 ============
 python >= 3.9
-pycatia
+pyv5
 CATIA V5 running with a drawing open.
 
 Running The Script
@@ -16,11 +16,11 @@ Running The Script
 
 Documentation
 =============
-https://pycatia.readthedocs.io
+https://pyv5.readthedocs.io
 
 More examples and user scripts can be found at:
-https://github.com/evereux/pycatia/tree/master/examples
-https://github.com/evereux/pycatia/tree/master/user_scripts
+https://github.com/evereux/pyv5/tree/master/examples
+https://github.com/evereux/pyv5/tree/master/user_scripts
 """
 
 import argparse
@@ -31,7 +31,7 @@ import argparse
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from drawing_template_support.border import create_border
@@ -45,13 +45,13 @@ from drawing_template_support.settings import sheet_sizes
 from drawing_template_support.template_name import create_template_name
 from drawing_template_support.title_block import create_title_block
 
-from pycatia.drafting_interfaces.drawing_view import DrawingView
+from pyv5.drafting_interfaces.drawing_view import DrawingView
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        prog="pycatia-drawing-template",
+        prog="pyv5-drawing-template",
         usage="%(prog)s [options]",
-        description="Create drawing border templates using pycatia.",
+        description="Create drawing border templates using pyv5.",
     )
 
     # optional argument

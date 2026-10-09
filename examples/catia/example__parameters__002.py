@@ -16,14 +16,14 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import catia
-from pycatia.knowledge_interfaces.length import Length
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import catia
+from pyv5.knowledge_interfaces.length import Length
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 
-# from pycatia.knowledge_interfaces import BoolParam
+# from pyv5.knowledge_interfaces import BoolParam
 
 application = catia()
 part_document: PartDocument = application.active_document

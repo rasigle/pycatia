@@ -20,17 +20,17 @@ can be easily modified.
 Requirements
 ============
 python >= 3.9
-pycatia
+pyv5
 CATIA V5 running with a part open that has a Body to be bounded and a
 reference Axis System.
 
 Documentation
 =============
-https://pycatia.readthedocs.io
+https://pyv5.readthedocs.io
 
 More examples and user scripts can be found at:
-https://github.com/evereux/pycatia/tree/master/examples
-https://github.com/evereux/pycatia/tree/master/user_scripts
+https://github.com/evereux/pyv5/tree/master/examples
+https://github.com/evereux/pyv5/tree/master/user_scripts
 
 
 Warning
@@ -45,16 +45,16 @@ with the French alternative.
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 
-from pycatia import CatConstraintMode, CatConstraintType, CatVisPropertyShow, catia
-from pycatia.cat_logger import create_logger
-from pycatia.knowledge_interfaces.length import Length
-from pycatia.mec_mod_interfaces.axis_system import AxisSystem
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.sketcher_interfaces.geometry_2D import Geometry2D
+from pyv5 import CatConstraintMode, CatConstraintType, CatVisPropertyShow, catia
+from pyv5.cat_logger import create_logger
+from pyv5.knowledge_interfaces.length import Length
+from pyv5.mec_mod_interfaces.axis_system import AxisSystem
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.sketcher_interfaces.geometry_2D import Geometry2D
 
 bbox_offset = 10
 

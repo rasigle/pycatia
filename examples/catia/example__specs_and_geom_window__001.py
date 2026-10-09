@@ -20,15 +20,15 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from pathlib import Path
 
-from pycatia import CatCaptureFormat, CATIADocHandler, CatSpecsAndGeomWindowLayout
-from pycatia.in_interfaces.specs_and_geom_window import SpecsAndGeomWindow
-from pycatia.product_structure_interfaces.product import Product
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import CatCaptureFormat, CATIADocHandler, CatSpecsAndGeomWindowLayout
+from pyv5.in_interfaces.specs_and_geom_window import SpecsAndGeomWindow
+from pyv5.product_structure_interfaces.product import Product
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 
 source_folder = Path(Path(os.getcwd()), "tests/cat_files")
 source_files = source_folder.glob("*.CATPart")

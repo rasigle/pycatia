@@ -1,7 +1,7 @@
 from pywintypes import com_error
 
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 from tests.common_vars import test_files
 from tests.conftest import application
 from tests.create_source_parts import get_cat_part_measurable
@@ -35,8 +35,8 @@ def create_cat_products(file_name_top, file_name_sub_1, file_name_sub_2):
     product_top = ProductDocument(doc_root_prod.com_object).product
     product_top.part_number = "cat_product_1"
     product_top.revision = "A.1"
-    product_top.nomenclature = "pycatia product for testing"
-    product_top.definition = "pycatia product for testing"
+    product_top.nomenclature = "pyv5 product for testing"
+    product_top.definition = "pyv5 product for testing"
 
     products = product_top.products
 
@@ -50,7 +50,7 @@ def create_cat_products(file_name_top, file_name_sub_1, file_name_sub_2):
     product_sub_1 = ProductDocument(doc_sub_1.com_object).product
     product_sub_1.part_number = "cat_product_sub_1"
     product_sub_1.revision = "A.1"
-    product_sub_1.nomenclature = "pycatia product for testing"
+    product_sub_1.nomenclature = "pyv5 product for testing"
 
     products_sub_1 = product_sub_1.products
     cat_part_measurable = get_cat_part_measurable()
@@ -70,7 +70,7 @@ def create_cat_products(file_name_top, file_name_sub_1, file_name_sub_2):
     product_sub_2 = ProductDocument(doc_sub_2.com_object).product
     product_sub_2.part_number = "cat_product_sub_2"
     product_sub_2.revision = "A.1"
-    product_sub_2.nomenclature = "pycatia product for testing"
+    product_sub_2.nomenclature = "pyv5 product for testing"
 
     product_sub_2 = product_sub_2.products
     product_sub_2.add_component(doc_cat_part.product)

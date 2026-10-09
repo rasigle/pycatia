@@ -1,5 +1,5 @@
-from pycatia.mec_mod_interfaces.part import Part
-from pycatia.product_structure_interfaces.product import Product
+from pyv5.mec_mod_interfaces.part import Part
+from pyv5.product_structure_interfaces.product import Product
 
 from .constants import constants_angle, constants_length, constants_real
 

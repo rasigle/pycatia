@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pytest
 
-from pycatia.enumeration.enums import CatWorkModeType
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5.enumeration.enums import CatWorkModeType
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 from tests.conftest import application
 from tests.source_files import cat_part_measurable
 from tests.source_files import cat_product
@@ -48,8 +48,8 @@ def test_attributes(document_open):
         "Name:                  cat_product_1\n"
         "Part Number:           cat_product_1\n"
         "Revision:              A.1\n"
-        "Definition:            pycatia product for testing\n"
-        "Nomenclature:          pycatia product for testing\n"
+        "Definition:            pyv5 product for testing\n"
+        "Nomenclature:          pyv5 product for testing\n"
         "Description Instance:  \n"
         "Description Reference: \n"
         'Reference:             Product(name="cat_product_1")\n'
@@ -71,7 +71,7 @@ def test_count_children(document_open):
 def test_definition(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
-    assert "pycatia part for testing" == product.definition
+    assert "pyv5 part for testing" == product.definition
     product.definition = "new definition"
     assert "new definition" == product.definition
 
@@ -204,7 +204,7 @@ def test_name(document_open):
 def test_nomenclature(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
-    assert "pycatia part for testing" == product.nomenclature
+    assert "pyv5 part for testing" == product.nomenclature
 
     new_nomenclature = "New Test Part"
     product.nomenclature = new_nomenclature

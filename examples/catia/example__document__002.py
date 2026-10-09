@@ -17,15 +17,15 @@ Requirements:
 import os
 import sys
 
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 import os
 from pathlib import Path
 
-from pycatia import CATIADocHandler
+from pyv5 import CATIADocHandler
 
 # make these directories the full pathname.
 source_directory = "tests/cat_files"

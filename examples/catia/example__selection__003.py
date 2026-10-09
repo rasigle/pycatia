@@ -17,11 +17,11 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import CatMeasurableName, CatSelectionFilter, GeometricalFeatureType, catia
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import CatMeasurableName, CatSelectionFilter, GeometricalFeatureType, catia
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 
 __author__ = "[ptm] by plm-forum.ru"
 __status__ = "alpha"

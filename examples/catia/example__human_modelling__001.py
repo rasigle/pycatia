@@ -14,12 +14,12 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import SWKAnthroSex, SWKPostureSpec, catia
-from pycatia.dnb_human_modeling_interfaces.swk_hmi_workbench import SWKHmiWorkbench
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import SWKAnthroSex, SWKPostureSpec, catia
+from pyv5.dnb_human_modeling_interfaces.swk_hmi_workbench import SWKHmiWorkbench
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()
 # if the active document is a CATProduct this will return a ProductDocument

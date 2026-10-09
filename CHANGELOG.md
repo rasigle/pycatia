@@ -7,7 +7,7 @@
   ``CNEXT.Application`` COM object, instead of only ``CATIA.Application``.
 * ``Document.close()`` suppresses file alerts so unsaved documents do not show a
   modal save dialog during automation.
-
+* Renamed to pyv5
 
 ## 0.10.1
 
@@ -528,8 +528,8 @@ Please note the change to VisPropertySet.get_show () will break existing scripts
 ```python
 from pathlib import Path
 
-from pycatia import catia
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import catia
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 
 source_document = Path(r"tests/cat_files/part_measurable.CATPart")
 

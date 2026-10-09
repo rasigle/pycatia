@@ -16,12 +16,12 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import catia
-from pycatia.in_interfaces.setting_controllers import SettingControllers
-from pycatia.system_interfaces.license_setting_att import LicenseSettingAtt
+from pyv5 import catia
+from pyv5.in_interfaces.setting_controllers import SettingControllers
+from pyv5.system_interfaces.license_setting_att import LicenseSettingAtt
 
 cat_lic = "AL3.prd"
 

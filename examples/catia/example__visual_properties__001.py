@@ -16,10 +16,10 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import catia
+from pyv5 import catia
 
 application = catia()
 document = application.active_document

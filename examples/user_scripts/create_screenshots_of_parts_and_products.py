@@ -27,18 +27,18 @@ Should be easy enough to mitigate this if need be though.
 Requirements
 ============
 python >= 3.9
-pycatia >= 0.6.4
+pyv5 >= 0.6.4
 pillow (used for compressing to png)
 CATIA V5 running
 A network accessible folder with your CATIA parts and products in.
 
 Documentation
 =============
-https://pycatia.readthedocs.io
+https://pyv5.readthedocs.io
 
 More examples and user scripts can be found at:
-https://github.com/evereux/pycatia/tree/master/examples
-https://github.com/evereux/pycatia/tree/master/user_scripts
+https://github.com/evereux/pyv5/tree/master/examples
+https://github.com/evereux/pyv5/tree/master/user_scripts
 """
 
 ##########################################################
@@ -47,7 +47,7 @@ https://github.com/evereux/pycatia/tree/master/user_scripts
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 import collections
 import time
@@ -55,12 +55,12 @@ from pathlib import Path
 
 from PIL import Image
 
-from pycatia import CatCaptureFormat, CATIADocHandler, CatSpecsAndGeomWindowLayout
-from pycatia.cat_logger import create_logger
-from pycatia.in_interfaces.camera_3d import Camera3D
-from pycatia.in_interfaces.specs_and_geom_window import SpecsAndGeomWindow
-from pycatia.in_interfaces.viewer_3d import Viewer3D
-from pycatia.product_structure_interfaces.product import Product
+from pyv5 import CatCaptureFormat, CATIADocHandler, CatSpecsAndGeomWindowLayout
+from pyv5.cat_logger import create_logger
+from pyv5.in_interfaces.camera_3d import Camera3D
+from pyv5.in_interfaces.specs_and_geom_window import SpecsAndGeomWindow
+from pyv5.in_interfaces.viewer_3d import Viewer3D
+from pyv5.product_structure_interfaces.product import Product
 
 # change this to the location of where your catia files are stored.
 source_cat_files = Path(Path.home(), "catia_parts")

@@ -16,15 +16,15 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import CatPaperOrientation, CatPaperSize, CatTextAnchorPosition, catia
-from pycatia.drafting_interfaces.drawing_document import DrawingDocument
-from pycatia.drafting_interfaces.drawing_root import DrawingRoot
-from pycatia.drafting_interfaces.drawing_view import DrawingView
-from pycatia.exception_handling import CATIAApplicationException
-from pycatia.system_interfaces.any_object import AnyObject
+from pyv5 import CatPaperOrientation, CatPaperSize, CatTextAnchorPosition, catia
+from pyv5.drafting_interfaces.drawing_document import DrawingDocument
+from pyv5.drafting_interfaces.drawing_root import DrawingRoot
+from pyv5.drafting_interfaces.drawing_view import DrawingView
+from pyv5.exception_handling import CATIAApplicationException
+from pyv5.system_interfaces.any_object import AnyObject
 
 # A0 sheet size
 a0_x = 1189

@@ -30,7 +30,7 @@ sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # -- Project information -----------------------------------------------------
 
-project = "pycatia"
+project = "pyv5"
 copyright = "2026, Paul Bourne"
 author = "Paul Bourne"
 
@@ -96,9 +96,9 @@ html_theme = "alabaster"
 # documentation.
 
 html_theme_options = {
-    "logo": "pycatia-logo.png",
+    "logo": "pyv5-logo.png",
     "github_user": "evereux",
-    "github_repo": "pycatia",
+    "github_repo": "pyv5",
     "github_button": True,
 }
 
@@ -109,7 +109,7 @@ html_static_path = ["_static"]
 html_theme_path = []
 
 html_css_files = [
-    "css/pycatia.css",
+    "css/pyv5.css",
 ]
 
 # Custom sidebar templates, must be a dictionary that maps document names
@@ -126,7 +126,7 @@ html_css_files = [
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "pycatiadoc"
+htmlhelp_basename = "pyv5doc"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -149,14 +149,14 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "pycatia.tex", "pycatia Documentation", "Paul Bourne", "manual"),
+    (master_doc, "pyv5.tex", "pyv5 Documentation", "Paul Bourne", "manual"),
 ]
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "pycatia", "pycatia Documentation", [author], 1)]
+man_pages = [(master_doc, "pyv5", "pyv5 Documentation", [author], 1)]
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -166,10 +166,10 @@ man_pages = [(master_doc, "pycatia", "pycatia Documentation", [author], 1)]
 texinfo_documents = [
     (
         master_doc,
-        "pycatia",
-        "pycatia Documentation",
+        "pyv5",
+        "pyv5 Documentation",
         author,
-        "pycatia",
+        "pyv5",
         "One line description of project.",
         "Miscellaneous",
     ),

@@ -16,12 +16,12 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import CatConstraintType, catia
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.sketcher_interfaces.geometry_2D import Geometry2D
+from pyv5 import CatConstraintType, catia
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.sketcher_interfaces.geometry_2D import Geometry2D
 
 application = catia()
 documents = application.documents

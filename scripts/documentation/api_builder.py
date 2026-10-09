@@ -5,17 +5,17 @@ A simple script to generate API documentation for new modules.
 import os
 from pathlib import Path
 
-# module folder(s) within pycatia
+# module folder(s) within pyv5
 modules = ["threed_xml_interfaces"]
 
 cwd = Path(os.getcwd())
 
 folder_doc_api = Path(cwd, "../../docs/source/api")
-folder_pycatia = Path(cwd, "../../pycatia")
+folder_pyv5 = Path(cwd, "../../pyv5")
 
 
 def get_index_contents(module_name):
-    folder = Path(folder_pycatia, module_name)
+    folder = Path(folder_pyv5, module_name)
     dir_contents = os.listdir(folder)
 
     o = ""
@@ -24,7 +24,7 @@ def get_index_contents(module_name):
         if file == "__init__.py" or file == "__pycache__":
             continue
         f = file[0:-3]
-        o = o + f"   pycatia/{module_name}/{f}\n"
+        o = o + f"   pyv5/{module_name}/{f}\n"
 
     return o, dir_contents
 
@@ -37,7 +37,7 @@ def build_index(module_name):
         print(f'"{index_filename}" already exists.')
         os.remove(index_filename)
 
-    header = f"pycatia.{module_name}\n"
+    header = f"pyv5.{module_name}\n"
     header_underline = "=" * len(header)
     toc_tree = "\n\n.. toctree::\n   :maxdepth: 1\n   :caption: Contents:\n\n\n"
     contents, dir_content = get_index_contents(module_name)
@@ -52,7 +52,7 @@ def build_index(module_name):
 
 
 def build_api(module_name, dir_content):
-    module_api_folder = Path(folder_doc_api, "../../pycatia", module_name)
+    module_api_folder = Path(folder_doc_api, "../../pyv5", module_name)
     # create the folder
     if not module_api_folder.exists():
         print(f"Creating folder {module_api_folder}.")
@@ -65,9 +65,9 @@ def build_api(module_name, dir_content):
         f_api_name = Path(module_api_folder, f"{m}.rst")
 
         header_link = f".. _{module_name.capitalize()}:\n\n"
-        header = f"pycatia.{module_name}.{m}\n"
+        header = f"pyv5.{module_name}.{m}\n"
         header_underline = "=" * len(header)
-        auto_module = f"\n\n.. automodule:: pycatia.{module_name}.{m}\n    :members:\n"
+        auto_module = f"\n\n.. automodule:: pyv5.{module_name}.{m}\n    :members:\n"
 
         text = header_link + header + header_underline + auto_module
 

@@ -17,13 +17,13 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 from pathlib import Path
 
-from pycatia import CatWorkModeType, catia
-from pycatia.product_structure_interfaces.product import Product
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import CatWorkModeType, catia
+from pyv5.product_structure_interfaces.product import Product
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()
 documents = application.documents

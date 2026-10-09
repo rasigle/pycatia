@@ -16,14 +16,14 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from collections import Counter
 from datetime import datetime
 
-from pycatia import CatWorkModeType, catia
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import CatWorkModeType, catia
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()
 product_document: ProductDocument = application.active_document

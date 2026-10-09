@@ -8,4 +8,4 @@ cd "%~dp0..\environment"
 call .\uv_sync_dev.bat
 
 echo Running mypy
-uv run mypy .\json_spec .\tests
+uv run mypy .\pyv5 .\tests

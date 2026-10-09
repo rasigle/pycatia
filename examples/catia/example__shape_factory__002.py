@@ -16,11 +16,11 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import catia
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import catia
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 
 application = catia()
 # if the active document is a CATPart this will return a PartDocument

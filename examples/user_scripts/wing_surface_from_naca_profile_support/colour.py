@@ -1,5 +1,5 @@
-from pycatia.in_interfaces.selection import Selection
-from pycatia.system_interfaces.any_object import AnyObject
+from pyv5.in_interfaces.selection import Selection
+from pyv5.system_interfaces.any_object import AnyObject
 
 
 def set_colour(

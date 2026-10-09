@@ -6,6 +6,18 @@ This part of the documentation covers all the interfaces of pycatia.
 
 The entry point for most pycatia use cases is to do the following.
 
+>>> from pyv5 import catia
+
+This creates an instance of the
+
+The entry point for most pycatia use cases is to do the following.
+
+>>> from pyv5 import catia
+
+This creates an instance of the
+
+The entry point for most pycatia use cases is to do the following.
+
 >>> from pycatia import catia
 
 This creates an instance of the :ref:`Application<Application>` object.

@@ -1,5 +1,5 @@
-from pycatia.in_interfaces.reference import Reference
-from pycatia.mec_mod_interfaces.part import Part
+from pyv5.in_interfaces.reference import Reference
+from pyv5.mec_mod_interfaces.part import Part
 
 
 def get_ref_origin_elements(part: Part) -> tuple[Reference, Reference, Reference]:

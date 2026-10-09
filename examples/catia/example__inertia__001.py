@@ -24,12 +24,12 @@ Read comment in script to change density or select another body.
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import catia
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.space_analyses_interfaces.inertia import Inertia
+from pyv5 import catia
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.space_analyses_interfaces.inertia import Inertia
 
 __author__ = "[ptm] by plm-forum.ru"
 __status__ = "alpha"

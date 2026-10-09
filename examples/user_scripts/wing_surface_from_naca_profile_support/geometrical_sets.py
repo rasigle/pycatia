@@ -1,5 +1,5 @@
-from pycatia.mec_mod_interfaces.hybrid_bodies import HybridBodies
-from pycatia.mec_mod_interfaces.hybrid_body import HybridBody
+from pyv5.mec_mod_interfaces.hybrid_bodies import HybridBodies
+from pyv5.mec_mod_interfaces.hybrid_body import HybridBody
 
 
 def create_geometrical_set(parent: HybridBodies, name: str) -> HybridBody:

@@ -45,7 +45,7 @@ Requirements:
     - An open product document with children that need sorting.
 
 Warnings:
-    With regards to pycatia this example only shows how to select the root
+    With regards to pyv5 this example only shows how to select the root
     product. The rest is handled by pywinauto. _https://pywinauto.github.io/
 
     You will need to manually install package pywinauto to run this script.
@@ -59,7 +59,7 @@ Warnings:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 import time
@@ -68,8 +68,8 @@ from natsort import natsorted
 from pywinauto import Desktop
 from pywinauto.controls.win32_controls import ButtonWrapper, ListBoxWrapper
 
-from pycatia import catia
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import catia
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 
 lang = "EN"  # only EN and DE currently supported, more translations welcomed.
 sleep = 0.25
@@ -132,7 +132,7 @@ selection = product_document.selection
 selection.clear()
 selection.add(product)
 application.start_command(window_text["graph_tree_cmd"])
-# that's it for pycatia.
+# that's it for pyv5.
 
 time.sleep(sleep)
 

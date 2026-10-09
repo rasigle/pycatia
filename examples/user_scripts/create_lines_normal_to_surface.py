@@ -14,17 +14,17 @@ Lines are added to the newly created Geometrical Set "Lines".
 Requirements
 ============
 python >= 3.9
-pycatia
+pyv5
 CATIA V5 runnin with a part open that has a Surface and a HybridBody
 containing the Points.
 
 Documentation
 =============
-https://pycatia.readthedocs.io
+https://pyv5.readthedocs.io
 
 More examples and user scripts can be found at:
-https://github.com/evereux/pycatia/tree/master/examples
-https://github.com/evereux/pycatia/tree/master/user_scripts
+https://github.com/evereux/pyv5/tree/master/examples
+https://github.com/evereux/pyv5/tree/master/user_scripts
 """
 
 ##########################################################
@@ -33,14 +33,14 @@ https://github.com/evereux/pycatia/tree/master/user_scripts
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import GeometricalFeatureType, catia
-from pycatia.cat_logger import create_logger
-from pycatia.mec_mod_interfaces.hybrid_body import HybridBody
-from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import GeometricalFeatureType, catia
+from pyv5.cat_logger import create_logger
+from pyv5.mec_mod_interfaces.hybrid_body import HybridBody
+from pyv5.mec_mod_interfaces.hybrid_shape import HybridShape
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 
 LINE_LENGTH = 20
 

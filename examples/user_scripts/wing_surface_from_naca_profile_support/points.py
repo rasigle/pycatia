@@ -1,6 +1,6 @@
-from pycatia.hybrid_shape_interfaces.hybrid_shape_factory import HybridShapeFactory
-from pycatia.in_interfaces.reference import Reference
-from pycatia.mec_mod_interfaces.hybrid_body import HybridBody
+from pyv5.hybrid_shape_interfaces.hybrid_shape_factory import HybridShapeFactory
+from pyv5.in_interfaces.reference import Reference
+from pyv5.mec_mod_interfaces.hybrid_body import HybridBody
 
 
 def add_points(

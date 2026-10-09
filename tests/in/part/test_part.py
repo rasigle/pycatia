@@ -2,10 +2,10 @@
 
 import pytest
 
-from pycatia.exception_handling.exceptions import CATIAApplicationException
-from pycatia.mec_mod_interfaces.part import Part
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5.exception_handling.exceptions import CATIAApplicationException
+from pyv5.mec_mod_interfaces.part import Part
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 from tests.conftest import application
 from tests.source_files import cat_part_measurable
 from tests.source_files import cat_product
@@ -41,7 +41,7 @@ def test_axis_systems(document_open):
 
 
 # todo: look into automation this.
-# I haven't yet imported the module into pycatia that seems to handle annotation sets.
+# I haven't yet imported the module into pyv5 that seems to handle annotation sets.
 # def test_annotation_sets():
 #     with CATIADocHandler(cat_part_measurable) as caa:
 #         document = caa.document

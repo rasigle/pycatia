@@ -11,7 +11,7 @@ Measures point relative to axis system.
 Requirements
 ============
 python >= 3.9
-pycatia
+pyv5
 CATIA V5 is running with an open part that includes an axis system and a
 geometrical set named "Inputs" containing a point named "Point.1". The first
 axis in the axis collection will be selected.
@@ -23,11 +23,11 @@ axis in the axis collection will be selected.
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import catia
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import catia
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 
 application = catia()
 part_document: PartDocument = application.active_document

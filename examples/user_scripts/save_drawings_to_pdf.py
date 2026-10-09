@@ -16,18 +16,18 @@ single pdf for each drawing.
 Requirements
 ============
 python >= 3.9
-pycatia >= 0.6.4
+pyv5 >= 0.6.4
 pypdf
 CATIA V5 running
 A network accessible folder that contain your CATDrawings.
 
 Documentation
 =============
-https://pycatia.readthedocs.io
+https://pyv5.readthedocs.io
 
 More examples and user scripts can be found at:
-https://github.com/evereux/pycatia/tree/master/examples
-https://github.com/evereux/pycatia/tree/master/user_scripts
+https://github.com/evereux/pyv5/tree/master/examples
+https://github.com/evereux/pyv5/tree/master/user_scripts
 """
 
 ##########################################################
@@ -36,14 +36,14 @@ https://github.com/evereux/pycatia/tree/master/user_scripts
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 from pathlib import Path
 
 from pypdf import PdfWriter
 
-from pycatia import CATIADocHandler
-from pycatia.drafting_interfaces.drawing_document import DrawingDocument
+from pyv5 import CATIADocHandler
+from pyv5.drafting_interfaces.drawing_document import DrawingDocument
 
 exclude_strings = ["Detail", "DXF"]
 source_cat_drawings = Path(Path.home(), "catia_parts")

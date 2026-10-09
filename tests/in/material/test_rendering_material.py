@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pytest
 
-from pycatia.cat_mat_interfaces.material_document import MaterialDocument
+from pyv5.cat_mat_interfaces.material_document import MaterialDocument
 from tests.common_vars import test_files
 from tests.conftest import application
 from tests.source_files import cat_material

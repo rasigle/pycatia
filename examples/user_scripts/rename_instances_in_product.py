@@ -17,16 +17,16 @@ not traverse the product any deeper.
 Requirements
 ============
 python >= 3.9
-pycatia
+pyv5
 CATIA V5 running with your product open.
 
 Documentation
 =============
-https://pycatia.readthedocs.io
+https://pyv5.readthedocs.io
 
 More examples and user scripts can be found at:
-https://github.com/evereux/pycatia/tree/master/examples
-https://github.com/evereux/pycatia/tree/master/user_scripts
+https://github.com/evereux/pyv5/tree/master/examples
+https://github.com/evereux/pyv5/tree/master/user_scripts
 """
 
 ##########################################################
@@ -35,18 +35,18 @@ https://github.com/evereux/pycatia/tree/master/user_scripts
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 import random
 import string
 
-from pycatia import catia
-from pycatia.cat_logger import create_logger
-from pycatia.in_interfaces.application import Application
-from pycatia.in_interfaces.document import Document
-from pycatia.product_structure_interfaces.product import Product
-from pycatia.product_structure_interfaces.products import Products
+from pyv5 import catia
+from pyv5.cat_logger import create_logger
+from pyv5.in_interfaces.application import Application
+from pyv5.in_interfaces.document import Document
+from pyv5.product_structure_interfaces.product import Product
+from pyv5.product_structure_interfaces.products import Products
 
 
 def tmp_string(size=6, chars: str = string.ascii_letters) -> str:

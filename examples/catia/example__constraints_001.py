@@ -17,11 +17,11 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import CatConstraintType, catia
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import CatConstraintType, catia
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 
 application = catia()
 # if the active document is a CATProduct this will return a ProductDocument

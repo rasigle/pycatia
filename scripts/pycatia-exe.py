@@ -1,30 +1,30 @@
 # !/usr/bin/python3.10
 
 """
-This script is strictly for the use of generating the pycatia.exe executable.
+This script is strictly for the use of generating the pyv5.exe executable.
 """
 
 import argparse
 import textwrap
 from pathlib import Path
 
-from pycatia.version import __version__ as version
+from pyv5.version import __version__ as version
 
 if __name__ == "__main__":
-    prog = "pycatia"
+    prog = "pyv5"
 
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
         description=textwrap.dedent("""\
         =====================================================================
-                                 pycatia
+                                 pyv5
         =====================================================================
            This executable is currently provided for testing purposes only.
-        Documentation: https://pycatia.readthedocs.io/en/latest/
+        Documentation: https://pyv5.readthedocs.io/en/latest/
         =====================================================================
         """),
         prog=prog,
-        usage="pycatia.exe file_name.py",
+        usage="pyv5.exe file_name.py",
     )
 
     parser.add_argument(

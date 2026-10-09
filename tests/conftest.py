@@ -9,8 +9,8 @@ import win32gui
 import win32process
 from win32com.universal import com_error
 
-from pycatia import catia
-from pycatia.types.document import AnyDocument
+from pyv5 import catia
+from pyv5.types.document import AnyDocument
 
 _CATIA_PROCESS_NAMES = {"cnext.exe", "delmia.exe", "catia.exe"}
 _OK_BUTTON_LABELS = {"OK", "Ok", "&OK"}

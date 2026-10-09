@@ -16,11 +16,11 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import CatDimType, catia
-from pycatia.drafting_interfaces.drawing_document import DrawingDocument
+from pyv5 import CatDimType, catia
+from pyv5.drafting_interfaces.drawing_document import DrawingDocument
 
 application = catia()
 drawing_document: DrawingDocument = application.active_document

@@ -1,6 +1,6 @@
-from pycatia.in_interfaces.selection import Selection
-from pycatia.mec_mod_interfaces.hybrid_body import HybridBody
-from pycatia.mec_mod_interfaces.hybrid_shape import HybridShape
+from pyv5.in_interfaces.selection import Selection
+from pyv5.mec_mod_interfaces.hybrid_body import HybridBody
+from pyv5.mec_mod_interfaces.hybrid_shape import HybridShape
 
 
 def hide_the_shape(selection: Selection, hide_elements: list[HybridShape]) -> None:

@@ -18,12 +18,12 @@ Requirements:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pycatia import catia
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.scripts.csv_tools import create_points
+from pyv5 import catia
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.scripts.csv_tools import create_points
 
 application = catia()
 # # disable display refreshing to try tp speed up point generation.

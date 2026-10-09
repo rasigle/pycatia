@@ -21,14 +21,14 @@ Warnings:
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../pycatia"))
+sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 import win32con
 import win32gui
 
-from pycatia import catia
-from pycatia.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import catia
+from pyv5.product_structure_interfaces.product_document import ProductDocument
 
 # Keep in mind, that almost all CATIA commands and windows are dependent on the UI language.
 # In order for this example to work you need to set your CATIA to english, or use the correct

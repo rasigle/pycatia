@@ -1,8 +1,8 @@
 #! /usr/bin/python3.9
 import pytest
 
-from pycatia.in_interfaces.reference import Reference
-from pycatia.mec_mod_interfaces.part_document import PartDocument
+from pyv5.in_interfaces.reference import Reference
+from pyv5.mec_mod_interfaces.part_document import PartDocument
 from tests.conftest import application
 from tests.source_files import cat_part_measurable
 

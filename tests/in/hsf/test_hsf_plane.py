@@ -1,7 +1,7 @@
 import pytest
 
-from pycatia.mec_mod_interfaces.part_document import PartDocument
-from pycatia.hybrid_shape_interfaces.plane import Plane
+from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.hybrid_shape_interfaces.plane import Plane
 from tests.conftest import application
 from tests.source_files import cat_part_measurable
 

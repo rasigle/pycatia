@@ -49,7 +49,7 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 
-from pyv5 import CatConstraintMode, CatConstraintType, CatVisPropertyShow, catia
+from pyv5 import CatConstraintMode, CatConstraintType, CatVisPropertyShow, v5
 from pyv5.base.cat_logger import create_logger
 from pyv5.interfaces.knowledge.length import Length
 from pyv5.interfaces.mec_mod.axis_system import AxisSystem

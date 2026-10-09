@@ -30,19 +30,12 @@ https://github.com/evereux/pyv5/tree/master/examples
 https://github.com/evereux/pyv5/tree/master/user_scripts
 """
 
-##########################################################
-# insert syspath to project folder so examples can be run.
-# for development purposes.
-import os
-import sys
+from pyv5 import CATIADocHandler
 
-sys.path.insert(0, os.path.abspath("../../pyv5"))
-##########################################################
 from pathlib import Path
 
 from pypdf import PdfWriter
 
-from pyv5 import v5DocHandler
 from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 
 exclude_strings = ["Detail", "DXF"]

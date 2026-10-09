@@ -3,7 +3,7 @@
 import os
 from pathlib import Path
 
-from pyv5.base.base_application import v5_application as catia
+from pyv5.base.base_application import v5_application
 from pyv5.base.exceptions import CATIAApplicationException
 
 
@@ -56,7 +56,7 @@ class CATIADocHandler:
         :param new_document: (optional) for example 'Part', 'Product' or 'Drawing'.
         :param bool close: (optional) if True, the document is closed.
         """
-        self.application = v5()
+        self.application = v5_application()
         self.documents = self.application.documents
         self.file_name = file_name
         self.new_document = new_document

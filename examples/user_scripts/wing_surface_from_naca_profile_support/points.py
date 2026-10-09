@@ -1,5 +1,5 @@
-from pyv5.interfaces.hybrid_shape.hybrid_shape_factory import HybridShapeFactory
 from pyv5.interfaces.core.reference import Reference
+from pyv5.interfaces.hybrid_shape.hybrid_shape_factory import HybridShapeFactory
 from pyv5.interfaces.mec_mod.hybrid_body import HybridBody
 
 

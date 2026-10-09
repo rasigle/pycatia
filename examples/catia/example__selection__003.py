@@ -20,7 +20,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import CatMeasurableName, CatSelectionFilter, GeometricalFeatureType, catia
+from pyv5 import CatMeasurableName, CatSelectionFilter, GeometricalFeatureType, v5
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 
 __author__ = "[ptm] by plm-forum.ru"

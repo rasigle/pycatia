@@ -20,7 +20,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import CatConstraintType, catia
+from pyv5 import CatConstraintType, v5
 from pyv5.interfaces.product_structure.product_document import ProductDocument
 
 application = v5()

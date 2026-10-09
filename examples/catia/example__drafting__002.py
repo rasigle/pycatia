@@ -19,7 +19,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import CatDimLineRep, CatDimType, catia
+from pyv5 import CatDimLineRep, CatDimType, v5
 from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 
 application = v5()

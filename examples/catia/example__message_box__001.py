@@ -20,9 +20,9 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
+from pyv5 import v5
 
-application = catia()
+application = v5()
 buttons = 2 + 32
 result = application.message_box(
     "Hello World!?", buttons=buttons, title="Asking a question."

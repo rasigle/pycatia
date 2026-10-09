@@ -24,13 +24,13 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 
 from pathlib import Path
 
-from pyv5 import catia
-from pyv5.cat_mat_interfaces.material_document import MaterialDocument
-from pyv5.cat_mat_interfaces.material_manager import MaterialManager
-from pyv5.mec_mod_interfaces.part import Part
-from pyv5.product_structure_interfaces.product import Product
+from pyv5 import v5
+from pyv5.interfaces.cat_mat.material_document import MaterialDocument
+from pyv5.interfaces.cat_mat.material_manager import MaterialManager
+from pyv5.interfaces.mec_mod.part import Part
+from pyv5.interfaces.product_structure.product import Product
 
-application = catia()
+application = v5()
 
 ##########################################################
 # MATERIAL MANAGER ON MATERIAL CATALOGS

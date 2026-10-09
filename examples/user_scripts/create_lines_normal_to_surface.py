@@ -37,16 +37,16 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from pyv5 import GeometricalFeatureType, catia
-from pyv5.cat_logger import create_logger
-from pyv5.mec_mod_interfaces.hybrid_body import HybridBody
-from pyv5.mec_mod_interfaces.hybrid_shape import HybridShape
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.base.cat_logger import create_logger
+from pyv5.interfaces.mec_mod.hybrid_body import HybridBody
+from pyv5.interfaces.mec_mod.hybrid_shape import HybridShape
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
 LINE_LENGTH = 20
 
 logger = create_logger()
 
-application = catia()
+application = v5()
 part_document: PartDocument = application.active_document
 part = part_document.part
 hybrid_bodies = part.hybrid_bodies

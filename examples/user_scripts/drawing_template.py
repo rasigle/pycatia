@@ -45,7 +45,7 @@ from drawing_template_support.settings import sheet_sizes
 from drawing_template_support.template_name import create_template_name
 from drawing_template_support.title_block import create_title_block
 
-from pyv5.drafting_interfaces.drawing_view import DrawingView
+from pyv5.interfaces.drafting.drawing_view import DrawingView
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(

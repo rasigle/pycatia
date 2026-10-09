@@ -38,7 +38,7 @@ with open("api_index.rst", "w") as file:
         "=========\n\n\n"
         "This part of the documentation covers all the interfaces of pyv5.\n\n"
         "The entry point for most pyv5 use cases is to do the following.\n\n"
-        ">>> from pyv5 import catia\n\n"
+        ">>> from pyv5 import v5\n\n"
         "This creates an instance of the :ref:`Application<Application>` object.\n\n"
         ".. toctree::\n"
         "   :maxdepth: 1\n"

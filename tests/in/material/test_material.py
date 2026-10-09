@@ -5,13 +5,11 @@ from pathlib import Path
 
 import pytest
 
-from pyv5.base_interfaces.context import CATIADocHandler
-from pyv5.cat_mat_interfaces.material_document import MaterialDocument
-from pyv5.cat_mat_interfaces.material_manager import MaterialManager
-from pyv5.mec_mod_interfaces.part import Part
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.product_structure_interfaces.product import Product
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5.base.context import CATIADocHandler
+from pyv5.interfaces.cat_mat.material_document import MaterialDocument
+from pyv5.interfaces.cat_mat.material_manager import MaterialManager
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 from tests.common_vars import test_files
 from tests.conftest import application
 from tests.source_files import cat_material

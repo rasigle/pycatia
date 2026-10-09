@@ -20,10 +20,10 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from pyv5 import CatConstraintType, catia
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.sketcher_interfaces.geometry_2D import Geometry2D
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.sketcher.geometry_2D import Geometry2D
 
-application = catia()
+application = v5()
 documents = application.documents
 part_document: PartDocument = documents.add("Part")
 part = part_document.part

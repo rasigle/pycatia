@@ -1,13 +1,13 @@
 #! /usr/bin/python3.9
 import pytest
 
-from pyv5.knowledge_interfaces.bool_param import BoolParam
-from pyv5.knowledge_interfaces.int_param import IntParam
-from pyv5.knowledge_interfaces.real_param import RealParam
-from pyv5.knowledge_interfaces.str_param import StrParam
-from pyv5.mec_mod_interfaces.body import Body
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.mec_mod_interfaces.shape import Shape
+from pyv5.interfaces.knowledge.bool_param import BoolParam
+from pyv5.interfaces.knowledge.int_param import IntParam
+from pyv5.interfaces.knowledge.real_param import RealParam
+from pyv5.interfaces.knowledge.str_param import StrParam
+from pyv5.interfaces.mec_mod.body import Body
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.mec_mod.shape import Shape
 from tests.conftest import application
 from tests.source_files import cat_part_measurable
 

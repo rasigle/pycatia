@@ -1,7 +1,7 @@
 from pywintypes import com_error
 
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 from tests.common_vars import test_files
 from tests.conftest import application
 from tests.create_source_parts import get_cat_part_measurable

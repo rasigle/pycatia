@@ -50,17 +50,17 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 
 
 from pyv5 import CatConstraintMode, CatConstraintType, CatVisPropertyShow, catia
-from pyv5.cat_logger import create_logger
-from pyv5.knowledge_interfaces.length import Length
-from pyv5.mec_mod_interfaces.axis_system import AxisSystem
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.sketcher_interfaces.geometry_2D import Geometry2D
+from pyv5.base.cat_logger import create_logger
+from pyv5.interfaces.knowledge.length import Length
+from pyv5.interfaces.mec_mod.axis_system import AxisSystem
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.sketcher.geometry_2D import Geometry2D
 
 bbox_offset = 10
 
 logger = create_logger()
 
-application = catia()
+application = v5()
 part_document: PartDocument = application.active_document
 
 if ".CATPart" not in part_document.name:

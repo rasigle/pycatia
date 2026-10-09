@@ -25,14 +25,14 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
-from pyv5.hybrid_shape_interfaces.hybrid_shape_line_pt_pt import HybridShapeLinePtPt
-from pyv5.hybrid_shape_interfaces.hybrid_shape_point_coord import (
+from pyv5 import v5
+from pyv5.interfaces.hybrid_shape.hybrid_shape_line_pt_pt import HybridShapeLinePtPt
+from pyv5.interfaces.hybrid_shape.hybrid_shape_point_coord import (
     HybridShapePointCoord,
 )
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
-application = catia()
+application = v5()
 # if the active document is a CATPart this will return a PartDocument
 part_document: PartDocument = application.active_document
 part = part_document.part

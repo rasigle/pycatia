@@ -20,17 +20,17 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from pyv5 import CatPaperOrientation, CatPaperSize, CatTextAnchorPosition, catia
-from pyv5.drafting_interfaces.drawing_document import DrawingDocument
-from pyv5.drafting_interfaces.drawing_root import DrawingRoot
-from pyv5.drafting_interfaces.drawing_view import DrawingView
+from pyv5.interfaces.drafting.drawing_document import DrawingDocument
+from pyv5.interfaces.drafting.drawing_root import DrawingRoot
+from pyv5.interfaces.drafting.drawing_view import DrawingView
 from pyv5.exception_handling import CATIAApplicationException
-from pyv5.system_interfaces.any_object import AnyObject
+from pyv5.interfaces.system.any_object import AnyObject
 
 # A0 sheet size
 a0_x = 1189
 a0_y = 841
 
-application = catia()
+application = v5()
 # if the active document is a CATDrawing this will return a DrawingDocument
 drawing_document: DrawingDocument = application.active_document
 drawing = DrawingRoot(drawing_document.drawing_root.com_object)

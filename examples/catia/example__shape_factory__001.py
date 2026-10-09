@@ -21,11 +21,11 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
-from pyv5.mec_mod_interfaces.body import Body
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import v5
+from pyv5.interfaces.mec_mod.body import Body
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
-application = catia()
+application = v5()
 documents = application.documents
 part_document: PartDocument = documents.add("Part")
 part = part_document.part
@@ -83,7 +83,7 @@ body_cylinder_2 = Body(body_cylinder_2_item.com_object)
 # Noting, the VBA example uses
 # ‘CATIA.ActiveDocument.Part.CurrentShape = Pad1‘
 # to make Pad1 the current shape,
-# while there is no current_shape attribute in pyv5.mec_mod_interfaces.part.
+# while there is no current_shape attribute in pyv5.interfaces.mec_mod.part.
 # Using the in_work_object attribute can get the same effect.
 part.in_work_object = body_cylinder_1
 

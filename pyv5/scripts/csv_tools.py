@@ -5,7 +5,7 @@ import os
 import time
 from collections.abc import Generator
 
-from pyv5.mec_mod_interfaces.part import Part
+from pyv5.interfaces.mec_mod.part import Part
 
 unit_conversion = {
     "mm": 1,

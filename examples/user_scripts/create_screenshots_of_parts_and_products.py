@@ -56,11 +56,11 @@ from pathlib import Path
 from PIL import Image
 
 from pyv5 import CatCaptureFormat, CATIADocHandler, CatSpecsAndGeomWindowLayout
-from pyv5.cat_logger import create_logger
-from pyv5.in_interfaces.camera_3d import Camera3D
-from pyv5.in_interfaces.specs_and_geom_window import SpecsAndGeomWindow
-from pyv5.in_interfaces.viewer_3d import Viewer3D
-from pyv5.product_structure_interfaces.product import Product
+from pyv5.base.cat_logger import create_logger
+from pyv5.interfaces.core.camera_3d import Camera3D
+from pyv5.interfaces.core.specs_and_geom_window import SpecsAndGeomWindow
+from pyv5.interfaces.core.viewer_3d import Viewer3D
+from pyv5.interfaces.product_structure.product import Product
 
 # change this to the location of where your catia files are stored.
 source_cat_files = Path(Path.home(), "catia_parts")

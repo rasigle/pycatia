@@ -19,9 +19,9 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
+from pyv5 import v5
 
-application = catia()
+application = v5()
 
 application.logger.info("Hello world!")
 application.logger.warning("Stay alert, stay safe, bee kind!")

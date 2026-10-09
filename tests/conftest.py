@@ -9,8 +9,8 @@ import win32gui
 import win32process
 from win32com.universal import com_error
 
-from pyv5 import catia
-from pyv5.types.document import AnyDocument
+from pyv5.base.base_application import v5_application
+from pyv5.base.types import AnyDocument
 
 _CATIA_PROCESS_NAMES = {"cnext.exe", "delmia.exe", "catia.exe"}
 _OK_BUTTON_LABELS = {"OK", "Ok", "&OK"}
@@ -85,7 +85,7 @@ class _LazyApplication:
 
     def _get(self):
         if self._application is None:
-            self._application = catia()
+            self._application = v5_application()
             # Modal save/open dialogs freeze pytest waiting for a click.
             self._application.display_file_alerts = False
         return self._application

@@ -29,14 +29,14 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 from pathlib import Path
 
-from pyv5 import catia
-from pyv5.product_structure_interfaces.assembly_convertor import AssemblyConvertor
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import v5
+from pyv5.interfaces.product_structure.assembly_convertor import AssemblyConvertor
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
 # file_type can be "TXT", "HTML" or "XLS".
 file_type = "XLS"
 
-application = catia()
+application = v5()
 product_document: ProductDocument = application.active_document
 product = product_document.product
 

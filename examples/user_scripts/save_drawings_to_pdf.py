@@ -42,8 +42,8 @@ from pathlib import Path
 
 from pypdf import PdfWriter
 
-from pyv5 import CATIADocHandler
-from pyv5.drafting_interfaces.drawing_document import DrawingDocument
+from pyv5 import v5DocHandler
+from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 
 exclude_strings = ["Detail", "DXF"]
 source_cat_drawings = Path(Path.home(), "catia_parts")

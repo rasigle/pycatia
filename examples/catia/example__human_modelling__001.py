@@ -18,10 +18,10 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from pyv5 import SWKAnthroSex, SWKPostureSpec, catia
-from pyv5.dnb_human_modeling_interfaces.swk_hmi_workbench import SWKHmiWorkbench
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5.interfaces.dnb_human_modeling.swk_hmi_workbench import SWKHmiWorkbench
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
-application = catia()
+application = v5()
 # if the active document is a CATProduct this will return a ProductDocument
 product_document: ProductDocument = application.active_document
 product = product_document.product

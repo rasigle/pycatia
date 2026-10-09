@@ -19,13 +19,13 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
-from pyv5.in_interfaces.setting_controllers import SettingControllers
-from pyv5.system_interfaces.license_setting_att import LicenseSettingAtt
+from pyv5 import v5
+from pyv5.interfaces.core.setting_controllers import SettingControllers
+from pyv5.interfaces.system.license_setting_att import LicenseSettingAtt
 
 cat_lic = "AL3.prd"
 
-application = catia()
+application = v5()
 settings_controller = SettingControllers(application)
 setting_controller = settings_controller.item("CATSysLicenseSettingCtrl")
 license_settings = LicenseSettingAtt(setting_controller)

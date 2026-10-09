@@ -19,13 +19,13 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
-from pyv5.knowledge_interfaces.length import Length
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import v5
+from pyv5.interfaces.knowledge.length import Length
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
-# from pyv5.knowledge_interfaces import BoolParam
+# from pyv5.interfaces.knowledge import BoolParam
 
-application = catia()
+application = v5()
 part_document: PartDocument = application.active_document
 part = part_document.part
 

@@ -17,14 +17,14 @@ Requirements:
 import os
 import sys
 
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 import time
 from pathlib import Path
 
-from pyv5 import CATIADocHandler
+from pyv5 import v5DocHandler
 
 catia_part = Path(Path(os.getcwd()).parent, r"tests\cat_files\part_measurable.CATPart")
 

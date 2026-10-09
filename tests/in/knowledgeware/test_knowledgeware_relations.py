@@ -2,7 +2,7 @@
 import pytest
 from pywintypes import com_error
 
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 from tests.conftest import application
 from tests.source_files import cat_part_measurable
 from tests.source_files import design_table_1

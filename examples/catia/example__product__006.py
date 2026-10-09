@@ -20,11 +20,11 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
-from pyv5.product_structure_interfaces.product_document import ProductDocument
-from pyv5.space_analyses_interfaces.inertia import Inertia
+from pyv5 import v5
+from pyv5.interfaces.product_structure.product_document import ProductDocument
+from pyv5.interfaces.space_analyses.inertia import Inertia
 
-application = catia()
+application = v5()
 product_document: ProductDocument = application.active_document
 product = product_document.product
 

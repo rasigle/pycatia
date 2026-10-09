@@ -49,14 +49,14 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 from pathlib import Path
 
 from pyv5 import CatWorkModeType, catia
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
 if __name__ == "__main__":
     target_folder = Path(r"C:\temp")
     if not target_folder.exists():
         raise FileNotFoundError("The target folder does not exist. Please create it.")
 
-    application = catia()
+    application = v5()
     product_document: ProductDocument = application.active_document
 
     if not isinstance(product_document, ProductDocument):

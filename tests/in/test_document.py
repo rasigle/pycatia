@@ -7,11 +7,9 @@ from pathlib import Path
 import pytest
 from pywintypes import com_error
 
-from pyv5.base_interfaces.context import CATIADocHandler
-from pyv5.in_interfaces.document import Document
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.product_structure_interfaces.product_document import ProductDocument
-from pyv5.types.document import document_types
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.product_structure.product_document import ProductDocument
+from pyv5.base.types import document_types
 from tests.conftest import application
 from tests.source_files import cat_part_measurable
 from tests.source_files import cat_product

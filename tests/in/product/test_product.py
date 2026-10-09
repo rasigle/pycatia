@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pytest
 
-from pyv5.enumeration.enums import CatWorkModeType
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5.interfaces.enums import CatWorkModeType
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 from tests.conftest import application
 from tests.source_files import cat_part_measurable
 from tests.source_files import cat_product

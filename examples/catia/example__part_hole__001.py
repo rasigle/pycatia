@@ -21,11 +21,11 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.part_interfaces.hole import Hole
+from pyv5 import v5
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.part.hole import Hole
 
-application = catia()
+application = v5()
 part_document: PartDocument = application.active_document
 part = part_document.part
 selection = part_document.selection

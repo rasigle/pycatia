@@ -27,8 +27,8 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 import win32con
 import win32gui
 
-from pyv5 import catia
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import v5
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
 # Keep in mind, that almost all CATIA commands and windows are dependent on the UI language.
 # In order for this example to work you need to set your CATIA to english, or use the correct
@@ -53,7 +53,7 @@ def close_inertia_window():
     win32gui.PostMessage(handle, win32con.WM_CLOSE, 0, 0)
 
 
-application = catia()
+application = v5()
 product_document: ProductDocument = application.active_document
 product = product_document.product
 

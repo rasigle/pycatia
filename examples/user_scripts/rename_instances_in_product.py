@@ -41,12 +41,12 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 import random
 import string
 
-from pyv5 import catia
-from pyv5.cat_logger import create_logger
-from pyv5.in_interfaces.application import Application
-from pyv5.in_interfaces.document import Document
-from pyv5.product_structure_interfaces.product import Product
-from pyv5.product_structure_interfaces.products import Products
+from pyv5 import v5
+from pyv5.base.cat_logger import create_logger
+from pyv5.interfaces.core.application import Application
+from pyv5.interfaces.core.document import Document
+from pyv5.interfaces.product_structure.product import Product
+from pyv5.interfaces.product_structure.products import Products
 
 
 def tmp_string(size=6, chars: str = string.ascii_letters) -> str:
@@ -121,7 +121,7 @@ def rename_products(reference_products: Products, tmp_name: str or False = False
 if __name__ == "__main__":
     logger = create_logger()
 
-    application = catia()
+    application = v5()
     document = application.active_document
 
     selected_item = get_selected_item(document)

@@ -1,6 +1,6 @@
-from pyv5.hybrid_shape_interfaces.hybrid_shape_factory import HybridShapeFactory
-from pyv5.in_interfaces.reference import Reference
-from pyv5.mec_mod_interfaces.hybrid_body import HybridBody
+from pyv5.interfaces.hybrid_shape.hybrid_shape_factory import HybridShapeFactory
+from pyv5.interfaces.core.reference import Reference
+from pyv5.interfaces.mec_mod.hybrid_body import HybridBody
 
 
 def add_points(

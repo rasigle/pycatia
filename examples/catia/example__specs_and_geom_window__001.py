@@ -26,9 +26,9 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 from pathlib import Path
 
 from pyv5 import CatCaptureFormat, CATIADocHandler, CatSpecsAndGeomWindowLayout
-from pyv5.in_interfaces.specs_and_geom_window import SpecsAndGeomWindow
-from pyv5.product_structure_interfaces.product import Product
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5.interfaces.core.specs_and_geom_window import SpecsAndGeomWindow
+from pyv5.interfaces.product_structure.product import Product
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
 source_folder = Path(Path(os.getcwd()), "tests/cat_files")
 source_files = source_folder.glob("*.CATPart")

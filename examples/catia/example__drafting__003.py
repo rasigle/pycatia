@@ -20,9 +20,9 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from pyv5 import CatDimType, catia
-from pyv5.drafting_interfaces.drawing_document import DrawingDocument
+from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 
-application = catia()
+application = v5()
 drawing_document: DrawingDocument = application.active_document
 sheets = drawing_document.sheets
 sheet = sheets.active_sheet

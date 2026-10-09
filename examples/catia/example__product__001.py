@@ -68,8 +68,8 @@ from natsort import natsorted
 from pywinauto import Desktop
 from pywinauto.controls.win32_controls import ButtonWrapper, ListBoxWrapper
 
-from pyv5 import catia
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import v5
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
 lang = "EN"  # only EN and DE currently supported, more translations welcomed.
 sleep = 0.25
@@ -124,7 +124,7 @@ def get_window_text(window_text_translations: dict, lang):
 
 window_text = get_window_text(text_translations, lang)
 
-application = catia()
+application = v5()
 product_document: ProductDocument = application.active_document
 product = product_document.product
 

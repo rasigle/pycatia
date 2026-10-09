@@ -1,6 +1,6 @@
 import pytest
 
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
 from tests.source_files import cat_part_measurable
 

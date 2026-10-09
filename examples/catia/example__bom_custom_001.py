@@ -23,9 +23,9 @@ from collections import Counter
 from datetime import datetime
 
 from pyv5 import CatWorkModeType, catia
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
-application = catia()
+application = v5()
 product_document: ProductDocument = application.active_document
 product = product_document.product
 products = product.products

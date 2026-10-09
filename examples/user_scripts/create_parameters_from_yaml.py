@@ -71,11 +71,11 @@ from pathlib import Path
 
 import yaml
 
-from pyv5 import catia
-from pyv5.knowledge_interfaces.parameter_set import ParameterSet
-from pyv5.knowledge_interfaces.parameters import Parameters
-from pyv5.mec_mod_interfaces.part_document import PartDocument
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5 import v5
+from pyv5.interfaces.knowledge.parameter_set import ParameterSet
+from pyv5.interfaces.knowledge.parameters import Parameters
+from pyv5.interfaces.mec_mod.part_document import PartDocument
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
 f = Path(
     os.getcwd(),
@@ -84,7 +84,7 @@ f = Path(
     "parameters.yaml",
 )
 
-application = catia()
+application = v5()
 documents = application.documents
 part_document: PartDocument = documents.add("Part")
 active_document = application.active_document

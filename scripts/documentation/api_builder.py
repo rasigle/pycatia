@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 
 # module folder(s) within pyv5
-modules = ["threed_xml_interfaces"]
+modules = ["interfaces/threed_xml"]
 
 cwd = Path(os.getcwd())
 

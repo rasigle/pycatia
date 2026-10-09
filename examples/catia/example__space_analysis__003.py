@@ -26,10 +26,10 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 import csv
 from pathlib import Path
 
-from pyv5 import catia
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import v5
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
-application = catia()
+application = v5()
 documents = application.documents
 part_document: PartDocument = documents.open(
     Path(os.getcwd(), r"tests/cat_files/part_measurable.CATPart")

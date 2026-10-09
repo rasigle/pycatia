@@ -1,4 +1,4 @@
-from pyv5.funct_system_interfaces.functional_document import FunctionalDocument
+from pyv5.interfaces.funct_system.functional_document import FunctionalDocument
 from tests.common_vars import test_files
 from tests.conftest import application
 

@@ -21,12 +21,12 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from pyv5 import CatMeasurableName, CatSelectionFilter, GeometricalFeatureType, catia
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
 __author__ = "[ptm] by plm-forum.ru"
 __status__ = "alpha"
 
-application = catia()
+application = v5()
 documents = application.documents
 # if the active document is a CATPart this will return a PartDocument
 part_document: PartDocument = application.active_document

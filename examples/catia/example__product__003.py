@@ -23,10 +23,10 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 from pathlib import Path
 
 from pyv5 import CatWorkModeType, catia
-from pyv5.product_structure_interfaces.product import Product
-from pyv5.product_structure_interfaces.product_document import ProductDocument
+from pyv5.interfaces.product_structure.product import Product
+from pyv5.interfaces.product_structure.product_document import ProductDocument
 
-application = catia()
+application = v5()
 documents = application.documents
 product_document: ProductDocument = documents.open(
     Path(os.getcwd(), r"tests\cat_files\product_top.CATProduct")

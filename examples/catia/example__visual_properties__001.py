@@ -19,9 +19,9 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
-from pyv5 import catia
+from pyv5 import v5
 
-application = catia()
+application = v5()
 document = application.active_document
 selection = document.selection
 selection.search("CATGmoSearch.Point.Color='(255,0,0)',in")

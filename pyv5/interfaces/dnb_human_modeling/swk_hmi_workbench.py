@@ -2,7 +2,7 @@ from pathlib import Path
 
 from pyv5.interfaces.dnb_human_modeling.swk_human_catalog import SWKHumanCatalog
 from pyv5.interfaces.dnb_human_modeling.swk_manikin import SWKManikin
-from pyv5.interfaces.enums import SWKAnthroSex
+from pyv5.base.enums import SWKAnthroSex
 from pyv5.interfaces.system.any_object import AnyObject
 
 

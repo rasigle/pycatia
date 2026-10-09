@@ -1,5 +1,5 @@
 from pyv5.interfaces.core.reference import Reference
-from pyv5.interfaces.enums import CatConstraintMode, CatConstraintType
+from pyv5.base.enums import CatConstraintMode, CatConstraintType
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.product_structure.product_document import ProductDocument
 from tests.common_vars import test_files

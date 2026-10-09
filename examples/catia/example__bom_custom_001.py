@@ -16,15 +16,13 @@ Requirements:
 import os
 import sys
 
-from interfaces.enums import CatWorkModeType
-
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from collections import Counter
 from datetime import datetime
 
-from pyv5 import v5
+from pyv5 import CatWorkModeType, v5
 from pyv5.interfaces.product_structure.product_document import ProductDocument
 
 application = v5()

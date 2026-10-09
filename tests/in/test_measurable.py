@@ -6,7 +6,7 @@
 """
 import pytest
 
-from pyv5.interfaces.enums import CatMeasurableName
+from pyv5.base.enums import CatMeasurableName
 from pyv5.interfaces.mec_mod.hybrid_body import HybridBody
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from tests.create_source_parts import geom_set_arcs

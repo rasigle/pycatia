@@ -15,7 +15,7 @@ from pyv5.interfaces.core.setting_controllers import SettingControllers
 from pyv5.interfaces.core.system_configuration import SystemConfiguration
 from pyv5.interfaces.core.window import Window
 from pyv5.interfaces.core.windows import Windows
-from pyv5.interfaces.enums import CatScriptLanguage
+from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.system.any_object import AnyObject
 from pyv5.interfaces.system.system_service import SystemService
 

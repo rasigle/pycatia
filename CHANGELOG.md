@@ -11,6 +11,10 @@
 * Moved VBA ``Nothing`` from ``pyv5.scripts.vba`` to ``pyv5.base.nothing``
   (also exported as ``from pyv5 import vba_nothing``). The ``scripts`` package
   is gone. Optional COM object arguments still use the ``vba_nothing`` sentinel.
+* Moved IntEnum classes and enumeration tuples from ``pyv5.interfaces`` to
+  ``pyv5.base.enums`` / ``pyv5.base.enumeration_types``. IntEnum classes are
+  exported at the package root (``from pyv5 import CatPaperSize``).
+  ``enumeration_types`` is generated from the IntEnum members.
 
 ## 0.10.1
 

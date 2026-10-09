@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from pyv5.interfaces.enums import CatWorkModeType
+from pyv5.base.enums import CatWorkModeType
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.product_structure.product_document import ProductDocument
 from tests.conftest import application

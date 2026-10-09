@@ -41,7 +41,7 @@ def com_or_nothing(value: Any, application: Any) -> Any:
     :param application: The CATIA :class:`~pyv5.interfaces.core.application.Application`.
     """
     if value is vba_nothing:
-        from pyv5.interfaces.enums import CatScriptLanguage
+        from pyv5.base.enums import CatScriptLanguage
 
         return application.system_service.evaluate(
             _VBA_NOTHING,

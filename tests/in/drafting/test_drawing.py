@@ -1,10 +1,10 @@
 
 import pytest
 
-from pyv5.interfaces.enums import CatDrawingStandard
-from pyv5.interfaces.enums import CatPaperOrientation
-from pyv5.interfaces.enums import CatPaperSize
-from pyv5.interfaces.enums import CatSheetProjectionMethod
+from pyv5.base.enums import CatDrawingStandard
+from pyv5.base.enums import CatPaperOrientation
+from pyv5.base.enums import CatPaperSize
+from pyv5.base.enums import CatSheetProjectionMethod
 from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 from tests.conftest import application
 from tests.source_files import cat_drawing

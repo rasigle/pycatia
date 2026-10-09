@@ -1,7 +1,7 @@
 .. _EnumerationTypes:
 
-pycatia.enumeration.enumeration_types
-=====================================
+pyv5.base.enumeration_types
+===========================
 
-.. automodule:: pycatia.enumeration.enumeration_types
+.. automodule:: pyv5.base.enumeration_types
     :members:

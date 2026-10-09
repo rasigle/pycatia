@@ -1,3 +1,10 @@
+"""CATIA V5 enumeration constants as :class:`enum.IntEnum` classes.
+
+Import from the package root (``from pyv5 import CatPaperSize``) or from
+this module. Tuple aliases of the same names live in
+:mod:`pyv5.base.enumeration_types`.
+"""
+
 from enum import IntEnum
 
 
@@ -4077,3 +4084,10 @@ class TimeSpan_Type(IntEnum):
 
     STEP_TIME = 0
     TOTAL_TIME = 1
+
+
+__all__ = [
+    name
+    for name, obj in globals().items()
+    if isinstance(obj, type) and issubclass(obj, IntEnum) and obj is not IntEnum
+]

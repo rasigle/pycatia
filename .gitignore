@@ -155,8 +155,6 @@ win_32/*
 logo*
 *.cgr
 
-test*.py
-
 hasher.py
 
 # ignore my issues test scripts

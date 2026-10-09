@@ -9,9 +9,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import CD5SaveOperation_Scope
 from pyv5.interfaces.eno_cd5.cd5_engine import CD5Engine
 from pyv5.interfaces.eno_cd5.cd5_save_operation import CD5SaveOperation
-from pyv5.base.enums import CD5SaveOperation_Scope
 
 
 class CD5EngineV6R2014x(CD5Engine):

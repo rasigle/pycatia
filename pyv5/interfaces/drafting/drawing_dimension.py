@@ -9,10 +9,10 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.drafting.drawing_dim_ext_line import DrawingDimExtLine
 from pyv5.interfaces.drafting.drawing_dim_line import DrawingDimLine
 from pyv5.interfaces.drafting.drawing_dim_value import DrawingDimValue
-from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.knowledge.parameters import Parameters
 from pyv5.interfaces.system.any_object import AnyObject
 

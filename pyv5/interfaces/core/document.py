@@ -12,12 +12,12 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+from pyv5.base.enums import CatScriptLanguage
 from pyv5.base.exceptions import CATIAApplicationException
 from pyv5.interfaces.core.cameras import Cameras
 from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.core.window import Window
 from pyv5.interfaces.core.workbench import Workbench
-from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.space_analyses.spa_workbench import SPAWorkbench
 from pyv5.interfaces.system.any_object import AnyObject
 

@@ -11,9 +11,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 from typing import TYPE_CHECKING
 
+from pyv5.base.enums import CatShuttleMoveMode, CatShuttleVector
 from pyv5.interfaces.core.move import Move
 from pyv5.interfaces.core.position import Position
-from pyv5.base.enums import CatShuttleMoveMode, CatShuttleVector
 from pyv5.interfaces.navigator.group import Group
 from pyv5.interfaces.system.any_object import AnyObject
 

@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.assembly.assembly_feature import AssemblyFeature
 from pyv5.base.enums import CatStrCutbackType
+from pyv5.interfaces.assembly.assembly_feature import AssemblyFeature
 from pyv5.interfaces.knowledge.parameter import Parameter
 
 

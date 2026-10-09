@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import CatStrCutbackType
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.knowledge.parameter import Parameter
 from pyv5.interfaces.structure.str_cutback import StrCutback
 from pyv5.interfaces.structure.str_member_extremity import StrMemberExtremity

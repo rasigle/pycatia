@@ -11,8 +11,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 from collections.abc import Iterator
 
-from pyv5.base.types import CATVariant
 from pyv5.base.enums import CatClashImportType
+from pyv5.base.types import CATVariant
 from pyv5.interfaces.space_analyses.clash_result import ClashResult
 from pyv5.interfaces.system.collection import Collection
 

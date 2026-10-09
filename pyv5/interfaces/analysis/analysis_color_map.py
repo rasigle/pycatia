@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.base.types import CATVariant
 from pyv5.base.enums import SPMDistributionMode
+from pyv5.base.types import CATVariant
 from pyv5.interfaces.system.any_object import AnyObject
 
 

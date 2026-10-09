@@ -9,9 +9,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import SpringDef_Type
 from pyv5.interfaces.abq_automation.abq_property import ABQProperty
 from pyv5.interfaces.core.reference import Reference
-from pyv5.base.enums import SpringDef_Type
 from pyv5.interfaces.mec_mod.axis_system import AxisSystem
 
 

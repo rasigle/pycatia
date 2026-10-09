@@ -12,14 +12,14 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 import os
 from pathlib import Path
 
-from pyv5.interfaces.drafting.drawing_page_setup import DrawingPageSetup
-from pyv5.interfaces.drafting.drawing_views import DrawingViews
-from pyv5.interfaces.drafting.print_area import PrintArea
 from pyv5.base.enums import (
     CatPaperOrientation,
     CatSheetGenViewsPosMode,
     CatSheetProjectionMethod,
 )
+from pyv5.interfaces.drafting.drawing_page_setup import DrawingPageSetup
+from pyv5.interfaces.drafting.drawing_views import DrawingViews
+from pyv5.interfaces.drafting.print_area import PrintArea
 from pyv5.interfaces.system.any_object import AnyObject
 
 

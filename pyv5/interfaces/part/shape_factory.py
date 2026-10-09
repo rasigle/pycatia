@@ -9,7 +9,6 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import (
     CatChamferMode,
     CatChamferOrientation,
@@ -21,6 +20,7 @@ from pyv5.base.enums import (
     CatFilletVariation,
     CatSplitSide,
 )
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.hybrid_shape.hybrid_shape_symmetry import HybridShapeSymmetry
 from pyv5.interfaces.mec_mod.body import Body
 from pyv5.interfaces.mec_mod.factory import Factory

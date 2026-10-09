@@ -13,11 +13,11 @@ from collections.abc import Iterator
 
 from pywintypes import com_error
 
+from pyv5.base.enums import CatScriptLanguage
 from pyv5.base.exceptions import CATIAApplicationException
 from pyv5.interfaces.core.document import Document
 from pyv5.interfaces.core.selected_element import SelectedElement
 from pyv5.interfaces.core.vis_property_set import VisPropertySet
-from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.system.any_object import AnyObject
 
 

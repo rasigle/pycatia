@@ -9,12 +9,12 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import SWKPostureSpec
 from pyv5.interfaces.dnb_human_modeling.swk_body_element import SWKBodyElement
 from pyv5.interfaces.dnb_human_modeling.swk_center_of_gravity import (
     SWKCenterOfGravity,
 )
 from pyv5.interfaces.dnb_human_modeling.swk_segment import SWKSegment
-from pyv5.base.enums import SWKPostureSpec
 
 
 class SWKBody(SWKBodyElement):

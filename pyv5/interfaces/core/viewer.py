@@ -11,8 +11,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 from typing import TYPE_CHECKING
 
-from pyv5.interfaces.core.camera import Camera
 from pyv5.base.enums import CatScriptLanguage
+from pyv5.interfaces.core.camera import Camera
 from pyv5.interfaces.system.any_object import AnyObject
 
 if TYPE_CHECKING:

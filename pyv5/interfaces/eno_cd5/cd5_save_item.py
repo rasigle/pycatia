@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.eno_cd5.cd5_id import CD5ID
 from pyv5.base.enums import CD5SaveItem_Status
+from pyv5.interfaces.eno_cd5.cd5_id import CD5ID
 from pyv5.interfaces.system.any_object import AnyObject
 
 

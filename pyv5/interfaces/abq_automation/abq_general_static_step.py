@@ -9,13 +9,13 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import Stabilization_Type
 from pyv5.interfaces.abq_automation.abq_boundary_conditions import (
     ABQBoundaryConditions,
 )
 from pyv5.interfaces.abq_automation.abq_fields import ABQFields
 from pyv5.interfaces.abq_automation.abq_loads import ABQLoads
 from pyv5.interfaces.abq_automation.abq_step import ABQStep
-from pyv5.base.enums import Stabilization_Type
 
 
 class ABQGeneralStaticStep(ABQStep):

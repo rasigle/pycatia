@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.cat_mat.material import Material
 from pyv5.base.enums import CatScriptLanguage
+from pyv5.interfaces.cat_mat.material import Material
 from pyv5.interfaces.mec_mod.body import Body
 from pyv5.interfaces.mec_mod.hybrid_body import HybridBody
 from pyv5.interfaces.mec_mod.part import Part

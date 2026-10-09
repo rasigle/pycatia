@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import CatSewingIntersectionMode, CatSplitSide
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.part.surface_based_shape import SurfaceBasedShape
 
 

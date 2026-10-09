@@ -12,6 +12,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 import inspect
 from typing import TYPE_CHECKING
 
+from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.drafting.drawing_arrows import DrawingArrows
 from pyv5.interfaces.drafting.drawing_components import DrawingComponents
 from pyv5.interfaces.drafting.drawing_coord_dims import DrawingCoordDims
@@ -28,7 +29,6 @@ from pyv5.interfaces.drafting.drawing_view_generative_links import (
     DrawingViewGenerativeLinks,
 )
 from pyv5.interfaces.drafting.drawing_weldings import DrawingWeldings
-from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.mec_mod.geometric_elements import GeometricElements
 from pyv5.interfaces.sketcher.factory_2D import Factory2D
 from pyv5.interfaces.system.any_object import AnyObject

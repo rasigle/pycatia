@@ -9,9 +9,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import CatVisuIn3DMode
 from pyv5.interfaces.drafting_2dL.layout_2d_sheet import Layout2DSheet
 from pyv5.interfaces.drafting_2dL.layout_2d_sheets import Layout2DSheets
-from pyv5.base.enums import CatVisuIn3DMode
 from pyv5.interfaces.knowledge.parameters import Parameters
 from pyv5.interfaces.knowledge.relations import Relations
 from pyv5.interfaces.system.any_object import AnyObject

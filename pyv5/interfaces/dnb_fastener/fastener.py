@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.dmaps.activity import Activity
 from pyv5.base.enums import DNBPPRRemoveStatus
+from pyv5.interfaces.dmaps.activity import Activity
 from pyv5.interfaces.product_structure.product import Product
 from pyv5.interfaces.system.any_object import AnyObject
 

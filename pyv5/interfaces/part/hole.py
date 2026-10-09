@@ -11,8 +11,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 import inspect
 
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import CatScriptLanguage
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.knowledge.angle import Angle
 from pyv5.interfaces.knowledge.length import Length
 from pyv5.interfaces.knowledge.str_param import StrParam

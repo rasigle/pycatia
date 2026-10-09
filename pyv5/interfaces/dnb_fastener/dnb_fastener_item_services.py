@@ -9,11 +9,11 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import DNBAssignStatus
 from pyv5.interfaces.dmaps.activity import Activity
 from pyv5.interfaces.dmaps.resource import Resource
 from pyv5.interfaces.dnb_fastener.fastener import Fastener
 from pyv5.interfaces.dnb_fastener.fastener_set import FastenerSet
-from pyv5.base.enums import DNBAssignStatus
 from pyv5.interfaces.system.any_object import AnyObject
 
 

@@ -9,10 +9,10 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import CatWindowState
 from pyv5.interfaces.core.page_setup import PageSetup
 from pyv5.interfaces.core.viewer import Viewer
 from pyv5.interfaces.core.viewers import Viewers
-from pyv5.base.enums import CatWindowState
 from pyv5.interfaces.system.any_object import AnyObject
 
 

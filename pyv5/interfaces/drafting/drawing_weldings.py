@@ -11,8 +11,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 from collections.abc import Iterator
 
-from pyv5.interfaces.drafting.drawing_welding import DrawingWelding
 from pyv5.base.enums import CatWeldingSymbol
+from pyv5.interfaces.drafting.drawing_welding import DrawingWelding
 from pyv5.interfaces.system.collection import Collection
 
 

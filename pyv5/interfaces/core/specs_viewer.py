@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.core.viewer_2d import Viewer2D
 from pyv5.base.enums import CatSpecsLayout
+from pyv5.interfaces.core.viewer_2d import Viewer2D
 
 
 class SpecsViewer(Viewer2D):

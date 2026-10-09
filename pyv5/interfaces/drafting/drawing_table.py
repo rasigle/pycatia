@@ -11,15 +11,15 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 import inspect
 
-from pyv5.interfaces.drafting.drawing_leaders import DrawingLeaders
-from pyv5.interfaces.drafting.drawing_text import DrawingText
-from pyv5.interfaces.drafting.drawing_text_properties import DrawingTextProperties
 from pyv5.base.enums import (
     CatTableBorderType,
     CatTableComputeMode,
     CatTableInvertMode,
     CatTablePosition,
 )
+from pyv5.interfaces.drafting.drawing_leaders import DrawingLeaders
+from pyv5.interfaces.drafting.drawing_text import DrawingText
+from pyv5.interfaces.drafting.drawing_text_properties import DrawingTextProperties
 from pyv5.interfaces.system.any_object import AnyObject
 
 

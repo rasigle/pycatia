@@ -9,8 +9,8 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import CatMergeMode
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.part.sketch_based_shape import SketchBasedShape
 from pyv5.interfaces.sketcher.sketch import Sketch
 

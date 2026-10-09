@@ -11,12 +11,12 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 import inspect
 
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import (
     CatThreadPolarity,
     CatThreadSide,
     CatThreadStandard,
 )
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.knowledge.str_param import StrParam
 from pyv5.interfaces.part.dress_up_shape import DressUpShape
 

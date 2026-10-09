@@ -9,10 +9,10 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
+from pyv5.base.enums import HTSHand, HTSPickType
 from pyv5.interfaces.dmaps.activity import Activity
 from pyv5.interfaces.dnb_dpm.mfg_assembly import MfgAssembly
 from pyv5.interfaces.dnb_human_sim.worker_activity import WorkerActivity
-from pyv5.base.enums import HTSHand, HTSPickType
 from pyv5.interfaces.product_structure.product import Product
 
 

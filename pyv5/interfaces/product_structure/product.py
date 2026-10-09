@@ -14,16 +14,16 @@ from typing import TYPE_CHECKING
 
 from pywintypes import com_error
 
-from pyv5.base.exceptions import CATIAApplicationException
-from pyv5.interfaces.core.move import Move
-from pyv5.interfaces.core.position import Position
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import (
     CatFileType,
     CatProductSource,
     CatRepType,
     CatWorkModeType,
 )
+from pyv5.base.exceptions import CATIAApplicationException
+from pyv5.interfaces.core.move import Move
+from pyv5.interfaces.core.position import Position
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.knowledge.parameters import Parameters
 from pyv5.interfaces.knowledge.relations import Relations
 from pyv5.interfaces.mec_mod.constraints import Constraints

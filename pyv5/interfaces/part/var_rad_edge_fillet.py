@@ -12,9 +12,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 import inspect
 from typing import TYPE_CHECKING
 
+from pyv5.base.enums import CatFilletBitangencyType, CatFilletVariation
 from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.core.references import References
-from pyv5.base.enums import CatFilletBitangencyType, CatFilletVariation
 from pyv5.interfaces.knowledge.length import Length
 from pyv5.interfaces.part.edge_fillet import EdgeFillet
 

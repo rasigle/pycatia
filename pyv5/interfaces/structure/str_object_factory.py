@@ -9,13 +9,13 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 """
 
-from pyv5.interfaces.core.document import Document
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import (
     CatStrMaterialOrientation,
     CatStrMemberExtremity,
     CatStrPlaneMode,
 )
+from pyv5.interfaces.core.document import Document
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.structure.str_foundation import StrFoundation
 from pyv5.interfaces.structure.str_member import StrMember
 from pyv5.interfaces.structure.str_plate import StrPlate

@@ -39,9 +39,9 @@ import re
 import sys
 from collections.abc import Sequence
 
-from examples.delmia.create_text_tags_support.layout import layout_text_tags, TagSample
 from pywintypes import com_error
 
+from examples.delmia.create_text_tags_support.layout import TagSample, layout_text_tags
 from pyv5 import v5
 from pyv5.base.cat_logger import create_logger
 from pyv5.interfaces.dnb_igp_setup.tag_batch import TagPlacement

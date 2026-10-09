@@ -11,9 +11,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on
 
 import inspect
 
+from pyv5.base.enums import GeometricalFeatureType
 from pyv5.base.nothing import VBANothing, com_or_nothing
 from pyv5.interfaces.core.reference import Reference
-from pyv5.base.enums import GeometricalFeatureType
 from pyv5.interfaces.hybrid_shape.hybrid_shape_3d_curve_offset import (
     HybridShape3DCurveOffset,
 )

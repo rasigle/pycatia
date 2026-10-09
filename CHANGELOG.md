@@ -8,6 +8,9 @@
 * ``Document.close()`` suppresses file alerts so unsaved documents do not show a
   modal save dialog during automation.
 * Renamed to pyv5
+* Moved VBA ``Nothing`` from ``pyv5.scripts.vba`` to ``pyv5.base.nothing``
+  (also exported as ``from pyv5 import vba_nothing``). The ``scripts`` package
+  is gone. Optional COM object arguments still use the ``vba_nothing`` sentinel.
 
 ## 0.10.1
 

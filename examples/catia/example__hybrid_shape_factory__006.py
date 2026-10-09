@@ -19,9 +19,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
-from pyv5 import v5
+from pyv5 import v5, vba_nothing
 from pyv5.interfaces.mec_mod.part_document import PartDocument
-from pyv5.scripts.vba import vba_nothing
 
 application = v5()
 # if the active document is a CATPart this will return a PartDocument

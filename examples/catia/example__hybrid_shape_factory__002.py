@@ -18,12 +18,13 @@ Requirements:
 import os
 import sys
 
+from examples.catia.csv_tools import create_points
+
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
 from pyv5 import v5
 from pyv5.interfaces.mec_mod.part_document import PartDocument
-from pyv5.scripts.csv_tools import create_points
 
 application = v5()
 # # disable display refreshing to try tp speed up point generation.

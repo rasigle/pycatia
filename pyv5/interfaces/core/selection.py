@@ -14,11 +14,10 @@ from collections.abc import Iterator
 from pywintypes import com_error
 
 from pyv5.interfaces.enums import CatScriptLanguage
-from pyv5.exception_handling import CATIAApplicationException
+from pyv5.base.exceptions import CATIAApplicationException
 from pyv5.interfaces.core.document import Document
 from pyv5.interfaces.core.selected_element import SelectedElement
 from pyv5.interfaces.core.vis_property_set import VisPropertySet
-from pyv5.scripts.checking import check_type
 from pyv5.interfaces.system.any_object import AnyObject
 
 
@@ -1729,7 +1728,7 @@ class Selection(AnyObject):
         :rtype: str
         """
 
-        check_type(i_filter_type, tuple)
+        _check_type(i_filter_type, tuple)
 
         return self.selection.SelectElement2(
             i_filter_type, i_message, i_object_selection_before_command_use_possibility
@@ -1917,7 +1916,7 @@ class Selection(AnyObject):
         :rtype: str
         """
 
-        check_type(i_filter_type, tuple)
+        _check_type(i_filter_type, tuple)
 
         return self.selection.SelectElement3(
             i_filter_type,
@@ -2061,7 +2060,7 @@ class Selection(AnyObject):
         :rtype: tuple[str, Document]
         """
 
-        check_type(i_filter_type, tuple)
+        _check_type(i_filter_type, tuple)
 
         return self.selection.SelectElement4(
             i_filter_type,
@@ -2086,3 +2085,17 @@ class Selection(AnyObject):
 
     def __repr__(self):
         return f'Selection(name="{self.name}")'
+
+
+def _check_type(object_, type_):
+    """Function to check the object type and raise an error if the wrong expected type
+    is supplied.
+
+    :param object_: Any python object.
+    :param type_: Any python or pyv5 type.
+    """
+
+    if not isinstance(object_, type_):
+        raise TypeError(f"Wrong type. Expected type {type_}.")
+
+    pass

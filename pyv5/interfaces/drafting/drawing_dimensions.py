@@ -11,12 +11,11 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 from collections.abc import Iterator
 
+from pyv5.base.nothing import VBANothing, com_or_nothing
+from pyv5.base.types import CATVariant
 from pyv5.interfaces.drafting.drawing_dimension import DrawingDimension
-from pyv5.interfaces.enums import CatScriptLanguage
-from pyv5.scripts.vba import VBANothing, vba_nothing
 from pyv5.interfaces.system.any_object import AnyObject
 from pyv5.interfaces.system.collection import Collection
-from pyv5.base.types import CATVariant
 
 
 class DrawingDimensions(Collection):
@@ -207,19 +206,12 @@ class DrawingDimensions(Collection):
 
         i_geom_elem = [elem.com_object for elem in i_geom_elem]
 
-        if i_ldc_ref_elem == vba_nothing:
-            i_ldc_ref_elem = self.application.system_service.evaluate(
-                vba_nothing, CatScriptLanguage.CATVBScriptLanguage, "N", []
-            )
-        else:
-            i_ldc_ref_elem = i_ldc_ref_elem.com_object
-
         return DrawingDimension(
             self.drawing_dimensions.Add2(
                 i_type_dim,
                 i_geom_elem,
                 i_pt_coord_elem,
-                i_ldc_ref_elem,
+                com_or_nothing(i_ldc_ref_elem, self.application),
                 i_ldc_ref_angle,
             )
         )

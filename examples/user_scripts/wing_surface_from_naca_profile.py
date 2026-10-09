@@ -59,10 +59,9 @@ from wing_surface_from_naca_profile_support.parameters import create_parameters
 from wing_surface_from_naca_profile_support.points import add_points
 from wing_surface_from_naca_profile_support.read_dat_file import read_dat_file
 
-from pyv5 import v5
+from pyv5 import v5, vba_nothing
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.product_structure.product import Product
-from pyv5.scripts.vba import vba_nothing
 
 # read the contents of the file wing_surface_from_naca_profile_support/sc20610.dat and import the
 # coordinates

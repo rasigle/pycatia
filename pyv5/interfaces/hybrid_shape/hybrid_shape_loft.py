@@ -9,11 +9,10 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 """
 
-from pyv5.interfaces.enums import CatScriptLanguage
+from pyv5.base.nothing import VBANothing, com_or_nothing
 from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.knowledge.length import Length
 from pyv5.interfaces.mec_mod.hybrid_shape import HybridShape
-from pyv5.scripts.vba import VBANothing, vba_nothing
 
 
 class HybridShapeLoft(HybridShape):
@@ -612,14 +611,9 @@ class HybridShapeLoft(HybridShape):
         :rtype: None
         """
 
-        if i_point == vba_nothing:
-            i_point = self.application.system_service.evaluate(
-                vba_nothing, CatScriptLanguage.CATVBScriptLanguage, "N", []
-            )
-        else:
-            i_point = i_point.com_object
-
-        return self.hybrid_shape_loft.AddSectionToLoft(i_crv.com_object, i_ori, i_point)
+        return self.hybrid_shape_loft.AddSectionToLoft(
+            i_crv.com_object, i_ori, com_or_nothing(i_point, self.application)
+        )
 
     def get_area_law_tolerance_parameter(self) -> Length:
         """

@@ -11,7 +11,9 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 
 import inspect
 
-from pyv5.interfaces.enums import CatScriptLanguage, GeometricalFeatureType
+from pyv5.base.nothing import VBANothing, com_or_nothing
+from pyv5.interfaces.core.reference import Reference
+from pyv5.interfaces.enums import GeometricalFeatureType
 from pyv5.interfaces.hybrid_shape.hybrid_shape_3d_curve_offset import (
     HybridShape3DCurveOffset,
 )
@@ -226,9 +228,7 @@ from pyv5.interfaces.hybrid_shape.hybrid_shape_wrap_curve import HybridShapeWrap
 from pyv5.interfaces.hybrid_shape.hybrid_shape_wrap_surface import (
     HybridShapeWrapSurface,
 )
-from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.mec_mod.factory import Factory
-from pyv5.scripts.vba import VBANothing, vba_nothing
 
 
 class HybridShapeFactory(Factory):
@@ -5715,17 +5715,10 @@ class HybridShapeFactory(Factory):
         :rtype: HybridShapeSphere
         """
 
-        if i_axis == vba_nothing:
-            i_axis = self.application.system_service.evaluate(
-                vba_nothing, CatScriptLanguage.CATVBScriptLanguage, "N", []
-            )
-        else:
-            i_axis = i_axis.com_object
-
         return HybridShapeSphere(
             self.hybrid_shape_factory.AddNewSphere(
                 i_center.com_object,
-                i_axis,
+                com_or_nothing(i_axis, self.application),
                 i_radius,
                 i_begin_parallel_angle,
                 i_end_parallel_angle,

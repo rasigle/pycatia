@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyv5"
 description = "A python module to interface with the CATIA/DELMIA V5 COM object."
-readme = { file = "README.rst", content-type = "text/x-rst" }
+readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
 license-files = ["LICENSE.txt"]

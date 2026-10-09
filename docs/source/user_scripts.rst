@@ -29,6 +29,8 @@ Index
 
 :ref:`SAVE CHILD PARTS TO STP<Save Child Parts To STP>`
 
+:ref:`CREATE TEXT TAGS<Create Text Tags>`
+
 
 
 
@@ -161,3 +163,16 @@ Saves all CATParts in CATProduct to STP
 `save_child_parts_to_stp.py <https://github.com/ptm-tm/pycatia/blob/master/user_scripts/save_child_parts_to_stp.py>`_
 
 
+
+CREATE TEXT TAGS
+----------------
+
+Creates a TagGroup of robot tags that depict a user-defined string.
+Tags are spaced by an interpolation distance, optionally scaled to a given width and
+height, and numbered in human writing order. Tag creation goes through
+``TagGroupFactory.create_tag_group(..., tags=)``, which runs the loop
+inside CATIA when that is faster.
+
+See script header for more information.
+
+`create_text_tags.py <https://github.com/evereux/pycatia/blob/master/user_scripts/create_text_tags.py>`_

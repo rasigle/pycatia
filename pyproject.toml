@@ -31,11 +31,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/evereux/pyv5"
+Homepage = "https://github.com/rasigle/pyv5"
 Documentation = "https://pyv5.readthedocs.io"
-Repository = "https://github.com/evereux/pyv5"
-Changelog = "https://github.com/evereux/pyv5/blob/master/CHANGELOG.md"
-Issues = "https://github.com/evereux/pyv5/issues"
+Repository = "https://github.com/rasigle/pyv5"
+Changelog = "https://github.com/rasigle/pyv5/blob/master/CHANGELOG.md"
+Issues = "https://github.com/rasigle/pyv5/issues"
 
 [tool.setuptools.dynamic]
 version = {attr = "pyv5.version.__version__"}

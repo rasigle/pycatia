@@ -1,5 +1,3 @@
-
-
 import os
 from pathlib import Path
 
@@ -9,35 +7,34 @@ from pyv5.base.enums import CatWorkModeType
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.product_structure.product_document import ProductDocument
 from tests.conftest import application
-from tests.source_files import cat_part_measurable
-from tests.source_files import cat_product
+from tests.support.source_files import cat_part_measurable, cat_product
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_analyze(document_close_all_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
     product.activate_terminal_node(product.products)
     product.apply_work_mode(CatWorkModeType.DESIGN_MODE)
 
-    assert 1.5 == product.analyze.mass
-    assert 1500000.0 == product.analyze.volume
-    assert 120000.0 == product.analyze.wet_area
-    assert (50.0, 50.0, 25.0) == product.analyze.get_gravity_center()
-    assert (
-               1562.5000000000005,
-               0.0,
-               0.0,
-               0.0,
-               1562.5000000000005,
-               0.0,
-               0.0,
-               0.0,
-               2499.9999999999986,
-           ) == product.analyze.get_inertia()
+    assert product.analyze.mass == 1.5
+    assert product.analyze.volume == 1500000.0
+    assert product.analyze.wet_area == 120000.0
+    assert product.analyze.get_gravity_center() == (50.0, 50.0, 25.0)
+    assert product.analyze.get_inertia() == (
+        1562.5000000000005,
+        0.0,
+        0.0,
+        0.0,
+        1562.5000000000005,
+        0.0,
+        0.0,
+        0.0,
+        2499.9999999999986,
+    )
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_attributes(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
@@ -60,30 +57,30 @@ def test_attributes(document_open):
     assert product.attributes() == attributes
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_count_children(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
     assert product.count_children() == 4
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_definition(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
-    assert "pyv5 part for testing" == product.definition
+    assert product.definition == "pyv5 part for testing"
     product.definition = "new definition"
-    assert "new definition" == product.definition
+    assert product.definition == "new definition"
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_description_instance(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
     children = product.get_children()
     child = children[0]
 
-    assert "description instance text" == child.description_instance
+    assert child.description_instance == "description instance text"
 
     new_instance_name = "description instance text.1"
     child.description_instance = new_instance_name
@@ -91,14 +88,14 @@ def test_description_instance(document_open):
     assert new_instance_name == child.description_instance
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_description_reference(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
     children = product.get_children()
     child = children[0]
 
-    assert "" == child.description_reference
+    assert child.description_reference == ""
 
     new_description_reference = "This is the definition for CF_SubProduct1 2"
     child.description_reference = new_description_reference
@@ -106,21 +103,21 @@ def test_description_reference(document_open):
     assert new_description_reference == child.description_reference
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_file_name(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
     assert cat_part_measurable.name == product.file_name
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_full_name(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
     assert str(cat_part_measurable) == product.full_name
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_get_child(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
@@ -128,29 +125,29 @@ def test_get_child(document_open):
     assert child.part_number == "cat_product_sub_1"
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_get_products(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
     products = product.products
-    assert 'Product(name="cat_product_sub_1.1")' == products[0].__repr__()
+    assert products[0].__repr__() == 'Product(name="cat_product_sub_1.1")'
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_has_children_product(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
     assert product.has_children()
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_has_children_part(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
     assert not product.has_children()
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_is_catproduct_is_catpart(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
@@ -158,7 +155,7 @@ def test_is_catproduct_is_catpart(document_open):
     assert not product.is_catpart()
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_is_catpart(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
@@ -166,7 +163,7 @@ def test_is_catpart(document_open):
     assert not product.is_catproduct()
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_move(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
@@ -177,51 +174,64 @@ def test_move(document_open):
     # move the first child in parent.
     product = product.products[0]
 
-    transformation = (1.000, 0, 0, 0, 0.707, 0.707, 0, -0.707, 0.707, 10.000, 20.000, 30.000)
+    transformation = (
+        1.000,
+        0,
+        0,
+        0,
+        0.707,
+        0.707,
+        0,
+        -0.707,
+        0.707,
+        10.000,
+        20.000,
+        30.000,
+    )
     product.move.apply(transformation)
 
-    assert (
-               520.8333333333333,
-               0.0,
-               0.0,
-               0.0,
-               677.0833333333264,
-               -156.24999999999818,
-               0.0,
-               -156.24999999999818,
-               677.0833333333264,
-           ) == product.analyze.get_inertia()
+    assert product.analyze.get_inertia() == (
+        520.8333333333333,
+        0.0,
+        0.0,
+        0.0,
+        677.0833333333264,
+        -156.24999999999818,
+        0.0,
+        -156.24999999999818,
+        677.0833333333264,
+    )
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_name(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
-    assert "cat_part_measurable" == product.name
+    assert product.name == "cat_part_measurable"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_nomenclature(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
-    assert "pyv5 part for testing" == product.nomenclature
+    assert product.nomenclature == "pyv5 part for testing"
 
     new_nomenclature = "New Test Part"
     product.nomenclature = new_nomenclature
     assert new_nomenclature == product.nomenclature
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_part_number(document_close_all_open_test_close):
     part_document: PartDocument = application.active_document
     product = part_document.product
-    assert "cat_part_measurable" == product.part_number
+    assert product.part_number == "cat_part_measurable"
 
     product.part_number = "new_part_number"
-    assert "new_part_number" == product.part_number
+    assert product.part_number == "new_part_number"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_path(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
@@ -244,7 +254,7 @@ def test_publications():
     pass
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_reference_product(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
@@ -256,13 +266,13 @@ def test_relations():
     pass
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_revision(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
-    assert "A.1" == product.revision
+    assert product.revision == "A.1"
     product.revision = "B"
-    assert "B" == product.revision
+    assert product.revision == "B"
 
 
 def test_activate_default_shape():
@@ -380,9 +390,9 @@ def test_update():
     pass
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_repr(document_open):
     part_document: PartDocument = application.active_document
     product = part_document.product
 
-    assert 'Product(name="cat_part_measurable")' == product.__repr__()
+    assert product.__repr__() == 'Product(name="cat_part_measurable")'

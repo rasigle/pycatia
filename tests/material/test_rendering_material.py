@@ -1,23 +1,23 @@
-
 """
 Tests the RenderingMaterial object.
 
 Warning: This tests requires that the test_material_document test passed from the test_material.py file.
 """
+
 import os
 from pathlib import Path
 
 import pytest
 
 from pyv5.interfaces.cat_mat.material_document import MaterialDocument
-from tests.common_vars import test_files
 from tests.conftest import application
-from tests.source_files import cat_material
+from tests.support.common_vars import test_files
+from tests.support.source_files import cat_material
 
 icon_folder = Path(os.getcwd(), test_files)
 
 
-@pytest.mark.parametrize('file_name', [cat_material])
+@pytest.mark.parametrize("file_name", [cat_material])
 def test_ambient_color(document_close_all_open_test_close):
     material_document: MaterialDocument = application.active_document
     material_families = material_document.families

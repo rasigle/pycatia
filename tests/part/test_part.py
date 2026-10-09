@@ -1,5 +1,3 @@
-
-
 import pytest
 
 from pyv5.base.exceptions import CATIAApplicationException
@@ -7,11 +5,10 @@ from pyv5.interfaces.mec_mod.part import Part
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.product_structure.product_document import ProductDocument
 from tests.conftest import application
-from tests.source_files import cat_part_measurable
-from tests.source_files import cat_product
+from tests.support.source_files import cat_part_measurable, cat_product
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_activation(document_close_all_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -30,7 +27,7 @@ def test_activation(document_close_all_open):
     assert not part.is_inactive(item)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_axis_systems(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -51,7 +48,8 @@ def test_axis_systems(document_open):
 #
 #         assert annotation_sets.com_object.Item(1).name == 'Annotation Set.1'
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_bodies(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -61,7 +59,7 @@ def test_bodies(document_open):
     assert bodies.com_object.Item(1).Name in ["PartBody", "Hauptkörper"]
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_create_geometrical_set(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -72,7 +70,7 @@ def test_create_geometrical_set(document_open):
     assert geometrical_set.name == "lala"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_density_of_part(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -80,7 +78,7 @@ def test_density_of_part(document_open):
     assert part.density == 1000.0
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_file_name(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
@@ -91,7 +89,7 @@ def test_file_name(document_open):
             assert part.file_name == cat_part_measurable.name
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_full_name(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
@@ -102,7 +100,7 @@ def test_full_name(document_open):
             assert part.full_name == str(cat_part_measurable)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_find_object_by_name(document_close_all_open_test_close):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -116,7 +114,7 @@ def test_find_object_by_name(document_close_all_open_test_close):
         pass
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_in_work_object(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -130,7 +128,7 @@ def test_in_work_object(document_open):
     assert part.in_work_object.name in ["PartBody", "Hauptkörper"]
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_is_up_to_date_1(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -138,7 +136,7 @@ def test_is_up_to_date_1(document_open):
     assert part.is_up_to_date(part)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_is_up_to_date_2(document_open_test_close):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -151,7 +149,7 @@ def test_is_up_to_date_2(document_open_test_close):
     assert not part.is_up_to_date(part)
 
 
-@pytest.mark.parametrize('file_name', [cat_product])
+@pytest.mark.parametrize("file_name", [cat_product])
 def test_path(document_open):
     product_document: ProductDocument = application.active_document
     product = product_document.product
@@ -162,9 +160,9 @@ def test_path(document_open):
             assert part.path() == cat_part_measurable
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_repr(document_open_test_close_all):
     part_document: PartDocument = application.active_document
     part = part_document.part
 
-    assert 'Part(name="cat_part_measurable")' == part.__repr__()
+    assert part.__repr__() == 'Part(name="cat_part_measurable")'

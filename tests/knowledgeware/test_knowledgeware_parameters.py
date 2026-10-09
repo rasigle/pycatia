@@ -1,4 +1,3 @@
-
 import pytest
 
 from pyv5.interfaces.knowledge.bool_param import BoolParam
@@ -9,10 +8,10 @@ from pyv5.interfaces.mec_mod.body import Body
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.mec_mod.shape import Shape
 from tests.conftest import application
-from tests.source_files import cat_part_measurable
+from tests.support.source_files import cat_part_measurable
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_parameters_name(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -26,7 +25,7 @@ def test_parameters_name(document_open):
     ]
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_all_parameters(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -40,7 +39,7 @@ def test_all_parameters(document_open):
     ]
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_create_boolean(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -52,7 +51,7 @@ def test_create_boolean(document_open):
     assert new_boolean_parm.value is True
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_create_dimension(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -64,7 +63,7 @@ def test_create_dimension(document_open):
     assert new_dimension_parm.value == 30.1
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_create_int(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -76,7 +75,7 @@ def test_create_int(document_open):
     assert new_int_parm.value == 30
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_create_list(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -87,7 +86,7 @@ def test_create_list(document_open):
     assert new_list.name == r"new_list"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_count_parameters(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -96,7 +95,7 @@ def test_count_parameters(document_open):
     assert parameters.count == 114
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_create_real(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -108,7 +107,7 @@ def test_create_real(document_open):
     assert new_list.value == 5.4
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_create_parameters_set(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -116,10 +115,13 @@ def test_create_parameters_set(document_open):
     root_parameter_set = parameters.root_parameter_set
     parameters.create_set_of_parameters(root_parameter_set)
     parameter_sets = root_parameter_set.parameter_sets.items()
-    assert parameter_sets[0].__repr__() in ['ParameterSet(name="Parameters.1")', 'ParameterSet(name="Parameter.1")']
+    assert parameter_sets[0].__repr__() in [
+        'ParameterSet(name="Parameters.1")',
+        'ParameterSet(name="Parameter.1")',
+    ]
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_create_string(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -131,7 +133,7 @@ def test_create_string(document_open):
     assert new_string.value == "this is a string"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_name_to_use_in_relation(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -143,7 +145,7 @@ def test_get_name_to_use_in_relation(document_open):
     assert name_to_use == "new_string.1"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_has_parameters(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -152,7 +154,7 @@ def test_has_parameters(document_open):
     assert parameters.has_parameters() > 0
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_item(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -162,13 +164,13 @@ def test_item(document_open):
     str_param = parameters.create_string("new_string", "new_value")
     real_param = parameters.create_real("new_real", 10.1)
 
-    assert type(bool_param) == BoolParam
-    assert type(int_param) == IntParam
-    assert type(str_param) == StrParam
-    assert type(real_param) == RealParam
+    assert type(bool_param) is BoolParam
+    assert type(int_param) is IntParam
+    assert type(str_param) is StrParam
+    assert type(real_param) is RealParam
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_sub_list(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -176,7 +178,9 @@ def test_sub_list(document_open):
     assert body_item is not None
 
     body = Body(body_item.com_object)
-    shape_item = body.shapes.get_item_by_name("Pad.1") or body.shapes.get_item_by_name("Block.1")
+    shape_item = body.shapes.get_item_by_name("Pad.1") or body.shapes.get_item_by_name(
+        "Block.1"
+    )
 
     assert shape_item is not None
 
@@ -189,7 +193,7 @@ def test_sub_list(document_open):
     ]
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_remove(document_open_test_close):
     part_document: PartDocument = application.active_document
     part = part_document.part

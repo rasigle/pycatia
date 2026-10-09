@@ -1,9 +1,9 @@
-from pyv5.interfaces.core.reference import Reference
 from pyv5.base.enums import CatConstraintMode, CatConstraintType
+from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.product_structure.product_document import ProductDocument
-from tests.common_vars import test_files
 from tests.conftest import application
+from tests.support.common_vars import test_files
 
 source_cat_part_measurable = test_files / "part_measurable.CATPart"
 

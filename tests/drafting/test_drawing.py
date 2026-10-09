@@ -1,31 +1,35 @@
-
 import pytest
 
-from pyv5.base.enums import CatDrawingStandard
-from pyv5.base.enums import CatPaperOrientation
-from pyv5.base.enums import CatPaperSize
-from pyv5.base.enums import CatSheetProjectionMethod
+from pyv5.base.enums import (
+    CatDrawingStandard,
+    CatPaperOrientation,
+    CatPaperSize,
+    CatSheetProjectionMethod,
+)
 from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 from tests.conftest import application
-from tests.source_files import cat_drawing
-
+from tests.support.source_files import cat_drawing
 
 # todo: tests for parameters and relations
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_drawing_doc_type(document_close_all_open):
     drawing_document: DrawingDocument = application.active_document
     assert type(drawing_document) is DrawingDocument
 
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_active_drawing(document_open):
     drawing_document: DrawingDocument = application.active_document
     drawing_root = drawing_document.drawing_root
-    assert drawing_root.active_sheet.name in ["Sheet.1", "Blatt.1"]  # TODO: Add more languages
+    assert drawing_root.active_sheet.name in [
+        "Sheet.1",
+        "Blatt.1",
+    ]  # TODO: Add more languages
 
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_orientation(document_open):
     drawing_document: DrawingDocument = application.active_document
     sheets = drawing_document.sheets
@@ -35,7 +39,7 @@ def test_orientation(document_open):
     assert sheet_1.orientation == CatPaperOrientation.catPaperPortrait
 
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_paper_size(document_open):
     drawing_document: DrawingDocument = application.active_document
     sheets = drawing_document.sheets
@@ -45,21 +49,21 @@ def test_paper_size(document_open):
     assert sheet_1.paper_size == CatPaperSize.catPaperA1
 
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_sheets(document_open):
     drawing_document = application.active_document
     sheets = drawing_document.sheets
     assert sheets.item(2).name == "Sheet.2"
 
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_standard(document_open):
     drawing_document: DrawingDocument = application.active_document
     standard = drawing_document.standard
     assert standard == CatDrawingStandard.catISO
 
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_reorder(document_open_test_close_all):
     drawing_document: DrawingDocument = application.active_document
     drawing_root = drawing_document.drawing_root
@@ -72,11 +76,11 @@ def test_reorder(document_open_test_close_all):
 
     sheets = drawing_document.sheets
 
-    assert not sheets.item(1).name == "Sheet.1"
+    assert sheets.item(1).name != "Sheet.1"
     assert sheets.item(1).name == "Sheet.2"
 
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_scale(document_open_test_close_all):
     drawing_document: DrawingDocument = application.active_document
     sheets = drawing_document.sheets
@@ -86,7 +90,7 @@ def test_scale(document_open_test_close_all):
     assert sheet_1.scale == 2.0
 
 
-@pytest.mark.parametrize('file_name', [cat_drawing])
+@pytest.mark.parametrize("file_name", [cat_drawing])
 def test_projection_method(document_open_test_close_all):
     drawing_document = application.active_document
     drawing_root = drawing_document.drawing_root

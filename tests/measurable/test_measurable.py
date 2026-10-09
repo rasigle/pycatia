@@ -1,29 +1,30 @@
-
-
 """
-    This file is named test_measurable.py so these tests are run first. Otherwise the tests would fail for
-    test_document.py. I've no idea why at the moment.
+This file is named test_measurable.py so these tests are run first. Otherwise the tests would fail for
+test_document.py. I've no idea why at the moment.
 """
+
 import pytest
 
 from pyv5.base.enums import CatMeasurableName
 from pyv5.interfaces.mec_mod.hybrid_body import HybridBody
 from pyv5.interfaces.mec_mod.part_document import PartDocument
-from tests.create_source_parts import geom_set_arcs
-from tests.create_source_parts import geom_set_cylinders
-from tests.create_source_parts import geom_set_lines
-from tests.create_source_parts import geom_set_planes
-from tests.create_source_parts import geom_set_points
-from tests.create_source_parts import geom_set_surfaces
-from tests.source_files import cat_part_measurable
 from tests.conftest import application
+from tests.support.create_source_parts import (
+    geom_set_arcs,
+    geom_set_cylinders,
+    geom_set_lines,
+    geom_set_planes,
+    geom_set_points,
+    geom_set_surfaces,
+)
+from tests.support.source_files import cat_part_measurable
 
 
 def round_tuple(tuple_object, decimal_places=6):
     rounded_list = list()
 
     for item in tuple_object:
-        if isinstance(item, int) or isinstance(item, float):
+        if isinstance(item, int | float):
             rounded = round(item, decimal_places)
             rounded_list.append(rounded)
         else:
@@ -32,7 +33,7 @@ def round_tuple(tuple_object, decimal_places=6):
     return tuple(rounded_list)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_area(document_open):
     document = application.active_document
     assert document is not None
@@ -51,7 +52,7 @@ def test_area(document_open):
     assert area == round(area_m, 6)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_geometry_name(document_open):
     document = application.active_document
     assert document is not None
@@ -67,7 +68,7 @@ def test_geometry_name(document_open):
     assert measurable.geometry_name == CatMeasurableName.CatMeasurableVolume
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_length(document_open):
     document = application.active_document
     assert document is not None
@@ -89,7 +90,7 @@ def test_length(document_open):
     assert length == round(catia_length, 6)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_perimeter(document_open):
     document = application.active_document
     assert document is not None
@@ -111,7 +112,7 @@ def test_perimeter(document_open):
     assert perimeter == round(catia_perimeter, 6)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_radius(document_open):
     document = application.active_document
     assert document is not None
@@ -132,7 +133,7 @@ def test_radius(document_open):
     assert radius == round(catia_radius, 6)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_angle_between(document_open):
     document = application.active_document
     assert document is not None
@@ -155,7 +156,7 @@ def test_angle_between(document_open):
     assert angle == round(catia_angle, 6)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_axis(document_open):
     """
     # I've really no idea what the axis for an arc/circle/cylinder is.
@@ -180,10 +181,14 @@ def test_get_axis(document_open):
     axis = (0.0, 0.0, 441.941738)
     catia_axis = arc_measurable.get_axis()
 
-    assert axis == (round(catia_axis[0], 6), round(catia_axis[1], 6), round(catia_axis[2], 6))
+    assert axis == (
+        round(catia_axis[0], 6),
+        round(catia_axis[1], 6),
+        round(catia_axis[2], 6),
+    )
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_axis_system(document_open):
     """
     :return:
@@ -198,7 +203,20 @@ def test_get_axis_system(document_open):
     axis_reference = part.create_reference_from_object(axis)
     axis_measurable = spa_workbench.get_measurable(axis_reference)
 
-    axis_system = (0.000, 0.000, 0.000, 1.000, 0.000, 0.000, 0.000, 1.000, 0.000000, 0.000000, 0.000000, 1.000000)
+    axis_system = (
+        0.000,
+        0.000,
+        0.000,
+        1.000,
+        0.000,
+        0.000,
+        0.000,
+        1.000,
+        0.000000,
+        0.000000,
+        0.000000,
+        1.000000,
+    )
     catia_axis = axis_measurable.get_axis_system()
 
     assert axis_system == (
@@ -217,7 +235,7 @@ def test_get_axis_system(document_open):
     )
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_direction(document_open):
     document = application.active_document
     assert document is not None
@@ -243,7 +261,7 @@ def test_get_direction(document_open):
     )
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_minimum_distance(document_open):
     document = application.active_document
     assert document is not None
@@ -272,7 +290,7 @@ def test_get_minimum_distance(document_open):
     assert minimum_distance == round(catia_minimum_distance, 6)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_minimum_distance_points(document_open):
     document = application.active_document
     assert document is not None
@@ -292,13 +310,25 @@ def test_get_minimum_distance_points(document_open):
     point2 = hybrid_body.hybrid_shapes.item(3)
     point2_reference = part.create_reference_from_object(point2)
 
-    minimum_distance_points = (0.000000, 0.000000, 0.000000, 100.000000, 100.000000, 0.000000, None, None, None)
-    catia_minimum_distance_points = point1_measurable.get_minimum_distance_points(point2_reference)
+    minimum_distance_points = (
+        0.000000,
+        0.000000,
+        0.000000,
+        100.000000,
+        100.000000,
+        0.000000,
+        None,
+        None,
+        None,
+    )
+    catia_minimum_distance_points = point1_measurable.get_minimum_distance_points(
+        point2_reference
+    )
 
     assert minimum_distance_points == round_tuple(catia_minimum_distance_points, 6)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_plane(document_open):
     document = application.active_document
     assert document is not None
@@ -321,7 +351,7 @@ def test_get_plane(document_open):
     assert plane == catia_plane
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_point(document_open):
     document = application.active_document
     assert document is not None
@@ -348,7 +378,7 @@ def test_get_point(document_open):
     assert point == catia_point
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_points_on_axis(document_open):
     document = application.active_document
     assert document is not None
@@ -381,7 +411,7 @@ def test_get_points_on_axis(document_open):
     assert cylinder == catia_cylinder
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_get_points_on_curve(document_open):
     document = application.active_document
     assert document is not None
@@ -414,7 +444,7 @@ def test_get_points_on_curve(document_open):
     assert points_on_curve == catia_points_on_curve
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_volume(document_open):
     document = application.active_document
     assert document is not None
@@ -433,7 +463,7 @@ def test_volume(document_open):
     assert volume == round(catia_volume, 6)
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_centre_of_gravity(document_open):
     document = application.active_document
     assert document is not None
@@ -459,7 +489,7 @@ def test_centre_of_gravity(document_open):
     )
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_angle(document_open):
     document = application.active_document
     assert document is not None
@@ -481,7 +511,7 @@ def test_angle(document_open):
     assert angle == catia_angle
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_center(document_open):
     document = application.active_document
     assert document is not None

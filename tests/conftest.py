@@ -103,7 +103,7 @@ application = _LazyApplication()
 @pytest.fixture(scope="session")
 def ensure_source_catia_files():
     """Create gitignored CATIA source documents once, after collection."""
-    from tests.source_files import ensure_source_catia_files as _ensure
+    from tests.support.source_files import ensure_source_catia_files as _ensure
 
     _ensure()
 

@@ -1,8 +1,8 @@
-from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 from pyv5.base.enums import CatPaperSize
-from tests.common_vars import test_files
+from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 from tests.conftest import application
-from tests.create_source_parts import get_cat_part_measurable
+from tests.support.common_vars import test_files
+from tests.support.create_source_parts import get_cat_part_measurable
 
 source_cat_drawing = test_files / "drawing.CATDrawing"
 

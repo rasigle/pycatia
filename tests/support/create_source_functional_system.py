@@ -1,6 +1,6 @@
 from pyv5.interfaces.funct_system.functional_document import FunctionalDocument
-from tests.common_vars import test_files
 from tests.conftest import application
+from tests.support.common_vars import test_files
 
 source_functional_document = test_files / "FunctionalSystem1.CATSystem"
 

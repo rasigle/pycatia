@@ -3,15 +3,13 @@
 ## 0.11.0 - Unreleased
 
 * ``TagGroupFactory.create_tag_group(..., tags=)`` and ``TagGroup.create_tags``
-  create many tags in one in-process ``SystemService.Evaluate`` call when that
-  is faster, and fall back to per-tag COM. ``TagPlacement`` holds name, pose,
-  and frame type.
+  create many tags in one in-process ``SystemService.Evaluate`` call when that  is faster, and fall back to per-tag COM. 
 * Migrated packaging to ``pyproject.toml``. Removed ``setup.py`` and ``requirements/``.
 * ``catia()`` now connects to a running ``CATIA.Application``, ``DELMIA.Application`` or
   ``CNEXT.Application`` COM object, instead of only ``CATIA.Application``.
 * ``Document.close()`` suppresses file alerts so unsaved documents do not show a
   modal save dialog during automation.
-* Renamed to pyv5
+* Project renamed to pyv5.
 * Moved VBA ``Nothing`` from ``pyv5.scripts.vba`` to ``pyv5.base.nothing``
   (also exported as ``from pyv5 import vba_nothing``). The ``scripts`` package
   is gone. Optional COM object arguments still use the ``vba_nothing`` sentinel.
@@ -19,6 +17,7 @@
   ``pyv5.base.enums`` / ``pyv5.base.enumeration_types``. IntEnum classes are
   exported at the package root (``from pyv5 import CatPaperSize``).
   ``enumeration_types`` is generated from the IntEnum members.
+* Reorganized ``tests/`` by functionality and dropped ``tests/in``.
 
 ## 0.10.1
 

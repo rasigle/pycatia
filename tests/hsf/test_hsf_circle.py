@@ -1,10 +1,9 @@
-
 import pytest
 
 from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from tests.conftest import application
-from tests.source_files import cat_part_measurable
+from tests.support.source_files import cat_part_measurable
 
 
 def test_circle2_points_rad():
@@ -12,7 +11,7 @@ def test_circle2_points_rad():
     pass
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_circle3_points(document_open_test_close):
     cord_1 = (40, 40, 0)
     cord_2 = (130, 70, 0)
@@ -36,7 +35,7 @@ def test_circle3_points(document_open_test_close):
     spa = part_document.spa_workbench()
     measurable = spa.get_measurable(Reference(circle.com_object))
 
-    assert 158.597 == round(measurable.radius, 3)
+    assert round(measurable.radius, 3) == 158.597
 
 
 def test_circle_bitangent_point():

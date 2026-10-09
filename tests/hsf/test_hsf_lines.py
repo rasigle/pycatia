@@ -1,10 +1,9 @@
-
 import pytest
 
 from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from tests.conftest import application
-from tests.source_files import cat_part_measurable
+from tests.support.source_files import cat_part_measurable
 
 
 def test_line_angle():
@@ -31,7 +30,7 @@ def test_line_point_direction():
     pass
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_line_point_point(document_open_test_close):
     length = 100
     co_ord_1 = (0, 0, 0)
@@ -50,7 +49,9 @@ def test_line_point_point(document_open_test_close):
     gs_new.append_hybrid_shape(point_1)
     gs_new.append_hybrid_shape(point_2)
 
-    line = hsf.add_new_line_pt_pt(Reference(point_1.com_object), Reference(point_2.com_object))
+    line = hsf.add_new_line_pt_pt(
+        Reference(point_1.com_object), Reference(point_2.com_object)
+    )
 
     gs_new.append_hybrid_shape(line)
 

@@ -2,9 +2,9 @@ from pywintypes import com_error
 
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.product_structure.product_document import ProductDocument
-from tests.common_vars import test_files
 from tests.conftest import application
-from tests.create_source_parts import get_cat_part_measurable
+from tests.support.common_vars import test_files
+from tests.support.create_source_parts import get_cat_part_measurable
 
 source_cat_product = test_files / "product_top.CATProduct"
 source_cat_sub_1 = test_files / "product_sub_1.CATProduct"

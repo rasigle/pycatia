@@ -1,14 +1,12 @@
-
 import pytest
 from pywintypes import com_error
 
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from tests.conftest import application
-from tests.source_files import cat_part_measurable
-from tests.source_files import design_table_1
+from tests.support.source_files import cat_part_measurable, design_table_1
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_count(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -17,7 +15,7 @@ def test_relations_count(document_open):
     assert relations.count == 4
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_check(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -40,18 +38,20 @@ def test_relations_create_check(document_open):
     assert new_check.name == "mass-check"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_design_table(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
     relations = part.relations
 
-    design_table = relations.create_design_table("new-design-table", "this is a comment", True, design_table_1)
+    design_table = relations.create_design_table(
+        "new-design-table", "this is a comment", True, design_table_1
+    )
 
     assert design_table.name == "new-design-table"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_formula(document_open):
     name = "new-formula"
     comment = "this is a comment"
@@ -71,12 +71,14 @@ def test_relations_create_formula(document_open):
 
     relations = part.relations
 
-    formula = relations.create_formula(name, comment, target_parm, f"{lm_name}+{um_name}")
+    formula = relations.create_formula(
+        name, comment, target_parm, f"{lm_name}+{um_name}"
+    )
 
     assert formula.name == "new-formula"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_horizontal_design_table(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -89,7 +91,7 @@ def test_relations_create_horizontal_design_table(document_open):
     assert design_table.name == "new-design-table"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_law(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -100,7 +102,7 @@ def test_relations_create_law(document_open):
     assert law.name == "new-law"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_program(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -116,7 +118,7 @@ def test_relations_create_program(document_open):
     assert program.name == "new-program"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_rule_base(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -127,7 +129,7 @@ def test_relations_create_rule_base(document_open):
     assert rule_base.name == "new-rule-base"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_set_of_equations(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -148,7 +150,7 @@ def test_relations_create_set_of_equations(document_open):
     assert eq_set.name == "new-eq-set"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_create_set_of_relations(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -187,7 +189,7 @@ def test_relations_create_set_of_relations(document_open):
 #         assert xml_name.is_file()
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_get_items(document_close_all_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -198,7 +200,7 @@ def test_relations_get_items(document_close_all_open):
     assert len(items) == 4
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_get_item_by_index(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -209,7 +211,7 @@ def test_relations_get_item_by_index(document_open):
     assert item.name == "formula_1"
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_get_item_names(document_close_all_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -221,7 +223,7 @@ def test_relations_get_item_names(document_close_all_open):
     assert item_names == ref_names
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_item(document_open):
     part_document: PartDocument = application.active_document
     part = part_document.part
@@ -236,7 +238,7 @@ def test_relations_sub_list():
     pass
 
 
-@pytest.mark.parametrize('file_name', [cat_part_measurable])
+@pytest.mark.parametrize("file_name", [cat_part_measurable])
 def test_relations_remove(document_open_test_close):
     part_document: PartDocument = application.active_document
     part = part_document.part

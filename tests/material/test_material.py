@@ -1,5 +1,3 @@
-
-
 import os
 from pathlib import Path
 
@@ -10,16 +8,14 @@ from pyv5.interfaces.cat_mat.material_document import MaterialDocument
 from pyv5.interfaces.cat_mat.material_manager import MaterialManager
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 from pyv5.interfaces.product_structure.product_document import ProductDocument
-from tests.common_vars import test_files
 from tests.conftest import application
-from tests.source_files import cat_material
-from tests.source_files import cat_part_measurable
-from tests.source_files import cat_product
+from tests.support.common_vars import test_files
+from tests.support.source_files import cat_material, cat_part_measurable, cat_product
 
 icon_folder = Path(os.getcwd(), test_files)
 
 
-@pytest.mark.parametrize('file_name', [cat_material])
+@pytest.mark.parametrize("file_name", [cat_material])
 def test_material_document(document_close_all_open):
     material_document: MaterialDocument = application.active_document
 
@@ -29,7 +25,7 @@ def test_material_document(document_close_all_open):
     assert materials.count > 0
 
 
-@pytest.mark.parametrize('file_name', [cat_material])
+@pytest.mark.parametrize("file_name", [cat_material])
 def test_material_manager_part(document_open):
     material_document: MaterialDocument = application.active_document
     material_families = material_document.families
@@ -48,22 +44,28 @@ def test_material_manager_part(document_open):
 
         material_manager.apply_material_on_body(i_body=main_body, i_material=None)
         material_manager.apply_material_on_part(i_part=part, i_material=None)
-        material_manager.apply_material_on_hybrid_body(i_hybrid_body=hybrid_body, i_material=None)
+        material_manager.apply_material_on_hybrid_body(
+            i_hybrid_body=hybrid_body, i_material=None
+        )
 
         material_manager.apply_material_on_body(i_body=main_body, i_material=material)
         material_manager.apply_material_on_part(i_part=part, i_material=material)
-        material_manager.apply_material_on_hybrid_body(i_hybrid_body=hybrid_body, i_material=material)
+        material_manager.apply_material_on_hybrid_body(
+            i_hybrid_body=hybrid_body, i_material=material
+        )
 
         part_mat = material_manager.get_material_on_part(i_part=part)
         body_mat = material_manager.get_material_on_body(i_body=main_body)
-        hybrid_mat = material_manager.get_material_on_hybrid_body(i_hybrid_body=hybrid_body)
+        hybrid_mat = material_manager.get_material_on_hybrid_body(
+            i_hybrid_body=hybrid_body
+        )
 
         assert part_mat.name == material.name
         assert body_mat.name == material.name
         assert hybrid_mat.name == material.name
 
 
-@pytest.mark.parametrize('file_name', [cat_material])
+@pytest.mark.parametrize("file_name", [cat_material])
 def test_material_manager_product(document_open):
     material_document: MaterialDocument = application.active_document
     material_families = material_document.families
@@ -77,13 +79,15 @@ def test_material_manager_product(document_open):
         material_manager = MaterialManager(material_item.com_object)
 
         material_manager.apply_material_on_product(i_product=product, i_material=None)
-        material_manager.apply_material_on_product(i_product=product, i_material=material, i_link_mode=True)
+        material_manager.apply_material_on_product(
+            i_product=product, i_material=material, i_link_mode=True
+        )
         product_mat = material_manager.get_material_on_product(i_product=product)
 
         assert product_mat.name == material.name
 
 
-@pytest.mark.parametrize('file_name', [cat_material])
+@pytest.mark.parametrize("file_name", [cat_material])
 def test_analysis_material(document_open):
     material_document: MaterialDocument = application.active_document
     material_families = material_document.families
@@ -93,7 +97,7 @@ def test_analysis_material(document_open):
     assert float(material.analysis_material.get_value("SAMDensity")) > 0.0
 
 
-@pytest.mark.parametrize('file_name', [cat_material])
+@pytest.mark.parametrize("file_name", [cat_material])
 def test_material(document_open_test_close):
     material_document: MaterialDocument = application.active_document
     material_families = material_document.families

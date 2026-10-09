@@ -67,6 +67,10 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/build/
+docs/source/_build/
+# automodule stubs from scripts/documentation/generate_api.py
+docs/source/api/
 
 # PyBuilder
 target/
@@ -150,6 +154,8 @@ quick_n_dirty.py
 
 pycatia-exe.build
 pycatia-exe.dist
+pyv5-exe.build
+pyv5-exe.dist
 zip_win32_dist.py
 win_32/*
 logo*

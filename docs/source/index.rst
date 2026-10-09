@@ -1,7 +1,7 @@
-pycatia documentation
-=====================
+pyV5 documentation
+==================
 
-pycatia is a python module for interfacing with the CATIA V5 Automation COM object.
+pyV5 is a Python module for interfacing with the CATIA V5 and DELMIA V5 Automation COM object.
 
 
 .. toctree::
@@ -11,9 +11,6 @@ pycatia is a python module for interfacing with the CATIA V5 Automation COM obje
    installation
    introduction
    create_and_run_a_script
-   windows_builds
-   examples
-   user_scripts
 
 
 
@@ -22,5 +19,4 @@ pycatia is a python module for interfacing with the CATIA V5 Automation COM obje
    :caption: Programmer Reference:
 
    api_tree
-   api_index
-
+   api/index

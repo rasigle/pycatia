@@ -2012,6 +2012,22 @@ dependencies = [
     { name = "pywin32", marker = "sys_platform == 'win32'" },
 ]
 
+[package.optional-dependencies]
+docs = [
+    { name = "sphinx", version = "7.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "sphinx", version = "9.0.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*'" },
+    { name = "sphinx", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "sphinx-rtd-theme" },
+    { name = "sphinx-togglebutton" },
+    { name = "sphinxcontrib-jquery" },
+]
+test = [
+    { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "pytest", version = "9.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "pytest-cov" },
+]
+
 [package.dev-dependencies]
 dev = [
     { name = "black", version = "25.11.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
@@ -2022,37 +2038,23 @@ dev = [
     { name = "mypy", version = "2.4.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "nuitka" },
     { name = "ordered-set" },
-    { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "pytest", version = "9.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "pytest-cov" },
+    { name = "pyv5", extra = ["docs", "test"] },
     { name = "ruff" },
-    { name = "sphinx", version = "7.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
-    { name = "sphinx", version = "9.0.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*'" },
-    { name = "sphinx", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "sphinx-rtd-theme" },
-    { name = "sphinx-togglebutton" },
-    { name = "sphinxcontrib-jquery" },
     { name = "twine", version = "6.2.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "twine", version = "7.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
 ]
-docs = [
-    { name = "sphinx", version = "7.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
-    { name = "sphinx", version = "9.0.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*'" },
-    { name = "sphinx", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "sphinx-rtd-theme" },
-    { name = "sphinx-togglebutton" },
-    { name = "sphinxcontrib-jquery" },
-]
-test = [
-    { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "pytest", version = "9.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "pytest-cov" },
-]
 
 [package.metadata]
-requires-dist = [{ name = "pywin32", marker = "sys_platform == 'win32'", specifier = ">=224" }]
+requires-dist = [
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "pywin32", marker = "sys_platform == 'win32'", specifier = ">=224" },
+    { name = "sphinx", marker = "extra == 'docs'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'docs'" },
+    { name = "sphinx-togglebutton", marker = "extra == 'docs'" },
+    { name = "sphinxcontrib-jquery", marker = "extra == 'docs'" },
+]
+provides-extras = ["docs", "test"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -2061,24 +2063,9 @@ dev = [
     { name = "mypy" },
     { name = "nuitka" },
     { name = "ordered-set" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
+    { name = "pyv5", extras = ["docs", "test"] },
     { name = "ruff", specifier = ">=0.16.10" },
-    { name = "sphinx" },
-    { name = "sphinx-rtd-theme" },
-    { name = "sphinx-togglebutton" },
-    { name = "sphinxcontrib-jquery" },
     { name = "twine" },
-]
-docs = [
-    { name = "sphinx" },
-    { name = "sphinx-rtd-theme" },
-    { name = "sphinx-togglebutton" },
-    { name = "sphinxcontrib-jquery" },
-]
-test = [
-    { name = "pytest" },
-    { name = "pytest-cov" },
 ]
 
 [[package]]

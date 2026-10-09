@@ -19,7 +19,7 @@ if errorlevel 1 (
 echo.
 
 :: Go to root-folder of the repository and activate the virtual environment
-cd "%~dp0..\..
+cd /d "%~dp0..\.."
 
 echo Activating virtual environment in %venv_folder%
 if not exist %venv_folder% (

@@ -5,7 +5,7 @@
 * ``TagGroupFactory.create_tag_group(..., tags=)`` and ``TagGroup.create_tags``
   create many tags in one in-process ``SystemService.Evaluate`` call when that  is faster, and fall back to per-tag COM. 
 * Migrated packaging to ``pyproject.toml``. Removed ``setup.py`` and ``requirements/``.
-* ``catia()`` now connects to a running ``CATIA.Application``, ``DELMIA.Application`` or
+* ``v5()`` (formerly ``catia()``) connects to a running ``CATIA.Application``, ``DELMIA.Application`` or
   ``CNEXT.Application`` COM object, instead of only ``CATIA.Application``.
 * ``Document.close()`` suppresses file alerts so unsaved documents do not show a
   modal save dialog during automation.
@@ -18,6 +18,9 @@
   exported at the package root (``from pyv5 import CatPaperSize``).
   ``enumeration_types`` is generated from the IntEnum members.
 * Reorganized ``tests/`` by functionality and dropped ``tests/in``.
+* Added ``[project.optional-dependencies]`` extras ``docs`` and ``test`` so pip and Read the Docs can install them. uv remains the local toolchain (``uv sync`` pulls those extras plus the ``dev`` group).
+* Regenerated Sphinx API pages for ``pyv5.base`` and ``pyv5.interfaces`` at docs build time (``scripts/documentation/generate_api.py``). Those RST stubs are not committed. Read the Docs uses ``docs/source/conf.py``.
+* Narrative docs now use ``from pyv5 import v5``. HTML builds write to ``docs/build/``.
 
 ## 0.10.1
 

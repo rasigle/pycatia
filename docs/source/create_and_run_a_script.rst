@@ -6,7 +6,7 @@ Create And Run A Script
 The process of creating and running python scripts can be executed a number of
 different ways. The following will just explain the basics.
 
-* In your pycatia-scripts folder `c:\Users\<username>\python\pycatia-scripts` create
+* In your pyv5-scripts folder `c:\Users\<username>\python\pyv5-scripts` create
   a new file called `catia_details.py`.
 
 
@@ -16,9 +16,9 @@ different ways. The following will just explain the basics.
 
 .. code-block:: python
 
-    from pycatia import catia
+    from pyv5 import v5
 
-    application = catia()
+    application = v5()
 
     full_name = application.full_name
     sys_config = application.system_configuration
@@ -33,38 +33,24 @@ different ways. The following will just explain the basics.
 
 * Save the file in your editor.
 
-* You'll need to open a CMD terminal and navigate to your pycatia-scripts folder.
+* Open a terminal and navigate to your pyv5-scripts folder.
 
 .. code-block::
 
-   cd c:\Users\<username>\python\pycatia-scripts
+   cd c:\Users\<username>\python\pyv5-scripts
 
-* Activate the virtual environment.
-
-.. code-block::
-
-    env\Scripts\activate
-
-* You should see the command prompt change to something similar to this.
-
-    (env) c:\Users\<username>\python\pycatia-scripts>
-
-* To run the script you need to type `python` followed by your `script_name.py`:
+* Run the script with uv:
 
 .. code-block::
 
-    (env) c:\Users\<username>\python\pycatia-scripts>python catia_details.py
+    uv run python catia_details.py
 
 The script should then display the following:
 
 .. code-block::
 
-    (env) c:\Users\<username>\python\pycatia-scripts>python catia_details.py
-
     You are currently running CATIA V5 release XX SP XXX
 
-    (env) c:\Users\<username>\python\pycatia-scripts>
-
-For more detailed examples on how to interact with pycatia see the
+For more detailed examples on how to interact with pyv5 see the
 :ref:`examples` page. There contain several scripts that can be run in the
 terminal.

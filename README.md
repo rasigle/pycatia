@@ -1,4 +1,4 @@
-# pyv5 - providing Python access to the V5 COM API
+# pyV5 - providing Python access to the V5 COM API
 
 An easy-to-use Python interface to the CATIA V5 and DELMIA V5 COM automation API.
 It's based on the work of [pycatia](https://github.com/evereux/pycatia) by Paul Bourne.
@@ -35,11 +35,8 @@ With [uv](https://docs.astral.sh/uv/):
 uv sync
 ```
 
-For development (tests, docs, linters):
-
-```powershell
-uv sync --group dev
-```
+`uv sync` creates `.venv` and installs the project in editable mode with the
+`docs` and `test` extras plus the `dev` dependency group (tests, docs, linters).
 
 Start CATIA or DELMIA before you run scripts. pyv5 talks to the COM server of a live V5 session.
 
@@ -73,7 +70,7 @@ with CATIADocHandler(new_document="Part") as handler:
 
 - Sphinx sources: [`docs/source`](docs/source)
 - Runnable examples: [`examples/catia`](examples/catia) and [`examples/delmia`](examples/delmia)
-- API reference: build the docs locally with `docs/source/make.bat html`
+- API reference: build with `scripts/documentation/create_docs.bat` or `uv run sphinx-build -b html docs/source docs/build/html`. Automodule pages under `docs/source/api/` are generated from the package tree at build time.
 - Changes: [`CHANGELOG.md`](CHANGELOG.md)
 
 ## Development

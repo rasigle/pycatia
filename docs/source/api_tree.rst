@@ -1,5 +1,5 @@
-pycatia API Tree
-----------------
+pyv5 API Tree
+-------------
 
 .. # define a hard line break for HTML
 .. |br| raw:: html
@@ -12,7 +12,7 @@ pycatia API Tree
 
    &nbsp;
 
-A brief overview of the pycatia Automation Objects and their relations.
+A brief overview of the pyv5 Automation Objects and their relations.
 
 
 :ref:`Application<Application>` |br|

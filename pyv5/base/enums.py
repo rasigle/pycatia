@@ -260,7 +260,7 @@ class CatAnnotationSetType(IntEnum):
 
 class CatArrangeStyle(IntEnum):
     """
-    pyv5.interfaces.in_.windows.Windows.arrange
+    pyv5.interfaces.core.windows.Windows.arrange
     """
 
     catArrangeCascade = 0
@@ -438,8 +438,8 @@ class CatAxisSystemOriginType(IntEnum):
 
 class CatBackFaceCullingMode(IntEnum):
     """
-    pyv5.interfaces.in_.visualization_setting_att.VisualizationSettingAtt.get_back_face_culling_mode
-    pyv5.interfaces.in_.visualization_setting_att.VisualizationSettingAtt.put_back_face_culling_mode
+    pyv5.interfaces.core.visualization_setting_att.VisualizationSettingAtt.get_back_face_culling_mode
+    pyv5.interfaces.core.visualization_setting_att.VisualizationSettingAtt.put_back_face_culling_mode
     """
 
     CATBackFaceCullingOnSolidFaces = 0
@@ -450,7 +450,7 @@ class CatBackFaceCullingMode(IntEnum):
 
 class CatBannerPosition(IntEnum):
     """
-    pyv5.interfaces.in_.page_setup.PageSetup.banner_position
+    pyv5.interfaces.core.page_setup.PageSetup.banner_position
     """
 
     catBannerPositionNone = 0
@@ -472,7 +472,7 @@ class CatBlankingMode(IntEnum):
 
 class CatCameraType(IntEnum):
     """
-    pyv5.interfaces.in_.camera.Camera.type
+    pyv5.interfaces.core.camera.Camera.type
     """
 
     catCamera2D = 0
@@ -481,7 +481,7 @@ class CatCameraType(IntEnum):
 
 class CatCaptureFormat(IntEnum):
     """
-    pyv5.interfaces.in_.viewer.Viewer.capture_to_file
+    pyv5.interfaces.core.viewer.Viewer.capture_to_file
     """
 
     catCaptureFormatCGM = 0
@@ -594,9 +594,9 @@ class CatClippingFrameReframeOnMode(IntEnum):
 
 class CatClippingMode(IntEnum):
     """
-    pyv5.interfaces.in_.viewer_3d.Viewer3D.clipping_mode
-    pyv5.interfaces.in_.viewer_3d.Viewer3D.far_limit
-    pyv5.interfaces.in_.viewer_3d.Viewer3D.near_limit
+    pyv5.interfaces.core.viewer_3d.Viewer3D.clipping_mode
+    pyv5.interfaces.core.viewer_3d.Viewer3D.far_limit
+    pyv5.interfaces.core.viewer_3d.Viewer3D.near_limit
     """
 
     catClippingModeClear = 0
@@ -1082,7 +1082,7 @@ class CatDmuGroupPreviewHiddenObjectsDisplayMode(IntEnum):
 
 class CatDocContextualPriority(IntEnum):
     """
-    pyv5.interfaces.in_.documentation_setting_att.DocumentationSettingAtt.priority
+    pyv5.interfaces.core.documentation_setting_att.DocumentationSettingAtt.priority
     """
 
     CATDocContextualTechDoc = 0
@@ -1268,7 +1268,7 @@ class CatElectronicType(IntEnum):
 
 class CatFileSelectionMode(IntEnum):
     """
-    pyv5.interfaces.in_.application.Application.file_selection_box
+    pyv5.interfaces.core.application.Application.file_selection_box
     """
 
     CatFileSelectionModeOpen = 0
@@ -1366,7 +1366,7 @@ class CatFittingShuttleVector(IntEnum):
 
 class CatFullSceneAntiAliasingMode(IntEnum):
     """
-    pyv5.interfaces.in_.visualization_setting_att.VisualizationSettingAtt.full_scene_anti_aliasing_mode
+    pyv5.interfaces.core.visualization_setting_att.VisualizationSettingAtt.full_scene_anti_aliasing_mode
     """
 
     CATFSAAMode_Deactivated = 0
@@ -1388,7 +1388,7 @@ class CatFunctOrientationDirection(IntEnum):
 
 class CatGenConferencing(IntEnum):
     """
-    pyv5.interfaces.in_.general_session_setting_att.GeneralSessionSettingAtt.conferencing
+    pyv5.interfaces.core.general_session_setting_att.GeneralSessionSettingAtt.conferencing
     """
 
     NetMeeting = 0
@@ -1397,7 +1397,7 @@ class CatGenConferencing(IntEnum):
 
 class CatGenDataSave(IntEnum):
     """
-    pyv5.interfaces.in_.general_session_setting_att.GeneralSessionSettingAtt.auto_save
+    pyv5.interfaces.core.general_session_setting_att.GeneralSessionSettingAtt.auto_save
     """
 
     NoAutoBackup = 0
@@ -1407,7 +1407,7 @@ class CatGenDataSave(IntEnum):
 
 class CatGenUiStyle(IntEnum):
     """
-    pyv5.interfaces.in_.general_session_setting_att.GeneralSessionSettingAtt.ui_style
+    pyv5.interfaces.core.general_session_setting_att.GeneralSessionSettingAtt.ui_style
     """
 
     UIStyleP1 = 0
@@ -1583,7 +1583,7 @@ class CatIg2ImportUnitEnum(IntEnum):
 
 class CatImageRotation(IntEnum):
     """
-    pyv5.interfaces.in_.page_setup.PageSetup.rotation
+    pyv5.interfaces.core.page_setup.PageSetup.rotation
     """
 
     catImageNoRotation = 0
@@ -1623,7 +1623,7 @@ class CatJustification(IntEnum):
 
 class CatLightingMode(IntEnum):
     """
-    pyv5.interfaces.in_.viewer_3d.Viewer3D.lighting_mode
+    pyv5.interfaces.core.viewer_3d.Viewer3D.lighting_mode
     """
 
     catInfiniteLightSource = 0
@@ -1737,7 +1737,7 @@ class CatMergeMode(IntEnum):
 
 class CatMultiSelectionMode(IntEnum):
     """
-    pyv5.interfaces.in_.selection.Selection.select_element3
+    pyv5.interfaces.core.selection.Selection.select_element3
     """
 
     CATMonoSel = 0
@@ -1747,7 +1747,7 @@ class CatMultiSelectionMode(IntEnum):
 
 class CatNavigationStyle(IntEnum):
     """
-    pyv5.interfaces.in_.viewer_3d.Viewer3D.navigation_style
+    pyv5.interfaces.core.viewer_3d.Viewer3D.navigation_style
     """
 
     catNavigationExamine = 0
@@ -1783,8 +1783,8 @@ class CatPaperOrientation(IntEnum):
     """
     pyv5.interfaces.drafting_2dL.layout_2d_sheet.Layout2DSheet.orientation
     pyv5.interfaces.drafting.drawing_sheet.DrawingSheet.orientation
-    pyv5.interfaces.in_.page_setup.PageSetup.orientation
-    pyv5.interfaces.in_.printer.Printer.orientation
+    pyv5.interfaces.core.page_setup.PageSetup.orientation
+    pyv5.interfaces.core.printer.Printer.orientation
     """
 
     catPaperPortrait = 0
@@ -1794,10 +1794,10 @@ class CatPaperOrientation(IntEnum):
 
 class CatPaperSize(IntEnum):
     """
-    pyv5.interfaces.in_.printer.Printer.paper_size
+    pyv5.interfaces.core.printer.Printer.paper_size
     pyv5.interfaces.drafting_2dL.layout_2d_sheet.Layout2DSheet.paper_size
     pyv5.interfaces.drafting.drawing_sheet.DrawingSheet.paper_size
-    pyv5.interfaces.in_.page_setup.PageSetup.paper_size
+    pyv5.interfaces.core.page_setup.PageSetup.paper_size
     """
 
     catPaperLetter = 0
@@ -1866,7 +1866,7 @@ class CatPointsProjectionMode(IntEnum):
 
 class CatPrintColor(IntEnum):
     """
-    pyv5.interfaces.in_.page_setup.PageSetup.color
+    pyv5.interfaces.core.page_setup.PageSetup.color
     """
 
     catColorTrueColor = 0
@@ -1876,7 +1876,7 @@ class CatPrintColor(IntEnum):
 
 class CatPrintLineCap(IntEnum):
     """
-    pyv5.interfaces.in_.page_setup.PageSetup.line_cap
+    pyv5.interfaces.core.page_setup.PageSetup.line_cap
     """
 
     catPrintFlat = 0
@@ -1886,8 +1886,8 @@ class CatPrintLineCap(IntEnum):
 
 class CatPrintLineSpecification(IntEnum):
     """
-    pyv5.interfaces.in_.page_setup.PageSetup.line_type_specification
-    pyv5.interfaces.in_.page_setup.PageSetup.line_width_specification
+    pyv5.interfaces.core.page_setup.PageSetup.line_type_specification
+    pyv5.interfaces.core.page_setup.PageSetup.line_width_specification
     """
 
     catPrintAbsolute = 0
@@ -1897,7 +1897,7 @@ class CatPrintLineSpecification(IntEnum):
 
 class CatPrintQuality(IntEnum):
     """
-    pyv5.interfaces.in_.page_setup.PageSetup.quality
+    pyv5.interfaces.core.page_setup.PageSetup.quality
     """
 
     catPrintQualityDraft = 0
@@ -1909,7 +1909,7 @@ class CatPrintQuality(IntEnum):
 
 class CatPrintRenderingMode(IntEnum):
     """
-    pyv5.interfaces.in_.page_setup.PageSetup.print_rendering_mode
+    pyv5.interfaces.core.page_setup.PageSetup.print_rendering_mode
     """
 
     catPrintRenderingModeDefault = 0
@@ -1922,9 +1922,9 @@ class CatPrintRenderingMode(IntEnum):
 
 class CatPrinterDirState(IntEnum):
     """
-    pyv5.interfaces.in_.printers_setting_att.PrintersSettingAtt.add_printer_directory
-    pyv5.interfaces.in_.printers_setting_att.PrintersSettingAtt.get_printer_directory_state
-    pyv5.interfaces.in_.printers_setting_att.PrintersSettingAtt.modify_printer_directory_state
+    pyv5.interfaces.core.printers_setting_att.PrintersSettingAtt.add_printer_directory
+    pyv5.interfaces.core.printers_setting_att.PrintersSettingAtt.get_printer_directory_state
+    pyv5.interfaces.core.printers_setting_att.PrintersSettingAtt.modify_printer_directory_state
     """
 
     CatPrinterDirFree = 0
@@ -1976,7 +1976,7 @@ class CatProjViewType(IntEnum):
 
 class CatProjectionMode(IntEnum):
     """
-    pyv5.interfaces.in_.viewpoint_3d.ViewPoint3D.projection_mode
+    pyv5.interfaces.core.viewpoint_3d.ViewPoint3D.projection_mode
     pyv5.interfaces.navigator.annotated_view.AnnotatedView.projection_mode
     """
 
@@ -2121,7 +2121,7 @@ class CatRenderingMode(IntEnum):
     pyv5.interfaces.drafting_2dL.layout_2d_sheet.Layout2DSheet.print_out
     pyv5.interfaces.drafting_2dL.layout_2d_sheet.Layout2DSheet.print_to_file
     pyv5.interfaces.drafting_2dL.layout_2d_root.Layout2DRoot.rendering_mode
-    pyv5.interfaces.in_.viewer_3d.Viewer3D.rendering_mode
+    pyv5.interfaces.core.viewer_3d.Viewer3D.rendering_mode
     """
 
     catRenderShading = 0
@@ -2438,8 +2438,8 @@ class CatSchIdlgrrRouteReshapeMode(IntEnum):
 class CatScriptLanguage(IntEnum):
     """
     pyv5.interfaces.system.system_service.SystemService.evaluate
-    pyv5.interfaces.in_.macros_setting_att.MacrosSettingAtt.get_language_editor
-    pyv5.interfaces.in_.macros_setting_att.MacrosSettingAtt.set_language_editor
+    pyv5.interfaces.core.macros_setting_att.MacrosSettingAtt.get_language_editor
+    pyv5.interfaces.core.macros_setting_att.MacrosSettingAtt.set_language_editor
     """
 
     CATVBScriptLanguage = 0
@@ -2461,7 +2461,7 @@ class CatScriptLibraryType(IntEnum):
 
 class CatSearchContextScope(IntEnum):
     """
-    pyv5.interfaces.in_.search_setting_att.SearchSettingAtt.default_power_input_context_scope
+    pyv5.interfaces.core.search_setting_att.SearchSettingAtt.default_power_input_context_scope
     """
 
     Everywhere = 0
@@ -2473,7 +2473,7 @@ class CatSearchContextScope(IntEnum):
 
 class CatSecWindowOpenMode(IntEnum):
     """
-    pyv5.interfaces.in_.search_setting_att.SearchSettingAtt.default_power_input_context_scope
+    pyv5.interfaces.core.search_setting_att.SearchSettingAtt.default_power_input_context_scope
     """
 
     catSecWindow_DefaultSize = 0
@@ -2539,8 +2539,8 @@ class CatSectionType(IntEnum):
 
 class CatSelectionFilter(IntEnum):
     """
-    pyv5.interfaces.in_.selected_element.SelectedElement.type
-    pyv5.interfaces.in_.selection.Selection.select_element2
+    pyv5.interfaces.core.selected_element.SelectedElement.type
+    pyv5.interfaces.core.selection.Selection.select_element2
     """
 
     ZeroDim = 0
@@ -2625,7 +2625,7 @@ class CatSolveType(IntEnum):
 
 class CatSpecsAndGeomWindowLayout(IntEnum):
     """
-    pyv5.interfaces.in_.specs_and_geom_window.SpecsAndGeomWindow.layout
+    pyv5.interfaces.core.specs_and_geom_window.SpecsAndGeomWindow.layout
     """
 
     catWindowSpecsOnly = 0
@@ -2635,7 +2635,7 @@ class CatSpecsAndGeomWindowLayout(IntEnum):
 
 class CatSpecsLayout(IntEnum):
     """
-    pyv5.interfaces.in_.specs_viewer.SpecsViewer.layout
+    pyv5.interfaces.core.specs_viewer.SpecsViewer.layout
     """
 
     catSpecsViewerHorizontalIndented = 0
@@ -3007,7 +3007,7 @@ class CatThreadType(IntEnum):
 
 class CatTreeOrientationEnum(IntEnum):
     """
-    pyv5.interfaces.in_.tree_viz_manip_setting_att.TreeVizManipSettingAtt.orientation
+    pyv5.interfaces.core.tree_viz_manip_setting_att.TreeVizManipSettingAtt.orientation
     """
 
     catTreeOrientationVertical = 0
@@ -3016,7 +3016,7 @@ class CatTreeOrientationEnum(IntEnum):
 
 class CatTreeSizeTypeEnum(IntEnum):
     """
-    pyv5.interfaces.in_.tree_viz_manip_setting_att.TreeVizManipSettingAtt.size_type
+    pyv5.interfaces.core.tree_viz_manip_setting_att.TreeVizManipSettingAtt.size_type
     """
 
     catTreeSizeTypeFixedSize = 0
@@ -3025,7 +3025,7 @@ class CatTreeSizeTypeEnum(IntEnum):
 
 class CatTreeTypeEnum(IntEnum):
     """
-    pyv5.interfaces.in_.tree_viz_manip_setting_att.TreeVizManipSettingAtt.type
+    pyv5.interfaces.core.tree_viz_manip_setting_att.TreeVizManipSettingAtt.type
     """
 
     catTreeTypeClassical = 0
@@ -3093,8 +3093,8 @@ class CatViewType(IntEnum):
 
 class CatVisLayerType(IntEnum):
     """
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_layer
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.set_layer
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_layer
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.set_layer
     """
 
     catVisLayerBasic = 0
@@ -3103,8 +3103,8 @@ class CatVisLayerType(IntEnum):
 
 class CatVisPropertyPick(IntEnum):
     """
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_pick
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.set_pick
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_pick
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.set_pick
     """
 
     catVisPropertyPickAttr = 0
@@ -3113,8 +3113,8 @@ class CatVisPropertyPick(IntEnum):
 
 class CatVisPropertyShow(IntEnum):
     """
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_show
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.set_show
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_show
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.set_show
     """
 
     catVisPropertyShowAttr = 0
@@ -3123,20 +3123,20 @@ class CatVisPropertyShow(IntEnum):
 
 class CatVisPropertyStatus(IntEnum):
     """
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_layer
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_pick
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_real_color
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_real_inheritance
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_real_line_type
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_real_opacity
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_real_width
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_show
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_symbol_type
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_visible_color
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_visible_inheritance
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_visible_line_type
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_visible_opacity
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_visible_width
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_layer
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_pick
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_real_color
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_real_inheritance
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_real_line_type
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_real_opacity
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_real_width
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_show
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_symbol_type
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_visible_color
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_visible_inheritance
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_visible_line_type
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_visible_opacity
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_visible_width
     """
 
     catVisPropertyDefined = 0
@@ -3145,8 +3145,8 @@ class CatVisPropertyStatus(IntEnum):
 
 class CatVisPropertyType(IntEnum):
     """
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_real_inheritance
-    pyv5.interfaces.in_.vis_property_set.VisPropertySet.get_visible_inheritance
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_real_inheritance
+    pyv5.interfaces.core.vis_property_set.VisPropertySet.get_visible_inheritance
     """
 
     catVisPropertyLineType = 0
@@ -3287,7 +3287,7 @@ class CatWeldingSymbol(IntEnum):
 
 class CatWindowState(IntEnum):
     """
-    pyv5.interfaces.in_.window.Window.window_state
+    pyv5.interfaces.core.window.Window.window_state
     """
 
     catWindowStateMaximized = 0

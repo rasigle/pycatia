@@ -40,20 +40,21 @@ Issues = "https://github.com/evereux/pyv5/issues"
 [tool.setuptools.dynamic]
 version = {attr = "pyv5.version.__version__"}
 
-[dependency-groups]
-test = [
-    "pytest",
-    "pytest-cov",
-]
+[project.optional-dependencies]
 docs = [
     "Sphinx",
     "sphinx-rtd-theme",
     "sphinx-togglebutton",
     "sphinxcontrib-jquery",
 ]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[dependency-groups]
 dev = [
-    {include-group = "docs"},
-    {include-group = "test"},
+    "pyv5[docs,test]",
     "build",
     "mypy",
     "black>=25.11.0",
@@ -62,6 +63,9 @@ dev = [
     "ordered-set",
     "twine",
 ]
+
+[tool.uv]
+default-groups = ["dev"]
 
 [tool.setuptools.packages.find]
 include = ["pyv5*"]

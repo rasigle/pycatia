@@ -1,14 +1,14 @@
-:: Build HTML documentation with Sphinx (hand-curated API pages under docs/source/apidocs).
+:: Build HTML documentation with Sphinx.
 @echo off
 
-set BUILD_FOLDER=docs/build/html
+set BUILD_FOLDER=docs\build\html
 
 :: Checks for uv, synchronizes and activates the virtual environment
 cd "%~dp0..\environment"
 call .\uv_check_activate_venv.bat
 
 echo Synchronizing docs dependencies
-uv sync --group docs
+uv sync --extra docs
 echo - done
 echo.
 

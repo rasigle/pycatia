@@ -3,27 +3,27 @@
 Getting Started
 ===============
 
-Before proceeding with this introduction to pycatia you should have already have
-pycatia installed. Visit the :ref:`installation` page.
+Before proceeding with this introduction to pyv5 you should already have
+pyv5 installed. Visit the :ref:`installation` page.
 
 .. _install:
 
 Before going through the introductory examples on this page you need to have
-CATIA V5 running and a CMD terminal open with the environment that has pycatia
+CATIA V5 running and a terminal open with the environment that has pyv5
 installed activated prior to starting the python interpreter.
 
 Opening A New CATPart
 ---------------------
 
-You will almost always want to import the `catia`
+You will almost always want to import the `v5`
 :ref:`Application<Application>` object or the CATIADocHandler [1]_.
 
 .. code-block:: python
 
-    from pycatia import catia
-    from pycatia.mec_mod_interfaces.part_document import PartDocument
-    # initialise the catia automation application. CATIA V5 should already be running.
-    application = catia()
+    from pyv5 import v5
+    from pyv5.interfaces.mec_mod.part_document import PartDocument
+    # initialise the V5 automation application. CATIA V5 should already be running.
+    application = v5()
     documents = application.documents
 
 documents is an instance of the :ref:`Documents<Documents>`
@@ -35,7 +35,7 @@ class.
 
 the add method of the documents class expects the string 'Part', 'Product' or
 'Drawing'. ``documents.add('Part')`` adds a new CATPart to the documents
-collection and returns a `Document`` object. In this case it is a `PartDocument`.
+collection and returns a `Document` object. In this case it is a `PartDocument`.
 
 The document object :ref:`Document<Document>` has a
 number of properties that can be accessed.
@@ -68,7 +68,7 @@ create one here anyway.
 
 To learn how to run a script see :ref:`create_and_run_a_script`.
 
-For more detailed examples on how to interact with pycatia see the
+For more detailed examples on how to interact with pyv5 see the
 :ref:`examples` page. There contain several scripts that can be run in the
 terminal.
 

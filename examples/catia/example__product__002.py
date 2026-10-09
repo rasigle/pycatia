@@ -28,7 +28,7 @@ from pyv5.interfaces.product_structure.product_document import ProductDocument
 application = v5()
 documents = application.documents
 product_document: ProductDocument = documents.open(
-    Path(os.getcwd(), r"tests\cat_files\product_top.CATProduct")
+    Path(os.getcwd(), r"tests\assets\product_top.CATProduct")
 )
 product = product_document.product
 

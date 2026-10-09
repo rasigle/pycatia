@@ -1,16 +1,16 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+2020-09-25 14:34:21.593357
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
 
-from pyv5.interfaces.enums import CatStrCutbackType
 from pyv5.interfaces.core.reference import Reference
+from pyv5.base.enums import CatStrCutbackType
 from pyv5.interfaces.knowledge.parameter import Parameter
 from pyv5.interfaces.structure.str_cutback import StrCutback
 from pyv5.interfaces.structure.str_member_extremity import StrMemberExtremity

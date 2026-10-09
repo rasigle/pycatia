@@ -1,10 +1,9 @@
-#! usr/bin/python3.9
 """
 Module initially auto generated using V5Automation files from CATIA V5 R31 on 2026-02-21 14:49:57.443389
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """

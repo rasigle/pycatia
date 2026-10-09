@@ -63,7 +63,7 @@ from pyv5.interfaces.core.viewer_3d import Viewer3D
 from pyv5.interfaces.product_structure.product import Product
 
 # change this to the location of where your catia files are stored.
-source_cat_files = Path(Path.home(), "catia_parts")
+source_assets = Path(Path.home(), "catia_parts")
 # location of where the images will be saved for example C:/Users/<username>/Pictures/catia_screenshots
 image_save_path = Path(Path.home(), "Pictures", "catia_screenshots")
 existing_files_warning = []
@@ -71,9 +71,9 @@ existing_files_warning = []
 logger = create_logger()
 
 img_files = []
-# get a list of all CATParts and CATProducts in source_cat_files directory
+# get a list of all CATParts and CATProducts in source_assets directory
 files = (
-    f for f in source_cat_files.glob("**/*") if f.suffix in [".CATProduct", ".CATPart"]
+    f for f in source_assets.glob("**/*") if f.suffix in [".CATProduct", ".CATPart"]
 )
 for f in files:
     with CATIADocHandler(file_name=f) as handler:

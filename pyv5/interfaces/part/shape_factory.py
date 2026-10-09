@@ -1,15 +1,16 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+ 2020-06-11 12:40:47.360445
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
 
-from pyv5.interfaces.enums import (
+from pyv5.interfaces.core.reference import Reference
+from pyv5.base.enums import (
     CatChamferMode,
     CatChamferOrientation,
     CatChamferPropagation,
@@ -21,7 +22,6 @@ from pyv5.interfaces.enums import (
     CatSplitSide,
 )
 from pyv5.interfaces.hybrid_shape.hybrid_shape_symmetry import HybridShapeSymmetry
-from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.mec_mod.body import Body
 from pyv5.interfaces.mec_mod.factory import Factory
 from pyv5.interfaces.part.add import Add

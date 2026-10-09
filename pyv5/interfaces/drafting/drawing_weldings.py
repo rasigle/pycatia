@@ -1,10 +1,10 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+ 2020-06-11 12:40:47.360445
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
@@ -12,7 +12,7 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 from collections.abc import Iterator
 
 from pyv5.interfaces.drafting.drawing_welding import DrawingWelding
-from pyv5.interfaces.enums import CatWeldingSymbol
+from pyv5.base.enums import CatWeldingSymbol
 from pyv5.interfaces.system.collection import Collection
 
 

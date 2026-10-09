@@ -531,12 +531,12 @@ Please note the change to VisPropertySet.get_show () will break existing scripts
 ```python
 from pathlib import Path
 
-from pyv5 import catia
-from pyv5.mec_mod_interfaces.part_document import PartDocument
+from pyv5 import v5
+from pyv5.interfaces.mec_mod.part_document import PartDocument
 
-source_document = Path(r"tests/cat_files/part_measurable.CATPart")
+source_document = Path(r"tests/assets/part_measurable.CATPart")
 
-caa = catia()
+caa = v5()
 documents = caa.documents
 documents.open(source_document)
 

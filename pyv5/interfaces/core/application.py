@@ -1,12 +1,11 @@
-#! /usr/bin/python3.9
 # module initially auto generated using V5Automation.chm from CATIA R25
 import inspect
 from pathlib import Path
 
 from pywintypes import com_error
 
-from pyv5.interfaces.enums import CatScriptLanguage
 from pyv5.base.exceptions import CATIAApplicationException
+from pyv5.base.types import AnyDocument
 from pyv5.interfaces.core.documents import Documents, get_document_object
 from pyv5.interfaces.core.file_system import FileSystem
 from pyv5.interfaces.core.printer import Printer
@@ -16,9 +15,9 @@ from pyv5.interfaces.core.setting_controllers import SettingControllers
 from pyv5.interfaces.core.system_configuration import SystemConfiguration
 from pyv5.interfaces.core.window import Window
 from pyv5.interfaces.core.windows import Windows
+from pyv5.interfaces.enums import CatScriptLanguage
 from pyv5.interfaces.system.any_object import AnyObject
 from pyv5.interfaces.system.system_service import SystemService
-from pyv5.base.types import AnyDocument
 
 
 class Application(AnyObject):

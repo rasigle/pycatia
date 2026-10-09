@@ -1,21 +1,21 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+2020-09-25 14:34:21.593357
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
 
+from pyv5.interfaces.core.document import Document
 from pyv5.interfaces.eno_cd5.cd5_engine_v6_r2014x import CD5EngineV6R2014x
 from pyv5.interfaces.eno_cd5.cd5_id import CD5ID
 from pyv5.interfaces.eno_cd5.cd5_ids import CD5IDs
 from pyv5.interfaces.eno_cd5.cd5_properties import CD5Properties
 from pyv5.interfaces.eno_cd5.cd5_template import CD5Template
 from pyv5.interfaces.eno_cd5.cd5_template_types import CD5TemplateTypes
-from pyv5.interfaces.core.document import Document
 
 
 class CD5EngineV6R2015(CD5EngineV6R2014x):

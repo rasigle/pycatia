@@ -1,6 +1,3 @@
-#! /usr/bin/python3.9
-
-
 class pyv5BaseException(Exception):
     """
     pyv5BaseException class.

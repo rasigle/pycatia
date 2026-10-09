@@ -27,7 +27,7 @@ from pyv5 import v5
 from pyv5.interfaces.mec_mod.part_document import PartDocument
 
 # path to file to open.
-file_name = Path(Path(os.getcwd()).parent, r"tests\cat_files\part_measurable.CATPart")
+file_name = Path(Path(os.getcwd()).parent, r"tests\assets\part_measurable.CATPart")
 
 application = v5()
 # open document

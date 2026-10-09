@@ -1,16 +1,16 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+2020-09-25 14:34:21.593357
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
 
 from pyv5.interfaces.cat_mat.material import Material
-from pyv5.interfaces.enums import CatScriptLanguage
+from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.mec_mod.body import Body
 from pyv5.interfaces.mec_mod.hybrid_body import HybridBody
 from pyv5.interfaces.mec_mod.part import Part

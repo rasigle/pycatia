@@ -25,7 +25,7 @@ sys.path.insert(0, os.path.abspath("../../pyv5"))
 import time
 from pathlib import Path
 
-catia_part = Path(Path(os.getcwd()).parent, r"tests\cat_files\part_measurable.CATPart")
+catia_part = Path(Path(os.getcwd()).parent, r"tests\assets\part_measurable.CATPart")
 
 with CATIADocHandler(catia_part) as caa:
     part_document: PartDocument = caa.document

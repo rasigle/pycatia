@@ -36,7 +36,7 @@ application = v5()
 # MATERIAL MANAGER ON MATERIAL CATALOGS
 ##########################################################
 material_document: MaterialDocument = application.documents.open(
-    Path(os.getcwd(), r"tests/cat_files/Catalog.CATMaterial")
+    Path(os.getcwd(), r"tests/assets/Catalog.CATMaterial")
 )
 material_families = material_document.families
 materials = material_families.item(1).materials

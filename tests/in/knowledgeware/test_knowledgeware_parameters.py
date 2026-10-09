@@ -1,4 +1,4 @@
-#! /usr/bin/python3.9
+
 import pytest
 
 from pyv5.interfaces.knowledge.bool_param import BoolParam

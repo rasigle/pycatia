@@ -1,5 +1,3 @@
-# !/usr/bin/python3.10
-
 """
 This script is strictly for the use of generating the pyv5.exe executable.
 """

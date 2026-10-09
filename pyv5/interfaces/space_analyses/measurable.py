@@ -1,8 +1,7 @@
-#! /usr/bin/python3.9
 import inspect
 
-from pyv5.interfaces.enums import CatMeasurableName
 from pyv5.interfaces.core.reference import Reference
+from pyv5.interfaces.enums import CatMeasurableName
 from pyv5.interfaces.system.any_object import AnyObject
 
 

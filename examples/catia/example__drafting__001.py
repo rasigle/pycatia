@@ -19,9 +19,8 @@ import sys
 sys.path.insert(0, os.path.abspath("../../pyv5"))
 ##########################################################
 
+from pyv5 import CatPaperOrientation, CatPaperSize, CatTextAnchorPosition, v5
 from pyv5.base.exceptions import CATIAApplicationException
-
-from pyv5 import CatPaperOrientation, CatPaperSize, CatTextAnchorPosition
 from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 from pyv5.interfaces.drafting.drawing_root import DrawingRoot
 from pyv5.interfaces.drafting.drawing_view import DrawingView

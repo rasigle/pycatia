@@ -1,10 +1,10 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+ 2020-06-11 12:40:47.360445
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
@@ -14,6 +14,7 @@ from typing import TYPE_CHECKING
 
 from pywintypes import com_error
 
+from pyv5.base.types import AnyParameter, CATVariant
 from pyv5.interfaces.knowledge.angle import Angle
 from pyv5.interfaces.knowledge.bool_param import BoolParam
 from pyv5.interfaces.knowledge.dimension import Dimension
@@ -27,7 +28,6 @@ from pyv5.interfaces.knowledge.str_param import StrParam
 from pyv5.interfaces.knowledge.units import Units
 from pyv5.interfaces.system.any_object import AnyObject
 from pyv5.interfaces.system.collection import Collection
-from pyv5.base.types import CATVariant, AnyParameter
 
 if TYPE_CHECKING:
     from pyv5.interfaces.knowledge.parameter_set import ParameterSet

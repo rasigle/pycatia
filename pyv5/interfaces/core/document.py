@@ -1,10 +1,10 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+ 2020-06-11 12:40:47.360445
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
@@ -12,12 +12,12 @@ Module initially auto generated using V5Automation files from CATIA V5 R28 on 20
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from pyv5.interfaces.enums import CatScriptLanguage
 from pyv5.base.exceptions import CATIAApplicationException
 from pyv5.interfaces.core.cameras import Cameras
 from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.core.window import Window
 from pyv5.interfaces.core.workbench import Workbench
+from pyv5.base.enums import CatScriptLanguage
 from pyv5.interfaces.space_analyses.spa_workbench import SPAWorkbench
 from pyv5.interfaces.system.any_object import AnyObject
 

@@ -1,8 +1,8 @@
 from pathlib import Path
 
+from pyv5.base.types import CATVariant
 from pyv5.interfaces.core.reference import Reference
 from pyv5.interfaces.system.any_object import AnyObject
-from pyv5.base.types import CATVariant
 
 
 class SWKHumanCatalog(AnyObject):

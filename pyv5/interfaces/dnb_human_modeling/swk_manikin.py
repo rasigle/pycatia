@@ -1,16 +1,17 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+2020-09-25 14:34:21.593357
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
 
 from typing import TYPE_CHECKING
 
+from pyv5.interfaces.core.move import Move
 from pyv5.interfaces.dnb_human_modeling.swk_anthro import SWKAnthro
 from pyv5.interfaces.dnb_human_modeling.swk_ergo import SWKErgo
 from pyv5.interfaces.dnb_human_modeling.swk_line_of_sight_node import (
@@ -20,7 +21,6 @@ from pyv5.interfaces.dnb_human_modeling.swk_manikin_part import SWKManikinPart
 from pyv5.interfaces.dnb_human_modeling.swk_node import SWKNode
 from pyv5.interfaces.dnb_human_modeling.swk_segment_node import SWKSegmentNode
 from pyv5.interfaces.dnb_human_modeling.swk_vision import SWKVision
-from pyv5.interfaces.core.move import Move
 
 if TYPE_CHECKING:
     from pyv5.interfaces.dnb_human_modeling.swk_body import SWKBody

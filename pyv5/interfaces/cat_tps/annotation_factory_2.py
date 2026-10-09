@@ -1,21 +1,21 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+2020-09-25 14:34:21.593357
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
 
 import inspect
 
+from pyv5.base.types import CATVariant
 from pyv5.interfaces.cat_tps.annotation_2 import Annotation2
 from pyv5.interfaces.cat_tps.user_surface import UserSurface
 from pyv5.interfaces.drafting.drawing_component import DrawingComponent
 from pyv5.interfaces.mec_mod.factory import Factory
-from pyv5.base.types import CATVariant
 
 
 class AnnotationFactory2(Factory):

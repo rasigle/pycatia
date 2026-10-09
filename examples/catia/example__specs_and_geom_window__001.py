@@ -30,7 +30,7 @@ from pyv5.interfaces.core.specs_and_geom_window import SpecsAndGeomWindow
 from pyv5.interfaces.product_structure.product import Product
 from pyv5.interfaces.product_structure.product_document import ProductDocument
 
-source_folder = Path(Path(os.getcwd()), "tests/cat_files")
+source_folder = Path(Path(os.getcwd()), "tests/assets")
 source_files = source_folder.glob("*.CATPart")
 
 # create a dictionary of views to create.

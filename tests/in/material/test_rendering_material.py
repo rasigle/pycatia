@@ -1,4 +1,4 @@
-#! /usr/bin/python3.9
+
 """
 Tests the RenderingMaterial object.
 

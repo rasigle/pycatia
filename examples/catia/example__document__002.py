@@ -27,7 +27,7 @@ import os
 from pathlib import Path
 
 # make these directories the full pathname.
-source_directory = "tests/cat_files"
+source_directory = "tests/assets"
 target_directory = "__junk__"
 
 # if full paths are supplied above you should not do this.

@@ -1,10 +1,10 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-07-06 14:02:20.222384
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+ 2020-07-06 14:02:20.222384
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
@@ -13,7 +13,7 @@ import inspect
 
 from pyv5.base.nothing import VBANothing, com_or_nothing
 from pyv5.interfaces.core.reference import Reference
-from pyv5.interfaces.enums import GeometricalFeatureType
+from pyv5.base.enums import GeometricalFeatureType
 from pyv5.interfaces.hybrid_shape.hybrid_shape_3d_curve_offset import (
     HybridShape3DCurveOffset,
 )
@@ -6317,7 +6317,7 @@ class HybridShapeFactory(Factory):
                 |             Level of availability = V5R14
 
 
-        See enumeration.enumeration_types.geometrical_feature_type() for enums.
+        See pyv5.base.enums.GeometricalFeatureType for enums.
 
         :param Reference i_elem:
         :return: GeometricalFeatureType

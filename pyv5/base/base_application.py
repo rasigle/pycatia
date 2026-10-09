@@ -1,5 +1,3 @@
-#! /usr/bin/python3.9
-
 import pythoncom
 from pywintypes import com_error
 from win32com.client import Dispatch, GetActiveObject

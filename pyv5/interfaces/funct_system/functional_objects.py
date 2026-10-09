@@ -1,22 +1,22 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+2020-09-25 14:34:21.593357
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
 
 from typing import TYPE_CHECKING
 
+from pyv5.base.types import CATVariant
 from pyv5.interfaces.funct_system.functional_object import FunctionalObject
 from pyv5.interfaces.funct_system.functional_object_proxy import (
     FunctionalObjectProxy,
 )
 from pyv5.interfaces.system.collection import Collection
-from pyv5.base.types import CATVariant
 
 if TYPE_CHECKING:
     from pyv5.interfaces.funct_system.functional_description import (

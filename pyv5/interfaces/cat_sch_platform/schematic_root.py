@@ -1,10 +1,10 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-09-25 14:34:21.593357
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+2020-09-25 14:34:21.593357
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
@@ -18,8 +18,8 @@ from pyv5.interfaces.cat_sch_platform.sch_grr import SchGRR
 from pyv5.interfaces.cat_sch_platform.sch_list_of_objects import SchListOfObjects
 from pyv5.interfaces.cat_sch_platform.sch_session import SchSession
 from pyv5.interfaces.cat_sch_platform.sch_temp_list_factory import SchTempListFactory
-from pyv5.interfaces.drafting.drawing_root import DrawingRoot
 from pyv5.interfaces.core.document import Document
+from pyv5.interfaces.drafting.drawing_root import DrawingRoot
 from pyv5.interfaces.system.any_object import AnyObject
 
 

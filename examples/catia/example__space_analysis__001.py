@@ -29,7 +29,7 @@ application = v5()
 documents = application.documents
 # if the active document is a CATPart this will return a PartDocument
 part_document: PartDocument = documents.open(
-    Path(os.getcwd(), r"tests/cat_files/part_measurable.CATPart")
+    Path(os.getcwd(), r"tests/assets/part_measurable.CATPart")
 )
 part = part_document.part
 

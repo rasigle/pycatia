@@ -1,14 +1,12 @@
-#! /usr/bin/python3.9
 from collections.abc import Iterator
 from pathlib import Path
 
 from pywintypes import com_error
 
 from pyv5.base.exceptions import CATIAApplicationException
+from pyv5.base.types import AnyDocument, CATVariant, document_types, list_str
 from pyv5.interfaces.core.document import Document
 from pyv5.interfaces.system.collection import Collection
-from pyv5.base.types import AnyDocument, document_types
-from pyv5.base.types import CATVariant, list_str
 
 
 def get_document_object(doc_com) -> AnyDocument:

@@ -1,4 +1,4 @@
-#! /usr/bin/python3.9
+
 import pytest
 from pywintypes import com_error
 

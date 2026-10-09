@@ -1,4 +1,3 @@
-#! usr/bin/python3.9
 """Wrapper for the CATIA V4 Master Model automation object."""
 
 from pyv5.interfaces.core.document import Document

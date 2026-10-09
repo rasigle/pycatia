@@ -1,10 +1,10 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+ 2020-06-11 12:40:47.360445
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
@@ -13,6 +13,7 @@ from collections.abc import Iterator
 from pathlib import Path
 
 from pyv5.base.exceptions import CATIAApplicationException
+from pyv5.base.types import CATVariant
 from pyv5.interfaces.knowledge.check import Check
 from pyv5.interfaces.knowledge.design_table import DesignTable
 from pyv5.interfaces.knowledge.formula import Formula
@@ -24,7 +25,6 @@ from pyv5.interfaces.knowledge.rule import Rule
 from pyv5.interfaces.knowledge.set_of_equation import SetOfEquation
 from pyv5.interfaces.system.any_object import AnyObject
 from pyv5.interfaces.system.collection import Collection
-from pyv5.base.types import CATVariant
 
 
 class Relations(Collection):

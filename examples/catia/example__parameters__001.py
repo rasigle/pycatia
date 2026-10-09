@@ -29,7 +29,7 @@ from pyv5.interfaces.mec_mod.part_document import PartDocument
 application = v5()
 documents = application.documents
 part_document: PartDocument = documents.open(
-    Path(os.getcwd(), r"tests/cat_files/part_measurable.CATPart")
+    Path(os.getcwd(), r"tests/assets/part_measurable.CATPart")
 )
 part = part_document.part
 bodies = part.bodies

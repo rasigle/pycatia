@@ -1,10 +1,10 @@
-#! usr/bin/python3.9
 """
-Module initially auto generated using V5Automation files from CATIA V5 R28 on 2020-06-11 12:40:47.360445
+Module initially auto generated using V5Automation files from CATIA V5 R28 on
+ 2020-06-11 12:40:47.360445
 
 .. warning::
     The notes denoted "CAA V5 Visual Basic Help" are to be used as reference only.
-    They are there as a guide as to how the visual basic / catscript functions work
+    They are there as a guide as to how the Visual Basic / catscript functions work
     and thus help debugging in pyv5.
 
 """
@@ -14,9 +14,9 @@ from collections.abc import Iterator
 from pywintypes import com_error
 
 from pyv5.base.exceptions import CATIAApplicationException
+from pyv5.base.types import CATVariant
 from pyv5.interfaces.mec_mod.hybrid_body import HybridBody
 from pyv5.interfaces.system.collection import Collection
-from pyv5.base.types import CATVariant
 
 
 class HybridBodies(Collection):

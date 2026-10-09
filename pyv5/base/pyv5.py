@@ -1,5 +1,3 @@
-#! /usr/bin/python3.9
-
 import logging
 
 from pyv5.base.cat_logger import create_logger

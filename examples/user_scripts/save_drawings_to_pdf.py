@@ -30,12 +30,11 @@ https://github.com/evereux/pyv5/tree/master/examples
 https://github.com/evereux/pyv5/tree/master/user_scripts
 """
 
-from pyv5 import CATIADocHandler
-
 from pathlib import Path
 
 from pypdf import PdfWriter
 
+from pyv5 import CATIADocHandler
 from pyv5.interfaces.drafting.drawing_document import DrawingDocument
 
 exclude_strings = ["Detail", "DXF"]

@@ -2,6 +2,10 @@
 
 ## 0.11.0 - Unreleased
 
+* ``TagGroupFactory.create_tag_group(..., tags=)`` and ``TagGroup.create_tags``
+  create many tags in one in-process ``SystemService.Evaluate`` call when that
+  is faster, and fall back to per-tag COM. ``TagPlacement`` holds name, pose,
+  and frame type.
 * Migrated packaging to ``pyproject.toml``. Removed ``setup.py`` and ``requirements/``.
 * ``catia()`` now connects to a running ``CATIA.Application``, ``DELMIA.Application`` or
   ``CNEXT.Application`` COM object, instead of only ``CATIA.Application``.

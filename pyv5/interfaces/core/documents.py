@@ -97,10 +97,10 @@ class Documents(Collection):
         """
 
         # see pyv5.types.document.py for supported Documents.
-
         if document_type.lower() not in [t.lower() for t in document_types]:
             raise CATIAApplicationException(
-                f"Document type {document_type} not supported. Allowed types are {[t for t in document_types]}."
+                f"Document type {document_type} not supported. "
+                f"Allowed types are {[t for t in document_types]}."
             )
 
         document = document_types[document_type]["type"]
